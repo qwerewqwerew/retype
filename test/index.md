@@ -1,1 +1,0 @@
-[!button variant="primary" text="Primary"]
