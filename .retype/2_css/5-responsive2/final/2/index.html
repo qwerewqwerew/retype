@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-root" content="/retype">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746439683687">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.2.0">
+
+    <!-- Primary Meta Tags -->
+    <title>2. 반응형 프로젝트 </title>
+    <meta name="title" content="2. 반응형 프로젝트 ">
+    <meta name="description" content="1. psd to fig">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/2_css/5-responsive2/final/2/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/2_css/5-responsive2/final/2/">
+    <meta property="og:title" content="2. 반응형 프로젝트 ">
+    <meta property="og:description" content="1. psd to fig">
+    <meta property="og:image" content="https://www.websitebuilderinsider.com/wp-content/uploads/2022/08/photoshop-export-preferences.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/2_css/5-responsive2/final/2/">
+    <meta property="twitter:title" content="2. 반응형 프로젝트 ">
+    <meta property="twitter:description" content="1. psd to fig">
+    <meta property="twitter:image" content="https://www.websitebuilderinsider.com/wp-content/uploads/2022/08/photoshop-export-preferences.png">
+
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../../../resources/css/retype.css?v=3.2.0.746439683687" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746439683687" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746439683687" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746439683687" defer></script>
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="/static/custom.css">
+    </head>
+    <body>
+
+    </body>
+    </html>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 예제정리</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/retype/">Coding Note</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/retype/">Coding Note</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="2-반응형-프로젝트" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-반응형-프로젝트">#</doc-anchor-trigger>
+        <span>2. 반응형 프로젝트 <!-- omit in toc --></span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="목차">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#목차">#</doc-anchor-trigger>
+        <span>목차 <!-- omit in toc --></span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li><doc-anchor-trigger to="#1-psd-to-fig">1. psd to fig</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#11-11-%EC%A0%9C%EA%B3%B5%EB%90%9C-psd%EB%A5%BC-fig%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%9C%EB%8B%A4">1.1. 1.1 제공된 psd를 fig로 변환한다</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#2-fig-to-psd">2. fig to psd</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#3-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B5%AC%EC%A1%B0%EC%9E%91%EC%84%B1-139p-figma">3. 웹사이트 구조작성 139p figma</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#31-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%ED%8F%B4%EB%8D%94%EA%B5%AC%EC%84%B1-139p">3.1. 프로젝트폴더구성 139p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#311-%ED%8F%B4%EB%8D%94%EA%B5%AC%EC%A1%B0">3.1.1. 폴더구조</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#32-%EA%B8%B0%EB%B3%B8%EA%B5%AC%EC%A1%B0-%EC%9E%91%EC%97%85">3.2. 기본구조 작업</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#321-%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80">3.2.1. 메인페이지</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#3211-indexhtml-index">3.2.1.1. index.html index</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#322-%EC%84%9C%EB%B8%8C%ED%8E%98%EC%9D%B4%EC%A7%80">3.2.2. 서브페이지</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#3221-introducehtml-introducehtml">3.2.2.1. introduce.html introduce.html</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#3222-galleryhtml-galleryhtml">3.2.2.2. gallery.html gallery.html</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#3223-boardhtml-boardhtml">3.2.2.3. board.html board.html</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#33-%EA%B8%B0%EB%B3%B8%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%9E%91%EC%97%85-%EA%B5%90%EC%9E%AC-143p">3.3. 기본스타일 작업 교재 143p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#331-resetcss-resetcss">3.3.1. reset.css reset.css</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#34-%EB%AF%B8%EB%94%94%EC%96%B4%EC%BF%BC%EB%A6%AC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-145p">3.4. 미디어쿼리 작성하기 145p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#341-341-indexhtml">3.4.1. 3.4.1 index.html</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#342-342-subpages">3.4.2. 3.4.2 subpages</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#4-%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91">4. 메인페이지 제작</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#41-%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%AC%EC%A1%B0-150p">4.1. 메인페이지 구조 150p</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#42-%EC%99%84%EC%84%B1">4.2. 완성</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#421-%EC%9D%B8%ED%8F%AC%EB%A9%94%EC%9D%B4%EC%85%98">4.2.1. 인포메이션</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#422-%ED%97%A4%EB%8D%94">4.2.2. 헤더</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#423-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94">4.2.3. 슬라이더</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#424-%EC%B5%9C%EA%B7%BC%EA%B8%80">4.2.4. 최근글</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#425-415-%EC%9D%B8%EA%B8%B0%EA%B8%80">4.2.5. 4.1.5 인기글</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#426-%EA%B0%A4%EB%9F%AC%EB%A6%AC">4.2.6. 갤러리</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#427-%EC%9D%B8%EA%B8%B0%EA%B2%80%EC%83%89%EC%96%B4">4.2.7. 인기검색어</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#428-%EB%B0%B0%EB%84%88">4.2.8. 배너</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#429-sns">4.2.9. sns</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#43-%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B0%98%EC%9D%91%ED%98%95-css-%EC%9E%91%EC%97%85-161p">4.3. 메인페이지 반응형 css 작업 161p</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#44-%EC%99%84%EC%84%B1">4.4. 완성</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#441-%EC%9D%B8%ED%8F%AC%EB%A9%94%EC%9D%B4%EC%85%98">4.4.1. 인포메이션</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4411-%EB%AA%A8%EB%B0%94%EC%9D%BC">4.4.1.1. 모바일</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4412-pc">4.4.1.2. PC</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#442-%ED%97%A4%EB%8D%94-164p">4.4.2. 헤더 164p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4421-%EB%AA%A8%EB%B0%94%EC%9D%BC">4.4.2.1. 모바일</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4422-%ED%83%9C%EB%B8%94%EB%A6%BF-169p">4.4.2.2. 태블릿 169p</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4423-pc-172p">4.4.2.3. PC 172p</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#443-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94-173p">4.4.3. 슬라이더 173p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4431-%EB%AA%A8%EB%B0%94%EC%9D%BC">4.4.3.1. 모바일</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4432-%ED%83%9C%EB%B8%94%EB%A6%BF-169p">4.4.3.2. 태블릿 169p</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4433-pc-172p">4.4.3.3. PC 172p</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#444-%EC%B5%9C%EA%B7%BC-%EA%B8%80-%EC%98%81%EC%97%AD-%EC%9D%B8%EA%B8%B0-%EA%B8%80-%EC%98%81%EC%97%AD-176p">4.4.4. 최근 글 영역, 인기 글 영역 176p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4441-%EB%AA%A8%EB%B0%94%EC%9D%BC">4.4.4.1. 모바일</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4442-%ED%83%9C%EB%B8%94%EB%A6%BF-169p">4.4.4.2. 태블릿 169p</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4443-pc-172p">4.4.4.3. PC 172p</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#445-%EA%B0%A4%EB%9F%AC%EB%A6%AC-180p">4.4.5. 갤러리 180p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4451-%EB%AA%A8%EB%B0%94%EC%9D%BC">4.4.5.1. 모바일</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4452-%ED%83%9C%EB%B8%94%EB%A6%BF-169p">4.4.5.2. 태블릿 169p</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4453-pc-172p">4.4.5.3. PC 172p</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#446-%EC%9D%B8%EA%B8%B0%EA%B2%80%EC%83%89%EC%96%B4%ED%91%B8%ED%84%B0-184p">4.4.6. 인기검색어~푸터 184p</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4461-%EB%AA%A8%EB%B0%94%EC%9D%BC">4.4.6.1. 모바일</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4462-%ED%83%9C%EB%B8%94%EB%A6%BF-169p">4.4.6.2. 태블릿 169p</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4463-pc-172p">4.4.6.3. PC 172p</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="1-psd-to-fig">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-psd-to-fig">#</doc-anchor-trigger>
+        <span>1. psd to fig</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="11-11-제공된-psd를-fig로-변환한다">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-11-제공된-psd를-fig로-변환한다">#</doc-anchor-trigger>
+        <span>1.1. 1.1 제공된 psd를 fig로 변환한다</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li><br><img src="https://www.websitebuilderinsider.com/wp-content/uploads/2022/08/photoshop-export-preferences.png" alt="alt" /></li>
+<li><br><img src="https://www.websitebuilderinsider.com/wp-content/uploads/2022/08/photoshop-export-preferences-use-legacy-export-as.png" alt="alt" /></li>
+<li><br><img src="https://www.websitebuilderinsider.com/wp-content/uploads/2022/08/photoshop-export-file-as.png" alt="alt" /></li>
+<li><br><img src="https://www.websitebuilderinsider.com/wp-content/uploads/2022/08/photoshop-save-psd-file-as-svg-format-and-export.png" alt="alt" /></li>
+</ol>
+<doc-anchor-target id="2-fig-to-psd">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-fig-to-psd">#</doc-anchor-trigger>
+        <span>2. <a href="https://mariedays.tistory.com/205">fig to psd</a></span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="3-웹사이트-구조작성-139p-figma">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-웹사이트-구조작성-139p-figma">#</doc-anchor-trigger>
+        <span>3. 웹사이트 구조작성 139p <a href="https://www.figma.com/file/sofEGyh3yMH7sGsrEOKYTK/css?type=design&amp;node-id=23%3A360&amp;mode=design&amp;t=co4J0u51Lvea4J5K-1">figma</a></span>
+    </h1>
+</doc-anchor-target>
+<aside style='border:1px solid #ddd; padding:2rem;background:#00bcd412;'>
+🔶 모바일 퍼스트(Mobile First)로 개발하는 반응형 사이트를 개발해보자 <br>
+모바일 기기를 우선으로 하는 디자인 및 개발 방식
+</aside>
+<doc-anchor-target id="31-프로젝트폴더구성-139p">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-프로젝트폴더구성-139p">#</doc-anchor-trigger>
+        <span>3.1. 프로젝트폴더구성 139p</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="311-폴더구조">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#311-폴더구조">#</doc-anchor-trigger>
+        <span>3.1.1. <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/5%EC%9E%A5/%EC%99%84%EC%84%B1/siteb/">폴더구조</a></span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>프로젝트 폴더를 만들고 폴더의 구조를 생성한후 리소스 폴더를 복붙한다.</p>
+<p>리소스 폴더 경로</p>
+<p>/02-둘째마당/5장/완성/반응형 웹 기본구성 폴더/images,js,webfont</p>
+</blockquote>
+<doc-anchor-target id="32-기본구조-작업">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#32-기본구조-작업">#</doc-anchor-trigger>
+        <span>3.2. 기본구조 작업</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="321-메인페이지">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#321-메인페이지">#</doc-anchor-trigger>
+        <span>3.2.1. 메인페이지</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="3211-indexhtml-index">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3211-indexhtml-index">#</doc-anchor-trigger>
+        <span>3.2.1.1. index.html <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/5%EC%9E%A5/%EC%99%84%EC%84%B1/responsive_web/">index</a></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no&quot; /&gt;
+		&lt;title&gt;FLAT DESIGN&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/reset.css&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot; /&gt;
+		&lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon/favicon.ico&quot; /&gt;
+		&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;images/favicon/flat-design-touch.png&quot; /&gt;
+		&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+		&lt;style&gt;&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="322-서브페이지">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#322-서브페이지">#</doc-anchor-trigger>
+        <span>3.2.2. 서브페이지</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="3221-introducehtml-introducehtml">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3221-introducehtml-introducehtml">#</doc-anchor-trigger>
+        <span>3.2.2.1. introduce.html <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/5%EC%9E%A5/%EC%99%84%EC%84%B1/responsive_web/introudce.html">introduce.html</a></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no&quot; /&gt;
+		&lt;title&gt;FLAT DESIGN - 플랫 디자인이란?&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/reset.css&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot; /&gt;
+		&lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon/favicon.ico&quot; /&gt;
+		&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;images/favicon/flat-design-touch.png&quot; /&gt;
+		&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+		&lt;style&gt;&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="3222-galleryhtml-galleryhtml">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3222-galleryhtml-galleryhtml">#</doc-anchor-trigger>
+        <span>3.2.2.2. gallery.html <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/5%EC%9E%A5/%EC%99%84%EC%84%B1/responsive_web/gallery.html">gallery.html</a></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no&quot; /&gt;
+		&lt;title&gt;FLAT DESIGN - 갤러리&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/reset.css&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot; /&gt;
+		&lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon/favicon.ico&quot; /&gt;
+		&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;images/favicon/flat-design-touch.png&quot; /&gt;
+		&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+		&lt;style&gt;&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="3223-boardhtml-boardhtml">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3223-boardhtml-boardhtml">#</doc-anchor-trigger>
+        <span>3.2.2.3. board.html <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/5%EC%9E%A5/%EC%99%84%EC%84%B1/responsive_web/board.html">board.html</a></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no&quot; /&gt;
+		&lt;title&gt;FLAT DESIGN - 문의사항&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/reset.css&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot; /&gt;
+		&lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon/favicon.ico&quot; /&gt;
+		&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;images/favicon/flat-design-touch.png&quot; /&gt;
+		&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+		&lt;style&gt;&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="33-기본스타일-작업-교재-143p">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#33-기본스타일-작업-교재-143p">#</doc-anchor-trigger>
+        <span>3.3. 기본스타일 작업 교재 143p</span>
+    </h2>
+</doc-anchor-target>
+<blockquote>
+<ol>
+<li><a href="https://meyerweb.com/eric/tools/css/reset/">https://meyerweb.com/eric/tools/css/reset/</a></li>
+</ol>
+<p>reset.css 를 받아서 적용후 커스터마이징 한다.</p>
+</blockquote>
+<doc-anchor-target id="331-resetcss-resetcss">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#331-resetcss-resetcss">#</doc-anchor-trigger>
+        <span>3.3.1. reset.css <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/5%EC%9E%A5/%EC%99%84%EC%84%B1/responsive_web/gallery.html">reset.css</a></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* CSS 초기화 */
+
+body {
+	font-family: NanumGothic, 나눔고딕, 'Nanum Gothic', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+	background: url(../images/s_images/body_bg.png);
+	line-height: 1;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	text-decoration: none;
+	vertical-align: baseline;
+	color: #fff;
+	background: transparent;
+}
+
+img {
+	vertical-align: top;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	vertical-align: top;
+	appearance: none;
+	border: 1px solid #e65d5d;
+	color: #e65d5d;
+	border-radius: 0;
+	font-family: NanumGothic, 나눔고딕, 'Nanum Gothic', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+}
+
+input::-moz-input-placeholder {
+	color: #e65d5d;
+}
+
+input::-webkit-input-placeholder {
+	color: #e65d5d;
+}
+
+/* 웹폰트 CSS */
+@font-face {
+	font-family: 'Nanum Gothic';
+	src: url(webfont/NanumGothic.eot);
+}
+@font-face {
+	font-family: 'Nanum Gothic';
+	src: url(webfont/NanumGothic.woff);
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="34-미디어쿼리-작성하기-145p">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#34-미디어쿼리-작성하기-145p">#</doc-anchor-trigger>
+        <span>3.4. 미디어쿼리 작성하기 145p</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="341-341-indexhtml">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#341-341-indexhtml">#</doc-anchor-trigger>
+        <span>3.4.1. 3.4.1 index.html</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+/* 기본 CSS */
+#wrap {
+	display: flex;
+	flex-flow: column nowrap; /* 모바일에서  레이아웃은 세로, 한줄로 설정*/
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+#wrap section {
+	box-sizing: border-box;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+	/* 기본 CSS */
+	#wrap {
+		flex-flow: row wrap; /* 태블릿에서  레이아웃은 가로, 여러줄로 설정*/
+	}
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+	/* 기본 CSS */
+	#wrap {
+		position: relative;
+		width: 90%;
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="342-342-subpages">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#342-342-subpages">#</doc-anchor-trigger>
+        <span>3.4.2. 3.4.2 subpages</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+/* 기본 CSS */
+#wrap {
+	display: flex;
+	flex-flow: column nowrap; /* 모바일에서  레이아웃은 세로, 한줄로 설정*/
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+#wrap section {
+	box-sizing: border-box;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+	/* 기본 CSS */
+	#wrap {
+		position: relative;
+		width: 90%;
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4-메인페이지-제작">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-메인페이지-제작">#</doc-anchor-trigger>
+        <span>4. 메인페이지 제작</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="41-메인페이지-구조-150p">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#41-메인페이지-구조-150p">#</doc-anchor-trigger>
+        <span>4.1. 메인페이지 구조 150p</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="42-완성">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#42-완성">#</doc-anchor-trigger>
+        <span>4.2. <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/6%EC%9E%A5/%EC%99%84%EC%84%B1/responsive_web/">완성</a></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="421-인포메이션">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#421-인포메이션">#</doc-anchor-trigger>
+        <span>4.2.1. 인포메이션</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.info_section&gt;ul.info_list&gt;(li&gt;a&gt;img)*4 --&gt;
+&lt;section class=&quot;info_section&quot;&gt;
+	&lt;ul class=&quot;info_list&quot;&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;index.html&quot;&gt;&lt;img src=&quot;images/s_images/info_icon_01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/info_icon_02.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/info_icon_03.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/info_icon_04.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="422-헤더">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#422-헤더">#</doc-anchor-trigger>
+        <span>4.2.2. 헤더</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- header.header&gt;(h1.logo&gt;a)+(nav.nav&gt;ul.gnb&gt;(li&gt;a+span.sub_menu_toggle_btn)*4)+span.menu_toggle_btn --&gt;
+&lt;header class=&quot;header&quot;&gt;
+	&lt;h1 class=&quot;logo&quot;&gt;
+		&lt;a href=&quot;index.html&quot;&gt;flat&lt;br /&gt;design&lt;/a&gt;
+	&lt;/h1&gt;
+	&lt;nav class=&quot;nav&quot;&gt;
+		&lt;ul class=&quot;gnb&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;홈&lt;/a&gt;&lt;span class=&quot;sub_menu_toggle_btn&quot;&gt;하위 메뉴 토글 버튼&lt;/span&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;introudce.html&quot;&gt;플랫 디자인이란?&lt;/a&gt;&lt;span class=&quot;sub_menu_toggle_btn&quot;&gt;하위 메뉴 토글 버튼&lt;/span&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;gallery.html&quot;&gt;갤러리&lt;/a&gt;&lt;span class=&quot;sub_menu_toggle_btn&quot;&gt;하위 메뉴 토글 버튼&lt;/span&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;board.html&quot;&gt;문의사항&lt;/a&gt;&lt;span class=&quot;sub_menu_toggle_btn&quot;&gt;하위 메뉴 토글 버튼&lt;/span&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	&lt;span class=&quot;menu_toggle_btn&quot;&gt;전체 메뉴 토글 버튼&lt;/span&gt;
+&lt;/header&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="423-슬라이더">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#423-슬라이더">#</doc-anchor-trigger>
+        <span>4.2.3. 슬라이더</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.slider_section&gt;span.prev_btn+span.next_btn --&gt;
+&lt;section class=&quot;slider_section&quot;&gt;&lt;span class=&quot;prev_btn&quot;&gt;이전 버튼&lt;/span&gt;&lt;span class=&quot;next_btn&quot;&gt;다음 버튼&lt;/span&gt;&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="424-최근글">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#424-최근글">#</doc-anchor-trigger>
+        <span>4.2.4. 최근글</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.latest_post_section&gt;h2.title+ul.latest_post_list&gt;(li&gt;a)*5 --&gt;
+&lt;section class=&quot;latest_post_section&quot;&gt;
+	&lt;h2 class=&quot;title&quot;&gt;최근 글&lt;/h2&gt;
+	&lt;ul class=&quot;latest_post_list&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;안녕하세요 홈페이지가 오픈...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;홈페이지 리뉴얼...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;flat design은...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;blog에서 다양한 정보를...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;저는 누굴까요?...&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="425-415-인기글">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#425-415-인기글">#</doc-anchor-trigger>
+        <span>4.2.5. 4.1.5 인기글</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.popular_post_section&gt;h2.title+ul.popular_post_list&gt;(li&gt;a)*5 --&gt;
+&lt;section class=&quot;popular_post_section&quot;&gt;
+	&lt;h2 class=&quot;title&quot;&gt;인기 글&lt;/h2&gt;
+	&lt;ul class=&quot;popular_post_list&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;안녕하세요 홈페이지가 오픈...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;홈페이지 리뉴얼...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;flat design은...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;blog에서 다양한 정보를...&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;저는 누굴까요?...&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="426-갤러리">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#426-갤러리">#</doc-anchor-trigger>
+        <span>4.2.6. 갤러리</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.gallery_section&gt;+ul.gallery_list&gt;(li&gt;a&gt;(figure&gt;img+figcaption))*2  --&gt;
+&lt;section class=&quot;gallery_section&quot;&gt;
+	&lt;ul class=&quot;gallery_list&quot;&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;#&quot;&gt;
+				&lt;figure&gt;
+					&lt;img src=&quot;images/p_images/gallery_01.jpg&quot; alt=&quot;&quot; /&gt;
+					&lt;figcaption&gt;디자인 트렌트 플랫&lt;/figcaption&gt;
+				&lt;/figure&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;#&quot;&gt;
+				&lt;figure&gt;
+					&lt;img src=&quot;images/p_images/gallery_02.jpg&quot; alt=&quot;&quot; /&gt;
+					&lt;figcaption&gt;원색이 포인트 플랫&lt;/figcaption&gt;
+				&lt;/figure&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="427-인기검색어">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#427-인기검색어">#</doc-anchor-trigger>
+        <span>4.2.7. 인기검색어</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.rankup_section&gt;h2.title+ul.rankup_list&gt;(li&gt;a)*10 --&gt;
+&lt;section class=&quot;rankup_section&quot;&gt;
+	&lt;h2 class=&quot;title&quot;&gt;인기 검색어&lt;/h2&gt;
+	&lt;ul class=&quot;rankup_list&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;반응형 웹&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;미디어 쿼리&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;뷰포트&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;CSS 트릭스&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;W3C&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;루크 W&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;CSS 젠 가든&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;클리어 보스&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;XE&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;워드프레스&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="428-배너">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#428-배너">#</doc-anchor-trigger>
+        <span>4.2.8. 배너</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.banner_section&gt;(.banner_box_01&gt;a&gt;img)+(.banner_box_02&gt;ul.banner_list&gt;(li&gt;a&gt;img)*3)  --&gt;
+&lt;section class=&quot;banner_section&quot;&gt;
+	&lt;div class=&quot;banner_box_01&quot;&gt;
+		&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/w3c_logo.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;banner_box_02&quot;&gt;
+		&lt;ul class=&quot;banner_list&quot;&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/js_logo.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/html_logo.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/css_logo.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="429-sns">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#429-sns">#</doc-anchor-trigger>
+        <span>4.2.9. sns</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- section.social_section&gt;+ul.social_list&gt;(li&gt;a&gt;img)*3  --&gt;
+&lt;section class=&quot;social_section&quot;&gt;
+	&lt;ul class=&quot;social_list&quot;&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/social_icon_01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/social_icon_02.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/s_images/social_icon_03.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="43-메인페이지-반응형-css-작업-161p">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#43-메인페이지-반응형-css-작업-161p">#</doc-anchor-trigger>
+        <span>4.3. 메인페이지 반응형 css 작업 161p</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="44-완성">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#44-완성">#</doc-anchor-trigger>
+        <span>4.4. <a href="../02-%EB%91%98%EC%A7%B8%EB%A7%88%EB%8B%B9/6%EC%9E%A5/%EC%99%84%EC%84%B1/responsive_web/css/default.css">완성</a></span>
+    </h2>
+</doc-anchor-target>
+<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
+  display flex order 속성 정리
+  order : 아이템들의 순서를 변경할 때 사용
+  order 속성은 정수 값을 사용하며, 디폴트 값은 0.
+  order 속성값이 높을수록 해당 아이템은 이전 아이템보다 뒤에 위치
+</aside>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>break-point</th>
+<th>device</th>
+<th>제목3</th>
+<th>제목4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>360~767</td>
+<td>Mobile</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>768~959</td>
+<td>Tablet</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>960~</td>
+<td>Desktop</td>
+<td>---</td>
+<td>---</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>교재는 인라인 방식으로 작성했으나 link로 변경하여 진행한다.</p>
+<p><code v-pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/default.css&quot;&gt;</code></p>
+</blockquote>
+<doc-anchor-target id="441-인포메이션">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#441-인포메이션">#</doc-anchor-trigger>
+        <span>4.4.1. 인포메이션</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="4411-모바일">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4411-모바일">#</doc-anchor-trigger>
+        <span>4.4.1.1. 모바일</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+/* 기본 CSS */
+...
+/* 인포메이션 영역 CSS */
+.info_section {
+	order: 1; /* 모바일화면에서 제일 우선 배치 */
+	width: 100%;
+	background: #2ecc71;
+	border-bottom: 1px solid #39d67c;
+}
+
+.info_list {
+	display: flex; /* info_list 플렉서블 박스로 */
+}
+
+.info_list li {
+	width: 25%;
+	text-align: center;
+}
+
+.info_list li a {
+	display: block;
+	padding: 15px 0; /* 폴백 162p 현재는 필요없음 */
+	padding: 0.938rem 0;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4412-pc">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4412-pc">#</doc-anchor-trigger>
+        <span>4.4.1.2. PC</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* PC용 CSS */
+@media all and (min-width: 960px) {
+	/* 인포메이션 영역 CSS */
+	.info_section {
+		order: 0; /* pc에서 인포메이션은 상단우측 배치 이므로 order 의 값을 초기화 한다. */
+		position: absolute; /* 인포메이션의 위치를 position으로 설정한다. */
+		/* top: 30px; */
+		top: 1.875rem;
+		/* right: 30px; */
+		right: 1.875rem;
+		z-index: 30;
+		width: auto;
+		border-bottom: 0;
+	}
+
+	.info_list li {
+		/* pc에서는 모바일과 레이아웃이 달라지므로 속성 수정*/
+		width: auto;
+		margin-left: 15px;
+		margin-left: 0.625rem;
+	}
+
+	.info_list li a {
+		padding: 0; /* 패딩값 삭제 */
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="442-헤더-164p">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#442-헤더-164p">#</doc-anchor-trigger>
+        <span>4.4.2. 헤더 164p</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="4421-모바일">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4421-모바일">#</doc-anchor-trigger>
+        <span>4.4.2.1. 모바일</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+/* 헤더 영역 CSS */
+.header {
+	display: flex;
+	order: 2; /* 모바일에서 두번째 배치 */
+	flex-direction: column; /* 세로배치 */
+	position: relative; /* 모바일의 토글버튼 구현을 위해 기준으로 지정함 */
+	width: 100%;
+}
+
+.logo {
+	order: 1; /* 헤더영역 내 최상단 위치 */
+	width: 100%;
+	padding: 1.875rem 0;
+	font-size: 1.188rem;
+	line-height: 1.313rem;
+	text-align: center;
+	text-transform: uppercase;
+	background: #2ecc71;
+	text-shadow: 0px 1px 1px #25ab5e;
+}
+
+.nav {
+	order: 2; /* 두번째 위치 */
+	width: 100%;
+}
+
+.gnb li {
+	display: flex;
+	background: #2c3e50;
+	/* 부모가 flex면 인라인요소는 블럭레벨로 작동 */
+}
+
+.gnb li a {
+	width: 80%;
+	padding: 1.25rem 0;
+	font-size: 0.938rem;
+	text-indent: 1.25rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.gnb li span {
+	/* 접근성,seo */
+	width: 20%;
+	text-indent: -9999px;
+	background: url(../images/s_images/sub_menu_toggle_btn.png) center center no-repeat;
+	cursor: pointer;
+}
+
+.menu_toggle_btn {
+	display: block;
+	width: 1.875rem;
+	height: 1.875rem;
+	position: absolute;
+	top: 0.625rem;
+	right: 0.625rem;
+	text-indent: -9999px;
+	background: url(../images/s_images/menu_toggle_btn.png) no-repeat;
+	cursor: pointer;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4422-태블릿-169p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4422-태블릿-169p">#</doc-anchor-trigger>
+        <span>4.4.2.2. 태블릿 169p</span>
+    </h4>
+</doc-anchor-target>
+<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
+360~767
+768~959 tablet
+960~ pc
+</aside>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+	/* 기본 CSS */
+	#wrap {
+		flex-flow: row wrap;
+	}
+
+	/* 헤더 영역 CSS */
+	.header {
+		flex-direction: row;
+	}
+
+	.logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 15.625%; /* 120px ÷ 768px */
+		padding: 0;
+	}
+
+	.logo a {
+		display: block;
+		padding: 50px 0;
+		padding: 3.125rem 0;
+	}
+
+	.nav {
+		position: relative;
+		min-height: 80px;
+		min-height: 5rem;
+		background: #2ecc71;
+	}
+
+	.gnb {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 20;
+		width: 40.10416666666667%;
+		/* 959크기에서 확인하면 308px임. 아래 이미지 참조-&gt; 308px ÷ 768px */
+	}
+
+	.menu_toggle_btn {
+		top: 50%;
+		right: 30px;
+		right: 1.875rem;
+		z-index: 20;
+		margin-top: -0.938rem;
+	}
+}</code></pre>
+</doc-codeblock></div>
+<p><figure class="content-center">
+    <img src="https://user-images.githubusercontent.com/59301948/263507631-07a7c0f9-c8b0-454b-be4d-fe74d1cdbd25.png" alt="alt">
+    <figcaption class="caption">alt</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="4423-pc-172p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4423-pc-172p">#</doc-anchor-trigger>
+        <span>4.4.2.3. PC 172p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* PC용 CSS */
+@media all and (min-width: 960px) {
+	/* 헤더 영역 CSS */
+	.header {
+		order: 1;
+		justify-content: flex-end;
+		position: static;
+	}
+
+	.logo {
+		width: 12.5%; /* 120px ÷ 960px */
+	}
+
+	.nav {
+		display: flex;
+		align-items: center;
+		position: static;
+		width: 87.5%; /* 840px ÷ 960px */
+	}
+
+	.gnb {
+		display: flex !important;
+		flex-direction: row;
+		position: static;
+		width: 100%;
+		text-shadow: 0px 1px 1px #25ab5e;
+	}
+
+	.gnb li {
+		display: block;
+		margin-left: 5.20833333333333%; /* 50px ÷ 840px */
+		background: none;
+	}
+
+	.gnb li a {
+		width: auto;
+		padding: 0;
+		text-indent: 0;
+	}
+
+	.gnb li span {
+		display: none;
+	}
+
+	.menu_toggle_btn {
+		display: none;
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="443-슬라이더-173p">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#443-슬라이더-173p">#</doc-anchor-trigger>
+        <span>4.4.3. 슬라이더 173p</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="4431-모바일">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4431-모바일">#</doc-anchor-trigger>
+        <span>4.4.3.1. 모바일</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+/* 슬라이더 영역 CSS */
+.slider_section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	order: 3;
+	width: 100%;
+	height: 300px;
+	height: 18.75rem;
+	background: url(../images/p_images/slider_01.jpg) center center no-repeat;
+}
+
+.slider_section span {
+	width: 34px;
+	width: 2.125rem;
+	height: 39px;
+	height: 2.438rem;
+	text-indent: -9999px;
+	background: url(../images/s_images/slider_arrow.png) no-repeat;
+	cursor: pointer;
+}
+
+span.prev_btn {
+	margin-left: -10px;
+	margin-left: -0.625rem;
+	background-position: 0 0;
+}
+
+span.next_btn {
+	margin-right: -10px;
+	margin-right: -0.625rem;
+	background-position: -34px 0;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4432-태블릿-169p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4432-태블릿-169p">#</doc-anchor-trigger>
+        <span>4.4.3.2. 태블릿 169p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+	/* 슬라이더 영역 CSS */
+	.slider_section {
+		order: 2;
+		width: 50%; /* 480px ÷ 960px */
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4433-pc-172p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4433-pc-172p">#</doc-anchor-trigger>
+        <span>4.4.3.3. PC 172p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* PC용 CSS */
+@media all and (min-width: 960px) {
+	/* 슬라이더 영역 CSS */
+	.slider_section {
+		order: 2;
+		width: 50%; /* 480px ÷ 960px */
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="444-최근-글-영역-인기-글-영역-176p">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#444-최근-글-영역-인기-글-영역-176p">#</doc-anchor-trigger>
+        <span>4.4.4. 최근 글 영역, 인기 글 영역 176p</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="4441-모바일">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4441-모바일">#</doc-anchor-trigger>
+        <span>4.4.4.1. 모바일</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+/* 최근 글 영역, 인기 글 영역 CSS */
+.latest_post_section {
+	order: 4;
+	background: #ffc40f;
+	text-shadow: 0px 1px 1px #b98e0b;
+}
+
+.popular_post_section {
+	order: 5;
+	background: #a660c2;
+	text-shadow: 0px 1px 1px #714185;
+}
+
+.latest_post_section,
+.popular_post_section {
+	padding: 40px 12.5%;
+	padding: 2.5rem 12.5%; /* 40px ÷ 320px */
+}
+
+.title {
+	margin-bottom: 30px;
+	margin-bottom: 1.875rem;
+	font-size: 1.188em;
+	font-size: 1.188rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.latest_post_list li,
+.popular_post_list li {
+	margin-top: 15px;
+	margin-top: 0.938rem;
+	padding-left: 14px;
+	padding-left: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: url(../images/s_images/post_circle_icon.png) left center no-repeat;
+}
+
+.latest_post_list li:first-child,
+.popular_post_list li:first-child {
+	margin-top: 0;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4442-태블릿-169p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4442-태블릿-169p">#</doc-anchor-trigger>
+        <span>4.4.4.2. 태블릿 169p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+	/* 최근 글 영역, 인기 글 영역 CSS */
+	.latest_post_section {
+		order: 5;
+	}
+
+	.popular_post_section {
+		order: 6;
+	}
+
+	.latest_post_section,
+	.popular_post_section {
+		width: 41.666666666666666666666666666667%; /* 320px ÷ 768px */
+		padding-left: 5.208333333333333333333333333333%;
+		padding-right: 5.208333333333333333333333333333%; /* 40px ÷ 768px */
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4443-pc-172p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4443-pc-172p">#</doc-anchor-trigger>
+        <span>4.4.4.3. PC 172p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* PC용 CSS */
+@media all and (min-width: 960px) {
+	/* 최근 글 영역, 인기 글 영역 CSS */
+	.latest_post_section,
+	.popular_post_section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 30%; /* 288px ÷ 960px */
+		padding-left: 0;
+		padding-right: 0;
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="445-갤러리-180p">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#445-갤러리-180p">#</doc-anchor-trigger>
+        <span>4.4.5. 갤러리 180p</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="4451-모바일">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4451-모바일">#</doc-anchor-trigger>
+        <span>4.4.5.1. 모바일</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+
+/* 갤러리 영역 CSS */
+.gallery_section {
+	order: 6;
+	padding: 50px 12.5%;
+	padding: 3.125rem 12.5%; /* 40px ÷ 320px */
+	text-align: center;
+	background: #e65d5d;
+	text-shadow: 0px 1px 1px #c43434;
+}
+
+.gallery_section img {
+	width: 100%;
+	max-width: 100%;
+	border-radius: 3px;
+	box-shadow: 0px 1px 1px #c43434;
+}
+
+.gallery_list li:nth-child(2) {
+	margin-top: 30px;
+	margin-top: 1.875rem;
+}
+
+.gallery_list li figcaption {
+	margin-top: 20px;
+	margin-top: 1.25rem;
+	font-size: 1.188em;
+	font-size: 1.188rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4452-태블릿-169p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4452-태블릿-169p">#</doc-anchor-trigger>
+        <span>4.4.5.2. 태블릿 169p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+	/* 갤러리 영역 CSS */
+	.gallery_section {
+		order: 8;
+		width: 71.354166666666666666666666666667%; /* 548px ÷ 768px */
+		padding-left: 5.208333333333333333333333333333%;
+		padding-right: 5.208333333333333333333333333333%; /* 40px ÷ 768px */
+	}
+
+	.gallery_list {
+		display: flex;
+	}
+
+	.gallery_list li {
+		width: 47.008547008547008547008547008547%; /* 220px ÷ 468px */
+	}
+
+	.gallery_list li:nth-child(2) {
+		margin-left: 5.982905982905982905982905982906%; /* 28px ÷ 468px */
+		margin-top: 0;
+	}
+</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4453-pc-172p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4453-pc-172p">#</doc-anchor-trigger>
+        <span>4.4.5.3. PC 172p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* PC용 CSS */
+@media all and (min-width: 960px) {
+/* 갤러리 영역 CSS */
+	.gallery_section {
+		order: 3;
+		width: 27.08333333333333%; /* 260px ÷ 960px */
+	}
+
+	.gallery_list {
+		display: block;
+	}
+
+	.gallery_list li {
+		width: auto;
+	}
+
+	.gallery_list li:nth-child(2) {
+		margin-top: 30px;
+		margin-top: 1.875rem;
+		margin-left: 0;
+	}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="446-인기검색어푸터-184p">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#446-인기검색어푸터-184p">#</doc-anchor-trigger>
+        <span>4.4.6. 인기검색어~푸터 184p</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="4461-모바일">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4461-모바일">#</doc-anchor-trigger>
+        <span>4.4.6.1. 모바일</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 모바일용 CSS */
+/* 인기 검색어 영역 CSS */
+.rankup_section {
+	order: 7;
+	padding: 40px 12.5%;
+	padding: 2.5rem 12.5%; /* 40px ÷ 320px */
+	background: #219af7;
+	text-shadow: 0px 1px 1px #1974ba;
+}
+
+.rankup_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.rankup_list li {
+	width: 47.916666666666666666666666666667%; /* 115px ÷ 240px */
+	margin-top: 15px;
+	margin-top: 0.938rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.rankup_list li:first-child,
+.rankup_list li:nth-child(2) {
+	margin-top: 0;
+}
+
+.rankup_list li a {
+	display: block;
+	padding: 10px 0;
+	padding: 0.625rem 0;
+	border: 1px solid #fff;
+	border-radius: 5px;
+}
+
+/* 배너 영역 CSS */
+.banner_section {
+	order: 8;
+}
+
+.banner_box_01 {
+	background: #e6567a;
+}
+
+.banner_box_01 a {
+	display: block;
+	padding: 30px 0;
+	padding: 1.875rem 0;
+	text-align: center;
+}
+
+.banner_box_02 {
+	background: #c44968;
+}
+
+.banner_list {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 12.5%;
+	padding: 1.875rem 12.5%; /* 40px ÷ 320px */
+}
+
+/* 소셜 네트워크 영역 CSS */
+.social_section {
+	order: 9;
+	padding: 24px 12.5%;
+	padding: 1.5rem 12.5%; /* 40px ÷ 320px */
+	background: #fff;
+}
+
+.social_list {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 푸터 영역 CSS */
+.footer {
+	order: 10;
+	width: 100%;
+	background: #474747;
+}
+
+.footer p {
+	padding: 20px;
+	padding: 1.25rem;
+	font-size: 0.813em;
+	font-size: 0.813rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0px 1px 1px #191919;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4462-태블릿-169p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4462-태블릿-169p">#</doc-anchor-trigger>
+        <span>4.4.6.2. 태블릿 169p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+	/* 인기 검색어 영역 CSS */
+	.rankup_section {
+		order: 4;
+		width: 40.10416666666667%; /* 308px ÷ 768px */
+		padding-left: 5.20833333333333%;
+		padding-right: 5.20833333333333%; /* 40px ÷ 768px */
+	}
+
+	/* 배너 영역 CSS */
+	.banner_section {
+		display: flex;
+		order: 9;
+		flex-direction: column;
+		width: 28.645833333333333333333333333333%; /* 220px ÷ 768px */
+	}
+
+	.banner_section div {
+		flex: 1 1 0;
+	}
+
+	.banner_box_01 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.banner_box_01 a {
+		display: inline;
+		padding: 0;
+	}
+
+	.banner_box_02 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.banner_list {
+		padding: 0;
+		justify-content: flex-start;
+	}
+
+	.banner_list li:nth-child(2) {
+		margin: 0 14px;
+		margin: 0 0.875rem;
+	}
+
+	/* 소셜 네트워크 영역 CSS */
+	.social_section {
+		display: flex;
+		order: 7;
+		justify-content: center;
+		align-items: center;
+		width: 16.66666666666667%; /* 128px ÷ 768px */
+		padding: 0;
+	}
+
+	.social_list {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.social_list li:nth-child(2) {
+		margin: 24px 0;
+		margin: 1.5rem 0;
+	}
+
+	/* 푸터 영역 CSS */
+	.footer p {
+		padding: 40px 0;
+		padding: 2.5rem 0;
+	}
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4463-pc-172p">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4463-pc-172p">#</doc-anchor-trigger>
+        <span>4.4.6.3. PC 172p</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">/* PC용 CSS */
+@media all and (min-width: 960px) {
+	/* 인기 검색어 영역 CSS */
+	.rankup_section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 22.91666666666667%; /* 220px ÷ 960px */
+		padding: 0;
+	}
+
+	.rankup_list {
+		display: block;
+	}
+
+	.rankup_list li {
+		width: auto;
+		text-align: left;
+		counter-increment: rankup-counter;
+	}
+
+	.rankup_list li:nth-child(2) {
+		margin-top: 15px;
+		margin-top: 0.938rem;
+	}
+
+	.rankup_list li:before {
+		padding-right: 6px;
+		padding-right: 0.375rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #fff;
+		text-shadow: 0px 1px 1px #428e9e;
+		content: counter(rankup-counter) '.';
+	}
+
+	.rankup_list li a {
+		display: inline;
+		padding: 0;
+		border: 0;
+	}
+
+	/* 배너 영역 CSS */
+	.banner_section {
+		order: 7;
+		width: 22.91666666666667%; /* 220px ÷ 960px */
+	}
+
+	/* 소셜 네트워크 영역 CSS */
+	.social_section {
+		order: 8;
+		width: 17.08333333333333%; /* 164px ÷ 960px */
+	}
+
+	/* 푸터 영역 CSS */
+	.footer {
+		order: 9;
+	}
+
+	.footer p {
+		padding-left: 3.125%; /* 30px ÷ 960px */
+		text-align: left;
+	}
+}</code></pre>
+</doc-codeblock></div>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../2_css/5-responsive2/final/1/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">1. 반응형 웹 만들기 </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../2_css/5-responsive2/final/3/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">3. 서브페이지제작 </span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "2. 반응형 프로젝트 ", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+</body>
+</html>

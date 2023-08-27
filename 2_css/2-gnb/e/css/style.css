@@ -1,0 +1,44 @@
+
+/* 기본 CSS */
+@charset 'utf-8';html { overflow-y: scroll; font-size: 62.5%; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Malgun Gothic', '맑은 고딕', Dotum, '돋움체', Arial, sans-serif; font-size: 1.6rem; }
+ul,
+li { list-style: none; }
+img { border: 0; vertical-align: top; }
+a { text-decoration: none; color: #333333; font-size: 1.6rem; }
+a:link { color: #333333; }
+a:visited { color: #333333; }
+.inner { max-width: 140rem; margin: 0 auto; display: flex; }
+
+/* 상단메뉴바 */
+header { width: 100%; }
+nav { position: relative; width: 100%; height: 9.4rem; background: #ffffff; }
+.gnb li { margin: 0 3.8rem; }
+.gnb li > a { display: block; line-height: 9.4rem; text-align: center; font-size: 1.2em; font-weight: bold; }
+.gnb li a:hover { color: #e95a65; }
+nav .gnb li.logo { width: 181px; margin: 0 0 0 25px; }
+nav .gnb li.logo a { display: block; background: url(../img/freesamLogo.jpg) no-repeat center center/180px; text-indent: -99999999px; overflow: hidden; font-size: 0px; }
+.gnb li .inner .menu_title { flex: 0 1 300px; padding: 0px 20px 0 0; }
+.gnb li .inner .menu_title img { display: block; margin: 20px auto; width: 135px; height: 135px; }
+.gnb li div.w100 { position: absolute; z-index: 2; top: 94px; left: 0; width: 100%; color: #333333; border: 1px solid transparent; background: #fbfbff; box-shadow: 0 2px 2px rgb(0 0 0 / 7%); height: 0px; overflow: hidden; padding: 0px 0; transition: all 0.5s; }
+.gnb li:hover .w100 { height: auto; padding: 20px 0; border: 1px solid #e8e6f3; box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); }
+.w100:before { position: absolute; width: auto; height: 100%; content: ''; background-color: #a8dee3; left: 0; right: calc(50% + 400px); top: 0; z-index: -1; }
+/* 2depth start */
+.gnb li ul li { width: 200px; margin: 0; border-left: 1px solid #c9c9c9; padding-left: 20px; }
+.gnb li ul li h2 { font-size: 1.5em; font-weight: bold; text-align: center; color: #e95a65; padding-top: 2px; }
+.gnb li ul li dl dt a { color: #333333; font-size: 1em; font-weight: bold; line-height: 180%; }
+.gnb li ul li h3 a { color: #097a84; font-weight: bold; line-height: 200%; margin-bottom: 3px; }
+.gnb li ul li dl dd a { color: #777777; font-size: 0.8em; font-weight: bold; line-height: 170%; background: url(../images/blet.png) no-repeat 0 center; padding-left: 10px; }
+
+/* 메인배너 */
+main { width: 100%; }
+.main_banner { background: url(https://blog.kakaocdn.net/dn/XlVZH/btqIH50as13/LwCnDkeRzRz9kETtUMaHyk/img.jpg) no-repeat; background-size: cover; width: 100%; height: 100vh; }
+.main_banner ul { position: absolute; display: flex; transform: translate(-50%, -50%); top: 50vh; left: 50%; min-width: 50rem; }
+.main_banner li { position: relative; flex: 1 1 30%; height: 200px; background: rgba(255, 255, 255, 0.5); color: #fff; text-align: center; font-size: 4em; line-height: 200px; transition: margin 0.5s; }
+.main_banner li:nth-child(2) { margin: 0 10px; }
+.main_banner li:hover { margin-top: -10px; }
+.main_banner li:after { content: 'aaa'; opacity: 0; transition: all 0.5s; position: absolute; top: -60%; left: 20%; }
+.main_banner li:hover:after { content: 'aaa'; opacity: 1; position: absolute; top: -60%; left: 20%; }
+.main_banner li:before { content: ''; width: 0%; height: 2px; background: #4000ff; position: absolute; top: 100%; left: 50%; transition: all 0.5s; transform: translate(-50%); }
+.main_banner li:hover:before { width: 100%; }

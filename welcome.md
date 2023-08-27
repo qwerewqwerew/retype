@@ -1,6 +1,6 @@
 ---
-label: Sample
+label:  Coding Note
 layout: page
 order: 100
 ---
-# Sample
+# Coding Note

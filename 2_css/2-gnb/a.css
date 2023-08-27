@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; }
+ul { list-style: none; }
+.inner{width:100%;max-width: 1400px; margin: auto; }
+
+nav { width: 100%; position: relative; background: mediumaquamarine; }
+
+.w100 { background: red; height: 0; width: 100%; position: absolute; z-index: 11; top: 50px; transition:all 0.5s; }
+.gnb { display:flex; position: relative; z-index: 13; }
+.gnb a { color: black; }
+.gnb li { width: 25%; height: 50px; line-height: 50px; text-align: center; }
+.gnb > li > a { color: #372077; }
+.depth2 { height: 0; overflow: hidden; }
+.depth2 li { width: 100%; }
+
+.gnb:hover .depth2 { height: 200px; }
+nav:hover .w100 { background: #c8baf0; height: 300px; }

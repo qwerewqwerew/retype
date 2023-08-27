@@ -1,0 +1,20 @@
+* {margin: 0;padding: 0;box-sizing: border-box; }
+ul {list-style: none; }
+.df {display: flex; }
+.dn {display: none; }
+.db {display: block; }
+
+.inner {width: 100%;max-width: 1400px;margin: auto; }
+
+/* gnb */
+.gnb {justify-content: space-between; /* position: relative; */ position: absolute;z-index: 2222; left:0; right:0;  }
+.gnb li {flex: 1 1 25%; }
+.gnb a {display: block;padding: 1rem;background: pink; }
+
+.gnb .depth2 {display: none;position: absolute;top: 3rem;z-index: 88888;height: 100%; }
+
+.gnb li {height: 100%; }
+.gnb li:hover .depth2 {display: block; }
+
+/* main */
+main {background-color: ivory;height: 100vh; padding-top:100px;}
