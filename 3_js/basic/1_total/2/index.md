@@ -20,13 +20,13 @@
 			- [1.3.2.1. 산술연산자의 기본활용 예제 \[05\]](#1321-산술연산자의-기본활용-예제-05)
 			- [1.3.2.2. 산술연산자의 자료형 활용예제 \[06\]](#1322-산술연산자의-자료형-활용예제-06)
 			- [1.3.2.3. 산술연산자의 자료형 활용예제 \[07\]](#1323-산술연산자의-자료형-활용예제-07)
-			- [1.3.2.4. 증가연산자 예제 \[08\]](#1324-증가연산자-예제-08)
+			- [1.3.2.4. 증가연산자예제 \[08\]](#1324-증가연산자예제-08)
 		- [1.3.3. 할당연산자](#133-할당연산자)
-			- [1.3.3.1. 예제 \[08\]](#1331-예제-08)
+			- [1.3.3.1. 예제-\[08\]](#1331-예제-08)
 		- [1.3.4. 비교연산자](#134-비교연산자)
-			- [1.3.4.1. 예제 \[09\]](#1341-예제-09)
+			- [1.3.4.1. 예제-\[09\]](#1341-예제-09)
 		- [1.3.5. 논리연산자](#135-논리연산자)
-			- [1.3.5.1. 예제 \[10\]](#1351-예제-10)
+			- [1.3.5.1. 예제-\[10\]](#1351-예제-10)
 
 ---
 
@@ -360,50 +360,184 @@ document.write(`국어점수: ${x}<br>수학점수: ${y}<br>합계: ${add}<br> `
   - 백틱을 사용하면 표현식과 문자를 쉽게 연결할수 있다. (Template literals)
     +++
 
-##### 1.3.2.4. 증가연산자 예제 [08]
+##### 1.3.2.4. 증가연산자예제 [08]
 
-<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;margin-bottom:2rem;'>
+<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
 변수에 붙이면 1씩 증가/감소 시키는 연산자
 
 앞에 붙이면 전위연산, 뒤에 붙이면 후위 연산이라고 하며 위치에 따라 결과가 다르다
+
 </aside>
-|종류|설명|
-|---|---|
-|A = ++A|A에 A에 1을 더한값을 재할당 전위연산|
-|A = A++|A에 A에 1을 더한값을 재할당 후위연산|
-|A = --A|A에 A에 1을 뺀값을 재할당 전위연산|
-|A = A--|A에 A에 1을 뺀값을 재할당 후위연산|
+
+| 종류    | 설명                                 |
+| ------- | ------------------------------------ |
+| A = ++A | A에 A에 1을 더한값을 재할당 전위연산 |
+| A = A++ | A에 A에 1을 더한값을 재할당 후위연산 |
+| A = --A | A에 A에 1을 뺀값을 재할당 전위연산   |
+| A = A-- | A에 A에 1을 뺀값을 재할당 후위연산   |
 
 +++ 코드
+
 ```js
-let x=1
+let x = 1;
 
-document.write(x++) //1(2)
-document.write(x++) //2(3)
-document.write(x++) //3(4)
-document.write(x++) //4(5)
-document.write("<br>")
+document.write(x++); //1(2)
+document.write(x++); //2(3)
+document.write(x++); //3(4)
+document.write(x++); //4(5)
+document.write('<br>');
 
-x=1
+x = 1;
 
-document.write(++x) //2
-document.write(++x) //3
-document.write(++x) //4
-document.write(++x) //5
- ```
+document.write(++x); //2
+document.write(++x); //3
+document.write(++x); //4
+document.write(++x); //5
+```
+
 +++ 설명
-
+후위 연산은 결과를 다음 호출시 반환하고
+전위 연산은 결과를 즉시 반환한다.
 +++
-
 
 #### 1.3.3. 할당연산자
 
-##### 1.3.3.1. 예제 [08]
+| 종류 | 설명                               |
+| ---- | ---------------------------------- |
+| =    | 우항을 좌항에 할당                 |
+| +=   | 좌항에 우항을 더한후 좌항에 재할당 |
+
+##### 1.3.3.1. 예제-[08]
+
++++ 코드
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>노드 추가</title>
+	</head>
+	<body>
+		<div id="container">
+			<p>첫 번째 단락</p>
+		</div>
+
+		<script>
+			// 기존의 요소 선택
+			const container = document.getElementById('container');
+
+			// 새로운 노드 생성 및 추가
+			container.innerHTML += '<p>두 번째 단락</p>';
+		</script>
+	</body>
+</html>
+```
+
++++ 설명
+!!! `container.innerHTML += '<p>두 번째 단락</p>';` 의 연산자를 `+` 로 변경하면 두번째 p 태그는 교체된다.
+`+=` 연산자는 가산후 재할당 한다.
++++
 
 #### 1.3.4. 비교연산자
 
-##### 1.3.4.1. 예제 [09]
+!!! 비교연산자는 우항과 좌항의 값은 비교후 참이나 거짓을 반환한다.
+주로 조건문에 사용한다.
+!!!
+
+| 종류  | 설명                         |
+| ----- | ---------------------------- |
+| A==B  | A와 B가 같다                 |
+| A!=B  | A와 B가 같지 않다            |
+| A===B | A와 B가 자료형까지 같다      |
+| A!==B | A와 B가 자료형까지 같지 않다 |
+| A<B   | A가 B보다 작다               |
+| A<=B  | A가 B보다 작거나 같다        |
+| A>B   | A가 B보다 크다               |
+| A>=B  | A가 B보다 크거나 같다        |
+
+##### 1.3.4.1. 예제-[09]
+
++++ 코드
+
+```js
+var x = 10;
+var y = 20;
+
+document.write(x + '>=' + y + ': ');
+document.write(x >= y);
+document.write('<br>');
+
+document.write(x + '<=' + y + ': ');
+document.write(x <= y);
+document.write('<br>');
+
+document.write(x + '!=' + y + ': ');
+document.write(x != y);
+document.write('<br>');
+
+document.write(x + '==' + y + ': ');
+document.write(x == y);
+document.write('<br>');
+
+document.write(x + '===' + y + ': ');
+document.write(x === y);
+document.write('<br>');
+
+document.write(x + '!==' + y + ': ');
+document.write(x !== y);
+document.write('<br>');
+```
+
++++ 설명
+
+x=10, y=20 입니다.
+
+`document.write(x >= y);` 10은 20보다 크거나 같다는 false 입니다
+
+`document.write(x <= y);` 10은 20보다 작거나 같다는 true 입니다
+
+`document.write(x != y);` 10은 20과 같지 않다는 true 입니다
+
+`document.write(x == y);` 10은 20과 같다 는 false 입니다
+
+`document.write(x !== y);` 10은 20과 자료형까지 같지 않다는 true 입니다
+
+`document.write(x === y);` 10은 20과 자료형까지 같다 는 false 입니다
+
++++
 
 #### 1.3.5. 논리연산자
 
-##### 1.3.5.1. 예제 [10]
+!!!불리언(boolean) 연산자 라고도 하며 결괏값이 true, false 를 반환하는 연산자
+!!!
+
+| 종류   | 설명                               |
+| ------ | ---------------------------------- |
+| A&&B   | A와 B가 모두 True일 경우에만 True  |
+| A ∣∣ B | A또는 B가 True일 경우 True         |
+| !A     | A가 True이면 False, False이면 True |
+
+##### 1.3.5.1. 예제-[10]
+
++++ 코드
+
+```js
+var x = 7 > 6 && 1 > 8;
+var y = 7 > 6 || 1 > 8;
+var z = !(7 > 6);
+
+document.write('7이 6보다 크고 1이 8보다 크면 논리값은?');
+document.write(x + '<br>');
+document.write('7이 6보다 크거나 1이 8보다 크면 논리값은?');
+document.write(y + '<br>');
+document.write('7이 6보다 크지 않으면 논리값은?');
+document.write(z + '<br>');
+```
+
++++ 설명
+!!!
+1. t/f => false
+2. t/f => true
+3. t => false
+!!!
++++

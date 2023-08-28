@@ -26,8 +26,6 @@ Retype을 전역으로 설치하기 위해서는 다음과 같은 명령어를 �
 
 # 배포
 
-배포는 여러 가지 방법으로 진행될 수 있습니다. 여기서는 GitHub Pages와 Netlify를 사용하는 예제를 제공하겠습니다.
-
 GitHub Pages:
 output 디렉터리의 내용 전체를 GitHub 저장소의 gh-pages 브랜치에 푸시(push)합니다.
 GitHub 저장소 설정에서 GitHub Pages 섹션으로 이동한 후, Source 옵션을 gh-pages로 설정합니다.
@@ -64,3 +62,47 @@ CSS Override: 보다 안전한 방법으로는, Retype 설정에서 제공하는
 ` '/path/to/your/override.css'`
 그리고 해당 경로에 override.css 파일을 만들고 원하는 스타일링 코드를 작성합니다.
 테마 커스터마이징: Retype은 테마 커스터마이징도 지원합니다. 테마 관련 설정은 retype.yml 설정 파일에서 조정할 수 있습니다.
+
+# alert
+
+```
+!!!primary Primary
+This is a `primary` alert.
+!!!
+
+!!!secondary Secondary
+This is a `secondary` alert.
+!!!
+
+!!!success Success
+This is a `success` alert.
+!!!
+
+!!!danger Danger
+This is a `danger` alert.
+!!!
+
+!!!warning Warning
+This is a `warning` alert.
+!!!
+
+!!!info Info
+This is a `info` alert.
+!!!
+
+!!!light Light
+This is a `light` alert.
+!!!
+
+!!!dark Dark
+This is a `dark` alert.
+!!!
+
+!!!ghost Ghost
+This is a `ghost` alert.
+!!!
+
+!!!contrast Contrast
+This is a `contrast` alert.
+!!!
+```
