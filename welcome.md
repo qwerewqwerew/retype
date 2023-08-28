@@ -1,6 +1,1 @@
----
-label:  Coding Note
-layout: page
-order: 100
----
-# Coding Note
+# 열심히 좀 하자
