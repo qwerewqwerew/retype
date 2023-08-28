@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* display: flex로 flex-wrap설정됩니다 wrap. 이렇게 하면 컨테이너 너비가 제한될 때 항목을 여러 줄로 줄 바꿈할 수 있습니다. 속성 은 항목 사이에 공백을 두고 항목을 균등하게 배포하는 justify-content로 설정됩니다 .space-between */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* 클래스 .item에는 flex-basis가 로 설정되어 있으며 calc(33.33% - 20px), 이는 각 항목의 초기 너비를 컨테이너 너비의 1/3에서 여백에 대해 20px를 뺀 값으로 계산 */
+    .item {
+      flex-basis: calc(33.33% - 20px);
+      flex-basis: calc(48.33% - 20px);
+      background-color: lightgreen;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .item.col2 {
+      flex-basis: calc(98.33%);
+      background-color: rgb(238, 210, 144);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 3</div>
+  </div>
+  <div class="container">
+    <div class="item col2">Item 1</div>
+  </div>
+</body>
+
+</html>
