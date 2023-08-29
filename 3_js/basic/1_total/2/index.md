@@ -187,7 +187,9 @@ console.log('noName:', noName, typeof noName);
 
 !!![🔗ppt](../ppt/2.pdf)
 
-원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.!!!
+원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.
+
+!!!
 
 > ![alt](https://user-images.githubusercontent.com/59301948/263474834-522f5912-4eb3-47b3-8faf-bdd22eb461eb.png)
 >
@@ -249,8 +251,7 @@ console.log(addNums(5, 10));
 
 ### 1.3. 연산자
 
-!!!
-[🔗mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%EA%B4%80%EA%B3%84_%EC%97%B0%EC%82%B0%EC%9E%90)
+!!! [🔗mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%EA%B4%80%EA%B3%84_%EC%97%B0%EC%82%B0%EC%9E%90)
 
 연산자란? 프로그램에서 특정한 동작을 하도록 지시하는 기호.
 
@@ -258,6 +259,7 @@ console.log(addNums(5, 10));
 이런 연산을 지시하는 기호가 연산자이다.
 
 산술,관계,할당,논리,부정,삼항,비트,단항,등이 있다.
+
 !!!
 
 #### 1.3.1. 연산자의 종류
