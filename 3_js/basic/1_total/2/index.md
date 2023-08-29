@@ -11,9 +11,9 @@
 		- [1.2.2. 종류](#122-종류)
 		- [1.2.3. 원시형](#123-원시형)
 			- [1.2.3.1. 예제\[03\]](#1231-예제03)
-		- [1.2.4. 참조형 🔗ppt](#124-참조형-ppt)
+		- [1.2.4. 참조형](#124-참조형)
 			- [1.2.4.1. 예제 \[04\]](#1241-예제-04)
-	- [1.3. 연산자 🔗mdn](#13-연산자-mdn)
+	- [1.3. 연산자](#13-연산자)
 		- [1.3.1. 연산자의 종류](#131-연산자의-종류)
 			- [1.3.1.1. 추가연산자(병합연산자 nullish)](#1311-추가연산자병합연산자-nullish)
 		- [1.3.2. 산술연산자](#132-산술연산자)
@@ -183,9 +183,11 @@ let noName;
 console.log('noName:', noName, typeof noName);
 ```
 
-#### 1.2.4. 참조형 [🔗ppt](../ppt/2.pdf)
+#### 1.2.4. 참조형
 
-원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.
+!!![🔗ppt](../ppt/2.pdf)
+
+원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.!!!
 
 > ![alt](https://user-images.githubusercontent.com/59301948/263474834-522f5912-4eb3-47b3-8faf-bdd22eb461eb.png)
 >
@@ -245,17 +247,18 @@ console.log(addNums(5, 10));
 
 ---
 
-### 1.3. 연산자 [🔗mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%EA%B4%80%EA%B3%84_%EC%97%B0%EC%82%B0%EC%9E%90)
+### 1.3. 연산자
 
-<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412; margin-bottom:2rem;'>
+!!!
+[🔗mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%EA%B4%80%EA%B3%84_%EC%97%B0%EC%82%B0%EC%9E%90)
+
 연산자란? 프로그램에서 특정한 동작을 하도록 지시하는 기호.
 
 프로그래밍에서 연산이란 사칙연산은 물론 문자열을 연결해서 새로운 문자열을 만들고 값의 크기를 비교하는 등의 여러가지 동작을 의미한다.
 이런 연산을 지시하는 기호가 연산자이다.
 
 산술,관계,할당,논리,부정,삼항,비트,단항,등이 있다.
-
-</aside>
+!!!
 
 #### 1.3.1. 연산자의 종류
 
@@ -536,8 +539,9 @@ document.write(z + '<br>');
 
 +++ 설명
 !!!
+
 1. t/f => false
 2. t/f => true
 3. t => false
-!!!
-+++
+   !!!
+   +++

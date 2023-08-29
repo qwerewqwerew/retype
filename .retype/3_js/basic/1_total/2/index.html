@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746548531437">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746583741431">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.2.0.746548531437" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.746583741431" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746548531437" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746583741431" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746548531437" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746548531437" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746583741431" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746583741431" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -48,8 +48,8 @@
         line-height: 1.75;
       }
 
-      code {
-        font-family: 'Inconsolata', monospace;
+      code, code span {
+        font-family:consolas, 'Inconsolata', monospace;
       }
 
       body,
@@ -234,14 +234,14 @@
 <li><doc-anchor-trigger to="#1231-%EC%98%88%EC%A0%9C03">1.2.3.1. 예제[03]</doc-anchor-trigger></li>
 </ul>
 </li>
-<li><doc-anchor-trigger to="#124-%EC%B0%B8%EC%A1%B0%ED%98%95-ppt">1.2.4. 참조형 <span class="docs-emoji">&#x1F517;</span>ppt</doc-anchor-trigger>
+<li><doc-anchor-trigger to="#124-%EC%B0%B8%EC%A1%B0%ED%98%95">1.2.4. 참조형</doc-anchor-trigger>
 <ul>
 <li><doc-anchor-trigger to="#1241-%EC%98%88%EC%A0%9C-04">1.2.4.1. 예제 [04]</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><doc-anchor-trigger to="#13-%EC%97%B0%EC%82%B0%EC%9E%90-mdn">1.3. 연산자 <span class="docs-emoji">&#x1F517;</span>mdn</doc-anchor-trigger>
+<li><doc-anchor-trigger to="#13-%EC%97%B0%EC%82%B0%EC%9E%90">1.3. 연산자</doc-anchor-trigger>
 <ul>
 <li><doc-anchor-trigger to="#131-%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%A2%85%EB%A5%98">1.3.1. 연산자의 종류</doc-anchor-trigger>
 <ul>
@@ -514,13 +514,27 @@ console.log('temp:', temp, typeof temp);
 let noName;
 console.log('noName:', noName, typeof noName);</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="1-2-4-참조형-ppt">
+<doc-anchor-target id="124-참조형">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-2-4-참조형-ppt">#</doc-anchor-trigger>
-        <span>1.2.4. 참조형 <a href="../ppt/2.pdf"><span class="docs-emoji">&#x1F517;</span>ppt</a></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#124-참조형">#</doc-anchor-trigger>
+        <span>1.2.4. 참조형</span>
     </h4>
 </doc-anchor-target>
-<p>원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><a href="../ppt/2.pdf"><span class="docs-emoji">&#x1F517;</span>ppt</a></h5>
+<p>원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.!!!</p>
 <blockquote>
 <p><img src="https://user-images.githubusercontent.com/59301948/263474834-522f5912-4eb3-47b3-8faf-bdd22eb461eb.png" alt="alt" /></p>
 <p>▲ 원시타입은 한개의 물건을 저장하는 수납박스</p>
@@ -578,18 +592,33 @@ function addNums(num1, num2) {
 console.log(addNums(5, 10));</code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="1-3-연산자-mdn">
+<doc-anchor-target id="13-연산자">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-3-연산자-mdn">#</doc-anchor-trigger>
-        <span>1.3. 연산자 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%EA%B4%80%EA%B3%84_%EC%97%B0%EC%82%B0%EC%9E%90"><span class="docs-emoji">&#x1F517;</span>mdn</a></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#13-연산자">#</doc-anchor-trigger>
+        <span>1.3. 연산자</span>
     </h3>
 </doc-anchor-target>
-<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412; margin-bottom:2rem;'>
-연산자란? 프로그램에서 특정한 동작을 하도록 지시하는 기호.
+        </div>
+    </div>
+</div>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%EA%B4%80%EA%B3%84_%EC%97%B0%EC%82%B0%EC%9E%90"><span class="docs-emoji">&#x1F517;</span>mdn</a></p>
+<p>연산자란? 프로그램에서 특정한 동작을 하도록 지시하는 기호.</p>
 <p>프로그래밍에서 연산이란 사칙연산은 물론 문자열을 연결해서 새로운 문자열을 만들고 값의 크기를 비교하는 등의 여러가지 동작을 의미한다.
 이런 연산을 지시하는 기호가 연산자이다.</p>
 <p>산술,관계,할당,논리,부정,삼항,비트,단항,등이 있다.</p>
-</aside>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
 <doc-anchor-target id="131-연산자의-종류">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#131-연산자의-종류">#</doc-anchor-trigger>
@@ -973,6 +1002,9 @@ document.write(++x); //5</code></pre>
         <div class="pr-5 ml-3 w-full">
             <h5>비교연산자는 우항과 좌항의 값은 비교후 참이나 거짓을 반환한다.</h5>
 <p>주로 조건문에 사용한다.</p>
+        </div>
+    </div>
+</div>
         </div>
     </div>
 </div>

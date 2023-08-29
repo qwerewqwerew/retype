@@ -7,12 +7,5 @@ branding:
 links:
 - text:  Coding Note
   link: https://qwerewqwerew.github.io/retype/
-theme:
-  - override: './static/override.css'
-  - colors:
-    primary: '#e91e63'
-    text: '#333333'
-  - fonts:
-    body: 'Helvetica Neue, Helvetica, Arial, sans-serif'
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."

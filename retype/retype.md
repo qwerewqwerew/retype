@@ -57,11 +57,11 @@ Commands:
 
 # 테마변경하기
 
-CSS Override: 보다 안전한 방법으로는, Retype 설정에서 제공하는 override.css 기능을 사용하는 것입니다. 이는 기본 스타일에 우선하여 적용되며, 원하는 스타일 변경사항을 반영할 수 있습니다. retype.yml 설정 파일에서 아래와 같이 override.css 경로를 지정합니다:
+~~CSS Override: 보다 안전한 방법으로는, Retype 설정에서 제공하는 override.css 기능을 사용하는 것입니다. 이는 기본 스타일에 우선하여 적용되며, 원하는 스타일 변경사항을 반영할 수 있습니다. retype.yml 설정 파일에서 아래와 같이 override.css 경로를 지정합니다:
 
 ` '/path/to/your/override.css'`
 그리고 해당 경로에 override.css 파일을 만들고 원하는 스타일링 코드를 작성합니다.
-테마 커스터마이징: Retype은 테마 커스터마이징도 지원합니다. 테마 관련 설정은 retype.yml 설정 파일에서 조정할 수 있습니다.
+테마 커스터마이징: Retype은 테마 커스터마이징도 지원합니다. 테마 관련 설정은 retype.yml 설정 파일에서 조정할 수 있습니다.~~
 
 # alert
 
