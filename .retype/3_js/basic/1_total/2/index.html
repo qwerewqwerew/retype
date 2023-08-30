@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746684917178">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746722740551">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -33,28 +33,31 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.2.0.746684917178" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.746722740551" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746684917178" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746722740551" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746684917178" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746684917178" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746722740551" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746722740551" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
       @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+      @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
 
       html {
         line-height: 1.75;
       }
 
-      code, code span {
-        font-family:consolas, 'Inconsolata', monospace;
+      code,
+      code span {
+        font-family: consolas, 'Inconsolata', monospace;
+        font-size: .9rem;
+        line-height: 1;
       }
 
-      body,
-      span,
-      a {
+      * {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
         font-family: 'Pretendard', sans-serif;
       }
 
@@ -216,6 +219,7 @@
         <span>2. 기본문법 <!-- omit in toc --></span>
     </h1>
 </doc-anchor-target>
+<hr>
 <doc-anchor-target id="목차">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#목차">#</doc-anchor-trigger>
@@ -275,6 +279,13 @@
 <li><doc-anchor-trigger to="#135-%EB%85%BC%EB%A6%AC%EC%97%B0%EC%82%B0%EC%9E%90">1.3.5. 논리연산자</doc-anchor-trigger>
 <ul>
 <li><doc-anchor-trigger to="#1351-%EC%98%88%EC%A0%9C-10">1.3.5.1. 예제-[10]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#1352-%ED%98%95%EC%84%B1%ED%8F%89%EA%B0%80-11">1.3.5.2. 형성평가-[11]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#1353-%ED%98%95%EC%84%B1%ED%8F%89%EA%B0%80-12">1.3.5.3. 형성평가-[12]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#136-%EC%A1%B0%EA%B1%B4%EB%B6%80%EC%97%B0%EC%82%B0%EC%9E%90">1.3.6. 조건부연산자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1361-%EC%98%88%EC%A0%9C-13">1.3.6.1. 예제-[13]</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
@@ -1201,6 +1212,211 @@ document.write(z + '&lt;br&gt;');</code></pre>
 </div>
 </doc-tab>
 </doc-tabs>
+<doc-anchor-target id="1352-형성평가-11">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1352-형성평가-11">#</doc-anchor-trigger>
+        <span>1.3.5.2. 형성평가-[11]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21.71 6.15L15.85.29c-.19-.18-.44-.29-.71-.29H6.86c-.27 0-.52.11-.71.29L.29 6.15c-.18.19-.29.44-.29.71v8.28c0 .27.11.52.29.71l5.86 5.86c.19.18.44.29.71.29h8.28c.27 0 .52-.11.71-.29l5.86-5.86a.99.99 0 00.29-.71V6.86c0-.27-.11-.52-.29-.71zM20 14.73L14.73 20H7.27L2 14.73V7.27L7.27 2h7.45L20 7.27v7.46z"></path>
+                    <path d="M11 12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zM11.01 14c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><span class="docs-emoji">&#x26A1;</span> 20대 여성이라면 결과값이 true로, 아니라면 결과 값으로 false<span class="docs-emoji">&#x26A1;</span></h5>
+<p>20대 대상의 소개팅을 준비 중입니다.<br>
+남성은 모집이 완료 되었지만 여성은 아직 모집이 다 되지 않았네요.
+prompt메서드를 활용하여 참가 희망자의 성별과 나이를 확인합니다.<br>
+20대 여성이라면 결과값이 true로, 아니라면 결과 값으로 false가 나오게 만드세요</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/API/Window/prompt">MDN <span class="docs-emoji">&#x1F517;</span></a>
+<code v-pre>prompt(message, default);</code></p>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var gender = prompt('당신의 성별은', '여성');
+var age = prompt('당신의 나이는', '20');
+var result = age &gt;= 20 &amp;&amp; age &lt; 30 &amp;&amp; gender == '여성';
+document.write(result);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="1353-형성평가-12">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1353-형성평가-12">#</doc-anchor-trigger>
+        <span>1.3.5.3. 형성평가-[12]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21.71 6.15L15.85.29c-.19-.18-.44-.29-.71-.29H6.86c-.27 0-.52.11-.71.29L.29 6.15c-.18.19-.29.44-.29.71v8.28c0 .27.11.52.29.71l5.86 5.86c.19.18.44.29.71.29h8.28c.27 0 .52-.11.71-.29l5.86-5.86a.99.99 0 00.29-.71V6.86c0-.27-.11-.52-.29-.71zM20 14.73L14.73 20H7.27L2 14.73V7.27L7.27 2h7.45L20 7.27v7.46z"></path>
+                    <path d="M11 12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zM11.01 14c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><span class="docs-emoji">&#x26A1;</span> 평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false<span class="docs-emoji">&#x26A1;</span></h5>
+<p>prompt 메서드를 활용하여 국어, 영어, 수학 점수를 입력 받으세요.<br>
+평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false를 출력합니다.</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p>엄청쉽다</p>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var korNum = Number(prompt('국어점수는?', '0'));
+var engNum = Number(prompt('영어점수는?', '0'));
+var mathNum = Number(prompt('수학점수는?', '0'));
+var avg = (korNum + engNum + mathNum) / 3;
+var result = avg &gt;= 70 &amp;&amp; konNum &gt;= 60 &amp;&amp; engNum &gt;= 60 &amp;&amp; mathNum &gt;= 60;
+document.write(result);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="136-조건부연산자">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#136-조건부연산자">#</doc-anchor-trigger>
+        <span>1.3.6. 조건부연산자</span>
+    </h4>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>자바스크립트에서 항을 3개 가지는 연산자는 이것 밖에 없어서 삼항연산자라고도 불리우며 조건문을 간단히 작성할때 많이 사용됨</h5>
+        </div>
+    </div>
+</div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>문법</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(조건) ? A : B</td>
+<td>조건 ? 참이면 A실행 : 거짓이면 B실행</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="1361-예제-13">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1361-예제-13">#</doc-anchor-trigger>
+        <span>1.3.6.1. 예제-[13]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">//your=&quot;어려워요&quot;
+your = '재밌어요';
+let study = your == '어려워요' ? ' 천재이시군요' : '복습하세요';
+document.write(`자바스크립트가 ${your} &lt;h1&gt;${study}&lt;/h1&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
 
                                 
                                 <!-- Required only on API pages -->
@@ -1220,10 +1436,10 @@ document.write(z + '&lt;br&gt;');</code></pre>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../retype/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/1_total/3/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Retype 설치</span>
+                                                <span class="block mt-1">목차</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
