@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-01T00:29:48Z",
+  "created": "2023-09-01T01:30:15Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2524,7 +2524,8 @@
       "path": "3_js\\basic\\1_total\\ppt\\2.pdf"
     },
     {
-      "path": "3_js\\basic\\1_total\\ppt\\2.pptx"
+      "path": "3_js\\basic\\1_total\\ppt\\2.pptx",
+      "old": true
     },
     {
       "path": "3_js\\deep\\1_carousel\\1\\index.html"
@@ -2597,6 +2598,9 @@
     },
     {
       "path": "source\\images\\5.gif"
+    },
+    {
+      "path": "source\\images\\js-1-1.png"
     }
   ]
 }

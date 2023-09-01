@@ -45,7 +45,7 @@
 					- [4.7.4.5.3.1. 예시](#474531-예시)
 
 ---
-[설명ppt❤](https://docs.google.com/presentation/d/14o3F4wCBh3VRgrh15XN4JmQcYRF_iqdZHoSKT8-BFc8/edit#slide=id.g256542224c6_0_0)
+
 
 [개요설명-1-role](../ppt/1-role.pdf)
 
@@ -173,7 +173,7 @@
 
 > #### 🔴 웹브라우저에서 스크립트를 해석하는 과정
 >
-> [2.pptx](../ppt/2.pptx)
+> ![참고이미지](/source/images/js-1-1.png)
 >
 > 웹문서에 자바스크립트 코드가 포함 되어있으면 웹브라우저는 어떤과정으로 해석하게 되는지 알아보자
 >
@@ -196,6 +196,8 @@
 
 # 3. 자바스크립트의 기본 용어
 
+>[설명ppt❤](https://docs.google.com/presentation/d/14o3F4wCBh3VRgrh15XN4JmQcYRF_iqdZHoSKT8-BFc8/edit#slide=id.g256542224c6_0_0)
+>
 > 자바스크립트의 명령어는 식(expression)과 문 (statement) 으로 나뉜다.
 >
 > 식이란
