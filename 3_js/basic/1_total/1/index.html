@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746788097912">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746842890832">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -31,12 +31,13 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.2.0.746788097912" rel="stylesheet">
+    <link href="../../../../favicon.png" rel="icon">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.746842890832" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746788097912" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746842890832" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746788097912" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746788097912" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746842890832" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746842890832" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -55,8 +56,8 @@
       }
 
       * {
-        font-family: 'Pretendard', sans-serif;
         font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-family: 'Pretendard', sans-serif;
       }
 
       a {
@@ -67,13 +68,46 @@
         margin-bottom: 1.2rem;
       }
 
+      .comment_box:before {
+        content: '';
+        position: absolute;
+        height: 80%;
+        width: 2px;
+        background-color: #1956af;
+        left: -5px;
+      }
+
       .comment_box {
+        padding:20px;
         color: #1956AF;
-        border-radius: 10px;
-        background-color: #E1EDFF;
-        border: 1px solid #1956AF;
-        padding: 20px;
         margin-bottom: 20px;
+        font-weight: 200;
+        font-size: 1.3em;
+        letter-spacing: -0.08rem;
+        position: relative;
+      }
+
+      .comment_box.s {
+        padding:20px;
+        color: #1956AF;
+        margin-bottom: 20px;
+        font-weight: 200;
+        font-size: 1em;
+        letter-spacing: -0.08rem;
+        position: relative;
+      }
+
+      .comment_box p {
+        margin-bottom: 0.4rem !important;
+      }
+
+      .docs-markdown table.comfortable tr td,
+      .docs-markdown table.comfortable tr th {
+        padding: 0.6rem .8rem;
+      }
+
+      .w-full p:not(.hidden) {
+        margin-bottom: 0.2rem;
       }
     </style>
 </head>
@@ -1006,11 +1040,11 @@ click - handler; //kebab_case</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../2_css/6_ui/1.form/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../2_css/6_ui/2.hover/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">1. form 요소 디자인</span>
+                                                <span class="block mt-1">2.​마우스 오버 효과</span>
                                             </span>
                                         </a>
                                     </div>
