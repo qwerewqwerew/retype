@@ -15,8 +15,8 @@
   }
 
   * {
-    font-family: 'Pretendard', sans-serif;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-family: 'Pretendard', sans-serif;
   }
 
   a {
@@ -27,12 +27,45 @@
     margin-bottom: 1.2rem;
   }
 
+  .comment_box:before {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 2px;
+    background-color: #1956af;
+    left: -5px;
+  }
+
   .comment_box {
+    padding:20px;
     color: #1956AF;
-    border-radius: 10px;
-    background-color: #E1EDFF;
-    border: 1px solid #1956AF;
-    padding: 20px;
     margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 1.3em;
+    letter-spacing: -0.08rem;
+    position: relative;
+  }
+
+  .comment_box.s {
+    padding:20px;
+    color: #1956AF;
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 1em;
+    letter-spacing: -0.08rem;
+    position: relative;
+  }
+
+  .comment_box p {
+    margin-bottom: 0.4rem !important;
+  }
+
+  .docs-markdown table.comfortable tr td,
+  .docs-markdown table.comfortable tr th {
+    padding: 0.6rem .8rem;
+  }
+
+  .w-full p:not(.hidden) {
+    margin-bottom: 0.2rem;
   }
 </style>

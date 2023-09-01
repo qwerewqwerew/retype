@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746768992835">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746842708366">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
-    <title>2. CSS-HOVER-EFFECTS</title>
-    <meta name="title" content="2. CSS-HOVER-EFFECTS">
-    <meta name="description" content="2. CSS-HOVER-EFFECTS">
+    <title>2.마우스 오버 효과</title>
+    <meta name="title" content="2.마우스 오버 효과">
+    <meta name="description" content="1.1. button-hover">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
@@ -20,25 +20,26 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
-    <meta property="og:title" content="2. CSS-HOVER-EFFECTS">
-    <meta property="og:description" content="2. CSS-HOVER-EFFECTS">
+    <meta property="og:title" content="2.마우스 오버 효과">
+    <meta property="og:description" content="1.1. button-hover">
     <meta property="og:image" content="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
-    <meta property="twitter:title" content="2. CSS-HOVER-EFFECTS">
-    <meta property="twitter:description" content="2. CSS-HOVER-EFFECTS">
+    <meta property="twitter:title" content="2.마우스 오버 효과">
+    <meta property="twitter:description" content="1.1. button-hover">
     <meta property="twitter:image" content="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746768992835" rel="stylesheet">
+    <link href="../../../favicon.png" rel="icon">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746842708366" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746768992835" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746842708366" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746768992835" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.2.0.746768992835" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746842708366" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.2.0.746842708366" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -57,8 +58,8 @@
       }
 
       * {
-        font-family: 'Pretendard', sans-serif;
         font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-family: 'Pretendard', sans-serif;
       }
 
       a {
@@ -69,13 +70,46 @@
         margin-bottom: 1.2rem;
       }
 
+      .comment_box:before {
+        content: '';
+        position: absolute;
+        height: 80%;
+        width: 2px;
+        background-color: #1956af;
+        left: -5px;
+      }
+
       .comment_box {
+        padding:20px;
         color: #1956AF;
-        border-radius: 10px;
-        background-color: #E1EDFF;
-        border: 1px solid #1956AF;
-        padding: 20px;
         margin-bottom: 20px;
+        font-weight: 200;
+        font-size: 1.3em;
+        letter-spacing: -0.08rem;
+        position: relative;
+      }
+
+      .comment_box.s {
+        padding:20px;
+        color: #1956AF;
+        margin-bottom: 20px;
+        font-weight: 200;
+        font-size: 1em;
+        letter-spacing: -0.08rem;
+        position: relative;
+      }
+
+      .comment_box p {
+        margin-bottom: 0.4rem !important;
+      }
+
+      .docs-markdown table.comfortable tr td,
+      .docs-markdown table.comfortable tr th {
+        padding: 0.6rem .8rem;
+      }
+
+      .w-full p:not(.hidden) {
+        margin-bottom: 0.2rem;
       }
     </style>
 </head>
@@ -213,14 +247,19 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<ul>
-<li><doc-anchor-trigger to="#2-css-hover-effects">2. CSS-HOVER-EFFECTS</doc-anchor-trigger>
+<doc-anchor-target id="2마우스-오버-효과" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2마우스-오버-효과">#</doc-anchor-trigger>
+        <span>2.마우스 오버 효과<!-- omit in toc --></span>
+    </h1>
+</doc-anchor-target>
 <ul>
 <li><doc-anchor-trigger to="#11-button-hover">1.1. button-hover</doc-anchor-trigger>
 <ul>
 <li><doc-anchor-trigger to="#111-mouse-hover1">1.1.1. mouse-hover1</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#112-mouse-hover2">1.1.2. mouse-hover2</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#113-mouse-hover3">1.1.3. mouse-hover3</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#114-mouse-hover4">1.1.4. mouse-hover4</doc-anchor-trigger></li>
 </ul>
 </li>
 <li><doc-anchor-trigger to="#12-image-hover">1.2. image-hover</doc-anchor-trigger>
@@ -230,14 +269,6 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<doc-anchor-target id="2-css-hover-effects" class="break-words">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-css-hover-effects">#</doc-anchor-trigger>
-        <span>2. CSS-HOVER-EFFECTS</span>
-    </h1>
-</doc-anchor-target>
 <doc-anchor-target id="11-button-hover">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#11-button-hover">#</doc-anchor-trigger>
@@ -560,6 +591,141 @@ span:nth-child(4) {
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
+<doc-anchor-target id="114-mouse-hover4">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#114-mouse-hover4">#</doc-anchor-trigger>
+        <span>1.1.4. mouse-hover4</span>
+    </h3>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../../source/images/5.gif" alt="미리보기">
+    <figcaption class="caption">미리보기</figcaption>
+</figure>
+</p>
+<doc-tabs>
+<doc-tab v-cloak id="html">
+<template #title>HTML</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;CSS animatin, transitions and transforms&lt;/title&gt;
+
+    &lt;!-- OUR STYLESHEET --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
+
+    &lt;!-- FONT ِAWESOME --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.4.2/css/all.css&quot; integrity=&quot;sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;i class=&quot;fas fa-heart&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;i class=&quot;fas fa-glass-martini&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;i class=&quot;fas fa-globe&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;i class=&quot;fas fa-gift&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="css">
+<template #title>CSS</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">body {
+ margin: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ font-family: sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+ul li {
+  list-style-type: none;
+  width: 120px;
+  height: 120px;
+  margin: 0 20px;
+  border:2px solid #0a3d62;
+  border-radius: 50%;
+  transition: all 0.5s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li i {
+  font-size: 48px;
+  color: #0a3d62;
+  transition: 0.5s;
+}
+
+ul li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a3d62;
+  border-radius: 50%;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+ul li:hover:before {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+ul li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  border:2px dashed #2e86de;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+ul li:hover:after {
+  opacity: 1;
+  animation: rotating 10s linear infinite;
+}
+
+@keyframes rotating {
+  0% { transform:scale(0.92) rotate(0deg); }
+  100% { transform:scale(0.92) rotate(360deg); }
+}
+
+ul li:hover i {
+  color: white;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
 <doc-anchor-target id="12-image-hover">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#12-image-hover">#</doc-anchor-trigger>
@@ -770,6 +936,6 @@ img:hover {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "2. CSS-HOVER-EFFECTS", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "2.마우스 오버 효과", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
