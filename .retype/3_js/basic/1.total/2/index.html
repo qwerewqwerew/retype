@@ -1,0 +1,3127 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-root" content="/retype">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746958899467">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.2.0">
+
+    <!-- Primary Meta Tags -->
+    <title>2. 기본문법 </title>
+    <meta name="title" content="2. 기본문법 ">
+    <meta name="description" content="1. 변수">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/2/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/2/">
+    <meta property="og:title" content="2. 기본문법 ">
+    <meta property="og:description" content="1. 변수">
+    <meta property="og:image" content="https://user-images.githubusercontent.com/59301948/262992819-7156ad7e-3bd9-4942-8044-2bbbba9fd9ce.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/2/">
+    <meta property="twitter:title" content="2. 기본문법 ">
+    <meta property="twitter:description" content="1. 변수">
+    <meta property="twitter:image" content="https://user-images.githubusercontent.com/59301948/262992819-7156ad7e-3bd9-4942-8044-2bbbba9fd9ce.png">
+
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../../../favicon.png" rel="icon">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.746958899467" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746958899467" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746958899467" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.746958899467" defer></script>
+    <script id="mermaid-js" data-cfasync="false" src="../../../../resources/js/mermaid.js?v=3.2.0" defer></script>
+
+    <style>
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
+      @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+      @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+
+      html {
+        line-height: 1.75;
+      }
+
+      code,
+      code span {
+        font-family: consolas, 'Inconsolata', monospace;
+        /*     font-size: .9rem;
+        line-height: 1.5;
+     */
+      }
+
+      * {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-family: 'Pretendard', sans-serif;
+      }
+
+      a {
+        font-weight: 500;
+      }
+
+      aside {
+        margin-bottom: 1.2rem;
+      }
+
+      .comment_box {
+        padding: 2rem;
+        color: #094092;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 1.1em;
+        letter-spacing: -0.5px;
+        position: relative;
+        background-color: #f4f5f7;
+        line-height: 1.8;
+        filter: drop-shadow(-2px 4px 4px #25344b25);
+      }
+
+      .comment_box p {
+        margin-bottom: 0.4rem !important;
+      }
+
+      .docs-markdown table.comfortable tr td,
+      .docs-markdown table.comfortable tr th {
+        padding: 0.6rem .8rem;
+      }
+
+      .w-full p:not(.hidden) {
+        margin-bottom: 0.2rem;
+      }
+
+      div[id]>h1,
+      div[id]>h2,
+      div[id]>h3,
+      div[id]>h4,
+      div[id]>h5,
+      div[id]>h6 {
+        margin-top: 3.4rem;
+        color: #3f51b5 !important;
+      }
+
+      [class^=img] {
+        width: auto;
+      }
+
+      [class^=img] p {
+        display: none;
+      }
+
+      .img50 figure img {
+        max-width: 50%;
+      }
+
+      .img20 figure img {
+        max-width: 20%;
+      }
+
+      .img10 figure img {
+        max-width: 10%;
+      }
+
+      .docs-markdown div[id="목차"]+ul li {
+        line-height: 1.8;
+        font-weight:400;
+        padding-top:2px;
+        padding-bottom:4px;
+        font-size:14px;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 예제정리</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/retype/">Coding Note</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/book01/">망고는코딩대장</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/qwerewqwerew/retype">Respository</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/retype/">Coding Note</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/book01/">망고는코딩대장</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/qwerewqwerew/retype">Respository</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="2-기본문법" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-기본문법">#</doc-anchor-trigger>
+        <span>2. 기본문법 <!-- omit in toc --></span>
+    </h1>
+</doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
+    <div>In&nbsp;</div>
+    <div><a href="../../../../categories/javascript/">javascript</a>,&nbsp;</div>
+    <div><a href="../../../../categories/class/">class</a></div>
+</div>
+
+<doc-anchor-target id="목차">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#목차">#</doc-anchor-trigger>
+        <span>목차 <!-- omit in toc --></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><doc-anchor-trigger to="#1-%EB%B3%80%EC%88%98">1. 변수</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#11-%EC%98%88%EC%A0%9C-%EC%84%A0%EC%96%B8%EA%B3%BC-%ED%95%A0%EB%8B%B9-01">1.1. 예제 <strong>선언과 할당</strong> [01]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#12-%EC%98%88%EC%A0%9C-02-%EB%82%98%EC%9D%B4%EA%B3%84%EC%82%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EB%A7%8C%EB%93%A4%EA%B8%B0">1.2. 예제 [02] 나이계산 프로그램 만들기</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#2-%EC%9E%90%EB%A3%8C%ED%98%95">2. 자료형</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#21-%EA%B0%9C%EC%9A%94">2.1. 개요</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#22-%EC%A2%85%EB%A5%98">2.2. 종류</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#23-%EC%9B%90%EC%8B%9C%ED%98%95">2.3. 원시형</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#231-%EC%98%88%EC%A0%9C03">2.3.1. 예제[03]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#24-%EC%B0%B8%EC%A1%B0%ED%98%95">2.4. 참조형</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#241-%EC%98%88%EC%A0%9C-04">2.4.1. 예제 [04]</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#3-%EC%97%B0%EC%82%B0%EC%9E%90">3. 연산자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#31-%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%A2%85%EB%A5%98">3.1. 연산자의 종류</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#311-%EC%B6%94%EA%B0%80%EC%97%B0%EC%82%B0%EC%9E%90%EB%B3%91%ED%95%A9%EC%97%B0%EC%82%B0%EC%9E%90-nullish">3.1.1. 추가연산자(병합연산자 nullish)</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#32-%EC%82%B0%EC%88%A0%EC%97%B0%EC%82%B0%EC%9E%90">3.2. 산술연산자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#321-%EC%82%B0%EC%88%A0%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EA%B8%B0%EB%B3%B8%ED%99%9C%EC%9A%A9-%EC%98%88%EC%A0%9C-05">3.2.1. 산술연산자의 기본활용 예제 [05]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#322-%EC%82%B0%EC%88%A0%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9E%90%EB%A3%8C%ED%98%95-%ED%99%9C%EC%9A%A9%EC%98%88%EC%A0%9C-06">3.2.2. 산술연산자의 자료형 활용예제 [06]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#323-%EC%82%B0%EC%88%A0%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9E%90%EB%A3%8C%ED%98%95-%ED%99%9C%EC%9A%A9%EC%98%88%EC%A0%9C-07">3.2.3. 산술연산자의 자료형 활용예제 [07]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#324-%EC%A6%9D%EA%B0%80%EC%97%B0%EC%82%B0%EC%9E%90%EC%98%88%EC%A0%9C-08">3.2.4. 증가연산자예제 [08]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#33-%ED%95%A0%EB%8B%B9%EC%97%B0%EC%82%B0%EC%9E%90">3.3. 할당연산자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#331-%EC%98%88%EC%A0%9C-08">3.3.1. 예제-[08]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#34-%EB%B9%84%EA%B5%90%EC%97%B0%EC%82%B0%EC%9E%90">3.4. 비교연산자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#341-%EC%98%88%EC%A0%9C-09">3.4.1. 예제-[09]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#35-%EB%85%BC%EB%A6%AC%EC%97%B0%EC%82%B0%EC%9E%90">3.5. 논리연산자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#351-%EC%98%88%EC%A0%9C-10">3.5.1. 예제-[10]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#352-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C-11">3.5.2. 마무리문제-[11]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#353-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C-12">3.5.3. 마무리문제-[12]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#36-%EC%A1%B0%EA%B1%B4%EB%B6%80%EC%97%B0%EC%82%B0%EC%9E%90">3.6. 조건부연산자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#361-%EC%98%88%EC%A0%9C-13">3.6.1. 예제-[13]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#362-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C-14">3.6.2. 마무리문제-[14]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#363-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C-15">3.6.3. 마무리문제-[15]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#37-%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84">3.7. 연산자의 우선순위</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#4-%EC%A0%9C%EC%96%B4%EB%AC%B8">4. 제어문</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#41-%EC%A1%B0%EA%B1%B4%EB%AC%B8">4.1. 조건문</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#411-if">4.1.1. if</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4111-if-%EC%98%88%EC%A0%9C16">4.1.1.1. if-예제[16]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4112-if-%EC%98%88%EC%A0%9C17">4.1.1.2. if-예제[17]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4113-if-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C18">4.1.1.3. if-마무리문제[18]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#412-ifelse">4.1.2. if~else</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4121-if-else-%EC%98%88%EC%A0%9C19">4.1.2.1. if-else-예제[19]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4122-if-else-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C20">4.1.2.2. if-else-마무리문제[20]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#413-ifelse-if">4.1.3. if~else if</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4131-ifelse-if-%EC%98%88%EC%A0%9C21">4.1.3.1. if~else if-예제[21]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4132-ifelse-if-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C22">4.1.3.2. if~else if-마무리문제[22]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#414-%EC%82%BC%ED%95%AD%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%A1%B0%EA%B1%B4%EB%AC%B8">4.1.4. 삼항연산자를 활용한 조건문</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4141-ifelse-if-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C23">4.1.4.1. if~else if-마무리문제[23]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#415-%EB%85%BC%EB%A6%AC%EC%97%B0%EC%82%B0%EC%9E%90%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%A1%B0%EA%B1%B4%EB%AC%B8">4.1.5. 논리연산자를 활용한 조건문</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4151-or-%EC%97%B0%EC%82%B0%EC%9E%90-%EC%98%88%EC%A0%9C24">4.1.5.1. OR 연산자-예제[24]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4152-and-%EC%97%B0%EC%82%B0%EC%9E%90-%EC%98%88%EC%A0%9C24">4.1.5.2. AND 연산자-예제[24]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4153-not-%EC%97%B0%EC%82%B0%EC%9E%90-%EC%98%88%EC%A0%9C25">4.1.5.3. NOT 연산자-예제[25]</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#42-%EC%84%A0%ED%83%9D%EB%AC%B8">4.2. 선택문</doc-anchor-trigger>
+- <doc-anchor-trigger to="#4201-switch-%EC%98%88%EC%A0%9C26">4.2.0.1. switch-예제[26]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#43-%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9C27">4.3. 실습문제[27]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#44-%EB%B0%98%EB%B3%B5%EB%AC%B8">4.4. 반복문</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#441-for">4.4.1. for</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4411-for-%EC%98%88%EC%A0%9C28">4.4.1.1. for-예제[28]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4412-for-%EC%98%88%EC%A0%9C29">4.4.1.2. for-예제[29]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4413-%EC%A4%91%EC%B2%A9-for-%EC%98%88%EC%A0%9C30">4.4.1.3. 중첩 for-예제[30]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4414-%EB%B0%B0%EC%97%B4%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-for-in">4.4.1.4. 배열과 함께 사용하는 for in</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4415-%EB%B0%B0%EC%97%B4%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-for-of">4.4.1.5. 배열과 함께 사용하는 for of</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#442-while">4.4.2. while</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4421-while-%EC%98%88%EC%A0%9C33">4.4.2.1. while-예제[33]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4422-while-%EC%98%88%EC%A0%9C34">4.4.2.2. while-예제[34]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#443-dowhile">4.4.3. do~while</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4431-dowhile-%EC%98%88%EC%A0%9C35">4.4.3.1. do~while-예제[35]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#444-breakcontinue">4.4.4. break/continue</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4441-breakcontinue-%EC%98%88%EC%A0%9C">4.4.4.1. break/continue-예제</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#45-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C-38">4.5. 마무리문제-[38]</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="1-기본문법">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-기본문법">#</doc-anchor-trigger>
+        <span>1. 기본문법 <!-- omit in toc --></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="1-변수">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-변수">#</doc-anchor-trigger>
+        <span>1. 변수</span>
+    </h3>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="https://user-images.githubusercontent.com/59301948/262992819-7156ad7e-3bd9-4942-8044-2bbbba9fd9ce.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<aside style="border:1px solid #ddd; padding:2rem; background:#ebebeb">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">✅ 변수(상수)란? 데이터(값)를 저장 할 수 있는 메모리 공간
+
+- 변하는 값은 변수 `var, let`
+- 변하지 않는 값은 상수 `const`
+-
+
+✅ 변수명 규칙
+
+- 영문,숫자, 일부 특수문자($,\_)만 포함
+- 첫 글자로는 $,\_,영문자만 사용가능
+- 한글 사용불가
+- 의미에 맞는 이름으로 사용
+- 소문자로 시작
+- 기본 this, with(상수), document,window,screen, location등등 자바스크립트에서 사용하는 단어(예약어)를 사용불가
+
+✅ 변수 사용 이유
+
+- 변수를 쓰는 이유는 코드의 재활용성을 높여준다.</code></pre>
+</doc-codeblock></div>
+</aside>
+<doc-anchor-target id="11-예제-선언과-할당-01">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-예제-선언과-할당-01">#</doc-anchor-trigger>
+        <span>1.1. 예제 <strong>선언과 할당</strong> [01]</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var currentYear; //올해 연도의 변수 선언
+var name; // 이름의 변수 선언
+var age; // 나이의 변수 선언
+var currentYear, name, age; //한번에 선언
+
+//선언후 할당하기
+var frontend;
+frontend = '김망고';
+
+//선언과 할당을 동시에 하기
+var variable = '변수';</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="12-예제-02-나이계산-프로그램-만들기">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-예제-02-나이계산-프로그램-만들기">#</doc-anchor-trigger>
+        <span>1.2. 예제 [02] 나이계산 프로그램 만들기</span>
+    </h4>
+</doc-anchor-target>
+<p><a href="script/age.html">문제</a></p>
+<p><a href="script/age-result.html">정답</a></p>
+<doc-tabs>
+<doc-tab v-cloak id="문제">
+<template #title>문제</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;나이 계산하기&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="해설">
+<template #title>해설</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;나이 계산하기&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;script&gt;
+			var currentYear = 2021;
+			var birthYear;
+			var age;
+			birthYear = prompt('태어난 연도를 입력하세요. (YYYY)', '');
+			age = currentYear - birthYear + 1;
+			document.write(currentYear + '년 현재&lt;br&gt;');
+			document.write(birthYear + '년에 태어난 사람의 나이는 ' + age + '세입니다.');
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="2-자료형">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-자료형">#</doc-anchor-trigger>
+        <span>2. 자료형</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="21-개요">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#21-개요">#</doc-anchor-trigger>
+        <span>2.1. 개요</span>
+    </h4>
+</doc-anchor-target>
+  <aside style='border:1px solid #ddd; padding:2rem;'>
+<p><span class="docs-emoji">&#x1F6A9;</span> 자료형이란?</p>
+<ol>
+<li><p>자료(data): 컴퓨터에서 처리할수 있는 모든 것</p>
+</li>
+<li><p>자료형(data type): 자료를 형태별로 분류해 놓은것</p>
+</li>
+</ol>
+  <img src="https://user-images.githubusercontent.com/59301948/263288313-7165bdd5-a33b-4628-beb4-ffdb39024811.png">
+  </aside>
+<doc-anchor-target id="22-종류">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#22-종류">#</doc-anchor-trigger>
+        <span>2.2. 종류</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>종류</th>
+<th>자료형</th>
+<th>설명</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기본(원시) 유형</td>
+<td>Number</td>
+<td>숫자를 나타내는 데이터 타입. 정수 및 부동소수점 숫자를 포함.</td>
+<td><code v-pre>var num = 123;</code></td>
+</tr>
+<tr>
+<td>---------------</td>
+<td>String</td>
+<td>문자열을 나타내는 데이터 타입. 0개 이상의 16비트 유니코드 문자로 구성.</td>
+<td><code v-pre>var str = &quot;Hello World&quot;;</code></td>
+</tr>
+<tr>
+<td>---------------</td>
+<td>Boolean</td>
+<td>논리적인 값을 나타내며 <code v-pre>true</code>와 <code v-pre>false</code> 두 가지 값을 가짐.</td>
+<td><code v-pre>var isTrue = false;</code></td>
+</tr>
+<tr>
+<td>복합(참조) 유형</td>
+<td>Object</td>
+<td>JavaScript의 객체를 나타냄. 객체는 이름과 값으로 구성된 프로퍼티들의 집합.</td>
+<td><code v-pre>var obj = {name: &quot;John&quot;, age: 30};</code></td>
+</tr>
+<tr>
+<td>---</td>
+<td>Array</td>
+<td>순서가 있는 요소들의 집합을 나타냄. 배열 요소에 접근하는 것은 대괄호([])를 사용하여 인덱스로 접근.</td>
+<td><code v-pre>var arr = [1, 2, 3];</code></td>
+</tr>
+<tr>
+<td>---</td>
+<td>Function</td>
+<td>실행 가능한 코드 블록을 가지며, 기능을 반복해서 사용할 수 있음.</td>
+<td><code v-pre>function sayHello() { alert('Hello!'); }</code></td>
+</tr>
+<tr>
+<td>특수 유형</td>
+<td>undefined</td>
+<td>변수가 선언되었으나 초기화되지 않았을 때의 값.</td>
+<td><code v-pre>var x; console.log(x);  // 출력: undefined</code></td>
+</tr>
+<tr>
+<td>---</td>
+<td>null</td>
+<td>값이 없음을 의미. 변수에 명시적으로 할당해 사용.</td>
+<td><code v-pre>var y = null; console.log(y);  // 출력: null</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="23-원시형">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#23-원시형">#</doc-anchor-trigger>
+        <span>2.3. 원시형</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p><code v-pre>typeof</code> : 자료형을 확인하는 단항 연산자와 함께 알아보자</p>
+</blockquote>
+<doc-anchor-target id="231-예제03">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#231-예제03">#</doc-anchor-trigger>
+        <span>2.3.1. 예제[03]</span>
+    </h5>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">//number
+let num1 = 1;
+let num2 = 2;
+let sum = num1 + num2;
+console.log('sum:', sum, typeof sum);
+
+//string
+let str1 = '1';
+let str2 = '2';
+let para = str1 + str2;
+console.log('para:', para, typeof para);
+
+//boolean
+let fact = true;
+let lie = false;
+console.log('fact:', fact, typeof fact);
+
+//null
+let temp = null;
+console.log('temp:', temp, typeof temp);
+
+//undefined
+let noName;
+console.log('noName:', noName, typeof noName);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="24-참조형">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#24-참조형">#</doc-anchor-trigger>
+        <span>2.4. 참조형</span>
+    </h4>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><a href="../ppt/2.pdf"><span class="docs-emoji">&#x1F517;</span>ppt</a></h5>
+<p>원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.</p>
+        </div>
+    </div>
+</div>
+<blockquote>
+<p><img src="https://user-images.githubusercontent.com/59301948/263474834-522f5912-4eb3-47b3-8faf-bdd22eb461eb.png" alt="alt" /></p>
+<p>▲ 원시타입은 한개의 물건을 저장하는 수납박스</p>
+<p><img src="https://user-images.githubusercontent.com/59301948/263474885-7d02961d-ec30-4c29-93c8-2c3eec89b32d.png" alt="alt" /></p>
+<p>▲ 참조타입은 한번에 여러개의 물건을 저장하는 수납박스이다</p>
+</blockquote>
+<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
+<h4>배열 다루기</h4>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">• 배열 생성하기: [요소, 요소, 요소, … , 요소]
+
+•  배열 요소에 접근하기: 배열[인덱스]
+
+•  배열 요소 개수 확인하기: 배열.length
+
+•  배열 뒷부분에 요소 추가하기: 배열.push(요소)
+
+•  배열 특정 위치에 요소 추가하기: 배열.splice(인덱스, 0, 요소)
+
+•  배열 요소 제거하기:
+
+	•  인덱스로 제거하기: 배열.splice( 인덱스, 제거할 요소의 개수)
+
+	•  값으로 요소 제거하기: const 인덱스 = 배열.indexOf(요소)
+
+	•  배열.splice(인덱스, 1)</code></pre>
+</doc-codeblock></div>
+</aside>
+<doc-anchor-target id="241-예제-04">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#241-예제-04">#</doc-anchor-trigger>
+        <span>2.4.1. 예제 [04]</span>
+    </h5>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">//Object
+let person = {
+	name: 'mimi',
+	age: 20,
+	city: 'seoul',
+};
+console.log(person);
+
+//Array
+let zoo = ['koala', 'cat', 'dog'];
+console.log(zoo[0]);
+
+let arr = [1, 2, 3, 4, 5];
+console.log(arr);
+
+//function
+function addNums(num1, num2) {
+	return num1 + num2;
+}
+console.log(addNums(5, 10));</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="3-연산자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-연산자">#</doc-anchor-trigger>
+        <span>3. 연산자</span>
+    </h3>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%EA%B4%80%EA%B3%84_%EC%97%B0%EC%82%B0%EC%9E%90"><span class="docs-emoji">&#x1F517;</span>mdn</a></h5>
+<p>연산자란? 프로그램에서 특정한 동작을 하도록 지시하는 기호.</p>
+<p>프로그래밍에서 연산이란 사칙연산은 물론 문자열을 연결해서 새로운 문자열을 만들고 값의 크기를 비교하는 등의 여러가지 동작을 의미한다.
+이런 연산을 지시하는 기호가 연산자이다.</p>
+<p>산술,관계,할당,논리,부정,삼항,비트,단항,등이 있다.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="31-연산자의-종류">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-연산자의-종류">#</doc-anchor-trigger>
+        <span>3.1. 연산자의 종류</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>연산자 유형</th>
+<th>연산자</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>산술 연산자</td>
+<td><code v-pre>+</code></td>
+<td>덧셈</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>-</code></td>
+<td>뺄셈</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>*</code></td>
+<td>곱셈</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>/</code></td>
+<td>나눗셈</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>%</code></td>
+<td>나머지 계산</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>++</code></td>
+<td>증가 (값에 1을 더함)</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>--</code></td>
+<td>감소 (값에서 1을 뺌)</td>
+</tr>
+<tr>
+<td>대입 연산자</td>
+<td><code v-pre>=</code></td>
+<td>값을 변수에 할당함</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>+=</code></td>
+<td>기존 값에 값을 더하고 결과를 변수에 할당함</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>-=</code></td>
+<td>기존 값에서 값을 빼고 결과를 변수에 할당함</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>*=</code></td>
+<td>기존 값에 값을 곱하고 결과를 변수에 할당함</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>/=</code></td>
+<td>기존 값으로 값을 나누고 결과를 변수에 할당함</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>%=</code></td>
+<td>기존 값으로 나머지 계산 후 결과를 변수에 할당함</td>
+</tr>
+<tr>
+<td>비교 연산자</td>
+<td><code v-pre>==</code></td>
+<td>동등 비교 (값이 같은지 확인)</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>!=</code></td>
+<td>부등 비교 (값이 다른지 확인)</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>=== </code></td>
+<td>일치 비교 (값과 타입이 모두 같은지 확인)</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>!== </code></td>
+<td>부일치 비교 (값과 타입이 모두 다른지 확인)</td>
+</tr>
+<tr>
+<td></td>
+<td><code v-pre>&lt;</code>, <code v-pre>&lt;=_</code>, <code v-pre>&gt;</code>, <code v-pre>&gt;=</code></td>
+<td>크기/같음을 비교하는 관계 연산자들</td>
+</tr>
+<tr>
+<td>논리 연산자</td>
+<td><code v-pre>&amp;&amp;</code>,<code v-pre>              |</code>, <code v-pre>!</code></td>
+<td>AND, OR, NOT 로직 구현</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="311-추가연산자병합연산자-nullish">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#311-추가연산자병합연산자-nullish">#</doc-anchor-trigger>
+        <span>3.1.1. 추가연산자(병합연산자 nullish)</span>
+    </h5>
+</doc-anchor-target>
+<blockquote>
+<p>변수나 표현식이 null 또는 undefined인 경우에만 대체 값을 반환하는 연산자</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">//nullish 병합 연산자 '??'
+const a = null;
+const b = &quot;1&quot;;
+console.log(a ?? b);
+</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="32-산술연산자">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#32-산술연산자">#</doc-anchor-trigger>
+        <span>3.2. 산술연산자</span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="321-산술연산자의-기본활용-예제-05">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#321-산술연산자의-기본활용-예제-05">#</doc-anchor-trigger>
+        <span>3.2.1. 산술연산자의 기본활용 예제 [05]</span>
+    </h5>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">console.log(100 + 200); // 300
+console.log(200 - 80); // 120
+console.log(100 * 3); // 300
+console.log(400 / 5); // 80	나누기 연산자
+console.log(402 % 5); // 2	나머지 연산자
+console.log(2 ** 3); // 8 **은 제곱!!
+</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="322-산술연산자의-자료형-활용예제-06">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#322-산술연산자의-자료형-활용예제-06">#</doc-anchor-trigger>
+        <span>3.2.2. 산술연산자의 자료형 활용예제 [06]</span>
+    </h5>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>표현식</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>문자형+문자형</td>
+<td>문자형</td>
+</tr>
+<tr>
+<td>문자형+숫자형</td>
+<td>문자형</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var t1 = '망고는';
+var t2 = 5;
+var t3 = '살';
+var t6 = true;
+var t4 = t1 + t2 + t3 + t6;
+console.log(typeof t4); //string
+alert(t4); //'망고는5살true'</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p><mark>문자형과 <code v-pre>+</code> 연산자를 사용하면 모든 자료형이 문자형으로 변환된다.</mark></p>
+<p><span class="docs-emoji">&#x1F511;</span> 자바스크립트는 변수가 가지는 값에 따라 그 타입이 동적으로 결정되는 동적 타이핑(dynamic typing) 언어이다.</p>
+<p>동적 타이핑의 장점은 유연성이다.</p>
+<p>변수의 타입이 자유롭기 때문에 언제든지 동적인 값에 따라 변수의 타입이 자동으로 바뀔 수 있으므로 유연하고 생산적인 코딩이 가능하다.</p>
+<p>하지만 동적 타이핑으로 인해 변수의 타입을 예측하기 어려우므로, 이에 따라 예상하지 않은 에러가 발생할 수도 있다.</p>
+<p>이를 보완한 것이 타입스크립트 이다.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="323-산술연산자의-자료형-활용예제-07">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#323-산술연산자의-자료형-활용예제-07">#</doc-anchor-trigger>
+        <span>3.2.3. 산술연산자의 자료형 활용예제 [07]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const x = 75;
+const y = 87;
+const add = x + y;
+document.write('국어 점수 :' + x + '&lt;br&gt;');
+document.write('수학 점수 :' + y + '&lt;br&gt;');
+document.write('합계 :' + add + '&lt;br&gt;');
+document.write('평균은 :');
+document.write(add / 2);
+document.write(`국어점수: ${x}&lt;br&gt;수학점수: ${y}&lt;br&gt;합계: ${add}&lt;br&gt; `);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="explain">
+<template #title>explain</template>
+<ul>
+<li><code v-pre>const add = x + y;</code>
+<ul>
+<li><code v-pre>+</code> 는 숫자 자료형으로 연산하였다.</li>
+</ul>
+</li>
+<li><code v-pre>document.write('국어 점수 :' + x + '&lt;br&gt;');</code>
+<ul>
+<li><code v-pre>+</code> 는 문자 자료형으로 연산하였다.</li>
+</ul>
+</li>
+<li><code v-pre>document.write(</code>국어점수: $<br>수학점수: $<br>합계: $<br> <code v-pre>);</code>
+<ul>
+<li>백틱을 사용하면 표현식과 문자를 쉽게 연결할수 있다. (Template literals)
++++</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="324-증가연산자예제-08">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#324-증가연산자예제-08">#</doc-anchor-trigger>
+        <span>3.2.4. 증가연산자예제 [08]</span>
+    </h5>
+</doc-anchor-target>
+<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
+변수에 붙이면 1씩 증가/감소 시키는 연산자
+<p>앞에 붙이면 전위연산, 뒤에 붙이면 후위 연산이라고 하며 위치에 따라 결과가 다르다</p>
+</aside>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>종류</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A = ++A</td>
+<td>A에 A에 1을 더한값을 재할당 전위연산</td>
+</tr>
+<tr>
+<td>A = A++</td>
+<td>A에 A에 1을 더한값을 재할당 후위연산</td>
+</tr>
+<tr>
+<td>A = --A</td>
+<td>A에 A에 1을 뺀값을 재할당 전위연산</td>
+</tr>
+<tr>
+<td>A = A--</td>
+<td>A에 A에 1을 뺀값을 재할당 후위연산</td>
+</tr>
+</tbody>
+</table>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let x = 1;
+
+document.write(x++); //1(2)
+document.write(x++); //2(3)
+document.write(x++); //3(4)
+document.write(x++); //4(5)
+document.write('&lt;br&gt;');
+
+x = 1;
+
+document.write(++x); //2
+document.write(++x); //3
+document.write(++x); //4
+document.write(++x); //5</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p>후위 연산은 결과를 다음 호출시 반환하고
+전위 연산은 결과를 즉시 반환한다.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="33-할당연산자">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#33-할당연산자">#</doc-anchor-trigger>
+        <span>3.3. 할당연산자</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>종류</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>우항을 좌항에 할당</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>좌항에 우항을 더한후 좌항에 재할당</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="331-예제-08">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#331-예제-08">#</doc-anchor-trigger>
+        <span>3.3.1. 예제-[08]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;노드 추가&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;container&quot;&gt;
+			&lt;p&gt;첫 번째 단락&lt;/p&gt;
+		&lt;/div&gt;
+
+		&lt;script&gt;
+			// 기존의 요소 선택
+			const container = document.getElementById('container');
+
+			// 새로운 노드 생성 및 추가
+			container.innerHTML += '&lt;p&gt;두 번째 단락&lt;/p&gt;';
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><code v-pre>container.innerHTML += '&lt;p&gt;두 번째 단락&lt;/p&gt;';</code> 의 연산자를 <code v-pre>+</code> 로 변경하면 두번째 p 태그는 교체된다.</h5>
+<p><code v-pre>+=</code> 연산자는 가산후 재할당 한다.</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="34-비교연산자">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#34-비교연산자">#</doc-anchor-trigger>
+        <span>3.4. 비교연산자</span>
+    </h4>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>비교연산자는 우항과 좌항의 값은 비교후 참이나 거짓을 반환한다.</h5>
+<p>주로 조건문에 사용한다.</p>
+        </div>
+    </div>
+</div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>종류</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A==B</td>
+<td>A와 B가 같다</td>
+</tr>
+<tr>
+<td>A!=B</td>
+<td>A와 B가 같지 않다</td>
+</tr>
+<tr>
+<td>A===B</td>
+<td>A와 B가 자료형까지 같다</td>
+</tr>
+<tr>
+<td>A!==B</td>
+<td>A와 B가 자료형까지 같지 않다</td>
+</tr>
+<tr>
+<td>A&lt;B</td>
+<td>A가 B보다 작다</td>
+</tr>
+<tr>
+<td>A&lt;=B</td>
+<td>A가 B보다 작거나 같다</td>
+</tr>
+<tr>
+<td>A&gt;B</td>
+<td>A가 B보다 크다</td>
+</tr>
+<tr>
+<td>A&gt;=B</td>
+<td>A가 B보다 크거나 같다</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="341-예제-09">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#341-예제-09">#</doc-anchor-trigger>
+        <span>3.4.1. 예제-[09]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var x = 10;
+var y = 20;
+
+document.write(x + '&gt;=' + y + ': ');
+document.write(x &gt;= y);
+document.write('&lt;br&gt;');
+
+document.write(x + '&lt;=' + y + ': ');
+document.write(x &lt;= y);
+document.write('&lt;br&gt;');
+
+document.write(x + '!=' + y + ': ');
+document.write(x != y);
+document.write('&lt;br&gt;');
+
+document.write(x + '==' + y + ': ');
+document.write(x == y);
+document.write('&lt;br&gt;');
+
+document.write(x + '===' + y + ': ');
+document.write(x === y);
+document.write('&lt;br&gt;');
+
+document.write(x + '!==' + y + ': ');
+document.write(x !== y);
+document.write('&lt;br&gt;');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p>x=10, y=20 입니다.</p>
+<p><code v-pre>document.write(x &gt;= y);</code> 10은 20보다 크거나 같다는 false 입니다</p>
+<p><code v-pre>document.write(x &lt;= y);</code> 10은 20보다 작거나 같다는 true 입니다</p>
+<p><code v-pre>document.write(x != y);</code> 10은 20과 같지 않다는 true 입니다</p>
+<p><code v-pre>document.write(x == y);</code> 10은 20과 같다 는 false 입니다</p>
+<p><code v-pre>document.write(x !== y);</code> 10은 20과 자료형까지 같지 않다는 true 입니다</p>
+<p><code v-pre>document.write(x === y);</code> 10은 20과 자료형까지 같다 는 false 입니다</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="35-논리연산자">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#35-논리연산자">#</doc-anchor-trigger>
+        <span>3.5. 논리연산자</span>
+    </h4>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>불리언(boolean) 연산자 라고도 하며 결괏값이 true, false 를 반환하는 연산자</h5>
+        </div>
+    </div>
+</div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>종류</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A&amp;&amp;B</td>
+<td>A와 B가 모두 True일 경우에만 True</td>
+</tr>
+<tr>
+<td>A ∣∣ B</td>
+<td>A또는 B가 True일 경우 True</td>
+</tr>
+<tr>
+<td>!A</td>
+<td>A가 True이면 False, False이면 True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="351-예제-10">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#351-예제-10">#</doc-anchor-trigger>
+        <span>3.5.1. 예제-[10]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var x = 7 &gt; 6 &amp;&amp; 1 &gt; 8;
+var y = 7 &gt; 6 || 1 &gt; 8;
+var z = !(7 &gt; 6);
+
+document.write('7이 6보다 크고 1이 8보다 크면 논리값은?');
+document.write(x + '&lt;br&gt;');
+document.write('7이 6보다 크거나 1이 8보다 크면 논리값은?');
+document.write(y + '&lt;br&gt;');
+document.write('7이 6보다 크지 않으면 논리값은?');
+document.write(z + '&lt;br&gt;');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<ol>
+<li>t/f =&gt; false</li>
+<li>t/f =&gt; true</li>
+<li>t =&gt; false</li>
+</ol>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="352-마무리문제-11">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#352-마무리문제-11">#</doc-anchor-trigger>
+        <span>3.5.2. 마무리문제-[11]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21.71 6.15L15.85.29c-.19-.18-.44-.29-.71-.29H6.86c-.27 0-.52.11-.71.29L.29 6.15c-.18.19-.29.44-.29.71v8.28c0 .27.11.52.29.71l5.86 5.86c.19.18.44.29.71.29h8.28c.27 0 .52-.11.71-.29l5.86-5.86a.99.99 0 00.29-.71V6.86c0-.27-.11-.52-.29-.71zM20 14.73L14.73 20H7.27L2 14.73V7.27L7.27 2h7.45L20 7.27v7.46z"></path>
+                    <path d="M11 12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zM11.01 14c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><span class="docs-emoji">&#x26A1;</span> 20대 여성이라면 결과값이 true로, 아니라면 결과 값으로 false<span class="docs-emoji">&#x26A1;</span></h5>
+<p>20대 대상의 소개팅을 준비 중입니다.<br>
+남성은 모집이 완료 되었지만 여성은 아직 모집이 다 되지 않았네요.
+prompt메서드를 활용하여 참가 희망자의 성별과 나이를 확인합니다.<br>
+20대 여성이라면 결과값이 true로, 아니라면 결과 값으로 false가 나오게 만드세요</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/API/Window/prompt">MDN <span class="docs-emoji">&#x1F517;</span></a>
+<code v-pre>prompt(message, default);</code></p>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var gender = prompt('당신의 성별은', '여성');
+var age = prompt('당신의 나이는', '20');
+var result = age &gt;= 20 &amp;&amp; age &lt; 30 &amp;&amp; gender == '여성';
+document.write(result);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="353-마무리문제-12">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#353-마무리문제-12">#</doc-anchor-trigger>
+        <span>3.5.3. 마무리문제-[12]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21.71 6.15L15.85.29c-.19-.18-.44-.29-.71-.29H6.86c-.27 0-.52.11-.71.29L.29 6.15c-.18.19-.29.44-.29.71v8.28c0 .27.11.52.29.71l5.86 5.86c.19.18.44.29.71.29h8.28c.27 0 .52-.11.71-.29l5.86-5.86a.99.99 0 00.29-.71V6.86c0-.27-.11-.52-.29-.71zM20 14.73L14.73 20H7.27L2 14.73V7.27L7.27 2h7.45L20 7.27v7.46z"></path>
+                    <path d="M11 12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zM11.01 14c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><span class="docs-emoji">&#x26A1;</span> 평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false<span class="docs-emoji">&#x26A1;</span></h5>
+<p>prompt 메서드를 활용하여 국어, 영어, 수학 점수를 입력 받으세요.<br>
+평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false를 출력합니다.</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p>엄청쉽다</p>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var korNum = Number(prompt('국어점수는?', '0'));
+var engNum = Number(prompt('영어점수는?', '0'));
+var mathNum = Number(prompt('수학점수는?', '0'));
+var avg = (korNum + engNum + mathNum) / 3;
+var result = avg &gt;= 70 &amp;&amp; konNum &gt;= 60 &amp;&amp; engNum &gt;= 60 &amp;&amp; mathNum &gt;= 60;
+document.write(result);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="36-조건부연산자">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#36-조건부연산자">#</doc-anchor-trigger>
+        <span>3.6. 조건부연산자</span>
+    </h4>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>자바스크립트에서 항을 3개 가지는 연산자는 이것 밖에 없어서 삼항연산자라고도 불리우며 조건문을 간단히 작성할때 많이 사용됨</h5>
+        </div>
+    </div>
+</div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>문법</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(조건) ? A : B</td>
+<td>조건 ? 참이면 A실행 : 거짓이면 B실행</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="361-예제-13">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#361-예제-13">#</doc-anchor-trigger>
+        <span>3.6.1. 예제-[13]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">//your=&quot;어려워요&quot;
+your = '재밌어요';
+let study = your == '어려워요' ? ' 천재이시군요' : '복습하세요';
+document.write(`자바스크립트가 ${your} &lt;h1&gt;${study}&lt;/h1&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="362-마무리문제-14">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#362-마무리문제-14">#</doc-anchor-trigger>
+        <span>3.6.2. 마무리문제-[14]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><span class="docs-emoji">&#x26A1;</span> 삼항 연산자 사용 <span class="docs-emoji">&#x26A1;</span></h5>
+<p>경아는 오늘 교통비 3,000원 식비 7,000원, 음료비 2,000원을 사용했습니다.
+하루 용돈인 10,000원을 초과했을 경우 &quot;000원 초과&quot;라고 출력되거나,
+아니면 &quot;돈 관리 참 잘했어요!&quot;라고 출력되도록 해보세요</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21.71 6.15L15.85.29c-.19-.18-.44-.29-.71-.29H6.86c-.27 0-.52.11-.71.29L.29 6.15c-.18.19-.29.44-.29.71v8.28c0 .27.11.52.29.71l5.86 5.86c.19.18.44.29.71.29h8.28c.27 0 .52-.11.71-.29l5.86-5.86a.99.99 0 00.29-.71V6.86c0-.27-.11-.52-.29-.71zM20 14.73L14.73 20H7.27L2 14.73V7.27L7.27 2h7.45L20 7.27v7.46z"></path>
+                    <path d="M11 12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zM11.01 14c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>정답틀림</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var price1 = 3000;
+var price2 = 6000;
+var price3 = 3000;
+var total = price1 + price2 + price3;
+var result = total &gt; 1000 ? total - 10000 + '원 초과' : '돈 관리 잘 했어요!';
+document.write(result);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="363-마무리문제-15">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#363-마무리문제-15">#</doc-anchor-trigger>
+        <span>3.6.3. 마무리문제-[15]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><span class="docs-emoji">&#x26A1;</span> 삼항 연산자 사용 <span class="docs-emoji">&#x26A1;</span></h5>
+<p>방문자에게 질의응답 창(prompt)을 이용하여 신장과 몸무게를 입력받아 옵니다.
+방문자의 몸무게가 적정 몸무게보다 이상일 경우 &quot;적정 몸무게 이상&quot;, 미만일 경우에는 &quot;적정 몸무게 미달&quot;로 출력되도록 하세요.
+적정 몸무게 공식은 &#x27;몸무게=(신장-100)*0.9&#x27;입니다</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21.71 6.15L15.85.29c-.19-.18-.44-.29-.71-.29H6.86c-.27 0-.52.11-.71.29L.29 6.15c-.18.19-.29.44-.29.71v8.28c0 .27.11.52.29.71l5.86 5.86c.19.18.44.29.71.29h8.28c.27 0 .52-.11.71-.29l5.86-5.86a.99.99 0 00.29-.71V6.86c0-.27-.11-.52-.29-.71zM20 14.73L14.73 20H7.27L2 14.73V7.27L7.27 2h7.45L20 7.27v7.46z"></path>
+                    <path d="M11 12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zM11.01 14c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>정답틀림</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var user_height = prompt('당신의 신장은?', '0');
+var user_weight = prompt('당신의 체중은?', '0');
+var normal_weight = (user_height - 100) * 0.9;
+var result = user_weight &gt; normal_weight ? '적정 몸무게 이상' : '적정 몸무게 미달';
+document.write(result);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="37-연산자의-우선순위">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#37-연산자의-우선순위">#</doc-anchor-trigger>
+        <span>3.7. 연산자의 우선순위</span>
+    </h4>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>자바스크립트에서 연산자 우선순위는 표현식 내에서 연산자가 어떤 순서로 평가되는지를 결정하는 규칙입니다.</p>
+<p>이 규칙에 따라 표현식의 평가 순서와 결과가 달라질 수 있습니다.</p>
+        </div>
+    </div>
+</div>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>우선순위</th>
+<th>연산자</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td><code v-pre>( )</code></td>
+</tr>
+<tr>
+<td>2. 단항 연산자</td>
+<td><code v-pre>--,++,!</code></td>
+</tr>
+<tr>
+<td>3. 산술 연산자</td>
+<td><code v-pre>_,/,%,+,-</code></td>
+</tr>
+<tr>
+<td>4. 비교 연산자</td>
+<td><code v-pre>&gt;,&gt;=,&lt;,&lt;=,==,===,!==</code></td>
+</tr>
+<tr>
+<td>5. 논리 연산자</td>
+<td><code v-pre>&amp;&amp;,||</code></td>
+</tr>
+<tr>
+<td>6. 대입(복합 대입)연산자</td>
+<td><code v-pre>=,+=,-+,_=,/=,%=</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<doc-anchor-target id="4-제어문">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-제어문">#</doc-anchor-trigger>
+        <span>4. 제어문</span>
+    </h3>
+</doc-anchor-target>
+<div class="comment_box"><p><mark>제어문</mark> 에는 <mark>조건문, 선택문, 반복문</mark> 이 있습니다.</p>
+<ol>
+<li><p>조건문이란 조건에 따라 실행이 달라지게 할 때 사용되는 제어문입니다.</p>
+<ul>
+<li>자바 스크립트의 조건문 에는<code v-pre> if, else, else if</code>가 있습니다.</li>
+</ul>
+</li>
+<li><p>선택문이란 값에 따라서 실행 내용을 선택하여 실행 할때 사용되는 제어문입니다.</p>
+<ul>
+<li>자바 스크립트의 선택문 에는 <code v-pre>switch</code>가 있습니다.</li>
+</ul>
+</li>
+<li><p>반복문이란 주어진 조건에 따라서 문장을 반복 실행 할때 사용되는 제어문 입니다</p>
+<ul>
+<li>자바 스크립트의 반복문 에는 <code v-pre>for, while, do while</code> 등이 있습니다.</li>
+</ul>
+</li>
+</ol>
+</div>
+<doc-anchor-target id="41-조건문">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#41-조건문">#</doc-anchor-trigger>
+        <span>4.1. 조건문</span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="411-if">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#411-if">#</doc-anchor-trigger>
+        <span>4.1.1. if</span>
+    </h5>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>프로그래밍을 할때는 특정 조건과 명령에 따라 실행 순서를 정해야 합니다.</p>
+<p>이때 특정 조건이 맞는지 확인하기 위해 조건문 을 사용하며 프로그래밍 시 가장 빈번히 사용하는 구문입니다.</p>
+<p>자바스크립트의 조건문과 조건 연산자에 대해 학습하겠습니다.</p>
+        </div>
+    </div>
+</div>
+<blockquote>
+<p>if 문이나 if~else문을 사용하여 스크립트 안에서 조건을 체크할수 있습니다.<br>
+if문은 소괄호 안의 조건을 체크하여 결괏값이 true 면 중괄호 내부의 실행문을 실행하고<br>
+조건의 결과가 false 이면 중괄호의 실행문을 무시합니다.<br>
+아래는 if 문의 기본 문법 예시입니다.<br></p>
+</blockquote>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">if (조건) {
+	실행문;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4111-if-예제16">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4111-if-예제16">#</doc-anchor-trigger>
+        <span>4.1.1.1. if-예제[16]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var your_sex = '남자';
+document.write('당신은' + your_sex + '이므로');
+if (your_sex == '남자') document.write('치마를 입으세요.');
+if (your_sex == '여자') document.write('바지를 입으세요.');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<blockquote>
+<p>if문은 조건이 true 일때만 실행할수 있으므로 false 일때도 명령을 하려면 실행문을 두번 작성해야 하는 번거로움이 있습니다.<br>
+이럴때 else 를 사용하면 됩니다.<br>
+아래는 if ~ else if 문의 기본 문법 예시입니다.<br></p>
+</blockquote>
+<doc-anchor-target id="4112-if-예제17">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4112-if-예제17">#</doc-anchor-trigger>
+        <span>4.1.1.2. if-예제[17]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>질의응답 창(prompt)을 이용하여
+시험 점수를 입력 받아 저장한 후 만일 <span class="docs-emoji">&#x26A1;</span>70점보다 크거나 같으면 &#x27;합격&#x27;<span class="docs-emoji">&#x26A1;</span>이라는 메시지를 출력하시오</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p>정답틀림</p>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var testNum = prompt('시험 점수를 입력하세요');
+if (textNum &gt;= 70) {
+	document.write('합격입니다.');
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p>GPT 한테 물어보세요</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4113-if-마무리문제18">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4113-if-마무리문제18">#</doc-anchor-trigger>
+        <span>4.1.1.3. if-마무리문제[18]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>사용자로부터 입력받은 숫자가 3의 배수인지를 확인후 결과를 출력하는 프로그램을 작성하시오
+<a href="script/18.html"><span class="docs-emoji">&#x26A1;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p>3의 배수는 3으로 나눈 나머지가 0일 꺼에요 <span class="docs-emoji">&#x1F914;</span></p>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<p>사는게 쉽지 않아요</p>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p>GPT 한테 물어보세요</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="412-ifelse">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#412-ifelse">#</doc-anchor-trigger>
+        <span>4.1.2. if~else</span>
+    </h5>
+</doc-anchor-target>
+<blockquote>
+<p>if문은 조건이 true 일때만 실행할수 있으므로 false 일때도 명령을 하려면 실행문을 두번 작성해야 하는 번거로움이 있습니다.<br>
+이럴때 else 를 사용하면 됩니다.<br>
+아래는 if ~ else if 문의 기본 문법 예시입니다.<br></p>
+</blockquote>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">if (조건1) {
+	실행문1;
+}else {
+	조건1이 false 일때 실행문;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4121-if-else-예제19">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4121-if-else-예제19">#</doc-anchor-trigger>
+        <span>4.1.2.1. if-else-예제[19]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const weight = 70;
+const height = 170;
+const test = (height - 100) * 0.9;
+if (weight &gt; test) document.write('당신은 비만이예요');
+else document.write('당신은 정상이네요');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>This is another Tab!!!</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4122-if-else-마무리문제20">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4122-if-else-마무리문제20">#</doc-anchor-trigger>
+        <span>4.1.2.2. if-else-마무리문제[20]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>나이가 20세 이상이고, 30세 미만일 경우에는 &#x27;통과&#x27;라고 출력하고, 그렇지 않으면 &#x27;비통과&#x27;라고 출력하시오. <a href="script/20.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p>이상은 해당 숫자를 포함하고 미만은 해당 숫자를 포함하지 않아요</p>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">모르니까 저도 물어보는 거예요</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="413-ifelse-if">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#413-ifelse-if">#</doc-anchor-trigger>
+        <span>4.1.3. if~else if</span>
+    </h5>
+</doc-anchor-target>
+<blockquote>
+<p>조건이 복잡할 경우 if~else if 를 사용하여 다중 조건을 판별할수 있습니다.<br>
+아래는 else if 문의 기본 문법 예시입니다.<br></p>
+</blockquote>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">if (조건1) {
+	실행문1;
+} else if (조건2) {
+	실행문2;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4131-ifelse-if-예제21">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4131-ifelse-if-예제21">#</doc-anchor-trigger>
+        <span>4.1.3.1. if~else if-예제[21]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>사용자가 입력한 숫자가 3의 배수인지를 판별하여 알려주고 취소를 누를 경우 입력이 취소됨을 표시하는 프로그램을 작성해봅시다</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var userNumber = prompt('숫자를 입력하세요.');
+
+if (userNumber !== null) {
+	if (userNumber % 3 === 0) alert('3의 배수입니다.');
+	else alert('3의 배수가 아닙니다.');
+} else alert('입력이 취소됐습니다.');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><strong>순서도</strong></p>
+<div class="comment_box"><p>프로그래밍 작업시 소스의 순서나 계획을 순서도로 작성해보면 코드의 이해와 작성이 수월해집니다.
+아래는 사용자가 입력한 숫자가 3의 배수인지를 판별하여 알려주고 취소를 누를 경우 입력이 취소됨을 표시하는 프로그램의 순서도 입니다.</p>
+</div>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">flowchart TD
+     A{입력값이 null이 아닌가?} --true--&gt; B{3의 배수인가?} --true--&gt; D[3의 배수입니다.]
+		 B{3의 배수인가?} --false--&gt; E[3의 배수가 아닙니다.]
+     A{입력값이 null이 아닌가?} --false--&gt; C[입력 취소됨]</pre></div>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4132-ifelse-if-마무리문제22">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4132-ifelse-if-마무리문제22">#</doc-anchor-trigger>
+        <span>4.1.3.2. if~else if-마무리문제[22]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>사용자로 취득점수를 입력 받습니다. <br>
+점수가 90점 이상일 경우 A학점, 80점 이상일경우 B학점, 70점 이상일경우 C학점 , <br>60점 이상일 경우 D학점, 60점 이하일 경우 F학점 메시지를 출력하는 프로그램을 작성하세요. <a href="script/22.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="414-삼항연산자를-활용한-조건문">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#414-삼항연산자를-활용한-조건문">#</doc-anchor-trigger>
+        <span>4.1.4. 삼항연산자를 활용한 조건문</span>
+    </h5>
+</doc-anchor-target>
+<doc-anchor-target id="4141-ifelse-if-마무리문제23">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4141-ifelse-if-마무리문제23">#</doc-anchor-trigger>
+        <span>4.1.4.1. if~else if-마무리문제[23]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><doc-anchor-trigger to="#4131-ifelse-if-%EC%98%88%EC%A0%9C21">4.1.3.1. if~else if-예제[21]</doc-anchor-trigger> 의 if문을 삼항연산자로 작성하세요. <a href="script/23.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="415-논리연산자를-활용한-조건문">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#415-논리연산자를-활용한-조건문">#</doc-anchor-trigger>
+        <span>4.1.5. 논리연산자를 활용한 조건문</span>
+    </h5>
+</doc-anchor-target>
+<div class="comment_box"><p>두조건이 true 일 경우와 조건 1개만 true 일 경우 처럼 여러 경우의 수를 따질때는 논리 연산자를 사용합니다.</p>
+</div>
+<doc-anchor-target id="4151-or-연산자-예제24">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4151-or-연산자-예제24">#</doc-anchor-trigger>
+        <span>4.1.5.1. OR 연산자-예제[24]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p><strong><span class="docs-emoji">&#x1F511;</span>OR 연산자는 <code v-pre>||</code> 를 사용하며 우항의 2개중 true가 하나라도 있으면 결과를 true로 반환합니다.</strong></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중 하나가 10보다 작은 지를 판단하는 프로그램을 작성해 봅시다 <a href="script/or.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;조건문&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;script&gt;
+			var numberOne = prompt('50미만의 숫자를 입력하세요.');
+			var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+
+			if (numberOne &lt; 10 || numberTwo &lt; 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
+			else alert('두 개의 숫자 중 10 미만인 수는 없습니다.');
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4152-and-연산자-예제24">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4152-and-연산자-예제24">#</doc-anchor-trigger>
+        <span>4.1.5.2. AND 연산자-예제[24]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p><strong><span class="docs-emoji">&#x1F511;</span>AND 연산자는 <code v-pre>&amp;&amp;</code> 를 사용하며 우항의 2개중 false가 하나라도 있으면 결과를 false로 반환합니다.</strong></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>AND 연산자를 사용하여 입력한 두개의 숫자가 50보다 작은지 체크하는 프로그램을 작성해봅시다.<a href="script/and.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var numberOne = prompt('50미만의 숫자를 입력하세요.');
+var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+
+if (numberOne &lt; 50 &amp;&amp; numberTwo &lt; 50) alert('두 개의 숫자 모두 50 미만이군요.');
+else alert('조건에 맞지 않는 숫자가 있습니다.');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4153-not-연산자-예제25">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4153-not-연산자-예제25">#</doc-anchor-trigger>
+        <span>4.1.5.3. NOT 연산자-예제[25]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p><strong><span class="docs-emoji">&#x1F438;</span> NOT 연산자는 <code v-pre>!</code> 를 사용하며 청개구리 처럼 결과값을 반대로 반환합니다. 결과가 true 이면 false 를 결과가 false 이면 true 를 반환합니다.</strong></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>NOT 연산자를 사용하여 사용자가 입력한 값이 null 이 아닌지를 체크해 봅시다.<a href="script/not.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var numberOne = prompt('50미만의 숫자를 입력하세요.');
+var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+
+if (numberOne !== null &amp;&amp; numberTwo !== null) {
+	if (numberOne &lt; 10 || numberTwo &lt; 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
+	else alert('두 개의 숫자 중 10 미만인 수는 없습니다.');
+} else {
+	alert('50 미만의 숫자를 입력하세요.');
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<div class="comment_box"><p><mark>조건 계산을 빠르게 하는 방법</mark></p>
+<p>조건이 2가지 이상일 경우 동시에 함께 체크하는 조건식을 만들때는 첫번째 조건을 보고 빠르게 판단할수 있도록 작성해야 합니다.<br>
+예를 들어 다음과 같은 조건식의 경우를 살펴보겠습니다.<br>
+<code v-pre>(( x === 10 ) &amp;&amp; ( y === 20 ))</code><br>
+AND 연산자는 조건식이 둘 이상일 경우 하나만 false 라도 최종값이 false 입니다.<br>
+그러므로 첫번째 조건식의 결과를 false 로 작성할 경우 두번째 조건은 체크 하지 않고 바로 false 를 반환하게 됩니다.<br>
+이런 식으로 AND 연산자 사용시 false 를 반환하게 될 확률이 높은 식을 첫번째 조건으로 사용하게 된다면<br>
+컴퓨터의 일을 덜어주는 셈이 됩니다.<br>
+반대로 OR 연산자의 경우 하나만 true 라도 최종 값이 true 이기 때문에 첫번째 조건으로 true 를 반환하는 식을 작성한다면<br>
+효율적인 코드를 작성할수 있습니다.<br>
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>이런 연산 방식을 단축평가(short circuit evaluation) 라고 합니다</span>
+</span></p>
+</div>
+<doc-anchor-target id="42-선택문">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#42-선택문">#</doc-anchor-trigger>
+        <span>4.2. 선택문</span>
+    </h4>
+</doc-anchor-target>
+<div class="comment_box"><p>선택문이란 하나의 변수 값을 여러 개의 값과 비교하여 해당하는 case 절의 코드를 실행하는 제어문 입니다.</p>
+<p>변수에 저장된 데이터(data)와 정확히 일치되는 경우(case)가 있는지 검사 후 일치하는 데이터가 있을 때</p>
+<p>해당 실행문을 수행한 뒤 마지막의 break문으로 반복을 끝냅니다.</p>
+<p>일치되는 값이 없을 때에는 default에 해당하는 실행문을 수행한 뒤 문장을 마칩니다.</p>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">switch (조건) {
+	case 값1:
+		명령1;
+		break;
+	case 값2:
+		명령2;
+		break;
+	default:
+		기본명령;
+}</code></pre>
+</doc-codeblock></div>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">graph TB
+    Start(변수준비) --&gt; Condition{변수와 조건을 비교}
+    Condition --&gt;|Case 1| Action1[명령 1]
+    Condition --&gt;|Case 2| Action2[명령 2]
+    Condition --&gt;|Default| DefaultAction[기본명령]
+
+    Action1 --&gt; End(End)
+    Action2 --&gt; End
+    DefaultAction --&gt; End</pre></div>
+<doc-anchor-target id="4201-switch-예제26">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4201-switch-예제26">#</doc-anchor-trigger>
+        <span>4.2.0.1. switch-예제[26]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>사용자에게 1,2,3 중 하나의 값을 입력받아 session 변수에 저장한다.</h5>
+<p>switch 문을 이용해 session 값을 체크하여 입력받은 값이</p>
+<p>1이면 마케팅-201호, 2이면 개발-203호, 3이면 디자인-204호로</p>
+<p>안내하는 프로그램을 작성해보자
+<a href="script/switch.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="html">
+<template #title>HTML</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;세션 선택 - switch문&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/switch.css&quot; /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;script&gt;
+			var session = prompt('관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인');
+
+			switch (session) {
+				case '1':
+					document.write('&lt;p&gt;마케팅 세션은 &lt;strong&gt;201호&lt;/strong&gt;에서 진행됩니다.&lt;/p&gt;');
+					break;
+				case '2':
+					document.write('&lt;p&gt;개발 세션은 &lt;strong&gt;203호&lt;/strong&gt;에서 진행됩니다.&lt;/p&gt;');
+					break;
+				case '3':
+					document.write('&lt;p&gt;디자인 세션은 &lt;strong&gt;205호&lt;/strong&gt;에서 진행됩니다.&lt;/p&gt;');
+					break;
+				default:
+					alert('잘못 입력했습니다.');
+			}
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="css">
+<template #title>CSS</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">body {
+	background-color: #0c3268;
+	color: rgb(243, 243, 243);
+}
+
+p {
+	margin-top: 80px;
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 1px 2px 1px #000;
+}
+
+p strong {
+	font-size: 2.2em;
+	color: yellow;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<p><a href="script/switch2.html"><span class="docs-emoji">&#x1F428;</span>스위치문제</a></p>
+<doc-anchor-target id="43-실습문제27">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#43-실습문제27">#</doc-anchor-trigger>
+        <span>4.3. 실습문제[27]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>자리배치도에 필요한 줄의 갯수를 구하시오.</h5>
+<p>대관서비스 앱을 제작 중입니다. 사용자로 부터 총 입장객과 한줄에 앉을 인원수를 입력받아</p>
+<p>총 몇개의 줄이 필요한지 출력해주세요</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<ul>
+<li>전체 입장객의 수가 10명이고 한줄에 2명씩 앉아야 한다면 <code v-pre>10/2</code> 를 하여 총 5줄이 필요하겠죠?</li>
+<li>필요한 값들을 변수로 지정하고 프로그램을 작성해보세요.</li>
+</ul>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+if (memNum % colNum === 0) rowNum = parseInt(memNum / colNum);
+else rowNum = parseInt(memNum / colNum) + 1;
+document.write('모두 ' + rowNum + '개의 줄이 필요합니다.');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">- 입장객의 수가 나누어 떨어지는 경우와 그렇지 않은 경우가 있습니다. 프로그램은 두개의 경우를 고려하여 작성하였습니다.
+
+1. memNum 변수에 전체 입장객의 수를 입력받아 할당합니다.
+2. colNum 변수에 한줄에 앉힐 인원수를 입력받아 할당합니다.
+3. 전체 입장객 수(memNum)을 한 줄에 앉을 사람 수(colNum)으로 나눈 나머지가 0인지 확인합니다.
+	즉, 모든 사람이 정확히 분배되면 그 결과값(줄의 개수)을 그대로 반환하고, 그렇지 않으면 결과값에서 소수점 아래를 버리고
+	1을 더하여 필요한 줄의 개수를 계산합니다. 결괏값은 rowNum 변수에 저장됩니다.
+	prompt 함수를 사용하여 입력 받은 자료는 string 타입으로 저장되기 때문에 parseInt 함수로 number 타입으로 변환하여 나누기 연산을 수행합니다.
+
+4. document.write() 함수를 이용해 웹 페이지 상에서 &quot;모두 n개의 줄이 필요합니다.&quot;라는 메시지를 출력하며, 여기서 n은 계산된 줄의 개수(rownum)입니다. [:koala:](./script/seat-1.html)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="44-반복문">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#44-반복문">#</doc-anchor-trigger>
+        <span>4.4. 반복문</span>
+    </h4>
+</doc-anchor-target>
+<div class="comment_box"><p>반목문이란 주어진 <mark>조건에 따라서 문장을 반복 실행</mark>하게 하는 제어문입니다.</p>
+<p>자바 스크립트에서 반복문은 <mark>for문, while문, do while문</mark>이 있습니다.</p>
+</div>
+<doc-anchor-target id="441-for">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#441-for">#</doc-anchor-trigger>
+        <span>4.4.1. for</span>
+    </h5>
+</doc-anchor-target>
+<p>반복문 사용시 얼마나 편리해지는지 체험해 보겠습니다.</p>
+<doc-anchor-target id="4411-for-예제28">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4411-for-예제28">#</doc-anchor-trigger>
+        <span>4.4.1.1. for-예제[28]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="반복문-사용전">
+<template #title>반복문 사용전</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var sum = 0;
+
+sum += 1;
+sum += 2;
+sum += 3;
+sum += 4;
+sum += 5;
+document.write('1부터 5까지 더하면 ' + sum);</code></pre>
+</doc-codeblock></div>
+<p><a href="script/repeat-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+</doc-tab>
+<doc-tab v-cloak id="반복문-사용후">
+<template #title>반복문 사용후</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var i;
+var sum = 0;
+
+for (i = 1; i &lt; 6; i++) {
+	sum += i;
+}
+document.write('1부터 5까지 더하면 ' + sum);</code></pre>
+</doc-codeblock></div>
+<p><a href="script/repeat-2.html"> <svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+</doc-tab>
+</doc-tabs>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">for (초기값; 조건; 증가식) {
+	실행문;
+}</code></pre>
+</doc-codeblock></div>
+<p>for 문은 초기값-&gt;조건-&gt;명령-&gt;증가식의 순서로 수행합니다.</p>
+<doc-anchor-target id="4412-for-예제29">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4412-for-예제29">#</doc-anchor-trigger>
+        <span>4.4.1.2. for-예제[29]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>for 문을 사용해 1부터 100까지 숫자 더하기 <a href="script/repeat-3.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-none"><code v-pre class="language-none">var i;
+var sum = 0;
+
+for(i = 1; i &lt; 1001; i++) {
+	sum += i;
+}
+document.write(&quot;1부터 5까지 더하면 &quot; + sum);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4413-중첩-for-예제30">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4413-중첩-for-예제30">#</doc-anchor-trigger>
+        <span>4.4.1.3. 중첩 for-예제[30]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>중첩 for문으로 1단부터 9단까지 구구단 만들기</h5>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="js1">
+<template #title>JS1</template>
+<p><a href="script/gugudan-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var i, j;
+
+for (i = 1; i &lt;= 9; i++) {
+	document.write('&lt;h3&gt;' + i + '단&lt;/h3&gt;');
+	for (j = 1; j &lt;= 9; j++) {
+		document.write(i + ' X ' + j + ' = ' + i * j + '&lt;br&gt;');
+	}
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="css">
+<template #title>CSS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">div {
+	display: inline-block;
+	padding: 0 20px 30px 20px;
+	margin: 15px;
+	border: 1px solid #ccc;
+	line-height: 2;
+}
+div h3 {
+	text-align: center;
+	font-weight: bold;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="js2">
+<template #title>JS2</template>
+<p>동적요소추가 후 스타일반영
+<a href="script/gugudan-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript" data-line="4,8"><code v-pre class="language-javascript">var i, j;
+for (i = 1; i &lt;= 9; i++) {
+	document.write('&lt;div&gt;');
+	document.write('&lt;h3&gt;' + i + '단&lt;/h3&gt;');
+	for (j = 1; j &lt;= 9; j++) {
+		document.write(i + ' X ' + j + ' = ' + i * j + '&lt;br&gt;');
+	}
+	document.write('&lt;/div&gt;');
+	if (i === 3) break;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4414-배열과-함께-사용하는-for-in">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4414-배열과-함께-사용하는-for-in">#</doc-anchor-trigger>
+        <span>4.4.1.4. 배열과 함께 사용하는 for in</span>
+    </h6>
+</doc-anchor-target>
+<p><a href="../../2.partial/array/"><span class="docs-emoji">&#x1F517;</span> 배열학습하기</a> [31]</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">[32]</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업']
+for (const i in todos) {
+document.write(`
+${i}번째 할 일: ${todos[i]}`)
+</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4415-배열과-함께-사용하는-for-of">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4415-배열과-함께-사용하는-for-of">#</doc-anchor-trigger>
+        <span>4.4.1.5. 배열과 함께 사용하는 for of</span>
+    </h6>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">[32]</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업'];
+for (const todo of todos) {
+	document.write(`
+오늘의 할 일: ${todo}`);
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="442-while">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#442-while">#</doc-anchor-trigger>
+        <span>4.4.2. while</span>
+    </h5>
+</doc-anchor-target>
+<p>while문은 조건이 true인 동안 실행문을 반복 합니다.
+조건을 먼저 체크한 후 실행하기 때문에 조건이 false 라면 한번도 실행하지 않을수도 있습니다.</p>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">while (조건) {
+	실행문;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4421-while-예제33">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4421-while-예제33">#</doc-anchor-trigger>
+        <span>4.4.2.1. while-예제[33]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>while 문을 사용하여 1부터 10까지 반복하여 출력해봅시다</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<p><a href="script/while.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var i = 1; //초기값
+while (i &lt;= 10) {
+	document.write(i + '&lt;br /&gt;');
+	i++;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4422-while-예제34">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4422-while-예제34">#</doc-anchor-trigger>
+        <span>4.4.2.2. while-예제[34]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>while 문을 사용하여 1부터 10까지의 합을 계산해보세요</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<p><a href="script/while2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let x = 0;
+let total = 0;
+while (x &lt; 10) {
+	x++;
+	total = total + x; //total+=x
+	document.write(x);
+	if (x != 10) document.write('+');
+}
+document.write('=' + total);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p><code v-pre>let x = 0과 let total = 0</code> : 변수 x와 total을 선언하고 각각 초기값으로 0을 할당합니다.</p>
+<p><code v-pre>while (x &lt; 10) {...}</code> : while 반복문을 사용하여 조건식인 x &lt; 10이 참인 동안 아래의 코드 블록이 반복 실행됩니다.</p>
+<p><code v-pre>x++</code>: 반복문 내에서 x 값을 증가시킵니다. 이는 x 값을 1씩 증가시키는 역할을 합니다.</p>
+<p><code v-pre>total = total + x</code> : total 변수에 현재의 x 값을 더해줍니다. 이로써 각 숫자들이 계속해서 누적되어 더해지게 됩니다.</p>
+<p><code v-pre>document.write(x)</code> : 현재의 x 값을 웹 페이지에 출력합니다.</p>
+<p><code v-pre>if (x != 10) document.write(&quot;+&quot;)</code> : 만약 현재의 x 값이 10이 아니라면 &quot;+&quot; 문자를 웹 페이지에 출력합니다.</p>
+<p>숫자 사이에 <code v-pre>+</code> 문자를 출력하기 위한 것으로 마지막 숫자는 출력되지 않게 조건을 작성했습니다.</p>
+<p>반복문이 종료되면, &quot;=&#x60;&quot; 문자열과 함께 total 변수의 값을 웹 페이지에 출력합니다.</p>
+<p>&quot;1+2+3+4...=&quot; 과 같은 형태로 시작하여, 마지막으로 계산된 total 값(55)을 추가로 표시합니다.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="443-dowhile">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#443-dowhile">#</doc-anchor-trigger>
+        <span>4.4.3. do~while</span>
+    </h5>
+</doc-anchor-target>
+<p>기본적으로 while 문과 같이 조건을 체크하여 반복하는 반복문 입니다.</p>
+<p>하지만 do~while은 실행후 조건을 체크하기 때문에 조건이 false 라도 무조건 한번은 실행합니다.</p>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">do {
+	실행문;
+} while (조건);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4431-dowhile-예제35">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4431-dowhile-예제35">#</doc-anchor-trigger>
+        <span>4.4.3.1. do~while-예제[35]</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>do~while 문으로 사용자로부터 숫자를 입력받아서 1부터 해당 숫자까지의 합을 계산하고 출력하는 프로그램을 작성해 봅시다</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<p><a href="script/while3.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let number;
+let sum = 0;
+
+do {
+	number = parseInt(prompt('숫자를 입력하세요:'));
+	sum += number;
+} while (!isNaN(number));
+
+document.write('입력한 숫자들의 합은 ' + sum + '입니다.');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p><code v-pre>let number; let sum = 0;</code>: 변수 number와 sum을 선언하고 초기값으로 각각 undefined와 0을 할당합니다.</p>
+<p><code v-pre>do { ... } while (isNaN(number));</code>: do-while 반복문을 사용하여 중괄호 안의 코드 블록이 최소한 한 번 실행되도록 합니다. 이후 조건식인 isNaN(number)가 참인 동안 반복문이 계속 실행됩니다.</p>
+<p>isNaN(number)는 입력된 값(number)이 NaN(숫자가 아님)인지 확인하는 조건입니다.</p>
+<p><code v-pre>number = prompt(&quot;숫자를 입력하세요:&quot;);</code>: 사용자에게 &#x27;숫자를 입력하세요&#x27;라는 메시지와 함께 대화상자를 표시하고, 사용자가 입력한 값을 문자열로 받아 변수 number에 저장합니다.</p>
+<p>for 반복문을 사용하여 1부터 해당 숫자까지의 합(sum)을 계산합니다.</p>
+<p>반복문의 시작값은 1부터 시작하며, 종료 조건은 parseInt() 함수를 통해 문자열로 받은 숫자(number)로 변환하여 설정됩니다.</p>
+<p>매번 반복할 때마다 현재의 값을 누적하여 (+=) 변수 sum에 더해줍니다. <code v-pre>sum=sum+number</code> 과 같습니다.</p>
+<p>반복문 종료 후, &quot;입력한 숫자들의 합은 x입니다.&quot;라는 메시지를 웹 페이지에 출력합니다.</p>
+<p>여기서 x는 루프에서 계산된 총합(sum) 값입니다.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="444-breakcontinue">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#444-breakcontinue">#</doc-anchor-trigger>
+        <span>4.4.4. break/continue</span>
+    </h5>
+</doc-anchor-target>
+<p>반복문의 실행문들은 수행과정에서 break문을 만나면 해당 반복문을 종료합니다.
+break문은 반복문 등을 정지시킬 때에 사용합니다.</p>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">break 정지</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">break</code></pre>
+</doc-codeblock></div>
+<p>반복문 문장 안에 사용하여 반복 실행 중에 조건문으로 되돌아 가게 해주는 역할을 합니다
+즉, 반목문에서 특정 부분을 실행하지 않게 하고 싶을 때 간단하게 사용할 수 있습니다.
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">continue 통과</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">continue</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4441-breakcontinue-예제">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4441-breakcontinue-예제">#</doc-anchor-trigger>
+        <span>4.4.4.1. break/continue-예제</span>
+    </h6>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드-36">
+<template #title>코드[36]</template>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white h-8 px-4 text-base rounded-md">
+    <span>34-break</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">for (let i = 0; true; i++) {
+	alert(i + '번째 반복문입니다.');
+	// 진행 여부를 물어봅니다.
+	const isContinue = confirm('계속하시겠습니까?');
+	if (!isContinue) {
+		//조건에 충족하면 break 키워드실행
+		break;
+	}
+}
+// 프로그램의 종료를 확인.
+alert('프로그램 종료');</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="코드-37">
+<template #title>코드[37]</template>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white h-8 px-4 text-base rounded-md">
+    <span>35-continue</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var x = 0;
+var total = 0;
+
+while (x &lt; 10) {
+	x++;
+
+	if (x == 3) continue;
+	total = total + x;
+	document.write(x);
+
+	if (x != 10) document.write('+');
+}
+
+document.write('=' + total);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="45-마무리문제-38">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#45-마무리문제-38">#</doc-anchor-trigger>
+        <span>4.5. 마무리문제-[38]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>자리배치도를 만드세요
+<a href="script/seat-result.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<p>27번 문제에서 작성했던 조건문을 활용하여 좌석의 번호를 출력하는 프로그램을 작성하세요</p>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;자리 배치도&lt;/title&gt;
+		&lt;style&gt;
+			table,
+			td {
+				border: 1px solid #ccc;
+				border-collapse: collapse;
+			}
+			td {
+				padding: 5px;
+				font-size: 0.9em;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;자리 배치도&lt;/h1&gt;
+		&lt;script&gt;
+			var i, j;
+			var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+			var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+
+			if (memNum % colNum == 0) rowNum = parseInt(memNum / colNum);
+			else rowNum = parseInt(memNum / colNum) + 1;
+
+			// document.write(&quot;모두 &quot; + rowNum + &quot;개의 줄이 필요합니다.&quot;);
+
+			document.write('&lt;table&gt;');
+			for (i = 0; i &lt; rowNum; i++) {
+				document.write('&lt;tr&gt;');
+				for (j = 1; j &lt;= colNum; j++) {
+					seatNo = i * colNum + j; // 좌석 번호
+					if (seatNo &gt; memNum) break;
+					document.write('&lt;td&gt; 좌석 ' + seatNo + ' &lt;/td&gt;');
+				}
+				document.write('&lt;/tr&gt;');
+			}
+			document.write('&lt;/table&gt;');
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+</doc-tab>
+</doc-tabs>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/1.total/1/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">1. 자바스크립트의 시작 </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/1.total/3/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">3. 함수와 이벤트 </span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "2. 기본문법 ", level: 4, icon: "file", hasPrism: true, hasMermaid: true, hasMath: false }</script>
+</body>
+</html>

@@ -1,3 +1,10 @@
+---
+order: 100
+category:
+  - javascript
+  - class
+---
+
 # 2. 기본문법 <!-- omit in toc -->
 
 ### 목차 <!-- omit in toc -->
@@ -59,13 +66,16 @@
 			- [4.4.1.1. for-예제\[28\]](#4411-for-예제28)
 			- [4.4.1.2. for-예제\[29\]](#4412-for-예제29)
 			- [4.4.1.3. 중첩 for-예제\[30\]](#4413-중첩-for-예제30)
+			- [4.4.1.4. 배열과 함께 사용하는 for in](#4414-배열과-함께-사용하는-for-in)
+			- [4.4.1.5. 배열과 함께 사용하는 for of](#4415-배열과-함께-사용하는-for-of)
 		- [4.4.2. while](#442-while)
-			- [4.4.2.1. while-예제\[31\]](#4421-while-예제31)
-			- [4.4.2.2. while-예제\[32\]](#4422-while-예제32)
+			- [4.4.2.1. while-예제\[33\]](#4421-while-예제33)
+			- [4.4.2.2. while-예제\[34\]](#4422-while-예제34)
 		- [4.4.3. do~while](#443-dowhile)
-			- [4.4.3.1. do~while-예제\[33\]](#4431-dowhile-예제33)
+			- [4.4.3.1. do~while-예제\[35\]](#4431-dowhile-예제35)
 		- [4.4.4. break/continue](#444-breakcontinue)
-			- [4.4.4.1. break/continue-예제\[34\]](#4441-breakcontinue-예제34)
+			- [4.4.4.1. break/continue-예제](#4441-breakcontinue-예제)
+	- [4.5. 마무리문제-\[38\]](#45-마무리문제-38)
 
 ---
 
@@ -224,7 +234,7 @@ console.log('noName:', noName, typeof noName);
 
 #### 2.4. 참조형
 
-!!![🔗ppt](../ppt/2.pdf)
+!!![🔗ppt](./../ppt/2.pdf)
 
 원시형과 참조형의 차이는 쉽게 아래처럼 값을 여러개 나누어 저장할수 있다는 것에 있다.
 
@@ -1331,6 +1341,28 @@ for (i = 1; i <= 9; i++) {
 
 +++
 
+###### 4.4.1.4. 배열과 함께 사용하는 for in
+
+[:link: 배열학습하기](../../2.partial/array.md) [31]
+
+```js [32]
+const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업']
+for (const i in todos) {
+document.write(`
+${i}번째 할 일: ${todos[i]}`)
+
+```
+
+###### 4.4.1.5. 배열과 함께 사용하는 for of
+
+```js [32]
+const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업'];
+for (const todo of todos) {
+	document.write(`
+오늘의 할 일: ${todo}`);
+}
+```
+
 ##### 4.4.2. while
 
 while문은 조건이 true인 동안 실행문을 반복 합니다.
@@ -1344,7 +1376,7 @@ while (조건) {
 }
 ```
 
-###### 4.4.2.1. while-예제[31]
+###### 4.4.2.1. while-예제[33]
 
 +++ 지시문
 while 문을 사용하여 1부터 10까지 반복하여 출력해봅시다
@@ -1362,7 +1394,7 @@ while (i <= 10) {
 +++ 설명
 +++
 
-###### 4.4.2.2. while-예제[32]
+###### 4.4.2.2. while-예제[34]
 
 +++ 지시문
 while 문을 사용하여 1부터 10까지의 합을 계산해보세요
@@ -1415,9 +1447,9 @@ do {
 } while (조건);
 ```
 
-###### 4.4.3.1. do~while-예제[33]
+###### 4.4.3.1. do~while-예제[35]
 
-+++ 설명
++++ 지시문
 do~while 문으로 사용자로부터 숫자를 입력받아서 1부터 해당 숫자까지의 합을 계산하고 출력하는 프로그램을 작성해 봅시다
 +++ 코드
 [:icon-play:](./script/while3.html)
@@ -1473,44 +1505,104 @@ break
 continue
 ```
 
-###### 4.4.4.1. break/continue-예제[34]
+###### 4.4.4.1. break/continue-예제
 
-+++ 코드[34]
++++ 코드[36]
 [!badge variant='contrast' size='xl' text='34-break']
 
-``` js #
+```js #
 for (let i = 0; true; i++) {
-    alert(i + '번째 반복문입니다.')
-    // 진행 여부를 물어봅니다.
-    const isContinue = confirm('계속하시겠습니까?')
-    if (!isContinue) {  //조건에 충족하면 break 키워드실행
-        break
-    }
+	alert(i + '번째 반복문입니다.');
+	// 진행 여부를 물어봅니다.
+	const isContinue = confirm('계속하시겠습니까?');
+	if (!isContinue) {
+		//조건에 충족하면 break 키워드실행
+		break;
+	}
 }
 // 프로그램의 종료를 확인.
-alert('프로그램 종료')
-
+alert('프로그램 종료');
 ```
-+++ 코드[35]
+
++++ 코드[37]
 [!badge variant='contrast' size='xl' text='35-continue']
-``` js #
-var x=0
-var total=0
 
-while(x < 10)
-{
-    x++
+```js #
+var x = 0;
+var total = 0;
 
-    if(x==3) continue
-    total=total+x
-    document.write(x)
+while (x < 10) {
+	x++;
 
-    if(x!=10)
-    document.write("+")
+	if (x == 3) continue;
+	total = total + x;
+	document.write(x);
+
+	if (x != 10) document.write('+');
 }
 
-document.write("="+ total)
-
+document.write('=' + total);
 ```
 
++++
+
+#### 4.5. 마무리문제-[38]
+
++++ 지시문
+자리배치도를 만드세요
+[:icon-play:](./script/seat-result.html)
+
+27번 문제에서 작성했던 조건문을 활용하여 좌석의 번호를 출력하는 프로그램을 작성하세요
+
++++ 힌트
++++ 정답
+
+```html #
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>자리 배치도</title>
+		<style>
+			table,
+			td {
+				border: 1px solid #ccc;
+				border-collapse: collapse;
+			}
+			td {
+				padding: 5px;
+				font-size: 0.9em;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>자리 배치도</h1>
+		<script>
+			var i, j;
+			var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+			var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+
+			if (memNum % colNum == 0) rowNum = parseInt(memNum / colNum);
+			else rowNum = parseInt(memNum / colNum) + 1;
+
+			// document.write("모두 " + rowNum + "개의 줄이 필요합니다.");
+
+			document.write('<table>');
+			for (i = 0; i < rowNum; i++) {
+				document.write('<tr>');
+				for (j = 1; j <= colNum; j++) {
+					seatNo = i * colNum + j; // 좌석 번호
+					if (seatNo > memNum) break;
+					document.write('<td> 좌석 ' + seatNo + ' </td>');
+				}
+				document.write('</tr>');
+			}
+			document.write('</table>');
+		</script>
+	</body>
+</html>
+```
+
++++ 설명
 +++

@@ -10,9 +10,10 @@
   code,
   code span {
     font-family: consolas, 'Inconsolata', monospace;
-/*     font-size: .9rem;
+    /*     font-size: .9rem;
     line-height: 1.5;
- */  }
+ */
+  }
 
   * {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -62,9 +63,33 @@
     margin-top: 3.4rem;
     color: #3f51b5 !important;
   }
-  [class^=img]{width:auto;}
-  [class^=img] p{display: none;}
-  .img50 figure img{max-width: 50%;}
-  .img20 figure img{max-width: 20%;}
-  .img10 figure img{max-width: 10%;}
+
+  [class^=img] {
+    width: auto;
+  }
+
+  [class^=img] p {
+    display: none;
+  }
+
+  .img50 figure img {
+    max-width: 50%;
+  }
+
+  .img20 figure img {
+    max-width: 20%;
+  }
+
+  .img10 figure img {
+    max-width: 10%;
+  }
+
+  .docs-markdown div[id="목차"]+ul li {
+    line-height: 1.8;
+    font-weight:400;
+    padding-top:2px;
+    padding-bottom:4px;
+    font-size:14px;
+  }
+
 </style>

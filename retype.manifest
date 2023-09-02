@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-02T07:47:52Z",
+  "created": "2023-09-02T08:35:08Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2242,40 +2242,52 @@
       "path": "2_css\\6_ui\\2.hover\\index.html"
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\index.html"
+      "path": "3_js\\basic\\1_total\\1\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\alert.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\alert.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\confirm.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\confirm.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\console-log.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\console-log.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\document-write.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\document-write.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\greeting.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\greeting.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\js-time-result.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\js-time-result.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\js-time.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\js-time.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\prompt-1.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\prompt-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\prompt-2.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\prompt-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\script-1.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\script-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\1\\script\\script-2.html"
+      "path": "3_js\\basic\\1_total\\1\\script\\script-2.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1_total\\2\\checklist.html",
@@ -2286,286 +2298,689 @@
       "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\index.html"
+      "path": "3_js\\basic\\1_total\\2\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\18.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\18.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\20.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\20.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\22.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\22.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\23.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\23.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\age-result.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\age-result.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\age.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\age.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\and.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\and.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\even.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\even.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\factorial.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\factorial.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-1.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-2.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-3.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-3.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-table.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\gugudan-table.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1_total\\2\\script\\if-1.html",
       "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\if-2.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\if-2.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1_total\\2\\script\\if-3.html",
       "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\not.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\not.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\or.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\or.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\quiz-1.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\quiz-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\quiz-2.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\quiz-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\repeat-1.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\repeat-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\repeat-2.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\repeat-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\repeat-3.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\repeat-3.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\seat-1.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\seat-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\seat-result.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\seat-result.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\seat.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\seat.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\sol-1.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\sol-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\sol-2.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\sol-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\switch.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\switch.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\switch2.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\switch2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\while.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\while.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\while2.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\while2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\while3.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\while3.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\3\\index.html"
+      "path": "3_js\\basic\\1_total\\3\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\4\\index.html"
+      "path": "3_js\\basic\\1_total\\4\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\index.html"
+      "path": "3_js\\basic\\1_total\\5\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\acessdom.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\acessdom.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\dom.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\dom.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\domcss.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\domcss.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\domnode-1.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\domnode-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\domnode-2.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\domnode-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\domnode-3.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\domnode-3.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\domnode.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\domnode.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\domtree.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\domtree.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\event-1.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\event-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\event-2.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\event-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\event-3.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\event-3.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\event-4.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\event-4.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\event-5.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\event-5.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\event-6.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\event-6.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\getattr.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\getattr.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\coffee-blue.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\coffee-blue.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\coffee-gray.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\coffee-gray.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\coffee-pink.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\coffee-pink.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\cup-1.png"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\cup-1.png",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\cup-2.png"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\cup-2.png",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\doit.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\doit.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\dom.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\dom.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\easys-1.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\easys-1.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\easys-2.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\easys-2.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-1-thumb.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-1-thumb.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-1.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-1.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-2-thumb.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-2-thumb.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-2.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-2.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-3-thumb.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-3-thumb.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-3.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-3.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-4-thumb.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-4-thumb.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-4.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-4.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-5-thumb.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-5-thumb.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-5.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-5.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-6-thumb.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-6-thumb.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-6.jpg"
+      "path": "3_js\\basic\\1_total\\5\\script\\images\\tree-6.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\inner.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\inner.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\lightbox-result.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\lightbox-result.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\lightbox.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\lightbox.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\nodecreate-before.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\nodecreate-before.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\nodecreate-result.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\nodecreate-result.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\nodecreate.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\nodecreate.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\nodedelete-result.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\nodedelete-result.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\nodedelete.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\nodedelete.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\nodelist.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\nodelist.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\popup-layer.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\popup-layer.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\quiz-1.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\quiz-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\quiz-2.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\quiz-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\setattr.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\setattr.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\sol-1.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\sol-1.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\5\\script\\sol-2.html"
+      "path": "3_js\\basic\\1_total\\5\\script\\sol-2.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\ppt\\1-role.pdf"
+      "path": "3_js\\basic\\1_total\\ppt\\1-role.pdf",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1_total\\ppt\\2.pdf"
+      "path": "3_js\\basic\\1_total\\ppt\\2.pdf",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1_total\\ppt\\2.pptx",
       "old": true
     },
     {
+      "path": "3_js\\basic\\1.total\\1\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\alert.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\confirm.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\console-log.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\document-write.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\greeting.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\js-time-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\js-time.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\prompt-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\prompt-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\script-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\1\\script\\script-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\18.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\20.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\22.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\23.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\age-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\age.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\and.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\even.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\factorial.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\gugudan-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\gugudan-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\gugudan-3.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\gugudan-table.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\if-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\not.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\or.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\quiz-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\quiz-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\repeat-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\repeat-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\repeat-3.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\seat-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\seat-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\seat.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\sol-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\sol-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\switch.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\switch2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\while.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\while2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\while3.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\acessdom.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\dom.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\domcss.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\domnode-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\domnode-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\domnode-3.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\domnode.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\domtree.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\event-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\event-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\event-3.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\event-4.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\event-5.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\event-6.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\getattr.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-blue.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-gray.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-pink.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\cup-1.png"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\cup-2.png"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\doit.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\dom.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\easys-1.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\easys-2.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-1-thumb.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-1.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-2-thumb.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-2.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-3-thumb.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-3.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-4-thumb.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-4.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-5-thumb.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-5.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-6-thumb.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-6.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\inner.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\lightbox-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\lightbox.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate-before.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\nodedelete-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\nodedelete.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\nodelist.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\popup-layer.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\quiz-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\quiz-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\setattr.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\sol-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\sol-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\ppt\\1-role.pdf"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\ppt\\2.pdf"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\array\\index.html"
+    },
+    {
       "path": "3_js\\deep\\1_carousel\\1\\index.html"
     },
     {
       "path": "404.html"
+    },
+    {
+      "path": "categories\\class\\index.html"
+    },
+    {
+      "path": "categories\\index.html"
+    },
+    {
+      "path": "categories\\javascript\\index.html"
+    },
+    {
+      "path": "categories\\partial\\index.html"
     },
     {
       "path": "favicon.png"
