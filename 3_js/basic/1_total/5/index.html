@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746850287110">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.746956074591">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.2.0">
+    <meta name="generator" content="Retype 3.3.0">
 
     <!-- Primary Meta Tags -->
-    <title>5.DOM(문서객체모델) </title>
-    <meta name="title" content="5.DOM(문서객체모델) ">
+    <title>5. DOM(문서객체모델) </title>
+    <meta name="title" content="5. DOM(문서객체모델) ">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/1_total/5/">
@@ -19,21 +19,21 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1_total/5/">
-    <meta property="og:title" content="5.DOM(문서객체모델) ">
+    <meta property="og:title" content="5. DOM(문서객체모델) ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1_total/5/">
-    <meta property="twitter:title" content="5.DOM(문서객체모델) ">
+    <meta property="twitter:title" content="5. DOM(문서객체모델) ">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.2.0.746850287110" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.3.0.746956074591" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.746850287110" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.746850287110" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.746956074591" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.746956074591" data-turbo-eval="false" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -47,9 +47,9 @@
       code,
       code span {
         font-family: consolas, 'Inconsolata', monospace;
-        font-size: .9rem;
+    /*     font-size: .9rem;
         line-height: 1.5;
-      }
+     */  }
 
       * {
         font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -64,33 +64,17 @@
         margin-bottom: 1.2rem;
       }
 
-      .comment_box:before {
-        content: '';
-        position: absolute;
-        height: 80%;
-        width: 2px;
-        background-color: #1956af;
-        left: -5px;
-      }
-
       .comment_box {
-        padding:20px;
-        color: #1956AF;
+        padding: 2rem;
+        color: #094092;
         margin-bottom: 20px;
-        font-weight: 200;
-        font-size: 1.3em;
-        letter-spacing: -0.08rem;
+        font-weight: 500;
+        font-size: 1.1em;
+        letter-spacing: -0.5px;
         position: relative;
-      }
-
-      .comment_box.s {
-        padding:20px;
-        color: #1956AF;
-        margin-bottom: 20px;
-        font-weight: 200;
-        font-size: 1em;
-        letter-spacing: -0.08rem;
-        position: relative;
+        background-color: #f4f5f7;
+        line-height: 1.8;
+        filter: drop-shadow(-2px 4px 4px #25344b25);
       }
 
       .comment_box p {
@@ -105,6 +89,21 @@
       .w-full p:not(.hidden) {
         margin-bottom: 0.2rem;
       }
+
+      div[id]>h1,
+      div[id]>h2,
+      div[id]>h3,
+      div[id]>h4,
+      div[id]>h5,
+      div[id]>h6 {
+        margin-top: 3.4rem;
+        color: #3f51b5 !important;
+      }
+      [class^=img]{width:auto;}
+      [class^=img] p{display: none;}
+      .img50 figure img{max-width: 50%;}
+      .img20 figure img{max-width: 20%;}
+      .img10 figure img{max-width: 10%;}
     </style>
 </head>
 <body>
@@ -134,6 +133,9 @@
                         <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/retype/">Coding Note</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/book01/">망고는코딩대장</a>
                             </li>
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/qwerewqwerew/retype">Respository</a>
@@ -216,6 +218,9 @@
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/retype/">Coding Note</a>
                                     </li>
                                     <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://qwerewqwerew.github.io/book01/">망고는코딩대장</a>
+                                    </li>
+                                    <li class="mr-6">
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/qwerewqwerew/retype">Respository</a>
                                     </li>
             
@@ -239,12 +244,11 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
-                
                                 <!-- Page content  -->
 <doc-anchor-target id="5-dom-문서객체모델" class="break-words">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#5-dom-문서객체모델">#</doc-anchor-trigger>
-        <span>5.DOM(문서객체모델) <!-- omit in toc --></span>
+        <span>5. DOM(문서객체모델) <!-- omit in toc --></span>
     </h1>
 </doc-anchor-target>
 <doc-anchor-target id="1-문서객체모델의-이해">
@@ -337,6 +341,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "5.DOM(문서객체모델) ", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "5. DOM(문서객체모델) ", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
