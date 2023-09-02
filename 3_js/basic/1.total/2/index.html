@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.746956074591">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.746959000757">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.3.0">
@@ -15,18 +15,18 @@
     <meta name="description" content="1. 변수">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/1_total/2/">
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/2/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1_total/2/">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/2/">
     <meta property="og:title" content="2. 기본문법 ">
     <meta property="og:description" content="1. 변수">
     <meta property="og:image" content="https://user-images.githubusercontent.com/59301948/262992819-7156ad7e-3bd9-4942-8044-2bbbba9fd9ce.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1_total/2/">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/2/">
     <meta property="twitter:title" content="2. 기본문법 ">
     <meta property="twitter:description" content="1. 변수">
     <meta property="twitter:image" content="https://user-images.githubusercontent.com/59301948/262992819-7156ad7e-3bd9-4942-8044-2bbbba9fd9ce.png">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.3.0.746956074591" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.3.0.746959000757" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.746956074591" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.746959000757" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.746956074591" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.746956074591" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.746959000757" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.746959000757" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../../../resources/js/mermaid.js?v=3.3.0" defer></script>
 
     <style>
@@ -54,9 +54,10 @@
       code,
       code span {
         font-family: consolas, 'Inconsolata', monospace;
-    /*     font-size: .9rem;
+        /*     font-size: .9rem;
         line-height: 1.5;
-     */  }
+     */
+      }
 
       * {
         font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -106,11 +107,35 @@
         margin-top: 3.4rem;
         color: #3f51b5 !important;
       }
-      [class^=img]{width:auto;}
-      [class^=img] p{display: none;}
-      .img50 figure img{max-width: 50%;}
-      .img20 figure img{max-width: 20%;}
-      .img10 figure img{max-width: 10%;}
+
+      [class^=img] {
+        width: auto;
+      }
+
+      [class^=img] p {
+        display: none;
+      }
+
+      .img50 figure img {
+        max-width: 50%;
+      }
+
+      .img20 figure img {
+        max-width: 20%;
+      }
+
+      .img10 figure img {
+        max-width: 10%;
+      }
+
+      .docs-markdown div[id="목차"]+ul li {
+        line-height: 1.8;
+        font-weight:400;
+        padding-top:2px;
+        padding-bottom:4px;
+        font-size:14px;
+      }
+
     </style>
 </head>
 <body>
@@ -258,6 +283,12 @@
         <span>2. 기본문법 <!-- omit in toc --></span>
     </h1>
 </doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
+    <div>In&nbsp;</div>
+    <div><a href="../../../../categories/javascript/">javascript</a>,&nbsp;</div>
+    <div><a href="../../../../categories/class/">class</a></div>
+</div>
+
 <doc-anchor-target id="목차">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#목차">#</doc-anchor-trigger>
@@ -376,26 +407,29 @@
 <li><doc-anchor-trigger to="#4411-for-%EC%98%88%EC%A0%9C28">4.4.1.1. for-예제[28]</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#4412-for-%EC%98%88%EC%A0%9C29">4.4.1.2. for-예제[29]</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#4413-%EC%A4%91%EC%B2%A9-for-%EC%98%88%EC%A0%9C30">4.4.1.3. 중첩 for-예제[30]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4414-%EB%B0%B0%EC%97%B4%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-for-in">4.4.1.4. 배열과 함께 사용하는 for in</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4415-%EB%B0%B0%EC%97%B4%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-for-of">4.4.1.5. 배열과 함께 사용하는 for of</doc-anchor-trigger></li>
 </ul>
 </li>
 <li><doc-anchor-trigger to="#442-while">4.4.2. while</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#4421-while-%EC%98%88%EC%A0%9C31">4.4.2.1. while-예제[31]</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#4422-while-%EC%98%88%EC%A0%9C32">4.4.2.2. while-예제[32]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4421-while-%EC%98%88%EC%A0%9C33">4.4.2.1. while-예제[33]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4422-while-%EC%98%88%EC%A0%9C34">4.4.2.2. while-예제[34]</doc-anchor-trigger></li>
 </ul>
 </li>
 <li><doc-anchor-trigger to="#443-dowhile">4.4.3. do~while</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#4431-dowhile-%EC%98%88%EC%A0%9C33">4.4.3.1. do~while-예제[33]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4431-dowhile-%EC%98%88%EC%A0%9C35">4.4.3.1. do~while-예제[35]</doc-anchor-trigger></li>
 </ul>
 </li>
 <li><doc-anchor-trigger to="#444-breakcontinue">4.4.4. break/continue</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#4441-breakcontinue-%EC%98%88%EC%A0%9C34">4.4.4.1. break/continue-예제[34]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4441-breakcontinue-%EC%98%88%EC%A0%9C">4.4.4.1. break/continue-예제</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><doc-anchor-trigger to="#45-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C-38">4.5. 마무리문제-[38]</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
@@ -2714,6 +2748,35 @@ for (i = 1; i &lt;= 9; i++) {
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
+<doc-anchor-target id="4414-배열과-함께-사용하는-for-in">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4414-배열과-함께-사용하는-for-in">#</doc-anchor-trigger>
+        <span>4.4.1.4. 배열과 함께 사용하는 for in</span>
+    </h6>
+</doc-anchor-target>
+<p><a href="../../2.partial/array/"><span class="docs-emoji">&#x1F517;</span> 배열학습하기</a> [31]</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">[32]</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업']
+for (const i in todos) {
+document.write(`
+${i}번째 할 일: ${todos[i]}`)
+</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="4415-배열과-함께-사용하는-for-of">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4415-배열과-함께-사용하는-for-of">#</doc-anchor-trigger>
+        <span>4.4.1.5. 배열과 함께 사용하는 for of</span>
+    </h6>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">[32]</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업'];
+for (const todo of todos) {
+	document.write(`
+오늘의 할 일: ${todo}`);
+}</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="442-while">
     <h5>
         <doc-anchor-trigger class="header-anchor-trigger" to="#442-while">#</doc-anchor-trigger>
@@ -2730,10 +2793,10 @@ for (i = 1; i &lt;= 9; i++) {
 	실행문;
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="4421-while-예제31">
+<doc-anchor-target id="4421-while-예제33">
     <h6>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4421-while-예제31">#</doc-anchor-trigger>
-        <span>4.4.2.1. while-예제[31]</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4421-while-예제33">#</doc-anchor-trigger>
+        <span>4.4.2.1. while-예제[33]</span>
     </h6>
 </doc-anchor-target>
 <doc-tabs>
@@ -2756,10 +2819,10 @@ while (i &lt;= 10) {
 <template #title>설명</template>
 </doc-tab>
 </doc-tabs>
-<doc-anchor-target id="4422-while-예제32">
+<doc-anchor-target id="4422-while-예제34">
     <h6>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4422-while-예제32">#</doc-anchor-trigger>
-        <span>4.4.2.2. while-예제[32]</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4422-while-예제34">#</doc-anchor-trigger>
+        <span>4.4.2.2. while-예제[34]</span>
     </h6>
 </doc-anchor-target>
 <doc-tabs>
@@ -2811,15 +2874,15 @@ document.write('=' + total);</code></pre>
 	실행문;
 } while (조건);</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="4431-dowhile-예제33">
+<doc-anchor-target id="4431-dowhile-예제35">
     <h6>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4431-dowhile-예제33">#</doc-anchor-trigger>
-        <span>4.4.3.1. do~while-예제[33]</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4431-dowhile-예제35">#</doc-anchor-trigger>
+        <span>4.4.3.1. do~while-예제[35]</span>
     </h6>
 </doc-anchor-target>
 <doc-tabs>
-<doc-tab v-cloak id="설명">
-<template #title>설명</template>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
 <p>do~while 문으로 사용자로부터 숫자를 입력받아서 1부터 해당 숫자까지의 합을 계산하고 출력하는 프로그램을 작성해 봅시다</p>
 </doc-tab>
 <doc-tab v-cloak id="코드">
@@ -2874,56 +2937,122 @@ break문은 반복문 등을 정지시킬 때에 사용합니다.</p>
 <div class="codeblock-title">continue 통과</div>
 <pre class="language-javascript"><code v-pre class="language-javascript">continue</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="4441-breakcontinue-예제34">
+<doc-anchor-target id="4441-breakcontinue-예제">
     <h6>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4441-breakcontinue-예제34">#</doc-anchor-trigger>
-        <span>4.4.4.1. break/continue-예제[34]</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4441-breakcontinue-예제">#</doc-anchor-trigger>
+        <span>4.4.4.1. break/continue-예제</span>
     </h6>
 </doc-anchor-target>
 <doc-tabs>
-<doc-tab v-cloak id="코드-34">
-<template #title>코드[34]</template>
+<doc-tab v-cloak id="코드-36">
+<template #title>코드[36]</template>
 <p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white h-8 px-4 text-base rounded-md">
     <span>34-break</span>
 </span></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-javascript"><code v-pre class="language-javascript">for (let i = 0; true; i++) {
-    alert(i + '번째 반복문입니다.')
-    // 진행 여부를 물어봅니다.
-    const isContinue = confirm('계속하시겠습니까?')
-    if (!isContinue) {  //조건에 충족하면 break 키워드실행
-        break
-    }
+	alert(i + '번째 반복문입니다.');
+	// 진행 여부를 물어봅니다.
+	const isContinue = confirm('계속하시겠습니까?');
+	if (!isContinue) {
+		//조건에 충족하면 break 키워드실행
+		break;
+	}
 }
 // 프로그램의 종료를 확인.
-alert('프로그램 종료')
-</code></pre>
+alert('프로그램 종료');</code></pre>
 </doc-codeblock></div>
 </doc-tab>
-<doc-tab v-cloak id="코드-35">
-<template #title>코드[35]</template>
+<doc-tab v-cloak id="코드-37">
+<template #title>코드[37]</template>
 <p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white h-8 px-4 text-base rounded-md">
     <span>35-continue</span>
 </span></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var x=0
-var total=0
+<pre class="language-javascript"><code v-pre class="language-javascript">var x = 0;
+var total = 0;
 
-while(x &lt; 10)
-{
-    x++
+while (x &lt; 10) {
+	x++;
 
-    if(x==3) continue
-    total=total+x
-    document.write(x)
+	if (x == 3) continue;
+	total = total + x;
+	document.write(x);
 
-    if(x!=10)
-    document.write(&quot;+&quot;)
+	if (x != 10) document.write('+');
 }
 
-document.write(&quot;=&quot;+ total)
-</code></pre>
+document.write('=' + total);</code></pre>
 </doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="45-마무리문제-38">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#45-마무리문제-38">#</doc-anchor-trigger>
+        <span>4.5. 마무리문제-[38]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>자리배치도를 만드세요
+<a href="script/seat-result.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<p>27번 문제에서 작성했던 조건문을 활용하여 좌석의 번호를 출력하는 프로그램을 작성하세요</p>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+</doc-tab>
+<doc-tab v-cloak id="정답">
+<template #title>정답</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;자리 배치도&lt;/title&gt;
+		&lt;style&gt;
+			table,
+			td {
+				border: 1px solid #ccc;
+				border-collapse: collapse;
+			}
+			td {
+				padding: 5px;
+				font-size: 0.9em;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;자리 배치도&lt;/h1&gt;
+		&lt;script&gt;
+			var i, j;
+			var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+			var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+
+			if (memNum % colNum == 0) rowNum = parseInt(memNum / colNum);
+			else rowNum = parseInt(memNum / colNum) + 1;
+
+			// document.write(&quot;모두 &quot; + rowNum + &quot;개의 줄이 필요합니다.&quot;);
+
+			document.write('&lt;table&gt;');
+			for (i = 0; i &lt; rowNum; i++) {
+				document.write('&lt;tr&gt;');
+				for (j = 1; j &lt;= colNum; j++) {
+					seatNo = i * colNum + j; // 좌석 번호
+					if (seatNo &gt; memNum) break;
+					document.write('&lt;td&gt; 좌석 ' + seatNo + ' &lt;/td&gt;');
+				}
+				document.write('&lt;/tr&gt;');
+			}
+			document.write('&lt;/table&gt;');
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
 </doc-tab>
 </doc-tabs>
 
@@ -2935,7 +3064,7 @@ document.write(&quot;=&quot;+ total)
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/1_total/1/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/1.total/1/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
@@ -2945,7 +3074,7 @@ document.write(&quot;=&quot;+ total)
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/1_total/3/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/1.total/3/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
                                                 <span class="block mt-1">3. 함수와 이벤트 </span>
