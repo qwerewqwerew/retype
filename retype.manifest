@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-01T02:23:50Z",
+  "created": "2023-09-02T07:47:52Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2278,7 +2278,27 @@
       "path": "3_js\\basic\\1_total\\1\\script\\script-2.html"
     },
     {
+      "path": "3_js\\basic\\1_total\\2\\checklist.html",
+      "old": true
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\checklist\\index.html",
+      "old": true
+    },
+    {
       "path": "3_js\\basic\\1_total\\2\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\18.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\20.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\22.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\23.html"
     },
     {
       "path": "3_js\\basic\\1_total\\2\\script\\age-result.html"
@@ -2308,13 +2328,15 @@
       "path": "3_js\\basic\\1_total\\2\\script\\gugudan-table.html"
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\if-1.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\if-1.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1_total\\2\\script\\if-2.html"
     },
     {
-      "path": "3_js\\basic\\1_total\\2\\script\\if-3.html"
+      "path": "3_js\\basic\\1_total\\2\\script\\if-3.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1_total\\2\\script\\not.html"
@@ -2354,6 +2376,18 @@
     },
     {
       "path": "3_js\\basic\\1_total\\2\\script\\switch.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\switch2.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\while.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\while2.html"
+    },
+    {
+      "path": "3_js\\basic\\1_total\\2\\script\\while3.html"
     },
     {
       "path": "3_js\\basic\\1_total\\3\\index.html"
@@ -2555,6 +2589,9 @@
       "path": "resources\\js\\lunr.js"
     },
     {
+      "path": "resources\\js\\mermaid.js"
+    },
+    {
       "path": "resources\\js\\prism.js"
     },
     {
@@ -2601,6 +2638,9 @@
     },
     {
       "path": "source\\images\\js-1-1.png"
+    },
+    {
+      "path": "source\\images\\qr.png"
     }
   ]
 }

@@ -35,11 +35,37 @@
 	- [3.7. 연산자의 우선순위](#37-연산자의-우선순위)
 - [4. 제어문](#4-제어문)
 	- [4.1. 조건문](#41-조건문)
-		- [4.1.1. if-예제\[16\]](#411-if-예제16)
-		- [4.1.2. if-예제\[17\]](#412-if-예제17)
-		- [4.1.3. if-예제\[18\]](#413-if-예제18)
+		- [4.1.1. if](#411-if)
+			- [4.1.1.1. if-예제\[16\]](#4111-if-예제16)
+			- [4.1.1.2. if-예제\[17\]](#4112-if-예제17)
+			- [4.1.1.3. if-마무리문제\[18\]](#4113-if-마무리문제18)
+		- [4.1.2. if~else](#412-ifelse)
+			- [4.1.2.1. if-else-예제\[19\]](#4121-if-else-예제19)
+			- [4.1.2.2. if-else-마무리문제\[20\]](#4122-if-else-마무리문제20)
+		- [4.1.3. if~else if](#413-ifelse-if)
+			- [4.1.3.1. if~else if-예제\[21\]](#4131-ifelse-if-예제21)
+			- [4.1.3.2. if~else if-마무리문제\[22\]](#4132-ifelse-if-마무리문제22)
+		- [4.1.4. 삼항연산자를 활용한 조건문](#414-삼항연산자를-활용한-조건문)
+			- [4.1.4.1. if~else if-마무리문제\[23\]](#4141-ifelse-if-마무리문제23)
+		- [4.1.5. 논리연산자를 활용한 조건문](#415-논리연산자를-활용한-조건문)
+			- [4.1.5.1. OR 연산자-예제\[24\]](#4151-or-연산자-예제24)
+			- [4.1.5.2. AND 연산자-예제\[24\]](#4152-and-연산자-예제24)
+			- [4.1.5.3. NOT 연산자-예제\[25\]](#4153-not-연산자-예제25)
 	- [4.2. 선택문](#42-선택문)
-	- [4.3. 반복문](#43-반복문)
+			- [4.2.0.1. switch-예제\[26\]](#4201-switch-예제26)
+	- [4.3. 실습문제\[27\]](#43-실습문제27)
+	- [4.4. 반복문](#44-반복문)
+		- [4.4.1. for](#441-for)
+			- [4.4.1.1. for-예제\[28\]](#4411-for-예제28)
+			- [4.4.1.2. for-예제\[29\]](#4412-for-예제29)
+			- [4.4.1.3. 중첩 for-예제\[30\]](#4413-중첩-for-예제30)
+		- [4.4.2. while](#442-while)
+			- [4.4.2.1. while-예제\[31\]](#4421-while-예제31)
+			- [4.4.2.2. while-예제\[32\]](#4422-while-예제32)
+		- [4.4.3. do~while](#443-dowhile)
+			- [4.4.3.1. do~while-예제\[33\]](#4431-dowhile-예제33)
+		- [4.4.4. break/continue](#444-breakcontinue)
+			- [4.4.4.1. break/continue-예제\[34\]](#4441-breakcontinue-예제34)
 
 ---
 
@@ -734,6 +760,8 @@ document.write(result);
 
 #### 4.1. 조건문
 
+##### 4.1.1. if
+
 !!!
 프로그래밍을 할때는 특정 조건과 명령에 따라 실행 순서를 정해야 합니다.
 
@@ -755,7 +783,7 @@ if (조건) {
 }
 ```
 
-##### 4.1.1. if-예제[16]
+###### 4.1.1.1. if-예제[16]
 
 +++ 코드
 
@@ -774,7 +802,7 @@ if (your_sex == '여자') document.write('바지를 입으세요.');
 > 이럴때 else 를 사용하면 됩니다.<br>
 > 아래는 if ~ else if 문의 기본 문법 예시입니다.<br>
 
-##### 4.1.2. if-예제[17]
+###### 4.1.1.2. if-예제[17]
 
 +++ 지시문
 !!!
@@ -796,11 +824,12 @@ if (textNum >= 70) {
 GPT 한테 물어보세요
 +++
 
-##### 4.1.3. if-예제[18]
+###### 4.1.1.3. if-마무리문제[18]
 
 +++ 지시문
 !!!
 사용자로부터 입력받은 숫자가 3의 배수인지를 확인후 결과를 출력하는 프로그램을 작성하시오
+[⚡](./script/18.html)
 !!!
 +++ 힌트
 3의 배수는 3으로 나눈 나머지가 0일 꺼에요 🤔
@@ -809,6 +838,8 @@ GPT 한테 물어보세요
 +++ 설명
 GPT 한테 물어보세요
 +++
+
+##### 4.1.2. if~else
 
 > if문은 조건이 true 일때만 실행할수 있으므로 false 일때도 명령을 하려면 실행문을 두번 작성해야 하는 번거로움이 있습니다.<br>
 > 이럴때 else 를 사용하면 됩니다.<br>
@@ -824,8 +855,44 @@ if (조건1) {
 }
 ```
 
-> 조건이 복잡할 경우 if~else 를 사용하여 중첩으로 조건을 판별할수 있습니다.<br>
-> 아래는 if 문의 기본 문법 예시입니다.<br>
+###### 4.1.2.1. if-else-예제[19]
+
++++ 코드
+
+```js
+const weight = 70;
+const height = 170;
+const test = (height - 100) * 0.9;
+if (weight > test) document.write('당신은 비만이예요');
+else document.write('당신은 정상이네요');
+```
+
++++ 설명
+!!!This is another Tab!!!
++++
+
+###### 4.1.2.2. if-else-마무리문제[20]
+
++++ 지시문
+!!!info
+나이가 20세 이상이고, 30세 미만일 경우에는 '통과'라고 출력하고, 그렇지 않으면 '비통과'라고 출력하시오. [:koala:](./script/20.html)
+!!!
++++ 힌트
+이상은 해당 숫자를 포함하고 미만은 해당 숫자를 포함하지 않아요
+
++++ 정답
+
+```js
+모르니까 저도 물어보는 거예요
+```
+
++++ 설명
++++
+
+##### 4.1.3. if~else if
+
+> 조건이 복잡할 경우 if~else if 를 사용하여 다중 조건을 판별할수 있습니다.<br>
+> 아래는 else if 문의 기본 문법 예시입니다.<br>
 
 [!badge variant='primary' size='m' text='기본형']
 
@@ -837,6 +904,613 @@ if (조건1) {
 }
 ```
 
+###### 4.1.3.1. if~else if-예제[21]
+
++++ 지시문
+사용자가 입력한 숫자가 3의 배수인지를 판별하여 알려주고 취소를 누를 경우 입력이 취소됨을 표시하는 프로그램을 작성해봅시다
++++ 코드
+
+```js
+var userNumber = prompt('숫자를 입력하세요.');
+
+if (userNumber !== null) {
+	if (userNumber % 3 === 0) alert('3의 배수입니다.');
+	else alert('3의 배수가 아닙니다.');
+} else alert('입력이 취소됐습니다.');
+```
+
++++ 설명
+!!! ghost
+**순서도**
+:::comment_box
+프로그래밍 작업시 소스의 순서나 계획을 순서도로 작성해보면 코드의 이해와 작성이 수월해집니다.
+아래는 사용자가 입력한 숫자가 3의 배수인지를 판별하여 알려주고 취소를 누를 경우 입력이 취소됨을 표시하는 프로그램의 순서도 입니다.
+:::
+
+```mermaid
+flowchart TD
+     A{입력값이 null이 아닌가?} --true--> B{3의 배수인가?} --true--> D[3의 배수입니다.]
+		 B{3의 배수인가?} --false--> E[3의 배수가 아닙니다.]
+     A{입력값이 null이 아닌가?} --false--> C[입력 취소됨]
+```
+
+!!!
++++
+
+###### 4.1.3.2. if~else if-마무리문제[22]
+
++++ 지시문
+!!!info
+사용자로 취득점수를 입력 받습니다. <br>
+점수가 90점 이상일 경우 A학점, 80점 이상일경우 B학점, 70점 이상일경우 C학점 , <br>60점 이상일 경우 D학점, 60점 이하일 경우 F학점 메시지를 출력하는 프로그램을 작성하세요. [:koala:](./script/22.html)
+!!!
++++
+
+##### 4.1.4. 삼항연산자를 활용한 조건문
+
+###### 4.1.4.1. if~else if-마무리문제[23]
+
++++ 지시문
+!!!info
+[4.1.3.1. if~else if-예제\[21\]](#4131-ifelse-if-예제21) 의 if문을 삼항연산자로 작성하세요. [:koala:](./script/23.html)
+!!!
++++
+
+##### 4.1.5. 논리연산자를 활용한 조건문
+
+:::comment_box
+두조건이 true 일 경우와 조건 1개만 true 일 경우 처럼 여러 경우의 수를 따질때는 논리 연산자를 사용합니다.
+:::
+
+###### 4.1.5.1. OR 연산자-예제[24]
+
++++ 설명
+**:key:OR 연산자는 `||` 를 사용하며 우항의 2개중 true가 하나라도 있으면 결과를 true로 반환합니다.**
+!!!
+OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중 하나가 10보다 작은 지를 판단하는 프로그램을 작성해 봅시다 [:koala:](./script/or.html)
+!!!
+
++++ 코드
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>조건문</title>
+	</head>
+	<body>
+		<script>
+			var numberOne = prompt('50미만의 숫자를 입력하세요.');
+			var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+
+			if (numberOne < 10 || numberTwo < 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
+			else alert('두 개의 숫자 중 10 미만인 수는 없습니다.');
+		</script>
+	</body>
+</html>
+```
+
++++
+
+###### 4.1.5.2. AND 연산자-예제[24]
+
++++ 설명
+**:key:AND 연산자는 `&&` 를 사용하며 우항의 2개중 false가 하나라도 있으면 결과를 false로 반환합니다.**
+!!!
+AND 연산자를 사용하여 입력한 두개의 숫자가 50보다 작은지 체크하는 프로그램을 작성해봅시다.[:koala:](./script/and.html)
+!!!
+
++++ 코드
+
+```js
+var numberOne = prompt('50미만의 숫자를 입력하세요.');
+var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+
+if (numberOne < 50 && numberTwo < 50) alert('두 개의 숫자 모두 50 미만이군요.');
+else alert('조건에 맞지 않는 숫자가 있습니다.');
+```
+
++++
+
+###### 4.1.5.3. NOT 연산자-예제[25]
+
++++ 설명
+**🐸 NOT 연산자는 `!` 를 사용하며 청개구리 처럼 결과값을 반대로 반환합니다. 결과가 true 이면 false 를 결과가 false 이면 true 를 반환합니다.**
+!!!
+NOT 연산자를 사용하여 사용자가 입력한 값이 null 이 아닌지를 체크해 봅시다.[:koala:](./script/not.html)
+!!!
+
++++ 코드
+
+```js
+var numberOne = prompt('50미만의 숫자를 입력하세요.');
+var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+
+if (numberOne !== null && numberTwo !== null) {
+	if (numberOne < 10 || numberTwo < 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
+	else alert('두 개의 숫자 중 10 미만인 수는 없습니다.');
+} else {
+	alert('50 미만의 숫자를 입력하세요.');
+}
+```
+
++++
+
+:::comment_box
+<mark>조건 계산을 빠르게 하는 방법</mark>
+
+조건이 2가지 이상일 경우 동시에 함께 체크하는 조건식을 만들때는 첫번째 조건을 보고 빠르게 판단할수 있도록 작성해야 합니다.<br>
+예를 들어 다음과 같은 조건식의 경우를 살펴보겠습니다.<br>
+`(( x === 10 ) && ( y === 20 ))`<br>
+AND 연산자는 조건식이 둘 이상일 경우 하나만 false 라도 최종값이 false 입니다.<br>
+그러므로 첫번째 조건식의 결과를 false 로 작성할 경우 두번째 조건은 체크 하지 않고 바로 false 를 반환하게 됩니다.<br>
+이런 식으로 AND 연산자 사용시 false 를 반환하게 될 확률이 높은 식을 첫번째 조건으로 사용하게 된다면<br>
+컴퓨터의 일을 덜어주는 셈이 됩니다.<br>
+반대로 OR 연산자의 경우 하나만 true 라도 최종 값이 true 이기 때문에 첫번째 조건으로 true 를 반환하는 식을 작성한다면<br>
+효율적인 코드를 작성할수 있습니다.<br>
+[!badge variant='primary' size='l' text='이런 연산 방식을 단축평가(short circuit evaluation) 라고 합니다']
+:::
+
 #### 4.2. 선택문
 
-#### 4.3. 반복문
+:::comment_box
+선택문이란 하나의 변수 값을 여러 개의 값과 비교하여 해당하는 case 절의 코드를 실행하는 제어문 입니다.
+
+변수에 저장된 데이터(data)와 정확히 일치되는 경우(case)가 있는지 검사 후 일치하는 데이터가 있을 때
+
+해당 실행문을 수행한 뒤 마지막의 break문으로 반복을 끝냅니다.
+
+일치되는 값이 없을 때에는 default에 해당하는 실행문을 수행한 뒤 문장을 마칩니다.
+:::
+
+[!badge variant='primary' size='m' text='기본형']
+
+```js
+switch (조건) {
+	case 값1:
+		명령1;
+		break;
+	case 값2:
+		명령2;
+		break;
+	default:
+		기본명령;
+}
+```
+
+```mermaid
+graph TB
+    Start(변수준비) --> Condition{변수와 조건을 비교}
+    Condition -->|Case 1| Action1[명령 1]
+    Condition -->|Case 2| Action2[명령 2]
+    Condition -->|Default| DefaultAction[기본명령]
+
+    Action1 --> End(End)
+    Action2 --> End
+    DefaultAction --> End
+```
+
+###### 4.2.0.1. switch-예제[26]
+
++++ 설명
+!!!사용자에게 1,2,3 중 하나의 값을 입력받아 session 변수에 저장한다.
+
+switch 문을 이용해 session 값을 체크하여 입력받은 값이
+
+1이면 마케팅-201호, 2이면 개발-203호, 3이면 디자인-204호로
+
+안내하는 프로그램을 작성해보자
+[:koala:](./script/switch.html)
+!!!
++++ HTML
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>세션 선택 - switch문</title>
+		<link rel="stylesheet" href="css/switch.css" />
+	</head>
+	<body>
+		<script>
+			var session = prompt('관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인');
+
+			switch (session) {
+				case '1':
+					document.write('<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.</p>');
+					break;
+				case '2':
+					document.write('<p>개발 세션은 <strong>203호</strong>에서 진행됩니다.</p>');
+					break;
+				case '3':
+					document.write('<p>디자인 세션은 <strong>205호</strong>에서 진행됩니다.</p>');
+					break;
+				default:
+					alert('잘못 입력했습니다.');
+			}
+		</script>
+	</body>
+</html>
+```
+
++++ CSS
+
+```css
+body {
+	background-color: #0c3268;
+	color: rgb(243, 243, 243);
+}
+
+p {
+	margin-top: 80px;
+	font-size: 2em;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 1px 2px 1px #000;
+}
+
+p strong {
+	font-size: 2.2em;
+	color: yellow;
+}
+```
+
++++
+
+[:koala:스위치문제](./script/switch2.html)
+
+#### 4.3. 실습문제[27]
+
++++ 지시문
+!!!info 자리배치도에 필요한 줄의 갯수를 구하시오.
+
+대관서비스 앱을 제작 중입니다. 사용자로 부터 총 입장객과 한줄에 앉을 인원수를 입력받아
+
+총 몇개의 줄이 필요한지 출력해주세요
+
+!!!
++++ 힌트
+
+- 전체 입장객의 수가 10명이고 한줄에 2명씩 앉아야 한다면 `10/2` 를 하여 총 5줄이 필요하겠죠?
+- 필요한 값들을 변수로 지정하고 프로그램을 작성해보세요.
+  +++ 정답
+
+```js #
+var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+if (memNum % colNum === 0) rowNum = parseInt(memNum / colNum);
+else rowNum = parseInt(memNum / colNum) + 1;
+document.write('모두 ' + rowNum + '개의 줄이 필요합니다.');
+```
+
++++ 설명
+
+    - 입장객의 수가 나누어 떨어지는 경우와 그렇지 않은 경우가 있습니다. 프로그램은 두개의 경우를 고려하여 작성하였습니다.
+
+    1. memNum 변수에 전체 입장객의 수를 입력받아 할당합니다.
+    2. colNum 변수에 한줄에 앉힐 인원수를 입력받아 할당합니다.
+    3. 전체 입장객 수(memNum)을 한 줄에 앉을 사람 수(colNum)으로 나눈 나머지가 0인지 확인합니다.
+    	즉, 모든 사람이 정확히 분배되면 그 결과값(줄의 개수)을 그대로 반환하고, 그렇지 않으면 결과값에서 소수점 아래를 버리고
+    	1을 더하여 필요한 줄의 개수를 계산합니다. 결괏값은 rowNum 변수에 저장됩니다.
+    	prompt 함수를 사용하여 입력 받은 자료는 string 타입으로 저장되기 때문에 parseInt 함수로 number 타입으로 변환하여 나누기 연산을 수행합니다.
+
+    4. document.write() 함수를 이용해 웹 페이지 상에서 "모두 n개의 줄이 필요합니다."라는 메시지를 출력하며, 여기서 n은 계산된 줄의 개수(rownum)입니다. [:koala:](./script/seat-1.html)
+
++++
+
+#### 4.4. 반복문
+
+:::comment_box
+반목문이란 주어진 <mark>조건에 따라서 문장을 반복 실행</mark>하게 하는 제어문입니다.
+
+자바 스크립트에서 반복문은 <mark>for문, while문, do while문</mark>이 있습니다.
+:::
+
+##### 4.4.1. for
+
+반복문 사용시 얼마나 편리해지는지 체험해 보겠습니다.
+
+###### 4.4.1.1. for-예제[28]
+
++++ 반복문 사용전
+
+```js #
+var sum = 0;
+
+sum += 1;
+sum += 2;
+sum += 3;
+sum += 4;
+sum += 5;
+document.write('1부터 5까지 더하면 ' + sum);
+```
+
+[:icon-play:](./script/repeat-1.html)
+
++++ 반복문 사용후
+
+```js #
+var i;
+var sum = 0;
+
+for (i = 1; i < 6; i++) {
+	sum += i;
+}
+document.write('1부터 5까지 더하면 ' + sum);
+```
+
+[ :icon-play:](./script/repeat-2.html)
++++
+
+[!badge variant='primary' size='m' text='기본형']
+
+```js
+for (초기값; 조건; 증가식) {
+	실행문;
+}
+```
+
+for 문은 초기값->조건->명령->증가식의 순서로 수행합니다.
+
+###### 4.4.1.2. for-예제[29]
+
++++ 지시문
+!!! for 문을 사용해 1부터 100까지 숫자 더하기 [:icon-play:](./script/repeat-3.html)
+!!!
+
++++ 코드
+
+```#
+var i;
+var sum = 0;
+
+for(i = 1; i < 1001; i++) {
+	sum += i;
+}
+document.write("1부터 5까지 더하면 " + sum);
+```
+
++++
+
+###### 4.4.1.3. 중첩 for-예제[30]
+
++++ 지시문
+!!! 중첩 for문으로 1단부터 9단까지 구구단 만들기
+!!!
+
++++ JS1
+[:icon-play:](./script/gugudan-1.html)
+
+```js #
+var i, j;
+
+for (i = 1; i <= 9; i++) {
+	document.write('<h3>' + i + '단</h3>');
+	for (j = 1; j <= 9; j++) {
+		document.write(i + ' X ' + j + ' = ' + i * j + '<br>');
+	}
+}
+```
+
++++ CSS
+
+```css #
+div {
+	display: inline-block;
+	padding: 0 20px 30px 20px;
+	margin: 15px;
+	border: 1px solid #ccc;
+	line-height: 2;
+}
+div h3 {
+	text-align: center;
+	font-weight: bold;
+}
+```
+
++++ JS2
+동적요소추가 후 스타일반영
+[:icon-play:](./script/gugudan-2.html)
+
+```js #4,8
+var i, j;
+for (i = 1; i <= 9; i++) {
+	document.write('<div>');
+	document.write('<h3>' + i + '단</h3>');
+	for (j = 1; j <= 9; j++) {
+		document.write(i + ' X ' + j + ' = ' + i * j + '<br>');
+	}
+	document.write('</div>');
+	if (i === 3) break;
+}
+```
+
++++
+
+##### 4.4.2. while
+
+while문은 조건이 true인 동안 실행문을 반복 합니다.
+조건을 먼저 체크한 후 실행하기 때문에 조건이 false 라면 한번도 실행하지 않을수도 있습니다.
+
+[!badge variant='primary' size='m' text='기본형']
+
+```js
+while (조건) {
+	실행문;
+}
+```
+
+###### 4.4.2.1. while-예제[31]
+
++++ 지시문
+while 문을 사용하여 1부터 10까지 반복하여 출력해봅시다
++++ 코드
+[:icon-play:](./script/while.html)
+
+```js #
+var i = 1; //초기값
+while (i <= 10) {
+	document.write(i + '<br />');
+	i++;
+}
+```
+
++++ 설명
++++
+
+###### 4.4.2.2. while-예제[32]
+
++++ 지시문
+while 문을 사용하여 1부터 10까지의 합을 계산해보세요
++++ 코드
+[:icon-play:](./script/while2.html)
+
+```js #
+let x = 0;
+let total = 0;
+while (x < 10) {
+	x++;
+	total = total + x; //total+=x
+	document.write(x);
+	if (x != 10) document.write('+');
+}
+document.write('=' + total);
+```
+
++++ 설명
+`let x = 0과 let total = 0` : 변수 x와 total을 선언하고 각각 초기값으로 0을 할당합니다.
+
+`while (x < 10) {...}` : while 반복문을 사용하여 조건식인 x < 10이 참인 동안 아래의 코드 블록이 반복 실행됩니다.
+
+`x++`: 반복문 내에서 x 값을 증가시킵니다. 이는 x 값을 1씩 증가시키는 역할을 합니다.
+
+`total = total + x` : total 변수에 현재의 x 값을 더해줍니다. 이로써 각 숫자들이 계속해서 누적되어 더해지게 됩니다.
+
+`document.write(x)` : 현재의 x 값을 웹 페이지에 출력합니다.
+
+`if (x != 10) document.write("+")` : 만약 현재의 x 값이 10이 아니라면 "+" 문자를 웹 페이지에 출력합니다.
+
+숫자 사이에 `+` 문자를 출력하기 위한 것으로 마지막 숫자는 출력되지 않게 조건을 작성했습니다.
+
+반복문이 종료되면, "=`" 문자열과 함께 total 변수의 값을 웹 페이지에 출력합니다.
+
+"1+2+3+4...=" 과 같은 형태로 시작하여, 마지막으로 계산된 total 값(55)을 추가로 표시합니다.
++++
+
+##### 4.4.3. do~while
+
+기본적으로 while 문과 같이 조건을 체크하여 반복하는 반복문 입니다.
+
+하지만 do~while은 실행후 조건을 체크하기 때문에 조건이 false 라도 무조건 한번은 실행합니다.
+
+[!badge variant='primary' size='m' text='기본형']
+
+```js
+do {
+	실행문;
+} while (조건);
+```
+
+###### 4.4.3.1. do~while-예제[33]
+
++++ 설명
+do~while 문으로 사용자로부터 숫자를 입력받아서 1부터 해당 숫자까지의 합을 계산하고 출력하는 프로그램을 작성해 봅시다
++++ 코드
+[:icon-play:](./script/while3.html)
+
+```js #
+let number;
+let sum = 0;
+
+do {
+	number = parseInt(prompt('숫자를 입력하세요:'));
+	sum += number;
+} while (!isNaN(number));
+
+document.write('입력한 숫자들의 합은 ' + sum + '입니다.');
+```
+
++++설명
+`let number; let sum = 0;`: 변수 number와 sum을 선언하고 초기값으로 각각 undefined와 0을 할당합니다.
+
+`do { ... } while (isNaN(number));`: do-while 반복문을 사용하여 중괄호 안의 코드 블록이 최소한 한 번 실행되도록 합니다. 이후 조건식인 isNaN(number)가 참인 동안 반복문이 계속 실행됩니다.
+
+isNaN(number)는 입력된 값(number)이 NaN(숫자가 아님)인지 확인하는 조건입니다.
+
+`number = prompt("숫자를 입력하세요:");`: 사용자에게 '숫자를 입력하세요'라는 메시지와 함께 대화상자를 표시하고, 사용자가 입력한 값을 문자열로 받아 변수 number에 저장합니다.
+
+for 반복문을 사용하여 1부터 해당 숫자까지의 합(sum)을 계산합니다.
+
+반복문의 시작값은 1부터 시작하며, 종료 조건은 parseInt() 함수를 통해 문자열로 받은 숫자(number)로 변환하여 설정됩니다.
+
+매번 반복할 때마다 현재의 값을 누적하여 (+=) 변수 sum에 더해줍니다. `sum=sum+number` 과 같습니다.
+
+반복문 종료 후, "입력한 숫자들의 합은 x입니다."라는 메시지를 웹 페이지에 출력합니다.
+
+여기서 x는 루프에서 계산된 총합(sum) 값입니다.
++++
+
+##### 4.4.4. break/continue
+
+반복문의 실행문들은 수행과정에서 break문을 만나면 해당 반복문을 종료합니다.
+break문은 반복문 등을 정지시킬 때에 사용합니다.
+
+[!badge variant='primary' size='m' text='기본형']
+
+```js break 정지
+break
+```
+
+반복문 문장 안에 사용하여 반복 실행 중에 조건문으로 되돌아 가게 해주는 역할을 합니다
+즉, 반목문에서 특정 부분을 실행하지 않게 하고 싶을 때 간단하게 사용할 수 있습니다.
+[!badge variant='primary' size='m' text='기본형']
+
+```js continue 통과
+continue
+```
+
+###### 4.4.4.1. break/continue-예제[34]
+
++++ 코드[34]
+[!badge variant='contrast' size='xl' text='34-break']
+
+``` js #
+for (let i = 0; true; i++) {
+    alert(i + '번째 반복문입니다.')
+    // 진행 여부를 물어봅니다.
+    const isContinue = confirm('계속하시겠습니까?')
+    if (!isContinue) {  //조건에 충족하면 break 키워드실행
+        break
+    }
+}
+// 프로그램의 종료를 확인.
+alert('프로그램 종료')
+
+```
++++ 코드[35]
+[!badge variant='contrast' size='xl' text='35-continue']
+``` js #
+var x=0
+var total=0
+
+while(x < 10)
+{
+    x++
+
+    if(x==3) continue
+    total=total+x
+    document.write(x)
+
+    if(x!=10)
+    document.write("+")
+}
+
+document.write("="+ total)
+
+```
+
++++

@@ -10,9 +10,9 @@
   code,
   code span {
     font-family: consolas, 'Inconsolata', monospace;
-    font-size: .9rem;
+/*     font-size: .9rem;
     line-height: 1.5;
-  }
+ */  }
 
   * {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
@@ -27,33 +27,17 @@
     margin-bottom: 1.2rem;
   }
 
-  .comment_box:before {
-    content: '';
-    position: absolute;
-    height: 80%;
-    width: 2px;
-    background-color: #1956af;
-    left: -5px;
-  }
-
   .comment_box {
-    padding:20px;
-    color: #1956AF;
+    padding: 2rem;
+    color: #094092;
     margin-bottom: 20px;
-    font-weight: 200;
-    font-size: 1.3em;
-    letter-spacing: -0.08rem;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: -0.5px;
     position: relative;
-  }
-
-  .comment_box.s {
-    padding:20px;
-    color: #1956AF;
-    margin-bottom: 20px;
-    font-weight: 200;
-    font-size: 1em;
-    letter-spacing: -0.08rem;
-    position: relative;
+    background-color: #f4f5f7;
+    line-height: 1.8;
+    filter: drop-shadow(-2px 4px 4px #25344b25);
   }
 
   .comment_box p {
@@ -68,4 +52,19 @@
   .w-full p:not(.hidden) {
     margin-bottom: 0.2rem;
   }
+
+  div[id]>h1,
+  div[id]>h2,
+  div[id]>h3,
+  div[id]>h4,
+  div[id]>h5,
+  div[id]>h6 {
+    margin-top: 3.4rem;
+    color: #3f51b5 !important;
+  }
+  [class^=img]{width:auto;}
+  [class^=img] p{display: none;}
+  .img50 figure img{max-width: 50%;}
+  .img20 figure img{max-width: 20%;}
+  .img10 figure img{max-width: 10%;}
 </style>
