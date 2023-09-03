@@ -1118,7 +1118,9 @@ document.querySelector('#change').onclick = function () {
 ### 2.3. 마무리문제
 
 :::comment_box
+
 [!badge variant='primary' size='xl' text='01']
+
 [:link:16](#223-버튼-클릭시-상세설명-표시-예제16)예제 를 응용하여 DOM 방식으로 상세설명열고 닫는 함수를 수정해 보세요
 [:icon-play:](./script/detail-2.html)
 :::
