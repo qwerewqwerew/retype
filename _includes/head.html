@@ -51,7 +51,7 @@
   }
 
   .w-full p:not(.hidden) {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
   }
 
   div[id]>h1,
@@ -72,24 +72,53 @@
     display: none;
   }
 
-  .img50 figure img {
+  .img50 figure img,
+  .w50 {
     max-width: 50%;
   }
 
-  .img20 figure img {
+  .w40 {
+    max-width: 40%;
+  }
+
+  .w30 {
+    max-width: 30%;
+  }
+
+  .img20 figure img,
+  .w20 {
     max-width: 20%;
   }
 
-  .img10 figure img {
+  .img10 figure img,
+  .w10 {
     max-width: 10%;
   }
 
   .docs-markdown div[id="목차"]+ul li {
     line-height: 1.8;
-    font-weight:400;
-    padding-top:2px;
-    padding-bottom:4px;
-    font-size:14px;
+    font-weight: 400;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    font-size: 14px;
   }
 
+  .docs-markdown table.comfortable tr td,
+  .docs-markdown table.comfortable tr th {
+    padding: 0.5rem 1.25rem;
+    font-size: 15px;
+  }
+
+  .shadow {
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, .2))
+  }
+  .normal{font-style:normal;}
+  .mx-1{margin:auto 1rem;}
+  .mr-1{margin-right:1rem;}
+  .my-1{margin:1rem auto;}
+
+  .red,
+  .red * {
+    color: rgb(229, 62, 62) !important;
+  }
 </style>

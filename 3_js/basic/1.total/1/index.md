@@ -60,6 +60,12 @@ category:
 # 1. 자바스크립트의 역할
 
 > 자바스크립트는 웹의 초창기 시절부터 지금까지 웹브라우저에서 꾸준히 사용해온 언어이다. 또한 계속 발전하고 있다.
+>
+> [:link:ECMA script 공식사이트 ](https://www.ecma-international.org/)
+>
+> [:link:모던자바스크립트 튜토리얼](https://ko.javascript.info/)
+>
+> [:link:MDN JS tutorial](https://developer.mozilla.org/ko/docs/Web/JavaScript)
 
 ## 1.1. 웹의 요소 제어
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746959138381">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.747050881278">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -32,11 +32,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.2.0.746959138381" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.2.0.747050881278" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.2.0.746959138381" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.2.0.747050881278" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.2.0.746959138381" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.2.0.747050881278" data-turbo-eval="false" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -91,7 +91,7 @@
       }
 
       .w-full p:not(.hidden) {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
       }
 
       div[id]>h1,
@@ -112,26 +112,55 @@
         display: none;
       }
 
-      .img50 figure img {
+      .img50 figure img,
+      .w50 {
         max-width: 50%;
       }
 
-      .img20 figure img {
+      .w40 {
+        max-width: 40%;
+      }
+
+      .w30 {
+        max-width: 30%;
+      }
+
+      .img20 figure img,
+      .w20 {
         max-width: 20%;
       }
 
-      .img10 figure img {
+      .img10 figure img,
+      .w10 {
         max-width: 10%;
       }
 
       .docs-markdown div[id="목차"]+ul li {
         line-height: 1.8;
-        font-weight:400;
-        padding-top:2px;
-        padding-bottom:4px;
-        font-size:14px;
+        font-weight: 400;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        font-size: 14px;
       }
 
+      .docs-markdown table.comfortable tr td,
+      .docs-markdown table.comfortable tr th {
+        padding: 0.5rem 1.25rem;
+        font-size: 15px;
+      }
+
+      .shadow {
+        filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, .2))
+      }
+      .normal{font-style:normal;}
+      .mx-1{margin:auto 1rem;}
+      .mr-1{margin-right:1rem;}
+      .my-1{margin:1rem auto;}
+
+      .red,
+      .red * {
+        color: rgb(229, 62, 62) !important;
+      }
     </style>
 </head>
 <body>
@@ -148,7 +177,7 @@
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
                         <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-2xl">
-                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 예제정리</span>
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 프론트엔드 노트</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
         

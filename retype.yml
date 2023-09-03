@@ -2,7 +2,7 @@ input: .
 output: .retype
 url: https://qwerewqwerew.github.io/retype/
 branding:
-  title: ✔ 예제정리
+  title: ✔ 프론트엔드 노트
   label: Docs
 links:
   - text: Coding Note

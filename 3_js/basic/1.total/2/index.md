@@ -11,7 +11,7 @@ category:
 
 - [1. 변수](#1-변수)
 	- [1.1. 예제 **선언과 할당** \[01\]](#11-예제-선언과-할당-01)
-	- [1.2. 예제 \[02\] 나이계산 프로그램 만들기](#12-예제-02-나이계산-프로그램-만들기)
+	- [1.2. 예제 \[02\]](#12-예제-02)
 - [2. 자료형](#2-자료형)
 	- [2.1. 개요](#21-개요)
 	- [2.2. 종류](#22-종류)
@@ -76,6 +76,7 @@ category:
 		- [4.4.4. break/continue](#444-breakcontinue)
 			- [4.4.4.1. break/continue-예제](#4441-breakcontinue-예제)
 	- [4.5. 마무리문제-\[38\]](#45-마무리문제-38)
+- [5. 마무리문제](#5-마무리문제)
 
 ---
 
@@ -124,13 +125,15 @@ frontend = '김망고';
 var variable = '변수';
 ```
 
-#### 1.2. 예제 [02] 나이계산 프로그램 만들기
+#### 1.2. 예제 [02]
 
-[문제](./script/age.html)
++++지시문
 
-[정답](./script/age-result.html)
+나이계산 프로그램을 만들어봅시다.
 
 +++문제
+
+[문제](./script/age.html)
 
 ```html
 <!DOCTYPE html>
@@ -145,6 +148,7 @@ var variable = '변수';
 ```
 
 +++해설
+[정답](./script/age-result.html)
 
 ```html
 <!DOCTYPE html>
@@ -201,7 +205,7 @@ var variable = '변수';
 
 #### 2.3. 원시형
 
-> `typeof` : 자료형을 확인하는 단항 연산자와 함께 알아보자
+> `typeof` : 자료형을 확인하는 단항 연산자인 typeof와 함께 알아보자
 
 ##### 2.3.1. 예제[03]
 
@@ -247,29 +251,6 @@ console.log('noName:', noName, typeof noName);
 > ![alt](https://user-images.githubusercontent.com/59301948/263474885-7d02961d-ec30-4c29-93c8-2c3eec89b32d.png)
 >
 > ▲ 참조타입은 한번에 여러개의 물건을 저장하는 수납박스이다
-
-<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
-<h4>배열 다루기</h4>
-
-    • 배열 생성하기: [요소, 요소, 요소, … , 요소]
-
-    •  배열 요소에 접근하기: 배열[인덱스]
-
-    •  배열 요소 개수 확인하기: 배열.length
-
-    •  배열 뒷부분에 요소 추가하기: 배열.push(요소)
-
-    •  배열 특정 위치에 요소 추가하기: 배열.splice(인덱스, 0, 요소)
-
-    •  배열 요소 제거하기:
-
-    	•  인덱스로 제거하기: 배열.splice( 인덱스, 제거할 요소의 개수)
-
-    	•  값으로 요소 제거하기: const 인덱스 = 배열.indexOf(요소)
-
-    	•  배열.splice(인덱스, 1)
-
-</aside>
 
 ##### 2.4.1. 예제 [04]
 
@@ -351,14 +332,13 @@ console.log(a ?? b);
 
 ##### 3.2.1. 산술연산자의 기본활용 예제 [05]
 
-```
+```js
 console.log(100 + 200); // 300
 console.log(200 - 80); // 120
 console.log(100 * 3); // 300
 console.log(400 / 5); // 80	나누기 연산자
 console.log(402 % 5); // 2	나머지 연산자
 console.log(2 ** 3); // 8 **은 제곱!!
-
 ```
 
 ##### 3.2.2. 산술연산자의 자료형 활용예제 [06]
@@ -397,7 +377,7 @@ alert(t4); //'망고는5살true'
 
 ##### 3.2.3. 산술연산자의 자료형 활용예제 [07]
 
-+++ code
++++ 코드
 
 ```js
 const x = 75;
@@ -411,7 +391,7 @@ document.write(add / 2);
 document.write(`국어점수: ${x}<br>수학점수: ${y}<br>합계: ${add}<br> `);
 ```
 
-+++ explain
++++ 설명
 
 - `const add = x + y;`
   - `+` 는 숫자 자료형으로 연산하였다.
@@ -423,12 +403,12 @@ document.write(`국어점수: ${x}<br>수학점수: ${y}<br>합계: ${add}<br> `
 
 ##### 3.2.4. 증가연산자예제 [08]
 
-<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
+:::comment_box
 변수에 붙이면 1씩 증가/감소 시키는 연산자
 
 앞에 붙이면 전위연산, 뒤에 붙이면 후위 연산이라고 하며 위치에 따라 결과가 다르다
 
-</aside>
+:::
 
 | 종류    | 설명                                 |
 | ------- | ------------------------------------ |
@@ -1470,11 +1450,11 @@ document.write('입력한 숫자들의 합은 ' + sum + '입니다.');
 
 +++설명
 
-`let number; let sum = 0;`: 변수 number와 sum을 선언하고 초기값으로 각각 undefined와 0을 할당합니다.
+1.  `let number; let sum = 0;`: 변수 number와 sum을 선언하고 초기값으로 각각 undefined와 0을 할당합니다.
 
-`do { ... } while (isNaN(number));`: do-while 반복문을 사용하여 중괄호 안의 코드 블록이 최소한 한 번 실행되도록 합니다. 이후 조건식인 isNaN(number)가 참인 동안 반복문이 계속 실행됩니다.
+2.  `do { ... } while (isNaN(number));`: do-while 반복문을 사용하여 중괄호 안의 코드 블록이 최소한 한 번 실행되도록 합니다. 이후 조건식인 isNaN(number)가 참인 동안 반복문이 계속 실행됩니다.
 
-isNaN(number)는 입력된 값(number)이 NaN(숫자가 아님)인지 확인하는 조건입니다.
+        isNaN(number)는 입력된 값(number)이 NaN(숫자가 아님)인지 확인하는 조건입니다.
 
 `number = prompt("숫자를 입력하세요:");`: 사용자에게 '숫자를 입력하세요'라는 메시지와 함께 대화상자를 표시하고, 사용자가 입력한 값을 문자열로 받아 변수 number에 저장합니다.
 
@@ -1495,7 +1475,7 @@ for 반복문을 사용하여 1부터 해당 숫자까지의 합(sum)을 계산�
 반복문의 실행문들은 수행과정에서 break문을 만나면 해당 반복문을 종료합니다.
 break문은 반복문 등을 정지시킬 때에 사용합니다.
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge variant='primary' size='m' text='break 기본형']
 
 ```js break 정지
 break
@@ -1503,7 +1483,8 @@ break
 
 반복문 문장 안에 사용하여 반복 실행 중에 조건문으로 되돌아 가게 해주는 역할을 합니다
 즉, 반목문에서 특정 부분을 실행하지 않게 하고 싶을 때 간단하게 사용할 수 있습니다.
-[!badge variant='primary' size='m' text='기본형']
+
+[!badge variant='primary' size='m' text='continue 기본형']
 
 ```js continue 통과
 continue
@@ -1608,5 +1589,45 @@ document.write('=' + total);
 </html>
 ```
 
-+++ 설명
 +++
+
+### 5. 마무리문제
+
+:::comment_box
+[!badge variant='primary' size='xl' text='01']
+다음 조건을 확인하여 사용자가 입력한 숫자가 4의 배수인지 확인하는 프로그램을 작성하세요
+[:icon-play:](./script/sol-1.html)
+!!! :zap: 조건 :zap:
+
+1. 프롬프트 문을 이용하여 숫자를 입력 받으세요
+2. [취소] 버튼을 누르면 결과를 출력하지 않습니다.
+3. 입력받은 숫자를 4로 나눈 나머지가 0이면 4의 배수이고 아니면 4의 배수가 아닙니다.
+
+!!!
+
+!!! :zap: 실행화면 :zap:
+![](../../../../source/images/js3-12.jpg){.shadow}
+![](../../../../source/images/js3-13.jpg){.shadow}
+
+!!!
+:::
+:::comment_box
+[!badge variant='primary' size='xl' text='02']
+숫자를 입력 받은후 1부터 그 숫자까지 3의 배수를 모두 출력합니다.
+그리고 출력된 3의 배수가 총 몇개인지 알려주는 프로그램을 작성하세요
+[:icon-play:](./script/sol-2.html)
+!!! :zap: 조건 :zap:
+
+1. 프롬프트 문을 이용하여 숫자를 입력 받으세요
+2. [취소] 버튼을 누르면 결과를 출력하지 않습니다.
+3. 반복문을 이용해서 1부터 입력받은 숫자까지 실행합니다.
+4. 3의 배수인지 알려면 입력받은 숫자를 3으로 나눈 나머지가 0인지 확인합니다.
+5. 카운터의 갯수를 함께 출력합니다.
+   !!!
+
+!!! :zap: 실행화면 :zap:
+![](../../../../source/images/js3-11.jpg){.shadow}
+![](../../../../source/images/js3-10.jpg){.shadow}
+
+!!!
+:::
