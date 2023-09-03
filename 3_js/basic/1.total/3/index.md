@@ -5,8 +5,7 @@ category:
   - class
 ---
 
-# 3. 함수와 이벤트 <!-- omit in toc -->
-
+# 3. 함수 <!-- omit in toc -->
 ### 목차 <!-- omit in toc -->
 
 - [1. 함수](#1-함수)
@@ -48,7 +47,7 @@ category:
 		- [2.2.2. 버튼 클릭시 배경변경-예제\[15\]](#222-버튼-클릭시-배경변경-예제15)
 		- [2.2.3. 버튼 클릭시 상세설명 표시-예제\[16\]](#223-버튼-클릭시-상세설명-표시-예제16)
 		- [2.2.4. DOM을 이용한 방식-버튼클릭시 글자변경-예제\[17\]](#224-dom을-이용한-방식-버튼클릭시-글자변경-예제17)
-	- [2.3. 마무리문제](#23-마무리문제)
+- [3. 마무리문제](#3-마무리문제)
 
 ## 1. 함수
 
@@ -1115,22 +1114,26 @@ document.querySelector('#change').onclick = function () {
 };
 ```
 
-### 2.3. 마무리문제
+
++++
+
+## 3. 마무리문제
 
 :::comment_box
 
-[!badge variant='primary' size='xl' text='01']
+[!badge variant='primary' size='xl' text='01'] [:icon-play:](./script/detail-2.html)
 
-[:link:16](#223-버튼-클릭시-상세설명-표시-예제16)예제 를 응용하여 DOM 방식으로 상세설명열고 닫는 함수를 수정해 보세요
-[:icon-play:](./script/detail-2.html)
+[:link:16](#223-버튼-클릭시-상세설명-표시-예제16)예제 를 응용하여  상세설명을 열고 닫는 함수를 DOM 방식으로 수정해 보세요
+
 :::
 
 :::comment_box
-[!badge variant='primary' size='xl' text='01']
+[!badge variant='primary' size='xl' text='02'] [:icon-play:](./script/sol-1.html)
+
 다음 조건을 참고하여 매개변수로 전달받은 두수의 값이 같으면 곱하고 다르면 더하는 함수 sumMulti() 를 작성하세요.
 
 그후 인자로 5,10 을 전달할때와 10,10 을 전달할때의 실행결과를 콘솔창에 표시하세요.
-[:icon-play:](./script/sol-1.html)
+
 
 !!! warning <mark>조건</mark>
 
@@ -1143,11 +1146,12 @@ document.querySelector('#change').onclick = function () {
 !!!
 :::
 :::comment_box
-[!badge variant='primary' size='xl' text='03']
+[!badge variant='primary' size='xl' text='03'] [:icon-play:](./script/sol-2.html)
+
 프롬프트 창에서 두수를 입력받아 크기를 서로 비교한 후 더 큰 숫자를 알림창으로 표시하는 함수를 작성하세요.
 
 그후 인자로 5,10 을 전달할때와 10,10 을 전달할때의 실행결과를 콘솔창에 표시하세요.
-[:icon-play:](./script/sol-2.html)
+
 
 !!! warning <mark>조건</mark>
 
