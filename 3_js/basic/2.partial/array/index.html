@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.746959199128">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747099173130">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.3.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>1. 자료형</title>
     <meta name="title" content="1. 자료형">
-    <meta name="description" content="반복문과 함께 쓰이는 배열자료형을 알아보자">
+    <meta name="description" content="반복문과 함께 쓰이는 배열자료형을 알아봅시다.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/array/">
@@ -21,23 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/array/">
     <meta property="og:title" content="1. 자료형">
-    <meta property="og:description" content="반복문과 함께 쓰이는 배열자료형을 알아보자">
+    <meta property="og:description" content="반복문과 함께 쓰이는 배열자료형을 알아봅시다.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/array/">
     <meta property="twitter:title" content="1. 자료형">
-    <meta property="twitter:description" content="반복문과 함께 쓰이는 배열자료형을 알아보자">
+    <meta property="twitter:description" content="반복문과 함께 쓰이는 배열자료형을 알아봅시다.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.3.0.746959199128" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.3.0.747099173130" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.746959199128" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.747099173130" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.746959199128" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.746959199128" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.747099173130" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.747099173130" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -92,7 +92,7 @@
       }
 
       .w-full p:not(.hidden) {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
       }
 
       div[id]>h1,
@@ -113,26 +113,55 @@
         display: none;
       }
 
-      .img50 figure img {
+      .img50 figure img,
+      .w50 {
         max-width: 50%;
       }
 
-      .img20 figure img {
+      .w40 {
+        max-width: 40%;
+      }
+
+      .w30 {
+        max-width: 30%;
+      }
+
+      .img20 figure img,
+      .w20 {
         max-width: 20%;
       }
 
-      .img10 figure img {
+      .img10 figure img,
+      .w10 {
         max-width: 10%;
       }
 
       .docs-markdown div[id="목차"]+ul li {
         line-height: 1.8;
-        font-weight:400;
-        padding-top:2px;
-        padding-bottom:4px;
-        font-size:14px;
+        font-weight: 400;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        font-size: 14px;
       }
 
+      .docs-markdown table.comfortable tr td,
+      .docs-markdown table.comfortable tr th {
+        padding: 0.5rem 1.25rem;
+        font-size: 15px;
+      }
+
+      .shadow {
+        filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, .2))
+      }
+      .normal{font-style:normal;}
+      .mx-1{margin:auto 1rem;}
+      .mr-1{margin-right:1rem;}
+      .my-1{margin:1rem auto;}
+
+      .red,
+      .red * {
+        color: rgb(229, 62, 62) !important;
+      }
     </style>
 </head>
 <body>
@@ -149,7 +178,7 @@
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
                         <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-2xl">
-                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 예제정리</span>
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 프론트엔드 노트</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
         
@@ -305,15 +334,18 @@
     </h4>
 </doc-anchor-target>
 <blockquote>
-<p>반복문과 함께 쓰이는 배열자료형을 알아보자</p>
-<p>여러 값을 한공간에 저장할때 쓰인다.</p>
-<p>학교에서는 한반에 속한 여러 학생들을 관리하기 위해 학생들에게 번호를 부여한다.</p>
-<p>일일히 이름을 기억하기 어렵고 부르기도 쉬워 번호로 관리하는데 이것이 배열이다.</p>
-<p>배열의 선언은 [ ] 값의 구분은 , 으로 한다.</p>
-<p>배열의 값은 번호를 갖게 된다.(인덱스 번호는 0부터 시작됨)</p>
-<p>배열의 값(요소)은 문자,숫자,객체,함수 모든 값이 들어갈수 있다</p>
+<p>반복문과 함께 쓰이는 배열자료형을 알아봅시다.</p>
+<p>배열은 여러 값을 한공간에 저장할때 쓰입니다.</p>
+<p>배열은 한 반에 속한 여러 학생을 생각하면 됩니다.</p>
+<p>이때 우리는 <strong>학급을 배열</strong>, <strong>학생을 요소 혹은 원소</strong> 라고 부릅니다.</p>
+<p>학교에서는 한반에 속한 여러 학생들의 관리하기 위해 학생들에게 번호를 부여합니다.</p>
+<p>이름으로 관리할 경우 동명이인이 있기도 하고 번호에 비해 효율성이 떨어지기 때문이지요.</p>
+<p>이때 <strong>학생에게 부여되는 일련의 번호를 배열에서는 인덱스 번호</strong>라고 합니다.</p>
+<p>배열의 선언은 <strong class="red"><code v-pre>[ ]</code></strong> 값의 구분은 <strong class="red"><code v-pre>,</code></strong> 으로 합니다.</p>
+<p>배열의 인덱스 번호는 <strong class="red"><code v-pre>0</code></strong> 부터 시작합니다.</p>
+<p>배열의 값(요소)은 문자,숫자,객체,함수 모든 자료형이 들어갈수 있습니다.</p>
 </blockquote>
-<p><strong>배열은 값의 집합이다</strong></p>
+<p><strong class="red">배열은 값의 집합이다</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-javascript"><code v-pre class="language-javascript">let srt = [];
 str = '안녕하세요';
@@ -346,6 +378,28 @@ var arr3 = new Array('zero', 'one', 'two');
 var arr4 = new Array(3);
 console.log(arr4);</code></pre>
 </doc-codeblock></div>
+<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
+<h4>배열 다루기</h4>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">• 배열 생성하기: [요소, 요소, 요소, … , 요소]
+
+•  배열 요소에 접근하기: 배열[인덱스]
+
+•  배열 요소 개수 확인하기: 배열.length
+
+•  배열 뒷부분에 요소 추가하기: 배열.push(요소)
+
+•  배열 특정 위치에 요소 추가하기: 배열.splice(인덱스, 0, 요소)
+
+•  배열 요소 제거하기:
+
+	•  인덱스로 제거하기: 배열.splice( 인덱스, 제거할 요소의 개수)
+
+	•  값으로 요소 제거하기: const 인덱스 = 배열.indexOf(요소)
+
+	•  배열.splice(인덱스, 1)</code></pre>
+</doc-codeblock></div>
+</aside>
 
                                 
                                 <!-- Required only on API pages -->

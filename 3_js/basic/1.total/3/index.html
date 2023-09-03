@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.746959199128">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747099173130">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.3.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>3. 함수와 이벤트 </title>
     <meta name="title" content="3. 함수와 이벤트 ">
-    <meta name="description" content="🔗설명PPT열기">
+    <meta name="description" content="1. 함수">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/3/">
@@ -21,22 +21,25 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/3/">
     <meta property="og:title" content="3. 함수와 이벤트 ">
-    <meta property="og:description" content="🔗설명PPT열기">
+    <meta property="og:description" content="1. 함수">
+    <meta property="og:image" content="https://qwerewqwerew.github.io/retype/source/images/js3-1.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/1.total/3/">
     <meta property="twitter:title" content="3. 함수와 이벤트 ">
-    <meta property="twitter:description" content="🔗설명PPT열기">
+    <meta property="twitter:description" content="1. 함수">
+    <meta property="twitter:image" content="https://qwerewqwerew.github.io/retype/source/images/js3-1.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.3.0.746959199128" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.3.0.747099173130" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.746959199128" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.747099173130" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.746959199128" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.747099173130" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.747099173130" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -91,7 +94,7 @@
       }
 
       .w-full p:not(.hidden) {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
       }
 
       div[id]>h1,
@@ -112,26 +115,55 @@
         display: none;
       }
 
-      .img50 figure img {
+      .img50 figure img,
+      .w50 {
         max-width: 50%;
       }
 
-      .img20 figure img {
+      .w40 {
+        max-width: 40%;
+      }
+
+      .w30 {
+        max-width: 30%;
+      }
+
+      .img20 figure img,
+      .w20 {
         max-width: 20%;
       }
 
-      .img10 figure img {
+      .img10 figure img,
+      .w10 {
         max-width: 10%;
       }
 
       .docs-markdown div[id="목차"]+ul li {
         line-height: 1.8;
-        font-weight:400;
-        padding-top:2px;
-        padding-bottom:4px;
-        font-size:14px;
+        font-weight: 400;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        font-size: 14px;
       }
 
+      .docs-markdown table.comfortable tr td,
+      .docs-markdown table.comfortable tr th {
+        padding: 0.5rem 1.25rem;
+        font-size: 15px;
+      }
+
+      .shadow {
+        filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, .2))
+      }
+      .normal{font-style:normal;}
+      .mx-1{margin:auto 1rem;}
+      .mr-1{margin-right:1rem;}
+      .my-1{margin:1rem auto;}
+
+      .red,
+      .red * {
+        color: rgb(229, 62, 62) !important;
+      }
     </style>
 </head>
 <body>
@@ -148,7 +180,7 @@
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
                         <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-2xl">
-                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 예제정리</span>
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 프론트엔드 노트</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
         
@@ -279,57 +311,1753 @@
         <span>3. 함수와 이벤트 <!-- omit in toc --></span>
     </h1>
 </doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
+    <div>In&nbsp;</div>
+    <div><a href="../../../../categories/javascript/">javascript</a>,&nbsp;</div>
+    <div><a href="../../../../categories/class/">class</a></div>
+</div>
+
+<doc-anchor-target id="목차">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#목차">#</doc-anchor-trigger>
+        <span>목차 <!-- omit in toc --></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><doc-anchor-trigger to="#1-%ED%95%A8%EC%88%98">1. 함수</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#11-%ED%95%A8%EC%88%98%EC%9D%98-%EC%84%A0%EC%96%B8%EA%B3%BC-%ED%98%B8%EC%B6%9C">1.1. 함수의 선언과 호출</doc-anchor-trigger>
+- <doc-anchor-trigger to="#1101-%EC%98%88%EC%A0%9C-01">1.1.0.1. 예제-01</doc-anchor-trigger>
+- <doc-anchor-trigger to="#1102-%ED%95%A8%EC%88%98%EC%9D%98-%EC%84%A0%EC%96%B8-%EC%98%88%EC%A0%9C02">1.1.0.2. 함수의 선언-예제[02]</doc-anchor-trigger>
+- <doc-anchor-trigger to="#1103-%ED%95%A8%EC%88%98%EC%9D%98-%ED%98%B8%EC%B6%9C-%EC%98%88%EC%A0%9C02">1.1.0.3. 함수의 호출-예제[02]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#12-%EB%B3%80%EC%88%98%EC%9D%98-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85">1.2. 변수의 호이스팅</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#121-%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98">1.2.1. 지역변수</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1211-%EC%98%88%EC%A0%9C02">1.2.1.1. 예제[02]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#122-%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98">1.2.2. 전역변수</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1221-%EC%98%88%EC%A0%9C03">1.2.2.1. 예제[03]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#123-var%EC%9D%98-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85">1.2.3. var의 호이스팅</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1231-%EC%98%88%EC%A0%9C04">1.2.3.1. 예제[04]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#124-var%EC%9D%98-%EC%9E%AC%EC%84%A0%EC%96%B8%EA%B3%BC-%EC%9E%AC%ED%95%A0%EB%8B%B9">1.2.4. var의 재선언과 재할당</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1241-%EC%98%88%EC%A0%9C-05">1.2.4.1. 예제 [05]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#125-let-%EA%B3%BC-const">1.2.5. let 과 const</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1251-let-%EC%98%88%EC%A0%9C06">1.2.5.1. let-예제[06]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#1252-const-%EC%98%88%EC%A0%9C07">1.2.5.2. const-예제[07]</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#13-%EC%9E%AC%EC%82%AC%EC%9A%A9%EA%B0%80%EB%8A%A5%ED%95%9C-%ED%95%A8%EC%88%98-%EB%A7%8C%EB%93%A4%EA%B8%B0">1.3. 재사용가능한 함수 만들기</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#131-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%9D%B8%EC%88%98return">1.3.1. 매개변수,인수,return</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1311-%EA%B7%B8%EB%A6%BC%EC%9C%BC%EB%A1%9C-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%9D%B8%EC%88%98return">1.3.1.1. 그림으로 이해하는 매개변수,인수,return</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#1312-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%ED%95%A8%EC%88%98%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%98%88%EC%A0%9C-08">1.3.1.2. 매개변수를 사용한 함수만들기-예제-[08]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#132-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%9D%98-%EA%B8%B0%EB%B3%B8%EA%B0%92-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8%B0">1.3.2. 매개변수의 기본값 지정하기</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1321-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%9D%98-%EA%B8%B0%EB%B3%B8%EA%B0%92-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8%B0-%EC%98%88%EC%A0%9C09">1.3.2.1. 매개변수의 기본값 지정하기-예제[09]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#133-%EC%8B%A4%EC%8A%B5%EB%AC%B8%EC%A0%9C10">1.3.3. 실습문제[10]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#14-%ED%95%A8%EC%88%98%ED%91%9C%ED%98%84%EC%8B%9D">1.4. 함수표현식</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#141-%EC%9D%B5%EB%AA%85%ED%95%A8%EC%88%98-%EC%98%88%EC%A0%9C11">1.4.1. 익명함수-예제[11]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#142-%EC%A6%89%EC%8B%9C%EC%8B%A4%ED%96%89%ED%95%A8%EC%88%98-%EC%98%88%EC%A0%9C12">1.4.2. 즉시실행함수-예제[12]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#143-%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98-%EC%98%88%EC%A0%9C13">1.4.3. 화살표함수-예제[13]</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#2-%EC%9D%B4%EB%B2%A4%ED%8A%B8">2. 이벤트</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#21-%EC%9D%B4%EB%B2%A4%ED%8A%B8">2.1. 이벤트</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#211-%EB%A7%88%EC%9A%B0%EC%8A%A4%EC%9D%B4%EB%B2%A4%ED%8A%B8">2.1.1. 마우스이벤트</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#212-%ED%82%A4%EB%B3%B4%EB%93%9C%EC%9D%B4%EB%B2%A4%ED%8A%B8">2.1.2. 키보드이벤트</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#213-%EB%AC%B8%EC%84%9C%EB%A1%9C%EB%94%A9%EC%9D%B4%EB%B2%A4%ED%8A%B8">2.1.3. 문서로딩이벤트</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#214-%ED%8F%BC%EC%9D%B4%EB%B2%A4%ED%8A%B8">2.1.4. 폼이벤트</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#22-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%B2%98%EB%A6%AC%EA%B8%B0">2.2. 이벤트처리기</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#221-html-%EC%86%8D%EC%84%B1%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B0%A9%EC%8B%9D-%EB%B2%84%ED%8A%BC-%ED%81%B4%EB%A6%AD%EC%8B%9C-%EC%95%8C%EB%A6%BC%EC%B0%BD%ED%91%9C%EC%8B%9C-%EC%98%88%EC%A0%9C14">2.2.1. HTML 속성을 이용한 방식-버튼 클릭시 알림창표시-예제[14]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#222-%EB%B2%84%ED%8A%BC-%ED%81%B4%EB%A6%AD%EC%8B%9C-%EB%B0%B0%EA%B2%BD%EB%B3%80%EA%B2%BD-%EC%98%88%EC%A0%9C15">2.2.2. 버튼 클릭시 배경변경-예제[15]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#223-%EB%B2%84%ED%8A%BC-%ED%81%B4%EB%A6%AD%EC%8B%9C-%EC%83%81%EC%84%B8%EC%84%A4%EB%AA%85-%ED%91%9C%EC%8B%9C-%EC%98%88%EC%A0%9C16">2.2.3. 버튼 클릭시 상세설명 표시-예제[16]</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#224-dom%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B0%A9%EC%8B%9D-%EB%B2%84%ED%8A%BC%ED%81%B4%EB%A6%AD%EC%8B%9C-%EA%B8%80%EC%9E%90%EB%B3%80%EA%B2%BD-%EC%98%88%EC%A0%9C17">2.2.4. DOM을 이용한 방식-버튼클릭시 글자변경-예제[17]</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#23-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C">2.3. 마무리문제</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
 <doc-anchor-target id="1-함수">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#1-함수">#</doc-anchor-trigger>
         <span>1. 함수</span>
     </h2>
 </doc-anchor-target>
-<p><a href="https://drive.google.com/file/d/1CTWT0FmbTkE_l5zrGOAvbpNXhgGSd4qu/view?pli=1"><span class="docs-emoji">&#x1F517;</span>설명PPT열기</a></p>
-<div class="comment_box"><p>함수란 여러 동작을 묶어놓은 덩어리 입니다.</p>
-</div>
-<doc-anchor-target id="11-변수의-호이스팅">
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-14 px-4 text-lg rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="24" height="24" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M8.75 11a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Zm7.25.75a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 1.5 0v-3.5Z"/><path d="M9.813 1h2.437a.75.75 0 0 1 .75.75V5h6.75A2.25 2.25 0 0 1 22 7.25v5.25h1.25a.75.75 0 0 1 0 1.5H22v5.75A2.25 2.25 0 0 1 19.75 22H4.25A2.25 2.25 0 0 1 2 19.75V14H.75a.75.75 0 0 1 0-1.5H2V7.25A2.25 2.25 0 0 1 4.25 5h7.25V2.5H9.813A.75.75 0 0 1 9.812 1ZM3.5 7.25v12.5c0 .414.336.75.75.75h15.5a.75.75 0 0 0 .75-.75V7.25a.75.75 0 0 0-.75-.75H4.25a.75.75 0 0 0-.75.75Z"/></g></svg></span>
+    <span>함수란 여러 동작을 묶어놓은 덩어리 입니다</span>
+</span></p>
+<doc-anchor-target id="11-함수의-선언과-호출">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-변수의-호이스팅">#</doc-anchor-trigger>
-        <span>1.1. 변수의 호이스팅</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-함수의-선언과-호출">#</doc-anchor-trigger>
+        <span>1.1. 함수의 선언과 호출</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="111-var--let--const">
+<doc-anchor-target id="1101-예제-01">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1101-예제-01">#</doc-anchor-trigger>
+        <span>1.1.0.1. 예제-01</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>두수를 더하는 함수를 만들어 봅시다</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">function addNumber(a, b) {
+	var sum = a + b;
+	alert(sum);
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="1102-함수의-선언-예제02">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1102-함수의-선언-예제02">#</doc-anchor-trigger>
+        <span>1.1.0.2. 함수의 선언-예제[02]</span>
+    </h5>
+</doc-anchor-target>
+<blockquote>
+<p>함수의 선언에 대해 알아보겠습니다.</p>
+<p>함수사용의 가장 기본적인 방법은 함수를 만들때 이름을 붙이고 필요할때 마다 함수의 이름을 불러 실행하는 것입니다.</p>
+<p><strong>함수가 어떤 명령을 처리할지 미리 알려주는 것</strong>을 함수를 <strong>선언한다</strong> 혹은 <strong>정의한다</strong> 라고 합니다.</p>
+<p>함수를 선언할 때는 함수마다 서로 다른 이름을 붙여 나중에 사용할때 알아보기 쉽도록 해야 합니다.</p>
+<p>선언할때는 예약어 <code v-pre>function</code> 을 사용하고 <code v-pre>{ }</code> 안에 실행문을 작성합니다.</p>
+</blockquote>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>함수를 선언해봅시다
+<a href="script/using-function.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">function 함수이름() {
+	실행문;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">function addNumber() {
+	var num1 = 2;
+	var num2 = 3;
+	var sum = num1 + num2;
+	alert('결과 값: ' + sum);
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="1103-함수의-호출-예제02">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1103-함수의-호출-예제02">#</doc-anchor-trigger>
+        <span>1.1.0.3. 함수의 호출-예제[02]</span>
+    </h5>
+</doc-anchor-target>
+<p>함수는 선언만으로 동작 하지 않습니다.</p>
+<p>선언은 앞으로 자주할 동작에 대해 예약을 해 놓는 것이고 동작을 하려면 함수를 불러 줘야 합니다.</p>
+<p><strong>함수를 부르는 것</strong>을 <strong>호출 한다</strong>라고 합니다.</p>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/using-function.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a>
+이전 예제에 이어서 작성해 봅시다</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript" data-line="7,8"><code v-pre class="language-javascript">function addNumber() {
+	var num1 = 2;
+	var num2 = 3;
+	var sum = num1 + num2;
+	alert('결과 값: ' + sum);
+}
+addNumber();
+addNumber();</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>[함수의 선언과 실행순서]</h5>
+<p>웹브라우저에서 자바스크립트 소스를 해석할때 함수 선언부분을 가장 먼저 합니다.
+그래서 개발자가 원하는 곳에 함수를 선언해 놓기만 하면 선언 위치와 무관하게 함수를 실행할수 있습니다.
+아래의 예시를 비교해 보면 함수를 호출, 선언하는 위치가 다르지만 둘다 문제없이 실행되는것을 볼수 있습니다.</p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>caseA</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>caseB</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">addNumber();
+function addNumber() {
+	//실행문
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">function addNumber() {
+	//실행문
+}
+addNumber();</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<p>함수의 선언 위치는 프로그램 흐름에 영향을 주지 않습니다.</p>
+<p>때문에 일반적으로 한 파일내에 여러 함수 선언시 스크립트 소스의 앞부분이나 뒷부분에 함수 선언 부분을 모아놓고 필요할때 마다 호출해서 사용합니다.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="12-변수의-호이스팅">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-변수의-호이스팅">#</doc-anchor-trigger>
+        <span>1.2. 변수의 호이스팅</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>자바스크립트의 2023년 현재 표준 버전은 ES6 이며 최신 버전은 ES13 (ECMAscript 2022) 입니다.</p>
+<p>변수를 선언하기 위해 사용하는 키워드인 let,const는 ES6에 새로 추가되었으며 이전에는 var 키워드만 사용하였습니다.</p>
+<p>let과 const 의 등장배경과 더불어 let,const,var 의 특징에 대해 학습하겠습니다.</p>
+</blockquote>
+<doc-anchor-target id="121-지역변수">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#111-var--let--const">#</doc-anchor-trigger>
-        <span>1.1.1. var , let , const</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#121-지역변수">#</doc-anchor-trigger>
+        <span>1.2.1. 지역변수</span>
     </h4>
 </doc-anchor-target>
-<doc-anchor-target id="12-재사용가능한-함수-만들기">
+<blockquote>
+<p><strong>변수나 함수,객체는 유효한 범위</strong>가 있습니다. 우리는 그것을 <strong>스코프(scope)</strong> 라고 부릅니다.</p>
+<p><strong>함수 내에서 var 키워드와 함께 선언된 변수</strong>를 <strong>지역변수</strong>라고 부르며 지역 변수는 선언된 함수 내에서만 스코프를 가집니다.</p>
+</blockquote>
+<doc-anchor-target id="1211-예제02">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1211-예제02">#</doc-anchor-trigger>
+        <span>1.2.1.1. 예제[02]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/var-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> 지역변수 선언하기</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">function addNumber() {
+	var sum = 10 + 20;
+}
+addNumber();
+console.log(sum);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p>변수 sum 이 정의 되지 않았다는 메시지가 출력됩니다
+<figure class="content-center">
+    <img src="../../../../source/images/js3-1.png" alt="콘솔로그">
+    <figcaption class="caption">콘솔로그</figcaption>
+</figure>
+</p>
+<p>함수 내에서 선언된 변수는 함수내에서만 유효하므로 함수 밖에서 접근할수 없습니다.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="122-전역변수">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#122-전역변수">#</doc-anchor-trigger>
+        <span>1.2.2. 전역변수</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>전역변수는 적용범위의 제한 없이 스크립트 <strong>소스코드 전체에서 유효범위</strong>를 갖습니다.</p>
+<p><strong>전역변수</strong>는 <strong>함수 밖에서 선언</strong>하거나 <strong>함수 내에서 var 키워드 없이</strong> 선언시 사용할수 있습니다.</p>
+</blockquote>
+<doc-anchor-target id="1221-예제03">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1221-예제03">#</doc-anchor-trigger>
+        <span>1.2.2.1. 예제[03]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/var-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a>전역변수 선언하기</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var total; //전역 변수
+function addNumber() {
+	var sum = 10 + 20; // 지역 변수
+	multi = 10 * 20; // 전역 변수
+	total = sum + multi;
+}
+addNumber();
+console.log(multi);
+document.write(`&lt;h1&gt;${total}&lt;/h1&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="123-var의-호이스팅">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#123-var의-호이스팅">#</doc-anchor-trigger>
+        <span>1.2.3. var의 호이스팅</span>
+    </h4>
+</doc-anchor-target>
+<p>var 변수는 자바스크립트 해석기에서 따로 기억을 합니다.</p>
+<p>그렇기 때문에 해석시 끌어올림(hosting) 현상이 발생하게 됩니다.</p>
+<p>변수를 실행하기 전이지만 해석기에서 변수의 존재를 미리 저장해 두기 때문에 아래와 같은 문제가 발생하게 됩니다.</p>
+<doc-anchor-target id="1231-예제04">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1231-예제04">#</doc-anchor-trigger>
+        <span>1.2.3.1. 예제[04]</span>
+    </h5>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><a href="script/var-3.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> [04] hoisting</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>설명</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var x = 10;
+
+function displayNumber() {
+	console.log('x is ' + x);
+	console.log('y is ' + y);
+	var y = 20;
+}
+displayNumber();</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p><figure class="content-center">
+    <img src="../../../../source/images/js3-2.png" alt=" 콘솔창" class="shadow">
+    <figcaption class="caption"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><symbol id="feed-rocket-icon-symbol" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Zm3.031-12a4.38 4.38 0 0 0-3.097 1.283l-.23.229c-.156.157-.308.32-.452.49H5.65a.876.876 0 0 0-.746.417l-.856 1.388a.377.377 0 0 0 .21.556l1.552.477 1.35 1.35.478 1.553a.374.374 0 0 0 .555.21l1.389-.855a.876.876 0 0 0 .416-.746V8.747c.17-.144.333-.295.49-.452l.23-.23A4.379 4.379 0 0 0 12 4.969v-.093A.876.876 0 0 0 11.124 4Zm-5.107 7.144h-.001a.809.809 0 0 0-1.33-.881c-.395.394-.564 1.258-.62 1.62a.12.12 0 0 0 .035.108.12.12 0 0 0 .108.035c.362-.056 1.226-.225 1.62-.619a.803.803 0 0 0 .188-.263Z"/></symbol><use xlink:href="#feed-rocket-icon-symbol" /></g></g></svg> 콘솔창</figcaption>
+</figure>
+<figure class="content-center">
+    <img src="../../../../source/images/js3-3.png" alt=" 변수가 정의되지 않은 상황의 메시지" class="shadow">
+    <figcaption class="caption"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><symbol id="feed-rocket-icon-symbol" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Zm3.031-12a4.38 4.38 0 0 0-3.097 1.283l-.23.229c-.156.157-.308.32-.452.49H5.65a.876.876 0 0 0-.746.417l-.856 1.388a.377.377 0 0 0 .21.556l1.552.477 1.35 1.35.478 1.553a.374.374 0 0 0 .555.21l1.389-.855a.876.876 0 0 0 .416-.746V8.747c.17-.144.333-.295.49-.452l.23-.23A4.379 4.379 0 0 0 12 4.969v-.093A.876.876 0 0 0 11.124 4Zm-5.107 7.144h-.001a.809.809 0 0 0-1.33-.881c-.395.394-.564 1.258-.62 1.62a.12.12 0 0 0 .035.108.12.12 0 0 0 .108.035c.362-.056 1.226-.225 1.62-.619a.803.803 0 0 0 .188-.263Z"/></symbol><use xlink:href="#feed-rocket-icon-symbol" /></g></g></svg> 변수가 정의되지 않은 상황의 메시지</figcaption>
+</figure>
+호이스팅이 발생하여 변수 y가 8번에서 선언되었음에도 선언은 되었으나 값이 미정인 상태라는 의미의 undefined 가 확인된다.</p>
+    </div>
+</div>
+<doc-anchor-target id="124-var의-재선언과-재할당">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#124-var의-재선언과-재할당">#</doc-anchor-trigger>
+        <span>1.2.4. var의 재선언과 재할당</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>var 키워드로 선언한 변수는 호이스팅 외에도 <strong>재선언과 재할당</strong>이 가능합니다.</p>
+<p>선언 : 변수를 생성하기 위해 식별자를 지정하는 단계</p>
+<p>할당 : 변수에 값을 넣는 단계</p>
+<p>초기화 : 변수의 식별자에 값의 할당을 완료한 단계</p>
+</blockquote>
+<doc-anchor-target id="1241-예제-05">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1241-예제-05">#</doc-anchor-trigger>
+        <span>1.2.4.1. 예제 [05]</span>
+    </h5>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><a href="script/var-4.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> [05]</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>설명</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">function addNumber(num1, num2) {
+	return num1 + num2;
+}
+var sum = addNumber(10, 20);
+console.log(sum);
+sum = 50;
+console.log(sum);
+var sum = 100;
+console.log(sum);</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p><figure class="content-center">
+    <img src="../../../../source/images/js3-4.jpg" alt="콘솔화면" class="shadow">
+    <figcaption class="caption">콘솔화면</figcaption>
+</figure>
+</p>
+    </div>
+</div>
+<doc-anchor-target id="125-let-과-const">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#125-let-과-const">#</doc-anchor-trigger>
+        <span>1.2.5. let 과 const</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>var 변수의 유연함으로 인해 프로그램의 작성시 예상치 못한 버그가 잦았으며 디버깅 시 원인을 찾는 것 또한 어려웠습니다.</p>
+<p>그래서 ES6에서 블록레벨 에서만 사용할수 있는 <code v-pre>let</code>과 <code v-pre>const</code> 가 등장하게 되었습니다.</p>
+<p>블록이란 <strong class="red"><code v-pre>{ }</code></strong> 를 의미합니다.</p>
+</blockquote>
+<doc-anchor-target id="1251-let-예제06">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1251-let-예제06">#</doc-anchor-trigger>
+        <span>1.2.5.1. let-예제[06]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/let-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> let 키워드를 사용하여 변수를 선언해 봅시다.
+1부터 10까지 더하는 함수를 작성합니다.</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript" data-line="13-15"><code v-pre class="language-javascript">function calcSum(n) {
+	//1-블록변수 선언
+	let sum = 0;
+	//2-전역변수 선언
+	sum2 = 0;
+	for (let i = 1; i &lt; n + 1; i++) {
+		sum += i;
+	}
+	console.log(`블록변수sum:${sum}`);
+	//3-변수sum 값 재할당
+	sum = 100;
+	console.log(`sum변수 재할당:${sum}`);
+	//4-sum의 재선언
+	//let sum=5;
+}
+calcSum(10);
+console.log(`전역변수sum2:${sum2}`);</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>let 변수는 같은 식별자로 재선언이 불가하므로 표시된 부분은 콘솔창에서 중복선언이라는 메시지의 오류가 반환됩니다.</h5>
+        </div>
+    </div>
+</div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">호이스팅-같은 문서에 이어서 코딩</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">var x = 10;
+function displayNumber() {
+	console.log('x is ' + x);
+	console.log('y is ' + y);
+	let y = 20;
+}
+displayNumber();</code></pre>
+</doc-codeblock></div>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
+        <span>설명</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>결과</span>
+    </div>
+    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>let 변수는 호이스팅이 발생하지 않으므로 우측과 같이 y 변수는 초기화 되지 않았다는 콘솔오류가 출력됩니다.</h5>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p><figure class="content-center">
+    <img src="../../../../source/images/js3-5.jpg" alt="콘솔화면" class="shadow">
+    <figcaption class="caption">콘솔화면</figcaption>
+</figure>
+</p>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="1252-const-예제07">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1252-const-예제07">#</doc-anchor-trigger>
+        <span>1.2.5.2. const-예제[07]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/const-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> const 키워드를 사용하여 변수(상수)를 선언해봅시다.</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>[07]</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>결과</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const currentYear = 2020;
+console.log(currentYear);
+const currentYear;
+console.log(currentYear);</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>3행의 currentYear 은 1행에서 이미 선언한 식별자 이므로 다시 사용할수 없습니다.</h5>
+<p>콘솔메시지에 이미 선언되었다는 메시지와 함께 오류가 반환됩니다.</p>
+        </div>
+    </div>
+</div>
+<p><figure class="content-center">
+    <img src="../../../../source/images/js3-6.jpg" alt="콘솔화면" class="shadow">
+    <figcaption class="caption">콘솔화면</figcaption>
+</figure>
+</p>
+    </div>
+</div>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>[07]</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>결과</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript" data-line="3-4"><code v-pre class="language-javascript">const currentYear = 2020;
+console.log(currentYear);
+currentYear = 2100;
+console.log(currentYear);</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>3행의 currentYear 은 1행에서 이미 초기화 하였으므로 값을 재할당 할수 없습니다.</h5>
+<p>콘솔메시지에 초기화 할수없다는 메시지와 함께 오류가 반환됩니다.</p>
+        </div>
+    </div>
+</div>
+<p><figure class="content-center">
+    <img src="../../../../source/images/js3-7.jpg" alt="콘솔화면" class="shadow">
+    <figcaption class="caption">콘솔화면</figcaption>
+</figure>
+</p>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><strong>변수사용팁</strong></h5>
+<ol>
+<li>전역변수는 최소한으로 사용합니다.
+<ul>
+<li>전역변수는 접근이 용이해 편리하지만 예상치 못한 곳에서 값이 변경될수 있으므로 버그가 발생할 확률이 높습니다.</li>
+</ul>
+</li>
+<li>var 변수는 함수의 시작부분에 선언합니다.
+<ul>
+<li>var 변수는 호이스팅이 발생하므로 함수의 시작부분에 선언하는것이 유지보수 하기 편하고 버그발생도 줄일수 있습니다.</li>
+</ul>
+</li>
+<li>for 문에서 변수 사용시 var 키워드는 사용하지 않습니다.
+<ul>
+<li>for 문 내의 중감식은 for문의 블록 내에서만 사용되는데 종종 var 변수로 선언하기도 합니다. var은 호이스팅이 발생하므로 다른 함수의 변수와 충돌을 일으킬수 있으니 let 키워드를 사용합니다.</li>
+</ul>
+</li>
+</ol>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="13-재사용가능한-함수-만들기">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-재사용가능한-함수-만들기">#</doc-anchor-trigger>
-        <span>1.2. 재사용가능한 함수 만들기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#13-재사용가능한-함수-만들기">#</doc-anchor-trigger>
+        <span>1.3. 재사용가능한 함수 만들기</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="13-함수표현식">
+<blockquote>
+<p>지금까지 <code v-pre>alert()</code>, <code v-pre>log()</code> 등의 함수를 사용하여 화면에 매번 다른 결괏값을 출력하는 명령을 수행했습니다.</p>
+<p>이렇게 입력되는 내용을 (재료) 를 바꿔서 <strong class="red">여러번 사용할수 있는 성질</strong>을 <strong class="red">함수의 &#x27;재사용성&#x27;</strong> 이라고 합니다.</p>
+<p><a href="https://drive.google.com/file/d/1CTWT0FmbTkE_l5zrGOAvbpNXhgGSd4qu/view?pli=1"><span class="docs-emoji">&#x1F517;</span>설명PPT열기</a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>자바스크립트의 함수 4종</h5>
+<ol>
+<li>명명함수(Function Declarations) : <code v-pre>function</code> 키워드로 선언하는 방식 (<strong class="red">호이스팅 발생</strong>)</li>
+<li>익명함수(Function Expressions) : 변수에 할당하는 방식</li>
+<li>즉시실행함수(IIFE, Immediately Invoked Function Expression) : 선언과 동시에 실행하는 방식</li>
+<li>화살표함수(Arrow Functions) : 축약표기방식</li>
+</ol>
+        </div>
+    </div>
+</div>
+</blockquote>
+<doc-anchor-target id="131-매개변수인수return">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#131-매개변수인수return">#</doc-anchor-trigger>
+        <span>1.3.1. 매개변수,인수,return</span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="1311-그림으로-이해하는-매개변수인수return">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1311-그림으로-이해하는-매개변수인수return">#</doc-anchor-trigger>
+        <span>1.3.1.1. 그림으로 이해하는 매개변수,인수,return</span>
+    </h5>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><strong>함수는 정해진 기능을 수행하는 기계와 같습니다. 믹서기의 예를 들어 보겠습니다.</strong></h5>
+<p>아래의 믹서기는 어떤 것이든 재료만 넣으면 무조건 갈아서 섞어 줍니다.</p>
+<p>이때 <strong class="red">믹서기의 기능은 함수</strong> 입니다.</p>
+<p>이때 <strong class="red">재료는 인수</strong> 입니다.</p>
+<p>이 믹서기는 재료를 넣는 투입구가 정해져 있습니다. <strong class="red">투입구가 매개변수</strong> 입니다.</p>
+<p><figure class="content-center">
+    <img src="../../../../source/images/js3-8.jpg" alt="그림으로 이해하는 매개변수,인수,return" class="shadow">
+    <figcaption class="caption">그림으로 이해하는 매개변수,인수,return</figcaption>
+</figure>
+</p>
+<p>믹서기로 섞은후 우리는 음료를 다른 그릇에 담습니다.</p>
+<p>이때 <strong class="red">믹서기가 생산한 결과를 리턴</strong> 이라고 합니다.
+<figure class="content-center">
+    <img src="../../../../source/images/js3-9.jpg" alt="그림으로 이해하는 매개변수,인수,return" class="shadow">
+    <figcaption class="caption">그림으로 이해하는 매개변수,인수,return</figcaption>
+</figure>
+</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="1312-매개변수를-사용한-함수만들기-예제-08">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1312-매개변수를-사용한-함수만들기-예제-08">#</doc-anchor-trigger>
+        <span>1.3.1.2. 매개변수를 사용한 함수만들기-예제-[08]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/addnumber-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> 매개변수를 사용한 함수를 작성해봅시다</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>코드</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>설명</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">[08]</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">function addNumber(num1, num2) {
+	const sum = num1 + num2;
+	return sum;
+	//return num1 + num2;//합을 바로 반환
+}
+const result = addNumber(2, 3);
+document.write('두 수를 더 한 값 : ' + result);</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<ol>
+<li><p>자바스크립트 해석기가 <code v-pre>function</code> 이라는 키워드를 만나면 함수의 선언부 라는것을 인식하고 함수블록 &#x60;을 해석합니다. 아직 실행하지 않습니다.</p>
+</li>
+<li><p>6번의 <code v-pre>addNumber(2, 3)</code> 을 만나면 해석해 두었던 <code v-pre>addNumber()</code> 함수를 실행합니다.</p>
+</li>
+<li><p><code v-pre> addNumber()</code> 함수는 매개변수 num1에 인수 2를 매개변수 num2에 인수 3 을 넘기고 두 수의 합을 sum 변수에 저장합니다.</p>
+</li>
+<li><p><code v-pre>return sum</code> 함수의 실행이 완료되면 결과를 함수의 호출지점인 5번의 <code v-pre>const result</code> 에 전달합니다.</p>
+</li>
+<li><p>전달받은 결괏값을 <code v-pre>result</code> 상수에 저장합니다.</p>
+</li>
+<li><p><code v-pre>document.write('두 수를 더 한 값 : ' + result);</code> result의 값을 화면에 출력합니다.</p>
+</li>
+</ol>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="132-매개변수의-기본값-지정하기">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#132-매개변수의-기본값-지정하기">#</doc-anchor-trigger>
+        <span>1.3.2. 매개변수의 기본값 지정하기</span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="1321-매개변수의-기본값-지정하기-예제09">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1321-매개변수의-기본값-지정하기-예제09">#</doc-anchor-trigger>
+        <span>1.3.2.1. 매개변수의 기본값 지정하기-예제[09]</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<p><a href="script/multiple.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">function multiple(a, b = 5, c = 10) {
+	return a * b + c;
+}
+const result1 = multiple(5, 10, 20);
+document.write(`multiple(5, 10, 20)을 실행하면 결과는${result1}입니다&lt;br&gt;`);
+const result2 = multiple(10, 20);
+document.write(`multiple(10, 20)을 실행하면 세번째 매개변수는 기본값을 사용하고 결과는${result2}입니다&lt;br&gt;`);
+const result3 = multiple(30);
+document.write(`multiple(30)을 실행하면 두번째,  세번째 매개변수는 기본값을 사용하고 결과는${result3}입니다&lt;br&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="133-실습문제10">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#133-실습문제10">#</doc-anchor-trigger>
+        <span>1.3.3. 실습문제[10]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/calcsum-result.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> 이전에 작성한 <doc-anchor-trigger to="#1251-let-%EC%98%88%EC%A0%9C06"><span class="docs-emoji">&#x1F517;</span>1부터10까지 더하는 함수[06]</doc-anchor-trigger> 예제를 참고하여 사용자가 입력한 숫자까지 계속 더하는 함수를 만들어보세요</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">/*컨닝하지 말고 양심껏 하세요*/</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="힌트">
+<template #title>힌트</template>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt"><span class="docs-emoji">&#x1F517;</span> MDN</a></p>
+<p>prompt 함수로 반환받은 결괏값은 string 자료형으로 반환되므로 숫자연산이 불가합니다.</p>
+<p>숫자 자료형으로 변환해주는 <code v-pre>parseInt()</code> 함수를 사용하세요</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="14-함수표현식">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#13-함수표현식">#</doc-anchor-trigger>
-        <span>1.3. 함수표현식</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#14-함수표현식">#</doc-anchor-trigger>
+        <span>1.4. 함수표현식</span>
     </h3>
 </doc-anchor-target>
+<blockquote>
+<p>자바스크립트의 함수는 자료형 중의 하나로 취급되며 모든 식의 값으로 취급될수 있습니다.</p>
+<p><doc-anchor-trigger to="#13-%EC%9E%AC%EC%82%AC%EC%9A%A9%EA%B0%80%EB%8A%A5%ED%95%9C-%ED%95%A8%EC%88%98-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="docs-emoji">&#x1F517;</span>함수 4종 다시보기</doc-anchor-trigger> 4가지 방식의 함수중 2~4번에 대해 학습하겠습니다.</p>
+</blockquote>
+<doc-anchor-target id="141-익명함수-예제11">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#141-익명함수-예제11">#</doc-anchor-trigger>
+        <span>1.4.1. 익명함수-예제[11]</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>익명함수는 이름이 없는 함수를 의미합니다.</p>
+<p>선언시 이름을 붙이지 않으며 변수에 할당하여 실행합니다.</p>
+</blockquote>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>Code [11] <a href="script/addnumber-3.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>Result</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const sum = function (a, b) {
+	return a + b;
+};
+document.write(`함수 실행 결과\u00A0\u00A0\u00A0\u00A0: ${+sum(10, 20)}`);</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p>template literal 내에서 공백을 여러개 표시할때에는 <code v-pre>\u00A0</code> 를 작성합니다</p>
+    </div>
+</div>
+<doc-anchor-target id="142-즉시실행함수-예제12">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#142-즉시실행함수-예제12">#</doc-anchor-trigger>
+        <span>1.4.2. 즉시실행함수-예제[12]</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>일반적으로 함수는 선언후 필요할 때 호출하여 실행합니다.</p>
+<p>하지만 상황에 따라 딱 한번 실행해야 하는 함수일 경우 선언과 동시에 실행을 시킬수 있습니다.</p>
+</blockquote>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>매개변수가 없을떄</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>매개변수가 있을떄</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">(function (매개변수) {
+	실행문;
+})();</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">(function (매개변수) {
+	실행문;
+})(인자, 인자);</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<doc-tabs>
+<doc-tab v-cloak id="코드1">
+<template #title>코드1</template>
+<p>매개변수가 없는경우</p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><a href="script/function.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> [12] Js</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>Css</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">(function () {
+	let userName = prompt('이름을 입력하세요.');
+	document.write(`안녕하세요? &lt;span class='accent'&gt;${userName}&lt;/span&gt;님!`);
+})();</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">body {
+	padding-top: 20px;
+	text-align: center;
+}
+.accent {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #00f;
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드2">
+<template #title>코드2</template>
+<p>매개변수가 있는경우</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">(function (a, b) {
+	// 함수 선언을 위한 매개변수
+	sum = a + b;
+})(100, 200); // 마지막에 함수 실행을 위한 인수
+document.write(`&lt;h1&gt;함수실행결과:${sum}&lt;/h1&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="143-화살표함수-예제13">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#143-화살표함수-예제13">#</doc-anchor-trigger>
+        <span>1.4.3. 화살표함수-예제[13]</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>익명함수를 줄여쓰는 방식입니다</p>
+</blockquote>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>기본형</span>
+</span></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">(매개변수) =&gt; {
+	실행문;
+};</code></pre>
+</doc-codeblock></div>
+<p>익명함수를 작성하여 화살표 함수로 변경해 봅시다. <a href="script/arrow-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">매개변수가 없는 경우-basic</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const hi = function () {
+	return '안녕하세요';
+};
+
+alert(hi()); //호출</code></pre>
+</doc-codeblock></div>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>[Step1] - function 생략</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>[Step2] - function,return,중괄호생략</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const hi = () =&gt; {
+	return '안녕하세요?';
+};</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const hi = () =&gt; '안녕하세요?';</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">매개변수 하나-basic</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">let hihi = function (user) {
+	document.write(`${user}님, 안녕하세요?`);
+};
+
+hihi('망고'); //호출</code></pre>
+</doc-codeblock></div>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><a href="script/arrow-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a> [Step3]</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>[Step4] - 소괄호생략</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let hihi = (user) =&gt; {
+	document.write(`${user}님, 안녕하세요?`);
+};</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let hihi = (user) =&gt; {
+	document.write(`${user}님, 안녕하세요?`);
+};</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">매개변수 여러개-basic</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">let sum = function (a, b) {
+	return a + b;
+};
+document.write(`두 수의 합 :${sum(10, 20)}`);</code></pre>
+</doc-codeblock></div>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>[Step5]</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>[Step6]</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let sum = (a, b) =&gt; {
+	return a + b;
+};</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let sum = (a, b) =&gt; a + b;</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
 <doc-anchor-target id="2-이벤트">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#2-이벤트">#</doc-anchor-trigger>
         <span>2. 이벤트</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="21-이벤트와-이벤트처리기">
+<blockquote>
+<p>자바스크립트에서 이벤트는 웹 페이지에서 발생하는 특정한 동작이나 사건을 의미합니다.</p>
+<p>사용자의 마우스 클릭, 키보드 입력, 페이지 로딩 완료, AJAX 요청 완료 등과 같은 다양한 상황에서 이벤트가 발생할 수 있습니다.</p>
+<p>웹브라우저나 사용자가 행하는 어떤 동작을 이벤트라 칭하며 웹 브라우저 내에 새로운 페이지를 불러오는것도 이벤트에 해당합니다.</p>
+<p><strong class="red">웹문서 영역 내에서 이루어 지는 동작</strong>에 한해 이벤트라 하며 웹문서 영역을 벗어나 클릭하는 행위는 자바스크립트의 이벤트가 아닙니다.</p>
+</blockquote>
+<doc-anchor-target id="21-이벤트">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#21-이벤트와-이벤트처리기">#</doc-anchor-trigger>
-        <span>2.1. 이벤트와 이벤트처리기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#21-이벤트">#</doc-anchor-trigger>
+        <span>2.1. 이벤트</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="22-dom을-이용한-이벤트-처리기">
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events"><span class="docs-emoji">&#x1F517;</span>MDN</a></strong></p>
+<doc-anchor-target id="211-마우스이벤트">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#211-마우스이벤트">#</doc-anchor-trigger>
+        <span>2.1.1. 마우스이벤트</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>이벤트 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>click</code></td>
+<td>사용자가 요소를 클릭했을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>dblclick</code></td>
+<td>사용자가 요소를 더블 클릭했을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>mousedown</code></td>
+<td>사용자가 마우스 버튼을 눌렀을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>mouseup</code></td>
+<td>사용자가 마우스 버튼을 놓았을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>mousemove</code></td>
+<td>마우스 커서가 요소 위에서 움직일 때마다 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>mouseover</code></td>
+<td>마우스 커서가 요소 위로 이동하면 발생합니다. (하위 요소에 대해서도 반응)</td>
+</tr>
+<tr>
+<td><code v-pre>mouseenter</code></td>
+<td>마우스 커서가 요소 위로 이동하면 발생합니다. (하위 요소에 대해서는 반응하지 않음)</td>
+</tr>
+<tr>
+<td><code v-pre>mouseout</code></td>
+<td>마우스 커서가 요소 바깥으로 나갈 때 발생합니다. (하위 요소에 대해서도 반응)</td>
+</tr>
+<tr>
+<td><code v-pre>mouseleave</code></td>
+<td>마우스 커서가 요소 바깥으로 나갈 때 발생합니다.(하위 요소에 대해서는 반응하지 않음)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="212-키보드이벤트">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#212-키보드이벤트">#</doc-anchor-trigger>
+        <span>2.1.2. 키보드이벤트</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>이벤트 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>keydown</code></td>
+<td>키보드의 키를 누르는 순간 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>keyup</code></td>
+<td>키보드의 키를 놓는 순간 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>keypress</code></td>
+<td>문자키가 눌렸을 때 발생합니다. &#x27;keydown&#x27;과 &#x27;keyup&#x27; 사이에서 발생하며, 특수키에는 반응하지 않습니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="213-문서로딩이벤트">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#213-문서로딩이벤트">#</doc-anchor-trigger>
+        <span>2.1.3. 문서로딩이벤트</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>이벤트 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>DOMContentLoaded</code></td>
+<td>HTML 문서의 파싱이 완료되었고, DOM 트리가 완성되었을 때 발생합니다. 외부 리소스(images, stylesheets 등)의 로딩 상태와는 무관합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>load</code></td>
+<td>페이지와 모든 관련 리소스(images, stylesheets 등)가 완전히 로드되었을 때 window 객체에서 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>beforeunload</code></td>
+<td>사용자가 페이지를 벗어나려 할 때 window 객체에서 발생합니다. 이를 활용하여 사용자에게 페이지를 벗어나지 않도록 경고할 수 있습니다.</td>
+</tr>
+<tr>
+<td><code v-pre>unload</code></td>
+<td>사용자가 페이지를 벗어났을 때 window 객체에서 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>resize</code></td>
+<td>문서 화면 크기가 바뀌었을때 이벤트가 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>scroll</code></td>
+<td>문서 화면이 스크롤 되었을때 이벤트가 발생합니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="214-폼이벤트">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#214-폼이벤트">#</doc-anchor-trigger>
+        <span>2.1.4. 폼이벤트</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>이벤트 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>submit</code></td>
+<td>폼 데이터가 서버로 제출되기 전에 발생합니다. 이 이벤트의 기본 동작은 페이지를 새로고침하는 것이지만, preventDefault 메소드를 사용하여 중단할 수 있습니다.</td>
+</tr>
+<tr>
+<td><code v-pre>reset</code></td>
+<td>폼의 리셋 버튼이 클릭되었을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>focus</code></td>
+<td>요소가 포커스를 받았을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>blur</code></td>
+<td>요소가 포커스를 잃었을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>change</code></td>
+<td>사용자가 입력 필드의 값을 변경하고 포커스를 잃었을 때 발생합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>input</code></td>
+<td>사용자가 입력 필드에 값을 입력할 때마다 발생합니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="22-이벤트처리기">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#22-dom을-이용한-이벤트-처리기">#</doc-anchor-trigger>
-        <span>2.2. DOM을 이용한 이벤트 처리기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#22-이벤트처리기">#</doc-anchor-trigger>
+        <span>2.2. 이벤트처리기</span>
     </h3>
 </doc-anchor-target>
+<blockquote>
+<p>이벤트 처리기(event handler) 또는 이벤트 리스너(event listener)는 특정 <strong class="red">이벤트가 발생했을 때 실행되는 함수</strong>를 말합니다.</p>
+<p>웹 페이지에서 사용자의 상호작용(마우스 클릭, 키보드 입력 등) 또는 브라우저의 특정 동작(페이지 로딩, 이미지 로딩 완료 등)과 같은 이벤트가 발생하면, 그에 따른 반응을 처리하기 위해 이벤트 처리기를 사용합니다.</p>
+</blockquote>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><mark>이벤트 처리기의 3가지 기본문법</mark></p>
+<ol>
+<li>html 속성으로 설정</li>
+<li>dom 프로퍼티로 설정</li>
+<li><code v-pre>addEventListener</code> 메서드로 설정</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="1-html">
+<template #title>1-HTML</template>
+<p>HTML 속성으로 설정</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;button onclick=&quot;console.log('Button clicked!')&quot;&gt;Click me&lt;/button&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="2-dom">
+<template #title>2-DOM</template>
+<p>DOM 프로퍼티로 설정</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">document.querySelector('button').onclick = function () {
+	console.log('Button clicked!');
+};</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="3-메서드">
+<template #title>3-메서드</template>
+<p><code v-pre>addEventListener</code> 메서드 사용 [강추 <span class="docs-emoji">&#x1F44D;</span>]</p>
+<p>여러 개의 이벤트 리스너를 동일한 요소와 이벤트에 대해 추가할 수 있습니다.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">document.querySelector('button').addEventListener('click', function () {
+	console.log('Button clicked!');
+});</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="221-html-속성을-이용한-방식-버튼-클릭시-알림창표시-예제14">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#221-html-속성을-이용한-방식-버튼-클릭시-알림창표시-예제14">#</doc-anchor-trigger>
+        <span>2.2.1. HTML 속성을 이용한 방식-버튼 클릭시 알림창표시-예제[14]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="html-script-event-1-html">
+<template #title>HTML <a href="script/event-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup" data-line="11-13"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;자바스크립트 이벤트&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/function.css&quot; /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;alert('버튼을 클릭했습니다.')&quot;&gt;Green&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;alert('버튼을 클릭했습니다.')&quot;&gt;Orange&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;alert('버튼을 클릭했습니다.')&quot;&gt;Purple&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="css">
+<template #title>CSS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">a:link,
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	width: 500px;
+	margin: 10px auto;
+	padding: 0;
+}
+li {
+	display: inline-block;
+	width: 120px;
+	border: 1px solid #ccc;
+	padding: 10px 15px;
+	font-size: 16px;
+	text-align: center;
+}
+#result {
+	width: 500px;
+	height: 300px;
+	margin: 30px auto;
+	border: 2px solid #ccc;
+	border-radius: 15px;
+}
+p {
+	width: 80%;
+	padding: 10px;
+	line-height: 2em;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="222-버튼-클릭시-배경변경-예제15">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#222-버튼-클릭시-배경변경-예제15">#</doc-anchor-trigger>
+        <span>2.2.2. 버튼 클릭시 배경변경-예제[15]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="html-script-event-2-html">
+<template #title>HTML <a href="script/event-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup" data-line="11-13"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;자바스크립트 이벤트&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/function.css&quot; /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;changeBg('green')&quot;&gt;Green&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;changeBg('orange')&quot;&gt;Orange&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot; onclick=&quot;changeBg('purple')&quot;&gt;Purple&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+		&lt;script&gt;
+			&lt;!-- 스크립트작성 --&gt;
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="css">
+<template #title>CSS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">a:link,
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	width: 500px;
+	margin: 10px auto;
+	padding: 0;
+}
+li {
+	display: inline-block;
+	width: 120px;
+	border: 1px solid #ccc;
+	padding: 10px 15px;
+	font-size: 16px;
+	text-align: center;
+}
+#result {
+	width: 500px;
+	height: 300px;
+	margin: 30px auto;
+	border: 2px solid #ccc;
+	border-radius: 15px;
+}
+p {
+	width: 80%;
+	padding: 10px;
+	line-height: 2em;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="js">
+<template #title>JS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">function changeBg(color) {
+	var result = document.querySelector('#result');
+	result.style.backgroundColor = color;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="223-버튼-클릭시-상세설명-표시-예제16">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#223-버튼-클릭시-상세설명-표시-예제16">#</doc-anchor-trigger>
+        <span>2.2.3. 버튼 클릭시 상세설명 표시-예제[16]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>아래의 코드를 복사하여 시작하겠습니다.</p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>16.html <a href="script/detail-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>css/event.css</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup" data-line="20-30"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;자바스크립트 이벤트&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/event.css&quot; /&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div id=&quot;item&quot;&gt;
+			&lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; alt=&quot;&quot; /&gt;
+			&lt;button class=&quot;over&quot; id=&quot;open&quot;&gt;상세 설명 보기&lt;/button&gt;
+			&lt;div id=&quot;desc&quot; class=&quot;detail&quot;&gt;
+				&lt;h4&gt;이벤트 처리기(event handler)&lt;/h4&gt;
+				&lt;p&gt;이벤트 처리기(event handler) 또는 이벤트 리스너(event listener)는 특정 이벤트가 발생했을 때 실행되는 함수를 말합니다. 웹 페이지에서 사용자의 상호작용(마우스 클릭, 키보드 입력 등) 또는 브라우저의 특정 동작(페이지 로딩, 이미지 로딩 완료 등)과 같은 이벤트가 발생하면, 그에 따른 반응을 처리하기 위해 이벤트 처리기를 사용합니다.&lt;/p&gt;
+				&lt;button id=&quot;close&quot;&gt;상세 설명 닫기&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;script&gt;
+			function showDetail() {
+				document.querySelector('#desc').style.display = 'block'; // 상세 설명 부분을 화면에 표시
+				document.querySelector('#open').style.display = 'none'; // '상세 설명 보기' 단추를 화면에서 감춤
+			}
+
+			function hideDetail() {
+				document.querySelector('#desc').style.display = 'none'; // 상세 설명 부분을 화면에서 감춤
+				document.querySelector('#open').style.display = 'block'; // '상세 설명 보기' 단추를 화면에 표시
+			}
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">#item {
+	position: relative;
+	width: 500px;
+	height: auto;
+	padding: 15px 20px;
+	margin: auto;
+}
+button {
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 5px;
+	border: 1px solid #ccc;
+	font-size: 0.8em;
+}
+.over {
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+}
+.detail {
+	width: 400px;
+	text-align: left;
+	line-height: 1.8;
+	display: none;
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<p><a href="script/detail-1-result.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup" data-line="13,17,21-30"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;자바스크립트 이벤트&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/event.css&quot; /&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div id=&quot;item&quot;&gt;
+			&lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; alt=&quot;&quot; /&gt;
+			&lt;button class=&quot;over&quot; id=&quot;open&quot; onclick=&quot;showDetail()&quot;&gt;상세 설명 보기&lt;/button&gt;
+			&lt;div id=&quot;desc&quot; class=&quot;detail&quot;&gt;
+				&lt;h4&gt;이벤트 처리기(event handler)&lt;/h4&gt;
+				&lt;p&gt;이벤트 처리기(event handler) 또는 이벤트 리스너(event listener)는 특정 이벤트가 발생했을 때 실행되는 함수를 말합니다. 웹 페이지에서 사용자의 상호작용(마우스 클릭, 키보드 입력 등) 또는 브라우저의 특정 동작(페이지 로딩, 이미지 로딩 완료 등)과 같은 이벤트가 발생하면, 그에 따른 반응을 처리하기 위해 이벤트 처리기를 사용합니다.&lt;/p&gt;
+				&lt;button id=&quot;close&quot; onclick=&quot;hideDetail()&quot;&gt;상세 설명 닫기&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;script&gt;
+			function showDetail() {
+				document.querySelector('#desc').style.display = 'block'; // 상세 설명 부분을 화면에 표시
+				document.querySelector('#open').style.display = 'none'; // '상세 설명 보기' 단추를 화면에서 감춤
+			}
+
+			function hideDetail() {
+				document.querySelector('#desc').style.display = 'none'; // 상세 설명 부분을 화면에서 감춤
+				document.querySelector('#open').style.display = 'block'; // '상세 설명 보기' 단추를 화면에 표시
+			}
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="설명">
+<template #title>설명</template>
+<p>html속성을 사용하여 이벤트핸들러를 처리한 예시 였습니다.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="224-dom을-이용한-방식-버튼클릭시-글자변경-예제17">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#224-dom을-이용한-방식-버튼클릭시-글자변경-예제17">#</doc-anchor-trigger>
+        <span>2.2.4. DOM을 이용한 방식-버튼클릭시 글자변경-예제[17]</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/event-3.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a>
+아래의 코드를 복사하여 시작합니다.</p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>16.html</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>css/function.css</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;자바스크립트 이벤트&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/function.css&quot; /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;button id=&quot;change&quot;&gt;글자색 바꾸기&lt;/button&gt;
+		&lt;p&gt;Reprehenderit tempor do quis sunt eu et exercitation deserunt. Laboris adipisicing est sint aliquip nulla pariatur velit irure elit qui id. Dolore aliquip dolore eu ut irure sint Lorem reprehenderit velit. Duis veniam irure cillum anim excepteur culpa pariatur sunt esse. Eu nulla commodo velit ex id dolore incididunt mollit incididunt nisi labore culpa qui ea. Commodo veniam veniam in ipsum ad minim occaecat qui pariatur adipisicing laborum quis.&lt;/p&gt;
+
+		&lt;script&gt;&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">a:link,
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	width: 500px;
+	margin: 10px auto;
+	padding: 0;
+}
+li {
+	display: inline-block;
+	width: 120px;
+	border: 1px solid #ccc;
+	padding: 10px 15px;
+	font-size: 16px;
+	text-align: center;
+}
+#result {
+	width: 500px;
+	height: 300px;
+	margin: 30px auto;
+	border: 2px solid #ccc;
+	border-radius: 15px;
+}
+p {
+	width: 80%;
+	padding: 10px;
+	line-height: 2em;
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">방법 1 : 요소를 변수로 지정 &amp; 미리 만든 함수 사용</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">let changeBttn = document.querySelector('#change');
+changeBttn.onclick = changeColor;
+
+function changeColor() {
+	document.querySelector('p').style.color = '#f00';
+}</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">방법 2 : 요소를 따로 변수로 만들지 않고 사용</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">document.querySelector('#change').onclick = changeColor;
+function changeColor() {
+	document.querySelector('p').style.color = '#f00';
+}</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">방법 3 : 직접 함수를 선언</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">document.querySelector('#change').onclick = function () {
+	document.querySelector('p').style.color = '#f00';
+};</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="23-마무리문제">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#23-마무리문제">#</doc-anchor-trigger>
+        <span>2.3. 마무리문제</span>
+    </h3>
+</doc-anchor-target>
+<div class="comment_box"><p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-4 text-base rounded-md">
+    <span>01</span>
+</span></p>
+<p><doc-anchor-trigger to="#223-%EB%B2%84%ED%8A%BC-%ED%81%B4%EB%A6%AD%EC%8B%9C-%EC%83%81%EC%84%B8%EC%84%A4%EB%AA%85-%ED%91%9C%EC%8B%9C-%EC%98%88%EC%A0%9C16"><span class="docs-emoji">&#x1F517;</span>16</doc-anchor-trigger>예제 를 응용하여 DOM 방식으로 상세설명열고 닫는 함수를 수정해 보세요
+<a href="script/detail-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+</div>
+<div class="comment_box"><p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-4 text-base rounded-md">
+    <span>01</span>
+</span>
+다음 조건을 참고하여 매개변수로 전달받은 두수의 값이 같으면 곱하고 다르면 더하는 함수 sumMulti() 를 작성하세요.</p>
+<p>그후 인자로 5,10 을 전달할때와 10,10 을 전달할때의 실행결과를 콘솔창에 표시하세요.
+<a href="script/sol-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><mark>조건</mark></h5>
+<ol>
+<li><p>함수의 선언은 function sumMulti(x,y) 로 합니다.</p>
+</li>
+<li><p>if~else 문을 사용하여 두수의 값을 비교합니다.</p>
+</li>
+<li><p>값의 비교시 비교연산자는 === 를 사용합니다.</p>
+</li>
+</ol>
+        </div>
+    </div>
+</div>
+</div>
+<div class="comment_box"><p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-4 text-base rounded-md">
+    <span>03</span>
+</span>
+프롬프트 창에서 두수를 입력받아 크기를 서로 비교한 후 더 큰 숫자를 알림창으로 표시하는 함수를 작성하세요.</p>
+<p>그후 인자로 5,10 을 전달할때와 10,10 을 전달할때의 실행결과를 콘솔창에 표시하세요.
+<a href="script/sol-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5><mark>조건</mark></h5>
+<ol>
+<li><p>프롬프트 창에서 입력받은 두수를 각각 num1, num2 변수에 저장합니다.</p>
+</li>
+<li><p>함수 선언시 함수명은 자유롭게 지정하고 매개변수는 2개를 사용합니다.</p>
+</li>
+<li><p>if~else 문을 사용하며 값의 비교시 비교연산자는 === 를 사용합니다.</p>
+</li>
+<li><p>두수가 같을경우 &#x27;같습니다&#x27; 를 출력합니다.</p>
+</li>
+</ol>
+        </div>
+    </div>
+</div>
+</div>
+</doc-tab>
 
                                 
                                 <!-- Required only on API pages -->
@@ -396,6 +2124,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "3. 함수와 이벤트 ", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "3. 함수와 이벤트 ", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
