@@ -10,36 +10,34 @@
     <meta name="generator" content="Retype 3.3.0">
 
     <!-- Primary Meta Tags -->
-    <title>2.마우스 오버 효과</title>
-    <meta name="title" content="2.마우스 오버 효과">
-    <meta name="description" content="1.1. button-hover">
+    <title>DOM 도 객체이다.</title>
+    <meta name="title" content="DOM 도 객체이다.">
+    <meta name="description" content="https://gist.github.com/easylogic/e1ac1e9974b277142f06#file-basic3-md">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/dom/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
-    <meta property="og:title" content="2.마우스 오버 효과">
-    <meta property="og:description" content="1.1. button-hover">
-    <meta property="og:image" content="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/dom/">
+    <meta property="og:title" content="DOM 도 객체이다.">
+    <meta property="og:description" content="https://gist.github.com/easylogic/e1ac1e9974b277142f06#file-basic3-md">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
-    <meta property="twitter:title" content="2.마우스 오버 효과">
-    <meta property="twitter:description" content="1.1. button-hover">
-    <meta property="twitter:image" content="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/dom/">
+    <meta property="twitter:title" content="DOM 도 객체이다.">
+    <meta property="twitter:description" content="https://gist.github.com/easylogic/e1ac1e9974b277142f06#file-basic3-md">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.3.0.747109626308" rel="stylesheet">
+    <link href="../../../../favicon.png" rel="icon">
+    <link href="../../../../resources/css/retype.css?v=3.3.0.747109626308" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.3.0.747109626308" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.3.0.747109626308" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.3.0.747109626308" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.747109626308" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.747109626308" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.747109626308" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -179,7 +177,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-2xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 프론트엔드 노트</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
@@ -305,634 +303,203 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="2마우스-오버-효과" class="break-words">
+<p><a href="https://gist.github.com/easylogic/e1ac1e9974b277142f06#file-basic3-md">https://gist.github.com/easylogic/e1ac1e9974b277142f06#file-basic3-md</a></p>
+<p>이번에는 이어서 javascript 에서 가장 많이 사용하게될 DOM 과 같이 변수에 대해서 설명을 해보자.</p>
+<doc-anchor-target id="dom-도-객체이다" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2마우스-오버-효과">#</doc-anchor-trigger>
-        <span>2.마우스 오버 효과<!-- omit in toc --></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom-도-객체이다">#</doc-anchor-trigger>
+        <span>DOM 도 객체이다.</span>
     </h1>
 </doc-anchor-target>
-<ul>
-<li><doc-anchor-trigger to="#11-button-hover">1.1. button-hover</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#111-mouse-hover1">1.1.1. mouse-hover1</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#112-mouse-hover2">1.1.2. mouse-hover2</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#113-mouse-hover3">1.1.3. mouse-hover3</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#114-mouse-hover4">1.1.4. mouse-hover4</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#12-image-hover">1.2. image-hover</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#121-image-hover1">1.2.1. image-hover1</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#122-image-hover2">1.2.2. image-hover2</doc-anchor-trigger></li>
-</ul>
-</li>
-</ul>
-<doc-anchor-target id="11-button-hover">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-button-hover">#</doc-anchor-trigger>
-        <span>1.1. button-hover</span>
-    </h2>
+<p>DOM 은 Document Object Model 의 약자로 html 의 태그를 나타내는 하나의 Tree 구조이자 객체이다.</p>
+<p>개별 DOM 은 모두 객체로 이루어져서 Tree 형태로 관리된다.</p>
+<p>DOM 도 객체이기 때문에 생성하고 없어질 때 gc 의 영향을 받는다.</p>
+<doc-anchor-target id="무의식적으로-사용하는-dom">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#무의식적으로-사용하는-dom">#</doc-anchor-trigger>
+        <span>무의식적으로 사용하는 DOM</span>
+    </h1>
 </doc-anchor-target>
-<doc-anchor-target id="111-mouse-hover1">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#111-mouse-hover1">#</doc-anchor-trigger>
-        <span>1.1.1. mouse-hover1</span>
-    </h3>
+<p>DOM 은 기본적으로 브라우저에 종속되어 있는 객체이기 때문에 사람들이 무의식적으로 사용하는 객체이다.</p>
+<p>DOM 생성과 관리에 비용이 든다는걸 인식을 잘 하지 못한다.</p>
+<p>심지어 Jquery 같은 라이브러리를 사용하게 되면  DOM 처리에 관한한 나머지는 모두 jquery 에 맡겨버린다.</p>
+<p>주로 직접 DOM 을 다루지 않기 때문에 대부분 성능에 jquery 가 미치는 영향을 생각을 못한다.</p>
+<doc-anchor-target id="dom-은-어떻게-생성하는가">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom-은-어떻게-생성하는가">#</doc-anchor-trigger>
+        <span>DOM 은 어떻게 생성하는가?</span>
+    </h1>
 </doc-anchor-target>
-<p><figure class="content-center">
-    <img src="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
+<p>보통 아래와 같은 형태로 생성을 한다.</p>
+<p>생성을 하게 된다는 것은 객체를 만드는 것이고  많이 생성하면 브라우저에 부담이 된다는 뜻이다.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;a href=&quot;#&quot;&gt;&lt;span&gt;&lt;/span&gt;hover me&lt;/a&gt;</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">var element = document.createElement('P');</code></pre>
 </doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	font-family: verdana;
-	background-color: #272727;
-}
-
-a {
-	width: 220px;
-	height: 80px;
-	color: #ff0;
-	background-color: transparent;
-	font-size: 26px;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
-	line-height: 80px;
-	transition: all 0.5s;
-	position: relative;
-}
-
-a:before,
-a:after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	width: 20px;
-	height: 20px;
-	background-color: #ff0;
-	border-radius: 50%;
-	transform: translateY(-50%);
-	transition: all 0.3s;
-	z-index: -1;
-	opacity: 0;
-}
-
-a:before {
-	left: 0;
-	box-shadow: -100px 0 0 #ff0;
-}
-
-a:after {
-	right: 0;
-	box-shadow: 100px 0 0 #ff0;
-}
-
-a:hover:before {
-	left: 50%;
-	box-shadow: 30px 0 0 #ff0;
-	transform: translateX(-50%) translateY(-50%);
-	opacity: 1;
-}
-
-a:hover:after {
-	right: 50%;
-	box-shadow: -30px 0 0 #ff0;
-	transform: translateX(50%) translateY(-50%);
-	opacity: 1;
-}
-
-span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #ff0;
-	border-radius: 8px;
-	transform: scale(0);
-	transition: all 0.3s;
-	z-index: -1;
-}
-
-a:hover span {
-	transform: scale(1);
-	transition-delay: 0.4s;
-}
-
-a:hover {
-	color: #262626;
-	transition-delay: 0.4s;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="112-mouse-hover2">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#112-mouse-hover2">#</doc-anchor-trigger>
-        <span>1.1.2. mouse-hover2</span>
-    </h3>
+<doc-anchor-target id="dom-은-어떻게-삭제-하는가">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom-은-어떻게-삭제-하는가">#</doc-anchor-trigger>
+        <span>DOM 은 어떻게 삭제 하는가?</span>
+    </h1>
 </doc-anchor-target>
-<p><figure class="content-center">
-    <img src="https://user-images.githubusercontent.com/59301948/264191119-f5da10e8-0c43-4aa0-a2e7-7277bba82fa4.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
+<p>tree 에서 제거 하는 방식이기 때문에 removeChild 라는 메소드를 사용해서 상위 element 에서 해당 객체를 지운다.</p>
+<p>지운 다는 말은 메모리 해제를 뜻하고 GC 의 대상이 된다는 뜻이된다.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;ul&gt;
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			home
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			about
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			services
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			team
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			contact
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">parentElement.removeChild(element);</code></pre>
 </doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	font-family: sans-serif;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	list-style-type: none;
-}
-
-ul li a {
-	display: block;
-	width: 120px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	color: red;
-	text-transform: capitalize;
-	text-decoration: none;
-	position: relative;
-	transition: all 0.5s;
-	color: #262626;
-}
-
-a:hover {
-	color: white;
-}
-
-ul li span {
-	position: absolute;
-	width: 100%;
-	height: 25%;
-	background-color: #262626;
-	z-index: -1;
-	left: 0;
-	top: 0;
-	transform: scaleX(0);
-	transition: all 0.5s;
-	transform-origin: left;
-}
-
-a:hover span {
-	transform: scaleX(1);
-}
-
-span:nth-child(2) {
-	top: 25%;
-	transition-delay: 0.15s;
-}
-
-span:nth-child(3) {
-	top: 50%;
-	transition-delay: 0.3s;
-}
-
-span:nth-child(4) {
-	top: 75%;
-	transition-delay: 0.45s;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="113-mouse-hover3">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#113-mouse-hover3">#</doc-anchor-trigger>
-        <span>1.1.3. mouse-hover3</span>
-    </h3>
+<p>그렇다는 말은 element 의 참조를 누군가 가지고 있다면 GC 의 대상이 되지 않는다는 뜻이다.</p>
+<p>조심해서 써야한다.</p>
+<doc-anchor-target id="dom은-재사용-가능한가">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom은-재사용-가능한가">#</doc-anchor-trigger>
+        <span>DOM은 재사용 가능한가?</span>
+    </h1>
 </doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../../../source/images/4.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;button class=&quot;btn&quot;&gt;button&lt;/button&gt;</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	font-family: sans-serif;
-}
-
-.btn {
-	border: 2px solid tomato;
-	background: none;
-	color: tomato;
-	padding: 20px 40px;
-	font-size: 25px;
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: all 0.5s;
-	position: relative;
-	color: tomato;
-	overflow: hidden;
-}
-
-.btn:hover {
-	color: white;
-}
-
-.btn:before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: tomato;
-	z-index: -1;
-	border-radius: 50% 50% 0% 0%;
-	height: 0%;
-	transition: all 0.5s;
-}
-
-.btn:hover:before {
-	height: 190%;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="114-mouse-hover4">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#114-mouse-hover4">#</doc-anchor-trigger>
-        <span>1.1.4. mouse-hover4</span>
-    </h3>
+<p>DOM 은 생성되고 나서 Tree 에 있을지 없을지에 따라 생존이 결정된다.</p>
+<p>Tree 에 없는 상태라도 어떤 변수에서 참조를 가지고 있으면 GC 대상이 되지 않는다.</p>
+<p>즉, 참조만 있다면 다시 재사용이 가능하다.</p>
+<p>이미 한번 생성된 DOM 개수가 무척이나 많고 지속적으로 많은 DOM 이 생성과 소멸이 반복된다면  DOM 의 재사용도 고려해봐야한다.</p>
+<doc-anchor-target id="dom-의-재사용">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom-의-재사용">#</doc-anchor-trigger>
+        <span>DOM 의 재사용</span>
+    </h1>
 </doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../../../source/images/5.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
+<p>아래의 예제를 먼저 한번 보자.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
+<pre class="language-javascript"><code v-pre class="language-javascript">
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    &lt;title&gt;CSS animatin, transitions and transforms&lt;/title&gt;
+// list 로 들어온 값을 P 태그 형태로 body 에 추가 한다. 
+function setList(list) {
+  document.body.innerHTML = &quot;&quot;;
+  
+  for(var i = 0, len = list.length; i &lt; len; i++) {
+    var value = list[i];
+    
+    var pElement = document.createElement('P');
+    pElement.innerHTML = value; 
+    
+    document.body.appendChild(pElement);
+  }
+}
 
-    &lt;!-- OUR STYLESHEET --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
-
-    &lt;!-- FONT ِAWESOME --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.4.2/css/all.css&quot; integrity=&quot;sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns&quot; crossorigin=&quot;anonymous&quot;&gt;
-
-
-&lt;/head&gt;
-
-&lt;body&gt;
-
-	&lt;ul&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-heart&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-glass-martini&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-globe&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-gift&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
+setList(arr);
 </code></pre>
 </doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
+<p>위의 코드는 간단하다.  10개의 배열을 모두 P 태그 형태로 만든다음 body 태그 안에 추가한다.</p>
+<p>setList() 메소드가 실행될때마다 루프는 반복된다.</p>
+<p>루프가 반복될수록 객체는 생성하고 그 다음 루프가 실행될때 객체는 없어진다. (gc 의 대상이 된다)</p>
+<p>그럼 이제 아래의 코드를 보자.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">body {
- margin: 0;
- display: flex;
- align-items: center;
- justify-content: center;
- height: 100vh;
- font-family: sans-serif;
+<pre class="language-javascript"><code v-pre class="language-javascript">
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var cache = [];
+
+// list 로 들어온 값을 P 태그 형태로 body 에 추가 한다. 
+function setList(list) {
+  document.body.innerHTML = &quot;&quot;;
+  
+  for(var i = 0, len = list.length; i &lt; len; i++) {
+    var value = list[i];
+    
+    if (cache[i]) {
+      pElement.innerHTML = value; 
+    } else {
+      var pElement = document.createElement('P');
+      pElement.innerHTML = value; 
+      
+      cache[i] = pElement;
+    }
+    
+    document.body.appendChild(cache[i]);
+  }
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-ul li {
-  list-style-type: none;
-  width: 120px;
-  height: 120px;
-  margin: 0 20px;
-  border:2px solid #0a3d62;
-  border-radius: 50%;
-  transition: all 0.5s;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-ul li i {
-  font-size: 48px;
-  color: #0a3d62;
-  transition: 0.5s;
-}
-
-ul li:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0a3d62;
-  border-radius: 50%;
-  transition: all 0.5s;
-  opacity: 0;
-  z-index: -1;
-}
-
-ul li:hover:before {
-  opacity: 1;
-  transform: scale(0.8);
-}
-
-ul li:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  border-radius: 50%;
-  border:2px dashed #2e86de;
-  transition: all 0.5s;
-  opacity: 0;
-  z-index: -1;
-  box-sizing: border-box;
-}
-
-ul li:hover:after {
-  opacity: 1;
-  animation: rotating 10s linear infinite;
-}
-
-@keyframes rotating {
-  0% { transform:scale(0.92) rotate(0deg); }
-  100% { transform:scale(0.92) rotate(360deg); }
-}
-
-ul li:hover i {
-  color: white;
-}</code></pre>
+setList(arr);</code></pre>
 </doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="12-image-hover">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-image-hover">#</doc-anchor-trigger>
-        <span>1.2. image-hover</span>
-    </h2>
+<p>중간에 cache 가 추가 되었다.</p>
+<p>한번 생성된 객체는 cache 에 저장하고 더이상 생성하지 않고 속성만 바꾼 다음에 다시 body 추가된다.</p>
+<p>매번 실행할때마다 생성하지 않고 해당 객체를 그대로 이용하게 된다.</p>
+<p>생성비용을 줄 일 수 있게된다.</p>
+<p>일명 DOM 을 캐슁하는거다.</p>
+<p>DOM 생성 비용도 줄이고 삭제 비용도 줄일 수 있다.cache 에 참조가 저장이 되어 있기 때문에 gc 대상에 들지 않는다.</p>
+<doc-anchor-target id="dom-의-재사용-2">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom-의-재사용-2">#</doc-anchor-trigger>
+        <span>DOM 의 재사용 2</span>
+    </h1>
 </doc-anchor-target>
-<doc-anchor-target id="121-image-hover1">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#121-image-hover1">#</doc-anchor-trigger>
-        <span>1.2.1. image-hover1</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="https://user-images.githubusercontent.com/59301948/264191720-8cc5ffff-a2b4-466f-b450-7d9292afbcce.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="파일">
-<template #title>파일</template>
-<p><span class="docs-emoji">&#x1F517;</span><img src="https://user-images.githubusercontent.com/59301948/264191304-f01f0178-c234-48b6-bddd-154723ab0106.png" alt="예제이미지다운로드" /></p>
-</doc-tab>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
+<p>최근에 나오는 Webapp 의 경우 DOM 을 활용해서 다양한 UI 를 구성하게 되는데 이때도 DOM 의 관리는 필수적이다.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">  &lt;div class=&quot;container&quot;&gt;
-  	&lt;img src=&quot;image.png&quot;&gt;
-  	&lt;div class=&quot;caption&quot;&gt;
-  		&lt;h1&gt;amazing caption!&lt;/h1&gt;
-  		&lt;p&gt;you can write anything here!&lt;/p&gt;
-  	&lt;/div&gt;
-  &lt;/div&gt;</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Lato', sans-serif;
+<pre class="language-javascript"><code v-pre class="language-javascript">
+function MyElement(selector) {
+
+  var $element = $(selector);
+
+  this.render = function(variable) {
+    $element.html($(&quot;&lt;div class='my-element-content' /&gt;&quot;).html('Wow!' + variable));
+  }
 }
 
-.container {
-	width: 500px;
-	height: 500px;
-	position: relative;
-	overflow: hidden;
-}
+var myElement = new MyElement('#sample');
 
-.container img {
-	width: 100%;
-	transition: all 0.5s;
-}
-
-.caption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	transition: 0.5s;
-	opacity: 0;
-	background-color: rgba(0, 0, 0, 0);
-}
-
-.caption h1 {
-	text-transform: uppercase;
-	margin: 0;
-}
-
-.caption p {
-	font-size: 18px;
-	text-transform: capitalize;
-}
-
-.container:hover .caption {
-	opacity: 1;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.container:hover img {
-	transform: scale(1.3) rotate(15deg);
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="122-image-hover2">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#122-image-hover2">#</doc-anchor-trigger>
-        <span>1.2.2. image-hover2</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../../../source/images/3.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="파일">
-<template #title>파일</template>
-<p><span class="docs-emoji">&#x1F517;</span><img src="https://user-images.githubusercontent.com/59301948/264192013-fc4203b6-9cb3-4af3-b5eb-1be8bb108f1e.jpg" alt="예제이미지다운로드" /></p>
-</doc-tab>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">  &lt;div&gt;
-  	&lt;img src=&quot;girl.jpg&quot;&gt;
-  &lt;/div&gt;
+myElement.render(10); 
+myElement.render(20);
+myElement.render(30);
 </code></pre>
 </doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
+<p>하나의 객체를 생성하고 그 안에 속한 element 에 dom 을 계속적으로 넣게 되는데 render 하는 시점마다 다른 값이 나와야 한다.</p>
+<p>현재 이 코드는 render 하는 시점마다 새로운 객체를 만들기를 반복하고 있다.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #4b4b4b;
+<pre class="language-javascript"><code v-pre class="language-javascript">
+function MyElement(selector) {
+
+  var $element = $(selector);
+  
+  var $div = $(&quot;&lt;div class='my-element-content' /&gt;&quot;);
+  $element.html($div);
+
+  this.render = function(variable) {
+    $div.html('Wow!' + variable);
+  }
 }
 
-div {
-	width: 300px;
-	height: 400px;
-	border: 5px solid white;
-	overflow: hidden;
-}
+var myElement = new MyElement('#sample');
 
-img {
-	width: 100%;
-	height: 100%;
-	transition: transform 1s;
-}
-
-img:hover {
-	transform: scale(1.2) rotate(9deg);
-}</code></pre>
+myElement.render(10); 
+myElement.render(20);
+myElement.render(30);
+</code></pre>
 </doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
+<p>상위에 div 에 대한 객체를 캐슁을 해두고 render 시점에 값만 변경한다.
+DOM 의 생성비용이 줄어들었다.</p>
+<doc-anchor-target id="dom-의-재사용-3">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom-의-재사용-3">#</doc-anchor-trigger>
+        <span>DOM 의 재사용 3</span>
+    </h1>
+</doc-anchor-target>
+<p>DOM 이 한두개가 아니고 엄청 많을 때는 어떻게 할 것인가?</p>
+<p>어떻게 관리하는게 좋을까?</p>
+<p>간단히 특정 dom 만 바뀌면 되는데 이런 생각이 조금씩 들게 된다.</p>
+<doc-anchor-target id="변경되는-dom-과-변경이-없는-dom-을-구분해서-참조를-가지고-있는다">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#변경되는-dom-과-변경이-없는-dom-을-구분해서-참조를-가지고-있는다">#</doc-anchor-trigger>
+        <span>변경되는 DOM 과 변경이 없는 DOM 을 구분해서 참조를 가지고 있는다.</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="dom-트리-구성을-위한-객체를-한번만-생성한다">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dom-트리-구성을-위한-객체를-한번만-생성한다">#</doc-anchor-trigger>
+        <span>DOM 트리 구성을 위한 객체를 한번만 생성한다.</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="해당-객체가-바뀔-수-있도록-구조를-맞춘다">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#해당-객체가-바뀔-수-있도록-구조를-맞춘다">#</doc-anchor-trigger>
+        <span>해당 객체가 바뀔 수 있도록 구조를 맞춘다.</span>
+    </h2>
+</doc-anchor-target>
 
                                 
                                 <!-- Required only on API pages -->
@@ -942,20 +509,20 @@ img:hover {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../2_css/6_ui/1.form/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/basic/2.partial/array/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">1. form 요소 디자인</span>
+                                                <span class="block mt-1">1. 자료형</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../3_js/basic/1.total/1/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../3_js/deep/1_carousel/1/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">1. 자바스크립트의 시작 </span>
+                                                <span class="block mt-1">1. 스와이퍼</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -999,6 +566,6 @@ img:hover {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "2.마우스 오버 효과", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "DOM 도 객체이다.", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
