@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-05T03:22:14Z",
+  "created": "2023-09-05T14:30:20Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2911,6 +2911,108 @@
       "path": "3_js\\basic\\1.total\\4\\index.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\4\\script\\array-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\array-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\array-3.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\array-4.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\array-5.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\center-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\center.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\close.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\current.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\day-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\day.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\doit-event-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\doit-event.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\doit-main.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\event-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\event-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\event.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\images\\doit.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\locationobject.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\main-result.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\main.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\notice.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\object.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\popup-check.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\popup.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\popupname.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\position.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\quiz-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\quiz-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\screenobject.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\sol-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\sol-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\time-1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\time-2.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\5\\index.html"
     },
     {
@@ -3423,6 +3525,18 @@
     },
     {
       "path": "source\\images\\js3-9.jpg"
+    },
+    {
+      "path": "source\\images\\js4-1.jpg"
+    },
+    {
+      "path": "source\\images\\js4-2.jpg"
+    },
+    {
+      "path": "source\\images\\js4-3.jpg"
+    },
+    {
+      "path": "source\\images\\js4-5.jpg"
     },
     {
       "path": "source\\images\\qr.png"

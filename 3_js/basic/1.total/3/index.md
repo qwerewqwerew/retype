@@ -647,7 +647,7 @@ let hihi = (user) => {
 ||| [Step4] - 소괄호생략
 
 ```js #
-let hihi = (user) => {
+let hihi = user => {
 	document.write(`${user}님, 안녕하세요?`);
 };
 ```
