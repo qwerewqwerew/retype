@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson Retina.js</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- Demo content -->
+	<div class="demo-container">
+		<p>demo container</p>
+	</div>
+
+	<img src="images/image.jpg" data-at2x="images/image@2x.jpg">
+	
+	<div class="manual">
+		<img src="images/image.jpg">
+	</div>
+	
+	<!-- Add Bower components -->
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="retina.min.js"></script>
+	<script>
+		var ratio = window.devicePixelRatio;
+		console.log(ratio);
+		
+		if(ratio > 1){
+			$('.manual img').attr('src','images/image@2x.jpg');
+			
+		} else{
+			$('.manual img').attr('src','images/image.jpg');
+		}
+		
+		
+	</script>
+	
+	
+</body>
+</html>
+
