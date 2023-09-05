@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-05T00:29:24Z",
+  "created": "2023-09-05T02:03:32Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3076,7 +3076,8 @@
       "path": "3_js\\basic\\2.partial\\array\\index.html"
     },
     {
-      "path": "3_js\\basic\\2.partial\\dom\\index.html"
+      "path": "3_js\\basic\\2.partial\\dom\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\deep\\1_carousel\\1\\index.html"
