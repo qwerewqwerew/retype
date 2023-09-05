@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 객체선언1 */
+    var dog = new Object();
+    dog = {
+      /* 키:값 */
+      name: '망고',
+      features: '말티즈'
+    }
+    document.write(`<h1>${dog.name}</h1>`)
+
+    /* 객체선언2 */
+    const baby = {
+      name: '망고', features: '말티즈'
+    }
+    document.write(`<h1>${baby.features}</h1>`)
+
+    /* 객체선언3 */
+    const pet = {
+      name:'망고',
+      eat: function (food) {
+        //메소드
+        alert(this.name + '은/는 ' + food + '을/를 먹습니다.')
+      }
+    }
+    pet.eat('간식')
+  </script>
+</body>
+
+</html>
