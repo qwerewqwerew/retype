@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-04T02:25:51Z",
+  "created": "2023-09-05T00:29:24Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2242,6 +2242,24 @@
       "path": "2_css\\6_ui\\2.hover\\index.html"
     },
     {
+      "path": "2_css\\7_retina\\7\\index.html"
+    },
+    {
+      "path": "2_css\\7_retina\\images\\image.jpg"
+    },
+    {
+      "path": "2_css\\7_retina\\images\\image2x.jpg"
+    },
+    {
+      "path": "2_css\\7_retina\\index.html"
+    },
+    {
+      "path": "2_css\\8.html"
+    },
+    {
+      "path": "2_css\\8.nav\\index.html"
+    },
+    {
       "path": "3_js\\basic\\1_total\\1\\index.html",
       "old": true
     },
@@ -3076,7 +3094,175 @@
       "path": "404.html"
     },
     {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\css\\style.css"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\blog-1.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\blog-2.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\blog-3.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\blog-4.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\feature-banner.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\hero-banner.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\insta-post-1.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\insta-post-2.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\insta-post-3.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\insta-post-4.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\insta-post-5.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\insta-post-6.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\newsletter-banner.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\newsletter-bg.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\project-1.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\project-2.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\project-3.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\project-4.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\project-5.jpg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\service-icon-1.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\service-icon-2.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\service-icon-3.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\service-icon-4.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\service-icon-5.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\service-icon-6.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\images\\service-icon-7.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\assets\\js\\script.js"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\favicon.svg"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\index.html"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\index.txt"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\readme-images\\desktop.png"
+    },
+    {
+      "path": "5_projects\\1-pixology-resposive\\pixology-master\\style-guide\\index.html"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\index.html"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\bg-1.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\bg-2.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\bg-3.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\bg-4.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\icon.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\logo.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\shapes\\bg-shape-1.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\final\\media\\shapes\\bg-shape-2.png"
+    },
+    {
+      "path": "5_projects\\2-edtech-landing-page\\thumb.png"
+    },
+    {
+      "path": "5_projects\\3-grid-layout\\index.html"
+    },
+    {
+      "path": "5_projects\\3-grid-layout\\thumb.png"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\final\\index.html"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\final\\media\\quotation.png"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\final\\media\\testimonials-1.png"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\final\\media\\testimonials-2.png"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\final\\media\\testimonials-3.png"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\final\\media\\testimonials-4.png"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\final\\media\\testimonials-5.png"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\index.html"
+    },
+    {
+      "path": "5_projects\\4-testmonial\\media.zip"
+    },
+    {
       "path": "categories\\class\\index.html"
+    },
+    {
+      "path": "categories\\css\\index.html"
+    },
+    {
+      "path": "categories\\form\\index.html"
     },
     {
       "path": "categories\\index.html"
@@ -3086,6 +3272,12 @@
     },
     {
       "path": "categories\\partial\\index.html"
+    },
+    {
+      "path": "categories\\projects\\index.html"
+    },
+    {
+      "path": "categories\\response\\index.html"
     },
     {
       "path": "favicon.png"
@@ -3200,6 +3392,36 @@
     },
     {
       "path": "source\\images\\qr.png"
+    },
+    {
+      "path": "tags\\메뉴\\index.html"
+    },
+    {
+      "path": "tags\\반응형\\index.html"
+    },
+    {
+      "path": "tags\\탈그리드\\index.html"
+    },
+    {
+      "path": "tags\\css\\index.html"
+    },
+    {
+      "path": "tags\\grid\\index.html"
+    },
+    {
+      "path": "tags\\index.html"
+    },
+    {
+      "path": "tags\\masonry\\index.html"
+    },
+    {
+      "path": "tags\\project\\index.html"
+    },
+    {
+      "path": "tags\\response\\index.html"
+    },
+    {
+      "path": "tags\\responsive\\index.html"
     }
   ]
 }
