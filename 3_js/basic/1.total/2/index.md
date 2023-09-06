@@ -587,6 +587,7 @@ document.write(z + '<br>');
 
 ##### 3.5.2. 마무리문제-[11]
 
+[:icon-play:](./script/11.html)
 +++ 지시문
 !!!danger :zap: 20대 여성이라면 결과값이 true로, 아니라면 결과 값으로 false:zap:
 20대 대상의 소개팅을 준비 중입니다.<br>
@@ -600,10 +601,7 @@ prompt메서드를 활용하여 참가 희망자의 성별과 나이를 확인�
 +++ 정답
 
 ```js
-var gender = prompt('당신의 성별은', '여성');
-var age = prompt('당신의 나이는', '20');
-var result = age >= 20 && age < 30 && gender == '여성';
-document.write(result);
+
 ```
 
 +++ 설명
