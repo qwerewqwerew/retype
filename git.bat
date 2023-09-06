@@ -1,3 +1,5 @@
 git add .
-git commit -m "commit"
+git commit -m "test"
 git push origin main
+
+pause

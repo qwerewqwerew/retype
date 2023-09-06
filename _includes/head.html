@@ -136,8 +136,16 @@
   }
 
   .box {
-    background:#f7f7f7;
-    padding: 1rem 0 .5rem 1rem ;
+    background: #f7f7f7;
+    padding: 1rem 0 .5rem 1rem;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .1), -1px -1px 2px rgba(0, 0, 0, .1);
   }
 </style>
+<script>
+  if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', 'blank');
+  })
+</script>
