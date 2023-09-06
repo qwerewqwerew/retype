@@ -588,6 +588,7 @@ document.write(z + '<br>');
 ##### 3.5.2. 마무리문제-[11]
 
 [:icon-play:](./script/11.html)
+
 +++ 지시문
 !!!danger :zap: 20대 여성이라면 결과값이 true로, 아니라면 결과 값으로 false:zap:
 20대 대상의 소개팅을 준비 중입니다.<br>
@@ -612,6 +613,7 @@ prompt메서드를 활용하여 참가 희망자의 성별과 나이를 확인�
 
 +++ 지시문
 [:icon-play:](./script/12.html)
+
 !!!danger :zap: 평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false:zap:
 prompt 메서드를 활용하여 국어, 영어, 수학 점수를 입력 받으세요.<br>
 평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false를 출력합니다.
