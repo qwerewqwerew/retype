@@ -611,6 +611,7 @@ prompt메서드를 활용하여 참가 희망자의 성별과 나이를 확인�
 ##### 3.5.3. 마무리문제-[12]
 
 +++ 지시문
+[:icon-play:](./script/12.html)
 !!!danger :zap: 평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false:zap:
 prompt 메서드를 활용하여 국어, 영어, 수학 점수를 입력 받으세요.<br>
 평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false를 출력합니다.
@@ -619,14 +620,6 @@ prompt 메서드를 활용하여 국어, 영어, 수학 점수를 입력 받으�
 엄청쉽다
 +++ 정답
 
-```js
-var korNum = Number(prompt('국어점수는?', '0'));
-var engNum = Number(prompt('영어점수는?', '0'));
-var mathNum = Number(prompt('수학점수는?', '0'));
-var avg = (korNum + engNum + mathNum) / 3;
-var result = avg >= 70 && konNum >= 60 && engNum >= 60 && mathNum >= 60;
-document.write(result);
-```
 
 +++ 설명
 !!!This is another Tab!!!
