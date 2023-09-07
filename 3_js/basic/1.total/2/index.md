@@ -772,7 +772,7 @@ if (조건) {
 
 ###### 4.1.1.1. if-예제[16]
 
-+++ 코드
++++ 코드1
 
 [:icon-play:](./script/16.html)
 
@@ -783,8 +783,21 @@ if (your_sex == '남자') document.write('치마를 입으세요.');
 if (your_sex == '여자') document.write('바지를 입으세요.');
 ```
 
-+++ 설명
-!!!This is another Tab!!!
++++ 코드2
+
+```js #
+const date = new Date();
+const hour = date.getHours();
+console.log(hour);
+if (hour < 12) {
+	document.querySelector('body').style.backgroundColor = 'ivory';
+	document.querySelector('body').style.color = 'red';
+}
+if (hour > 12) {
+	document.querySelector('body').style.backgroundColor = 'black';
+	document.querySelector('body').style.color = 'white';
+}
+```
 +++
 
 > if문은 조건이 true 일때만 실행할수 있으므로 false 일때도 명령을 하려면 실행문을 두번 작성해야 하는 번거로움이 있습니다.<br>
