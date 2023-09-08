@@ -90,7 +90,7 @@ category:
 
     ✅ 변수(상수)란? 데이터(값)를 저장 할 수 있는 메모리 공간
 
-    - 변하는 값은 변수 `var, let`
+    - 변하는 값은 변수 `let, let`
     - 변하지 않는 값은 상수 `const`
     -
 
@@ -112,17 +112,17 @@ category:
 #### 1.1. 예제 **선언과 할당** [01]
 
 ```js
-var currentYear; //올해 연도의 변수 선언
-var name; // 이름의 변수 선언
-var age; // 나이의 변수 선언
-var currentYear, name, age; //한번에 선언
+let currentYear; //올해 연도의 변수 선언
+let name; // 이름의 변수 선언
+let age; // 나이의 변수 선언
+let currentYear, name, age; //한번에 선언
 
 //선언후 할당하기
-var frontend;
+let frontend;
 frontend = '김망고';
 
 //선언과 할당을 동시에 하기
-var variable = '변수';
+let letiable = '변수';
 ```
 
 #### 1.2. 예제 [02]
@@ -160,9 +160,9 @@ var variable = '변수';
 	</head>
 	<body>
 		<script>
-			var currentYear = 2021;
-			var birthYear;
-			var age;
+			let currentYear = 2021;
+			let birthYear;
+			let age;
 			birthYear = prompt('태어난 연도를 입력하세요. (YYYY)', '');
 			age = currentYear - birthYear + 1;
 			document.write(currentYear + '년 현재<br>');
@@ -194,14 +194,14 @@ var variable = '변수';
 
 | 종류            | 자료형    | 설명                                                                                               | 예시                                           |
 | --------------- | --------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| 기본(원시) 유형 | Number    | 숫자를 나타내는 데이터 타입. 정수 및 부동소수점 숫자를 포함.                                       | `var num = 123;`                               |
-| --------------- | String    | 문자열을 나타내는 데이터 타입. 0개 이상의 16비트 유니코드 문자로 구성.                             | `var str = "Hello World";`                     |
-| --------------- | Boolean   | 논리적인 값을 나타내며 `true`와 `false` 두 가지 값을 가짐.                                         | `var isTrue = false;`                          |
-| 복합(참조) 유형 | Object    | JavaScript의 객체를 나타냄. 객체는 이름과 값으로 구성된 프로퍼티들의 집합.                         | `var obj = {name: "John", age: 30};`           |
-| ---             | Array     | 순서가 있는 요소들의 집합을 나타냄. 배열 요소에 접근하는 것은 대괄호([])를 사용하여 인덱스로 접근. | `var arr = [1, 2, 3];`                         |
+| 기본(원시) 유형 | Number    | 숫자를 나타내는 데이터 타입. 정수 및 부동소수점 숫자를 포함.                                       | `let num = 123;`                               |
+| --------------- | String    | 문자열을 나타내는 데이터 타입. 0개 이상의 16비트 유니코드 문자로 구성.                             | `let str = "Hello World";`                     |
+| --------------- | Boolean   | 논리적인 값을 나타내며 `true`와 `false` 두 가지 값을 가짐.                                         | `let isTrue = false;`                          |
+| 복합(참조) 유형 | Object    | JavaScript의 객체를 나타냄. 객체는 이름과 값으로 구성된 프로퍼티들의 집합.                         | `let obj = {name: "John", age: 30};`           |
+| ---             | Array     | 순서가 있는 요소들의 집합을 나타냄. 배열 요소에 접근하는 것은 대괄호([])를 사용하여 인덱스로 접근. | `let arr = [1, 2, 3];`                         |
 | ---             | Function  | 실행 가능한 코드 블록을 가지며, 기능을 반복해서 사용할 수 있음.                                    | `function sayHello() { alert('Hello!'); }`     |
-| 특수 유형       | undefined | 변수가 선언되었으나 초기화되지 않았을 때의 값.                                                     | `var x; console.log(x);  // 출력: undefined`   |
-| ---             | null      | 값이 없음을 의미. 변수에 명시적으로 할당해 사용.                                                   | `var y = null; console.log(y);  // 출력: null` |
+| 특수 유형       | undefined | 변수가 선언되었으나 초기화되지 않았을 때의 값.                                                     | `let x; console.log(x);  // 출력: undefined`   |
+| ---             | null      | 값이 없음을 의미. 변수에 명시적으로 할당해 사용.                                                   | `let y = null; console.log(y);  // 출력: null` |
 
 #### 2.3. 원시형
 
@@ -351,11 +351,11 @@ console.log(2 ** 3); // 8 **은 제곱!!
 +++ 코드
 
 ```js
-var t1 = '망고는';
-var t2 = 5;
-var t3 = '살';
-var t6 = true;
-var t4 = t1 + t2 + t3 + t6;
+let t1 = '망고는';
+let t2 = 5;
+let t3 = '살';
+let t6 = true;
+let t4 = t1 + t2 + t3 + t6;
 console.log(typeof t4); //string
 alert(t4); //'망고는5살true'
 ```
@@ -502,8 +502,8 @@ document.write(++x); //5
 +++ 코드
 
 ```js
-var x = 10;
-var y = 20;
+let x = 10;
+let y = 20;
 
 document.write(x + '>=' + y + ': ');
 document.write(x >= y);
@@ -564,9 +564,9 @@ x=10, y=20 입니다.
 +++ 코드
 
 ```js
-var x = 7 > 6 && 1 > 8;
-var y = 7 > 6 || 1 > 8;
-var z = !(7 > 6);
+let x = 7 > 6 && 1 > 8;
+let y = 7 > 6 || 1 > 8;
+let z = !(7 > 6);
 
 document.write('7이 6보다 크고 1이 8보다 크면 논리값은?');
 document.write(x + '<br>');
@@ -668,11 +668,11 @@ document.write(`자바스크립트가 ${your} <h1>${study}</h1>`);
 +++ 정답
 
 ```js
-var price1 = 3000;
-var price2 = 6000;
-var price3 = 3000;
-var total = price1 + price2 + price3;
-var result = total > 1000 ? total - 10000 + '원 초과' : '돈 관리 잘 했어요!';
+let price1 = 3000;
+let price2 = 6000;
+let price3 = 3000;
+let total = price1 + price2 + price3;
+let result = total > 1000 ? total - 10000 + '원 초과' : '돈 관리 잘 했어요!';
 document.write(result);
 ```
 
@@ -697,10 +697,10 @@ document.write(result);
 +++ 정답
 
 ```js #
-var user_height = prompt('당신의 신장은?', '0');
-var user_weight = prompt('당신의 체중은?', '0');
-var normal_weight = (user_height - 100) * 0.9;
-var result = user_weight > normal_weight ? '적정 몸무게 이상' : '적정 몸무게 미달';
+let user_height = prompt('당신의 신장은?', '0');
+let user_weight = prompt('당신의 체중은?', '0');
+let normal_weight = (user_height - 100) * 0.9;
+let result = user_weight > normal_weight ? '적정 몸무게 이상' : '적정 몸무게 미달';
 document.write(result);
 ```
 
@@ -762,7 +762,7 @@ document.write(result);
 > 조건의 결과가 false 이면 중괄호의 실행문을 무시합니다.<br>
 > 아래는 if 문의 기본 문법 예시입니다.<br>
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge letiant='primary' size='m' text='기본형']
 
 ```js
 if (조건) {
@@ -777,7 +777,7 @@ if (조건) {
 [:icon-play:](./script/16.html)
 
 ```js
-var your_sex = '남자';
+let your_sex = '남자';
 document.write('당신은' + your_sex + '이므로');
 if (your_sex == '남자') document.write('치마를 입으세요.');
 if (your_sex == '여자') document.write('바지를 입으세요.');
@@ -816,7 +816,7 @@ if (hour > 12) {
 +++ 정답
 
 ```js
-var testNum = prompt('시험 점수를 입력하세요');
+let testNum = prompt('시험 점수를 입력하세요');
 if (textNum >= 70) {
 	document.write('합격입니다.');
 }
@@ -847,7 +847,7 @@ GPT 한테 물어보세요
 > 이럴때 else 를 사용하면 됩니다.<br>
 > 아래는 if ~ else if 문의 기본 문법 예시입니다.<br>
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge letiant='primary' size='m' text='기본형']
 
 ```js
 if (조건1) {
@@ -896,7 +896,7 @@ else document.write('당신은 정상이네요');
 > 조건이 복잡할 경우 if~else if 를 사용하여 다중 조건을 판별할수 있습니다.<br>
 > 아래는 else if 문의 기본 문법 예시입니다.<br>
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge letiant='primary' size='m' text='기본형']
 
 ```js
 if (조건1) {
@@ -913,7 +913,7 @@ if (조건1) {
 +++ 코드
 
 ```js
-var userNumber = prompt('숫자를 입력하세요.');
+let userNumber = prompt('숫자를 입력하세요.');
 
 if (userNumber !== null) {
 	if (userNumber % 3 === 0) alert('3의 배수입니다.');
@@ -969,7 +969,7 @@ flowchart TD
 +++ 설명
 **:key:OR 연산자는 `||` 를 사용하며 우항의 2개중 true가 하나라도 있으면 결과를 true로 반환합니다.**
 !!!
-OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중 하나가 10보다 작은 지를 판단하는 프로그램을 작성해 봅시다 [:koala:](./script/or.html)
+OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중 하나가 50보다 작은 지를 판단하는 프로그램을 작성해 봅시다 [:koala:](./script/or.html)
 !!!
 
 +++ 코드
@@ -984,11 +984,11 @@ OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중
 	</head>
 	<body>
 		<script>
-			var numberOne = prompt('50미만의 숫자를 입력하세요.');
-			var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+			let numberOne = prompt('50미만의 숫자를 입력하세요.');
+			let numberTwo = prompt('50미만의 숫자를 입력하세요.');
 
-			if (numberOne < 10 || numberTwo < 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
-			else alert('두 개의 숫자 중 10 미만인 수는 없습니다.');
+			if (numberOne < 50 || numberTwo < 50) alert('두 개의 숫자 중 최소한 하나는 50 미만이군요.');
+			else alert('두 개의 숫자 중 50 미만인 수는 없습니다.');
 		</script>
 	</body>
 </html>
@@ -1007,8 +1007,8 @@ AND 연산자를 사용하여 입력한 두개의 숫자가 50보다 작은지 �
 +++ 코드
 
 ```js
-var numberOne = prompt('50미만의 숫자를 입력하세요.');
-var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+let numberOne = prompt('50미만의 숫자를 입력하세요.');
+let numberTwo = prompt('50미만의 숫자를 입력하세요.');
 
 if (numberOne < 50 && numberTwo < 50) alert('두 개의 숫자 모두 50 미만이군요.');
 else alert('조건에 맞지 않는 숫자가 있습니다.');
@@ -1027,8 +1027,8 @@ NOT 연산자를 사용하여 사용자가 입력한 값이 null 이 아닌지�
 +++ 코드
 
 ```js
-var numberOne = prompt('50미만의 숫자를 입력하세요.');
-var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+let numberOne = prompt('50미만의 숫자를 입력하세요.');
+let numberTwo = prompt('50미만의 숫자를 입력하세요.');
 
 if (numberOne !== null && numberTwo !== null) {
 	if (numberOne < 10 || numberTwo < 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
@@ -1052,7 +1052,7 @@ AND 연산자는 조건식이 둘 이상일 경우 하나만 false 라도 최종
 컴퓨터의 일을 덜어주는 셈이 됩니다.<br>
 반대로 OR 연산자의 경우 하나만 true 라도 최종 값이 true 이기 때문에 첫번째 조건으로 true 를 반환하는 식을 작성한다면<br>
 효율적인 코드를 작성할수 있습니다.<br>
-[!badge variant='primary' size='l' text='이런 연산 방식을 단축평가(short circuit evaluation) 라고 합니다']
+[!badge letiant='primary' size='l' text='이런 연산 방식을 단축평가(short circuit evaluation) 라고 합니다']
 :::
 
 #### 4.2. 선택문
@@ -1067,7 +1067,7 @@ AND 연산자는 조건식이 둘 이상일 경우 하나만 false 라도 최종
 일치되는 값이 없을 때에는 default에 해당하는 실행문을 수행한 뒤 문장을 마칩니다.
 :::
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge letiant='primary' size='m' text='기본형']
 
 ```js
 switch (조건) {
@@ -1119,7 +1119,7 @@ switch 문을 이용해 session 값을 체크하여 입력받은 값이
 	</head>
 	<body>
 		<script>
-			var session = prompt('관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인');
+			let session = prompt('관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인');
 
 			switch (session) {
 				case '1':
@@ -1182,8 +1182,8 @@ p strong {
   +++ 정답
 
 ```js #
-var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
-var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+let memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+let colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
 if (memNum % colNum === 0) rowNum = parseInt(memNum / colNum);
 else rowNum = parseInt(memNum / colNum) + 1;
 document.write('모두 ' + rowNum + '개의 줄이 필요합니다.');
@@ -1221,7 +1221,7 @@ document.write('모두 ' + rowNum + '개의 줄이 필요합니다.');
 +++ 반복문 사용전
 
 ```js #
-var sum = 0;
+let sum = 0;
 
 sum += 1;
 sum += 2;
@@ -1236,8 +1236,8 @@ document.write('1부터 5까지 더하면 ' + sum);
 +++ 반복문 사용후
 
 ```js #
-var i;
-var sum = 0;
+let i;
+let sum = 0;
 
 for (i = 1; i < 6; i++) {
 	sum += i;
@@ -1248,15 +1248,16 @@ document.write('1부터 5까지 더하면 ' + sum);
 [ :icon-play:](./script/repeat-2.html)
 +++
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge letiant='primary' size='m' text='기본형']
 
 ```js
+		// 1 ,  2   , 4     ,  3
 for (초기값; 조건; 증가식) {
 	실행문;
 }
 ```
 
-for 문은 초기값->조건->명령->증가식의 순서로 수행합니다.
+for 문은 초기값->조건->실행문->증가식의 순서로 수행합니다.
 
 ###### 4.4.1.2. for-예제[29]
 
@@ -1267,8 +1268,8 @@ for 문은 초기값->조건->명령->증가식의 순서로 수행합니다.
 +++ 코드
 
 ```#
-var i;
-var sum = 0;
+let i;
+let sum = 0;
 
 for(i = 1; i < 1001; i++) {
 	sum += i;
@@ -1288,7 +1289,7 @@ document.write("1부터 5까지 더하면 " + sum);
 [:icon-play:](./script/gugudan-1.html)
 
 ```js #
-var i, j;
+let i, j;
 
 for (i = 1; i <= 9; i++) {
 	document.write('<h3>' + i + '단</h3>');
@@ -1319,7 +1320,7 @@ div h3 {
 [:icon-play:](./script/gugudan-2.html)
 
 ```js #4,8
-var i, j;
+let i, j;
 for (i = 1; i <= 9; i++) {
 	document.write('<div>');
 	document.write('<h3>' + i + '단</h3>');
@@ -1360,7 +1361,7 @@ for (const todo of todos) {
 while문은 조건이 true인 동안 실행문을 반복 합니다.
 조건을 먼저 체크한 후 실행하기 때문에 조건이 false 라면 한번도 실행하지 않을수도 있습니다.
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge letiant='primary' size='m' text='기본형']
 
 ```js
 while (조건) {
@@ -1376,7 +1377,7 @@ while 문을 사용하여 1부터 10까지 반복하여 출력해봅시다
 [:icon-play:](./script/while.html)
 
 ```js #
-var i = 1; //초기값
+let i = 1; //초기값
 while (i <= 10) {
 	document.write(i + '<br />');
 	i++;
@@ -1431,7 +1432,7 @@ document.write('=' + total);
 
 하지만 do~while은 실행후 조건을 체크하기 때문에 조건이 false 라도 무조건 한번은 실행합니다.
 
-[!badge variant='primary' size='m' text='기본형']
+[!badge letiant='primary' size='m' text='기본형']
 
 ```js
 do {
@@ -1487,7 +1488,7 @@ for 반복문을 사용하여 1부터 해당 숫자까지의 합(sum)을 계산�
 반복문의 실행문들은 수행과정에서 break문을 만나면 해당 반복문을 종료합니다.
 break문은 반복문 등을 정지시킬 때에 사용합니다.
 
-[!badge variant='primary' size='m' text='break 기본형']
+[!badge letiant='primary' size='m' text='break 기본형']
 
 ```js break 정지
 break
@@ -1496,7 +1497,7 @@ break
 반복문 문장 안에 사용하여 반복 실행 중에 조건문으로 되돌아 가게 해주는 역할을 합니다
 즉, 반목문에서 특정 부분을 실행하지 않게 하고 싶을 때 간단하게 사용할 수 있습니다.
 
-[!badge variant='primary' size='m' text='continue 기본형']
+[!badge letiant='primary' size='m' text='continue 기본형']
 
 ```js continue 통과
 continue
@@ -1505,7 +1506,7 @@ continue
 ###### 4.4.4.1. break/continue-예제
 
 +++ 코드[36]
-[!badge variant='contrast' size='xl' text='34-break']
+[!badge letiant='contrast' size='xl' text='34-break']
 
 ```js #
 for (let i = 0; true; i++) {
@@ -1522,11 +1523,11 @@ alert('프로그램 종료');
 ```
 
 +++ 코드[37]
-[!badge variant='contrast' size='xl' text='35-continue']
+[!badge letiant='contrast' size='xl' text='35-continue']
 
 ```js #
-var x = 0;
-var total = 0;
+let x = 0;
+let total = 0;
 
 while (x < 10) {
 	x++;
@@ -1576,9 +1577,9 @@ document.write('=' + total);
 	<body>
 		<h1>자리 배치도</h1>
 		<script>
-			var i, j;
-			var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
-			var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+			let i, j;
+			let memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+			let colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
 
 			if (memNum % colNum == 0) rowNum = parseInt(memNum / colNum);
 			else rowNum = parseInt(memNum / colNum) + 1;
@@ -1606,7 +1607,7 @@ document.write('=' + total);
 ### 5. 마무리문제
 
 :::comment_box
-[!badge variant='primary' size='xl' text='01']
+[!badge letiant='primary' size='xl' text='01']
 다음 조건을 확인하여 사용자가 입력한 숫자가 4의 배수인지 확인하는 프로그램을 작성하세요
 [:icon-play:](./script/sol-1.html)
 !!! :zap: 조건 :zap:
@@ -1624,7 +1625,7 @@ document.write('=' + total);
 !!!
 :::
 :::comment_box
-[!badge variant='primary' size='xl' text='02']
+[!badge letiant='primary' size='xl' text='02']
 숫자를 입력 받은후 1부터 그 숫자까지 3의 배수를 모두 출력합니다.
 그리고 출력된 3의 배수가 총 몇개인지 알려주는 프로그램을 작성하세요
 [:icon-play:](./script/sol-2.html)
