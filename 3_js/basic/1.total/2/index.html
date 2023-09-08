@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747403334865">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747464490019">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.3.0">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.3.0.747403334865" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.3.0.747464490019" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.747403334865" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.747464490019" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.747403334865" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.747403334865" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.747464490019" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.747464490019" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../../../resources/js/mermaid.js?v=3.3.0" defer></script>
 
     <style>
@@ -513,7 +513,7 @@
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">✅ 변수(상수)란? 데이터(값)를 저장 할 수 있는 메모리 공간
 
-- 변하는 값은 변수 `var, let`
+- 변하는 값은 변수 `let, let`
 - 변하지 않는 값은 상수 `const`
 -
 
@@ -538,17 +538,17 @@
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var currentYear; //올해 연도의 변수 선언
-var name; // 이름의 변수 선언
-var age; // 나이의 변수 선언
-var currentYear, name, age; //한번에 선언
+<pre class="language-javascript"><code v-pre class="language-javascript">let currentYear; //올해 연도의 변수 선언
+let name; // 이름의 변수 선언
+let age; // 나이의 변수 선언
+let currentYear, name, age; //한번에 선언
 
 //선언후 할당하기
-var frontend;
+let frontend;
 frontend = '김망고';
 
 //선언과 할당을 동시에 하기
-var variable = '변수';</code></pre>
+let letiable = '변수';</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="12-예제-02">
     <h4>
@@ -589,9 +589,9 @@ var variable = '변수';</code></pre>
 	&lt;/head&gt;
 	&lt;body&gt;
 		&lt;script&gt;
-			var currentYear = 2021;
-			var birthYear;
-			var age;
+			let currentYear = 2021;
+			let birthYear;
+			let age;
 			birthYear = prompt('태어난 연도를 입력하세요. (YYYY)', '');
 			age = currentYear - birthYear + 1;
 			document.write(currentYear + '년 현재&lt;br&gt;');
@@ -645,31 +645,31 @@ var variable = '변수';</code></pre>
 <td>기본(원시) 유형</td>
 <td>Number</td>
 <td>숫자를 나타내는 데이터 타입. 정수 및 부동소수점 숫자를 포함.</td>
-<td><code v-pre>var num = 123;</code></td>
+<td><code v-pre>let num = 123;</code></td>
 </tr>
 <tr>
 <td>---------------</td>
 <td>String</td>
 <td>문자열을 나타내는 데이터 타입. 0개 이상의 16비트 유니코드 문자로 구성.</td>
-<td><code v-pre>var str = &quot;Hello World&quot;;</code></td>
+<td><code v-pre>let str = &quot;Hello World&quot;;</code></td>
 </tr>
 <tr>
 <td>---------------</td>
 <td>Boolean</td>
 <td>논리적인 값을 나타내며 <code v-pre>true</code>와 <code v-pre>false</code> 두 가지 값을 가짐.</td>
-<td><code v-pre>var isTrue = false;</code></td>
+<td><code v-pre>let isTrue = false;</code></td>
 </tr>
 <tr>
 <td>복합(참조) 유형</td>
 <td>Object</td>
 <td>JavaScript의 객체를 나타냄. 객체는 이름과 값으로 구성된 프로퍼티들의 집합.</td>
-<td><code v-pre>var obj = {name: &quot;John&quot;, age: 30};</code></td>
+<td><code v-pre>let obj = {name: &quot;John&quot;, age: 30};</code></td>
 </tr>
 <tr>
 <td>---</td>
 <td>Array</td>
 <td>순서가 있는 요소들의 집합을 나타냄. 배열 요소에 접근하는 것은 대괄호([])를 사용하여 인덱스로 접근.</td>
-<td><code v-pre>var arr = [1, 2, 3];</code></td>
+<td><code v-pre>let arr = [1, 2, 3];</code></td>
 </tr>
 <tr>
 <td>---</td>
@@ -681,13 +681,13 @@ var variable = '변수';</code></pre>
 <td>특수 유형</td>
 <td>undefined</td>
 <td>변수가 선언되었으나 초기화되지 않았을 때의 값.</td>
-<td><code v-pre>var x; console.log(x);  // 출력: undefined</code></td>
+<td><code v-pre>let x; console.log(x);  // 출력: undefined</code></td>
 </tr>
 <tr>
 <td>---</td>
 <td>null</td>
 <td>값이 없음을 의미. 변수에 명시적으로 할당해 사용.</td>
-<td><code v-pre>var y = null; console.log(y);  // 출력: null</code></td>
+<td><code v-pre>let y = null; console.log(y);  // 출력: null</code></td>
 </tr>
 </tbody>
 </table>
@@ -999,11 +999,11 @@ console.log(2 ** 3); // 8 **은 제곱!!</code></pre>
 <doc-tab v-cloak id="코드">
 <template #title>코드</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var t1 = '망고는';
-var t2 = 5;
-var t3 = '살';
-var t6 = true;
-var t4 = t1 + t2 + t3 + t6;
+<pre class="language-javascript"><code v-pre class="language-javascript">let t1 = '망고는';
+let t2 = 5;
+let t3 = '살';
+let t6 = true;
+let t4 = t1 + t2 + t3 + t6;
 console.log(typeof t4); //string
 alert(t4); //'망고는5살true'</code></pre>
 </doc-codeblock></div>
@@ -1280,8 +1280,8 @@ document.write(++x); //5</code></pre>
 <doc-tab v-cloak id="코드">
 <template #title>코드</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var x = 10;
-var y = 20;
+<pre class="language-javascript"><code v-pre class="language-javascript">let x = 10;
+let y = 20;
 
 document.write(x + '&gt;=' + y + ': ');
 document.write(x &gt;= y);
@@ -1376,9 +1376,9 @@ document.write('&lt;br&gt;');</code></pre>
 <doc-tab v-cloak id="코드">
 <template #title>코드</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var x = 7 &gt; 6 &amp;&amp; 1 &gt; 8;
-var y = 7 &gt; 6 || 1 &gt; 8;
-var z = !(7 &gt; 6);
+<pre class="language-javascript"><code v-pre class="language-javascript">let x = 7 &gt; 6 &amp;&amp; 1 &gt; 8;
+let y = 7 &gt; 6 || 1 &gt; 8;
+let z = !(7 &gt; 6);
 
 document.write('7이 6보다 크고 1이 8보다 크면 논리값은?');
 document.write(x + '&lt;br&gt;');
@@ -1662,11 +1662,11 @@ document.write(`자바스크립트가 ${your} &lt;h1&gt;${study}&lt;/h1&gt;`);</
 <doc-tab v-cloak id="정답">
 <template #title>정답</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var price1 = 3000;
-var price2 = 6000;
-var price3 = 3000;
-var total = price1 + price2 + price3;
-var result = total &gt; 1000 ? total - 10000 + '원 초과' : '돈 관리 잘 했어요!';
+<pre class="language-javascript"><code v-pre class="language-javascript">let price1 = 3000;
+let price2 = 6000;
+let price3 = 3000;
+let total = price1 + price2 + price3;
+let result = total &gt; 1000 ? total - 10000 + '원 초과' : '돈 관리 잘 했어요!';
 document.write(result);</code></pre>
 </doc-codeblock></div>
 </doc-tab>
@@ -1744,10 +1744,10 @@ document.write(result);</code></pre>
 <doc-tab v-cloak id="정답">
 <template #title>정답</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var user_height = prompt('당신의 신장은?', '0');
-var user_weight = prompt('당신의 체중은?', '0');
-var normal_weight = (user_height - 100) * 0.9;
-var result = user_weight &gt; normal_weight ? '적정 몸무게 이상' : '적정 몸무게 미달';
+<pre class="language-javascript"><code v-pre class="language-javascript">let user_height = prompt('당신의 신장은?', '0');
+let user_weight = prompt('당신의 체중은?', '0');
+let normal_weight = (user_height - 100) * 0.9;
+let result = user_weight &gt; normal_weight ? '적정 몸무게 이상' : '적정 몸무게 미달';
 document.write(result);</code></pre>
 </doc-codeblock></div>
 </doc-tab>
@@ -1914,7 +1914,7 @@ if문은 소괄호 안의 조건을 체크하여 결괏값이 true 면 중괄호
 <template #title>코드1</template>
 <p><a href="script/16.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var your_sex = '남자';
+<pre class="language-javascript"><code v-pre class="language-javascript">let your_sex = '남자';
 document.write('당신은' + your_sex + '이므로');
 if (your_sex == '남자') document.write('치마를 입으세요.');
 if (your_sex == '여자') document.write('바지를 입으세요.');</code></pre>
@@ -1977,7 +1977,7 @@ if (hour &gt; 12) {
 <doc-tab v-cloak id="정답">
 <template #title>정답</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var testNum = prompt('시험 점수를 입력하세요');
+<pre class="language-javascript"><code v-pre class="language-javascript">let testNum = prompt('시험 점수를 입력하세요');
 if (textNum &gt;= 70) {
 	document.write('합격입니다.');
 }</code></pre>
@@ -2163,7 +2163,7 @@ else document.write('당신은 정상이네요');</code></pre>
 <doc-tab v-cloak id="코드">
 <template #title>코드</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var userNumber = prompt('숫자를 입력하세요.');
+<pre class="language-javascript"><code v-pre class="language-javascript">let userNumber = prompt('숫자를 입력하세요.');
 
 if (userNumber !== null) {
 	if (userNumber % 3 === 0) alert('3의 배수입니다.');
@@ -2293,7 +2293,7 @@ if (userNumber !== null) {
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중 하나가 10보다 작은 지를 판단하는 프로그램을 작성해 봅시다 <a href="script/or.html"><span class="docs-emoji">&#x1F428;</span></a></p>
+<p>OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중 하나가 50보다 작은 지를 판단하는 프로그램을 작성해 봅시다 <a href="script/or.html"><span class="docs-emoji">&#x1F428;</span></a></p>
         </div>
     </div>
 </div>
@@ -2310,11 +2310,11 @@ if (userNumber !== null) {
 	&lt;/head&gt;
 	&lt;body&gt;
 		&lt;script&gt;
-			var numberOne = prompt('50미만의 숫자를 입력하세요.');
-			var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+			let numberOne = prompt('50미만의 숫자를 입력하세요.');
+			let numberTwo = prompt('50미만의 숫자를 입력하세요.');
 
-			if (numberOne &lt; 10 || numberTwo &lt; 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
-			else alert('두 개의 숫자 중 10 미만인 수는 없습니다.');
+			if (numberOne &lt; 50 || numberTwo &lt; 50) alert('두 개의 숫자 중 최소한 하나는 50 미만이군요.');
+			else alert('두 개의 숫자 중 50 미만인 수는 없습니다.');
 		&lt;/script&gt;
 	&lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -2352,8 +2352,8 @@ if (userNumber !== null) {
 <doc-tab v-cloak id="코드">
 <template #title>코드</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var numberOne = prompt('50미만의 숫자를 입력하세요.');
-var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+<pre class="language-javascript"><code v-pre class="language-javascript">let numberOne = prompt('50미만의 숫자를 입력하세요.');
+let numberTwo = prompt('50미만의 숫자를 입력하세요.');
 
 if (numberOne &lt; 50 &amp;&amp; numberTwo &lt; 50) alert('두 개의 숫자 모두 50 미만이군요.');
 else alert('조건에 맞지 않는 숫자가 있습니다.');</code></pre>
@@ -2391,8 +2391,8 @@ else alert('조건에 맞지 않는 숫자가 있습니다.');</code></pre>
 <doc-tab v-cloak id="코드">
 <template #title>코드</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var numberOne = prompt('50미만의 숫자를 입력하세요.');
-var numberTwo = prompt('50미만의 숫자를 입력하세요.');
+<pre class="language-javascript"><code v-pre class="language-javascript">let numberOne = prompt('50미만의 숫자를 입력하세요.');
+let numberTwo = prompt('50미만의 숫자를 입력하세요.');
 
 if (numberOne !== null &amp;&amp; numberTwo !== null) {
 	if (numberOne &lt; 10 || numberTwo &lt; 10) alert('두 개의 숫자 중 최소한 하나는 10 미만이군요.');
@@ -2496,7 +2496,7 @@ AND 연산자는 조건식이 둘 이상일 경우 하나만 false 라도 최종
 	&lt;/head&gt;
 	&lt;body&gt;
 		&lt;script&gt;
-			var session = prompt('관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인');
+			let session = prompt('관심 세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인');
 
 			switch (session) {
 				case '1':
@@ -2579,8 +2579,8 @@ p strong {
 <doc-tab v-cloak id="정답">
 <template #title>정답</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
-var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+<pre class="language-javascript"><code v-pre class="language-javascript">let memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+let colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
 if (memNum % colNum === 0) rowNum = parseInt(memNum / colNum);
 else rowNum = parseInt(memNum / colNum) + 1;
 document.write('모두 ' + rowNum + '개의 줄이 필요합니다.');</code></pre>
@@ -2628,7 +2628,7 @@ document.write('모두 ' + rowNum + '개의 줄이 필요합니다.');</code></p
 <doc-tab v-cloak id="반복문-사용전">
 <template #title>반복문 사용전</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var sum = 0;
+<pre class="language-javascript"><code v-pre class="language-javascript">let sum = 0;
 
 sum += 1;
 sum += 2;
@@ -2642,8 +2642,8 @@ document.write('1부터 5까지 더하면 ' + sum);</code></pre>
 <doc-tab v-cloak id="반복문-사용후">
 <template #title>반복문 사용후</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var i;
-var sum = 0;
+<pre class="language-javascript"><code v-pre class="language-javascript">let i;
+let sum = 0;
 
 for (i = 1; i &lt; 6; i++) {
 	sum += i;
@@ -2657,11 +2657,12 @@ document.write('1부터 5까지 더하면 ' + sum);</code></pre>
     <span>기본형</span>
 </span></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">for (초기값; 조건; 증가식) {
+<pre class="language-javascript"><code v-pre class="language-javascript">		// 1 ,  2   , 4     ,  3
+for (초기값; 조건; 증가식) {
 	실행문;
 }</code></pre>
 </doc-codeblock></div>
-<p>for 문은 초기값-&gt;조건-&gt;명령-&gt;증가식의 순서로 수행합니다.</p>
+<p>for 문은 초기값-&gt;조건-&gt;실행문-&gt;증가식의 순서로 수행합니다.</p>
 <doc-anchor-target id="4412-for-예제29">
     <h6>
         <doc-anchor-trigger class="header-anchor-trigger" to="#4412-for-예제29">#</doc-anchor-trigger>
@@ -2692,8 +2693,8 @@ document.write('1부터 5까지 더하면 ' + sum);</code></pre>
 <doc-tab v-cloak id="코드">
 <template #title>코드</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-none"><code v-pre class="language-none">var i;
-var sum = 0;
+<pre class="language-none"><code v-pre class="language-none">let i;
+let sum = 0;
 
 for(i = 1; i &lt; 1001; i++) {
 	sum += i;
@@ -2733,7 +2734,7 @@ document.write(&quot;1부터 5까지 더하면 &quot; + sum);</code></pre>
 <template #title>JS1</template>
 <p><a href="script/gugudan-1.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var i, j;
+<pre class="language-javascript"><code v-pre class="language-javascript">let i, j;
 
 for (i = 1; i &lt;= 9; i++) {
 	document.write('&lt;h3&gt;' + i + '단&lt;/h3&gt;');
@@ -2764,7 +2765,7 @@ div h3 {
 <p>동적요소추가 후 스타일반영<br />
 <a href="script/gugudan-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript" data-line="4,8"><code v-pre class="language-javascript">var i, j;
+<pre class="language-javascript" data-line="4,8"><code v-pre class="language-javascript">let i, j;
 for (i = 1; i &lt;= 9; i++) {
 	document.write('&lt;div&gt;');
 	document.write('&lt;h3&gt;' + i + '단&lt;/h3&gt;');
@@ -2837,7 +2838,7 @@ for (const todo of todos) {
 <template #title>코드</template>
 <p><a href="script/while.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var i = 1; //초기값
+<pre class="language-javascript"><code v-pre class="language-javascript">let i = 1; //초기값
 while (i &lt;= 10) {
 	document.write(i + '&lt;br /&gt;');
 	i++;
@@ -2981,7 +2982,7 @@ break문은 반복문 등을 정지시킬 때에 사용합니다.</p>
 <doc-tabs>
 <doc-tab v-cloak id="코드-36">
 <template #title>코드[36]</template>
-<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white h-8 px-4 text-base rounded-md">
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-4 text-base rounded-md">
     <span>34-break</span>
 </span></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
@@ -3000,12 +3001,12 @@ alert('프로그램 종료');</code></pre>
 </doc-tab>
 <doc-tab v-cloak id="코드-37">
 <template #title>코드[37]</template>
-<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white dark:text-dark-850 bg-gray-900 dark:bg-white h-8 px-4 text-base rounded-md">
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-4 text-base rounded-md">
     <span>35-continue</span>
 </span></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">var x = 0;
-var total = 0;
+<pre class="language-javascript"><code v-pre class="language-javascript">let x = 0;
+let total = 0;
 
 while (x &lt; 10) {
 	x++;
@@ -3061,9 +3062,9 @@ document.write('=' + total);</code></pre>
 	&lt;body&gt;
 		&lt;h1&gt;자리 배치도&lt;/h1&gt;
 		&lt;script&gt;
-			var i, j;
-			var memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
-			var colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
+			let i, j;
+			let memNum = prompt('입장객은 몇 명인가요?'); // 전체 입장객
+			let colNum = prompt('한 줄에 몇 명씩 앉습니까?'); // 한 줄에 앉을 사람
 
 			if (memNum % colNum == 0) rowNum = parseInt(memNum / colNum);
 			else rowNum = parseInt(memNum / colNum) + 1;
