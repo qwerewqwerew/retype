@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-08T05:00:22Z",
+  "created": "2023-09-10T11:35:44Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2776,10 +2776,22 @@
       "path": "3_js\\basic\\1.total\\2\\script\\if-2.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\2\\script\\loop-2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\loop.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\2\\script\\not.html"
     },
     {
       "path": "3_js\\basic\\1.total\\2\\script\\or.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\pyramid1.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\2\\script\\pyramid2.html"
     },
     {
       "path": "3_js\\basic\\1.total\\2\\script\\quiz-1.html"
@@ -2932,13 +2944,16 @@
       "path": "3_js\\basic\\1.total\\4\\script\\array-2.html"
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\array-3.html"
+      "path": "3_js\\basic\\1.total\\4\\script\\array-3.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\array-4.html"
+      "path": "3_js\\basic\\1.total\\4\\script\\array-4.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\array-5.html"
+      "path": "3_js\\basic\\1.total\\4\\script\\array-5.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\center-result.html"
@@ -3190,6 +3205,15 @@
       "path": "3_js\\basic\\1.total\\ppt\\2.pdf"
     },
     {
+      "path": "3_js\\basic\\2.partial\\array-3.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\array-4.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\array-5.html"
+    },
+    {
       "path": "3_js\\basic\\2.partial\\array\\index.html"
     },
     {
@@ -3407,6 +3431,9 @@
       "path": "5_projects\\4-testmonial\\media.zip"
     },
     {
+      "path": "categories\\array\\index.html"
+    },
+    {
       "path": "categories\\class\\index.html"
     },
     {
@@ -3552,6 +3579,18 @@
     },
     {
       "path": "source\\images\\js4-5.jpg"
+    },
+    {
+      "path": "source\\images\\js4-6.jpg"
+    },
+    {
+      "path": "source\\images\\js4-7.jpg"
+    },
+    {
+      "path": "source\\images\\js4-8.jpg"
+    },
+    {
+      "path": "source\\images\\js4-9.jpg"
     },
     {
       "path": "source\\images\\qr.png"

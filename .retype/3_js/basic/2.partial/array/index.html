@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.747464395681">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.747660931208">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
-    <title>1. 자료형</title>
-    <meta name="title" content="1. 자료형">
-    <meta name="description" content="반복문과 함께 쓰이는 배열자료형을 알아봅시다.">
+    <title>1. 배열</title>
+    <meta name="title" content="1. 배열">
+    <meta name="description" content="1. 배열">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/array/">
@@ -20,24 +20,26 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/array/">
-    <meta property="og:title" content="1. 자료형">
-    <meta property="og:description" content="반복문과 함께 쓰이는 배열자료형을 알아봅시다.">
+    <meta property="og:title" content="1. 배열">
+    <meta property="og:description" content="1. 배열">
+    <meta property="og:image" content="https://qwerewqwerew.github.io/retype/source/images/js4-6.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/3_js/basic/2.partial/array/">
-    <meta property="twitter:title" content="1. 자료형">
-    <meta property="twitter:description" content="반복문과 함께 쓰이는 배열자료형을 알아봅시다.">
+    <meta property="twitter:title" content="1. 배열">
+    <meta property="twitter:description" content="1. 배열">
+    <meta property="twitter:image" content="https://qwerewqwerew.github.io/retype/source/images/js4-6.jpg">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.2.0.747464395681" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.747660931208" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.747464395681" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.747660931208" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.747464395681" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.747464395681" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.747660931208" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.747660931208" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -332,40 +334,53 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="1-자료형" class="break-words">
+<ul>
+<li><doc-anchor-trigger to="#1-%EB%B0%B0%EC%97%B4">1. 배열</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#11-%EA%B0%9C%EC%9A%94">1.1. 개요</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#111-%EB%B0%B0%EC%97%B4%EC%9D%98-%EC%83%9D%EC%84%B1">1.1.1. 배열의 생성</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#112-%EB%B0%B0%EC%97%B4%EC%97%90-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%A9%94%EC%84%9C%EB%93%9C">1.1.2. 배열에 사용하는 메서드</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#1121-%EB%B0%B0%EC%97%B4%EB%B3%91%ED%95%A9">1.1.2.1. 배열병합</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#1122-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B0%B0%EC%97%B4-%EB%A9%94%EC%84%9C%EB%93%9C">1.1.2.2. 다양한 배열 메서드</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#11221-splice">1.1.2.2.1. splice()</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#11222-slice">1.1.2.2.2. slice()</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#113-%EC%A0%84%EA%B0%9C%EC%97%B0%EC%82%B0%EC%9E%90-spread-operator">1.1.3. 전개연산자 spread operator</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="1-배열" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-자료형">#</doc-anchor-trigger>
-        <span>1. 자료형</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-배열">#</doc-anchor-trigger>
+        <span>1. 배열</span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
     <div>In&nbsp;</div>
     <div><a href="../../../../categories/javascript/">javascript</a>,&nbsp;</div>
-    <div><a href="../../../../categories/partial/">partial</a></div>
+    <div><a href="../../../../categories/partial/">partial</a>,&nbsp;</div>
+    <div><a href="../../../../categories/array/">array</a></div>
 </div>
 
-<doc-anchor-target id="11-참조형">
+<doc-anchor-target id="11-개요">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-참조형">#</doc-anchor-trigger>
-        <span>1.1. 참조형</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-개요">#</doc-anchor-trigger>
+        <span>1.1. 개요</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="111-배열">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#111-배열">#</doc-anchor-trigger>
-        <span>1.1.1. 배열</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="1111-개요">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1111-개요">#</doc-anchor-trigger>
-        <span>1.1.1.1. 개요</span>
-    </h4>
-</doc-anchor-target>
 <blockquote>
-<p>반복문과 함께 쓰이는 배열자료형을 알아봅시다.</p>
+<p>자바스크립트에서의 배열은 객체 입니다.</p>
 <p>배열은 여러 값을 한공간에 저장할때 쓰입니다.</p>
 <p>배열은 한 반에 속한 여러 학생을 생각하면 됩니다.</p>
+<p><img src="../../../../source/images/js4-6.jpg" alt="그림으로 이해하는 배열" /></p>
 <p>이때 우리는 <strong>학급을 배열</strong>, <strong>학생을 요소 혹은 원소</strong> 라고 부릅니다.</p>
 <p>학교에서는 한반에 속한 여러 학생들의 관리하기 위해 학생들에게 번호를 부여합니다.</p>
 <p>이름으로 관리할 경우 동명이인이 있기도 하고 번호에 비해 효율성이 떨어지기 때문이지요.</p>
@@ -375,8 +390,27 @@
 <p>배열의 값(요소)은 문자,숫자,객체,함수 모든 자료형이 들어갈수 있습니다.</p>
 </blockquote>
 <p><strong class="red">배열은 값의 집합이다</strong></p>
+<doc-anchor-target id="111-배열의-생성">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#111-배열의-생성">#</doc-anchor-trigger>
+        <span>1.1.1. 배열의 생성</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li>array literal 의 사용
+<ol>
+<li><code v-pre class="red">[]</code></li>
+</ol>
+</li>
+<li>array object 의 사용
+<ol>
+<li><code v-pre class="red">Array()</code></li>
+</ol>
+</li>
+</ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">let srt = [];
+<pre class="language-javascript"><code v-pre class="language-javascript">//배열생성1
+let srt = [];
 str = '안녕하세요';
 document.write(str + '');
 document.write(str[2] + '');
@@ -407,28 +441,281 @@ var arr3 = new Array('zero', 'one', 'two');
 var arr4 = new Array(3);
 console.log(arr4);</code></pre>
 </doc-codeblock></div>
-<aside style='border:1px solid #ddd; padding:1rem; white-space:pre-wrap;background:#00bcd412;'>
-<h4>배열 다루기</h4>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">• 배열 생성하기: [요소, 요소, 요소, … , 요소]
+<doc-anchor-target id="112-배열에-사용하는-메서드">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#112-배열에-사용하는-메서드">#</doc-anchor-trigger>
+        <span>1.1.2. 배열에 사용하는 메서드</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="1121-배열병합">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1121-배열병합">#</doc-anchor-trigger>
+        <span>1.1.2.1. 배열병합</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="../array-3.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<ul>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>코드1</span>
+</span> <code v-pre class="red">concat()</code>
+<ul>
+<li>배열끼리 합치는 메서드</li>
+</ul>
+</li>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>코드2</span>
+</span> <code v-pre class="red">join()</code> :
+<ul>
+<li>배열내 요소를 합치는 메서드</li>
+</ul>
+</li>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>코드3</span>
+</span> <code v-pre class="red">push()</code> , <code v-pre class="red">unshift()</code>
+<ul>
+<li>새로운 요소를 추가하는 메서드</li>
+</ul>
+</li>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>코드4</span>
+</span> <code v-pre class="red">pop()</code>, <code v-pre class="red">shift()</code>
+<ul>
+<li>배열에서 요소를 꺼내는 메서드.<br />
+<strong>기존의 배열의 값이 변경됩니다.</strong></li>
+</ul>
+</li>
+</ul>
+</doc-tab>
+<doc-tab v-cloak id="코드1">
+<template #title>코드1</template>
+<ul>
+<li><code v-pre class="red">concat()</code> : 배열끼리 합치는 메서드
+<ul>
+<li>서로 다른 배열 2개를 합쳐서 새로운 배열을 반환합니다.</li>
+<li>어느 배열을 먼저 작성하는냐에 따라 기준이 달라지며 반환되는 배열의 순서도 달라집니다.</li>
+</ul>
+</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">concat()</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const nums = [1, 2, 3];
+const chars = ['a', 'b', 'c', 'd'];
 
-•  배열 요소에 접근하기: 배열[인덱스]
-
-•  배열 요소 개수 확인하기: 배열.length
-
-•  배열 뒷부분에 요소 추가하기: 배열.push(요소)
-
-•  배열 특정 위치에 요소 추가하기: 배열.splice(인덱스, 0, 요소)
-
-•  배열 요소 제거하기:
-
-	•  인덱스로 제거하기: 배열.splice( 인덱스, 제거할 요소의 개수)
-
-	•  값으로 요소 제거하기: const 인덱스 = 배열.indexOf(요소)
-
-	•  배열.splice(인덱스, 1)</code></pre>
+// 두 개의 배열 합치기
+const numsChars = nums.concat(chars);
+const charsNums = chars.concat(nums);
+document.write(`nums+chars: ${numsChars} &lt;br&gt; chars+nums:${charsNums} &lt;hr&gt; }`);</code></pre>
 </doc-codeblock></div>
-</aside>
+</doc-tab>
+<doc-tab v-cloak id="코드2">
+<template #title>코드2</template>
+<ul>
+<li><code v-pre class="red">join()</code> : 배열내 요소를 합치는 메서드
+<ul>
+<li>배열 요소를 연결해 하나의 문자열로 만듭니다.</li>
+<li>이떄 각 요소사이에 원하는 구분자를 넣을수도 있는데 별도로 지정하지 않을경우 쉼표로 구분합니다.</li>
+</ul>
+</li>
+</ul>
+<p><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M20.322.75h1.176a1.75 1.75 0 0 1 1.75 1.749v1.177a10.75 10.75 0 0 1-2.925 7.374l-1.228 1.304a23.699 23.699 0 0 1-1.596 1.542v5.038c0 .615-.323 1.184-.85 1.5l-4.514 2.709a.75.75 0 0 1-1.12-.488l-.963-4.572a1.305 1.305 0 0 1-.14-.129L8.04 15.96l-1.994-1.873a1.305 1.305 0 0 1-.129-.14l-4.571-.963a.75.75 0 0 1-.49-1.12l2.71-4.514c.316-.527.885-.85 1.5-.85h5.037a23.668 23.668 0 0 1 1.542-1.594l1.304-1.23A10.753 10.753 0 0 1 20.321.75Zm-6.344 4.018v-.001l-1.304 1.23a22.275 22.275 0 0 0-3.255 3.851l-2.193 3.29 1.859 1.744a.545.545 0 0 1 .034.034l1.743 1.858 3.288-2.192a22.263 22.263 0 0 0 3.854-3.257l1.228-1.303a9.251 9.251 0 0 0 2.517-6.346V2.5a.25.25 0 0 0-.25-.25h-1.177a9.252 9.252 0 0 0-6.344 2.518ZM6.5 21c-1.209 1.209-3.901 1.445-4.743 1.49a.236.236 0 0 1-.18-.067.236.236 0 0 1-.067-.18c.045-.842.281-3.534 1.49-4.743.9-.9 2.6-.9 3.5 0 .9.9.9 2.6 0 3.5Zm-.592-8.588L8.17 9.017c.23-.346.47-.685.717-1.017H5.066a.25.25 0 0 0-.214.121l-2.167 3.612ZM16 15.112c-.333.248-.672.487-1.018.718l-3.393 2.262.678 3.223 3.612-2.167a.25.25 0 0 0 .121-.214ZM17.5 8a1.5 1.5 0 1 1-3.001-.001A1.5 1.5 0 0 1 17.5 8Z"/></g></g></svg> 상수 nums와 chars의 초기화는 코드 1의 반복으로 생략합니다.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">join()</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const string1 = nums.join();
+document.write(`구분자 없이 : ${string1}&lt;br&gt;`);
+const string2 = chars.join('/');
+document.write(`/ 구분자 지정 : ${string2}&lt;hr&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="코드3">
+<template #title>코드3</template>
+<ul>
+<li><code v-pre class="red">push()</code> : 새로운 length 값 반환 - 배열끝에 추가</li>
+<li><code v-pre class="red">unshift()</code> : 새로운 length 값 반환 - 배열앞에 추가
+<ul>
+<li>배열에 새로운 요소를 추가하려면 push() 나 unshift()를 사용합니다.</li>
+<li><strong>두 메서드를 사용하면 원래 배열의 값이 변경된다는 점에 유의해야 합니다.</strong></li>
+</ul>
+</li>
+</ul>
+<p>상수 nums와 chars 는 코드 1의 반복으로 생략합니다.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">push(), unshift()</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">// 요소 추가 - 새로운 length 값 반환
+const ret1 = nums.push(4, 5); // 배열 끝에 추가
+document.write(`length: ${ret1} | 새로 태어난배열 nums :  ${nums} &lt;br&gt;`);
+const ret2 = nums.unshift(0); // 배열 앞에 추가
+document.write(`length: ${ret2} | 새로 태어난배열 nums :  ${nums} &lt;hr&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="코드4">
+<template #title>코드4</template>
+<ul>
+<li><code v-pre class="red">pop()</code>
+<ul>
+<li>배열 뒤에서 요소를 꺼낼때</li>
+</ul>
+</li>
+<li><code v-pre class="red">shift()</code>
+<ul>
+<li>배열 앞에서 요소를 꺼낼때</li>
+</ul>
+</li>
+</ul>
+<p><em>기존의 배열의 값이 변경됩니다.</em></p>
+<p>상수 nums와 chars 는 코드 1의 반복으로 생략합니다.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">pop(),shift()</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">// 요소 추출 - 꺼낸 요소 반환
+const popped1 = chars.pop(); // 마지막 요소 꺼냄
+document.write(`꺼낸 요소 : ${popped1}  | 배열 : ${chars} &lt;br&gt;`);
+const popped2 = chars.shift(); // 첫번째 요소 꺼냄
+document.write(`꺼낸 요소 : ${popped2}  | 배열 : ${chars} &lt;hr&gt;`);</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="1122-다양한-배열-메서드">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1122-다양한-배열-메서드">#</doc-anchor-trigger>
+        <span>1.1.2.2. 다양한 배열 메서드</span>
+    </h4>
+</doc-anchor-target>
+<doc-anchor-target id="11221-splice">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11221-splice">#</doc-anchor-trigger>
+        <span>1.1.2.2.1. splice()</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="../array-4.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<ul>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>코드1</span>
+</span> <code v-pre class="red">splice()</code>
+<ul>
+<li>원하는 위치에 요소를 추가, 삭제하는 메서드 입니다</li>
+<li>함수에 인수를 몇개 넣는가에 따라 기능이 달라집니다.</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><span class="docs-emoji">&#x1F517;</span>MDN</a></li>
+</ul>
+</li>
+</ul>
+</doc-tab>
+<doc-tab v-cloak id="코드1">
+<template #title>코드1</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">splice()</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const numbers = [1, 2, 3, 4, 5];
+const newNumbers = numbers.splice(2);
+document.write(`반환된 배열 : ${newNumbers} &lt;br&gt; 변경된 배열 : ${numbers} &lt;hr&gt;`);</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>인수가 1개인 경우
+<ul>
+<li><code v-pre>numbers.splice(2);</code> : 괄호안의 2는 배열의 인덱스 값을 가리킵니다.해당 코드는 인덱스값이 2인 요소부터 마지막 요소까지 모두 삭제 합니다.</li>
+<li>반환된 배열은 인덱스 번호 2~마지막까지의 값이 반환되며</li>
+<li>변경된 배열은 인덱스 번호 0~1 에 해당하는 값이 반환됩니다.</li>
+<li><strong>splice 메서드는 배열의 중간에 요소를 추가/삭제 할수 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+</doc-tab>
+<doc-tab v-cloak id="코드2">
+<template #title>코드2</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">splice()</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const study = ['html', 'css', 'web', 'jquery'];
+const newStudy = study.splice(2, 1);
+document.write(`반환된 배열 : ${newStudy} &lt;br&gt; 변경된 배열 : ${study} &lt;hr&gt;`);</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>인수가 2개인 경우
+<ul>
+<li>인수가 2개일경우 첫번째 인수는 인덱스 값이고 두번째 인수는 삭제할 요소의 갯수입니다.</li>
+<li><code v-pre>study.splice(2, 1);</code> : 인덱스가 2인 web 부터 1개의 요소를 삭제합니다..</li>
+<li>반환된 배열은 인덱스 번호 2이며 1개인 web입니다.</li>
+<li>변경된 배열은 인덱스 번호 0~1 에 해당하는 값이 반환됩니다.</li>
+<li><strong>splice 메서드는 배열의 중간에 요소를 추가/삭제 할수 있습니다.</strong></li>
+</ul>
+</li>
+</ul>
+</doc-tab>
+<doc-tab v-cloak id="코드3">
+<template #title>코드3</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">splice()</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const newStudy2 = study.splice(2, 1, 'js');
+document.write(`반환된 배열 : ${newStudy2} &lt;br&gt; 변경된 배열 : ${study} &lt;hr&gt;`);</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>인수가 3개 이상일 경우
+<ul>
+<li>인수가 3개 이상일 경우 첫번째 인수는 배열에서 삭제할 시작위치를 나타내고 두번째 인수는 삭제할 갯수를 알려줍니다. 그리고 세번째 인수부터는 삭제한 위치에 새로 추가할 요소를 지정합니다.</li>
+<li><code v-pre>const newStudy2 = study.splice(2, 1, 'js');</code> : 인덱스 값이 2인 jquery 1개를 삭제하고 js를 추가합니다.</li>
+<li>jquery 자리에 js를 확인할수 있습니다.</li>
+</ul>
+</li>
+</ul>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="11222-slice">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11222-slice">#</doc-anchor-trigger>
+        <span>1.1.2.2.2. slice()</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="../array-5.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a><br />
+기존배열을 변경하지 않으면서 요소를 꺼냅니다.</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">This is Tab 1</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const colors = ['red', 'green', 'blue', 'white', 'black'];
+const colors2 = colors.slice(2); //인덱스 2부터 끝까지
+document.write(`${colors2} &lt;br&gt;`);
+const colors3 = colors.slice(2, 4); // 인덱스 2,3
+document.write(colors3);</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><code v-pre>pop()</code>, <code v-pre>shift()</code> 처럼 요소에서 값을 꺼내지만 원본 배열을 변경하지 않습니다.</li>
+</ul>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="113-전개연산자-spread-operator">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#113-전개연산자-spread-operator">#</doc-anchor-trigger>
+        <span>1.1.3. 전개연산자 spread operator</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+    <span>기본형</span>
+</span> <code v-pre class="red">...</code>
+<ul>
+<li>전개연산자는 메서드가 아니며 배열이나 객체와 같은 iterable한 데이터를 편리하게 다룰 수 있도록 도와주는 문법입니다.</li>
+<li>배열이나 객체의 값을 펼쳐서 꺼내어 주는 operator 입니다.</li>
+</ul>
+</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const arr = [1, 2, 3];
+console.log(...arr); // 1 2 3</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+const arr4 = [arr1, arr2];
+console.log(arr3); // [1, 2, 3, 4, 5, 6]
+console.log(arr4);</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -495,6 +782,6 @@ console.log(arr4);</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "1. 자료형", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "1. 배열", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

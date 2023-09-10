@@ -66,16 +66,12 @@ category:
 			- [4.4.1.1. for-예제\[28\]](#4411-for-예제28)
 			- [4.4.1.2. for-예제\[29\]](#4412-for-예제29)
 			- [4.4.1.3. 중첩 for-예제\[30\]](#4413-중첩-for-예제30)
-			- [4.4.1.4. 배열과 함께 사용하는 for in](#4414-배열과-함께-사용하는-for-in)
-			- [4.4.1.5. 배열과 함께 사용하는 for of](#4415-배열과-함께-사용하는-for-of)
-		- [4.4.2. while](#442-while)
-			- [4.4.2.1. while-예제\[33\]](#4421-while-예제33)
-			- [4.4.2.2. while-예제\[34\]](#4422-while-예제34)
-		- [4.4.3. do~while](#443-dowhile)
-			- [4.4.3.1. do~while-예제\[35\]](#4431-dowhile-예제35)
-		- [4.4.4. break/continue](#444-breakcontinue)
-			- [4.4.4.1. break/continue-예제](#4441-breakcontinue-예제)
-	- [4.5. 마무리문제-\[38\]](#45-마무리문제-38)
+			- [4.4.1.4. 중첩 for-예제\[31\]](#4414-중첩-for-예제31)
+			- [4.4.1.5. 반복문 종합예제-\[32\]](#4415-반복문-종합예제-32)
+			- [4.4.1.6. 반복문과 dom 조작-\[33\]](#4416-반복문과-dom-조작-33)
+		- [4.4.2. break/continue](#442-breakcontinue)
+			- [4.4.2.1. break/continue-예제](#4421-breakcontinue-예제)
+	- [4.5. 마무리문제-\[36\]](#45-마무리문제-36)
 - [5. 마무리문제](#5-마무리문제)
 
 ---
@@ -140,7 +136,10 @@ let letiable = '변수';
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>나이 계산하기</title>
 	</head>
 	<body></body>
@@ -155,7 +154,10 @@ let letiable = '변수';
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>나이 계산하기</title>
 	</head>
 	<body>
@@ -798,6 +800,7 @@ if (hour > 12) {
 	document.querySelector('body').style.color = 'white';
 }
 ```
+
 +++
 
 > if문은 조건이 true 일때만 실행할수 있으므로 false 일때도 명령을 하려면 실행문을 두번 작성해야 하는 번거로움이 있습니다.<br>
@@ -979,7 +982,10 @@ OR 연산자를 사용하여 50보다 작은 숫자 2개를 입력받아 둘 중
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>조건문</title>
 	</head>
 	<body>
@@ -1113,9 +1119,15 @@ switch 문을 이용해 session 값을 체크하여 입력받은 값이
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>세션 선택 - switch문</title>
-		<link rel="stylesheet" href="css/switch.css" />
+		<link
+			rel="stylesheet"
+			href="css/switch.css"
+		/>
 	</head>
 	<body>
 		<script>
@@ -1251,7 +1263,7 @@ document.write('1부터 5까지 더하면 ' + sum);
 [!badge letiant='primary' size='m' text='기본형']
 
 ```js
-		// 1 ,  2   , 4     ,  3
+// 1 ,  2   , 4     ,  3
 for (초기값; 조건; 증가식) {
 	실행문;
 }
@@ -1322,10 +1334,9 @@ div h3 {
 ```js #4,8
 let i, j;
 for (i = 1; i <= 9; i++) {
-	document.write('<div>');
-	document.write('<h3>' + i + '단</h3>');
+	document.write(`<div><h3>${i}단</h3>`);
 	for (j = 1; j <= 9; j++) {
-		document.write(i + ' X ' + j + ' = ' + i * j + '<br>');
+		document.write(`${i}X${j}=${i * j}<br>`);
 	}
 	document.write('</div>');
 	if (i === 3) break;
@@ -1334,156 +1345,205 @@ for (i = 1; i <= 9; i++) {
 
 +++
 
-###### 4.4.1.4. 배열과 함께 사용하는 for in
+###### 4.4.1.4. 중첩 for-예제[31]
 
-[:link: 배열학습하기](../../2.partial/array.md) [31]
-
-```js [32]
-const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업']
-for (const i in todos) {
-document.write(`
-${i}번째 할 일: ${todos[i]}`)
-
-```
-
-###### 4.4.1.5. 배열과 함께 사용하는 for of
-
-```js [32]
-const todos = ['우유구매', '업무 메일 확인하기', '필라테스 수업'];
-for (const todo of todos) {
-	document.write(`
-오늘의 할 일: ${todo}`);
-}
-```
-
-##### 4.4.2. while
-
-while문은 조건이 true인 동안 실행문을 반복 합니다.
-조건을 먼저 체크한 후 실행하기 때문에 조건이 false 라면 한번도 실행하지 않을수도 있습니다.
-
-[!badge letiant='primary' size='m' text='기본형']
-
-```js
-while (조건) {
-	실행문;
-}
-```
-
-###### 4.4.2.1. while-예제[33]
-
-+++ 지시문
-while 문을 사용하여 1부터 10까지 반복하여 출력해봅시다
-+++ 코드
-[:icon-play:](./script/while.html)
-
-```js #
-let i = 1; //초기값
-while (i <= 10) {
-	document.write(i + '<br />');
-	i++;
-}
-```
-
-+++ 설명
++++ 별찍기1
+[:icon-play:](./script/pyramid1.html)
++++ 별찍기2
+[:icon-play:](./script/pyramid2.html)
 +++
 
-###### 4.4.2.2. while-예제[34]
+###### 4.4.1.5. 반복문 종합예제-[32]
 
-+++ 지시문
-while 문을 사용하여 1부터 10까지의 합을 계산해보세요
-+++ 코드
-[:icon-play:](./script/while2.html)
+==- Code
+[:icon-play:](./script/loop.html)
 
-```js #
-let x = 0;
-let total = 0;
-while (x < 10) {
-	x++;
-	total = total + x; //total+=x
-	document.write(x);
-	if (x != 10) document.write('+');
-}
-document.write('=' + total);
+```html #
+ <h1>반복문</h1>
+  <h2>for</h2>
+  <div id="for"></div>
+  <hr>
+  <h2>forEach</h2>
+  <div id="foreach"></div>
+  <hr>
+  <h2>for of</h2>
+  <div id="forof"></div>
+  <hr>
+  <h2>for in</h2>
+  <div id="forin"></div>
+  <hr>
+  <h2>do / while</h2>
+  <div id="dowhile"></div>
+  <script>
+    var foods = ["떡볶이", "순대", "오뎅"];
+    for (var i = 0; i < foods.length; i++) {
+      document.getElementById("for").innerHTML += i + " : " + foods[i] + "<br>";
+    }
+
+    //foreach -> 배열에만 사용 인자의 첫번째는 요소, 두번째는 인덱스번호
+    foods.forEach(function myFunction(item, index) {
+      document.getElementById("foreach").innerHTML += index + " : " + item + "<br>";
+    });
+
+    // for of
+    for (var x of foods) {
+      document.getElementById("forof").innerHTML += x + "<br>";
+    }
+
+    //for in
+    for (var j in foods) {
+      document.getElementById("forin").innerHTML += j + " : " + foods[j] + "<br>";
+    }
+
+    //do / while(~하는동안)
+    var d = 0;
+    do {
+      document.getElementById("dowhile").innerHTML += foods[d] + "<br>";
+      d++;
+    }
+    while (d < foods.length);
+		/* while 안의 조건이 참인동안 do를 실행 */
+  </script>
+</body>
 ```
 
-+++ 설명
-`let x = 0과 let total = 0` : 변수 x와 total을 선언하고 각각 초기값으로 0을 할당합니다.
+===
 
-`while (x < 10) {...}` : while 반복문을 사용하여 조건식인 x < 10이 참인 동안 아래의 코드 블록이 반복 실행됩니다.
+###### 4.4.1.6. 반복문과 dom 조작-[33]
 
-`x++`: 반복문 내에서 x 값을 증가시킵니다. 이는 x 값을 1씩 증가시키는 역할을 합니다.
+==- Code
+[:icon-play:](./script/loop-2.html)
 
-`total = total + x` : total 변수에 현재의 x 값을 더해줍니다. 이로써 각 숫자들이 계속해서 누적되어 더해지게 됩니다.
+```html #
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
 
-`document.write(x)` : 현재의 x 값을 웹 페이지에 출력합니다.
+	<body>
+		<h1>반복문</h1>
 
-`if (x != 10) document.write("+")` : 만약 현재의 x 값이 10이 아니라면 "+" 문자를 웹 페이지에 출력합니다.
+		<h2>for</h2>
+		<ul class="menu1">
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+		</ul>
+		<hr />
+		<h2>foreach</h2>
+		<ul class="menu2">
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+		</ul>
+		<hr />
+		<h2>for in</h2>
+		<ul class="menu3">
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+		</ul>
+		<hr />
+		<h2>do / while</h2>
+		<ul class="menu4">
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+		</ul>
+		<hr />
 
-숫자 사이에 `+` 문자를 출력하기 위한 것으로 마지막 숫자는 출력되지 않게 조건을 작성했습니다.
+		<script>
+			var menu1 = document.querySelectorAll('.menu1 li');
+			var menu2 = document.querySelectorAll('.menu2 li');
+			var menu3 = document.querySelectorAll('.menu3 li');
+			var menu4 = document.querySelectorAll('.menu4 li');
+			//반복문을 이용하여 리스트의 색상을 blue로 변경한다.
 
-반복문이 종료되면, "=`" 문자열과 함께 total 변수의 값을 웹 페이지에 출력합니다.
+			// for
+			for (i = 0; i < menu1.length; i++) {
+				menu1[i].style.color = 'blue';
+			}
+			// forEach
+			menu2.forEach((element) => {
+				element.style.color = 'blue';
+			});
+			//for of
+			for (var k of menu3) {
+				console.log(menu3, k);
+				k.style.color = 'blue';
+			}
+			//do / while
+			let y = 0;
+			do {
+				menu4[y].style.color = 'blue';
+				y++;
+			} while (y < menu4.length);
 
-"1+2+3+4...=" 과 같은 형태로 시작하여, 마지막으로 계산된 total 값(55)을 추가로 표시합니다.
-+++
+			//이벤트연결
+			//menu1[0].addEventListener('click',()=>{})
+			//menu1[1].addEventListener('click',()=>{})
+			// for
+			for (i = 0; i < menu1.length; i++) {
+				menu1[i].addEventListener('mouseover', function () {
+					this.style.color = 'red';
+				});
+				menu1[i].addEventListener('mouseout', function () {
+					this.style.color = 'blue';
+				});
+			}
+			//for of
+			for (var a of menu3) {
+				a.addEventListener('mouseover', function () {
+					this.style.color = 'red';
+				});
+				a.addEventListener('mouseout', function () {
+					this.style.color = 'blue';
+				});
+			}
 
-##### 4.4.3. do~while
+			// forEach
+			menu2.forEach((element, index) => {
+				menu2[index].addEventListener('mouseover', function () {
+					this.style.color = 'red';
+				});
+				menu2[index].addEventListener('mouseout', function () {
+					this.style.color = 'blue';
+				});
+			});
 
-기본적으로 while 문과 같이 조건을 체크하여 반복하는 반복문 입니다.
-
-하지만 do~while은 실행후 조건을 체크하기 때문에 조건이 false 라도 무조건 한번은 실행합니다.
-
-[!badge letiant='primary' size='m' text='기본형']
-
-```js
-do {
-	실행문;
-} while (조건);
+			//do / while
+			let z = 0;
+			do {
+				menu4[z].addEventListener('mouseover', function () {
+					this.style.color = 'red';
+				});
+				menu4[z].addEventListener('mouseout', function () {
+					this.style.color = 'blue';
+				});
+				z++;
+			} while (z < menu4.length);
+		</script>
+	</body>
+</html>
 ```
 
-###### 4.4.3.1. do~while-예제[35]
+===
 
-+++ 지시문
-
-do~while 문으로 사용자로부터 숫자를 입력받아서 1부터 해당 숫자까지의 합을 계산하고 출력하는 프로그램을 작성해 봅시다
-
-+++ 코드
-[:icon-play:](./script/while3.html)
-
-```js #
-let number;
-let sum = 0;
-
-do {
-	number = parseInt(prompt('숫자를 입력하세요:'));
-	sum += number;
-} while (!isNaN(number));
-
-document.write('입력한 숫자들의 합은 ' + sum + '입니다.');
-```
-
-+++설명
-
-1.  `let number; let sum = 0;`: 변수 number와 sum을 선언하고 초기값으로 각각 undefined와 0을 할당합니다.
-
-2.  `do { ... } while (isNaN(number));`: do-while 반복문을 사용하여 중괄호 안의 코드 블록이 최소한 한 번 실행되도록 합니다. 이후 조건식인 isNaN(number)가 참인 동안 반복문이 계속 실행됩니다.
-
-        isNaN(number)는 입력된 값(number)이 NaN(숫자가 아님)인지 확인하는 조건입니다.
-
-`number = prompt("숫자를 입력하세요:");`: 사용자에게 '숫자를 입력하세요'라는 메시지와 함께 대화상자를 표시하고, 사용자가 입력한 값을 문자열로 받아 변수 number에 저장합니다.
-
-for 반복문을 사용하여 1부터 해당 숫자까지의 합(sum)을 계산합니다.
-
-반복문의 시작값은 1부터 시작하며, 종료 조건은 parseInt() 함수를 통해 문자열로 받은 숫자(number)로 변환하여 설정됩니다.
-
-매번 반복할 때마다 현재의 값을 누적하여 (+=) 변수 sum에 더해줍니다. `sum=sum+number` 과 같습니다.
-
-반복문 종료 후, "입력한 숫자들의 합은 x입니다."라는 메시지를 웹 페이지에 출력합니다.
-
-여기서 x는 루프에서 계산된 총합(sum) 값입니다.
-
-+++
-
-##### 4.4.4. break/continue
+##### 4.4.2. break/continue
 
 반복문의 실행문들은 수행과정에서 break문을 만나면 해당 반복문을 종료합니다.
 break문은 반복문 등을 정지시킬 때에 사용합니다.
@@ -1503,9 +1563,9 @@ break
 continue
 ```
 
-###### 4.4.4.1. break/continue-예제
+###### 4.4.2.1. break/continue-예제
 
-+++ 코드[36]
++++ 코드[34]
 [!badge letiant='contrast' size='xl' text='34-break']
 
 ```js #
@@ -1522,7 +1582,7 @@ for (let i = 0; true; i++) {
 alert('프로그램 종료');
 ```
 
-+++ 코드[37]
++++ 코드[35]
 [!badge letiant='contrast' size='xl' text='35-continue']
 
 ```js #
@@ -1544,7 +1604,7 @@ document.write('=' + total);
 
 +++
 
-#### 4.5. 마무리문제-[38]
+#### 4.5. 마무리문제-[36]
 
 +++ 지시문
 자리배치도를 만드세요
@@ -1560,7 +1620,10 @@ document.write('=' + total);
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>자리 배치도</title>
 		<style>
 			table,
