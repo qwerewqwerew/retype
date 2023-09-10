@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747464490019">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.0.747660965085">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.3.0">
+    <meta name="generator" content="Retype 3.4.0">
 
     <!-- Primary Meta Tags -->
     <title>4. 객체 </title>
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.3.0.747464490019" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.4.0.747660965085" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.3.0.747464490019" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.3.0.747464490019" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.3.0.747464490019" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.4.0.747660965085" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.4.0.747660965085" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.4.0.747660965085" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -350,10 +350,44 @@
 <ul>
 <li><doc-anchor-trigger to="#21-array%EA%B0%9D%EC%B2%B4">2.1. Array객체</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#22-array%EA%B0%9D%EC%B2%B4%EB%A1%9C-%EB%B0%B0%EC%97%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%98%88%EC%A0%9C-03">2.2. Array객체로 배열 만들기-예제-[03]</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#array-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%A9%94%EC%84%9C%EB%93%9C-method">Array 객체의 메서드 (method)</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#23-array-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%A9%94%EC%84%9C%EB%93%9C-method">2.3. Array 객체의 메서드 (method)</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#231-%EB%B0%B0%EC%97%B4%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90">2.3.1. 배열에 대해 알아보자</doc-anchor-trigger></li>
 </ul>
 </li>
-<li><doc-anchor-trigger to="#3-bom%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EA%B0%9D%EC%B2%B4">3. BOM(브라우저객체)</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#24-date%EA%B0%9D%EC%B2%B4-04">2.4. Date객체-[04]</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#241-%ED%98%84%EC%9E%AC%EB%82%A0%EC%A7%9C%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0">2.4.1. 현재날짜출력하기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#242-%ED%8A%B9%EC%A0%95%EB%82%A0%EC%A7%9C%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0">2.4.2. 특정날짜출력하기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#243-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EB%82%A0%EC%A7%9C%EC%8B%9C%EA%B0%84-%EC%9E%85%EB%A0%A5%EB%B0%A9%EC%8B%9D">2.4.3. 자바스크립트의 날짜,시간 입력방식</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#244-date-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%A9%94%EC%84%9C%EB%93%9C">2.4.4. Date 객체의 메서드</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#245-%EB%82%A0%EC%A7%9C%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EB%A7%8C%EB%93%A4%EA%B8%B0">2.4.5. 날짜계산하는 프로그램 만들기</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#25-math-%EA%B0%9D%EC%B2%B4-05">2.5. Math 객체-[05]</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#251-math%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0">2.5.1. Math객체의 프로퍼티</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#252-math%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%A9%94%EC%84%9C%EB%93%9C">2.5.2. Math객체의 메서드</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#2521-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%8B%B9%EC%B2%A8%EC%9E%90%EB%BD%91%EA%B8%B0%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EB%A7%8C%EB%93%A4%EA%B8%B0">2.5.2.1. 이벤트당첨자뽑기프로그램만들기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#2522-%EB%AC%B8%EC%A0%9C-%EC%97%AC%EB%9F%AC%EB%AA%85%EC%9D%98-%EB%8B%B9%EC%B2%A8%EC%9E%90%EB%A5%BC-%EB%BD%91%EC%95%84%EC%A3%BC%EC%84%B8%EC%9A%94">2.5.2.2. 문제: 여러명의 당첨자를 뽑아주세요</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#3-bom%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EA%B0%9D%EC%B2%B4">3. BOM(브라우저객체)</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#31-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EA%B4%80%EB%A0%A8-%EC%A3%BC%EC%9A%94-%EB%82%B4%EC%9E%A5%EA%B0%9D%EC%B2%B4">3.1. 브라우저관련 주요 내장객체</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#32-window-%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0">3.2. window 객체의 프로퍼티</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#33-window%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%A9%94%EC%84%9C%EB%93%9C">3.3. window객체의 메서드</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#331-open">3.3.1. open()</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <doc-anchor-target id="1-객체의-이해">
     <h2>
@@ -474,7 +508,10 @@ Date 객체를 꺼내어 사용시 객체 자체를 사용하면 안되고 인�
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;meta
+			name=&quot;viewport&quot;
+			content=&quot;width=device-width, initial-scale=1.0&quot;
+		/&gt;
 		&lt;title&gt;What time is it?&lt;/title&gt;
 		&lt;style&gt;
 			body {
@@ -564,10 +601,10 @@ for (i = 0; i &lt; numbers.length; i++) {
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
-<doc-anchor-target id="array-객체의-메서드-method">
+<doc-anchor-target id="23-array-객체의-메서드-method">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#array-객체의-메서드-method">#</doc-anchor-trigger>
-        <span>Array 객체의 메서드 (method)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#23-array-객체의-메서드-method">#</doc-anchor-trigger>
+        <span>2.3. Array 객체의 메서드 (method)</span>
     </h3>
 </doc-anchor-target>
 <p>Array 객체는 많은 메서드를 가지고 있습니다. 이중 주요 메서드를 정리했습니다.</p>
@@ -667,22 +704,608 @@ for (i = 0; i &lt; numbers.length; i++) {
 <td>배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.</td>
 </tr>
 <tr>
-<td><code v-pre>lastIndexOf()</code></td>
-<td>배열에서 지정된 요소를 찾을 수 있는 마지막 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.</td>
-</tr>
-<tr>
 <td><code v-pre>fill()</code></td>
 <td>array의 시작 인덱스부터 끝 인덱스까지 정적인 값 하나로 채웁니다.</td>
 </tr>
 </tbody>
 </table>
 </div>
+<doc-anchor-target id="231-배열에-대해-알아보자">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#231-배열에-대해-알아보자">#</doc-anchor-trigger>
+        <span>2.3.1. 배열에 대해 알아보자</span>
+    </h4>
+</doc-anchor-target>
+<p><a href="../../2.partial/array/"><span class="docs-emoji">&#x1F517;</span>배열</a></p>
+<doc-anchor-target id="24-date객체-04">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#24-date객체-04">#</doc-anchor-trigger>
+        <span>2.4. Date객체-[04]</span>
+    </h3>
+</doc-anchor-target>
+<p>Date 객체는 날짜와 시간정보를 나타낼수 있습니다.</p>
+<doc-anchor-target id="241-현재날짜출력하기">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#241-현재날짜출력하기">#</doc-anchor-trigger>
+        <span>2.4.1. 현재날짜출력하기</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">//Date 객체로 현재 날짜 나타내기
+new Date();
+console.log(new Date());</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="242-특정날짜출력하기">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#242-특정날짜출력하기">#</doc-anchor-trigger>
+        <span>2.4.2. 특정날짜출력하기</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let date = new Date('2020-02-25');
+console.log(date);
+date = new Date('2020-02-25T18:00:00');
+console.log(date);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="243-자바스크립트의-날짜시간-입력방식">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#243-자바스크립트의-날짜시간-입력방식">#</doc-anchor-trigger>
+        <span>2.4.3. 자바스크립트의 날짜,시간 입력방식</span>
+    </h4>
+</doc-anchor-target>
+<p>Date 객체를 사용하여 날짜와 시간을 지정하려면 자바스크립트가 인식할수 있는 날짜와 시간 형식으로 작성해야 합니다.<br />
+자바스크립트에서 주로 사용하는 날짜와 시간 입력 방식을 알아보겠습니다.</p>
+<p><strong><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.497 1.497 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1Zm0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></g></g></svg> 날짜 입력형식의 <code v-pre>YYYY</code> 는 <code v-pre>연도</code>를 <code v-pre>MM</code> 은 <code v-pre>월</code>을 <code v-pre>DD</code>는 <code v-pre>일</code>을 시간 입력형식에서 <code v-pre>HH</code>는 <code v-pre>시</code>, <code v-pre>MM</code>은 <code v-pre>분</code> , <code v-pre>SS</code>는 <code v-pre>초</code> 를 뜻합니다.</strong></p>
+<ol>
+<li><code v-pre class="red">YYYY-MM-DD</code></li>
+<li><code v-pre class="red">YYYY-MM-DDTHH</code><br />
+...</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">/* YYYY-MM-DD */
+let date = new Date('2020');
+console.log(date);
+date = new Date('2020-02');
+console.log(date);
+date = new Date('2020-03');
+console.log(date);
+
+/* YYYY-MM-DDTHH */
+date = new Date('2020-03T18:00:00');
+console.log(date);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="244-date-객체의-메서드">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#244-date-객체의-메서드">#</doc-anchor-trigger>
+        <span>2.4.4. Date 객체의 메서드</span>
+    </h4>
+</doc-anchor-target>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Methods_2"><span class="docs-emoji">&#x1F517;</span>MDN</a></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>getDate()</code></td>
+<td>일(day)을 반환합니다. (from 1-31)</td>
+</tr>
+<tr>
+<td><code v-pre>getDay()</code></td>
+<td>Returns the day of the week (from 0-6)</td>
+</tr>
+<tr>
+<td><code v-pre>getFullYear()</code></td>
+<td>연도(year)를 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>getHours()</code></td>
+<td>시간(hours)을 반환합니다.(from 0-23)</td>
+</tr>
+<tr>
+<td><code v-pre>getMinutes()</code></td>
+<td>분(minutes)을 반환합니다.(from 0-59)</td>
+</tr>
+<tr>
+<td><code v-pre>getMonth()</code></td>
+<td>월(month)을 반환합니다. 0부터 시작하며, 0은 1월을 나타냅니다.</td>
+</tr>
+<tr>
+<td><code v-pre>getSeconds()</code></td>
+<td>초(seconds)를 반환합니다. (from 0-59)</td>
+</tr>
+<tr>
+<td><code v-pre>toLocaleString()</code></td>
+<td>현재 날짜와 시간을 현지 시간으로 표시합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>toString()</code></td>
+<td>Date 객체 타입을 문자열로 표시합니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="245-날짜계산하는-프로그램-만들기">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#245-날짜계산하는-프로그램-만들기">#</doc-anchor-trigger>
+        <span>2.4.5. 날짜계산하는 프로그램 만들기</span>
+    </h4>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/day-result.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a><br />
+날짜를 계산하는 프로그램을 만들어 보겠습니다.</p>
+</doc-tab>
+<doc-tab v-cloak id="코드">
+<template #title>코드</template>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>HTML</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>CSS</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div id=&quot;container&quot;&gt;
+	&lt;h1&gt;책 읽기&lt;/h1&gt;
+	&lt;p&gt;
+		&lt;span
+			class=&quot;accent&quot;
+			id=&quot;result&quot;
+		&gt;&lt;/span
+		&gt;일 연속으로 &lt;br /&gt;
+		책 읽기를 달성했군요.
+	&lt;/p&gt;
+	&lt;p&gt;축하합니다!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">#container {
+	margin: 50px auto;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: 2px double #222;
+	background-color: #d8f0fc;
+	text-align: center;
+}
+h1 {
+	margin-top: 80px;
+}
+.accent {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: red;
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="25-math-객체-05">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#25-math-객체-05">#</doc-anchor-trigger>
+        <span>2.5. Math 객체-[05]</span>
+    </h3>
+</doc-anchor-target>
+<p>수학 계산과 관련된 메서드가 많이 포함되어 있는 객체입니다.<br />
+난수생성이나 반올림 계산을 해야 할 경우 많이 사용합니다.<br />
+Math 객체는 별도의 인스턴스를 생성하지 않고 사용해도 됩니다.<br />
+아래의 기본 문법을 참고하세요.</p>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-4 text-base rounded-md">
+    <span>기본형</span>
+</span><br />
+<code v-pre class="red">Math.프로퍼티명</code><br />
+<code v-pre class="red">Math.메서드명</code></p>
+<doc-anchor-target id="251-math객체의-프로퍼티">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#251-math객체의-프로퍼티">#</doc-anchor-trigger>
+        <span>2.5.1. Math객체의 프로퍼티</span>
+    </h4>
+</doc-anchor-target>
+<p><strong>Math객체의 프로퍼티는 항상 정해진 값을 갖고 있습니다.</strong></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>속성</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>Math.E</code></td>
+<td>오일러 수 (약 2.718)을 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.LN2</code></td>
+<td>2의 자연로그 (약 0.693)을 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.LN10</code></td>
+<td>10의 자연로그 (약 2.302)을 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.LOG2E</code></td>
+<td>E의 밑이 2인 로그 (약 1.442)를 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.LOG10E</code></td>
+<td>E의 밑이 10인 로그 (약 0.434)를 반환합니다..</td>
+</tr>
+<tr>
+<td><code v-pre>Math.PI</code></td>
+<td>원주율 PI (약 3.14159)을 반환합니다..</td>
+</tr>
+<tr>
+<td><code v-pre>Math.SQRT1_2</code></td>
+<td>1/2 의 제곱근( 약 .707 ) 을 반환 합니다 .</td>
+</tr>
+<tr>
+<td><code v-pre>Math.SQRT2</code></td>
+<td>제곱근 of 제곱근 of 두 번째( 약 .414 ) 를 돌려준다</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="252-math객체의-메서드">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#252-math객체의-메서드">#</doc-anchor-trigger>
+        <span>2.5.2. Math객체의 메서드</span>
+    </h4>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>메서드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>Math.abs(x)</code></td>
+<td>x의 절대값을 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.ceil(x)</code></td>
+<td>x의 소수점 이하 부분을 올립니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.floor(x)</code></td>
+<td>x의 소수점 이하 부분을 버립니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.max(a, b, ...)</code></td>
+<td>주어진 숫자 중에서 가장 큰 값을 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.min(a, b, ...)</code></td>
+<td>주어진 숫자 중에서 가장 작은 값을 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.pow(x, y)</code></td>
+<td>x 의 y 거듭제곱을 계산하여 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.random()</code></td>
+<td>0 (포함)과 1 (미포함) 사이의 난수를 생성하여 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>Math.round(x)</code></td>
+<td>x 를 반올림한 값을 반환 합니다 .</td>
+</tr>
+<tr>
+<td><code v-pre>Math.sqrt(x)</code></td>
+<td>x 의 제곱근을 계산하여 돌려줍니다 .</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="2521-이벤트당첨자뽑기프로그램만들기">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2521-이벤트당첨자뽑기프로그램만들기">#</doc-anchor-trigger>
+        <span>2.5.2.1. 이벤트당첨자뽑기프로그램만들기</span>
+    </h5>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="script/event-result.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a><br />
+전체 응모자가 몇명인지 입력하면 번호를 무작위로 추출하여 당첨자를 선정하는 프로그램을 작성해 보겠습니다.</p>
+</doc-tab>
+<doc-tab v-cloak id="시작코드">
+<template #title>시작코드</template>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span>HTML</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span>CSS</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;h1&gt;당첨자 발표&lt;/h1&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">h1 {
+	border: 1px solid black;
+	padding: 10px;
+	background: #eee;
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="단계별코딩">
+<template #title>단계별코딩</template>
+<ol>
+<li><p>콘솔창에 <code v-pre class="red">Math.random()</code> 을 입력후 반환값을 확인합니다. 실행할때 마다 매번 0~1 사이의 다른수가 반환됩니다.<br />
+<img src="../../../../source/images/js4-7.jpg" class="shadow" alt="" /></p>
+</li>
+<li><p>1<sub>100 사이의 난수(정의된 범위 내에서 무작위로 추출된 수)를 출력해봅시다.<br />
+1단계에서 확인한 값에 100을 곱하면 약 0.000</sub>99.999 범위의 값이 반환 될 것 입니다. 이 결과에 1을 더합니다.<br />
+<code v-pre class="red">Math.random()*100+1</code><br />
+<img src="../../../../source/images/js4-8.jpg" class="shadow" alt="" /></p>
+</li>
+<li><p>소수점 이하는 버리고 출력하는 메서드를 적용합니다.<br />
+<code v-pre class="red">Math.floor(Math.random()*100+1)</code><br />
+<img src="../../../../source/images/js4-9.jpg" class="shadow" alt="" /></p>
+</li>
+<li><p>코드 완성하기</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const seed = prompt(&quot;전체 응모자 수 : &quot;,&quot;&quot;);
+const picked = Math.floor((Math.random() \* seed) + 1);
+	document.write(`전체 응모자 수 : ${seed} 명 &lt;br&gt; 당첨자 : ${picked} 번`);</code></pre>
+</doc-codeblock></div>
+</li>
+</ol>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="2522-문제-여러명의-당첨자를-뽑아주세요">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2522-문제-여러명의-당첨자를-뽑아주세요">#</doc-anchor-trigger>
+        <span>2.5.2.2. 문제: 여러명의 당첨자를 뽑아주세요</span>
+    </h5>
+</doc-anchor-target>
+<p><a href="script/event-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
 <doc-anchor-target id="3-bom브라우저객체">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#3-bom브라우저객체">#</doc-anchor-trigger>
         <span>3. BOM(브라우저객체)</span>
     </h2>
 </doc-anchor-target>
+<p>자바스크립트 사용시 특정 사이트로 이동하거나 새 탭을 여는 등 웹 브라우저와 관련된 여러가지 효과를 제작할수 있습니다.<br />
+이런 작업이 가능한 이유는 자바스크립트 내에 웹 브라우저와 관련된 여러 객체가 미리 정의 되어있기 때문입니다.</p>
+<doc-anchor-target id="31-브라우저관련-주요-내장객체">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-브라우저관련-주요-내장객체">#</doc-anchor-trigger>
+        <span>3.1. 브라우저관련 주요 내장객체</span>
+    </h3>
+</doc-anchor-target>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API"><span class="docs-emoji">&#x1F517;</span>MDN</a></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>객체</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>window</code></td>
+<td>전역 객체로, 모든 요소 (DOM 요소, localStorage 등)에 대한 부모 역할을 합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>document</code></td>
+<td>페이지의 DOM을 조작하는 데 사용되는 메서드와 속성을 가진 객체입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>navigator</code></td>
+<td>브라우저 및 운영 체제 정보에 액세스할 수 있는 메서드와 속성이 포함된 객체입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>location</code></td>
+<td>현재 페이지의 URL 정보를 제공하고, 새 URL로 리디렉션하는 메서드를 포함한 객체입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>history</code></td>
+<td>브라우저 세션 히스토리를 조작하는데 사용되는 메서드 (예: forward(), back())가 있는 객체입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>localStorage</code></td>
+<td>웹 스토리지 API의 일부로, 데이터를 사용자의 브라우저에 영구적으로 저장하는데 사용됩니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="32-window-객체의-프로퍼티">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#32-window-객체의-프로퍼티">#</doc-anchor-trigger>
+        <span>3.2. window 객체의 프로퍼티</span>
+    </h3>
+</doc-anchor-target>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"><span class="docs-emoji">&#x1F517;</span>MDN</a></p>
+<p>window 객체는 웹브라우저 상태를 제어하며 자바스크립트의 최 상위에 있습니다.<br />
+그래서 자바스크립트의 모든 객체는 window 객체 안에 포함됩니다.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>프로퍼티</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>document</code></td>
+<td>문서 객체 모델 (DOM)을 대표하는 Document 객체에 대한 참조입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>history</code></td>
+<td>사용자의 브라우저 세션 히스토리에 대한 History 객체에 대한 참조입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>location</code></td>
+<td>현재 URL을 포함하고 있는 Location 객체에 대한 참조입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>navigator</code></td>
+<td>브라우저 및 운영 체제 정보를 포함하는 Navigator 객체에 대한 참조입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>screen</code></td>
+<td>사용자의 화면 정보를 포함하는 Screen 객체에 대한 참조입니다.</td>
+</tr>
+<tr>
+<td><code v-pre>localStorage</code></td>
+<td>웹 스토리지 API의 일부인 localStorage 속성으로, 데이터를 사용자 브라우저에서 영구적으로 저장할 수 있게 합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>innerHeight</code></td>
+<td>뷰포트의 높이(스크롤바를 제외)를 픽셀 단위로 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>innerWidth</code></td>
+<td>뷰포트의 너비(스크롤바를 제외)를 픽셀 단위로 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>outerHeight</code></td>
+<td>전체 브라우저 창의 외부 높이(주소 바 및 기타 UI 부분 포함)을 픽셀 단위로 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>outerWidth</code></td>
+<td>전체 브라우저 창의 외부 너비(주소 바 및 기타 UI 부분 포함)을 픽셀 단위로 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>pageXOffset</code></td>
+<td>스크롤했을때 수평으로 이동하는 픽셀수로 scrollX와 같습니다.</td>
+</tr>
+<tr>
+<td><code v-pre>pageYOffset</code></td>
+<td>스크롤했을때 수직으로 이동하는 픽셀수로 scrollY와 같습니다.</td>
+</tr>
+<tr>
+<td><code v-pre>screenX</code></td>
+<td>브라우저 창의 왼쪽 테두리가 모니터 왼쪽 테두리에서 떨어져 있는 거리를 나타냅니다.</td>
+</tr>
+<tr>
+<td><code v-pre>screenY</code></td>
+<td>브라우저 창의 상단 테두리가 모니터 위쪽 테두리에서 떨어져 있는 거리를 나타냅니다.</td>
+</tr>
+<tr>
+<td><code v-pre>scrollX</code></td>
+<td>스크롤했을때 수평으로 이동하는 픽셀수를 나타냅니다.</td>
+</tr>
+<tr>
+<td><code v-pre>scrollY</code></td>
+<td>스크롤했을때 수직으로 이동하는 픽셀수를 나타냅니다.</td>
+</tr>
+<tr>
+<td><code v-pre>sessionStroage</code></td>
+<td>웹브라우저에서 데이터를 저장하는 세션스토리지를 반환합니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="33-window객체의-메서드">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#33-window객체의-메서드">#</doc-anchor-trigger>
+        <span>3.3. window객체의 메서드</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>메서드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>alert(message)</code></td>
+<td>경고 대화 상자를 표시하며, 사용자가 확인을 클릭하기 전까지 스크립트 실행을 중단합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>confirm(message)</code></td>
+<td>확인/취소 버튼이 있는 대화 상자를 표시하며, 사용자가 선택한 값을 boolean으로 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>prompt(message, default)</code></td>
+<td>입력 필드와 확인/취소 버튼이 있는 대화 상자를 표시하며, 사용자가 입력한 값을 문자열로 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>open(url, name, specs)</code></td>
+<td>새 브라우저 창이나 탭을 열고 그에 대한 참조를 반환합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>close()</code></td>
+<td>현재 브라우저 창을 닫습니다. (주의: 보안상의 이유로 스크립트에서 열지 않은 창은 닫을 수 없습니다.)</td>
+</tr>
+<tr>
+<td><code v-pre>setTimeout(function, milliseconds)</code></td>
+<td>지정된 시간(밀리초) 후에 함수를 실행하는 타이머를 설정합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>setInterval(function, milliseconds)</code></td>
+<td>지정된 시간 간격(밀리초)으로 함수를 반복적으로 실행하는 타이머를 설정합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>resizeTo(width,height)</code></td>
+<td>브라우저 창의 외부 크기(메뉴 바 및 기타 UI 부분 포함)을 지정된 너비와 높이로 변경합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>resizeBy(dx,dy)</code></td>
+<td>현재 윈도우 크기에 dx와 dy만큼 가감하여 윈도우 크기를 변경 합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>scrollTo(xpos,ypos)</code></td>
+<td>페이지에서 지정된 위치까지 스크롤 합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>scrollBy(xpos,ypos)</code></td>
+<td>페이지에서 지정된 위치만큼씩 스크롤 합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>scroll()</code></td>
+<td>문서에서 특정 위치로 스크롤합니다.</td>
+</tr>
+<tr>
+<td><code v-pre>sizeToContent()</code></td>
+<td>내용에 맞게 창의 크기를 맞춥니다</td>
+</tr>
+<tr>
+<td><code v-pre>postMessage()</code></td>
+<td>메시지를 다른 창으로 전달합니다</td>
+</tr>
+<tr>
+<td><code v-pre>print()</code></td>
+<td>현재 페이지를 인쇄합니다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="331-open">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#331-open">#</doc-anchor-trigger>
+        <span>3.3.1. open()</span>
+    </h4>
+</doc-anchor-target>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-4 text-base rounded-md">
+    <span>기본형</span>
+</span></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -749,6 +1372,6 @@ for (i = 0; i &lt; numbers.length; i++) {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "4. 객체 ", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "4. 객체 ", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
