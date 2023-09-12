@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-10T11:35:44Z",
+  "created": "2023-09-12T01:24:17Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2956,6 +2956,9 @@
       "old": true
     },
     {
+      "path": "3_js\\basic\\1.total\\4\\script\\cake-event.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\4\\script\\center-result.html"
     },
     {
@@ -2977,7 +2980,8 @@
       "path": "3_js\\basic\\1.total\\4\\script\\doit-event-result.html"
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\doit-event.html"
+      "path": "3_js\\basic\\1.total\\4\\script\\doit-event.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\doit-main.html"
@@ -2986,13 +2990,20 @@
       "path": "3_js\\basic\\1.total\\4\\script\\event-2.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\4\\script\\event-cake-page.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\4\\script\\event-result.html"
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\event.html"
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\images\\doit.jpg"
+      "path": "3_js\\basic\\1.total\\4\\script\\images\\doit.jpg",
+      "old": true
+    },
+    {
+      "path": "3_js\\basic\\1.total\\4\\script\\images\\dragon.png"
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\locationobject.html"
@@ -3570,6 +3581,21 @@
     },
     {
       "path": "source\\images\\js4-1.jpg"
+    },
+    {
+      "path": "source\\images\\js4-10.jpg"
+    },
+    {
+      "path": "source\\images\\js4-11.jpg"
+    },
+    {
+      "path": "source\\images\\js4-12.jpg"
+    },
+    {
+      "path": "source\\images\\js4-13.jpg"
+    },
+    {
+      "path": "source\\images\\js4-14.jpg"
     },
     {
       "path": "source\\images\\js4-2.jpg"

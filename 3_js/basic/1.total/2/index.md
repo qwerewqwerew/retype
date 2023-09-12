@@ -1329,7 +1329,7 @@ div h3 {
 
 +++ JS2
 동적요소추가 후 스타일반영
-[:icon-play:](./script/gugudan-2.html)
+[:icon-play:](./script/gugudan-3.html)
 
 ```js #4,8
 let i, j;
@@ -1375,8 +1375,8 @@ for (i = 1; i <= 9; i++) {
   <h2>do / while</h2>
   <div id="dowhile"></div>
   <script>
-    var foods = ["떡볶이", "순대", "오뎅"];
-    for (var i = 0; i < foods.length; i++) {
+    let foods = ["떡볶이", "순대", "오뎅"];
+    for (let i = 0; i < foods.length; i++) {
       document.getElementById("for").innerHTML += i + " : " + foods[i] + "<br>";
     }
 
@@ -1386,17 +1386,17 @@ for (i = 1; i <= 9; i++) {
     });
 
     // for of
-    for (var x of foods) {
+    for (let x of foods) {
       document.getElementById("forof").innerHTML += x + "<br>";
     }
 
     //for in
-    for (var j in foods) {
+    for (let j in foods) {
       document.getElementById("forin").innerHTML += j + " : " + foods[j] + "<br>";
     }
 
     //do / while(~하는동안)
-    var d = 0;
+    let d = 0;
     do {
       document.getElementById("dowhile").innerHTML += foods[d] + "<br>";
       d++;
@@ -1467,10 +1467,10 @@ for (i = 1; i <= 9; i++) {
 		<hr />
 
 		<script>
-			var menu1 = document.querySelectorAll('.menu1 li');
-			var menu2 = document.querySelectorAll('.menu2 li');
-			var menu3 = document.querySelectorAll('.menu3 li');
-			var menu4 = document.querySelectorAll('.menu4 li');
+			let menu1 = document.querySelectorAll('.menu1 li');
+			let menu2 = document.querySelectorAll('.menu2 li');
+			let menu3 = document.querySelectorAll('.menu3 li');
+			let menu4 = document.querySelectorAll('.menu4 li');
 			//반복문을 이용하여 리스트의 색상을 blue로 변경한다.
 
 			// for
@@ -1482,7 +1482,7 @@ for (i = 1; i <= 9; i++) {
 				element.style.color = 'blue';
 			});
 			//for of
-			for (var k of menu3) {
+			for (let k of menu3) {
 				console.log(menu3, k);
 				k.style.color = 'blue';
 			}
@@ -1506,7 +1506,7 @@ for (i = 1; i <= 9; i++) {
 				});
 			}
 			//for of
-			for (var a of menu3) {
+			for (let a of menu3) {
 				a.addEventListener('mouseover', function () {
 					this.style.color = 'red';
 				});

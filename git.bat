@@ -1,6 +1,6 @@
 git add .
 pause
-git commit -m "test"
+git commit -m "객체"
 pause
 git push origin main
 pause

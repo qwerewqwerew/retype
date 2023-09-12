@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.747660931208">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.747797030758">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.2.0.747660931208" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.747797030758" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.747660931208" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.747797030758" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.747660931208" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.747660931208" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.747797030758" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.747797030758" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../../../resources/js/mermaid.js?v=3.2.0" defer></script>
 
     <style>
@@ -2769,7 +2769,7 @@ div h3 {
 <doc-tab v-cloak id="js2">
 <template #title>JS2</template>
 <p>동적요소추가 후 스타일반영<br />
-<a href="script/gugudan-2.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
+<a href="script/gugudan-3.html"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg></a></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-javascript" data-line="4,8"><code v-pre class="language-javascript">let i, j;
 for (i = 1; i &lt;= 9; i++) {
@@ -2825,8 +2825,8 @@ for (i = 1; i &lt;= 9; i++) {
   &lt;h2&gt;do / while&lt;/h2&gt;
   &lt;div id=&quot;dowhile&quot;&gt;&lt;/div&gt;
   &lt;script&gt;
-    var foods = [&quot;떡볶이&quot;, &quot;순대&quot;, &quot;오뎅&quot;];
-    for (var i = 0; i &lt; foods.length; i++) {
+    let foods = [&quot;떡볶이&quot;, &quot;순대&quot;, &quot;오뎅&quot;];
+    for (let i = 0; i &lt; foods.length; i++) {
       document.getElementById(&quot;for&quot;).innerHTML += i + &quot; : &quot; + foods[i] + &quot;&lt;br&gt;&quot;;
     }
 
@@ -2836,17 +2836,17 @@ for (i = 1; i &lt;= 9; i++) {
     });
 
     // for of
-    for (var x of foods) {
+    for (let x of foods) {
       document.getElementById(&quot;forof&quot;).innerHTML += x + &quot;&lt;br&gt;&quot;;
     }
 
     //for in
-    for (var j in foods) {
+    for (let j in foods) {
       document.getElementById(&quot;forin&quot;).innerHTML += j + &quot; : &quot; + foods[j] + &quot;&lt;br&gt;&quot;;
     }
 
     //do / while(~하는동안)
-    var d = 0;
+    let d = 0;
     do {
       document.getElementById(&quot;dowhile&quot;).innerHTML += foods[d] + &quot;&lt;br&gt;&quot;;
       d++;
@@ -2919,10 +2919,10 @@ for (i = 1; i &lt;= 9; i++) {
 		&lt;hr /&gt;
 
 		&lt;script&gt;
-			var menu1 = document.querySelectorAll('.menu1 li');
-			var menu2 = document.querySelectorAll('.menu2 li');
-			var menu3 = document.querySelectorAll('.menu3 li');
-			var menu4 = document.querySelectorAll('.menu4 li');
+			let menu1 = document.querySelectorAll('.menu1 li');
+			let menu2 = document.querySelectorAll('.menu2 li');
+			let menu3 = document.querySelectorAll('.menu3 li');
+			let menu4 = document.querySelectorAll('.menu4 li');
 			//반복문을 이용하여 리스트의 색상을 blue로 변경한다.
 
 			// for
@@ -2934,7 +2934,7 @@ for (i = 1; i &lt;= 9; i++) {
 				element.style.color = 'blue';
 			});
 			//for of
-			for (var k of menu3) {
+			for (let k of menu3) {
 				console.log(menu3, k);
 				k.style.color = 'blue';
 			}
@@ -2958,7 +2958,7 @@ for (i = 1; i &lt;= 9; i++) {
 				});
 			}
 			//for of
-			for (var a of menu3) {
+			for (let a of menu3) {
 				a.addEventListener('mouseover', function () {
 					this.style.color = 'red';
 				});

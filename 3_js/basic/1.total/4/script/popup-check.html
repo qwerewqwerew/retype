@@ -5,18 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Window 객체</title>
 </head>
+<!-- 문서로드 완료시 openPopup 함수 호출 -->
 <body onload="openPopup()">
 	<p>문서를 열면 팝업 창이 표시됩니다</p>
 
 	<script>
-		var blocked = false;
-		function openPopup() {			
-			var newWin = window.open("notice.html", "pop", "width=500, height=400");
+		function openPopup() {
+			const newWin = window.open("notice.html", "pop", "width=500, height=400");
+			//newWin 이 null 이면 true
 			if (newWin == null) {
 				alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.")
 			}
-			newWin.moveBy(100,100);			
+			newWin.moveBy(100,100);
 		}
 	</script>
 </body>
-</html> 
+</html>
