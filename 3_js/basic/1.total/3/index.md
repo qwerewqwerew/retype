@@ -6,6 +6,7 @@ category:
 ---
 
 # 3. 함수 <!-- omit in toc -->
+
 ### 목차 <!-- omit in toc -->
 
 - [1. 함수](#1-함수)
@@ -36,6 +37,8 @@ category:
 		- [1.4.1. 익명함수-예제\[11\]](#141-익명함수-예제11)
 		- [1.4.2. 즉시실행함수-예제\[12\]](#142-즉시실행함수-예제12)
 		- [1.4.3. 화살표함수-예제\[13\]](#143-화살표함수-예제13)
+	- [1.5. 콜백함수](#15-콜백함수)
+		- [1.5.1. 예제](#151-예제)
 - [2. 이벤트](#2-이벤트)
 	- [2.1. 이벤트](#21-이벤트)
 		- [2.1.1. 마우스이벤트](#211-마우스이벤트)
@@ -647,7 +650,7 @@ let hihi = (user) => {
 ||| [Step4] - 소괄호생략
 
 ```js #
-let hihi = user => {
+let hihi = (user) => {
 	document.write(`${user}님, 안녕하세요?`);
 };
 ```
@@ -676,6 +679,87 @@ let sum = (a, b) => a + b;
 ```
 
 |||
+
+### 1.5. 콜백함수
+
+!!! warning
+
+1. **함수는 매개변수(parameter)를 넣을 수 있습니다.**
+2. **함수는 값을 반환할 수 있습니다**
+
+자바스크립트에서 콜백(callback) 함수는 다른 함수의 인자로 전달되어, 해당 함수의 실행이 완료된 후에 호출되는 함수를 말합니다.
+이러한 콜백 함수는 비동기적인 처리를 위해 많이 사용됩니다.
+
+간단히 **콜백 함수는 다른 함수에 매개변수(parameter)로 들어가는 함수**로 이해하면 쉽습니다.
+
+!!!
+
+#### 1.5.1. 예제
+
++++ 지시문
+[:icon-play:](./script/callback.html)
+[:icon-play:](./script/callback2.html)
+[:icon-play:](./script/callback3.html)
+
+- 코드1 에서는 callback.html 문서를 생성하여 스크립트를 작성해 보겠습니다.
+- 코드2 에서는 콜백 함수를 사용하는 내장함수를 사용해 보겠습니다.
+
++++ 코드1
+![복붙방지](../../../../source/images/callback.jpg)
++++ 코드2
+콜백함수를 활용하는 setTimeOut/setInterval
+||| setTimeOut
+지정시간 이후에 콜백함수를 실행 합니다.
+[:link:MDN](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
+[!badge variant='primary' size='m' text='기본형']
+`setTimeout(함수,시간)`{.red}
+
+```js #
+setTimeout(function () {
+	document.write('1초 후에 실행됩니다');
+}, 1000);
+```
+
+||| clearTimeOut
+setTimeOut 을 취소합니다.
+[:link: MDN](https://developer.mozilla.org/en-US/docs/Web/API/clearTimeout)
+[!badge variant='primary' size='m' text='기본형']
+`clearTimeout(timeoutID)`{.red}
+
+```js #
+const stop1 = setTimeout(() => {
+	document.write(`1초 후에 두번째 실행됩니다.`);
+}, 1000);
+clearTimeout(stop1);
+```
+
+|||
+
+||| setInterval
+[!badge variant='primary' size='m' text='기본형']
+`setInterval(함수,시간)`
+지정시간 마다 콜백함수를 실행합니다.
+
+```js #
+setInterval(function () {
+	document.write('1초마다 실행됩니다.');
+}, 1000);
+```
+
+||| clearInterval
+[!badge variant='primary' size='m' text='기본형']
+`clearInterval(intervalID)`{.red}
+[:link:MDN](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval)
+
+```js #
+const stop2 = setInterval(() => {
+	document.write('1초마다 두번째 실행됩니다.');
+}, 1000);
+clearInterval(stop2);
+```
+
+|||
++++
 
 ## 2. 이벤트
 
@@ -785,15 +869,39 @@ document.querySelector('button').addEventListener('click', function () {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>자바스크립트 이벤트</title>
-		<link rel="stylesheet" href="css/function.css" />
+		<link
+			rel="stylesheet"
+			href="css/function.css"
+		/>
 	</head>
 	<body>
 		<ul>
-			<li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Green</a></li>
-			<li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Orange</a></li>
-			<li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Purple</a></li>
+			<li>
+				<a
+					href="#"
+					onclick="alert('버튼을 클릭했습니다.')"
+					>Green</a
+				>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="alert('버튼을 클릭했습니다.')"
+					>Orange</a
+				>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="alert('버튼을 클릭했습니다.')"
+					>Purple</a
+				>
+			</li>
 		</ul>
 		<div id="result"></div>
 	</body>
@@ -847,15 +955,39 @@ p {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>자바스크립트 이벤트</title>
-		<link rel="stylesheet" href="css/function.css" />
+		<link
+			rel="stylesheet"
+			href="css/function.css"
+		/>
 	</head>
 	<body>
 		<ul>
-			<li><a href="#" onclick="changeBg('green')">Green</a></li>
-			<li><a href="#" onclick="changeBg('orange')">Orange</a></li>
-			<li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+			<li>
+				<a
+					href="#"
+					onclick="changeBg('green')"
+					>Green</a
+				>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="changeBg('orange')"
+					>Orange</a
+				>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="changeBg('purple')"
+					>Purple</a
+				>
+			</li>
 		</ul>
 		<div id="result"></div>
 		<script>
@@ -924,16 +1056,33 @@ function changeBg(color) {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>자바스크립트 이벤트</title>
-		<link rel="stylesheet" href="css/event.css" />
+		<link
+			rel="stylesheet"
+			href="css/event.css"
+		/>
 	</head>
 
 	<body>
 		<div id="item">
-			<img src="http://qwerew.cafe24.com/images/1.jpg" alt="" />
-			<button class="over" id="open">상세 설명 보기</button>
-			<div id="desc" class="detail">
+			<img
+				src="http://qwerew.cafe24.com/images/1.jpg"
+				alt=""
+			/>
+			<button
+				class="over"
+				id="open"
+			>
+				상세 설명 보기
+			</button>
+			<div
+				id="desc"
+				class="detail"
+			>
 				<h4>이벤트 처리기(event handler)</h4>
 				<p>이벤트 처리기(event handler) 또는 이벤트 리스너(event listener)는 특정 이벤트가 발생했을 때 실행되는 함수를 말합니다. 웹 페이지에서 사용자의 상호작용(마우스 클릭, 키보드 입력 등) 또는 브라우저의 특정 동작(페이지 로딩, 이미지 로딩 완료 등)과 같은 이벤트가 발생하면, 그에 따른 반응을 처리하기 위해 이벤트 처리기를 사용합니다.</p>
 				<button id="close">상세 설명 닫기</button>
@@ -992,19 +1141,42 @@ button {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>자바스크립트 이벤트</title>
-		<link rel="stylesheet" href="css/event.css" />
+		<link
+			rel="stylesheet"
+			href="css/event.css"
+		/>
 	</head>
 
 	<body>
 		<div id="item">
-			<img src="http://qwerew.cafe24.com/images/1.jpg" alt="" />
-			<button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
-			<div id="desc" class="detail">
+			<img
+				src="http://qwerew.cafe24.com/images/1.jpg"
+				alt=""
+			/>
+			<button
+				class="over"
+				id="open"
+				onclick="showDetail()"
+			>
+				상세 설명 보기
+			</button>
+			<div
+				id="desc"
+				class="detail"
+			>
 				<h4>이벤트 처리기(event handler)</h4>
 				<p>이벤트 처리기(event handler) 또는 이벤트 리스너(event listener)는 특정 이벤트가 발생했을 때 실행되는 함수를 말합니다. 웹 페이지에서 사용자의 상호작용(마우스 클릭, 키보드 입력 등) 또는 브라우저의 특정 동작(페이지 로딩, 이미지 로딩 완료 등)과 같은 이벤트가 발생하면, 그에 따른 반응을 처리하기 위해 이벤트 처리기를 사용합니다.</p>
-				<button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+				<button
+					id="close"
+					onclick="hideDetail()"
+				>
+					상세 설명 닫기
+				</button>
 			</div>
 		</div>
 		<script>
@@ -1039,9 +1211,15 @@ html속성을 사용하여 이벤트핸들러를 처리한 예시 였습니다.
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>자바스크립트 이벤트</title>
-		<link rel="stylesheet" href="css/function.css" />
+		<link
+			rel="stylesheet"
+			href="css/function.css"
+		/>
 	</head>
 	<body>
 		<button id="change">글자색 바꾸기</button>
@@ -1114,7 +1292,6 @@ document.querySelector('#change').onclick = function () {
 };
 ```
 
-
 +++
 
 ## 3. 마무리문제
@@ -1123,7 +1300,7 @@ document.querySelector('#change').onclick = function () {
 
 [!badge variant='primary' size='xl' text='01'] [:icon-play:](./script/detail-2.html)
 
-[:link:16](#223-버튼-클릭시-상세설명-표시-예제16)예제 를 응용하여  상세설명을 열고 닫는 함수를 DOM 방식으로 수정해 보세요
+[:link:16](#223-버튼-클릭시-상세설명-표시-예제16)예제 를 응용하여 상세설명을 열고 닫는 함수를 DOM 방식으로 수정해 보세요
 
 :::
 
@@ -1133,7 +1310,6 @@ document.querySelector('#change').onclick = function () {
 다음 조건을 참고하여 매개변수로 전달받은 두수의 값이 같으면 곱하고 다르면 더하는 함수 sumMulti() 를 작성하세요.
 
 그후 인자로 5,10 을 전달할때와 10,10 을 전달할때의 실행결과를 콘솔창에 표시하세요.
-
 
 !!! warning <mark>조건</mark>
 
@@ -1151,7 +1327,6 @@ document.querySelector('#change').onclick = function () {
 프롬프트 창에서 두수를 입력받아 크기를 서로 비교한 후 더 큰 숫자를 알림창으로 표시하는 함수를 작성하세요.
 
 그후 인자로 5,10 을 전달할때와 10,10 을 전달할때의 실행결과를 콘솔창에 표시하세요.
-
 
 !!! warning <mark>조건</mark>
 

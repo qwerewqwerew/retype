@@ -29,7 +29,10 @@
 		- [3.4.1. 웹브라우저와 렌더링 엔진](#341-웹브라우저와-렌더링-엔진)
 	- [3.5. location 객체](#35-location-객체)
 		- [3.5.1. 사이트위치 고정하기-예제](#351-사이트위치-고정하기-예제)
-		- [3.5.2. 팝업창에서 클릭한 콘텐츠를 메인페이지에 표시하기-예제](#352-팝업창에서-클릭한-콘텐츠를-메인페이지에-표시하기-예제)
+	- [3.6. screen 객체](#36-screen-객체)
+		- [3.6.1. 화면의 너비와 높이 알아내기-예제](#361-화면의-너비와-높이-알아내기-예제)
+	- [3.7. 마무리문제1](#37-마무리문제1)
+	- [3.8. 마무리문제2](#38-마무리문제2)
 
 ## 1. 객체의 이해
 
@@ -674,14 +677,42 @@ button {
 ![복붙방지](../../../../source/images/js4-14.jpg)
 +++
 
-#### 3.5.2. 팝업창에서 클릭한 콘텐츠를 메인페이지에 표시하기-예제
+### 3.6. screen 객체
+
+사용자의 화면 크기나 정보를 갖고 있는 screen 객체를 알아 보겠습니다.
+
+| 속성                 | 설명                                                                                                           |
+| -------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `screen.availHeight` | 작업 표시줄(Windows)이나 메뉴 바(Mac) 등과 같은 인터페이스 요소를 제외한 화면의 높이를 픽셀 단위로 반환합니다. |
+| `screen.availWidth`  | 작업 표시줄(Windows)이나 메뉴 바(Mac) 등과 같은 인터페이스 요소를 제외한 화면의 너비를 픽셀 단위로 반환합니다. |
+| `screen.height`      | 전체 스크린 높이를 픽셀 단위로 반환합니다.                                                                     |
+| `screen.width`       | 전체 스크린 너비를 픽셀 단위로 반환합니다.                                                                     |
+| `screen.colorDepth`  | 스크린의 색상 해상도 (bit per pixel)을 반환합니다. 일반적으로 이 값은 24 또는 32입니다.                        |
+| `screen.pixelDepth`  | 스크린의 색상 해상도 (bit per pixel)을 반환합니다. colorDepth와 동일한 값을 가집니다.                          |
+
+#### 3.6.1. 화면의 너비와 높이 알아내기-예제
 
 +++ 지시문
-[:icon-play:](./script/main.html)
+[:icon-play:](./script/screenObject.html)
+
+![스크린사이즈](../../../../source/images/getScreenSize.png){.w50}
+
 +++ 코드
 
-```js # This is Tab 1
-
+```js #
+document.write('<p><b>screen.availWidth : </b>' + screen.availWidth + '</p>');
+document.write('<p><b>screen.availHeight : </b>' + screen.availHeight + '</p>');
+document.write('<p><b>screen.width : </b>' + screen.width + '</p>');
+document.write('<p><b>screen.height : </b>' + screen.height + '</p>');
 ```
 
 +++
+
+### 3.7. 마무리문제1
+
+현재 시간을 브라우저에 표시하는 프로그램을 작성하시오
+[:icon-play:](./script/sol-1.html)
+
+### 3.8. 마무리문제2
+시간을 표시하는 페이지를 팝업창으로 나타나게 만드시오
+[:icon-play:](./script/sol-2.html)

@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-12T01:24:17Z",
+  "created": "2023-09-13T02:19:09Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2863,6 +2863,15 @@
       "path": "3_js\\basic\\1.total\\3\\script\\calcsum.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\3\\script\\callback.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\callback2.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\callback3.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\3\\script\\const-1.html"
     },
     {
@@ -2956,7 +2965,8 @@
       "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\cake-event.html"
+      "path": "3_js\\basic\\1.total\\4\\script\\cake-event.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\center-result.html"
@@ -2977,14 +2987,16 @@
       "path": "3_js\\basic\\1.total\\4\\script\\day.html"
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\doit-event-result.html"
+      "path": "3_js\\basic\\1.total\\4\\script\\doit-event-result.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\doit-event.html",
       "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\doit-main.html"
+      "path": "3_js\\basic\\1.total\\4\\script\\doit-main.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\event-2.html"
@@ -2999,11 +3011,15 @@
       "path": "3_js\\basic\\1.total\\4\\script\\event.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\4\\script\\images\\dino.png"
+    },
+    {
       "path": "3_js\\basic\\1.total\\4\\script\\images\\doit.jpg",
       "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\4\\script\\images\\dragon.png"
+      "path": "3_js\\basic\\1.total\\4\\script\\images\\dragon.png",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\4\\script\\locationobject.html"
@@ -3538,6 +3554,18 @@
       "path": "source\\images\\5.gif"
     },
     {
+      "path": "source\\images\\callback.jpg"
+    },
+    {
+      "path": "source\\images\\getpagesize.png"
+    },
+    {
+      "path": "source\\images\\getscreensize.png"
+    },
+    {
+      "path": "source\\images\\getwindowsize.png"
+    },
+    {
       "path": "source\\images\\js-1-1.png"
     },
     {
@@ -3619,7 +3647,19 @@
       "path": "source\\images\\js4-9.jpg"
     },
     {
+      "path": "source\\images\\node-tree.png"
+    },
+    {
+      "path": "source\\images\\pic_htmltree.gif"
+    },
+    {
       "path": "source\\images\\qr.png"
+    },
+    {
+      "path": "source\\images\\window.gif"
+    },
+    {
+      "path": "source\\images\\window1.png"
     },
     {
       "path": "tags\\메뉴\\index.html"
