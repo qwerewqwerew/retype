@@ -37,6 +37,7 @@ category:
 		- [1.4.1. 익명함수-예제\[11\]](#141-익명함수-예제11)
 		- [1.4.2. 즉시실행함수-예제\[12\]](#142-즉시실행함수-예제12)
 		- [1.4.3. 화살표함수-예제\[13\]](#143-화살표함수-예제13)
+		- [1.4.4. 선언적 함수를 활용한 갤러리-예제](#144-선언적-함수를-활용한-갤러리-예제)
 	- [1.5. 콜백함수](#15-콜백함수)
 		- [1.5.1. 예제](#151-예제)
 - [2. 이벤트](#2-이벤트)
@@ -679,6 +680,9 @@ let sum = (a, b) => a + b;
 ```
 
 |||
+#### 1.4.4. 선언적 함수를 활용한 갤러리-예제
+[파일다운로드](./img.zip)
+
 
 ### 1.5. 콜백함수
 
@@ -699,7 +703,6 @@ let sum = (a, b) => a + b;
 +++ 지시문
 [:icon-play:](./script/callback.html)
 [:icon-play:](./script/callback2.html)
-[:icon-play:](./script/callback3.html)
 
 - 코드1 에서는 callback.html 문서를 생성하여 스크립트를 작성해 보겠습니다.
 - 코드2 에서는 콜백 함수를 사용하는 내장함수를 사용해 보겠습니다.
@@ -759,6 +762,22 @@ clearInterval(stop2);
 ```
 
 |||
++++코드3
+[:icon-play:](./script/callback3.html)
+setTimeout, setInterval 종합예제 입니다.
+```js #
+    let id
+    let count = 0
+    id = setInterval(() => {
+      document.write(`1초마다 실행됩니다(${count}번째)<br>`)
+      count++
+    }, 1 * 1000)
+
+    setTimeout(() => {
+      document.write('타이머를 종료합니다.')
+      clearInterval(id)
+    }, 5 * 1000)
+```
 +++
 
 ## 2. 이벤트
