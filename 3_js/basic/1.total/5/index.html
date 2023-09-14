@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.747887527281">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.748017488271">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.4.1">
@@ -34,11 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.4.1.747887527281" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.4.1.748017488271" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.4.1.747887527281" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.4.1.748017488271" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.4.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.4.1.747887527281" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.4.1.748017488271" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.4.1.748017488271" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -119,6 +120,14 @@
         max-width: 50%;
       }
 
+      .w60 {
+        max-width: 60%;
+      }
+
+      .w70 {
+        max-width: 70%;
+      }
+
       .w40 {
         max-width: 40%;
       }
@@ -177,21 +186,22 @@
         font-size: 1.1rem !important;
       }
 
+      .mark {
+        background-color: rgba(245, 255, 103, 0.534);
+      }
+
       .box {
-        background: #f7f7f7;
-        padding: 1rem 0 .5rem 1rem;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, .1), -1px -1px 2px rgba(0, 0, 0, .1);
+        background: #ffffff;
+        padding: 2rem 0 .5rem 1rem;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, .1), -1px -1px 3px rgba(0, 0, 0, .1);
+      }
+
+      .pdbox {
+        padding: .5rem;
+        background: #effafe;
+        border-radius: 4px;
       }
     </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-
-        document.querySelector('.blank').addEventListener('click', function () {
-          console.log("dd");
-          this.setAttribute('target', '_blank');
-        })
-      })
-    </script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -345,8 +355,7 @@
     </h2>
 </doc-anchor-target>
 <p>JavaScript의 문서객체 모델(Document Object Model, DOM)은 HTML, XML 문서의 구조화된 표현을 제공하며, 이를 프로그래밍적으로 조작할 수 있는 방법을 제공합니다. 즉, DOM은 웹 페이지의 모든 요소를 객체로 나타내고, 이들 객체에 접근하여 조작할 수 있는 API를 제공합니다.</p>
-<p>DOM은 트리 구조로 이루어져 있으며, 문서의 각 요소는 노드(Node)로 표현됩니다. 노드는 요소 노드(Element Node), 속성 노드(Attribute Node), 텍스트 노드(Text Node) 등 다양한 종류가 있습니다. 이러한 노드들은 상위 노드와 하위 노드로 구성된 계층 구조를 이루고 있습니다.</p>
-<p>JavaScript를 사용하여 DOM에 접근하고 조작하는 방법은 다양합니다. 예를 들어, getElementById() 함수를 사용하여 HTML 요소의 ID를 이용하여 해당 요소에 접근할 수 있습니다. 또한, DOM API를 사용하여 요소의 속성을 변경하거나, 새로운 요소를 추가하거나, 요소를 삭제하는 등의 조작이 가능합니다.</p>
+<p><strong>DOM은 트리 구조로 이루어져 있으며, 문서의 각 요소는 노드(Node)로 표현됩니다. 노드는 요소 노드(Element Node), 속성 노드(Attribute Node), 텍스트 노드(Text Node) 등 다양한 종류가 있습니다. 이러한 노드들은 상위 노드와 하위 노드로 구성된 계층 구조를 이루고 있습니다.</strong></p>
 <p>DOM은 웹 개발에서 매우 중요한 역할을 합니다. 웹 페이지의 동적인 기능을 구현하거나, 사용자 인터페이스를 조작하는 등 다양한 기능을 구현할 수 있습니다.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
@@ -360,8 +369,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p><em><strong>DOM 이란</strong></em><br />
-자바스크립트를 이용하여 웹문서에 접근하고 제어할수 있도록 객체를 사용하여 웹문서를 체계적으로 정리하는 방법</p>
+            <h5><strong><em>DOM 이란</em></strong> 자바스크립트를 이용하여 웹문서에 접근하고 제어할수 있도록 객체를 사용하여 웹문서를 체계적으로 정리하는 방법</h5>
         </div>
     </div>
 </div>
@@ -377,28 +385,341 @@
     <figcaption class="caption">DOM 그림</figcaption>
 </figure>
 </p>
+<div class="box">
 <ol>
 <li>모든 HTML 태그는 요소(element) 노드 입니다.</li>
 <li>HTML 태그에서 사용하는 텍스트 내용은 자식 노드인 텍스트 노드 입니다.</li>
 <li>HTML 태그에 있는 속성은 자식 노드인 속성 노드 입니다.</li>
 <li>주석은 주석 노드 입니다.</li>
 </ol>
-<doc-anchor-target id="2-dom에-접근하기속성취득하기">
+</div>
+<doc-anchor-target id="2-dom에-접근하기">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-dom에-접근하기속성취득하기">#</doc-anchor-trigger>
-        <span>2. DOM에 접근하기/속성취득하기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-dom에-접근하기">#</doc-anchor-trigger>
+        <span>2. DOM에 접근하기</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="3-dom에서-이벤트-처리하기">
+<p>아래의 basic.html 을 복사하여 dom 요소를 선택하는 문법을 학습해 보겠습니다.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">basic.html</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;JavaScript DOM Course&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;치킨 (리미와감자)&lt;/h1&gt;
+		&lt;ul&gt;
+			&lt;li id=&quot;one&quot;&gt;I like 치킨 (치킨시켜)&lt;/li&gt;
+			&lt;li class=&quot;highlight&quot;&gt;Everybody likes 치킨 (치킨시켜)&lt;/li&gt;
+			&lt;li&gt;Let's eat 치킨 (치킨시켜)&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;p class=&quot;highlight&quot;&gt;양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2 반은 양념 치킨 반은 후라이드 치킨 무는 많이 줘요 아줌마 부위는 날개는 세게 다리는 네게 목은 빼주세요 아줌마 고도비만 치킨 알이 꽉 찬 치킨 두 마리 같은 걸로 아줌마 구이는 날개는 미듐 가슴도 미듐 다린 웰던으로 아줌마&lt;/p&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;highlight&quot;&gt;Edge 있게 물티슈, (아줌마)&lt;/li&gt;
+			&lt;li&gt;콜란 서비스 (아줌마)&lt;/li&gt;
+			&lt;li&gt;할인카드... 되죠? (아줌마)&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="21-id로-선택-getelementbyid">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#21-id로-선택-getelementbyid">#</doc-anchor-trigger>
+        <span>2.1. ID로 선택 <code v-pre>getElementById</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M16.75 8.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"/><path d="M15.75 0a8.25 8.25 0 1 1-2.541 16.101l-1.636 1.636a1.744 1.744 0 0 1-1.237.513H9.25a.25.25 0 0 0-.25.25v1.448a.876.876 0 0 1-.256.619l-.214.213a.75.75 0 0 1-.545.22H5.25a.25.25 0 0 0-.25.25v1A1.75 1.75 0 0 1 3.25 24h-1.5A1.75 1.75 0 0 1 0 22.25v-2.836c0-.464.185-.908.513-1.236l7.386-7.388A8.249 8.249 0 0 1 15.75 0ZM9 8.25a6.733 6.733 0 0 0 .463 2.462.75.75 0 0 1-.168.804l-7.722 7.721a.25.25 0 0 0-.073.177v2.836c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1c0-.966.784-1.75 1.75-1.75H7.5v-1c0-.966.784-1.75 1.75-1.75h1.086a.25.25 0 0 0 .177-.073l1.971-1.972a.75.75 0 0 1 .804-.168A6.75 6.75 0 1 0 9 8.25Z"/></g></g></svg> 실행화면</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">document.getElementById('one').style.background = 'yellow';</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p><figure class="content-center">
+    <img src="../../../../source/images/result1.jpg" alt="" class="shadow">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+    </div>
+</div>
+<doc-anchor-target id="22-클래스로-선택-getelementbyclassname">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#22-클래스로-선택-getelementbyclassname">#</doc-anchor-trigger>
+        <span>2.2. 클래스로 선택 <code v-pre>getElementByClassName</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M16.75 8.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"/><path d="M15.75 0a8.25 8.25 0 1 1-2.541 16.101l-1.636 1.636a1.744 1.744 0 0 1-1.237.513H9.25a.25.25 0 0 0-.25.25v1.448a.876.876 0 0 1-.256.619l-.214.213a.75.75 0 0 1-.545.22H5.25a.25.25 0 0 0-.25.25v1A1.75 1.75 0 0 1 3.25 24h-1.5A1.75 1.75 0 0 1 0 22.25v-2.836c0-.464.185-.908.513-1.236l7.386-7.388A8.249 8.249 0 0 1 15.75 0ZM9 8.25a6.733 6.733 0 0 0 .463 2.462.75.75 0 0 1-.168.804l-7.722 7.721a.25.25 0 0 0-.073.177v2.836c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1c0-.966.784-1.75 1.75-1.75H7.5v-1c0-.966.784-1.75 1.75-1.75h1.086a.25.25 0 0 0 .177-.073l1.971-1.972a.75.75 0 0 1 .804-.168A6.75 6.75 0 1 0 9 8.25Z"/></g></g></svg> 실행화면</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let el3 = document.getElementsByClassName('highlight');
+console.log(el3);
+el3[1].style.cssText = 'width:500px; marign:auto; background:pink';</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p><figure class="content-center">
+    <img src="../../../../source/images/result2.jpg" alt="" class="shadow">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>[설명]</p>
+<ol>
+<li><strong class="mark">.highlight 클래스는 문서에서 여러개 인데 한개만 스타일이 적용됩니다..</strong></li>
+<li>3번라인의 cssText 속성은 자바스크립트를 이용하여 css 스타일을 여러개 추가할수 있으나 기존에 css속성이 적용되어 있을경우 덮어 씌워 집니다.</li>
+</ol>
+    </div>
+</div>
+<doc-anchor-target id="23-태그로-선택-getelementsbytagname">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#23-태그로-선택-getelementsbytagname">#</doc-anchor-trigger>
+        <span>2.3. 태그로 선택 <code v-pre>getElementsByTagName</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M16.75 8.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"/><path d="M15.75 0a8.25 8.25 0 1 1-2.541 16.101l-1.636 1.636a1.744 1.744 0 0 1-1.237.513H9.25a.25.25 0 0 0-.25.25v1.448a.876.876 0 0 1-.256.619l-.214.213a.75.75 0 0 1-.545.22H5.25a.25.25 0 0 0-.25.25v1A1.75 1.75 0 0 1 3.25 24h-1.5A1.75 1.75 0 0 1 0 22.25v-2.836c0-.464.185-.908.513-1.236l7.386-7.388A8.249 8.249 0 0 1 15.75 0ZM9 8.25a6.733 6.733 0 0 0 .463 2.462.75.75 0 0 1-.168.804l-7.722 7.721a.25.25 0 0 0-.073.177v2.836c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1c0-.966.784-1.75 1.75-1.75H7.5v-1c0-.966.784-1.75 1.75-1.75h1.086a.25.25 0 0 0 .177-.073l1.971-1.972a.75.75 0 0 1 .804-.168A6.75 6.75 0 1 0 9 8.25Z"/></g></g></svg> 실행화면</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const el2 = document.getElementsByTagName('li');
+console.log(el2);
+
+el2[1].style.backgroundImage = 'url(&quot;https://qwerew.cafe24.com/images/icon/02.png&quot;)';
+el2[1].style.backgroundSize = '24px';
+el2[1].style.backgroundRepeat = 'no-repeat';
+el2[1].style.paddingLeft = '24px';</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p><figure class="content-center">
+    <img src="../../../../source/images/result3.jpg" alt="" class="shadow">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+    </div>
+</div>
+<doc-anchor-target id="24-css선택자로-선택-queryselector--queryselectorall">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#24-css선택자로-선택-queryselector--queryselectorall">#</doc-anchor-trigger>
+        <span>2.4. css선택자로 선택 <code v-pre>querySelector</code> , <code v-pre>querySelectorAll</code></span>
+    </h3>
+</doc-anchor-target>
+<p>선택대상이 한개일때는 <code v-pre>querySelector</code> 선택대상이 여러개일때는 <code v-pre>querySelectorAll</code> 을 사용합니다. querySelector 은 모든 css 선택자를 사용할수 있습니다.</p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M16.75 8.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"/><path d="M15.75 0a8.25 8.25 0 1 1-2.541 16.101l-1.636 1.636a1.744 1.744 0 0 1-1.237.513H9.25a.25.25 0 0 0-.25.25v1.448a.876.876 0 0 1-.256.619l-.214.213a.75.75 0 0 1-.545.22H5.25a.25.25 0 0 0-.25.25v1A1.75 1.75 0 0 1 3.25 24h-1.5A1.75 1.75 0 0 1 0 22.25v-2.836c0-.464.185-.908.513-1.236l7.386-7.388A8.249 8.249 0 0 1 15.75 0ZM9 8.25a6.733 6.733 0 0 0 .463 2.462.75.75 0 0 1-.168.804l-7.722 7.721a.25.25 0 0 0-.073.177v2.836c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1c0-.966.784-1.75 1.75-1.75H7.5v-1c0-.966.784-1.75 1.75-1.75h1.086a.25.25 0 0 0 .177-.073l1.971-1.972a.75.75 0 0 1 .804-.168A6.75 6.75 0 1 0 9 8.25Z"/></g></g></svg> 실행화면</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const el4 = document.querySelector('.highlight');
+console.log(el4);
+el4.style.backgroundColor = 'yellow';
+const el5 = document.querySelectorAll('.highlight');
+console.log(el5);
+el5[2].style.backgroundColor = 'yellow';</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p>생략</p>
+    </div>
+</div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">제이쿼리로 선택하기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>script/basic-jq.html</span>
+    </div>
+    <a href="script/basic-jq.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="3-취득하고-수정하기">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#3-dom에서-이벤트-처리하기">#</doc-anchor-trigger>
-        <span>3. DOM에서 이벤트 처리하기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-취득하고-수정하기">#</doc-anchor-trigger>
+        <span>3. 취득하고 수정하기</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="4-dom에서-노드-조작하기">
+<doc-anchor-target id="31-수정하기-innertextinnerhtml">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-수정하기-innertextinnerhtml">#</doc-anchor-trigger>
+        <span>3.1. 수정하기 <code v-pre>innerText</code>,<code v-pre>innerHTML</code></span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="32-innertext-textcontent">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#32-innertext-textcontent">#</doc-anchor-trigger>
+        <span>3.2. innerText, textContent</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>요소내의 텍스트 내용을 가져오거나 수정하는 속성 <code v-pre>display:none</code> 된 텍스트는 읽지 하며 숨김 텍스트는 <code v-pre>textContent</code> 속성으로 취득해야 합니다.</p>
+</blockquote>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg> 미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>script/inner.html</span>
+    </div>
+    <a href="script/inner.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<ul>
+<li>요소의 텍스트노드를 취득/수정하는 속성을 학습해보겠습니다.</li>
+<li>코드1을 html을 복사하여 시작합니다.</li>
+</ul>
+</doc-tab>
+<doc-tab v-cloak id="코드1">
+<template #title>코드1</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;Document&lt;/title&gt;
+		&lt;style&gt;
+			#four span {
+				display: none;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div id=&quot;page&quot;&gt;
+			&lt;h1 id=&quot;header&quot;&gt;textContent/innerText&lt;/h1&gt;
+			&lt;h2&gt;망고의 쇼핑목록&lt;/h2&gt;
+			&lt;ul&gt;
+				&lt;li id=&quot;one&quot; class=&quot;hot&quot;&gt;
+					&lt;em&gt;삑삑공&lt;/em&gt;
+				&lt;/li&gt;
+				&lt;li id=&quot;two&quot; class=&quot;hot&quot;&gt;연어간식&lt;/li&gt;
+				&lt;li id=&quot;three&quot; class=&quot;hot&quot;&gt;치즈껌&lt;/li&gt;
+				&lt;li id=&quot;four&quot;&gt;&lt;span&gt;😀😀😀😀😀&lt;/span&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;div id=&quot;scriptResults&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="코드2">
+<template #title>코드2</template>
+<p><figure class="content-center">
+    <img src="../../../../source/images/js5-1.jpg" alt="" class="shadow">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>[설명]</p>
+<ul>
+<li>innerText: 요소의 텍스트 내용을 가져오거나 설정합니다. 보여지는 텍스트만을 고려하며, 숨겨진(hidden) 요소나 스타일(display: none)이 적용된 요소의 텍스트를 가져오지 않습니다. HTML 태그를 포함한 모든 텍스트를 반환합니다.</li>
+<li>textContent: 요소의 모든 텍스트 내용을 가져오거나 설정합니다. 이 속성은 숨겨진(hidden) 요소나 스타일(display: none)이 적용된 요소에 대해서도 포함된 모든 텍스트를 반환합니다.</li>
+</ul>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="33-innerhtml">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#33-innerhtml">#</doc-anchor-trigger>
+        <span>3.3. <code v-pre>innerHTML</code></span>
+    </h3>
+</doc-anchor-target>
+<p>선택된 요소 내부 HTML을 가져오거나 조작하는데 사용하는 속성.<br />
+innerHTML을 사용하여 새로운 HTML 코드를 설정하면 해당 요소의 모든 자식 노드들이 완전히 대체됩니다.<br />
+즉, 기존에 있는 모든 자식 노드들은 제거되고, 새로운 HTML 코드가 그 자리에 삽입됩니다. 따라서 주변 컨텍스트와 함께 유지하려는 경우에는 조심해야 합니다.</p>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<ul>
+<li>요소의 HTML노드를 취득/수정하는 속성을 학습해보겠습니다.</li>
+<li>코드1의 html을 복사하여 시작합니다.</li>
+</ul>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg> 미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>script/inner.html</span>
+    </div>
+    <a href="script/inner.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</doc-tab>
+<doc-tab v-cloak id="코드1">
+<template #title>코드1</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Inner HTML&lt;/title&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;page&quot;&gt;
+			&lt;h1 id=&quot;header&quot;&gt;innerHTML&lt;/h1&gt;
+			&lt;h2&gt;요소내 HTML 태그를 취득하거나 조작시 사용되는 속성&lt;/h2&gt;
+			&lt;ul&gt;
+				&lt;li id=&quot;one&quot; class=&quot;hot&quot;&gt;떡볶이&lt;/li&gt;
+				&lt;li id=&quot;two&quot; class=&quot;hot&quot;&gt;순대&lt;/li&gt;
+				&lt;li id=&quot;three&quot; class=&quot;hot&quot;&gt;간짜장&lt;/li&gt;
+				&lt;li id=&quot;four&quot;&gt;물만두&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="코드2">
+<template #title>코드2</template>
+<p><figure class="content-center">
+    <img src="../../../../source/images/js5-2.jpg" alt="" class="shadow">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="4-dom에서-이벤트-처리하기">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4-dom에서-노드-조작하기">#</doc-anchor-trigger>
-        <span>4. DOM에서 노드 조작하기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-dom에서-이벤트-처리하기">#</doc-anchor-trigger>
+        <span>4. DOM에서 이벤트 처리하기</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="5-dom에서-노드-조작하기">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-dom에서-노드-조작하기">#</doc-anchor-trigger>
+        <span>5. DOM에서 노드 조작하기</span>
     </h2>
 </doc-anchor-target>
 
@@ -467,6 +788,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "5. DOM(문서객체모델) ", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "5. DOM(문서객체모델) ", level: 4, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
