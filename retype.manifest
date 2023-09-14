@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-13T02:30:47Z",
+  "created": "2023-09-14T14:36:15Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2902,10 +2902,34 @@
       "path": "3_js\\basic\\1.total\\3\\script\\function.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\3\\script\\gallery.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\3\\script\\images\\flower.jpg"
     },
     {
       "path": "3_js\\basic\\1.total\\3\\script\\images\\flower1.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\img\\img1.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\img\\img2.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\img\\img3.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\img\\img4.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\img\\img5.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\img\\img6.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\3\\script\\img\\img7.jpg"
     },
     {
       "path": "3_js\\basic\\1.total\\3\\script\\let-1.html"
@@ -3079,6 +3103,12 @@
       "path": "3_js\\basic\\1.total\\5\\script\\acessdom.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\5\\script\\basic-jq.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\basic.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\5\\script\\dom.html"
     },
     {
@@ -3185,6 +3215,9 @@
     },
     {
       "path": "3_js\\basic\\1.total\\5\\script\\inner.html"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\inner2.html"
     },
     {
       "path": "3_js\\basic\\1.total\\5\\script\\lightbox-result.html"
@@ -3650,6 +3683,12 @@
       "path": "source\\images\\js4-9.jpg"
     },
     {
+      "path": "source\\images\\js5-1.jpg"
+    },
+    {
+      "path": "source\\images\\js5-2.jpg"
+    },
+    {
       "path": "source\\images\\node-tree.png"
     },
     {
@@ -3657,6 +3696,15 @@
     },
     {
       "path": "source\\images\\qr.png"
+    },
+    {
+      "path": "source\\images\\result1.jpg"
+    },
+    {
+      "path": "source\\images\\result2.jpg"
+    },
+    {
+      "path": "source\\images\\result3.jpg"
     },
     {
       "path": "source\\images\\window.gif"

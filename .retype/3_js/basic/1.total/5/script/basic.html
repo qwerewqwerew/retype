@@ -1,0 +1,57 @@
+<html>
+
+<head>
+	<title>JavaScript DOM Course</title>
+</head>
+
+<body>
+	<h1>치킨 (리미와감자)</h1>
+	<ul>
+		<li id="one">I like 치킨 (치킨시켜)</li>
+		<li class="highlight">Everybody likes 치킨 (치킨시켜)</li>
+		<li>Let's eat 치킨 (치킨시켜)</li>
+	</ul>
+	<p class="highlight"> 양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2 반은 양념 치킨 반은 후라이드 치킨 무는 많이 줘요 아줌마 부위는 날개는 세게 다리는 네게 목은 빼주세요 아줌마 고도비만 치킨 알이 꽉 찬 치킨 두 마리 같은 걸로 아줌마 구이는 날개는 미듐 가슴도 미듐 다린 웰던으로 아줌마 </p>
+	<ul>
+		<li class="highlight">Edge 있게 물티슈, (아줌마)</li>
+		<li>콜란 서비스 (아줌마)</li>
+		<li>할인카드... 되죠? (아줌마)</li>
+	</ul>
+	<script>
+		//id선택
+		//document.getElementById("one").style.background = "yellow";
+
+		//var el3 = document.getElementsByClassName("highlight");
+		//console.log(el3);
+		//el3[1].style.cssText = 'width:500px; marign:auto; background:pink'
+		//id선택
+		//document.getElementById("one").style.background="yellow";
+
+		//태그선택->배열선택
+		var el2=document.getElementsByTagName("li");
+		console.log(el2);
+
+		el2[1].style.backgroundImage='url("https://qwerew.cafe24.com/images/icon/02.png")';
+		el2[1].style.backgroundSize='24px';
+		el2[1].style.backgroundRepeat='no-repeat';
+		el2[1].style.paddingLeft='24px';
+
+		//클래스선택
+		//css 여러개 -> 추가는 안되고 덮어씌워짐
+		//var el3 = document.getElementsByClassName("highlight");
+		//console.log(el3);
+		//el3[1].style.cssText='width:500px; marign:auto; background:pink'
+
+		//querySelector
+		//var el4 = document.querySelector(".highlight");
+		//el4.style.backgroundColor = 'yellow';
+		//console.log(el4);
+		//var el5 = document.querySelectorAll(".highlight");
+		//console.log(el5);
+		//el5[2].style.backgroundColor = "yellow";
+
+
+	</script>
+</body>
+
+</html>

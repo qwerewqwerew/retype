@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>innerText, innerHTML 프로퍼티</title>
+	<title>Document</title>
+	<style>
+		#four span {
+			display: none;
+		}
+	</style>
 </head>
-<body>
-	<button onclick="inntext()">innerText로 표시하기</button>
-	<button onclick="innhtml()">innerHTML로 표시하기</button>
-	<h1>현재 시각: </h1>
-	<div id="current"></div>
-	
-	<script>
-		var now = new Date();
 
-		function inntext(){
-			document.getElementById("current").innerText = now;
-		}
-		function innhtml() {
-			document.getElementById("current").innerHTML = "<em>" + now + "</em>";
-		}
+<body>
+	<div id="page">
+		<h1 id="header">textContent/innerText</h1>
+		<h2>망고의 쇼핑목록</h2>
+		<ul>
+			<li id="one" class="hot"><em>삑삑공</em></li>
+			<li id="two" class="hot">연어간식</li>
+			<li id="three" class="hot">치즈껌</li>
+			<li id="four"><span>😀😀😀😀😀</span></li>
+		</ul>
+		<div id="scriptResults"></div>
+	</div>
+	<script>
+		const firstItem = document.querySelector('#one');
+		const showTextContent = firstItem.textContent;	 // textContent 로 값 취득
+		console.log(showTextContent);	//삑삑공
+		var showInnerText = firstItem.innerText;	// firstItem 변수의 텍스트 값으로 초기화
+		console.log(showInnerText);	//삑삑공
+
+		//동적요소추가
+		let msg = `<p>textContent:${showTextContent}</p>`; // 변수 msg 에 동적 태그 할당
+		msg += `<p>innerText:${showInnerText}</p>` 	//msg 값 재할당
+		let el = document.querySelector('#scriptResults');
+		el.innerHTML = msg;
+		firstItem.textContent = '공주드레스';       // firstitem 변수의 텍스트 수정
+	</script>
+	<script>
+		const text1 = document.querySelector('#four').textContent;
+		const text2 = document.querySelector('#four').innerText;//숨겨진건 반환안됨
+		el.innerHTML += text1;
+		el.innerHTML += text2;
 	</script>
 </body>
+
 </html>
