@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.748017360033">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.748179896940">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.2.0.748017360033" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.2.0.748179896940" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.748017360033" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.2.0.748179896940" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.748017360033" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.748017360033" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.2.0.748179896940" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.2.0.748179896940" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../../../resources/js/mermaid.js?v=3.2.0" defer></script>
 
     <style>
@@ -81,11 +81,11 @@
         letter-spacing: -0.5px;
         position: relative;
         background-color: #f4f5f7;
-        line-height: 1.8;
-        filter: drop-shadow(-2px 4px 4px #25344b25);
+        line-height: 2;
+        filter: drop-shadow(-2px 4px 4px #0a216d25);
       }
 
-      .comment_box p {
+      .comment_box p, .comment_box ul {
         margin-bottom: 0.4rem !important;
       }
 
@@ -186,7 +186,10 @@
         color: rgb(210, 26, 170) !important;
         font-size: 1.1rem !important;
       }
-
+      .blue,
+      .blue * {
+        color: rgb(26, 106, 210) !important;
+      }
       .mark {
         background-color: rgba(245, 255, 103, 0.534);
       }
@@ -196,12 +199,19 @@
         padding: 2rem 0 .5rem 1rem;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, .1), -1px -1px 3px rgba(0, 0, 0, .1);
       }
+      .box1 {
+        background: #ffffff;
+        padding: 2rem 0 .5rem 1rem;
+        box-shadow: 1px 1px 3px rgba(207, 16, 16, 0.1), -1px -1px 3px rgba(0, 0, 0, .1);
+      }
 
       .pdbox {
         padding: .5rem;
         background: #effafe;
         border-radius: 4px;
       }
+
+
     </style>
 </head>
 <body>
@@ -569,10 +579,7 @@ let letiable = '변수';</code></pre>
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta
-			name=&quot;viewport&quot;
-			content=&quot;width=device-width, initial-scale=1.0&quot;
-		/&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 		&lt;title&gt;나이 계산하기&lt;/title&gt;
 	&lt;/head&gt;
 	&lt;body&gt;&lt;/body&gt;
@@ -587,10 +594,7 @@ let letiable = '변수';</code></pre>
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta
-			name=&quot;viewport&quot;
-			content=&quot;width=device-width, initial-scale=1.0&quot;
-		/&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 		&lt;title&gt;나이 계산하기&lt;/title&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
@@ -2311,10 +2315,7 @@ if (userNumber !== null) {
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta
-			name=&quot;viewport&quot;
-			content=&quot;width=device-width, initial-scale=1.0&quot;
-		/&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 		&lt;title&gt;조건문&lt;/title&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
@@ -2499,15 +2500,9 @@ AND 연산자는 조건식이 둘 이상일 경우 하나만 false 라도 최종
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta
-			name=&quot;viewport&quot;
-			content=&quot;width=device-width, initial-scale=1.0&quot;
-		/&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 		&lt;title&gt;세션 선택 - switch문&lt;/title&gt;
-		&lt;link
-			rel=&quot;stylesheet&quot;
-			href=&quot;css/switch.css&quot;
-		/&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/switch.css&quot; /&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
 		&lt;script&gt;
@@ -2880,14 +2875,8 @@ for (i = 1; i &lt;= 9; i++) {
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta
-			http-equiv=&quot;X-UA-Compatible&quot;
-			content=&quot;IE=edge&quot;
-		/&gt;
-		&lt;meta
-			name=&quot;viewport&quot;
-			content=&quot;width=device-width, initial-scale=1.0&quot;
-		/&gt;
+		&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 		&lt;title&gt;Document&lt;/title&gt;
 	&lt;/head&gt;
 
@@ -3098,10 +3087,7 @@ document.write('=' + total);</code></pre>
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta
-			name=&quot;viewport&quot;
-			content=&quot;width=device-width, initial-scale=1.0&quot;
-		/&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 		&lt;title&gt;자리 배치도&lt;/title&gt;
 		&lt;style&gt;
 			table,

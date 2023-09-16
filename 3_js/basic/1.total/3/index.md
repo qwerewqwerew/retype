@@ -679,23 +679,9 @@ let sum = (a, b) => a + b;
 <div id="galleryWrap">
 	<h1>이미지 넘기기</h1>
 	<p>
-		<a
-			href="#prev"
-			onclick="prevGallery();"
-			>⏪</a
-		>
-		<img
-			src="./img/img1.jpg"
-			alt="갤러리"
-			id="gallery"
-			width="300"
-			height="200"
-		/>
-		<a
-			href="#next"
-			onclick="nextGallery();"
-			>⏩</a
-		>
+		<a href="#prev" onclick="prevGallery();">⏪</a>
+		<img src="./img/img1.jpg" alt="갤러리" id="gallery" width="300" height="200" />
+		<a href="#next" onclick="nextGallery();">⏩</a>
 	</p>
 </div>
 ```
@@ -739,11 +725,10 @@ function prevGallery() {
 #### 1.5.1. 예제
 
 +++ 지시문
-[:icon-play: 코드1](./script/callback.html)
-[:icon-play: 코드2,3](./script/callback2.html)
 
-- 코드1 에서는 callback.html 문서를 생성하여 스크립트를 작성해 보겠습니다.
-- 코드2 에서는 콜백 함수를 사용하는 내장함수를 사용해 보겠습니다.
+[!ref target='blank' text=':icon-play: 코드1 [콜백함수 작성하기]'](./script/callback.html)
+[!ref target='blank' text=':icon-play: 코드2,3 [콜백을 사용하는 내장함수]'](./script/callback2.html)
+[!ref target='blank' text=':icon-play: 코드4 [setInterval을 응용한 시계]'](./script/nowDisplay.html)
 
 +++ 코드1
 ![복붙방지](../../../../source/images/callback.jpg)
@@ -773,7 +758,7 @@ clearTimeout(stop1);
 
 |||
 
-+++코드3
++++ 코드3
 
 콜백함수를 활용하는 setInterval
 
@@ -799,6 +784,12 @@ clearInterval(stop2);
 ```
 
 |||
+
++++ 코드4
+setInterval을 사용하여 시계만들기
+
+![복붙방지](../../../../source/images/js5-3.jpg)
+
 +++
 
 ## 2. 이벤트
@@ -909,38 +900,20 @@ document.querySelector('button').addEventListener('click', function () {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>자바스크립트 이벤트</title>
-		<link
-			rel="stylesheet"
-			href="css/function.css"
-		/>
+		<link rel="stylesheet" href="css/function.css" />
 	</head>
 	<body>
 		<ul>
 			<li>
-				<a
-					href="#"
-					onclick="alert('버튼을 클릭했습니다.')"
-					>Green</a
-				>
+				<a href="#" onclick="alert('버튼을 클릭했습니다.')">Green</a>
 			</li>
 			<li>
-				<a
-					href="#"
-					onclick="alert('버튼을 클릭했습니다.')"
-					>Orange</a
-				>
+				<a href="#" onclick="alert('버튼을 클릭했습니다.')">Orange</a>
 			</li>
 			<li>
-				<a
-					href="#"
-					onclick="alert('버튼을 클릭했습니다.')"
-					>Purple</a
-				>
+				<a href="#" onclick="alert('버튼을 클릭했습니다.')">Purple</a>
 			</li>
 		</ul>
 		<div id="result"></div>
@@ -995,38 +968,20 @@ p {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>자바스크립트 이벤트</title>
-		<link
-			rel="stylesheet"
-			href="css/function.css"
-		/>
+		<link rel="stylesheet" href="css/function.css" />
 	</head>
 	<body>
 		<ul>
 			<li>
-				<a
-					href="#"
-					onclick="changeBg('green')"
-					>Green</a
-				>
+				<a href="#" onclick="changeBg('green')">Green</a>
 			</li>
 			<li>
-				<a
-					href="#"
-					onclick="changeBg('orange')"
-					>Orange</a
-				>
+				<a href="#" onclick="changeBg('orange')">Orange</a>
 			</li>
 			<li>
-				<a
-					href="#"
-					onclick="changeBg('purple')"
-					>Purple</a
-				>
+				<a href="#" onclick="changeBg('purple')">Purple</a>
 			</li>
 		</ul>
 		<div id="result"></div>
@@ -1096,33 +1051,16 @@ function changeBg(color) {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>자바스크립트 이벤트</title>
-		<link
-			rel="stylesheet"
-			href="css/event.css"
-		/>
+		<link rel="stylesheet" href="css/event.css" />
 	</head>
 
 	<body>
 		<div id="item">
-			<img
-				src="http://qwerew.cafe24.com/images/1.jpg"
-				alt=""
-			/>
-			<button
-				class="over"
-				id="open"
-			>
-				상세 설명 보기
-			</button>
-			<div
-				id="desc"
-				class="detail"
-			>
+			<img src="http://qwerew.cafe24.com/images/1.jpg" alt="" />
+			<button class="over" id="open">상세 설명 보기</button>
+			<div id="desc" class="detail">
 				<h4>이벤트 처리기(event handler)</h4>
 				<p>이벤트 처리기(event handler) 또는 이벤트 리스너(event listener)는 특정 이벤트가 발생했을 때 실행되는 함수를 말합니다. 웹 페이지에서 사용자의 상호작용(마우스 클릭, 키보드 입력 등) 또는 브라우저의 특정 동작(페이지 로딩, 이미지 로딩 완료 등)과 같은 이벤트가 발생하면, 그에 따른 반응을 처리하기 위해 이벤트 처리기를 사용합니다.</p>
 				<button id="close">상세 설명 닫기</button>
@@ -1181,42 +1119,19 @@ button {
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>자바스크립트 이벤트</title>
-		<link
-			rel="stylesheet"
-			href="css/event.css"
-		/>
+		<link rel="stylesheet" href="css/event.css" />
 	</head>
 
 	<body>
 		<div id="item">
-			<img
-				src="http://qwerew.cafe24.com/images/1.jpg"
-				alt=""
-			/>
-			<button
-				class="over"
-				id="open"
-				onclick="showDetail()"
-			>
-				상세 설명 보기
-			</button>
-			<div
-				id="desc"
-				class="detail"
-			>
+			<img src="http://qwerew.cafe24.com/images/1.jpg" alt="" />
+			<button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+			<div id="desc" class="detail">
 				<h4>이벤트 처리기(event handler)</h4>
 				<p>이벤트 처리기(event handler) 또는 이벤트 리스너(event listener)는 특정 이벤트가 발생했을 때 실행되는 함수를 말합니다. 웹 페이지에서 사용자의 상호작용(마우스 클릭, 키보드 입력 등) 또는 브라우저의 특정 동작(페이지 로딩, 이미지 로딩 완료 등)과 같은 이벤트가 발생하면, 그에 따른 반응을 처리하기 위해 이벤트 처리기를 사용합니다.</p>
-				<button
-					id="close"
-					onclick="hideDetail()"
-				>
-					상세 설명 닫기
-				</button>
+				<button id="close" onclick="hideDetail()">상세 설명 닫기</button>
 			</div>
 		</div>
 		<script>
@@ -1251,15 +1166,9 @@ html속성을 사용하여 이벤트핸들러를 처리한 예시 였습니다.
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>자바스크립트 이벤트</title>
-		<link
-			rel="stylesheet"
-			href="css/function.css"
-		/>
+		<link rel="stylesheet" href="css/function.css" />
 	</head>
 	<body>
 		<button id="change">글자색 바꾸기</button>

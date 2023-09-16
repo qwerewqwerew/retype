@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
+  <meta charset="UTF-8">
   <title>Inner HTML</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -14,13 +15,19 @@
       <li id="one" class="hot">떡볶이</li>
       <li id="two" class="hot">순대</li>
       <li id="three" class="hot">간짜장</li>
-      <li id="four">물만두</li>
+      <li id="four"> 물만두 <span>dd</span></li>
     </ul>
+    <!-- 래핑됨 -->
+    <div class="a"> 부모 <div class="b">자식</div>
+    </div>
   </div>
   <script>
-    var firstItem = document.querySelector('#one');
-    var itemContent = firstItem.innerHTML;
+    const firstItem = document.querySelector('#one');
+    const fourItem = document.querySelector('.a');
+    const itemContent = firstItem.innerHTML;
+    const itemContent2 = fourItem.innerHTML;
     firstItem.innerHTML = '<a href="http://kimteacher.com">' + itemContent + '</a>';
+    fourItem.innerHTML = '<a href="http://kimteacher.com">' + itemContent2 + '</a>';
   </script>
 </body>
 

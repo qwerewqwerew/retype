@@ -15,9 +15,9 @@
   </style>
 </head>
 <body>
-  <div id="container">    
+  <div id="container">
     <h1>DOM을 공부합시다</h1>
-    <a href="#" onclick="addContents(); this.onclick='';">더 보기</a>    
+    <a href="#" onclick="addContents(); this.onclick='';">더 보기</a>
     <div id="info"></div>
   </div>
   <script>
@@ -25,10 +25,10 @@
       var newP = document.createElement("p");
       var txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말입니다.");
       newP.appendChild(txtNode);
-      
-      var newImg = document.createElement("img");
-      var srcNode = document.createAttribute("src");
-      var altNode = document.createAttribute("alt");
+
+      const newImg = document.createElement("img");
+      let srcNode = document.createAttribute("src");
+      let altNode = document.createAttribute("alt");
       srcNode.value = "images/dom.jpg";
       altNode.value = "돔 트리 예제 이미지";
       newImg.setAttributeNode(srcNode);
@@ -36,6 +36,8 @@
 
       document.getElementById("info").appendChild(newP);
       document.getElementById("info").appendChild(newImg);
+      console.log(altNode.value);//값 취득
+      console.log(document.getElementById("info").value);//값 미취득
     }
   </script>
 </body>

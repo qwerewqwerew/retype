@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Web Programming</title>
-	<link rel="stylesheet" href="css/nodelist.css">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		ul {
+			list-style: none;
+			padding-top: 50px;
+		}
+
+		li {
+			line-height: 2.5;
+		}
+
+		li:hover {
+			cursor: pointer;
+		}
+	</style>
 </head>
+
 <body>
 	<h1>Web Programming</h1>
-	<ul id="itemList">
+	<ul class="listItem">
 		<li>HTML</li>
 		<li>CSS</li>
 		<li>Javascript</li>
 	</ul>
+	<script>
+		const list = document.querySelectorAll('li');
+		const list2 = document.getElementsByTagName('li');
+		console.log(list);
+		list.forEach((e) => {
+			e.style.color = "red"
+		})
+
+		/* tabname 은 htmlCollection 으로 확인되어 forEach 를 사용할수 없다 */
+		console.log(list2);
+		for (o of list2) {
+			o.style.color = "blue"
+		}
+	/*
+					list2.forEach((e) => {
+							e.style.color = "red"
+						})
+				*/
+	</script>
 </body>
+
 </html>

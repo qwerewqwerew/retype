@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-14T14:36:15Z",
+  "created": "2023-09-16T11:45:11Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2941,6 +2941,9 @@
       "path": "3_js\\basic\\1.total\\3\\script\\no-function.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\3\\script\\nowdisplay.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\3\\script\\quiz-1.html"
     },
     {
@@ -3148,16 +3151,28 @@
       "path": "3_js\\basic\\1.total\\5\\script\\event-6.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\5\\script\\files\\03\\images.zip"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\files\\04\\images.zip"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\files\\05\\images.zip"
+    },
+    {
       "path": "3_js\\basic\\1.total\\5\\script\\getattr.html"
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-blue.jpg"
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-blue.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-gray.jpg"
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-gray.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-pink.jpg"
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\coffee-pink.jpg",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\5\\script\\images\\cup-1.png"
@@ -3172,10 +3187,21 @@
       "path": "3_js\\basic\\1.total\\5\\script\\images\\dom.jpg"
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\images\\easys-1.jpg"
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\easys-1.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\images\\easys-2.jpg"
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\easys-2.jpg",
+      "old": true
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\pet-1.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\pet-2.jpg"
+    },
+    {
+      "path": "3_js\\basic\\1.total\\5\\script\\images\\pet-3.jpg"
     },
     {
       "path": "3_js\\basic\\1.total\\5\\script\\images\\tree-1-thumb.jpg"
@@ -3229,10 +3255,12 @@
       "path": "3_js\\basic\\1.total\\5\\script\\nodecreate-before.html"
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate-result.html"
+      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate-result.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate.html"
+      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\1.total\\5\\script\\nodedelete-result.html"
@@ -3282,6 +3310,9 @@
     {
       "path": "3_js\\basic\\2.partial\\dom\\index.html",
       "old": true
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\this\\index.html"
     },
     {
       "path": "3_js\\deep\\1_carousel\\1\\index.html"
@@ -3521,6 +3552,9 @@
       "path": "categories\\response\\index.html"
     },
     {
+      "path": "categories\\this\\index.html"
+    },
+    {
       "path": "favicon.png"
     },
     {
@@ -3572,13 +3606,25 @@
       "path": "retype\\index.html"
     },
     {
+      "path": "retype\\mermaid\\index.html"
+    },
+    {
       "path": "robots.txt"
     },
     {
       "path": "sitemap.xml.gz"
     },
     {
+      "path": "source\\images\\09-16_496.jpg"
+    },
+    {
+      "path": "source\\images\\09-16_497.jpg"
+    },
+    {
       "path": "source\\images\\1.jpg"
+    },
+    {
+      "path": "source\\images\\2023-01-15_221.png"
     },
     {
       "path": "source\\images\\3.gif"
@@ -3686,7 +3732,67 @@
       "path": "source\\images\\js5-1.jpg"
     },
     {
+      "path": "source\\images\\js5-10.jpg"
+    },
+    {
+      "path": "source\\images\\js5-11.jpg"
+    },
+    {
+      "path": "source\\images\\js5-12.jpg"
+    },
+    {
+      "path": "source\\images\\js5-13.jpg"
+    },
+    {
+      "path": "source\\images\\js5-14.jpg"
+    },
+    {
+      "path": "source\\images\\js5-15.jpg"
+    },
+    {
+      "path": "source\\images\\js5-16.jpg"
+    },
+    {
+      "path": "source\\images\\js5-17.jpg"
+    },
+    {
+      "path": "source\\images\\js5-18.jpg"
+    },
+    {
+      "path": "source\\images\\js5-19.jpg"
+    },
+    {
       "path": "source\\images\\js5-2.jpg"
+    },
+    {
+      "path": "source\\images\\js5-20.jpg"
+    },
+    {
+      "path": "source\\images\\js5-21.jpg"
+    },
+    {
+      "path": "source\\images\\js5-22.jpg"
+    },
+    {
+      "path": "source\\images\\js5-3.jpg"
+    },
+    {
+      "path": "source\\images\\js5-4.jpg"
+    },
+    {
+      "path": "source\\images\\js5-5.jpg"
+    },
+    {
+      "path": "source\\images\\js5-6.jpg"
+    },
+    {
+      "path": "source\\images\\js5-7.jpg"
+    },
+    {
+      "path": "source\\images\\js5-8.jpg"
+    },
+    {
+      "path": "source\\images\\js5-9.jpg"
     },
     {
       "path": "source\\images\\node-tree.png"
