@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson Retina.js</title>
+	<style>
+		.demo-container,
+		.js,
+		.jq {
+			width: 500px;
+			height: 333px;
+			background: url(./images/image.jpg) no-repeat;
+			background-size: 100% 100%;
+		}
+
+		@media screen and (-webkit-min-device-pixel-ratio:2) {
+			.demo-container {
+				background: url(./images/image2x.jpg) no-repeat;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Demo content -->
+	<div class="demo-container">
+		<p>demo container</p>
+	</div>
+	<!-- Add Bower components -->
+	<div class="js" >
+		<p>js</p>
+	</div>
+
+	<img src="./images/image.jpg" data-at2x="./images/image2x.jpg" />
+	<script>
+		const dpr = window.devicePixelRatio;
+		if (dpr >= 2) {
+			//alert("d")
+			document.querySelector('.js').style.background = 'url("./images/image2x.jpg")';
+		}
+	</script>
+	<script src='https://code.jquery.com/jquery-3.7.1.slim.min.js'></script>
+	<script src="./retina.min.js"></script>
+</body>
+
+</html>

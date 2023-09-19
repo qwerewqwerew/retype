@@ -11,6 +11,7 @@ links:
     link: https://qwerewqwerew.github.io/book01/
   - text: Respository
     link: https://github.com/qwerewqwerew/retype
+    target: blank
 cache:
   strategy: none
 exclude:
@@ -19,3 +20,8 @@ markdown:
   lineBreaks: hard
 footer:
   copyright: '&copy; Copyright {{ year }}. All rights reserved.'
+integrations:
+  googleTagManager:
+    id: GTM-TKHJVFFG
+  googleAnalytics:
+    id: G-NKP1WSKRDB

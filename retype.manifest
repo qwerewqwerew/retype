@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-16T11:45:11Z",
+  "created": "2023-09-19T14:07:45Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2242,22 +2242,44 @@
       "path": "2_css\\6_ui\\2.hover\\index.html"
     },
     {
-      "path": "2_css\\7_retina\\7\\index.html"
+      "path": "2_css\\7_retina\\7\\index.html",
+      "old": true
     },
     {
-      "path": "2_css\\7_retina\\images\\image.jpg"
+      "path": "2_css\\7_retina\\images\\image.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\7_retina\\images\\image2x.jpg"
+      "path": "2_css\\7_retina\\images\\image2x.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\7_retina\\index.html"
+      "path": "2_css\\7_retina\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\7.retina\\index.html"
     },
     {
       "path": "2_css\\8.html"
     },
     {
       "path": "2_css\\8.nav\\index.html"
+    },
+    {
+      "path": "2_css\\retina\\images.zip"
+    },
+    {
+      "path": "2_css\\retina\\images\\image.jpg"
+    },
+    {
+      "path": "2_css\\retina\\images\\image2x.jpg"
+    },
+    {
+      "path": "2_css\\retina\\index.html"
+    },
+    {
+      "path": "2_css\\retina\\retina.min.js.zip"
     },
     {
       "path": "3_js\\basic\\1_total\\1\\index.html",
@@ -3259,8 +3281,7 @@
       "old": true
     },
     {
-      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate.html",
-      "old": true
+      "path": "3_js\\basic\\1.total\\5\\script\\nodecreate.html"
     },
     {
       "path": "3_js\\basic\\1.total\\5\\script\\nodedelete-result.html"
@@ -3318,10 +3339,12 @@
       "path": "3_js\\deep\\1_carousel\\1\\index.html"
     },
     {
-      "path": "3_js\\deep\\1_carousel\\assets\\01.mp4"
+      "path": "3_js\\deep\\1_carousel\\assets\\01.mp4",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\1_carousel\\assets\\02.mp4"
+      "path": "3_js\\deep\\1_carousel\\assets\\02.mp4",
+      "old": true
     },
     {
       "path": "3_js\\deep\\1_carousel\\swiper.html"
@@ -3525,6 +3548,21 @@
       "path": "5_projects\\4-testmonial\\media.zip"
     },
     {
+      "path": "6_jquery\\1\\1.html"
+    },
+    {
+      "path": "6_jquery\\1\\1q.html"
+    },
+    {
+      "path": "6_jquery\\1\\index.html"
+    },
+    {
+      "path": "6_jquery\\11\\fullpage.js-2.9.7.zip"
+    },
+    {
+      "path": "6_jquery\\11\\index.html"
+    },
+    {
       "path": "categories\\array\\index.html"
     },
     {
@@ -3541,6 +3579,9 @@
     },
     {
       "path": "categories\\javascript\\index.html"
+    },
+    {
+      "path": "categories\\jquery\\index.html"
     },
     {
       "path": "categories\\partial\\index.html"
@@ -3619,6 +3660,9 @@
     },
     {
       "path": "source\\images\\09-16_497.jpg"
+    },
+    {
+      "path": "source\\images\\09-16_502.jpg"
     },
     {
       "path": "source\\images\\1.jpg"
@@ -3831,10 +3875,22 @@
       "path": "tags\\css\\index.html"
     },
     {
+      "path": "tags\\fullpage\\index.html"
+    },
+    {
       "path": "tags\\grid\\index.html"
     },
     {
       "path": "tags\\index.html"
+    },
+    {
+      "path": "tags\\javascript\\index.html"
+    },
+    {
+      "path": "tags\\jquery--javascript\\index.html"
+    },
+    {
+      "path": "tags\\jquery\\index.html"
     },
     {
       "path": "tags\\masonry\\index.html"

@@ -473,7 +473,7 @@ document.write(`multiple(30)을 실행하면 두번째,  세번째 매개변수�
 #### 1.3.3. 실습문제
 
 +++ 지시문
-[:icon-play:](./script/calcSum-result.html) 이전에 작성한 [:link:1부터10까지 더하는 함수](#1251-let-예제06)
+[:icon-play:](./script/calcSum-result.html) 이전에 작성한 [1부터10까지 더하는 함수]
 
 예제를 참고하여 사용자가 입력한 숫자까지 계속 더하는 함수를 만들어보세요
 +++ 코드
