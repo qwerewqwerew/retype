@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>탐색 선택자 및 html조작</h1>
+    <h2>탐색 선택자</h2>
+    <ul id="list1">
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+      <li>리스트5</li>
+      <li>리스트6</li>
+      <li>리스트7</li>
+    </ul>
+    <ul id="list2">
+      <li>리스트8</li>
+      <li class="theObj">리스트9</li>
+      <li><span>리스트10</span></li>
+      <li>리스트11</li>
+      <li><a href="#">리스트12</a></li>
+      <li>리스트13</li>
+      <li>리스트14</li>
+    </ul>
+    <h2 class="theTitle">html 조작</h2>
+    <ul id="list3">
+      <li class="obj1">list_2</li>
+      <li>list_3</li>
+      <li>list_4</li>
+      <li>list_5</li>
+    </ul>
+  </div>
+  <script>
+    /* dom */
+    let list1 = document.querySelectorAll("#list1>li");
+    list1.forEach((el, idx) => {
+      el.textContent += idx + "textContent로 추가";
+      el.classList.add("a" + idx);
+    })
+    let list2 = document.querySelector(".theObj");
+    list2.innerHTML = "<span>" + Math.random() + "<span>";
+  </script>
+  <script>
+    /* 속성 */
+    list2.setAttribute("data-set", "accessbillity")
+    console.log(list2.getAttribute("class"))
+    document.querySelector('.theTitle').setAttribute('class', 'default')
+  </script>
+  <script>
+    /*  조작*/
+    var list3 = document.querySelector('#list3');
+    list3.innerHTML += '<li>🎨추가한list_6</li>';
+    list3.insertAdjacentHTML('afterbegin', '<li>🎨첫째자식 afterbegin!!!</li>');//el 안에 가장 첫번째 child
+    list3.insertAdjacentHTML('beforeend', '<li>막둥이 beforeend!!!</li>');//el 안에 가장 마지막 child
+    var list3Li = document.querySelectorAll('#list3 li');
+    list3Li[4].insertAdjacentHTML('beforebegin', '<li>🎨니앞에 beforebegin</li>');// el 앞에
+    list3Li[4].insertAdjacentHTML('afterend', '<li>🎨니뒤에 insertAfter</li>');
+  </script>
+</body>
+
+</html>
