@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748447717220">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748582095592">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.5.0.748447717220" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.748582095592" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.748447717220" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.748582095592" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.748447717220" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.5.0.748447717220" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.748582095592" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.5.0.748582095592" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../../../resources/js/mermaid.js?v=3.5.0" defer></script>
 
     <style>
@@ -90,7 +90,8 @@
         filter: drop-shadow(-2px 4px 4px #0a216d25);
       }
 
-      .comment_box p, .comment_box ul {
+      .comment_box p,
+      .comment_box ul {
         margin-bottom: 0.4rem !important;
       }
 
@@ -191,10 +192,12 @@
         color: rgb(210, 26, 170) !important;
         font-size: 1.1rem !important;
       }
+
       .blue,
       .blue * {
         color: rgb(26, 106, 210) !important;
       }
+
       .mark {
         background-color: rgba(245, 255, 103, 0.534);
       }
@@ -204,6 +207,7 @@
         padding: 2rem 0 .5rem 1rem;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, .1), -1px -1px 3px rgba(0, 0, 0, .1);
       }
+
       .box1 {
         background: #ffffff;
         padding: 2rem 0 .5rem 1rem;
@@ -216,7 +220,13 @@
         border-radius: 4px;
       }
 
+      .docs-panels>div {
+        background: #e1edff65;
+      }
 
+      .docs-panels>div>div {
+        border-bottom: 1px solid #d0d9e67e;
+      }
     </style>
 </head>
 <body>
@@ -1386,7 +1396,11 @@ html 태그에서 이벤트 처리기(event handler)를 연결할수도 있지�
 </a></p>
 <p><a href="script/lightbox-result.html" target="_blank" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-8 px-4 text-base rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
-    <span>라이트박스만들기 미리보기</span>
+    <span>라이트박스만들기 미리보기-자바스크립트</span>
+</a><br />
+<a href="script/lightbox-result-jq.html" target="_blank" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-8 px-4 text-base rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>라이트박스만들기 미리보기-제이쿼리</span>
 </a></p>
 </doc-tab>
 <doc-tab v-cloak id="시작코드">
@@ -1470,8 +1484,13 @@ html 태그에서 이벤트 처리기(event handler)를 연결할수도 있지�
 <doc-tab v-cloak id="완료코드">
 <template #title>완료코드</template>
 <p><figure class="content-center">
-    <img src="../../../../source/images/js5-17.jpg" alt="" class="shadow">
-    <figcaption class="caption"></figcaption>
+    <img src="../../../../source/images/js5-17.jpg" alt="바닐라" class="shadow">
+    <figcaption class="caption">바닐라</figcaption>
+</figure>
+<br />
+<figure class="content-center">
+    <img src="../../../../source/images/jq1.jpg" alt="제이쿼리" class="shadow">
+    <figcaption class="caption">제이쿼리</figcaption>
 </figure>
 </p>
 </doc-tab>

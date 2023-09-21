@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748447717220">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748582095592">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -17,32 +17,32 @@
     <!-- Primary Meta Tags -->
     <title>1 DOM </title>
     <meta name="title" content="1 DOM ">
-    <meta name="description" content="1. DOM 조작">
+    <meta name="description" content="1. jQuery와 jS">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/6_jquery/1/">
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/6_jquery/1.dom조작/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/6_jquery/1/">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/6_jquery/1.dom조작/">
     <meta property="og:title" content="1 DOM ">
-    <meta property="og:description" content="1. DOM 조작">
+    <meta property="og:description" content="1. jQuery와 jS">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/6_jquery/1/">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/6_jquery/1.dom조작/">
     <meta property="twitter:title" content="1 DOM ">
-    <meta property="twitter:description" content="1. DOM 조작">
+    <meta property="twitter:description" content="1. jQuery와 jS">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.748447717220" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.748582095592" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748447717220" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748582095592" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748447717220" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748447717220" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748582095592" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748582095592" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -87,7 +87,8 @@
         filter: drop-shadow(-2px 4px 4px #0a216d25);
       }
 
-      .comment_box p, .comment_box ul {
+      .comment_box p,
+      .comment_box ul {
         margin-bottom: 0.4rem !important;
       }
 
@@ -188,10 +189,12 @@
         color: rgb(210, 26, 170) !important;
         font-size: 1.1rem !important;
       }
+
       .blue,
       .blue * {
         color: rgb(26, 106, 210) !important;
       }
+
       .mark {
         background-color: rgba(245, 255, 103, 0.534);
       }
@@ -201,6 +204,7 @@
         padding: 2rem 0 .5rem 1rem;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, .1), -1px -1px 3px rgba(0, 0, 0, .1);
       }
+
       .box1 {
         background: #ffffff;
         padding: 2rem 0 .5rem 1rem;
@@ -213,7 +217,13 @@
         border-radius: 4px;
       }
 
+      .docs-panels>div {
+        background: #e1edff65;
+      }
 
+      .docs-panels>div>div {
+        border-bottom: 1px solid #d0d9e67e;
+      }
     </style>
 </head>
 <body>
@@ -365,8 +375,7 @@
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
     <div>In&nbsp;</div>
-    <div><a href="../../categories/jquery/">jQuery</a>,&nbsp;</div>
-    <div><a href="../../categories/javascript/">javascript</a></div>
+    <div><a href="../../categories/jqueryjavascript/">jQuery+javascript</a></div>
 </div>
 
 <doc-anchor-target id="목차">
@@ -376,31 +385,196 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li><doc-anchor-trigger to="#1-dom-%EC%A1%B0%EC%9E%91">1. DOM 조작</doc-anchor-trigger>
+<li><doc-anchor-trigger to="#1-jquery%EC%99%80-js">1. jQuery와 jS</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#11-text-%EC%BD%98%ED%85%90%EC%B8%A0-%EB%8B%A4%EB%A3%A8%EA%B8%B0">1.1. text 콘텐츠 다루기</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#12-html-%EC%9D%84-%EB%8B%A4%EB%A3%A8%EA%B8%B0">1.2. HTML 을 다루기</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#121-%ED%95%98%EC%9C%84%EC%9A%94%EC%86%8C%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EA%B8%B0">1.2.1. 하위요소를 다루기</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#122-%EC%9C%84%EC%B9%98%EB%A5%BC-%ED%8A%B9%EC%A0%95%ED%95%B4%EC%84%9C-%EB%8B%A4%EB%A3%A8%EA%B8%B0">1.2.2. 위치를 특정해서 다루기</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#123-%EC%86%8D%EC%84%B1-%EB%8B%A4%EB%A3%A8%EA%B8%B0">1.2.3. 속성 다루기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#11-jquery%EB%9E%80">1.1. jQuery란?</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#12-%ED%8A%B9%EC%A7%95">1.2. 특징</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#13-%EC%82%AC%EC%9A%A9%EB%B2%95">1.3. 사용법</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#14-%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95">1.4. 기본문법</doc-anchor-trigger></li>
 </ul>
 </li>
-<li><doc-anchor-trigger to="#13-%EC%98%88%EC%A0%9C">1.3. 예제</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#2-dom-%EC%A1%B0%EC%9E%91">2. DOM 조작</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#21-text-%EC%BD%98%ED%85%90%EC%B8%A0-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.1. text 콘텐츠 다루기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#22-html-%EC%9D%84-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2. HTML 을 다루기</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#221-%ED%95%98%EC%9C%84%EC%9A%94%EC%86%8C%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2.1. 하위요소를 다루기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#222-%EC%9C%84%EC%B9%98%EB%A5%BC-%ED%8A%B9%EC%A0%95%ED%95%B4%EC%84%9C-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2.2. 위치를 특정해서 다루기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#223-%EC%86%8D%EC%84%B1-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2.3. 속성 다루기</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#23-%EC%98%88%EC%A0%9C">2.3. 예제</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="1-dom-조작">
+<doc-anchor-target id="1-jquery와-js">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-dom-조작">#</doc-anchor-trigger>
-        <span>1. DOM 조작</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-jquery와-js">#</doc-anchor-trigger>
+        <span>1. jQuery와 jS</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="11-jquery란">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-jquery란">#</doc-anchor-trigger>
+        <span>1.1. jQuery란?</span>
+    </h2>
+</doc-anchor-target>
+<blockquote>
+<p>jQuery 는 자바스크립트를 쉽게 활용할수 있도록 개발된 라이브러리(DOM 조작에 특화) 이다.<br />
+제이쿼리코어 와 애니메이션과 인터렉션 등을 분리한 UI 가 있다</p>
+</blockquote>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></g></svg>제이쿼리 공식사이트</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://jquery.com</span>
+    </div>
+    <a href="https://jquery.com" target="_blank" class="absolute block inset-0"></a>
+</div>
+<br />
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></g></svg>제이쿼리UI 공식사이트</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://jqueryui.com</span>
+    </div>
+    <a href="https://jqueryui.com" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="12-특징">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-특징">#</doc-anchor-trigger>
+        <span>1.2. 특징</span>
+    </h2>
+</doc-anchor-target>
+<blockquote>
+<p>제이쿼리 버전 1.12 까지 IE 를 지원한다.<br />
+제이쿼리는 버전별로 사용할수 있는 메서드가 다르다.</p>
+</blockquote>
+<doc-anchor-target id="13-사용법">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#13-사용법">#</doc-anchor-trigger>
+        <span>1.3. 사용법</span>
+    </h2>
+</doc-anchor-target>
+<div class="comment_box">
+<ol>
+<li>제이쿼리 코어를 로드한다</li>
+<li>스크립트를 작성한다.</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">&lt;script src='https://code.jquery.com/jquery-3.6.0.min.js'&gt;&lt;/script&gt;
+&lt;script src='custom.js'&gt;&lt;/script&gt;</code></pre>
+</doc-codeblock></div>
+</div>
+<doc-anchor-target id="14-기본문법">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#14-기본문법">#</doc-anchor-trigger>
+        <span>1.4. 기본문법</span>
+    </h2>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
+    </div>
+    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../result/1-1q.html</span>
+    </div>
+    <a href="../result/1-1q.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">제이쿼리</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">&lt;!doctype html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(function(){
+ $('p').css('color','green');
+ $('.blue').css('color','blue');
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p&gt;나를 초록색으로 만들어 주세요&lt;/p&gt;
+ &lt;p class=&quot;blue&quot;&gt;나를 파란색으로 만들어 주세요&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../result/1-1s.html</span>
+    </div>
+    <a href="../result/1-1s.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">바닐라</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">&lt;!doctype html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(function(){
+ $('p').css('color','green');
+ $('.blue').css('color','blue');
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p&gt;나를 초록색으로 만들어 주세요&lt;/p&gt;
+ &lt;p class=&quot;blue&quot;&gt;나를 파란색으로 만들어 주세요&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<doc-anchor-target id="2-dom-조작">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-dom-조작">#</doc-anchor-trigger>
+        <span>2. DOM 조작</span>
     </h1>
 </doc-anchor-target>
 <p>DocumentObjectModel 을 탐색하고 조작하는 명령어를 알아보자</p>
-<doc-anchor-target id="11-text-콘텐츠-다루기">
+<doc-anchor-target id="21-text-콘텐츠-다루기">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-text-콘텐츠-다루기">#</doc-anchor-trigger>
-        <span>1.1. text 콘텐츠 다루기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#21-text-콘텐츠-다루기">#</doc-anchor-trigger>
+        <span>2.1. text 콘텐츠 다루기</span>
     </h2>
 </doc-anchor-target>
 <div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
@@ -427,16 +601,16 @@ $('el').text('');</code></pre>
 </doc-codeblock></div>
     </div>
 </div>
-<doc-anchor-target id="12-html-을-다루기">
+<doc-anchor-target id="22-html-을-다루기">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-html-을-다루기">#</doc-anchor-trigger>
-        <span>1.2. HTML 을 다루기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#22-html-을-다루기">#</doc-anchor-trigger>
+        <span>2.2. HTML 을 다루기</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="121-하위요소를-다루기">
+<doc-anchor-target id="221-하위요소를-다루기">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#121-하위요소를-다루기">#</doc-anchor-trigger>
-        <span>1.2.1. 하위요소를 다루기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#221-하위요소를-다루기">#</doc-anchor-trigger>
+        <span>2.2.1. 하위요소를 다루기</span>
     </h3>
 </doc-anchor-target>
 <div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
@@ -461,10 +635,10 @@ $('el').html('');</code></pre>
 </doc-codeblock></div>
     </div>
 </div>
-<doc-anchor-target id="122-위치를-특정해서-다루기">
+<doc-anchor-target id="222-위치를-특정해서-다루기">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#122-위치를-특정해서-다루기">#</doc-anchor-trigger>
-        <span>1.2.2. 위치를 특정해서 다루기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#222-위치를-특정해서-다루기">#</doc-anchor-trigger>
+        <span>2.2.2. 위치를 특정해서 다루기</span>
     </h3>
 </doc-anchor-target>
 <div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
@@ -501,10 +675,10 @@ $('el').after('');</code></pre>
 </doc-codeblock></div>
     </div>
 </div>
-<doc-anchor-target id="123-속성-다루기">
+<doc-anchor-target id="223-속성-다루기">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#123-속성-다루기">#</doc-anchor-trigger>
-        <span>1.2.3. 속성 다루기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#223-속성-다루기">#</doc-anchor-trigger>
+        <span>2.2.3. 속성 다루기</span>
     </h3>
 </doc-anchor-target>
 <div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
@@ -531,15 +705,15 @@ $('el').attr('');</code></pre>
 </doc-codeblock></div>
     </div>
 </div>
-<doc-anchor-target id="13-예제">
+<doc-anchor-target id="23-예제">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#13-예제">#</doc-anchor-trigger>
-        <span>1.3. 예제</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#23-예제">#</doc-anchor-trigger>
+        <span>2.3. 예제</span>
     </h2>
 </doc-anchor-target>
 <doc-panels>
-   <doc-panel id="html" collapsed>
-       <template #title>HTML</template>
+   <doc-panel id="시작코드" collapsed>
+       <template #title>시작코드</template>
 <p>html 코드를 복사하여 준비합니다</p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;div id=&quot;wrap&quot;&gt;
@@ -585,9 +759,9 @@ $('el').attr('');</code></pre>
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>1.html</span>
+        <span>../1/1.html</span>
     </div>
-    <a href="1.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="../1/1.html" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
@@ -626,9 +800,9 @@ list3Li[4].insertAdjacentHTML('afterend', '&lt;li&gt;🎨니뒤에 insertAfter&l
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>1q.html</span>
+        <span>../1/1q.html</span>
     </div>
-    <a href="1q.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="../1/1q.html" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
@@ -684,10 +858,10 @@ list3.children('li').eq(2).after('&lt;li&gt;니뒤에&lt;/li&gt;');</code></pre>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../retype/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../6_jquery/2.이벤트/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Retype 설치</span>
+                                                <span class="block mt-1">2. EVENT </span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
