@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-21T04:24:32Z",
+  "created": "2023-09-21T14:15:58Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3342,7 +3342,8 @@
       "path": "3_js\\basic\\2.partial\\this\\index.html"
     },
     {
-      "path": "3_js\\deep\\1_carousel\\1\\index.html"
+      "path": "3_js\\deep\\1_carousel\\1\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\deep\\1_carousel\\assets\\01.mp4",
@@ -3353,7 +3354,14 @@
       "old": true
     },
     {
-      "path": "3_js\\deep\\1_carousel\\swiper.html"
+      "path": "3_js\\deep\\1_carousel\\swiper.html",
+      "old": true
+    },
+    {
+      "path": "3_js\\deep\\1\\index.html"
+    },
+    {
+      "path": "3_js\\deep\\files\\swiper.html"
     },
     {
       "path": "404.html"
@@ -3566,6 +3574,9 @@
       "path": "6_jquery\\1\\2.html"
     },
     {
+      "path": "6_jquery\\1\\2q.html"
+    },
+    {
       "path": "6_jquery\\1\\index.html",
       "old": true
     },
@@ -3580,6 +3591,24 @@
     },
     {
       "path": "6_jquery\\2.이벤트\\index.html"
+    },
+    {
+      "path": "6_jquery\\풀사이즈미디어\\index.html"
+    },
+    {
+      "path": "6_jquery\\files\\full_media-js.html"
+    },
+    {
+      "path": "6_jquery\\files\\full_media.html"
+    },
+    {
+      "path": "6_jquery\\files\\imgs.zip"
+    },
+    {
+      "path": "6_jquery\\files\\imgs\\full.jpg"
+    },
+    {
+      "path": "6_jquery\\files\\imgs\\images.jpg"
     },
     {
       "path": "6_jquery\\result\\1-1.html"
@@ -3600,10 +3629,16 @@
       "path": "categories\\array\\index.html"
     },
     {
+      "path": "categories\\basic\\index.html"
+    },
+    {
       "path": "categories\\class\\index.html"
     },
     {
       "path": "categories\\css\\index.html"
+    },
+    {
+      "path": "categories\\deep\\index.html"
     },
     {
       "path": "categories\\form\\index.html"
@@ -3906,16 +3941,34 @@
       "path": "source\\images\\window1.png"
     },
     {
+      "path": "tags\\가변미디어\\index.html"
+    },
+    {
+      "path": "tags\\라이브러리\\index.html"
+    },
+    {
       "path": "tags\\메뉴\\index.html"
     },
     {
       "path": "tags\\반응형\\index.html"
     },
     {
+      "path": "tags\\슬라이드\\index.html"
+    },
+    {
       "path": "tags\\탈그리드\\index.html"
     },
     {
+      "path": "tags\\풀사이즈-미디어\\index.html"
+    },
+    {
+      "path": "tags\\carousel\\index.html"
+    },
+    {
       "path": "tags\\css\\index.html"
+    },
+    {
+      "path": "tags\\event\\index.html"
     },
     {
       "path": "tags\\fullpage\\index.html"
@@ -3946,6 +3999,9 @@
     },
     {
       "path": "tags\\responsive\\index.html"
+    },
+    {
+      "path": "tags\\swiper\\index.html"
     }
   ]
 }
