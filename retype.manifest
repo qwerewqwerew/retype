@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-19T14:07:45Z",
+  "created": "2023-09-21T03:26:09Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2918,6 +2918,9 @@
       "path": "3_js\\basic\\1.total\\3\\script\\event-3.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\3\\script\\event-7.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\3\\script\\event.html"
     },
     {
@@ -3268,6 +3271,9 @@
       "path": "3_js\\basic\\1.total\\5\\script\\inner2.html"
     },
     {
+      "path": "3_js\\basic\\1.total\\5\\script\\lightbox-result-jq.html"
+    },
+    {
       "path": "3_js\\basic\\1.total\\5\\script\\lightbox-result.html"
     },
     {
@@ -3548,19 +3554,47 @@
       "path": "5_projects\\4-testmonial\\media.zip"
     },
     {
+      "path": "6_jquery\\1.dom조작\\index.html"
+    },
+    {
       "path": "6_jquery\\1\\1.html"
     },
     {
       "path": "6_jquery\\1\\1q.html"
     },
     {
-      "path": "6_jquery\\1\\index.html"
+      "path": "6_jquery\\1\\2.html"
+    },
+    {
+      "path": "6_jquery\\1\\index.html",
+      "old": true
     },
     {
       "path": "6_jquery\\11\\fullpage.js-2.9.7.zip"
     },
     {
       "path": "6_jquery\\11\\index.html"
+    },
+    {
+      "path": "6_jquery\\11\\result.html"
+    },
+    {
+      "path": "6_jquery\\2.이벤트\\index.html"
+    },
+    {
+      "path": "6_jquery\\result\\1-1.html"
+    },
+    {
+      "path": "6_jquery\\result\\1-1q.html"
+    },
+    {
+      "path": "6_jquery\\result\\1-1q.jpg"
+    },
+    {
+      "path": "6_jquery\\result\\1-1s.html"
+    },
+    {
+      "path": "6_jquery\\result\\1-1s.jpg"
     },
     {
       "path": "categories\\array\\index.html"
@@ -3582,6 +3616,9 @@
     },
     {
       "path": "categories\\jquery\\index.html"
+    },
+    {
+      "path": "categories\\jqueryjavascript\\index.html"
     },
     {
       "path": "categories\\partial\\index.html"
@@ -3690,6 +3727,9 @@
     },
     {
       "path": "source\\images\\getwindowsize.png"
+    },
+    {
+      "path": "source\\images\\jq1.jpg"
     },
     {
       "path": "source\\images\\js-1-1.png"
@@ -3855,6 +3895,9 @@
     },
     {
       "path": "source\\images\\result3.jpg"
+    },
+    {
+      "path": "source\\images\\result4.jpg"
     },
     {
       "path": "source\\images\\window.gif"

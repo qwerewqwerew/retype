@@ -50,6 +50,7 @@ category:
 		- [2.2.2. 버튼 클릭시 배경변경-예제\[15\]](#222-버튼-클릭시-배경변경-예제15)
 		- [2.2.3. 버튼 클릭시 상세설명 표시-예제\[16\]](#223-버튼-클릭시-상세설명-표시-예제16)
 		- [2.2.4. DOM을 이용한 방식-버튼클릭시 글자변경-예제\[17\]](#224-dom을-이용한-방식-버튼클릭시-글자변경-예제17)
+		- [2.2.5. addEventListener 메서드를 활용한 예시](#225-addeventlistener-메서드를-활용한-예시)
 - [3. 마무리문제](#3-마무리문제)
 
 ## 1. 함수
@@ -1240,6 +1241,18 @@ document.querySelector('#change').onclick = function () {
 	document.querySelector('p').style.color = '#f00';
 };
 ```
+
++++
+
+#### 2.2.5. addEventListener 메서드를 활용한 예시
+
++++ 지시문
+[!badge icon='play' iconAlign='left' variant='info' size='xl' corners='round' text='카운터 구현하기' target='blank'](./script/event-7.html)
+클릭 횟수를 더하는 카운터를 만들어보자
++++ 완료코드
+
+![](../../../../source/images/result4.jpg)
+
 
 +++
 

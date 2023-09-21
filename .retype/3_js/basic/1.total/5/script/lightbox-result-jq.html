@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>라이트박스</title>
+  <style>
+    .row {
+      width: 420px;
+      margin: 0 auto;
+    }
+
+    .row ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .row ul li {
+      display: inline-table;
+    }
+
+    /* 라이트 박스 스타일 */
+    #lightbox {
+      position: fixed;
+      /* 위치 고정 */
+      width: 100%;
+      /* 너비 */
+      height: 100%;
+      /* 높이 */
+      background-color: rgba(0, 0, 0, 0.7);
+      /* 배경색 */
+      top: 0;
+      /* 시작 위치 - 위쪽 끝 */
+      left: 0;
+      /* 시작 위치 - 왼쪽 끝 */
+      display: none;
+      /* 화면에서 감추기 */
+    }
+
+    /* 라이트 박스 안의 이미지 */
+    #lightbox img {
+      position: absolute;
+      /* top, left에 의해 위치 지정 */
+      top: 50%;
+      /* 위쪽에서 50% 부터 */
+      left: 50%;
+      /* 왼쪽에서 50% 부터 */
+      transform: translate(-50%, -50%);
+      /* 요소를 화면 중앙에 표시하기 위해 이동 */
+      border: 5px solid #eee;
+      /* 이미지 테두리 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <ul>
+      <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+      <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+      <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+      <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+      <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+      <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+    </ul>
+  </div>
+  <div id="lightbox">
+    <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+  </div>
+  <script src='https://code.jquery.com/jquery-3.7.1.slim.min.js'></script>
+  <script>
+    const pics = $(".pic");
+    const lightbox = $("#lightbox");
+    const lightboxImage = $("#lightboxImage");
+
+    pics.on('click', function () {
+      const bigLocation = $(this).attr("data-src");
+      lightboxImage.attr("src", bigLocation);
+      lightbox.css('display', 'block');
+    })
+
+    lightbox.on('click', function () {
+      lightbox.css('display', 'none');
+    })
+  </script>
+</body>
+
+</html>
