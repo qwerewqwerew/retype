@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Easing Example I</title>
+  <style>
+    #animate {
+      width: 200px;
+      height: 200px;
+      background-color: tomato;
+      padding: 20px;
+    }
+
+    #animate p {
+      color: black;
+    }
+  </style>
+  <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+  <script src='https://code.jquery.com/ui/1.13.2/jquery-ui.js'></script>
+  <script>
+    $(function () {
+      $('#animate').click(function () {
+        $(this).animate(
+          { width: '400px', height: '400px' }, 1000, 'easeInBounce'); // end animate
+      }); // end click
+    });
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="main">
+        <h1>Easing Example I</h1>
+        <div id="animate">
+          <p>Click on me!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

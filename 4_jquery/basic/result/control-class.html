@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      transform: scale(1);
+    }
+
+    .addClass {
+      background: red;
+    }
+
+    .cls1 {
+      color: blue
+    }
+
+    .cls2 {
+      margin-left: 20px;
+    }
+  </style>
+  <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+  <script>
+    $(() => {
+      let divs = $('div');
+      divs.addClass('addClass');
+      divs.eq(1).addClass('cls1 cls2').removeClass('addClass');
+      divs.eq(2).on({
+        'click': function () {
+          $(this).toggleClass('addClass')
+        }
+      });
+      divs.eq(3).on({
+        'click': function () {
+          if ($(this).hasClass('addClass')) {
+            console.log(true);
+            $(this).animate({ fontSize: '200%' }, 500);
+            $(this).removeClass('addClass');
+          } else if (!$(this).hasClass('addClass')) {
+            console.log(false);
+            $(this).animate({ fontSize: '100%' }, 500);
+            $(this).addClass('addClass');
+          }
+        }
+      });
+    })
+  </script>
+</head>
+
+<body>
+  <div>addClass</div>
+  <div>removeClass</div>
+  <div>toggleClass</div>
+  <div>hasClass</div>
+</body>
+
+</html>

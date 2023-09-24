@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      user-select: none;
+    }
+
+    .addClass {
+      background: red;
+    }
+
+    .cls1 {
+      color: blue
+    }
+
+    .cls2 {
+      margin-left: 20px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const divs = document.querySelectorAll('div');
+      divs.forEach((el, idx) => {
+        console.log(el, idx);
+        el.classList.add('addClass');
+      })
+      divs[1].classList.add('cls1', 'cls2');
+      divs[1].classList.remove('addClass');
+      divs[2].addEventListener('click', function () {
+        this.classList.toggle('addClass');
+      })
+      divs[3].addEventListener('click', function () {
+        if (this.classList.contains('addClass')) {
+          this.style.transition = 'all 0.5s';
+          this.style.fontSize = '200%';
+          this.classList.remove('addClass');
+        } else {
+          this.style.transition = 'all 0.5s';
+          this.style.fontSize = '100%';
+          this.classList.add('addClass');
+        }
+      })
+
+
+    })
+
+  </script>
+</head>
+
+<body>
+  <div>addClass</div>
+  <div>removeClass</div>
+  <div>toggleClass</div>
+  <div>hasClass</div>
+</body>
+
+</html>

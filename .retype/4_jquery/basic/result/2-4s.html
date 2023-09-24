@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>animate</title>
+  <style>
+    .box1 {
+      position: absolute;
+      width: 100px;
+      left:0;
+      height: 100px;
+      background-color: red;
+      transition:all 1s;
+    }
+  </style>
+  <script>
+    /* 문서의 모든 콘텐츠(images, script, css, etc)가 로드된 후 발생하는 이벤트 */
+    window.onload = () => {
+      var box1 = document.querySelector('.box1');
+      function box1Animate() {
+        box1.style.left =  500 + 'px';
+        box1.style.width = 200+ 'px';
+        box1.style.height = 200+ 'px';
+        box1.style.opacity = '0.5';
+        requestAnimationFrame(box1Animate)
+      }
+      requestAnimationFrame(box1Animate)
+    }
+  </script>
+</head>
+
+<body>
+  <div class="box box1"> 상자1 </div>
+</body>
+
+</html>

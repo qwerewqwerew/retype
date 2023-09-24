@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    /* 메인비디오 */
+    .main-video {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .main-video video {
+      width: 100%;
+      height: auto;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="main-video">
+      <video autoplay muted playsinline loop poster="imgs/images.jpg" id="mainVideo">
+        <source src="./imgs/main.mp4">
+      </video>
+    </div>
+  </div>
+  <script>
+    const win = window;
+    let winH = win.innerHeight; //창의높이
+    let winW = win.innerWidth; //창너비
+    const vid = document.querySelector('#mainVideo');
+    let vidH = vid.clientHeight; //비디오높이
+    let vidW = vid.clientWidth; //비디오너비
+    const vidWrap = vid.parentNode;
+
+    addEventListener('load', videoResizeFn)
+    addEventListener('resize', videoResizeFn)
+    //윈도우 크기 가져와서 비디오크기 반응형으로 만드는 함수
+    function videoResizeFn() {
+      // 변경되는 거라 위의 변수를 재지정
+      winH = win.innerHeight;
+      winW = win.innerWidth;
+      vidH = vid.clientHeight;
+      vidW = vid.clientWidth;
+      console.log(winH, winW, vidH, vidW);
+      //1. 비디오박스높이=창높이 : 기본으로 창높이로 설정 너비 100%
+      //	vidWrap
+      vidWrap.style.width = winW;
+      vidWrap.style.height = winH;
+
+      //2. 비디오 가로크기와 세로크기를 비디오박스(창크기) 보다 작으면 비디오박스와 같거나 크게 설정한다.
+      if (winH > vidH) {
+        vid.style.width = 'auto';
+        vid.style.height = winH;
+        vid.style.left = `50%`;
+        vid.style.top = `50%`;
+        vid.style.transform = `translate(-50%,-50%)`;
+      }
+
+      if (winW > vidW) {
+        vid.style.width = winW;
+        vid.style.height = 'auto';
+        vid.style.left = `50%`;
+        vid.style.top = `50%`;
+        vid.style.transform = `translate(-50%,-50%)`;
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

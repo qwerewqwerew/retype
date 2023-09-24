@@ -16,6 +16,7 @@ cache:
   strategy: none
 exclude:
   - 'draft/'
+  - private.md
 markdown:
   lineBreaks: hard
 footer:
