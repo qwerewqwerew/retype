@@ -9,40 +9,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748621006297">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748871177954">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>1 DOM </title>
-    <meta name="title" content="1 DOM ">
-    <meta name="description" content="1. jQuery와 jS">
+    <title>2. EVENT </title>
+    <meta name="title" content="2. EVENT ">
+    <meta name="description" content="1. 개요">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/6_jquery/1.dom조작/">
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/4_jquery/basic/2.이벤트/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/6_jquery/1.dom조작/">
-    <meta property="og:title" content="1 DOM ">
-    <meta property="og:description" content="1. jQuery와 jS">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/4_jquery/basic/2.이벤트/">
+    <meta property="og:title" content="2. EVENT ">
+    <meta property="og:description" content="1. 개요">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/6_jquery/1.dom조작/">
-    <meta property="twitter:title" content="1 DOM ">
-    <meta property="twitter:description" content="1. jQuery와 jS">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/4_jquery/basic/2.이벤트/">
+    <meta property="twitter:title" content="2. EVENT ">
+    <meta property="twitter:description" content="1. 개요">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.748621006297" rel="stylesheet">
+    <link href="../../../favicon.png" rel="icon">
+    <link href="../../../resources/css/retype.css?v=3.5.0.748871177954" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748621006297" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748621006297" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748621006297" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.748871177954" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.748871177954" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.748871177954" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -224,6 +224,16 @@
       .docs-panels>div>div {
         border-bottom: 1px solid #d0d9e67e;
       }
+
+      .collapse-content .docs-markdown ol,
+      .collapse-content .docs-markdown ul {
+        margin-bottom: 0 !important;
+      }
+
+      .tab-content ol,
+      .tab-content ul {
+        margin-bottom: 0 !important;
+      }
     </style>
 </head>
 <body>
@@ -241,7 +251,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-2xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">✔ 프론트엔드 노트</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
@@ -367,16 +377,16 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="1-dom" class="break-words">
+<doc-anchor-target id="2-event" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-dom">#</doc-anchor-trigger>
-        <span>1 DOM <!-- omit in toc --></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-event">#</doc-anchor-trigger>
+        <span>2. EVENT <!-- omit in toc --></span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
     <div>In&nbsp;</div>
-    <div><a href="../../categories/jqueryjavascript/">jQuery+javascript</a>,&nbsp;</div>
-    <div><a href="../../categories/basic/">basic</a></div>
+    <div><a href="../../../categories/jqueryjavascript/">jQuery+javascript</a>,&nbsp;</div>
+    <div><a href="../../../categories/basic/">basic</a></div>
 </div>
 
 <doc-anchor-target id="목차">
@@ -386,370 +396,33 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li><doc-anchor-trigger to="#1-jquery%EC%99%80-js">1. jQuery와 jS</doc-anchor-trigger>
+<li><doc-anchor-trigger to="#1-%EA%B0%9C%EC%9A%94">1. 개요</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#11-jquery%EB%9E%80">1.1. jQuery란?</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#12-%ED%8A%B9%EC%A7%95">1.2. 특징</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#13-%EC%82%AC%EC%9A%A9%EB%B2%95">1.3. 사용법</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#14-%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95">1.4. 기본문법</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#2-dom-%EC%A1%B0%EC%9E%91">2. DOM 조작</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#21-text-%EC%BD%98%ED%85%90%EC%B8%A0-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.1. text 콘텐츠 다루기</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#22-html-%EC%9D%84-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2. HTML 을 다루기</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#221-%ED%95%98%EC%9C%84%EC%9A%94%EC%86%8C%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2.1. 하위요소를 다루기</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#222-%EC%9C%84%EC%B9%98%EB%A5%BC-%ED%8A%B9%EC%A0%95%ED%95%B4%EC%84%9C-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2.2. 위치를 특정해서 다루기</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#223-%EC%86%8D%EC%84%B1-%EB%8B%A4%EB%A3%A8%EA%B8%B0">2.2.3. 속성 다루기</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#23-%EC%98%88%EC%A0%9C">2.3. 예제</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#11-%EC%98%88%EC%A0%9C1">1.1. 예제1</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#12-%EC%98%88%EC%A0%9C2">1.2. 예제2</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="1-jquery와-js">
+<doc-anchor-target id="1-개요">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-jquery와-js">#</doc-anchor-trigger>
-        <span>1. jQuery와 jS</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-개요">#</doc-anchor-trigger>
+        <span>1. 개요</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="11-jquery란">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-jquery란">#</doc-anchor-trigger>
-        <span>1.1. jQuery란?</span>
-    </h2>
-</doc-anchor-target>
 <blockquote>
-<p>jQuery 는 자바스크립트를 쉽게 활용할수 있도록 개발된 라이브러리(DOM 조작에 특화) 이다.<br />
-제이쿼리코어 와 애니메이션과 인터렉션 등을 분리한 UI 가 있다</p>
+<p>웹 브라우저에서 버튼을 클릭한다거나 mouse를 움직이거나 하는 모든 행위를 ‘이벤트’라고 합니다.<br />
+그리고 이벤트발생 시 함수의 실행문이 수행되도록 이벤트를 지정하는 것을 이벤트 핸들러라고 합니다.<br />
+이벤트 발생시 관련 정보를 가지고 있는 이벤트 객체를 전달받을수 있습니다.</p>
 </blockquote>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></g></svg>제이쿼리 공식사이트</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://jquery.com</span>
-    </div>
-    <a href="https://jquery.com" target="_blank" class="absolute block inset-0"></a>
-</div>
-<br />
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></g></svg>제이쿼리UI 공식사이트</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://jqueryui.com</span>
-    </div>
-    <a href="https://jqueryui.com" target="_blank" class="absolute block inset-0"></a>
-</div>
-</p>
-<doc-anchor-target id="12-특징">
+<doc-anchor-target id="11-예제1">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-특징">#</doc-anchor-trigger>
-        <span>1.2. 특징</span>
-    </h2>
-</doc-anchor-target>
-<blockquote>
-<p>제이쿼리 버전 1.12 까지 IE 를 지원한다.<br />
-제이쿼리는 버전별로 사용할수 있는 메서드가 다르다.</p>
-</blockquote>
-<doc-anchor-target id="13-사용법">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#13-사용법">#</doc-anchor-trigger>
-        <span>1.3. 사용법</span>
-    </h2>
-</doc-anchor-target>
-<div class="comment_box">
-<ol>
-<li>제이쿼리 코어를 로드한다</li>
-<li>스크립트를 작성한다.</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">&lt;script src='https://code.jquery.com/jquery-3.6.0.min.js'&gt;&lt;/script&gt;
-&lt;script src='custom.js'&gt;&lt;/script&gt;</code></pre>
-</doc-codeblock></div>
-</div>
-<doc-anchor-target id="14-기본문법">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#14-기본문법">#</doc-anchor-trigger>
-        <span>1.4. 기본문법</span>
-    </h2>
-</doc-anchor-target>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
-    </div>
-    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../result/1-1s.html</span>
-    </div>
-    <a href="../result/1-1s.html" target="_blank" class="absolute block inset-0"></a>
-</div>
-</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">JS</div>
-<pre class="language-javascript"><code v-pre class="language-javascript">&lt;!doctype html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Document&lt;/title&gt;
-&lt;script&gt;
- document.addEventListener('DOMContentLoaded',()=&gt;{
- document.querySelector('p').style.color='green';
- document.querySelector('.blue').style.color='blue';
- })
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- &lt;p&gt;나를 초록색으로 만들어 주세요&lt;/p&gt;
- &lt;p class=&quot;blue&quot;&gt;나를 파란색으로 만들어 주세요&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</doc-codeblock></div>
-    </div>
-    <div class="px-5 py-3 docs-columns-content">
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../result/1-1q.html</span>
-    </div>
-    <a href="../result/1-1q.html" target="_blank" class="absolute block inset-0"></a>
-</div>
-</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">JQ</div>
-<pre class="language-javascript"><code v-pre class="language-javascript">&lt;!doctype html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Document&lt;/title&gt;
-&lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-$(function(){
- $('p').css('color','green');
- $('.blue').css('color','blue');
-});
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- &lt;p&gt;나를 초록색으로 만들어 주세요&lt;/p&gt;
- &lt;p class=&quot;blue&quot;&gt;나를 파란색으로 만들어 주세요&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</doc-codeblock></div>
-    </div>
-</div>
-<doc-anchor-target id="2-dom-조작">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-dom-조작">#</doc-anchor-trigger>
-        <span>2. DOM 조작</span>
-    </h1>
-</doc-anchor-target>
-<p>DocumentObjectModel 을 탐색하고 조작하는 명령어를 알아보자</p>
-<doc-anchor-target id="21-text-콘텐츠-다루기">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#21-text-콘텐츠-다루기">#</doc-anchor-trigger>
-        <span>2.1. text 콘텐츠 다루기</span>
-    </h2>
-</doc-anchor-target>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JS</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JQ</span>
-    </div>
-    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">//숨긴글씨 제외
-el.innerText;
-//숨긴글씨 포함
-el.textContent;</code></pre>
-</doc-codeblock></div>
-    </div>
-    <div class="docs-columns-code docs-columns-content">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">// el 의 text 값이 뭐야?
-$('el').text();
-// el 의 text 값을 바꿔!
-$('el').text('');</code></pre>
-</doc-codeblock></div>
-    </div>
-</div>
-<doc-anchor-target id="22-html-을-다루기">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#22-html-을-다루기">#</doc-anchor-trigger>
-        <span>2.2. HTML 을 다루기</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="221-하위요소를-다루기">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#221-하위요소를-다루기">#</doc-anchor-trigger>
-        <span>2.2.1. 하위요소를 다루기</span>
-    </h3>
-</doc-anchor-target>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JS</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JQ</span>
-    </div>
-    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">//요소내 포함 된 HTML 을 가져오거나 설정
-el.innerHTML;</code></pre>
-</doc-codeblock></div>
-    </div>
-    <div class="docs-columns-code docs-columns-content">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">// el 의 html 값이 뭐야?
-$('el').html();
-// el 의 html 값을 바꿔!
-$('el').html('');</code></pre>
-</doc-codeblock></div>
-    </div>
-</div>
-<doc-anchor-target id="222-위치를-특정해서-다루기">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#222-위치를-특정해서-다루기">#</doc-anchor-trigger>
-        <span>2.2.2. 위치를 특정해서 다루기</span>
-    </h3>
-</doc-anchor-target>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JS</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JQ</span>
-    </div>
-    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">el.insertAdjacentHTML();
-
-// el 안에 가장 첫번째 child
-el.insertAdjacentHTML('afterbegin', 'text');
-//el 안에 가장 마지막 child
-el.insertAdjacentHTML('beforeend', 'text');
-// el 앞에
-el.insertAdjacentHTML('beforebegin', 'text');
-// el 뒤에
-el.insertAdjacentHTML('afterend', 'text');</code></pre>
-</doc-codeblock></div>
-    </div>
-    <div class="docs-columns-code docs-columns-content">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">// el 안에 가장 첫번째 child
-$('el').prepend('');
-// el 안에 가장 마지막 child
-$('el').append('');
-// el 앞에
-$('el').before('');
-// el 뒤에
-$('el').after('');</code></pre>
-</doc-codeblock></div>
-    </div>
-</div>
-<doc-anchor-target id="223-속성-다루기">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#223-속성-다루기">#</doc-anchor-trigger>
-        <span>2.2.3. 속성 다루기</span>
-    </h3>
-</doc-anchor-target>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JS</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> JQ</span>
-    </div>
-    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">//el의 속성취득
-el.getAttribute();
-//el의 속성설정
-el.setAttribute();</code></pre>
-</doc-codeblock></div>
-    </div>
-    <div class="docs-columns-code docs-columns-content">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">//el의 속성 취득
-$('el').attr();
-//el의 속성 설정
-$('el').attr('');</code></pre>
-</doc-codeblock></div>
-    </div>
-</div>
-<doc-anchor-target id="23-예제">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#23-예제">#</doc-anchor-trigger>
-        <span>2.3. 예제</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-예제1">#</doc-anchor-trigger>
+        <span>1.1. 예제1</span>
     </h2>
 </doc-anchor-target>
 <doc-panels>
    <doc-panel id="시작코드" collapsed>
        <template #title>시작코드</template>
-<p>html 코드를 복사하여 준비합니다</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;div id=&quot;wrap&quot;&gt;
-	&lt;h1&gt;탐색 선택자 및 html조작&lt;/h1&gt;
-	&lt;h2&gt;탐색 선택자&lt;/h2&gt;
-	&lt;ul id=&quot;list1&quot;&gt;
-		&lt;li&gt;리스트1&lt;/li&gt;
-		&lt;li&gt;리스트2&lt;/li&gt;
-		&lt;li&gt;리스트3&lt;/li&gt;
-		&lt;li&gt;리스트4&lt;/li&gt;
-		&lt;li&gt;리스트5&lt;/li&gt;
-		&lt;li&gt;리스트6&lt;/li&gt;
-		&lt;li&gt;리스트7&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;ul id=&quot;list2&quot;&gt;
-		&lt;li&gt;리스트8&lt;/li&gt;
-		&lt;li class=&quot;theObj&quot;&gt;리스트9&lt;/li&gt;
-		&lt;li&gt;&lt;span&gt;리스트10&lt;/span&gt;&lt;/li&gt;
-		&lt;li&gt;리스트11&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;리스트12&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;리스트13&lt;/li&gt;
-		&lt;li&gt;리스트14&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;h2 class=&quot;theTitle&quot;&gt;html 조작&lt;/h2&gt;
-	&lt;ul id=&quot;list3&quot;&gt;
-		&lt;li class=&quot;obj1&quot;&gt;list_2&lt;/li&gt;
-		&lt;li&gt;list_3&lt;/li&gt;
-		&lt;li&gt;list_4&lt;/li&gt;
-		&lt;li&gt;list_5&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.slim.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="자바스크립트" collapsed>
-       <template #title>자바스크립트</template>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
@@ -759,38 +432,85 @@ $('el').attr('');</code></pre>
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../1/1.html</span>
+        <span>../1/2.html</span>
     </div>
-    <a href="../1/1.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="../1/2.html" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">/* dom */
-let list1 = document.querySelectorAll('#list1&gt;li');
-list1.forEach((el, idx) =&gt; {
-	el.textContent += idx + 'textContent로 추가';
-	el.classList.add('a' + idx);
-});
-let list2 = document.querySelector('.theObj');
-list2.innerHTML = '&lt;span&gt;' + Math.random() + '&lt;span&gt;';
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;Document&lt;/title&gt;
+	&lt;/head&gt;
 
-/* 속성 */
-list2.setAttribute('data-set', 'accessbillity');
-console.log(list2.getAttribute('class'));
-document.querySelector('.theTitle').setAttribute('class', 'default');
-
-/*  조작*/
-var list3 = document.querySelector('#list3');
-list3.innerHTML += '&lt;li&gt;🎨추가한list_6&lt;/li&gt;';
-list3.insertAdjacentHTML('afterbegin', '&lt;li&gt;🎨첫째자식 afterbegin!!!&lt;/li&gt;'); //el 안에 가장 첫번째 child
-list3.insertAdjacentHTML('beforeend', '&lt;li&gt;막둥이 beforeend!!!&lt;/li&gt;'); //el 안에 가장 마지막 child
-var list3Li = document.querySelectorAll('#list3 li');
-list3Li[4].insertAdjacentHTML('beforebegin', '&lt;li&gt;🎨니앞에 beforebegin&lt;/li&gt;'); // el 앞에
-list3Li[4].insertAdjacentHTML('afterend', '&lt;li&gt;🎨니뒤에 insertAfter&lt;/li&gt;');</code></pre>
+	&lt;body&gt;
+		&lt;h1&gt;Events&lt;/h1&gt;
+		&lt;input class=&quot;form-control&quot; type=&quot;number&quot; style=&quot;padding: 30px; font-size: 30px; color: blue; border: 1px solid blue&quot; /&gt;
+		&lt;br /&gt;
+		&lt;button style=&quot;background-color: blue; color: #fff; font-size: 20px&quot;&gt;100 더하기&lt;/button&gt;
+		&lt;h1&gt;The total is: &lt;span&gt;N/A&lt;/span&gt;&lt;/h1&gt;
+		&lt;h1&gt;버튼&lt;/h1&gt;
+		&lt;div class=&quot;container&quot;&gt;
+			&lt;p&gt;후라이드 좋아한다고 말해야 했지 어떤 날엔 화내야 했지 (오빠가 돈이 어디 있다고 양념을 사줘) 우린 데이트하면 후라이드 우리가 매일 먹고 또 먹던 후라이드 근데 오빠 나도 속물 인가봐 양념이라면 눈이 돌아갔지 양념이 오빠의 피 같아 지금은 후라이드 밖에 못 삼켜&lt;/p&gt;
+			&lt;button id=&quot;submit&quot;&gt;치킨시켜&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 </doc-codeblock></div>
    </doc-panel>
-   <doc-panel id="제이쿼리" collapsed>
-       <template #title>제이쿼리</template>
+   <doc-panel id="완성코드" collapsed>
+       <template #title>완성코드</template>
+<doc-anchor-target id="js-step1-">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#js-step1-">#</doc-anchor-trigger>
+        <span>[js] step1 <!-- omit in toc --></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var num = 100;
+
+function calculate() {
+	var input = document.querySelector('.form-control');
+	var value = Number(input.value);
+	var totalValue = value + num;
+
+	var h1 = document.querySelectorAll('h1')[1];
+	var span = h1.querySelector('span');
+
+	span.innerText = totalValue;
+}
+
+var submitBtn = document.getElementById('submit'),
+	container = document.querySelector('.container');
+
+submitBtn.addEventListener('click', function (event) {
+	alert('원 플러스 원 곱빼기도 되요?!');
+});
+
+container.addEventListener('mouseenter', mouseEnterContainer);
+container.addEventListener('mouseleave', mouseLeaveContainer);
+
+function mouseEnterContainer() {
+	container.style.background = '#fff';
+	console.log('옆 테이블 남는 거 싸가도 되요?');
+}
+function mouseLeaveContainer() {
+	container.style.background = 'pink';
+}
+
+document.addEventListener('keyup', function () {
+	console.log(event.keyCode);
+});</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="jq-step2-">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#jq-step2-">#</doc-anchor-trigger>
+        <span>[jq] step2 <!-- omit in toc --></span>
+    </h4>
+</doc-anchor-target>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
@@ -800,37 +520,300 @@ list3Li[4].insertAdjacentHTML('afterend', '&lt;li&gt;🎨니뒤에 insertAfter&l
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../1/1q.html</span>
+        <span>../1/2q.html</span>
     </div>
-    <a href="../1/1q.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="../1/2q.html" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">let list1 = $('#list1&gt;li');
-list1.each(function (idx, el) {
-	let oriText = $(el).text();
-	const newText = oriText + idx + 'text()로 추가';
-	console.log($(el).text());
-	$(el).text(`${newText}`);
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var num = 100;
+
+function calculate() {
+	var input = $('.form-control');
+	var value = Number(input.val());
+	var totalValue = value + num;
+
+	var h1 = $('h1').eq(1);
+	var span = h1.find('span');
+
+	span.text(totalValue);
+}
+
+var submitBtn = $('#submit'),
+	container = $('.container');
+
+submitBtn.click(function (event) {
+	alert('원 플러스 원 곱빼기도 되요?!');
 });
-let list3 = $('#list3');
-list3.prepend('&lt;li&gt;🎨첫째&lt;/li&gt;');
-list3.append('&lt;li&gt;막둥이&lt;/li&gt;');
-list3.before('&lt;div&gt;니앞에&lt;/div&gt;');
-list3.after('&lt;div&gt;니뒤에&lt;/div&gt;');
-list3.children('li').eq(2).after('&lt;li&gt;니뒤에&lt;/li&gt;');</code></pre>
+
+container.on({ mouseenter: mouseEnterContainer, mouseleave: mouseLeaveContainer });
+
+function mouseEnterContainer() {
+	container.css('background', '#fff');
+	console.log('옆 테이블 남는 거 싸가도 되요?');
+}
+function mouseLeaveContainer() {
+	container.css('background', 'pink');
+}
+
+$('body').keyup(function () {
+	console.log(event.keyCode);
+});</code></pre>
 </doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<hr>
+<doc-anchor-target id="12-예제2">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-예제2">#</doc-anchor-trigger>
+        <span>1.2. 예제2</span>
+    </h2>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="시작코드" collapsed>
+       <template #title>시작코드</template>
+<doc-anchor-target id="html-">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#html-">#</doc-anchor-trigger>
+        <span>html <!-- omit in toc --></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;Document&lt;/title&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div id=&quot;wrap&quot;&gt;
+			&lt;h1&gt;이벤트 연습&lt;/h1&gt;
+			&lt;p id=&quot;textZone&quot;&gt;웹 브라우저에서 버튼을 클릭한다거나 mouse를 움직이거나 하는 모든 행위를 ‘이벤트’라고 합니다. 그리고 이벤트발생 시 함수의 실행문이 수행되도록 이벤트를 지정하는 것을 이벤트 핸들러라고 합니다.&lt;/p&gt;
+			&lt;h2&gt;click 메서드&lt;/h2&gt;
+			&lt;p&gt;&lt;button id=&quot;btn1&quot;&gt;click&lt;/button&gt;&lt;/p&gt;
+			&lt;h2&gt;mouseover 메서드&lt;/h2&gt;
+			&lt;p&gt;&lt;button id=&quot;btn2&quot; tabindex=&quot;1&quot;&gt;mouseover&lt;/button&gt;&lt;/p&gt;
+			&lt;h2&gt;bind 메서드&lt;/h2&gt;
+			&lt;p&gt;&lt;button id=&quot;btn3&quot;&gt;bind&lt;/button&gt;&lt;/p&gt;
+			&lt;h2&gt;mouseleave 메서드&lt;/h2&gt;
+			&lt;div id=&quot;listWrap&quot;&gt;
+				&lt;h3&gt;관련 사이트&lt;/h3&gt;
+				&lt;ul class=&quot;list1&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list2&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list3&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list3&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;h2&gt;hover 메서드&lt;/h2&gt;
+			&lt;h3&gt;&lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;hover&lt;/a&gt;&lt;/h3&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="css-">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#css-">#</doc-anchor-trigger>
+        <span>css <!-- omit in toc --></span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css" data-line="1"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+body {
+	font: 12px/1.5 '굴림', Gulim;
+	margin: 10px;
+}
+h2 {
+	margin-top: 30px;
+}
+a {
+	color: #333;
+}
+#textZone {
+	width: 700px;
+}
+#listWrap {
+	background: #cfcfcf;
+	width: 110px;
+	padding: 10px;
+}
+.list1 {
+	display: none;
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="js-완성코드" collapsed>
+       <template #title>JS 완성코드</template>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../1/3s.html</span>
+    </div>
+    <a href="../1/3s.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<ul>
+<li>상수초기화</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const textZone = document.querySelector('#textZone');</code></pre>
+</doc-codeblock></div>
+<ol>
+<li>id=&quot;btn1&quot; 클릭 했을때 id=&quot;textZone&quot; 글자 색상을 파란색으로 변경</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">btn1.onclick = function () {
+	textZone.style.color = 'blue';
+};</code></pre>
+</doc-codeblock></div>
+<ol start="2">
+<li>id=&quot;btn2&quot;에 마우스 오버 했을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const btn2 = document.querySelector('#btn2');
+btn2.onmouseover = function () {
+	textZone.style.backgroundColor = 'yellow';
+};</code></pre>
+</doc-codeblock></div>
+<ol start="3">
+<li>id=&quot;btn2&quot;에 포커스가 생겼을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">btn2.onfocus = function () {
+	textZone.style.backgroundColor = 'yellow';
+};</code></pre>
+</doc-codeblock></div>
+<ol start="4">
+<li>두개이상의 이벤트(mouseover,click,focus)를 등록시킬때</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const btn3 = document.querySelector('#btn3');
+function textZone4() {
+	textZone.style.color = 'green';
+	textZone.style.fontWeight = 'bold';
+}
+btn3.addEventListener('mouseover', textZone4);
+btn3.addEventListener('focus', textZone4);
+btn3.addEventListener('click', function () {
+	alert();
+});
+btn3.addEventListener('click', function () {
+	textZone.style.marginLeft = '80px';
+});</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>property listener 로 이벤트 등록시 같은 이벤트 덮어씌워짐</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">btn3.onmouseover = textZone4;
+btn3.onfocus = textZone4;
+btn3.onclick = function () {
+	alert();
+};
+btn3.onclick = function () {
+	textZone.style.marginLeft = '80px';
+};</code></pre>
+</doc-codeblock></div>
+<ol start="5">
+<li>id=&quot;listWrap&quot;에 마우스가 올라가 있으면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseover와 비슷</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const listWrap = document.querySelector('#listWrap');
+const list1 = document.querySelector('.list1');
+listWrap.onmouseenter = function () {
+	list1.style.display = 'block';
+};</code></pre>
+</doc-codeblock></div>
+<ol start="6">
+<li>id=&quot;listWrap&quot;에서 마우스가 벗어나면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseout과 비슷</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">listWrap.onmouseleave = function () {
+	list1.style.display = 'none';
+};</code></pre>
+</doc-codeblock></div>
+<ol start="7">
+<li>class=&quot;hover&quot;인 요소에 마우스를 올렸을땐 함수1을 벗어났을때에는 함수2를 실행 합니다.</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let hover = document.querySelector('.hover');
+hover.addEventListener('mouseover', function () {
+	this.style.color = 'aqua'; //함수1
+});
+hover.addEventListener('mouseout', function () {
+	this.style.color = 'red'; //함수2
+});</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="jq-완성코드" collapsed>
+       <template #title>JQ 완성코드</template>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../1/3q.html</span>
+    </div>
+    <a href="../1/3q.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<ol>
+<li>jquery 라이브러리 로드<br />
+<code v-pre>&lt;script src='https://code.jquery.com/jquery-3.7.1.slim.min.js'&gt;&lt;/script&gt;</code></li>
+<li>상수초기화</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const btn1 = $('#btn1');
+btn1.on('click', () =&gt; {
+	textZone.css('color', 'blue');
+});</code></pre>
+</doc-codeblock></div>
+<ol start="3">
+<li>id=&quot;btn1&quot; 클릭 했을때 id=&quot;textZone&quot; 글자 색상을 파란색으로 변경
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript"></code></pre>
+</doc-codeblock></div>
+</li>
+<li>id=&quot;btn2&quot;에 마우스 오버 했을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
+<li>id=&quot;btn2&quot;에 포커스가 생겼을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
+<li>두개이상의 이벤트(mouseover,click,focus)를 등록시킬때 *</li>
+<li>id=&quot;listWrap&quot;에 마우스가 올라가 있으면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseover와 비슷</li>
+<li>id=&quot;listWrap&quot;에서 마우스가 벗어나면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseout과 비슷</li>
+<li>class=&quot;hover&quot;인 요소에 마우스를 올렸을땐 함수1을 벗어났을때에는 함수2를 실행 합니다</li>
+</ol>
    </doc-panel>
 </doc-panels>
 <hr>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
-                                        <a href="../../tags/">
+                                        <a href="../../../tags/">
                                             <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
                                         </a>
-                                        <span class="mr-2"><a href="../../tags/jquery--javascript/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                        <span class="mr-2"><a href="../../../tags/jquery--javascript/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
                                     <span>jquery + javascript</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../../tags/event/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>event</span>
                                 </a></span>
                                     </span>
                                 </div>
@@ -842,20 +825,20 @@ list3.children('li').eq(2).after('&lt;li&gt;니뒤에&lt;/li&gt;');</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../5_projects/4-testmonial/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/basic/1.dom조작/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">4 testmonial</span>
+                                                <span class="block mt-1">1.​DOM </span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../6_jquery/2.이벤트/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/basic/3.애니메이션/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">2. EVENT </span>
+                                                <span class="block mt-1">3.​EFFECT </span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -899,6 +882,6 @@ list3.children('li').eq(2).after('&lt;li&gt;니뒤에&lt;/li&gt;');</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "1 DOM ", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "2. EVENT ", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
