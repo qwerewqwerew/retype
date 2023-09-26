@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-26T01:46:51Z",
+  "created": "2023-09-26T14:15:34Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3448,13 +3448,17 @@
       "path": "4_jquery\\deep\\11\\result.html"
     },
     {
+      "path": "4_jquery\\deep\\롤링배너\\index.html"
+    },
+    {
       "path": "4_jquery\\deep\\스티키메뉴\\index.html"
     },
     {
       "path": "4_jquery\\deep\\아코디언메뉴\\index.html"
     },
     {
-      "path": "4_jquery\\deep\\애니메이션\\index.html"
+      "path": "4_jquery\\deep\\애니메이션\\index.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\커스텀커서\\index.html"
@@ -3472,13 +3476,51 @@
       "path": "4_jquery\\deep\\files\\accordianjs.html"
     },
     {
-      "path": "4_jquery\\deep\\files\\animate.zip"
+      "path": "4_jquery\\deep\\files\\animate.zip",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\files\\cursors.html"
     },
     {
-      "path": "4_jquery\\deep\\files\\dangdangq.html"
+      "path": "4_jquery\\deep\\files\\dangdang2q.html"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dangdangq.html",
+      "old": true
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\dangdang1q.html"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\finalq.html"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_body1.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_body2.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_hand_right.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_moon.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_rope.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky1.gif"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky2.gif"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky3.gif"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky4.gif"
     },
     {
       "path": "4_jquery\\deep\\files\\full_media-js.html"
@@ -3487,31 +3529,40 @@
       "path": "4_jquery\\deep\\files\\full_media.html"
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_body1.png"
+      "path": "4_jquery\\deep\\files\\images\\motion_body1.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_body2.png"
+      "path": "4_jquery\\deep\\files\\images\\motion_body2.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_hand_right.png"
+      "path": "4_jquery\\deep\\files\\images\\motion_hand_right.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_moon.png"
+      "path": "4_jquery\\deep\\files\\images\\motion_moon.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_rope.png"
+      "path": "4_jquery\\deep\\files\\images\\motion_rope.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_sky1.gif"
+      "path": "4_jquery\\deep\\files\\images\\motion_sky1.gif",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_sky2.gif"
+      "path": "4_jquery\\deep\\files\\images\\motion_sky2.gif",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_sky3.gif"
+      "path": "4_jquery\\deep\\files\\images\\motion_sky3.gif",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\images\\motion_sky4.gif"
+      "path": "4_jquery\\deep\\files\\images\\motion_sky4.gif",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\files\\imgs.zip"
@@ -3524,6 +3575,33 @@
     },
     {
       "path": "4_jquery\\deep\\files\\imgs\\result4.jpg"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\1.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\2.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\3.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\4.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\5.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\6.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\7.png"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\roll\\images.zip"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\rollq.html"
     },
     {
       "path": "4_jquery\\deep\\files\\stickyq.html"
@@ -4156,7 +4234,8 @@
       "path": "tags\\아코디언메뉴\\index.html"
     },
     {
-      "path": "tags\\애니메이션\\index.html"
+      "path": "tags\\애니메이션\\index.html",
+      "old": true
     },
     {
       "path": "tags\\탈그리드\\index.html"
