@@ -77,12 +77,12 @@
     })
     //2. id="btn2"에 마우스 오버 했을때 id="textZone" 배경 색상을 노란색으로 변경
     const btn2 = $('#btn2');
-    btn2.mouseover(function () {
+    btn2.on("mouseover", function () {
       textZone.css('backgroundColor', 'yellow');
     });
     //3. id="btn2"에 포커스가 생겼을때 id="textZone" 배경 색상을 노란색으로 변경
     //키보드 tab키가 #btn2에 머물때 노란색으로 변경
-    btn2.focus(function () {
+    btn2.on('focus', function () {
       textZone.css('backgroundColor', 'yellow');
     });
     /*4. 두개이상의 이벤트(mouseover,click,focus)를 등록시킬때 */
@@ -105,7 +105,14 @@
       list1.css('display', 'none');
     })
     //8. class="hover"인 요소에 마우스를 올렸을땐 함수1을 벗어났을때에는 함수2를 실행 합니다.
-    $('.hover').hover(function () { $(this).css("color", "aqua"); }, function () { $(this).css("color", "red") });
+    $('.hover').on({
+      mouseenter: function () {
+        alert("d");
+      },
+      mouseleave: function () {
+        alert("a");
+      }
+    });
   </script>
 </body>
 

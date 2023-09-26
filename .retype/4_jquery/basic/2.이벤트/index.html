@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.748871082874">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.749007983949">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.2.0.748871082874" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.749007983949" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.748871082874" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.749007983949" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.748871082874" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.2.0.748871082874" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.749007983949" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.2.0.749007983949" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -778,9 +778,11 @@ hover.addEventListener('mouseout', function () {
 </div>
 </p>
 <ol>
-<li>jquery 라이브러리 로드<br />
-<code v-pre>&lt;script src='https://code.jquery.com/jquery-3.7.1.slim.min.js'&gt;&lt;/script&gt;</code></li>
-<li>상수초기화</li>
+<li><p>jquery 라이브러리 로드<br />
+<code v-pre>&lt;script src='https://code.jquery.com/jquery-3.7.1.slim.min.js'&gt;&lt;/script&gt;</code></p>
+</li>
+<li><p>id=&quot;btn1&quot; 클릭 했을때 id=&quot;textZone&quot; 글자 색상을 파란색으로 변경</p>
+</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-javascript"><code v-pre class="language-javascript">const btn1 = $('#btn1');
@@ -789,18 +791,68 @@ btn1.on('click', () =&gt; {
 });</code></pre>
 </doc-codeblock></div>
 <ol start="3">
-<li>id=&quot;btn1&quot; 클릭 했을때 id=&quot;textZone&quot; 글자 색상을 파란색으로 변경
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript"></code></pre>
-</doc-codeblock></div>
-</li>
 <li>id=&quot;btn2&quot;에 마우스 오버 했을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const btn2 = $('#btn2');
+btn2.on('mouseover', function () {
+	textZone.css('backgroundColor', 'yellow');
+});</code></pre>
+</doc-codeblock></div>
+<ol start="4">
 <li>id=&quot;btn2&quot;에 포커스가 생겼을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
-<li>두개이상의 이벤트(mouseover,click,focus)를 등록시킬때 *</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">btn2.on('focus', function () {
+	textZone.css('backgroundColor', 'yellow');
+});</code></pre>
+</doc-codeblock></div>
+<ol start="5">
+<li>두개이상의 이벤트(mouseover,click,focus)를 등록시킬때</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const btn3 = $('#btn3');
+btn3.on({
+	'mouseover focus': function () {
+		textZone4();
+	},
+	click: function () {
+		alert();
+		textZone.css('margin-left', '80px');
+	},
+});
+function textZone4() {
+	textZone.css('color', 'green');
+	textZone.css('fontWeight', 'bold');
+}</code></pre>
+</doc-codeblock></div>
+<ol start="6">
 <li>id=&quot;listWrap&quot;에 마우스가 올라가 있으면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseover와 비슷</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">$('.hover').hover(
+	function () {
+		$(this).css('color', 'aqua');
+	},
+	function () {
+		$(this).css('color', 'red');
+	}
+);</code></pre>
+</doc-codeblock></div>
+<ol start="7">
 <li>id=&quot;listWrap&quot;에서 마우스가 벗어나면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseout과 비슷</li>
 <li>class=&quot;hover&quot;인 요소에 마우스를 올렸을땐 함수1을 벗어났을때에는 함수2를 실행 합니다</li>
 </ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">$('.hover').on({
+	mouseenter: function () {
+		$(this).css('color','aqua');
+	},
+	mouseleave: function () {
+		$(this).css('color','red');
+	},
+});</code></pre>
+</doc-codeblock></div>
    </doc-panel>
 </doc-panels>
 <hr>

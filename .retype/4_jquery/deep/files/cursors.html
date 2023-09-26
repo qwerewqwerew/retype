@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --size: 15px;
+    }
+
+    html {
+      cursor: none;
+      user-select: none;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(60deg,
+          #1a1f26 0%,
+          #313b44 100%);
+    }
+
+    .cursor {
+      height: var(--size);
+      width: var(--size);
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .cursor.cursor-follower {
+      background: rgb(150, 100, 200);
+      transition: top .25s, left .25s,
+        width .5s, height .5s;
+      transition-timing-function: ease-out;
+    }
+
+    .cursor.cursor-dot {
+      background: #fff;
+      transition: width .25s, height .25s;
+    }
+
+    .cursor-follower.focus {
+      --size: 100px;
+    }
+
+    .cursor-dot.focus {
+      --size: 0;
+    }
+
+    h1 {
+      color: #fff;
+      padding: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor cursor-follower"></div>
+  <div class="cursor cursor-dot"></div>
+  <h1>Hover me</h1>
+  <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+  <script>
+    $(window).mousemove(function (event) {
+
+      $('.cursor').css({
+        left: event.pageX,
+        top: event.pageY
+      })
+
+    })
+
+    $('h1')
+      .on('mouseenter', function () {
+        $('.cursor').addClass('focus')
+      })
+      .on('mouseleave', function () {
+        $('.cursor').removeClass('focus')
+      })
+  </script>
+</body>
+
+</html>
