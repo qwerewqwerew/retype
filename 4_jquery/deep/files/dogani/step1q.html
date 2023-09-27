@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .dog {
+      position: fixed;
+      left: 5%;
+      top: 100px;
+      z-index: 30;
+      width: 300px;
+      will-change: transform;
+    }
+
+    .dog img {
+      width: 100%;
+    }
+
+    .dog .body,
+    .dog .foot {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      z-index: 20;
+    }
+
+    .dog .foot {
+      width: 83px;
+      top: 165px;
+      left: 169px;
+      z-index: 25;
+      transform-origin: 21px -12px;
+      animation-name: move;
+      animation-duration: 0.8s;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+    }
+
+    @keyframes move {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(20deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="dog">
+      <div class="body"><img src="./images/motion_body2.png" alt=""></div>
+      <div class="foot"><img src="./images/motion_hand_right.png" /></div>
+    </div>
+  </div>
+</body>
+
+</html>

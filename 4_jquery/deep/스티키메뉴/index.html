@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749014028029">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749093193010">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -17,7 +17,7 @@
     <!-- Primary Meta Tags -->
     <title>스티키메뉴 </title>
     <meta name="title" content="스티키메뉴 ">
-    <meta name="description" content="1. 스티키메뉴">
+    <meta name="description" content="1. 스크롤 양 얻기">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/4_jquery/deep/스티키메뉴/">
@@ -26,23 +26,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/4_jquery/deep/스티키메뉴/">
     <meta property="og:title" content="스티키메뉴 ">
-    <meta property="og:description" content="1. 스티키메뉴">
+    <meta property="og:description" content="1. 스크롤 양 얻기">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/4_jquery/deep/스티키메뉴/">
     <meta property="twitter:title" content="스티키메뉴 ">
-    <meta property="twitter:description" content="1. 스티키메뉴">
+    <meta property="twitter:description" content="1. 스크롤 양 얻기">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.749014028029" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.749093193010" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749014028029" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.749093193010" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749014028029" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.749014028029" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.749093193010" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.749093193010" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -396,23 +396,134 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li><doc-anchor-trigger to="#1-%EC%8A%A4%ED%8B%B0%ED%82%A4%EB%A9%94%EB%89%B4">1. 스티키메뉴</doc-anchor-trigger>
+<li><doc-anchor-trigger to="#1-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EC%96%91-%EC%96%BB%EA%B8%B0">1. 스크롤 양 얻기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#2-%EC%9A%94%EC%86%8C%EC%9D%98-%EC%9C%84%EC%B9%98%EC%96%BB%EA%B8%B0">2. 요소의 위치얻기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#3-%EC%8A%A4%ED%8B%B0%ED%82%A4%EB%A9%94%EB%89%B4">3. 스티키메뉴</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#11-%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC">1.1. 제이쿼리</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#31-clone-%ED%99%9C%EC%9A%A9">3.1. <code v-pre>clone</code> 활용</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#33-class%ED%99%9C%EC%9A%A9">3.3. <code v-pre>class</code>활용</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="1-스티키메뉴">
+<doc-anchor-target id="1-스크롤-양-얻기">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-스티키메뉴">#</doc-anchor-trigger>
-        <span>1. 스티키메뉴</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-스크롤-양-얻기">#</doc-anchor-trigger>
+        <span>1. 스크롤 양 얻기</span>
     </h1>
 </doc-anchor-target>
-<p>가변높이의 아코디언 메뉴 만들어보자</p>
-<doc-anchor-target id="11-제이쿼리">
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> HTML</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> CSS</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;p&gt;Hello&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">p {
+	margin: 10px;
+	padding: 5px;
+	border: 2px solid #666;
+	height: 800px;
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> jQuery</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Vanilla</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">$(window).scroll(function () {
+	$('p:last').text('scrollTop:' + win.scrollTop());
+});</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var win = window;
+win.addEventListener('scroll', function () {
+	var currentSCT = win.scrollY; //구형iex
+	var currentSCT = win.pageYOffset;
+	var currentSCT1 = document.documentElement.scrollTop;
+	document.getElementsByTagName('p')[1].innerText = 'scrollTop:' + currentSCT + '/' + currentSCT1;
+});</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<doc-anchor-target id="2-요소의-위치얻기">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-요소의-위치얻기">#</doc-anchor-trigger>
+        <span>2. 요소의 위치얻기</span>
+    </h1>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> HTML</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> CSS</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;p&gt;Hello&lt;/p&gt;
+&lt;p&gt;2nd Paragraph&lt;/p&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin: 100px 0 0 50px;
+}</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> jQuery</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Vanilla</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var p = $('p:last');
+var offset = p.offset().top;
+p.text('top: ' + offset);</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var lastP = document.getElementsByTagName('p')[1];
+var offset = lastP.offsetTop;
+lastP.innerText = 'top: ' + offset;</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<doc-anchor-target id="3-스티키메뉴">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-스티키메뉴">#</doc-anchor-trigger>
+        <span>3. 스티키메뉴</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="31-clone-활용">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-제이쿼리">#</doc-anchor-trigger>
-        <span>1.1. 제이쿼리</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-clone-활용">#</doc-anchor-trigger>
+        <span>3.1. <code v-pre>clone</code> 활용</span>
     </h2>
 </doc-anchor-target>
 <doc-tabs>
@@ -647,6 +758,162 @@ img {
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
+<doc-anchor-target id="33-class활용">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#33-class활용">#</doc-anchor-trigger>
+        <span>3.3. <code v-pre>class</code>활용</span>
+    </h2>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="../files/sticky2q.html" target="_blank" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-8 px-4 text-base rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>미리보기</span>
+</a></p>
+</doc-tab>
+<doc-tab v-cloak id="html">
+<template #title>HTML</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;wrap&quot;&gt;
+	&lt;header class=&quot;page-header&quot;&gt;
+		&lt;div class=&quot;inner&quot;&gt;
+			&lt;h1 class=&quot;site-logo&quot;&gt;
+				&lt;a href=&quot;./&quot;&gt;Logo&lt;/a&gt;
+			&lt;/h1&gt;
+			&lt;nav class=&quot;primary-nav&quot;&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;./&quot;&gt;menu1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;./&quot;&gt;menu2&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;./&quot;&gt;menu3&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;./&quot;&gt;menu4&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/nav&gt;
+		&lt;/div&gt;
+	&lt;/header&gt;
+	&lt;div class=&quot;dummy&quot;&gt;
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci
+		facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum
+		repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet
+		consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe.
+		Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt
+		excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing
+		elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt
+		iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas
+		adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni
+		ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit
+		amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae
+		saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt
+		excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="css">
+<template #title>CSS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">h1,
+h2,
+h3,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.wrap {
+	background-color: rgb(240, 240, 240);
+	color: rgb(0, 0, 0);
+	min-width: 960px;
+	/* padding-top: 240px; */
+}
+
+.dummy {
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 100px 0;
+}
+
+/*
+ * Sticky header
+ */
+.page-header {
+	background-color: rgb(255, 255, 255);
+	height: 70px;
+	width: 100%;
+	min-width: 960px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	/*아래 dummy 텍스트와의 공백을 없애기 위해*/
+}
+
+.page-header.sticky {
+	position: fixed;
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+/* 스크롤양이 많아져 sticky class가 붙었을때의 위치 */
+.page-header &gt; .inner {
+	margin: auto;
+	width: 960px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Primary nav */
+.primary-nav {
+	line-height: 65px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.primary-nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.primary-nav a {
+	display: block;
+	padding: 0 1.36em;
+}
+
+.primary-nav a:hover {
+	background-color: rgb(240, 240, 240);
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="jquery">
+<template #title>jQuery</template>
+<p><code v-pre> &lt;script src='https://code.jquery.com/jquery-3.6.0.min.js'&gt;&lt;/script&gt;</code></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">$(function () {
+	var $header = $('.page-header'),
+		$headerOST = $header.offset().top;
+
+	$(window).scroll(function () {
+		var $currentSCT = $(this).scrollTop();
+		if ($currentSCT &gt; $headerOST) {
+			$header.addClass('sticky');
+		} else {
+			$header.removeClass('sticky');
+		}
+	});
+}); //window ready</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
@@ -678,11 +945,11 @@ img {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/deep/커스텀커서/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/deep/롤링배너/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Custom Cursor</span>
+                                                <span class="block mt-1">롤링 슬라이드 배너</span>
                                             </span>
                                         </a>
                                     </div>

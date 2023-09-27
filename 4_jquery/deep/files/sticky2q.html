@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sticky Header</title>
+  <link rel="stylesheet" href="./css/main1.css" />
+  <style>
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      background-color: rgb(240, 240, 240);
+      color: rgb(0, 0, 0);
+      min-width: 960px;
+      /* padding-top: 240px; */
+    }
+
+    .dummy {
+      margin: 0 auto;
+      max-width: 500px;
+      padding: 100px 0;
+    }
+
+    /*
+ * Sticky header
+ */
+    .page-header {
+      background-color: rgb(255, 255, 255);
+      height: 70px;
+      width: 100%;
+      min-width: 960px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+      position: absolute;
+      /*아래 dummy 텍스트와의 공백을 없애기 위해*/
+    }
+
+    .page-header.sticky {
+      position: fixed;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    /* 스크롤양이 많아져 sticky class가 붙었을때의 위치 */
+    .page-header>.inner {
+      margin: auto;
+      width: 960px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Primary nav */
+    .primary-nav {
+      line-height: 65px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .primary-nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .primary-nav a {
+      display: block;
+      padding: 0 1.36em;
+    }
+
+    .primary-nav a:hover {
+      background-color: rgb(240, 240, 240);
+    }
+  </style>
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+  <script>
+    //jQuery
+    $(function () {
+      var $header = $('.page-header'),
+        $headerOST = $header.offset().top;
+
+      $(window).scroll(function () {
+        var $currentSCT = $(this).scrollTop();
+        if ($currentSCT > $headerOST) {
+          $header.addClass('sticky');
+        } else {
+          $header.removeClass('sticky');
+        }
+      });
+
+    });//window ready
+
+
+//Vanila script
+    /*
+    document.addEventListener('DOMContentLoaded', function(){
+
+       var $header = document.querySelector('.page-header'),
+           $headerOST  = $header.offsetTop;
+           console.log($headerOST);
+
+        var win = window;
+        win.addEventListener('scroll',function(){
+            //var $currentSCT = win.pageYOffset;
+            var $currentSCT = document.documentElement.scrollTop;
+            if($headerOST < $currentSCT){
+                $header.classList.add('sticky');
+            }else{
+                $header.classList.remove('sticky');
+            }
+
+        });
+
+    });//dom contentloaded
+    */
+
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="page-header">
+      <div class="inner">
+        <h1 class="site-logo">
+          <a href="./">Logo</a>
+        </h1>
+        <nav class="primary-nav">
+          <ul>
+            <li><a href="./">menu1</a></li>
+            <li><a href="./">menu2</a></li>
+            <li><a href="./">menu3</a></li>
+            <li><a href="./">menu4</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="dummy"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi magni ut, laborum repellat incidunt excepturi, accusamus nobis quas adipisci facere, et molestiae saepe. Quos ipsam placeat sunt iure enim. </div>
+  </div>
+</body>
+
+</html>
