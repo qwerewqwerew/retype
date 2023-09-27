@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-26T14:15:34Z",
+  "created": "2023-09-27T01:25:08Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3457,8 +3457,7 @@
       "path": "4_jquery\\deep\\아코디언메뉴\\index.html"
     },
     {
-      "path": "4_jquery\\deep\\애니메이션\\index.html",
-      "old": true
+      "path": "4_jquery\\deep\\애니메이션\\index.html"
     },
     {
       "path": "4_jquery\\deep\\커스텀커서\\index.html"
@@ -3476,8 +3475,7 @@
       "path": "4_jquery\\deep\\files\\accordianjs.html"
     },
     {
-      "path": "4_jquery\\deep\\files\\animate.zip",
-      "old": true
+      "path": "4_jquery\\deep\\files\\animate.zip"
     },
     {
       "path": "4_jquery\\deep\\files\\cursors.html"
@@ -3490,7 +3488,8 @@
       "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\dangdang1q.html"
+      "path": "4_jquery\\deep\\files\\dogani\\dangdang1q.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\files\\dogani\\finalq.html"
@@ -3521,6 +3520,9 @@
     },
     {
       "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky4.gif"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\dogani\\step1q.html"
     },
     {
       "path": "4_jquery\\deep\\files\\full_media-js.html"
@@ -3602,6 +3604,12 @@
     },
     {
       "path": "4_jquery\\deep\\files\\rollq.html"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\scrollamountq.html"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\sticky2q.html"
     },
     {
       "path": "4_jquery\\deep\\files\\stickyq.html"
@@ -4234,8 +4242,7 @@
       "path": "tags\\아코디언메뉴\\index.html"
     },
     {
-      "path": "tags\\애니메이션\\index.html",
-      "old": true
+      "path": "tags\\애니메이션\\index.html"
     },
     {
       "path": "tags\\탈그리드\\index.html"
