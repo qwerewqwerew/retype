@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.749456270465">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.749474560680">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -17,6 +17,7 @@
     <!-- Primary Meta Tags -->
     <title>7-if </title>
     <meta name="title" content="7-if ">
+    <meta name="description" content="조건문을 사용하여 컬러테마를 만들어보자 미리보기">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/6_scss/7/">
@@ -25,21 +26,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/6_scss/7/">
     <meta property="og:title" content="7-if ">
+    <meta property="og:description" content="조건문을 사용하여 컬러테마를 만들어보자 미리보기">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/6_scss/7/">
     <meta property="twitter:title" content="7-if ">
+    <meta property="twitter:description" content="조건문을 사용하여 컬러테마를 만들어보자 미리보기">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.2.0.749456270465" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.2.0.749474560680" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.749456270465" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.749474560680" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.749456270465" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.2.0.749456270465" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.749474560680" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.2.0.749474560680" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -152,6 +155,7 @@
         font-weight: 400;
         padding-top: 2px;
         padding-bottom: 4px;
+        margin-top: 0;
         font-size: 14px;
       }
 
@@ -225,6 +229,11 @@
       .collapse-content .docs-markdown ol,
       .collapse-content .docs-markdown ul {
         margin-bottom: 0 !important;
+      }
+
+      .docs-markdown ol li,
+      .docs-markdown ul li {
+        margin-top: 1.4rem;
       }
 
       .tab-content ol,
@@ -408,17 +417,53 @@
         <span>1. if</span>
     </h1>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-scss"><code v-pre class="language-scss">body {
-	margin: 50px;
-}
-@mixin textAndBgColor($textColor, $bgColor) {
+<blockquote>
+<p>조건문을 사용하여 컬러테마를 만들어보자<br />
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>./final/01_if.html</span>
+    </div>
+    <a href="./final/01_if.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</blockquote>
+<doc-anchor-target id="11-html">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-html">#</doc-anchor-trigger>
+        <span>1.1. html</span>
+    </h2>
+</doc-anchor-target>
+<p>아래의 요소를 추가한다.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;form action=&quot;#&quot;&gt;
+	&lt;select id=&quot;theme&quot;&gt;
+		&lt;option value=&quot;light&quot;&gt;Light&lt;/option&gt;
+		&lt;option value=&quot;dark&quot;&gt;Dark&lt;/option&gt;
+		&lt;option value=&quot;mid&quot;&gt;Mid&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/form&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="12-scss">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-scss">#</doc-anchor-trigger>
+        <span>1.2. scss</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-scss"><code v-pre class="language-scss">@mixin textAndBgColor($textColor, $bgColor) {
 	color: $textColor;
 	background-color: $bgColor;
 }
+
 @mixin theme($mood) {
 	@if $mood == 'light' {
-		@include textAndBgColor(#333, #ff0);
+		@include textAndBgColor(#333, #fff);
 	} @else if $mood == 'dark' {
 		@include textAndBgColor(#fff, #000);
 	} @else {
@@ -428,11 +473,80 @@
 body {
 	@include theme('light');
 }
-body {
+
+.dark-theme {
 	@include theme('dark');
 }
-body {
+
+.mid-theme {
 	@include theme('mid');
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="13-script">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#13-script">#</doc-anchor-trigger>
+        <span>1.3. script</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let theme = document.querySelector('#theme');
+console.log(theme);
+
+theme.addEventListener('change', function (e) {
+	let val = this.options[this.selectedIndex].value;
+	switchTheme(val);
+});
+
+function switchTheme(theme) {
+	document.body.classList.remove('dark-theme');
+	document.body.classList.remove('mid-theme');
+	document.body.classList.remove('light-theme');
+
+	if (theme === 'dark') {
+		document.body.classList.add('dark-theme');
+	} else if (theme === 'mid') {
+		document.body.classList.add('mid-theme');
+	} else {
+		document.body.classList.add('light-theme');
+	}
+}</code></pre>
+</doc-codeblock></div>
+<p>위의 함수는 아래처럼 줄일수 있다.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const classList = ['dark-theme', 'mid-theme', 'light-theme'];
+classList.forEach((el) =&gt; {
+	document.body.classList.remove(el);
+});</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="14-jquery">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#14-jquery">#</doc-anchor-trigger>
+        <span>1.4. jQuery</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li>코어파일을 로드한다</li>
+</ol>
+<p><code v-pre>&lt;script src='https://code.jquery.com/jquery-3.7.1.min.js'&gt;&lt;/script&gt;</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let theme = $('#theme');
+theme.on('change', function () {
+	let val = $(this).find('option:selected').val();
+	console.log(val);
+	switchTheme(val);
+});
+
+function switchTheme(theme) {
+	const body = $('body');
+	body.removeClass('dark-theme mid-theme light-theme');
+
+	if (theme === 'dark') {
+		body.addClass('dark-theme');
+	} else if (theme === 'mid') {
+		body.addClass('mid-theme');
+	} else {
+		body.addClass('light-theme');
+	}
 }</code></pre>
 </doc-codeblock></div>
 
@@ -464,10 +578,10 @@ body {
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../retype/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../6_scss/8/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Retype 설치</span>
+                                                <span class="block mt-1">8-​Media​Query</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
