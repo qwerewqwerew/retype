@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749456317160">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749476389150">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.749456317160" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.749476389150" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749456317160" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749476389150" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749456317160" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.749456317160" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749476389150" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.749476389150" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -157,6 +157,7 @@
         font-weight: 400;
         padding-top: 2px;
         padding-bottom: 4px;
+        margin-top: 0;
         font-size: 14px;
       }
 
@@ -230,6 +231,11 @@
       .collapse-content .docs-markdown ol,
       .collapse-content .docs-markdown ul {
         margin-bottom: 0 !important;
+      }
+
+      .docs-markdown ol li,
+      .docs-markdown ul li {
+        margin-top: 1.4rem;
       }
 
       .tab-content ol,
@@ -408,8 +414,8 @@
 <ul>
 <li><doc-anchor-trigger to="#121-basescss">1.2.1. base.scss</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#122-_mixinscss">1.2.2. _mixin.scss</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#122-_extendscss">1.2.2. _extend.scss</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#122-06_partialscss">1.2.2. \06_partial.scss</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#123-_extendscss">1.2.3. _extend.scss</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#124-06_partialscss">1.2.4. 06_partial.scss</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
@@ -513,10 +519,10 @@ body {
 	align-items: $align;
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="122-_extendscss">
+<doc-anchor-target id="123-_extendscss">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#122-_extendscss">#</doc-anchor-trigger>
-        <span>1.2.2. _extend.scss</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#123-_extendscss">#</doc-anchor-trigger>
+        <span>1.2.3. _extend.scss</span>
     </h3>
 </doc-anchor-target>
 <p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
@@ -536,10 +542,10 @@ body {
 	padding: 2vw 4vw;
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="122-06_partialscss">
+<doc-anchor-target id="124-06_partialscss">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#122-06_partialscss">#</doc-anchor-trigger>
-        <span>1.2.2. \06_partial.scss</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#124-06_partialscss">#</doc-anchor-trigger>
+        <span>1.2.4. 06_partial.scss</span>
     </h3>
 </doc-anchor-target>
 <p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
@@ -568,10 +574,27 @@ main {
 }
 .section1 {
 	&amp;-box {
+		@extend %boxshadow;
+		width: $col1 * 10;
+		margin: auto;
 		@include flexDirectJustiAlign();
+	}
+	&amp;-item {
+		flex: 1 1 0;
+		@include flexDirectJustiAlign(column);
+		@include fontSizeBgColor(2rem, #d8d8d8, $color-red);
+		@extend %padding;
+		span:nth-child(1) {
+			@extend %colorSize;
+		}
 	}
 }</code></pre>
 </doc-codeblock></div>
+<p><figure class="content-center">
+    <img src="../files/10-01_524.jpg" alt="실행화면">
+    <figcaption class="caption">실행화면</figcaption>
+</figure>
+</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
