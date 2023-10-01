@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-09-27T01:25:08Z",
+  "created": "2023-10-01T06:18:04Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3579,6 +3579,12 @@
       "path": "4_jquery\\deep\\files\\imgs\\result4.jpg"
     },
     {
+      "path": "4_jquery\\deep\\files\\imgs\\roll-jq.jpg"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\imgs\\roll-js.jpg"
+    },
+    {
       "path": "4_jquery\\deep\\files\\roll\\1.png"
     },
     {
@@ -3903,6 +3909,81 @@
       "old": true
     },
     {
+      "path": "6_scss\\1\\index.html"
+    },
+    {
+      "path": "6_scss\\2\\index.html"
+    },
+    {
+      "path": "6_scss\\3\\index.html"
+    },
+    {
+      "path": "6_scss\\4\\index.html"
+    },
+    {
+      "path": "6_scss\\5\\index.html"
+    },
+    {
+      "path": "6_scss\\6\\index.html"
+    },
+    {
+      "path": "6_scss\\7\\index.html"
+    },
+    {
+      "path": "6_scss\\files\\10-01_508.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_509.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_510.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_511.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_512.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_513.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_514.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_515.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_516.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_517.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_518.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_519.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_520.jpg"
+    },
+    {
+      "path": "6_scss\\files\\10-01_521.jpg"
+    },
+    {
+      "path": "6_scss\\files\\chap\\00.html"
+    },
+    {
+      "path": "6_scss\\files\\sass01.png"
+    },
+    {
+      "path": "6_scss\\files\\scss2.jpg"
+    },
+    {
+      "path": "6_scss\\files\\scss3.jpg"
+    },
+    {
       "path": "categories\\array\\index.html"
     },
     {
@@ -3940,6 +4021,9 @@
     },
     {
       "path": "categories\\response\\index.html"
+    },
+    {
+      "path": "categories\\scss\\index.html"
     },
     {
       "path": "categories\\this\\index.html"
@@ -4306,6 +4390,9 @@
     },
     {
       "path": "tags\\responsive\\index.html"
+    },
+    {
+      "path": "tags\\scss\\index.html"
     },
     {
       "path": "tags\\swiper\\index.html"

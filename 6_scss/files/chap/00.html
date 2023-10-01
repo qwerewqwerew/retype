@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>basic</title>
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+  <style>
+    body {
+      background: ivory;
+    }
+
+    header {
+      display: flex;
+      padding: 2vw 4vw;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      flex: 1 1 30%;
+    }
+
+    header nav {
+      flex: 1 1 50%;
+    }
+
+    header button {
+      flex: 1 1 10%;
+    }
+
+    header ul {
+      display: flex;
+      width: 80%;
+    }
+
+    header ul li {
+      flex: 1 1 30%;
+    }
+
+    header ul ul {
+      display: block;
+    }
+
+    main {
+      padding: 2vw 4vw;
+    }
+
+    .section1-box {
+      background: #c9c9c9;
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      border-radius: 8px;
+      border: 4px solid #d5d5d5;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .section1-box>.section1-item {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      padding: 1vw;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      border: 4px solid #6361e7;
+    }
+
+    .section1-box>.section1-item>.section1-title {
+      color: #333;
+      font-size: 32px;
+    }
+
+    .section1-box>.section1-item>.section1-para {
+      color: #333;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="logo"><a href="#">logo</a></h1>
+    <nav>
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+      </ul>
+    </nav>
+    <button><a href="#">login</a></button>
+  </header>
+  <main>
+    <section>
+      <h2>section1</h2>
+      <div class="section1-box">
+        <div class="section1-item">
+          <span class="section1-title">title</span>
+          <span class="section1-para">paragraph</span>
+        </div>
+        <div class="section1-item"> <span class="section1-title">title</span>
+          <span class="section1-para">paragraph</span>
+        </div>
+        <div class="section1-item"> <span class="section1-title">title</span>
+          <span class="section1-para">paragraph</span>
+        </div>
+    </section>
+  </main>
+</body>
+
+</html>
