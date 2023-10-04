@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-10-03T23:16:37Z",
+  "created": "2023-10-04T14:24:31Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3442,6 +3442,18 @@
       "path": "4_jquery\\deep\\1.탑버튼\\index.html"
     },
     {
+      "path": "4_jquery\\deep\\10\\10-1q.html"
+    },
+    {
+      "path": "4_jquery\\deep\\10\\10-2q.html"
+    },
+    {
+      "path": "4_jquery\\deep\\10\\10-3q.html"
+    },
+    {
+      "path": "4_jquery\\deep\\10\\index.html"
+    },
+    {
       "path": "4_jquery\\deep\\11\\fullpage.js-2.9.7.zip"
     },
     {
@@ -3504,6 +3516,9 @@
     },
     {
       "path": "4_jquery\\deep\\files\\3\\jq.html"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\9\\9-2q.html"
     },
     {
       "path": "4_jquery\\deep\\files\\9\\jq.html"
@@ -4039,7 +4054,8 @@
       "path": "6_scss\\final\\01_if.html"
     },
     {
-      "path": "6_scss\\final\\02_loram-project\\index1.html"
+      "path": "6_scss\\final\\02_loram-project\\index1.html",
+      "old": true
     },
     {
       "path": "6_scss\\final\\02_loram-project\\lorem\\css\\index.html"
@@ -4097,6 +4113,9 @@
       "old": true
     },
     {
+      "path": "6_scss\\number_animation_scroll.html"
+    },
+    {
       "path": "categories\\array\\index.html"
     },
     {
@@ -4134,6 +4153,9 @@
     },
     {
       "path": "categories\\response\\index.html"
+    },
+    {
+      "path": "categories\\retype\\index.html"
     },
     {
       "path": "categories\\scss\\index.html"
@@ -4188,6 +4210,9 @@
     },
     {
       "path": "resources\\retype.LICENSE.txt"
+    },
+    {
+      "path": "retype\\1\\index.html"
     },
     {
       "path": "retype\\index.html"
@@ -4508,6 +4533,9 @@
       "path": "tags\\project\\index.html"
     },
     {
+      "path": "tags\\readmd작성하기\\index.html"
+    },
+    {
       "path": "tags\\response\\index.html"
     },
     {
@@ -4523,7 +4551,8 @@
       "path": "tags\\ui\\index.html"
     },
     {
-      "path": "welcome\\index.html"
+      "path": "welcome\\index.html",
+      "old": true
     }
   ]
 }

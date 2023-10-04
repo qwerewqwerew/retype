@@ -10,11 +10,11 @@ category: [jQuery+javascript]
 tags: [jQuery, javascript, jQuery + javascript]
 ---
 
-# 1 DOM <!-- omit in toc -->
+## 1 DOM <!-- omit in toc -->
 
 ### 목차 <!-- omit in toc -->
 
-# 1. DOM 조작
+## 1. DOM 조작
 
 > DocumentObjectModel 을 탐색하고 조작하는 명령어를 알아보자
 

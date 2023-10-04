@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Animation</title>
+    <style>
+        .progress_wrap{
+            width: 600px;  
+            margin:0 auto;
+            border-radius: 13px;
+            height: 26px;
+            border:1px solid #3498db;
+            position: relative;
+            box-sizing:border-box
+        }
+        .bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width:0;
+            background: #3498db;
+            border-radius: 12px;
+            height:24px;            
+        }
+        .progress_wrap span{
+            position: absolute;
+            right: 20px;
+            top: 0;
+            bottom: 0;
+            line-height: 24px;
+        }
+        section{
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="">Number Animation</a></h1>
+    <h2></h2>
+    <section></section>
+    <div class="progress_wrap" data-num="45">
+        <div class="bar"></div>
+        <span>0</span>
+    </div>
+    <section></section>
+    <script>
+        console.log(document.querySelector('h1').innerText); //Number Animation
+        console.log(document.querySelector('h1').innerHTML); //<a href="">Number Animation</a>
+
+        //document.querySelector('h2').innerText = '<a>title</a>';
+        document.querySelector('h2').innerHTML = '<a href="">title</a>';
+
+        let progressWrap = document.querySelector('.progress_wrap'),
+            triggerPoint = progressWrap.offsetTop - 400,
+            progressBar = progressWrap.querySelector('.bar'),
+            progressRate = progressWrap.querySelector('span'),
+            initialRate = 0,
+            numAnimation = null,
+            excuted = false, //실행여부 거짓
+            targetRate = parseInt(progressWrap.getAttribute('data-num'));
+
+            window.addEventListener('scroll',function(){
+                let scrollAmt = this.pageYOffset;               
+
+                if(scrollAmt > triggerPoint){    
+                    // if(excuted==false) {
+                    if(!excuted){
+                        startNumberAnimation();
+                        excuted = true;
+                    }                    
+                }
+            });
+
+            
+            function startNumberAnimation(){
+                // if(numAnimation == null){
+                    numAnimation = setInterval(function(){
+                        initialRate++;
+                        if(initialRate == targetRate){
+                            clearInterval(numAnimation);
+                            // numAnimation = null;
+                        }
+                        progressBar.style.width = `${initialRate}%`;   //num + '%'
+                        progressRate.innerText = `${initialRate}%`;          
+                    }, 20);
+                    console.log(numAnimation);
+                // }
+            }
+
+
+    </script>
+</body>
+</html>
