@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749690252955">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749744719897">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.749690252955" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.749744719897" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749690252955" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749744719897" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749690252955" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.749690252955" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749744719897" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.749744719897" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -501,7 +501,7 @@ header {
 
 	button {
 		flex: 1 1 10%;
-    //중첩에서 탈출하기 css문서에서 확인
+		//중첩에서 탈출하기 css문서에서 확인
 		@at-root a {
 			color: orange;
 		}
@@ -554,6 +554,27 @@ main {
 		font-size: 24px;
 	}
 }</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="속성중첩">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#속성중첩">#</doc-anchor-trigger>
+        <span>속성중첩</span>
+    </h3>
+</doc-anchor-target>
+<p>font-, margin- 같은 접두사가 같은 속성은 nesting 으로 작성할수 있다.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-scss"><code v-pre class="language-scss">header {
+	... 생략
+	nav {
+		flex: {
+			shrink: 1;
+			grow: 1;
+			basis: 30%;
+			wrap: no-wrap;
+			direction: column;
+		};
+	};
+};</code></pre>
 </doc-codeblock></div>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
