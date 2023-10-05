@@ -1,6 +1,9 @@
 @mixin textAndBgColor($textColor, $bgColor) {
 	color: $textColor;
 	background-color: $bgColor;
+	a{
+    color:$textColor;
+  }
 }
 
 @mixin theme($mood) {
