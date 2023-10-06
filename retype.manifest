@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-10-05T23:25:32Z",
+  "created": "2023-10-06T00:34:16Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3442,6 +3442,9 @@
       "path": "4_jquery\\deep\\1.탑버튼\\index.html"
     },
     {
+      "path": "4_jquery\\deep\\10.스킬바\\index.html"
+    },
+    {
       "path": "4_jquery\\deep\\10\\10-1q.html"
     },
     {
@@ -3451,16 +3454,24 @@
       "path": "4_jquery\\deep\\10\\10-3q.html"
     },
     {
-      "path": "4_jquery\\deep\\10\\index.html"
+      "path": "4_jquery\\deep\\10\\index.html",
+      "old": true
+    },
+    {
+      "path": "4_jquery\\deep\\11.풀페이지\\index.html"
     },
     {
       "path": "4_jquery\\deep\\11\\fullpage.js-2.9.7.zip"
     },
     {
-      "path": "4_jquery\\deep\\11\\index.html"
+      "path": "4_jquery\\deep\\11\\index.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\11\\result.html"
+    },
+    {
+      "path": "4_jquery\\deep\\12.메인슬라이드\\index.html"
     },
     {
       "path": "4_jquery\\deep\\12\\final\\12-jq.html"
@@ -3538,7 +3549,8 @@
       "path": "4_jquery\\deep\\12\\final\\img\\right.png"
     },
     {
-      "path": "4_jquery\\deep\\12\\index.html"
+      "path": "4_jquery\\deep\\12\\index.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\2.롤링배너\\index.html"
@@ -4140,19 +4152,42 @@
       "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram-project\\lorem\\css\\index.html"
+      "path": "6_scss\\final\\02_loram-project\\lorem\\css\\index.html",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram-project\\lorem\\images\\header-image.jpg"
+      "path": "6_scss\\final\\02_loram-project\\lorem\\images\\header-image.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram-project\\lorem\\images\\photo-1.jpg"
+      "path": "6_scss\\final\\02_loram-project\\lorem\\images\\photo-1.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram-project\\lorem\\images\\photo-2.jpg"
+      "path": "6_scss\\final\\02_loram-project\\lorem\\images\\photo-2.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram-project\\lorem\\index.html"
+      "path": "6_scss\\final\\02_loram-project\\lorem\\index.html",
+      "old": true
+    },
+    {
+      "path": "6_scss\\final\\02_loram\\lorem\\css\\index.html"
+    },
+    {
+      "path": "6_scss\\final\\02_loram\\lorem\\images.zip"
+    },
+    {
+      "path": "6_scss\\final\\02_loram\\lorem\\images\\header-image.jpg"
+    },
+    {
+      "path": "6_scss\\final\\02_loram\\lorem\\images\\photo-1.jpg"
+    },
+    {
+      "path": "6_scss\\final\\02_loram\\lorem\\images\\photo-2.jpg"
+    },
+    {
+      "path": "6_scss\\final\\02_loram\\lorem\\index.html"
     },
     {
       "path": "6_scss\\final\\03_landing-page\\images\\6223587547_f7418ef489_b.jpg"
@@ -4195,7 +4230,8 @@
       "old": true
     },
     {
-      "path": "6_scss\\number_animation_scroll.html"
+      "path": "6_scss\\number_animation_scroll.html",
+      "old": true
     },
     {
       "path": "categories\\array\\index.html"
