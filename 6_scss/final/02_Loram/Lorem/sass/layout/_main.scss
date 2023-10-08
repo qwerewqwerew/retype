@@ -12,13 +12,11 @@ main {
 			width: 100%;
 		}
 		@include mq('small-screen-2') {
-			flex-direction: column;
 			width: 100%;
 			height: 54rem;
 			padding: 7rem 6rem 6.5rem 6rem;
 		}
 		@include mq('small-screen-3') {
-			flex-direction: column;
 			width: 100%;
 			min-height: 66rem;
 			padding: 7rem 6rem 7rem 6rem;
@@ -29,12 +27,10 @@ main {
 			padding: 2rem 2rem 0 0;
 
 			@include mq('small-screen-2') {
-				flex-direction: column;
 				width: 100%;
 			}
 			@include mq('small-screen-3') {
 				width: 100%;
-				flex-direction: column;
 			}
 
 			p {

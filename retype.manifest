@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-10-06T00:34:16Z",
+  "created": "2023-10-08T05:09:35Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3364,7 +3364,13 @@
       "path": "3_js\\deep\\2\\index.html"
     },
     {
+      "path": "3_js\\deep\\calendar\\index.html"
+    },
+    {
       "path": "3_js\\deep\\files\\swiper.html"
+    },
+    {
+      "path": "3_js\\deep\\js_slide\\02.html"
     },
     {
       "path": "4_jquery\\basic\\1.dom조작\\index.html"
@@ -3553,6 +3559,51 @@
       "old": true
     },
     {
+      "path": "4_jquery\\deep\\13.탭\\index.html"
+    },
+    {
+      "path": "4_jquery\\deep\\13\\jq.html"
+    },
+    {
+      "path": "4_jquery\\deep\\14.스크롤효과\\index.html"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step1\\jq.html"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step1\\play.html"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step2\\play.html"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step3\\10-08_526.jpg"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step3\\play.html"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4\\image.zip"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4\\image\\desktop.png"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4\\image\\laptop.png"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4\\image\\mobile.png"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4\\image\\project1_mobile.png"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4\\image\\project1_pc.png"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4\\play.html"
+    },
+    {
       "path": "4_jquery\\deep\\2.롤링배너\\index.html"
     },
     {
@@ -3579,6 +3630,15 @@
     },
     {
       "path": "4_jquery\\deep\\9.스크롤섹션\\index.html"
+    },
+    {
+      "path": "4_jquery\\deep\\9\\9-2q.html"
+    },
+    {
+      "path": "4_jquery\\deep\\9\\jq-01.html"
+    },
+    {
+      "path": "4_jquery\\deep\\9\\jq.html"
     },
     {
       "path": "4_jquery\\deep\\롤링배너\\index.html",
@@ -3612,10 +3672,12 @@
       "path": "4_jquery\\deep\\files\\3\\jq.html"
     },
     {
-      "path": "4_jquery\\deep\\files\\9\\9-2q.html"
+      "path": "4_jquery\\deep\\files\\9\\9-2q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\9\\jq.html"
+      "path": "4_jquery\\deep\\files\\9\\jq.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\files\\accordian.html"
@@ -4188,6 +4250,9 @@
     },
     {
       "path": "6_scss\\final\\02_loram\\lorem\\index.html"
+    },
+    {
+      "path": "6_scss\\final\\02_loram\\lorem\\text.html"
     },
     {
       "path": "6_scss\\final\\03_landing-page\\images\\6223587547_f7418ef489_b.jpg"

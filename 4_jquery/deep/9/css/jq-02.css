@@ -1,0 +1,6 @@
+.section2 .gallery {margin-top: 10vw;position: relative;display: flex; }
+
+.section2 .gallery .box {width: 200px;height: 300px;position: absolute;opacity: 0;top: 100%; }
+.bg3 {left: 20%; }
+.bg4 {left: 45%; }
+.bg5 {right: 20%; }

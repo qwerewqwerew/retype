@@ -1,0 +1,9 @@
+.section4 .container {
+	display: flex;
+}
+.left{
+  flex-basis:70%;
+}
+.right{
+  flex-basis:30%;
+}
