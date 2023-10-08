@@ -139,6 +139,7 @@
       width: 100%;
       display: block;
       clip-path: inset(0 100% 0 0);
+      /* duration 0.6 delay 0.3 */
       transition: clip-path 0.6s 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     }
 
@@ -182,16 +183,19 @@
 
       $(window).on('scroll', () => {
         winSCT = $(window).scrollTop();
-        if (winSCT > topArr[0] - speed && winSCT < topArr[1] - speed) {
+
+        if (winSCT > topArr[0] && winSCT < topArr[1] - speed) {
           sections.eq(0).find('.box').css('transform', 'translateX(0%)');
         }
-        if (winSCT > topArr[1] - speed && winSCT < topArr[2]) {
+
+        if (winSCT > topArr[1] && winSCT < topArr[2] - speed) {
           sections.eq(1).find('.bg3').stop().delay(100).animate({ top: 0, opacity: 1 }, 500, 'swing');
           sections.eq(1).find('.bg4').stop().delay(200).animate({ top: -100, opacity: 1 }, 800, 'swing');
           sections.eq(1).find('.bg5').stop().delay(300).animate({ top: -200, opacity: 1 }, 1100, 'swing');
         }
-        if (winSCT > topArr[2] - speed && winSCT < topArr[3]) {
-          console.log(winSCT > topArr[2] - speed && winSCT < topArr[3]);
+
+        if (winSCT > topArr[2] && winSCT < topArr[3] - speed) {
+          console.log(winSCT > topArr[2] && winSCT < topArr[3]);
           sections.eq(2).addClass('is-animated');
         }
       });

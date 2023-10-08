@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-10-08T05:09:35Z",
+  "created": "2023-10-08T11:51:21Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3583,6 +3583,30 @@
       "path": "4_jquery\\deep\\14\\step3\\play.html"
     },
     {
+      "path": "4_jquery\\deep\\14\\step4-copy\\image\\desktop.png",
+      "old": true
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4-copy\\image\\laptop.png",
+      "old": true
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4-copy\\image\\mobile.png",
+      "old": true
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4-copy\\image\\project1_mobile.png",
+      "old": true
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4-copy\\image\\project1_pc.png",
+      "old": true
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step4-copy\\play.html",
+      "old": true
+    },
+    {
       "path": "4_jquery\\deep\\14\\step4\\image.zip"
     },
     {
@@ -3602,6 +3626,9 @@
     },
     {
       "path": "4_jquery\\deep\\14\\step4\\play.html"
+    },
+    {
+      "path": "4_jquery\\deep\\14\\step5\\play.html"
     },
     {
       "path": "4_jquery\\deep\\2.롤링배너\\index.html"
