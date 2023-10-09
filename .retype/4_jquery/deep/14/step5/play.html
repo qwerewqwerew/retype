@@ -9,411 +9,186 @@
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    :root {
-      --bg1: #285dfb;
-      --bg2: #537dfb;
-      --bg3: #7e9efc;
-      --bg4: #a9befd;
-      --bg5: #d4dffe;
+    img {
+      border: 0
     }
 
-    .bg1 {
-      background-color: var(--bg1);
-      color: var(--bg5);
+    a {
+      text-decoration: none;
     }
 
-    .bg2 {
-      background-color: var(--bg2);
-      color: var(--bg4);
+    ul,
+    li {
+      list-style: none;
     }
 
-    .bg3 {
-      background-color: var(--bg3);
-      color: var(--bg3);
-    }
-
-    .bg4 {
-      background-color: var(--bg4);
-      color: var(--bg2);
-    }
-
-    .bg5 {
-      background-color: var(--bg5);
-      color: var(--bg1);
-    }
-
-    section {
+    body {
+      background: #dcdada;
       overflow: hidden;
-      text-align: center;
+    }
+
+    #wrap {
+      position: relative;
+    }
+
+    #wrap>div {
+      position: absolute;
+      padding-top: 150px;
       width: 100%;
-      padding-left: 4vw;
-      padding-right: 4vw;
-      height: 100vh;
-    }
-
-    section h2 {
-      padding: 6vw;
-    }
-
-    .section1 .box {
-      display: inline-block;
-      /* 최소, 최대가 명확한 경우 사용가능 */
-      width: clamp(100px, 30%, 100%);
-      height: 300px;
-      transition: all 2s;
-    }
-
-    .section1 .box1 {
-      transform: translateX(-200%);
-    }
-
-    .section1 .box2 {
-      transform: translateX(200%);
-    }
-
-    .section1 .box.in {
-      transform: translateX(-200%);
-    }
-
-    .section2 .gallery {
-      margin-top: 10vw;
-      position: relative;
-      display: flex;
-    }
-
-    .section2 .gallery .box {
-      width: 200px;
-      height: 300px;
-      position: absolute;
-      opacity: 0;
-      top: 100%;
-    }
-
-    .section2 .bg3 {
-      left: 20%;
-    }
-
-    .section2 .bg4 {
-      left: 45%;
-    }
-
-    .section2 .bg5 {
-      right: 20%;
-    }
-
-    .section3 {
-      display: flex;
-      color: #333;
-      gap: 2rem;
-    }
-
-    .section3 .item:nth-child(1) {
-      flex-basis: 60%;
-    }
-
-    .section3 .item:nth-child(2) {
-      flex-basis: 40%;
-      align-self: center;
-    }
-
-    .section3 figure {
-      position: relative;
-      box-shadow: -1rem 1rem 3rem -2rem rgba(0, 0, 0, 0.5);
-    }
-
-    .section3 figure:before {
-      position: absolute;
+      height: 700px;
+      opacity: 1;
       top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: var(--bg1);
-      transition: clip-path 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     }
 
-    .section3 figure img {
-      width: 100%;
+    #wrap>div:nth-child(1) {
+      left: 0%;
+      background: yellow;
+    }
+
+    #wrap>div:nth-child(2) {
+      left: 100%;
+      background: green;
+    }
+
+    #wrap>div:nth-child(3) {
+      left: 200%;
+      background: blue;
+    }
+
+    #wrap>div:nth-child(4) {
+      left: 300%;
+      background: red;
+    }
+
+    header {
+      width: 50%;
+      height: 130px;
+      position: fixed;
+      z-index: 1000000;
+    }
+
+    header .top_logo {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      transition: all 0.8s;
+    }
+
+    header .top_logo img {
+      width: 130px;
+    }
+
+    .lnb {
+      position: absolute;
+      top: 60px;
+      left: 150px;
+      transition: all 0.6s;
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 300;
+    }
+
+    .lnb li {
+      float: left;
+      position: relative;
+    }
+
+    .lnb li span {
+      width: 10px;
+      height: 10px;
+      background: #b691db;
       display: block;
-      clip-path: inset(0 100% 0 0);
-      /* duration 0.6 delay 0.3 */
-      transition: clip-path 0.6s 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-    }
-
-    .section3 figure figcaption {
+      border-radius: 50%;
       position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #fff;
-      background: var(--bg1);
-      mix-blend-mode: difference;
-      transition: clip-path 0.3s 0.9s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      left: 31%;
+      top: -13px;
+      opacity: 0;
     }
 
-    .section3 figure::before,
-    .section3 figure figcaption {
-      clip-path: inset(0 0 0 100%);
-    }
-
-    .section3.is-animated figure::before,
-    .section3.is-animated figure img,
-    .section3.is-animated figure figcaption {
-      clip-path: inset(0);
-    }
-
-    .section4 .container {
-      display: flex;
-      position: relative;
-    }
-
-    .pa {
-      position: absolute;
-      top: 0;
-    }
-
-    .item {
-      height: 30vw;
-    }
-
-    .left {
-      width: 60vw;
-      transition: left 1s ease-in-out;
-      left: -100%;
-    }
-
-    .right {
-      width: 40vw;
-      right: 0;
-    }
-
-    .is-animated .left {
-      left: 0;
-    }
-
-    .left .mockup img,
-    .left .mockup .mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .left .mockup.pc {
-      margin-left: clamp(5%, 100px, 10%);
-      position: relative;
-      width: 60%;
-      height: 100%;
-    }
-
-    .left .mockup.pc .mask {
-      z-index: 3;
-      width: 32.3vw;
-      height: 61.8%;
-      overflow: hidden;
-      top: 6%;
-      left: 5.2%;
-    }
-
-    .left .mockup.pc img.screen {
-      z-index: 1;
-      width: 100%;
-    }
-
-    .left .mockup.pc img.device {
-      z-index: 1;
-      width: 100%;
-    }
-
-    /* mobile */
-    .left .mockup.mobile {
-      position: relative;
-      top: -76%;
-      left: 58%;
-      width: 20%;
-      height: 60%;
-      z-index: 99;
-    }
-
-    .left .mockup.mobile .mask {
-      z-index: 999;
-      width: 10.5vw;
-      height: 100%;
-      overflow: hidden;
-      top: 10.8%;
-      left: 7%;
-      border-radius: 16px 16px 0 0;
-    }
-
-    .left .mockup.mobile img.screen {
-      z-index: 1;
-      width: 100%;
-    }
-
-    .left .mockup.mobile img.device {
-      z-index: 1;
-      width: 100%;
+    .lnb li a {
+      font-size: 1.5em;
+      color: #000;
+      margin-right: 25px;
     }
   </style>
-  <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
-  <script>
-    $(() => {
-      const sections = $('section');
-      let speed = Math.floor(sections.outerHeight() / 1.11);
-      console.log(speed);
-      let topArr = [];
-      let winSCT;
-
-      sections.each((idx, section) => {
-        $(section).addClass(`bg${idx + 1}`);
-        const sectionTop = $(section).offset().top;
-        topArr.push(sectionTop);
-      });
-
-      /* 스크롤함수 */
-      $(window).on('scroll', () => {
-        winSCT = $(window).scrollTop();
-        if (winSCT > topArr[0] && winSCT < topArr[1] - speed) {
-          console.log(topArr[1], topArr[1] - speed);
-          sections.eq(0).find('.box').css('transform', 'translateX(0%)');
-        }
-
-        if (winSCT > topArr[1] && winSCT < topArr[2] - speed) {
-          console.log(topArr[2], topArr[2] - speed);
-          sections.eq(1).find('.bg3').stop().delay(100).animate({ top: 0, opacity: 1 }, 500, 'swing');
-          sections.eq(1).find('.bg4').stop().delay(200).animate({ top: -100, opacity: 1 }, 800, 'swing');
-          sections.eq(1).find('.bg5').stop().delay(300).animate({ top: -200, opacity: 1 }, 1100, 'swing');
-        }
-
-        if (winSCT > topArr[2] && winSCT < topArr[3] - speed) {
-          console.log(topArr[2] - speed);
-          sections.eq(2).addClass('is-animated');
-        }
-        if (winSCT > topArr[3] && winSCT < topArr[4]) {
-
-          sections.eq(3).addClass('is-animated');
-        }
-      })
-      pipScroll();
-      function pipScroll() {
-        const section = sections.eq(3);
-        const devices = ['.mockup.pc', '.mockup.mobile'];
-
-        $.each(devices, function (i, deviceEl) {
-          const device = section.find(deviceEl);
-          const screen = device.find('.mask>img');
-          const mask = device.find('.mask');
-          const heightDifference = screen.innerHeight() - mask.innerHeight();
-
-          device.on({
-            mouseenter: function () {
-              if (section.hasClass('is-animated')) {
-                screen.stop().animate({ top: -heightDifference }, 1000)
-              }
-            },
-            mouseleave: function () {
-              if (section.hasClass('is-animated')) {
-                screen.stop().animate({ top: 0 }, 1000)
-              }
-            }
-          });
-        });
-      }
-
-      function horizontalMove() {
-        var page = $('.section5');
-        var lastPane = page.find('.pane').last();
-        var dummyX = null;
-
-        $(window).scroll(function () {
-          // Horizontal Scroll.
-          var y = document.body.getBoundingClientRect().top;
-          page.scrollLeft(-y);
-
-          // Looping Scroll.
-          var diff = $(window).scrollTop() - dummyX;
-          if (diff > 0) {
-            $(window).scrollTop(diff);
-          } else if ($(window).scrollTop() == 0) {
-            $(window).scrollTop(dummyX);
-          }
-        });
-
-        // Adjust the body height if the window resizes.
-        $(window).resize(resize);
-        // Initial resize.
-        resize();
-
-        // Reset window-based vars
-        function resize() {
-          var w = page.scrollWidth() - $(window).innerWidth() + $(window).innerHeight();
-          $(document.body).css('height', w + 'px');
-
-          dummyX = lastPane.offset().left + $(window).scrollTop();
-        }
-      }
-    })//jQuery
-
-  </script>
-  <link rel="stylesheet" href="4.css">
 </head>
 
 <body>
-  <section class="section1">
-    <h2>section1</h2>
-    <div class="container">
-      <div class="box box1 bg2"></div>
-      <div class="box box2 bg3"></div>
+  <header>
+    <a href="index.html" class="top_logo">Logo</a>
+    <ul class="lnb">
+      <li><span></span><a href="#">MOBILE</a></li>
+      <li class="active"><span></span><a href="#">MAIN</a></li>
+      <li><span></span><a href="#">WEB</a></li>
+      <li><span></span><a href="#">PROFILE</a></li>
+    </ul>
+  </header>
+  <div id="wrap">
+    <div id="mobilepage" class="section">
     </div>
-  </section>
-  <section class="section2">
-    <h2>section2</h2>
-    <div class="gallery">
-      <div class="box bg3"></div>
-      <div class="box bg4"></div>
-      <div class="box bg5"></div>
+    <div id="mainpage" class="on section">
     </div>
-  </section>
-  <section class="section3">
-    <div class="item">
-      <h2>section3</h2>
-      <figure><img src="http://qwerew.cafe24.com/images/1.jpg" alt="">
-        <figcaption>yum yum</figcaption>
-      </figure>
+    <div id="webpage" class="section">
     </div>
-    <div class="item">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est nostrum amet eligendi quas fugit libero cumque deserunt voluptate placeat dolorum culpa praesentium reiciendis, aliquid ad illum laborum, harum ratione.</p>
+    <div id="profilepage" class="section">
     </div>
-  </section>
-  <section class="section4">
-    <h2>section4</h2>
-    <div class="container">
-      <div class="item left pa">
-        <div class="mockup pc">
-          <div class="mask"> <img src="./image/project1_pc.png" alt="" class="screen"></div>
-          <img src="./image/desktop.png" alt="" class="device">
-        </div>
-        <div class="mockup mobile">
-          <div class="mask"> <img src="./image/project1_mobile.png" alt="" class="screen"></div>
-          <img src="./image/mobile.png" alt="" class="device">
-        </div>
-      </div>
-      <div class="item right bg1 pa"></div>
-    </div>
-  </section>
-  <section class="section5">
-    <div class="pane">article1</div>
-    <div class="pane">article2</div>
-    <div class="pane">article3</div>
-    <div class="pane">article4</div>
-    <div class="pane">article5</div>
-    <div class="pane">article6</div>
-    <div class="pane">article7</div>
-  </section>
-  <script src="js.js">
+  </div>
+  <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+  <script src='https://code.jquery.com/ui/1.13.2/jquery-ui.js'></script>
+  <script>
+    const contents = $('.section');
+    let secArr = [];
+    contents.each((index) => {
+      secArr.push(index);
+    });
+
+    let w;
+    let h;
+    $(window).resize(function () {
+      w = $(window).width();
+      h = $(window).height();
+      contents.height(h);
+      contents.width(w);
+      $('#wrap').height(h);
+    });
+    $(window).trigger('resize');
+
+    // 초기 위치 설정
+    $('html,body').stop().animate({ scrollLeft: contents.eq(0).offset().left }, 1300);
+
+    $('.top_logo').click(function () {
+      $('html,body').stop().animate({ scrollLeft: contents.eq(0).offset().left }, 1300);
+    });
+
+    $('.lnb > li').click(function (e) {
+      e.preventDefault();
+      const i = $(this).index();
+      const wt = $(window).width();
+      const nowLeft = i * wt;
+      $('html,body').stop().animate({ scrollLeft: nowLeft }, 1300);
+    });
+
+    contents.on('wheel', function (event) {
+      let currentIndex = $(this).index();
+
+      if (event.originalEvent.deltaY > 0) { // 마우스 휠 아래로 스크롤
+        currentIndex++;
+        if (currentIndex >= secArr.length) { // 마지막 요소를 넘어가면 처음 요소로 돌아감
+          currentIndex = secArr[0];
+        }
+        $('html,body').stop().animate({ scrollLeft: contents.eq(currentIndex).offset().left }, 'easeOutSine');
+
+        event.preventDefault();
+      } else if (event.originalEvent.deltaY < 0) { // 마우스 휠 위로 스크롤
+        currentIndex--;
+        if (currentIndex < secArr[0]) { // 첫번째 요소를 넘어가면 마지막 요소로 돌아감
+          currentIndex = secArr[secArr.length - 1];
+        }
+        $('html,body').stop().animate({ scrollLeft: contents.eq(currentIndex).offset().left }, 'easeOutSine');
+        event.preventDefault();
+      }
+    });
 
   </script>
 </body>
