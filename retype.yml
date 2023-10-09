@@ -5,6 +5,8 @@ branding:
   title: ✔ 프론트엔드 노트
   label: Docs
 links:
+  - text: 리액트노트
+    link: https://qwerewqwerew.github.io/retype-react/
   - text: Coding Note
     link: https://qwerewqwerew.github.io/retype/
   - text: 망고는코딩대장
