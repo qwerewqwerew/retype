@@ -1,6 +1,6 @@
 {
-  "version": "3.2.0",
-  "created": "2023-10-11T00:24:26Z",
+  "version": "3.5.0",
+  "created": "2023-10-16T14:10:51Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2079,7 +2079,8 @@
       "path": "4_jquery\\deep\\14\\step3\\play.html"
     },
     {
-      "path": "4_jquery\\deep\\14\\step4\\image.zip"
+      "path": "4_jquery\\deep\\14\\step4\\image.zip",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\14\\step4\\image\\desktop.png"
@@ -2101,6 +2102,9 @@
     },
     {
       "path": "4_jquery\\deep\\14\\step5\\play.html"
+    },
+    {
+      "path": "4_jquery\\deep\\15.멀티플슬라이드\\index.html"
     },
     {
       "path": "4_jquery\\deep\\2.롤링배너\\index.html"
@@ -2194,6 +2198,9 @@
     },
     {
       "path": "4_jquery\\deep\\files\\imgs.zip"
+    },
+    {
+      "path": "4_jquery\\deep\\files\\imgs\\10-16_530.jpg"
     },
     {
       "path": "4_jquery\\deep\\files\\imgs\\full.jpg"
