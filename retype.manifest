@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-10-16T23:52:06Z",
+  "created": "2023-10-19T07:26:46Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2061,7 +2061,8 @@
       "path": "4_jquery\\deep\\13\\jq.html"
     },
     {
-      "path": "4_jquery\\deep\\14.스크롤효과\\index.html"
+      "path": "4_jquery\\deep\\14.스크롤효과\\index.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\14\\step1\\jq.html"
