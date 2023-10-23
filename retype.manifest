@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-10-23T07:59:06Z",
+  "created": "2023-10-23T08:18:16Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2067,40 +2067,52 @@
       "path": "4_jquery\\deep\\14.scrolleffect\\index.html"
     },
     {
-      "path": "4_jquery\\deep\\14\\step1\\jq.html"
+      "path": "4_jquery\\deep\\14\\step1\\jq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step1\\play.html"
+      "path": "4_jquery\\deep\\14\\step1\\play.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step2\\play.html"
+      "path": "4_jquery\\deep\\14\\step2\\play.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step3\\10-08_526.jpg"
+      "path": "4_jquery\\deep\\14\\step3\\10-08_526.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step3\\play.html"
+      "path": "4_jquery\\deep\\14\\step3\\play.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step4\\image\\desktop.png"
+      "path": "4_jquery\\deep\\14\\step4\\image\\desktop.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step4\\image\\laptop.png"
+      "path": "4_jquery\\deep\\14\\step4\\image\\laptop.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step4\\image\\mobile.png"
+      "path": "4_jquery\\deep\\14\\step4\\image\\mobile.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step4\\image\\project1_mobile.png"
+      "path": "4_jquery\\deep\\14\\step4\\image\\project1_mobile.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step4\\image\\project1_pc.png"
+      "path": "4_jquery\\deep\\14\\step4\\image\\project1_pc.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step4\\play.html"
+      "path": "4_jquery\\deep\\14\\step4\\play.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14\\step5\\play.html"
+      "path": "4_jquery\\deep\\14\\step5\\play.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\15.멀티플슬라이드\\index.html"
