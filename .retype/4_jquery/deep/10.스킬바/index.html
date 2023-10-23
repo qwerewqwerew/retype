@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.751087550281">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.751335200982">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.2.0.751087550281" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.751335200982" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.751087550281" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.751335200982" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.751087550281" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.2.0.751087550281" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.751335200982" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.2.0.751335200982" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -704,28 +704,143 @@ line {
 <template #title>지시문</template>
 <p><a href="../10/10-3q.html" target="_blank" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-8 px-4 text-base rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
-    <span>호버효과 구현하기</span>
+    <span>미리보기</span>
 </a></p>
 </doc-tab>
 <doc-tab v-cloak id="html">
 <template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">This is Tab 1</div>
-<pre class="language-markup"><code v-pre class="language-markup"></code></pre>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;section&gt;
+	&lt;h2&gt;content&lt;/h2&gt;
+&lt;/section&gt;
+&lt;div class=&quot;charts&quot;&gt;
+	&lt;div class=&quot;chart&quot;&gt;
+		&lt;h2 data-num=&quot;20&quot;&gt;0&lt;/h2&gt;
+		&lt;svg&gt;
+			&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;500&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;
+		&lt;/svg&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;chart&quot;&gt;
+		&lt;h2 data-num=&quot;20&quot;&gt;0&lt;/h2&gt;
+		&lt;svg&gt;
+			&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;500&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;
+		&lt;/svg&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;chart&quot;&gt;
+		&lt;h2 data-num=&quot;80&quot;&gt;0&lt;/h2&gt;
+		&lt;svg&gt;
+			&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;500&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;
+		&lt;/svg&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;section&gt;
+	&lt;h2&gt;content&lt;/h2&gt;
+&lt;/section&gt;</code></pre>
 </doc-codeblock></div>
 </doc-tab>
 <doc-tab v-cloak id="css">
 <template #title>CSS</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">This is Tab 1</div>
-<pre class="language-css"><code v-pre class="language-css">+++ JS
-``` js # This is Tab 1</code></pre>
+<pre class="language-css"><code v-pre class="language-css">.charts {
+	width: 80%;
+	margin: 3rem auto;
+	display: flex;
+	justify-content: center;
+}
+
+.charts .chart {
+	margin: 0 20px;
+	position: relative;
+}
+
+.charts .chart h2 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+}
+
+line {
+	fill: #ebebeb;
+	stroke-width: 20;
+	stroke-dasharray: 300;
+	stroke-dashoffset: 300;
+}
+
+/* @keyframes line {
+    from {stroke-dashoffset: 628;}
+    to {stroke-dashoffset: 0;}
+} */
+.charts .chart:nth-child(1) line {
+	stroke: #ffc114;
+}
+
+.charts .chart:nth-child(2) line {
+	stroke: #ff5248;
+}
+
+.charts .chart:nth-child(3) line {
+	stroke: #19cdca;
+}
+
+.charts .chart:nth-child(4) line {
+	stroke: #4e88e1;
+}
+
+section {
+	height: 100vh;
+}
+
+line {
+	stroke: #4e88e1;
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="js">
+<template #title>JS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">var charts = $('.charts');
+var chart = $('.chart');
+var chartOST = chart.offset().top - 700;
+// var excuted = false;
+// console.log(excuted);
+
+$(window).scroll(function () {
+	var currentSCT = $(this).scrollTop();
+	if (currentSCT &gt;= chartOST) {
+		if (!charts.hasClass('active')) {
+			animateChart();
+			charts.addClass('active');
+		}
+	}
+});
+
+function animateChart() {
+	chart.each(function () {
+		var item = $(this);
+		var title = item.find('h2');
+		var targetNum = title.attr('data-num');
+		var circle = item.find('line');
+
+		$({ rate: 0 }).animate(
+			{ rate: targetNum },
+			{
+				duration: 1500,
+				progress: function () {
+					var now = this.rate;
+					var amount = 300 - (300 * now) / 100;
+
+					title.text(Math.floor(now));
+					circle.css({ strokeDashoffset: amount });
+				},
+			}
+		);
+	}); //chart each
+}</code></pre>
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none"></code></pre>
-</doc-codeblock></div>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
