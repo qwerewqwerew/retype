@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751087644999">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751335326437">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.751087644999" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.751335326437" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.751087644999" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.751335326437" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.751087644999" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.751087644999" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.751335326437" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.751335326437" defer></script>
 
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -441,7 +441,7 @@
 <li><doc-anchor-trigger to="#14-3%EB%8B%A8%EA%B3%84-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%B0%B0%EC%B9%98">1.4. [3단계] 슬라이드 배치</doc-anchor-trigger>
 <ul>
 <li><doc-anchor-trigger to="#141-slidelayout">1.4.1. slideLayout</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#141-setslidepos">1.4.1. setSlidePos</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#142-setslidepos">1.4.2. setSlidePos</doc-anchor-trigger></li>
 </ul>
 </li>
 <li><doc-anchor-trigger to="#15-4%EB%8B%A8%EA%B3%84-autoplay">1.5. [4단계] autoPlay</doc-anchor-trigger>
@@ -471,10 +471,11 @@
 </li>
 <li><doc-anchor-trigger to="#19-%EB%B0%98%EC%9D%91%ED%98%95%EC%9E%91%EC%84%B1">1.9. 반응형작성</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#%EB%B3%80%EC%88%98-%EC%B4%88%EA%B8%B0%ED%99%94">변수 초기화</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#%EC%9E%91%EC%84%B1">작성</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#191-%EB%B3%80%EC%88%98-%EC%B4%88%EA%B8%B0%ED%99%94">1.9.1. 변수 초기화</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#192-%EC%9E%91%EC%84%B1">1.9.2. 작성</doc-anchor-trigger></li>
 </ul>
 </li>
+<li><doc-anchor-trigger to="#110-%EB%94%94%EB%B2%84%EA%B9%85">1.10. 디버깅</doc-anchor-trigger></li>
 </ul>
 </li>
 </ul>
@@ -664,10 +665,10 @@ function slideLayout(sw, sm) {
 	});
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="141-setslidepos">
+<doc-anchor-target id="142-setslidepos">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#141-setslidepos">#</doc-anchor-trigger>
-        <span>1.4.1. setSlidePos</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#142-setslidepos">#</doc-anchor-trigger>
+        <span>1.4.2. setSlidePos</span>
     </h4>
 </doc-anchor-target>
 <p>ul 중앙정렬</p>
@@ -869,10 +870,10 @@ pager.html(pagerHTML);</code></pre>
         <span>1.9. 반응형작성</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="변수-초기화">
+<doc-anchor-target id="191-변수-초기화">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#변수-초기화">#</doc-anchor-trigger>
-        <span>변수 초기화</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#191-변수-초기화">#</doc-anchor-trigger>
+        <span>1.9.1. 변수 초기화</span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -880,10 +881,10 @@ pager.html(pagerHTML);</code></pre>
 let responsiveGap = 20;
 let responseSlideWidth; //윈도우 리사이징 시 재계산될 슬라이드 너비변수</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="작성">
+<doc-anchor-target id="192-작성">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#작성">#</doc-anchor-trigger>
-        <span>작성</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#192-작성">#</doc-anchor-trigger>
+        <span>1.9.2. 작성</span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -912,6 +913,44 @@ function responsiveSlide() {
 
 </code></pre>
 </doc-codeblock></div>
+<doc-anchor-target id="110-디버깅">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#110-디버깅">#</doc-anchor-trigger>
+        <span>1.10. 디버깅</span>
+    </h3>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>animate() 함수는 애니메이션이 완료된 후에만 콜백 함수를 실행하는데 사용자가 nextBtn 또는 prevBtn을 빠르게 클릭하면, 이전의 애니메이션이 완료되기 전에 새로운 애니메이션 요청이 들어와서 콜백함수를 정상적으로 실행할수 없다.</p>
+<p>애니메이션이 진행 중일 때 버튼 클릭을 무시하도록 코드를 수정한다.</p>
+        </div>
+    </div>
+</div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">function moveSlideCb(n) {
+	if (slides.is(':animated')) {
+		return;
+	}
+	slides.stop().animate({ left: moveAmt * -n }, 500, function () {
+		...</code></pre>
+</doc-codeblock></div>
+<div class="my-list">
+<ol>
+<li><code v-pre>$('el').is(조건)</code> 요소가 조건과 일치하는지 검사하여 boolean 을 반환</li>
+<li><code v-pre>:animated</code> 애니메이션 되고 있는 요소를 선택하는 jQuery 선택자</li>
+</ol>
+</div>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
