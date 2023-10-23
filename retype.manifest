@@ -1,6 +1,6 @@
 {
   "version": "3.2.0",
-  "created": "2023-10-23T00:13:50Z",
+  "created": "2023-10-23T07:42:47Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2064,8 +2064,7 @@
       "path": "4_jquery\\deep\\13\\jq.html"
     },
     {
-      "path": "4_jquery\\deep\\14.스크롤효과\\index.html",
-      "old": true
+      "path": "4_jquery\\deep\\14.scrolleffect\\index.html"
     },
     {
       "path": "4_jquery\\deep\\14\\step1\\jq.html"
@@ -2081,10 +2080,6 @@
     },
     {
       "path": "4_jquery\\deep\\14\\step3\\play.html"
-    },
-    {
-      "path": "4_jquery\\deep\\14\\step4\\image.zip",
-      "old": true
     },
     {
       "path": "4_jquery\\deep\\14\\step4\\image\\desktop.png"
