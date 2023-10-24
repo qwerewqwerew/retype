@@ -1,6 +1,6 @@
 {
-  "version": "3.5.0",
-  "created": "2023-10-23T13:08:27Z",
+  "version": "3.2.0",
+  "created": "2023-10-24T00:15:34Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -2118,7 +2118,11 @@
       "path": "4_jquery\\deep\\15.멀티플슬라이드\\index.html"
     },
     {
-      "path": "4_jquery\\deep\\16.json\\index.html"
+      "path": "4_jquery\\deep\\16.ajax\\index.html"
+    },
+    {
+      "path": "4_jquery\\deep\\16.json\\index.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\2.롤링배너\\index.html"
@@ -2851,6 +2855,9 @@
     },
     {
       "path": "tags\\풀사이즈-미디어\\index.html"
+    },
+    {
+      "path": "tags\\ajax\\index.html"
     },
     {
       "path": "tags\\async\\index.html"

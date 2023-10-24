@@ -15,24 +15,24 @@
     <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
-    <title>2. EVENT </title>
-    <meta name="title" content="2. EVENT ">
-    <meta name="description" content="1. 개요">
+    <title>16.ajax을 활용한 갤러리</title>
+    <meta name="title" content="16.ajax을 활용한 갤러리">
+    <meta name="description" content="jQuery load()는 특정 URL의 리소스를 요청하고, 응답을 HTML로 변환하여 지정된 DOM 요소에 로드합니다.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/4_jquery/basic/2.이벤트/">
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/4_jquery/deep/16.ajax/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/4_jquery/basic/2.이벤트/">
-    <meta property="og:title" content="2. EVENT ">
-    <meta property="og:description" content="1. 개요">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/4_jquery/deep/16.ajax/">
+    <meta property="og:title" content="16.ajax을 활용한 갤러리">
+    <meta property="og:description" content="jQuery load()는 특정 URL의 리소스를 요청하고, 응답을 HTML로 변환하여 지정된 DOM 요소에 로드합니다.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/4_jquery/basic/2.이벤트/">
-    <meta property="twitter:title" content="2. EVENT ">
-    <meta property="twitter:description" content="1. 개요">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/4_jquery/deep/16.ajax/">
+    <meta property="twitter:title" content="16.ajax을 활용한 갤러리">
+    <meta property="twitter:description" content="jQuery load()는 특정 URL의 리소스를 요청하고, 응답을 HTML로 변환하여 지정된 DOM 요소에 로드합니다.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -396,16 +396,16 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="2-event" class="break-words">
+<doc-anchor-target id="16ajax을-활용한-갤러리" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-event">#</doc-anchor-trigger>
-        <span>2. EVENT <!-- omit in toc --></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#16ajax을-활용한-갤러리">#</doc-anchor-trigger>
+        <span>16.ajax을 활용한 갤러리</span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
     <div>In&nbsp;</div>
-    <div><a href="../../../categories/jqueryjavascript/">jQuery+javascript</a>,&nbsp;</div>
-    <div><a href="../../../categories/basic/">basic</a></div>
+    <div><a href="../../../categories/jquery/">jQuery</a>,&nbsp;</div>
+    <div><a href="../../../categories/javascript/">javascript</a></div>
 </div>
 
 <doc-anchor-target id="목차">
@@ -414,34 +414,21 @@
         <span>목차 <!-- omit in toc --></span>
     </h3>
 </doc-anchor-target>
-<ul>
-<li><doc-anchor-trigger to="#1-%EA%B0%9C%EC%9A%94">1. 개요</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#11-%EC%98%88%EC%A0%9C1">1.1. 예제1</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#12-%EC%98%88%EC%A0%9C2">1.2. 예제2</doc-anchor-trigger></li>
-</ul>
-</li>
-</ul>
-<doc-anchor-target id="1-개요">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-개요">#</doc-anchor-trigger>
-        <span>1. 개요</span>
-    </h1>
-</doc-anchor-target>
 <blockquote>
-<p>웹 브라우저에서 버튼을 클릭한다거나 mouse를 움직이거나 하는 모든 행위를 ‘이벤트’라고 합니다.<br />
-그리고 이벤트발생 시 함수의 실행문이 수행되도록 이벤트를 지정하는 것을 이벤트 핸들러라고 합니다.<br />
-이벤트 발생시 관련 정보를 가지고 있는 이벤트 객체를 전달받을수 있습니다.</p>
+<p>jQuery load()는 특정 URL의 리소스를 요청하고, 응답을 HTML로 변환하여 지정된 DOM 요소에 로드합니다.</p>
 </blockquote>
-<doc-anchor-target id="11-예제1">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-예제1">#</doc-anchor-trigger>
-        <span>1.1. 예제1</span>
-    </h2>
-</doc-anchor-target>
-<doc-panels>
-   <doc-panel id="시작코드" collapsed>
-       <template #title>시작코드</template>
+<div class="comment_box"><p><span class="docs-emoji">&#x1F4A1;</span> ajax (Asynchronous JavaScript and XML)<br />
+(에이싱크러너스 자바스크립트 앤 xml)<br />
+비동기 방식의 자바스크립트와 xml</p>
+<ul>
+<li>동기방식: 서버에 신호를 보냈을때 응답이 돌아와야 다음 동작을 수행</li>
+<li>비동기방식: 신호를 보냈을때 응답여부와 상관없이 다음 동작 실행</li>
+</ul>
+<p><mark><span class="docs-emoji">&#x1F4A1;</span>Ajax(Asynchronous Javascript and XML)는 클라이언트 가 비동기방식으로 자바스크립트를 이용하여 화면 전환 없이 서버측에 자료(XML,HTML,JSON,텍스트...)를 요청할때 사용</mark></p>
+</div>
+<doc-tabs>
+<doc-tab v-cloak id="예제">
+<template #title>예제</template>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
@@ -451,85 +438,11 @@
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../1/2.html</span>
+        <span>https://qwerewqwerew.github.io/source/jq/16/step1</span>
     </div>
-    <a href="../1/2.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="https://qwerewqwerew.github.io/source/jq/16/step1" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-		&lt;title&gt;Document&lt;/title&gt;
-	&lt;/head&gt;
-
-	&lt;body&gt;
-		&lt;h1&gt;Events&lt;/h1&gt;
-		&lt;input class=&quot;form-control&quot; type=&quot;number&quot; style=&quot;padding: 30px; font-size: 30px; color: blue; border: 1px solid blue&quot; /&gt;
-		&lt;br /&gt;
-		&lt;button style=&quot;background-color: blue; color: #fff; font-size: 20px&quot;&gt;100 더하기&lt;/button&gt;
-		&lt;h1&gt;The total is: &lt;span&gt;N/A&lt;/span&gt;&lt;/h1&gt;
-		&lt;h1&gt;버튼&lt;/h1&gt;
-		&lt;div class=&quot;container&quot;&gt;
-			&lt;p&gt;후라이드 좋아한다고 말해야 했지 어떤 날엔 화내야 했지 (오빠가 돈이 어디 있다고 양념을 사줘) 우린 데이트하면 후라이드 우리가 매일 먹고 또 먹던 후라이드 근데 오빠 나도 속물 인가봐 양념이라면 눈이 돌아갔지 양념이 오빠의 피 같아 지금은 후라이드 밖에 못 삼켜&lt;/p&gt;
-			&lt;button id=&quot;submit&quot;&gt;치킨시켜&lt;/button&gt;
-		&lt;/div&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="완성코드" collapsed>
-       <template #title>완성코드</template>
-<doc-anchor-target id="js-step1-">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#js-step1-">#</doc-anchor-trigger>
-        <span>[js] step1 <!-- omit in toc --></span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var num = 100;
-
-function calculate() {
-	var input = document.querySelector('.form-control');
-	var value = Number(input.value);
-	var totalValue = value + num;
-
-	var h1 = document.querySelectorAll('h1')[1];
-	var span = h1.querySelector('span');
-
-	span.innerText = totalValue;
-}
-
-var submitBtn = document.getElementById('submit'),
-	container = document.querySelector('.container');
-
-submitBtn.addEventListener('click', function (event) {
-	alert('원 플러스 원 곱빼기도 되요?!');
-});
-
-container.addEventListener('mouseenter', mouseEnterContainer);
-container.addEventListener('mouseleave', mouseLeaveContainer);
-
-function mouseEnterContainer() {
-	container.style.background = '#fff';
-	console.log('옆 테이블 남는 거 싸가도 되요?');
-}
-function mouseLeaveContainer() {
-	container.style.background = 'pink';
-}
-
-document.addEventListener('keyup', function () {
-	console.log(event.keyCode);
-});</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="jq-step2-">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#jq-step2-">#</doc-anchor-trigger>
-        <span>[jq] step2 <!-- omit in toc --></span>
-    </h4>
-</doc-anchor-target>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
@@ -539,352 +452,186 @@ document.addEventListener('keyup', function () {
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../1/2q.html</span>
+        <span>https://qwerewqwerew.github.io/source/jq/16/step2</span>
     </div>
-    <a href="../1/2q.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="https://qwerewqwerew.github.io/source/jq/16/step2" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var num = 100;
-
-function calculate() {
-	var input = $('.form-control');
-	var value = Number(input.val());
-	var totalValue = value + num;
-
-	var h1 = $('h1').eq(1);
-	var span = h1.find('span');
-
-	span.text(totalValue);
-}
-
-var submitBtn = $('#submit'),
-	container = $('.container');
-
-submitBtn.click(function (event) {
-	alert('원 플러스 원 곱빼기도 되요?!');
-});
-
-container.on({ mouseenter: mouseEnterContainer, mouseleave: mouseLeaveContainer });
-
-function mouseEnterContainer() {
-	container.css('background', '#fff');
-	console.log('옆 테이블 남는 거 싸가도 되요?');
-}
-function mouseLeaveContainer() {
-	container.css('background', 'pink');
-}
-
-$('body').keyup(function () {
-	console.log(event.keyCode);
-});</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-</doc-panels>
-<hr>
-<doc-anchor-target id="12-예제2">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-예제2">#</doc-anchor-trigger>
-        <span>1.2. 예제2</span>
-    </h2>
-</doc-anchor-target>
-<doc-panels>
-   <doc-panel id="시작코드" collapsed>
-       <template #title>시작코드</template>
-<doc-anchor-target id="html-">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#html-">#</doc-anchor-trigger>
-        <span>html <!-- omit in toc --></span>
-    </h4>
-</doc-anchor-target>
+</doc-tab>
+<doc-tab v-cloak id="html">
+<template #title>HTML</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">html</div>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
 		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
 		&lt;title&gt;Document&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;1.css&quot; /&gt;
 	&lt;/head&gt;
 
 	&lt;body&gt;
-		&lt;div id=&quot;wrap&quot;&gt;
-			&lt;h1&gt;이벤트 연습&lt;/h1&gt;
-			&lt;p id=&quot;textZone&quot;&gt;웹 브라우저에서 버튼을 클릭한다거나 mouse를 움직이거나 하는 모든 행위를 ‘이벤트’라고 합니다. 그리고 이벤트발생 시 함수의 실행문이 수행되도록 이벤트를 지정하는 것을 이벤트 핸들러라고 합니다.&lt;/p&gt;
-			&lt;h2&gt;click 메서드&lt;/h2&gt;
-			&lt;p&gt;&lt;button id=&quot;btn1&quot;&gt;click&lt;/button&gt;&lt;/p&gt;
-			&lt;h2&gt;mouseover 메서드&lt;/h2&gt;
-			&lt;p&gt;&lt;button id=&quot;btn2&quot; tabindex=&quot;1&quot;&gt;mouseover&lt;/button&gt;&lt;/p&gt;
-			&lt;h2&gt;bind 메서드&lt;/h2&gt;
-			&lt;p&gt;&lt;button id=&quot;btn3&quot;&gt;bind&lt;/button&gt;&lt;/p&gt;
-			&lt;h2&gt;mouseleave 메서드&lt;/h2&gt;
-			&lt;div id=&quot;listWrap&quot;&gt;
-				&lt;h3&gt;관련 사이트&lt;/h3&gt;
-				&lt;ul class=&quot;list1&quot;&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list1&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list2&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list3&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;list3&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-			&lt;h2&gt;hover 메서드&lt;/h2&gt;
-			&lt;h3&gt;&lt;a href=&quot;#&quot; class=&quot;hover&quot;&gt;hover&lt;/a&gt;&lt;/h3&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; data-src=&quot;gallery/1.html&quot; class=&quot;pic&quot; /&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/2.jpg&quot; data-src=&quot;gallery/2.html&quot; class=&quot;pic&quot; /&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/3.jpg&quot; data-src=&quot;gallery/3.html&quot; class=&quot;pic&quot; /&gt;&lt;/li&gt;
+			&lt;/ul&gt;
 		&lt;/div&gt;
+		&lt;div id=&quot;lightbox&quot;&gt;
+			&lt;div id=&quot;lightboxImage&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+		&lt;script src=&quot;jq.js&quot;&gt;&lt;/script&gt;
 	&lt;/body&gt;
 &lt;/html&gt;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="css-">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#css-">#</doc-anchor-trigger>
-        <span>css <!-- omit in toc --></span>
-    </h4>
-</doc-anchor-target>
+</doc-tab>
+<doc-tab v-cloak id="css">
+<template #title>CSS</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-css" data-line="1"><code v-pre class="language-css">* {
+<div class="codeblock-title">css</div>
+<pre class="language-css"><code v-pre class="language-css">.row {
+	width: 420px;
+	margin: 0 auto;
+}
+
+.row ul {
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-li {
-	list-style-type: none;
+.row ul li {
+	display: inline-table;
+	width: 30%;
 }
-body {
-	font: 12px/1.5 '굴림', Gulim;
-	margin: 10px;
+.row ul li img {
+	width: 100%;
 }
-h2 {
-	margin-top: 30px;
-}
-a {
-	color: #333;
-}
-#textZone {
-	width: 700px;
-}
-#listWrap {
-	background: #cfcfcf;
-	width: 110px;
-	padding: 10px;
-}
-.list1 {
+/* 라이트 박스 스타일 */
+#lightbox {
+	position: fixed;
+	width: 100%;
+
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	left: 0;
 	display: none;
-}</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="js-완성코드" collapsed>
-       <template #title>JS 완성코드</template>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../1/3s.html</span>
-    </div>
-    <a href="../1/3s.html" target="_blank" class="absolute block inset-0"></a>
-</div>
-</p>
-<ul>
-<li>상수초기화</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const textZone = document.querySelector('#textZone');</code></pre>
-</doc-codeblock></div>
-<ol>
-<li>id=&quot;btn1&quot; 클릭 했을때 id=&quot;textZone&quot; 글자 색상을 파란색으로 변경</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">btn1.onclick = function () {
-	textZone.style.color = 'blue';
-};</code></pre>
-</doc-codeblock></div>
-<ol start="2">
-<li>id=&quot;btn2&quot;에 마우스 오버 했을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const btn2 = document.querySelector('#btn2');
-btn2.onmouseover = function () {
-	textZone.style.backgroundColor = 'yellow';
-};</code></pre>
-</doc-codeblock></div>
-<ol start="3">
-<li>id=&quot;btn2&quot;에 포커스가 생겼을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">btn2.onfocus = function () {
-	textZone.style.backgroundColor = 'yellow';
-};</code></pre>
-</doc-codeblock></div>
-<ol start="4">
-<li>두개이상의 이벤트(mouseover,click,focus)를 등록시킬때</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const btn3 = document.querySelector('#btn3');
-function textZone4() {
-	textZone.style.color = 'green';
-	textZone.style.fontWeight = 'bold';
 }
-btn3.addEventListener('mouseover', textZone4);
-btn3.addEventListener('focus', textZone4);
-btn3.addEventListener('click', function () {
-	alert();
-});
-btn3.addEventListener('click', function () {
-	textZone.style.marginLeft = '80px';
-});</code></pre>
-</doc-codeblock></div>
-<ul>
-<li>property listener 로 이벤트 등록시 같은 이벤트 덮어씌워짐</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">btn3.onmouseover = textZone4;
-btn3.onfocus = textZone4;
-btn3.onclick = function () {
-	alert();
-};
-btn3.onclick = function () {
-	textZone.style.marginLeft = '80px';
-};</code></pre>
-</doc-codeblock></div>
-<ol start="5">
-<li>id=&quot;listWrap&quot;에 마우스가 올라가 있으면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseover와 비슷</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const listWrap = document.querySelector('#listWrap');
-const list1 = document.querySelector('.list1');
-listWrap.onmouseenter = function () {
-	list1.style.display = 'block';
-};</code></pre>
-</doc-codeblock></div>
-<ol start="6">
-<li>id=&quot;listWrap&quot;에서 마우스가 벗어나면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseout과 비슷</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">listWrap.onmouseleave = function () {
-	list1.style.display = 'none';
-};</code></pre>
-</doc-codeblock></div>
-<ol start="7">
-<li>class=&quot;hover&quot;인 요소에 마우스를 올렸을땐 함수1을 벗어났을때에는 함수2를 실행 합니다.</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let hover = document.querySelector('.hover');
-hover.addEventListener('mouseover', function () {
-	this.style.color = 'aqua'; //함수1
-});
-hover.addEventListener('mouseout', function () {
-	this.style.color = 'red'; //함수2
-});</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="jq-완성코드" collapsed>
-       <template #title>JQ 완성코드</template>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../1/3q.html</span>
-    </div>
-    <a href="../1/3q.html" target="_blank" class="absolute block inset-0"></a>
-</div>
-</p>
-<ol>
-<li><p>jquery 라이브러리 로드<br />
-<code v-pre>&lt;script src='https://code.jquery.com/jquery-3.7.1.slim.min.js'&gt;&lt;/script&gt;</code></p>
-</li>
-<li><p>id=&quot;btn1&quot; 클릭 했을때 id=&quot;textZone&quot; 글자 색상을 파란색으로 변경</p>
-</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const btn1 = $('#btn1');
-btn1.on('click', () =&gt; {
-	textZone.css('color', 'blue');
-});</code></pre>
-</doc-codeblock></div>
-<ol start="3">
-<li>id=&quot;btn2&quot;에 마우스 오버 했을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const btn2 = $('#btn2');
-btn2.on('mouseover', function () {
-	textZone.css('backgroundColor', 'yellow');
-});</code></pre>
-</doc-codeblock></div>
-<ol start="4">
-<li>id=&quot;btn2&quot;에 포커스가 생겼을때 id=&quot;textZone&quot; 배경 색상을 노란색으로 변경</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">btn2.on('focus', function () {
-	textZone.css('backgroundColor', 'yellow');
-});</code></pre>
-</doc-codeblock></div>
-<ol start="5">
-<li>두개이상의 이벤트(mouseover,click,focus)를 등록시킬때</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const btn3 = $('#btn3');
-btn3.on({
-	'mouseover focus': function () {
-		textZone4();
-	},
-	click: function () {
-		alert();
-		textZone.css('margin-left', '80px');
-	},
-});
-function textZone4() {
-	textZone.css('color', 'green');
-	textZone.css('fontWeight', 'bold');
+
+/* 라이트 박스 안의 이미지 */
+#lightbox {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 5px solid #eee;
+	overflow: hidden;
+	z-index: 100;
+}
+
+.all_scrollFixed {
+	overflow: hidden;
+}
+.all_scrollFixed::before {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 1000%;
+	height: 10000%;
+	background-color: rgba(0, 0, 0, 0.2);
+	transform: translateX(-50%);
+	content: '';
+	z-index: 95;
+}
+#lightboxImage {
+	left: 50%;
+	transform: translateX(-50%);
+	position: fixed;
+	width: 80%;
+	height: 80vh;
+	overflow-y: auto;
+	top: 100px;
 }</code></pre>
 </doc-codeblock></div>
-<ol start="6">
-<li>id=&quot;listWrap&quot;에 마우스가 올라가 있으면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseover와 비슷</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">$('.hover').hover(
-	function () {
-		$(this).css('color', 'aqua');
-	},
-	function () {
-		$(this).css('color', 'red');
-	}
-);</code></pre>
+</doc-tab>
+<doc-tab v-cloak id="js">
+<template #title>JS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">javascript</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">const pics = $(&quot;.pic&quot;);
+const lightbox = $(&quot;#lightbox&quot;);
+const lightboxImage = $(&quot;#lightboxImage&quot;);
+
+pics.on('click', function () {
+  const bigLocation = $(this).attr(&quot;data-src&quot;);
+  lightboxImage.load(bigLocation);
+  $('html').addClass('all_scrollFixed');
+  lightbox.css('display', 'block');
+})
+
+lightbox.on('click', function () {
+  lightbox.css('display', 'none');
+  $('html').removeClass('all_scrollFixed');
+})</code></pre>
 </doc-codeblock></div>
-<ol start="7">
-<li>id=&quot;listWrap&quot;에서 마우스가 벗어나면 class=&quot;list1&quot; 을 블록요소 변경합니다. mouseout과 비슷</li>
-<li>class=&quot;hover&quot;인 요소에 마우스를 올렸을땐 함수1을 벗어났을때에는 함수2를 실행 합니다</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">$('.hover').on({
-	mouseenter: function () {
-		$(this).css('color','aqua');
-	},
-	mouseleave: function () {
-		$(this).css('color','red');
-	},
-});</code></pre>
+</doc-tab>
+<doc-tab v-cloak id="sub">
+<template #title>SUB</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">gallery/1.html</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      text-align: center;
+      font-size: 2em;
+      color: white;
+    }
+    .col{display:grid; grid-template-columns: 1fr 1fr; gap:1rem;}
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;h1&lt;/h1&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
 </doc-codeblock></div>
-   </doc-panel>
-</doc-panels>
-<hr>
+</doc-tab>
+</doc-tabs>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
                                         <a href="../../../tags/">
                                             <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
                                         </a>
+                                        <span class="mr-2"><a href="../../../tags/jquery/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>jquery</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../../tags/javascript/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>javascript</span>
+                                </a></span>
                                         <span class="mr-2"><a href="../../../tags/jquery--javascript/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
                                     <span>jquery + javascript</span>
                                 </a></span>
-                                        <span class="mr-2"><a href="../../../tags/event/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>event</span>
+                                        <span class="mr-2"><a href="../../../tags/ajax/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>ajax</span>
                                 </a></span>
                                     </span>
                                 </div>
@@ -896,20 +643,20 @@ function textZone4() {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/basic/1.dom조작/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/deep/15.멀티플슬라이드/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">1.​DOM </span>
+                                                <span class="block mt-1">15.​멀티플슬라이드</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/basic/3.애니메이션/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../5_projects/4-testmonial/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">3.​EFFECT </span>
+                                                <span class="block mt-1">4 testmonial</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -953,6 +700,6 @@ function textZone4() {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "2. EVENT ", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "16.ajax을 활용한 갤러리", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
