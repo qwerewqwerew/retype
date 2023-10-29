@@ -30,14 +30,11 @@
     line {
       fill: #ebebeb;
       stroke-width: 20;
-      stroke-dasharray: 300;
-      stroke-dashoffset: 300;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
     }
 
-    /* @keyframes line {
-    from {stroke-dashoffset: 628;}
-    to {stroke-dashoffset: 0;}
-} */
+
     .charts .chart:nth-child(1) line {
       stroke: #ffc114;
     }
@@ -65,11 +62,11 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(function () {
+      let path = Math.floor(document.querySelector('line').getTotalLength());
       var charts = $('.charts');
       var chart = $('.chart');
       var chartOST = chart.offset().top - 700;
-      // var excuted = false;
-      // console.log(excuted);
+
 
       $(window).scroll(function () {
         var currentSCT = $(this).scrollTop();
@@ -95,7 +92,7 @@
               duration: 1500,
               progress: function () {
                 var now = this.rate;
-                var amount = 300 - (300 * now / 100);
+                var amount = path - (path * now / 100);
 
                 title.text(Math.floor(now));
                 circle.css({ strokeDashoffset: amount });
