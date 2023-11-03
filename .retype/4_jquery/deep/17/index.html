@@ -15,26 +15,24 @@
     <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
-    <title>2.마우스 오버 효과</title>
-    <meta name="title" content="2.마우스 오버 효과">
-    <meta name="description" content="1.1. button-hover">
+    <title>17.탭슬라이드</title>
+    <meta name="title" content="17.탭슬라이드">
+    <meta name="description" content="미리보기">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
+    <link rel="canonical" href="https://qwerewqwerew.github.io/retype/4_jquery/deep/17/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
-    <meta property="og:title" content="2.마우스 오버 효과">
-    <meta property="og:description" content="1.1. button-hover">
-    <meta property="og:image" content="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif">
+    <meta property="og:url" content="https://qwerewqwerew.github.io/retype/4_jquery/deep/17/">
+    <meta property="og:title" content="17.탭슬라이드">
+    <meta property="og:description" content="미리보기">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/2_css/6_ui/2.hover/">
-    <meta property="twitter:title" content="2.마우스 오버 효과">
-    <meta property="twitter:description" content="1.1. button-hover">
-    <meta property="twitter:image" content="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif">
+    <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/4_jquery/deep/17/">
+    <meta property="twitter:title" content="17.탭슬라이드">
+    <meta property="twitter:description" content="미리보기">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/retype/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -398,636 +396,202 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="2마우스-오버-효과" class="break-words">
+<doc-anchor-target id="17탭슬라이드" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2마우스-오버-효과">#</doc-anchor-trigger>
-        <span>2.마우스 오버 효과<!-- omit in toc --></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#17탭슬라이드">#</doc-anchor-trigger>
+        <span>17.탭슬라이드</span>
     </h1>
 </doc-anchor-target>
-<ul>
-<li><doc-anchor-trigger to="#11-button-hover">1.1. button-hover</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#111-mouse-hover1">1.1.1. mouse-hover1</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#112-mouse-hover2">1.1.2. mouse-hover2</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#113-mouse-hover3">1.1.3. mouse-hover3</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#114-mouse-hover4">1.1.4. mouse-hover4</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#12-image-hover">1.2. image-hover</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#121-image-hover1">1.2.1. image-hover1</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#122-image-hover2">1.2.2. image-hover2</doc-anchor-trigger></li>
-</ul>
-</li>
-</ul>
-<doc-anchor-target id="11-button-hover">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-button-hover">#</doc-anchor-trigger>
-        <span>1.1. button-hover</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="111-mouse-hover1">
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
+    <div>In&nbsp;</div>
+    <div><a href="../../../categories/jquery/">jQuery</a>,&nbsp;</div>
+    <div><a href="../../../categories/javascript/">javascript</a></div>
+</div>
+
+<doc-anchor-target id="목차">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#111-mouse-hover1">#</doc-anchor-trigger>
-        <span>1.1.1. mouse-hover1</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#목차">#</doc-anchor-trigger>
+        <span>목차 <!-- omit in toc --></span>
     </h3>
 </doc-anchor-target>
-<p><figure class="content-center">
-    <img src="https://user-images.githubusercontent.com/59301948/264190527-8e581279-866f-43e0-bc45-b742ece41007.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
 <doc-tabs>
+<doc-tab v-cloak id="예제">
+<template #title>예제</template>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/jq/18/step1</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/jq/18/step1" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</doc-tab>
 <doc-tab v-cloak id="html">
 <template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;a href=&quot;#&quot;&gt;&lt;span&gt;&lt;/span&gt;hover me&lt;/a&gt;</code></pre>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">html</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Carousel with Tabs and Lightbox&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css.css&quot; /&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div class=&quot;tabs&quot;&gt;
+			&lt;div class=&quot;tab-button-outer&quot;&gt;
+				&lt;div id=&quot;tab1&quot; class=&quot;tab-button active&quot;&gt;Tab 1&lt;/div&gt;
+				&lt;div id=&quot;tab2&quot; class=&quot;tab-button&quot;&gt;Tab 2&lt;/div&gt;
+				&lt;div id=&quot;tab3&quot; class=&quot;tab-button&quot;&gt;Tab 3&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;content1&quot; class=&quot;tab-content active carousel&quot;&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/2.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/2.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/3.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/3.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/4.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/4.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/5.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/5.jpg&quot; /&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;content2&quot; class=&quot;tab-content carousel&quot;&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/5.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/5.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/6.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/6.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/7.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/7.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/8.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/8.jpg&quot; /&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;content3&quot; class=&quot;tab-content carousel&quot;&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/1.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/2.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/2.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/3.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/3.jpg&quot; /&gt;&lt;/div&gt;
+				&lt;div class=&quot;popup-outer&quot;&gt;&lt;a href=&quot;http://qwerew.cafe24.com/images/4.jpg&quot; class=&quot;popup&quot;&gt;클릭&lt;/a&gt;&lt;img src=&quot;http://qwerew.cafe24.com/images/4.jpg&quot; /&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+		&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js&quot;&gt;&lt;/script&gt;
+		&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js&quot;&gt;&lt;/script&gt;
+		&lt;script src=&quot;js.js&quot;&gt;&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 </doc-codeblock></div>
 </doc-tab>
 <doc-tab v-cloak id="css">
 <template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	margin: 0;
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css</div>
+<pre class="language-css"><code v-pre class="language-css">.tabs {
+	margin: 50px;
+}
+
+.tab-button-outer {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	height: 100vh;
-	font-family: verdana;
-	background-color: #272727;
 }
 
-a {
-	width: 220px;
-	height: 80px;
-	color: #ff0;
-	background-color: transparent;
-	font-size: 26px;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
-	line-height: 80px;
-	transition: all 0.5s;
-	position: relative;
-}
-
-a:before,
-a:after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	width: 20px;
-	height: 20px;
-	background-color: #ff0;
-	border-radius: 50%;
-	transform: translateY(-50%);
-	transition: all 0.3s;
-	z-index: -1;
-	opacity: 0;
-}
-
-a:before {
-	left: 0;
-	box-shadow: -100px 0 0 #ff0;
-}
-
-a:after {
-	right: 0;
-	box-shadow: 100px 0 0 #ff0;
-}
-
-a:hover:before {
-	left: 50%;
-	box-shadow: 30px 0 0 #ff0;
-	transform: translateX(-50%) translateY(-50%);
-	opacity: 1;
-}
-
-a:hover:after {
-	right: 50%;
-	box-shadow: -30px 0 0 #ff0;
-	transform: translateX(50%) translateY(-50%);
-	opacity: 1;
-}
-
-span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #ff0;
-	border-radius: 8px;
-	transform: scale(0);
-	transition: all 0.3s;
-	z-index: -1;
-}
-
-a:hover span {
-	transform: scale(1);
-	transition-delay: 0.4s;
-}
-
-a:hover {
-	color: #262626;
-	transition-delay: 0.4s;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="112-mouse-hover2">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#112-mouse-hover2">#</doc-anchor-trigger>
-        <span>1.1.2. mouse-hover2</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="https://user-images.githubusercontent.com/59301948/264191119-f5da10e8-0c43-4aa0-a2e7-7277bba82fa4.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;ul&gt;
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			home
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			about
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			services
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			team
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;a href=&quot;#&quot;&gt;
-			contact
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-			&lt;span&gt;&lt;/span&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	font-family: sans-serif;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	list-style-type: none;
-}
-
-ul li a {
-	display: block;
-	width: 120px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	color: red;
-	text-transform: capitalize;
-	text-decoration: none;
-	position: relative;
-	transition: all 0.5s;
-	color: #262626;
-}
-
-a:hover {
-	color: white;
-}
-
-ul li span {
-	position: absolute;
-	width: 100%;
-	height: 25%;
-	background-color: #262626;
-	z-index: -1;
-	left: 0;
-	top: 0;
-	transform: scaleX(0);
-	transition: all 0.5s;
-	transform-origin: left;
-}
-
-a:hover span {
-	transform: scaleX(1);
-}
-
-span:nth-child(2) {
-	top: 25%;
-	transition-delay: 0.15s;
-}
-
-span:nth-child(3) {
-	top: 50%;
-	transition-delay: 0.3s;
-}
-
-span:nth-child(4) {
-	top: 75%;
-	transition-delay: 0.45s;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="113-mouse-hover3">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#113-mouse-hover3">#</doc-anchor-trigger>
-        <span>1.1.3. mouse-hover3</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../../../source/images/4.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;button class=&quot;btn&quot;&gt;button&lt;/button&gt;</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	font-family: sans-serif;
-}
-
-.btn {
-	border: 2px solid tomato;
-	background: none;
-	color: tomato;
-	padding: 20px 40px;
-	font-size: 25px;
-	text-transform: uppercase;
+.tab-button {
+	background-color: #ccc;
+	padding: 10px 20px;
 	cursor: pointer;
-	transition: all 0.5s;
-	position: relative;
-	color: tomato;
-	overflow: hidden;
 }
 
-.btn:hover {
-	color: white;
+.tab-button:hover {
+	background-color: #ddd;
 }
 
-.btn:before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: tomato;
-	z-index: -1;
-	border-radius: 50% 50% 0% 0%;
-	height: 0%;
-	transition: all 0.5s;
+.tab-button.active {
+	background-color: #bbb;
 }
 
-.btn:hover:before {
-	height: 190%;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="114-mouse-hover4">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#114-mouse-hover4">#</doc-anchor-trigger>
-        <span>1.1.4. mouse-hover4</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../../../source/images/5.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    &lt;title&gt;CSS animatin, transitions and transforms&lt;/title&gt;
-
-    &lt;!-- OUR STYLESHEET --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
-
-    &lt;!-- FONT ِAWESOME --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.4.2/css/all.css&quot; integrity=&quot;sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns&quot; crossorigin=&quot;anonymous&quot;&gt;
-
-
-&lt;/head&gt;
-
-&lt;body&gt;
-
-	&lt;ul&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-heart&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-glass-martini&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-globe&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;i class=&quot;fas fa-gift&quot;&gt;&lt;/i&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">body {
- margin: 0;
- display: flex;
- align-items: center;
- justify-content: center;
- height: 100vh;
- font-family: sans-serif;
+.tab-content {
+	display: none;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
+.tab-content.active {
+	display: block;
 }
 
-ul li {
-  list-style-type: none;
-  width: 120px;
-  height: 120px;
-  margin: 0 20px;
-  border:2px solid #0a3d62;
-  border-radius: 50%;
-  transition: all 0.5s;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-ul li i {
-  font-size: 48px;
-  color: #0a3d62;
-  transition: 0.5s;
-}
-
-ul li:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0a3d62;
-  border-radius: 50%;
-  transition: all 0.5s;
-  opacity: 0;
-  z-index: -1;
-}
-
-ul li:hover:before {
-  opacity: 1;
-  transform: scale(0.8);
-}
-
-ul li:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  border-radius: 50%;
-  border:2px dashed #2e86de;
-  transition: all 0.5s;
-  opacity: 0;
-  z-index: -1;
-  box-sizing: border-box;
-}
-
-ul li:hover:after {
-  opacity: 1;
-  animation: rotating 10s linear infinite;
-}
-
-@keyframes rotating {
-  0% { transform:scale(0.92) rotate(0deg); }
-  100% { transform:scale(0.92) rotate(360deg); }
-}
-
-ul li:hover i {
-  color: white;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="12-image-hover">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-image-hover">#</doc-anchor-trigger>
-        <span>1.2. image-hover</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="121-image-hover1">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#121-image-hover1">#</doc-anchor-trigger>
-        <span>1.2.1. image-hover1</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="https://user-images.githubusercontent.com/59301948/264191720-8cc5ffff-a2b4-466f-b450-7d9292afbcce.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="파일">
-<template #title>파일</template>
-<p><span class="docs-emoji">&#x1F517;</span><img src="https://user-images.githubusercontent.com/59301948/264191304-f01f0178-c234-48b6-bddd-154723ab0106.png" alt="예제이미지다운로드" /></p>
-</doc-tab>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">  &lt;div class=&quot;container&quot;&gt;
-  	&lt;img src=&quot;image.png&quot;&gt;
-  	&lt;div class=&quot;caption&quot;&gt;
-  		&lt;h1&gt;amazing caption!&lt;/h1&gt;
-  		&lt;p&gt;you can write anything here!&lt;/p&gt;
-  	&lt;/div&gt;
-  &lt;/div&gt;</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Lato', sans-serif;
-}
-
-.container {
-	width: 500px;
-	height: 500px;
-	position: relative;
-	overflow: hidden;
-}
-
-.container img {
-	width: 100%;
-	transition: all 0.5s;
-}
-
-.caption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	transition: 0.5s;
-	opacity: 0;
-	background-color: rgba(0, 0, 0, 0);
-}
-
-.caption h1 {
-	text-transform: uppercase;
-	margin: 0;
-}
-
-.caption p {
-	font-size: 18px;
-	text-transform: capitalize;
-}
-
-.container:hover .caption {
-	opacity: 1;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.container:hover img {
-	transform: scale(1.3) rotate(15deg);
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="122-image-hover2">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#122-image-hover2">#</doc-anchor-trigger>
-        <span>1.2.2. image-hover2</span>
-    </h3>
-</doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../../../source/images/3.gif" alt="미리보기">
-    <figcaption class="caption">미리보기</figcaption>
-</figure>
-</p>
-<doc-tabs>
-<doc-tab v-cloak id="파일">
-<template #title>파일</template>
-<p><span class="docs-emoji">&#x1F517;</span><img src="https://user-images.githubusercontent.com/59301948/264192013-fc4203b6-9cb3-4af3-b5eb-1be8bb108f1e.jpg" alt="예제이미지다운로드" /></p>
-</doc-tab>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">  &lt;div&gt;
-  	&lt;img src=&quot;girl.jpg&quot;&gt;
-  &lt;/div&gt;
-</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-css"><code v-pre class="language-css">body {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #4b4b4b;
-}
-
-div {
+.carousel {
 	width: 300px;
-	height: 400px;
-	border: 5px solid white;
-	overflow: hidden;
+	margin: 50px auto;
 }
 
-img {
+.carousel img {
 	width: 100%;
-	height: 100%;
-	transition: transform 1s;
+	margin: 0 auto;
 }
+.popup{position:absolute; display:block; background:white;}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="js">
+<template #title>JS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">javascript</div>
+<pre class="language-javascript"><code v-pre class="language-javascript">$('#content1.carousel').slick({ slidesToShow: 2 });
 
-img:hover {
-	transform: scale(1.2) rotate(9deg);
-}</code></pre>
+$('.tab-button').on('click', function () {
+	const tabButtonId = $(this).attr('id');
+	$('.tab-button').removeClass('active');
+	$('.tab-content').removeClass('active');
+
+	$(this).addClass('active');
+  //변수tabButtonId 의 값을 이용하여 content1 로 편집
+	const targetContent = $('#' + 'content' + tabButtonId.slice(-1));
+	targetContent.addClass('active');
+
+	if (targetContent.hasClass('slick-initialized')) {
+		targetContent.slick('unslick');
+	}
+	targetContent.slick({ slidesToShow: 2 });
+});
+
+$('.popup').magnificPopup({ type: 'image' });
+
+</code></pre>
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
+<blockquote>
+<p>slice() 는 문자열의 일부를 추출하여 새로운 문자를 반환하는 메서드<br />
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></g></svg>MDN</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice</span>
+    </div>
+    <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</blockquote>
 
-                                
+                                <div class="flex items-center mt-6 mb-6 clear-both">
+                                    <span>
+                                        <a href="../../../tags/">
+                                            <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
+                                        </a>
+                                        <span class="mr-2"><a href="../../../tags/jquery/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>jquery</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../../tags/javascript/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>javascript</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../../tags/jquery--javascript/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>jquery + javascript</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../../tags/ajax/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>ajax</span>
+                                </a></span>
+                                    </span>
+                                </div>
+                
                                 <!-- Required only on API pages -->
                                 <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
                             </div>
@@ -1035,20 +599,20 @@ img:hover {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../2_css/6_ui/1.form/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../4_jquery/deep/16.ajax/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">1. form 요소 디자인</span>
+                                                <span class="block mt-1">16.​ajax을 활용한 갤러리</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../3_js/basic/1.total/2/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../5_projects/4-testmonial/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">2. 기본문법 </span>
+                                                <span class="block mt-1">4 testmonial</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -1092,6 +656,6 @@ img:hover {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "2.마우스 오버 효과", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "17.탭슬라이드", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
