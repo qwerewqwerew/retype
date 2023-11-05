@@ -1,6 +1,6 @@
 {
-  "version": "3.2.0",
-  "created": "2023-11-03T08:47:25Z",
+  "version": "3.5.0",
+  "created": "2023-11-05T07:18:48Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -1872,6 +1872,12 @@
       "path": "3_js\\basic\\2.partial\\array\\index.html"
     },
     {
+      "path": "3_js\\basic\\2.partial\\assets\\result.png"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\map\\index.html"
+    },
+    {
       "path": "3_js\\basic\\2.partial\\this\\index.html"
     },
     {
@@ -1881,7 +1887,8 @@
       "path": "3_js\\deep\\2\\index.html"
     },
     {
-      "path": "3_js\\deep\\calendar\\index.html"
+      "path": "3_js\\deep\\calendar\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\deep\\files\\swiper.html"
@@ -2874,6 +2881,9 @@
       "path": "tags\\ajax\\index.html"
     },
     {
+      "path": "tags\\array\\index.html"
+    },
+    {
       "path": "tags\\async\\index.html"
     },
     {
@@ -2895,6 +2905,9 @@
       "path": "tags\\effect\\index.html"
     },
     {
+      "path": "tags\\es6\\index.html"
+    },
+    {
       "path": "tags\\event\\index.html"
     },
     {
@@ -2914,6 +2927,9 @@
     },
     {
       "path": "tags\\jquery\\index.html"
+    },
+    {
+      "path": "tags\\map\\index.html"
     },
     {
       "path": "tags\\masonry\\index.html"
