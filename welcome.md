@@ -8,6 +8,7 @@
 
 ---
 
+:icon-bookmark:[부트캠프페이지](https://retype-react-lectrue-c67zllfic-qwerewqwerew.vercel.app)
 :icon-bookmark:[이모지](https://mojee.io/emojis/)
 
 :icon-bookmark:[마크다운스펙](https://spec.commonmark.org/0.30/)

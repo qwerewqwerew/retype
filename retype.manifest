@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2023-11-05T07:18:48Z",
+  "created": "2024-01-30T13:44:04Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -183,7 +183,8 @@
       "path": "2_css\\2_gnb\\e\\index.html"
     },
     {
-      "path": "2_css\\3_responsive\\index.html"
+      "path": "2_css\\3_responsive\\index.html",
+      "old": true
     },
     {
       "path": "2_css\\4_layout\\a\\index.html"
@@ -1176,88 +1177,119 @@
       "path": "2_css\\5_responsive2\\final\\3\\index.html"
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\01.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\01.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\02.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\02.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\03.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\03.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\04.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\04.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\05.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\05.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\06.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\06.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\07.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\07.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\08.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\08.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\09.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\09.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\10.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\10.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\11.html"
+      "path": "2_css\\5_responsive2\\final\\부록\\11.html",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\1280px.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\1280px.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\320w.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\320w.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\640w.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\640w.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\768px.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\768px.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\vector.svg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\vector.svg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-1280.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-1280.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-12802x.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-12802x.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-2560.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-2560.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-320.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-320.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-3202x.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-3202x.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-768.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-768.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-768.webp"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-768.webp",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-7682x.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-7682x.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-landscape-1920.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-landscape-1920.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-portrait-414.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-portrait-414.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-portrait-768.jpg"
+      "path": "2_css\\5_responsive2\\final\\부록\\source\\venice-portrait-768.jpg",
+      "old": true
     },
     {
-      "path": "2_css\\5_responsive2\\final\\book.zip"
+      "path": "2_css\\5_responsive2\\final\\book.zip",
+      "old": true
+    },
+    {
+      "path": "2_css\\6_containerquery\\index.html"
     },
     {
       "path": "2_css\\6_ui\\1.form\\index.html"
@@ -1885,6 +1917,9 @@
     },
     {
       "path": "3_js\\deep\\2\\index.html"
+    },
+    {
+      "path": "3_js\\deep\\3\\index.html"
     },
     {
       "path": "3_js\\deep\\calendar\\index.html",
@@ -2939,6 +2974,9 @@
     },
     {
       "path": "tags\\readmd작성하기\\index.html"
+    },
+    {
+      "path": "tags\\reduce\\index.html"
     },
     {
       "path": "tags\\response\\index.html",
