@@ -1,16 +1,9 @@
 ---
-icon: rocket
-label: Sample
-layout: central
 order: 100
-author:
-name: 코알라코딩
-avatar: koala
-link: https://www.youtube.com/channel/UCMb94yucTNsjIJqD8C8lO2Q
-category: [jQuery, javascript]
-tags: [jQuery, javascript, jQuery + javascript, fullpage]
+category:
+  - javascript
+  - class
 ---
-
 # 1. 자바스크립트의 시작 <!-- omit in toc -->
 
 ### 목차<!-- omit in toc -->
