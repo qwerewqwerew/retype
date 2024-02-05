@@ -12,6 +12,12 @@ tags: [css, svg]
 
 ### 목차 <!-- omit in toc -->
 
+- [1. 개요](#1-개요)
+- [2. 예제](#2-예제)
+	- [2.1. viewbox](#21-viewbox)
+	- [2.2. svg 삽입하기](#22-svg-삽입하기)
+	- [자바스크립트 이벤트 넣기](#자바스크립트-이벤트-넣기)
+
 ## 1. 개요
 
 [!ref target='blank' text=':icon-play:SVG 예제사이트'](https://svg-tutorial.com/)
@@ -50,6 +56,7 @@ tags: [css, svg]
 3. 같은 크기의 svg 이미지라도 프레임의 크기에 따라 다르게 보이기도 합니다.
 
 ### 2.2. svg 삽입하기
+
 <details markdown='block'>
   <summary>
  🐨  이미지다운로드
@@ -74,4 +81,20 @@ tags: [css, svg]
 	height: 300px;
 	background: url(images/twitter_logo_original.svg) no-repeat;
 }
+```
+
+### 자바스크립트 이벤트 넣기
+
+[!ref target='blank' text=':icon-play:미리보기'](https://qwerewqwerew.github.io/source/css/10-svg/3.html)
+
+```xml
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" fill="#D9D9D9"/>
+<script>
+document.querySelector('rect').onclick=function(){
+  this.setAttribute('fill','red');
+}
+</script>
+</svg>
+
 ```

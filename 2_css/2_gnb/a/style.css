@@ -5,7 +5,7 @@ ul {list-style: none; }
 .db {display: block; }
 
 .inner {width: 100%;max-width: 1400px;margin: auto; }
-
+nav{background:red;}
 /* gnb */
 .gnb {justify-content: space-between; /* position: relative; */ position: absolute;z-index: 2222; left:0; right:0;  }
 .gnb li {flex: 1 1 25%; }
