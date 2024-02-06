@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-02-05T12:56:54Z",
+  "created": "2024-02-06T08:25:08Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -1974,6 +1974,9 @@
       "path": "3_js\\basic\\2.partial\\7.class\\index.html"
     },
     {
+      "path": "3_js\\basic\\2.partial\\8.animate\\index.html"
+    },
+    {
       "path": "3_js\\basic\\2.partial\\array-3.html"
     },
     {
@@ -3044,6 +3047,9 @@
     },
     {
       "path": "tags\\ajax\\index.html"
+    },
+    {
+      "path": "tags\\animate\\index.html"
     },
     {
       "path": "tags\\animation\\index.html"
