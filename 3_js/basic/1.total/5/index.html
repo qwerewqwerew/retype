@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760664555620">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760868293896">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -39,213 +39,219 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../../favicon.png" rel="icon">
-    <link href="../../../../resources/css/retype.css?v=3.5.0.760664555620" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.760868293896" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.760664555620" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.760868293896" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.760664555620" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.5.0.760664555620" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.760868293896" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.5.0.760868293896" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../../../resources/js/mermaid.js?v=3.5.0" defer></script>
 
     <style>
-      @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
-      @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-      @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+    	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
+    	@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+    	@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
 
-      html {
-        line-height: 1.75;
-      }
+    	html {
+    		line-height: 1.75;
+    	}
 
-      code,
-      code span {
-        font-family: consolas, 'Inconsolata', monospace;
-        /*     font-size: .9rem;
+    	code,
+    	code span {
+    		font-family: consolas, 'Inconsolata', monospace;
+    		/*     font-size: .9rem;
         line-height: 1.5;
      */
-      }
+    	}
 
-      * {
-        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-        font-family: 'Pretendard', sans-serif;
-      }
+    	* {
+    		font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    		font-family: 'Pretendard', sans-serif;
+    	}
 
-      a {
-        font-weight: 500;
-      }
+    	a {
+    		font-weight: 500;
+    	}
 
-      aside {
-        margin-bottom: 1.2rem;
-      }
+    	aside {
+    		margin-bottom: 1.2rem;
+    	}
 
-      .comment_box {
-        padding: 2rem;
-        color: #094092;
-        margin-bottom: 20px;
-        font-weight: 500;
-        font-size: 1.1em;
-        letter-spacing: -0.5px;
-        position: relative;
-        background-color: #f4f5f7;
-        line-height: 2;
-        filter: drop-shadow(-2px 4px 4px #0a216d25);
-      }
+    	.comment_box {
+    		padding: 2rem;
+    		color: #094092;
+    		margin-bottom: 20px;
+    		font-weight: 500;
+    		font-size: 1.1em;
+    		letter-spacing: -0.5px;
+    		position: relative;
+    		background-color: #f4f5f7;
+    		line-height: 2;
+    		filter: drop-shadow(-2px 4px 4px #0a216d25);
+    	}
 
-      .comment_box p,
-      .comment_box ul {
-        margin-bottom: 0.4rem !important;
-      }
+    	.comment_box p,
+    	.comment_box ul {
+    		margin-bottom: 0.4rem !important;
+    	}
 
-      .docs-markdown table.comfortable tr td,
-      .docs-markdown table.comfortable tr th {
-        padding: 0.6rem .8rem;
-      }
+    	.docs-markdown table.comfortable tr td,
+    	.docs-markdown table.comfortable tr th {
+    		padding: 0.6rem 0.8rem;
+    	}
 
-      .w-full p:not(.hidden) {
-        margin-bottom: 0.5rem;
-      }
+    	.w-full p:not(.hidden) {
+    		margin-bottom: 0.5rem;
+    	}
 
-      div[id]>h1,
-      div[id]>h2,
-      div[id]>h3,
-      div[id]>h4,
-      div[id]>h5,
-      div[id]>h6 {
-        margin-top: 3.4rem;
-        color: #3f51b5 !important;
-      }
+    	div[id] > h1,
+    	div[id] > h2,
+    	div[id] > h3,
+    	div[id] > h4,
+    	div[id] > h5,
+    	div[id] > h6 {
+    		margin-top: 3.4rem;
+    		color: #3f51b5 !important;
+    	}
 
-      [class^=img] {
-        width: auto;
-      }
+    	[class^='img'] {
+    		width: auto;
+    	}
 
-      [class^=img] p {
-        display: none;
-      }
+    	[class^='img'] p {
+    		display: none;
+    	}
 
-      .img50 figure img,
-      .w50 {
-        max-width: 50%;
-      }
+    	.img50 figure img,
+    	.w50 {
+    		max-width: 50%;
+    	}
 
-      .w60 {
-        max-width: 60%;
-      }
+    	.w60 {
+    		max-width: 60%;
+    	}
 
-      .w70 {
-        max-width: 70%;
-      }
+    	.w70 {
+    		max-width: 70%;
+    	}
 
-      .w40 {
-        max-width: 40%;
-      }
+    	.w40 {
+    		max-width: 40%;
+    	}
 
-      .w30 {
-        max-width: 30%;
-      }
+    	.w30 {
+    		max-width: 30%;
+    	}
 
-      .img20 figure img,
-      .w20 {
-        max-width: 20%;
-      }
+    	.img20 figure img,
+    	.w20 {
+    		max-width: 20%;
+    	}
 
-      .img10 figure img,
-      .w10 {
-        max-width: 10%;
-      }
+    	.img10 figure img,
+    	.w10 {
+    		max-width: 10%;
+    	}
 
-      .docs-markdown div[id="목차"]+ul li,
-      .docs-markdown div[id="목차"]+ol li  {
-        list-style-type: none;
-        line-height: 1.8;
-        font-weight: 400;
-        padding-top: 2px;
-        padding-bottom: 4px;
-        margin-top: 0;
-        font-size: 14px;
-      }
+    	.docs-markdown div[id='목차'] + ul li,
+    	.docs-markdown div[id='목차'] + ol li {
+    		list-style-type: none;
+    		line-height: 1.8;
+    		font-weight: 400;
+    		padding-top: 2px;
+    		padding-bottom: 4px;
+    		margin-top: 0;
+    		font-size: 14px;
+    	}
 
-      .docs-markdown table.comfortable tr td,
-      .docs-markdown table.comfortable tr th {
-        padding: 0.5rem 1.25rem;
-        font-size: 15px;
-      }
+    	.docs-markdown table.comfortable tr td,
+    	.docs-markdown table.comfortable tr th {
+    		padding: 0.5rem 1.25rem;
+    		font-size: 15px;
+    	}
 
-      .shadow {
-        filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, .2))
-      }
+    	.shadow {
+    		filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.2));
+    	}
 
-      .normal {
-        font-style: normal;
-      }
+    	.normal {
+    		font-style: normal;
+    	}
 
-      .mx-1 {
-        margin: auto 1rem;
-      }
+    	.mx-1 {
+    		margin: auto 1rem;
+    	}
 
-      .mr-1 {
-        margin-right: 1rem;
-      }
+    	.mr-1 {
+    		margin-right: 1rem;
+    	}
 
-      .my-1 {
-        margin: 1rem auto;
-      }
+    	.my-1 {
+    		margin: 1rem auto;
+    	}
 
-      .red,
-      .red * {
-        color: rgb(210, 26, 170) !important;
-        font-size: 1.1rem !important;
-      }
+    	.red,
+    	.red * {
+    		color: rgb(210, 26, 170) !important;
+    		font-size: 1.1rem !important;
+    	}
 
-      .blue,
-      .blue * {
-        color: rgb(26, 106, 210) !important;
-      }
+    	.blue,
+    	.blue * {
+    		color: rgb(26, 106, 210) !important;
+    	}
 
-      .mark {
-        background-color: rgba(245, 255, 103, 0.534);
-      }
+    	.mark {
+    		background-color: rgba(245, 255, 103, 0.534);
+    	}
 
-      .box {
-        background: #ffffff;
-        padding: 2rem 0 .5rem 1rem;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, .1), -1px -1px 3px rgba(0, 0, 0, .1);
-      }
+    	.box {
+    		background: #ffffff;
+    		padding: 2rem 0 0.5rem 1rem;
+    		box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
+    	}
 
-      .box1 {
-        background: #ffffff;
-        padding: 2rem 0 .5rem 1rem;
-        box-shadow: 1px 1px 3px rgba(207, 16, 16, 0.1), -1px -1px 3px rgba(0, 0, 0, .1);
-      }
+    	.box1 {
+    		background: #ffffff;
+    		padding: 2rem 0 0.5rem 1rem;
+    		box-shadow: 1px 1px 3px rgba(207, 16, 16, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
+    	}
 
-      .pdbox {
-        padding: .5rem;
-        background: #effafe;
-        border-radius: 4px;
-      }
+    	.pdbox {
+    		padding: 0.5rem;
+    		background: #effafe;
+    		border-radius: 4px;
+    	}
 
-      .docs-panels>div {
-        background: #e1edff65;
-      }
+    	.docs-panels > div {
+    		background: #e1edff65;
+    	}
 
-      .docs-panels>div>div {
-        border-bottom: 1px solid #d0d9e67e;
-      }
+    	.docs-panels > div > div {
+    		border-bottom: 1px solid #d0d9e67e;
+    	}
 
-      .collapse-content .docs-markdown ol,
-      .collapse-content .docs-markdown ul {
-        margin-bottom: 0 !important;
-      }
+    	.collapse-content .docs-markdown ol,
+    	.collapse-content .docs-markdown ul {
+    		margin-bottom: 0 !important;
+    	}
 
-      .docs-markdown ol li,
-      .docs-markdown ul li {
-        margin-top: 1.4rem;
-      }
+    	.docs-markdown ol li,
+    	.docs-markdown ul li {
+    		margin-top: 1.4rem;
+    	}
 
-      .tab-content ol,
-      .tab-content ul {
-        margin-bottom: 0 !important;
-      }
+    	.tab-content ol,
+    	.tab-content ul {
+    		margin-bottom: 0 !important;
+    	}
+    	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		white-space: nowrap;
+    	}
     </style>
+
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKHJVFFG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -424,61 +430,61 @@
         <span>목차 <!-- omit in toc --></span>
     </h3>
 </doc-anchor-target>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#1-%EB%AC%B8%EC%84%9C%EA%B0%9D%EC%B2%B4%EB%AA%A8%EB%8D%B8%EC%9D%98-%EC%9D%B4%ED%95%B4">1. 문서객체모델의 이해</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#2-dom-%EC%9D%84-%EA%B5%AC%EC%84%B1%ED%95%98%EB%8A%94-%EA%B8%B0%EB%B3%B8-%EC%9B%90%EC%B9%99">2. DOM 을 구성하는 기본 원칙</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#3-dom%EC%97%90-%EC%A0%91%EA%B7%BC%ED%95%98%EA%B8%B0">3. DOM에 접근하기</doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#31-getelementbyid">3.1. <code v-pre>getElementById</code></doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#311-getelementbyclassname">3.1.1. <code v-pre>getElementByClassName</code></doc-anchor-trigger></li>
-</ol>
+</ul>
 </li>
 <li><doc-anchor-trigger to="#32-getelementsbytagname">3.2. <code v-pre>getElementsByTagName</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#33-queryselector--queryselectorall">3.3. <code v-pre>querySelector</code> , <code v-pre>querySelectorAll</code></doc-anchor-trigger></li>
-</ol>
+</ul>
 </li>
 <li><doc-anchor-trigger to="#4-%EC%9A%94%EC%86%8C%EB%A5%BC-%EC%B7%A8%EB%93%9D%ED%95%98%EA%B3%A0-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0">4. 요소를 취득하고 수정하기</doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#41-innertext-textcontent">4.1. <code v-pre>innerText</code>, <code v-pre>textContent</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#42-innerhtml">4.2. <code v-pre>innerHTML</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#43-getattribute-setattribute">4.3. <code v-pre>getAttribute()</code>, <code v-pre>setAttribute()</code></doc-anchor-trigger></li>
-</ol>
+</ul>
 </li>
 <li><doc-anchor-trigger to="#5-dom%EC%97%90%EC%84%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0">5. DOM에서 이벤트 처리하기</doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#51-dom-%EC%9A%94%EC%86%8C%EC%97%90-%ED%95%A8%EC%88%98-%EC%A7%81%EC%A0%91%EC%97%B0%EA%B2%B0">5.1. DOM 요소에 함수 직접연결</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#52-%ED%95%A8%EC%88%98-%EC%9D%B4%EB%A6%84%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%97%B0%EA%B2%B0">5.2. 함수 이름을 사용해서 연결</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#53-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EA%B0%9D%EC%B2%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0">5.3. 이벤트 객체 알아보기</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#54-this">5.4. this</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#55-addeventlistener%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%97%B0%EA%B2%B0">5.5. addEventListener()메서드를 사용해서 연결</doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#551-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C">5.5.1. 마무리문제</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#552-%EB%9D%BC%EC%9D%B4%ED%8A%B8%EB%B0%95%EC%8A%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0">5.5.2. 라이트박스 만들기</doc-anchor-trigger></li>
-</ol>
+</ul>
 </li>
-</ol>
+</ul>
 </li>
 <li><doc-anchor-trigger to="#6-dom%EC%97%90%EC%84%9C-%EB%85%B8%EB%93%9C-%EC%A1%B0%EC%9E%91%ED%95%98%EA%B8%B0">6. DOM에서 노드 조작하기</doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#61-%EB%85%B8%EB%93%9C%EB%A6%AC%EC%8A%A4%ED%8A%B8">6.1. 노드리스트</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#62-%EB%85%B8%EB%93%9C%EC%B6%94%EA%B0%80">6.2. 노드추가</doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#621-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%85%B8%EB%93%9C%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%9A%94%EC%86%8C%EC%B6%94%EA%B0%80">6.2.1. 텍스트 노드를 사용하는 새로운 요소추가</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#622-%EC%86%8D%EC%84%B1%EA%B0%92%EC%9D%B4-%EC%9E%88%EB%8A%94-%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%9A%94%EC%86%8C%EC%B6%94%EA%B0%80">6.2.2. 속성값이 있는 새로운 요소추가</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#623-todolist-%EB%A7%8C%EB%93%A4%EA%B8%B0">6.2.3. TodoList 만들기</doc-anchor-trigger></li>
-</ol>
+</ul>
 </li>
-</ol>
+</ul>
 </li>
 <li><doc-anchor-trigger to="#7-%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%AC%B8%EC%A0%9C">7. 마무리문제</doc-anchor-trigger>
-<ol>
+<ul>
 <li><doc-anchor-trigger to="#71-%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%99%84%EC%84%B1%ED%95%98%EA%B8%B0">7.1. 체크리스트 완성하기</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#72-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%8F%99%EC%A0%81%EC%83%9D%EC%84%B1">7.2. 테이블 동적생성</doc-anchor-trigger></li>
-</ol>
+</ul>
 </li>
 <li><doc-anchor-trigger to="#8-%EA%B0%81%EC%A3%BC">8. 각주</doc-anchor-trigger></li>
-</ol>
+</ul>
 <doc-anchor-target id="1-문서객체모델의-이해">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#1-문서객체모델의-이해">#</doc-anchor-trigger>
