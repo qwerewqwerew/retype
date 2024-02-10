@@ -1,5 +1,5 @@
 ---
-icon: hubot
+icon: square
 label: 9.transform
 order: 100
 author:

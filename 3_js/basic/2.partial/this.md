@@ -1,10 +1,13 @@
 ---
+label: 13.this
+icon: square
 order: category
-category:
-  - javascript
-  - partial
-  - this
+category: [javascript, partial]
+tags: [es6, javascript, 배열, array]
 ---
+
+### 목차 <!-- omit in toc -->
+
 - [1. 개요](#1-개요)
 	- [1.1. 전역 컨텍스트 또는 함수 컨텍스트에서의 this](#11-전역-컨텍스트-또는-함수-컨텍스트에서의-this)
 	- [1.2. 메서드로서 호출될 때의 this](#12-메서드로서-호출될-때의-this)

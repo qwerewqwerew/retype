@@ -1,5 +1,5 @@
 ---
-icon: rocket
+icon: square
 label: 10.svg
 order: 100
 author:

@@ -1,10 +1,10 @@
 ---
 order: 100
 author:
-label: map()
 name: 코알라코딩
 avatar: koala
-icon: hubot
+label: 11.map()
+icon: square
 link: https://www.youtube.com/channel/UCMb94yucTNsjIJqD8C8lO2Q
 category: [javascript, partial]
 tags: [es6, javascript, map, array]
