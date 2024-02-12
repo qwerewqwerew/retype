@@ -7,6 +7,7 @@ name: 코알라코딩
 avatar: koala
 link: https://www.youtube.com/channel/UCMb94yucTNsjIJqD8C8lO2Q
 icon: dot
+category: [css, responsive]
 tags: [css, responsive]
 ---
 

@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-02-12T06:55:08Z",
+  "created": "2024-02-12T23:30:24Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3609,7 +3609,23 @@
       "path": "3_js\\basic\\2.partial\\1.selector\\index.html"
     },
     {
-      "path": "3_js\\basic\\2.partial\\10.replace\\index.html"
+      "path": "3_js\\basic\\2.partial\\10.replace\\index.html",
+      "old": true
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\11.map\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\12.array\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\13.this\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\14.replace\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\15.reduce\\index.html"
     },
     {
       "path": "3_js\\basic\\2.partial\\2.스타일조작\\index.html"
@@ -3645,16 +3661,19 @@
       "path": "3_js\\basic\\2.partial\\array-5.html"
     },
     {
-      "path": "3_js\\basic\\2.partial\\array\\index.html"
+      "path": "3_js\\basic\\2.partial\\array\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\2.partial\\assets\\result.png"
     },
     {
-      "path": "3_js\\basic\\2.partial\\map\\index.html"
+      "path": "3_js\\basic\\2.partial\\map\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\basic\\2.partial\\this\\index.html"
+      "path": "3_js\\basic\\2.partial\\this\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\index.html"
@@ -5382,6 +5401,12 @@
       "path": "6_scss\\final\\03_landing-page\\index.html"
     },
     {
+      "path": "categories\\기초\\index.html"
+    },
+    {
+      "path": "categories\\자바스크립트\\index.html"
+    },
+    {
       "path": "categories\\array\\index.html",
       "old": true
     },
@@ -5418,6 +5443,9 @@
     },
     {
       "path": "categories\\jqueryjavascript\\index.html"
+    },
+    {
+      "path": "categories\\js\\index.html"
     },
     {
       "path": "categories\\library\\index.html"
