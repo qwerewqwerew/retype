@@ -1,6 +1,6 @@
 ---
 label: 13.this
-icon: square
+icon: dot
 order: category
 category: [javascript, partial]
 tags: [es6, javascript, 배열, array]

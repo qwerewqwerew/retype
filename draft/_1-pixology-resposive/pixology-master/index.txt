@@ -97,7 +97,7 @@ Why Choose us
 Specialist in aviding clients of financial challenges
 
 --color: 174, 77%, 50%
-<ion-icon name="square-sharp" aria-hidden="true"></ion-icon>
+<ion-icon name="dot-sharp" aria-hidden="true"></ion-icon>
 
 Fast working process
 

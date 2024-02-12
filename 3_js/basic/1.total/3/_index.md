@@ -265,8 +265,8 @@ displayNumber();
 ```
 
 ||| 설명
-![:icon-feed-square: 콘솔창](../../../../source/images/js3-2.png){ .shadow }
-![:icon-feed-square: 변수가 정의되지 않은 상황의 메시지](../../../../source/images/js3-3.png){ .shadow }
+![:icon-feed-dot: 콘솔창](../../../../source/images/js3-2.png){ .shadow }
+![:icon-feed-dot: 변수가 정의되지 않은 상황의 메시지](../../../../source/images/js3-3.png){ .shadow }
 호이스팅이 발생하여 변수 y가 8번에서 선언되었음에도 선언은 되었으나 값이 미정인 상태라는 의미의 undefined 가 확인된다.
 |||
 

@@ -1,6 +1,6 @@
 ---
 label: 12.배열
-icon: square
+icon: dot
 order: category
 category: [javascript, partial]
 tags: [es6, javascript, 배열, array]
@@ -124,7 +124,7 @@ document.write(`nums+chars: ${numsChars} <br> chars+nums:${charsNums} <hr> }`);
   - 배열 요소를 연결해 하나의 문자열로 만듭니다.
   - 이떄 각 요소사이에 원하는 구분자를 넣을수도 있는데 별도로 지정하지 않을경우 쉼표로 구분합니다.
 
-:icon-square: 상수 nums와 chars의 초기화는 코드 1의 반복으로 생략합니다.
+:icon-dot: 상수 nums와 chars의 초기화는 코드 1의 반복으로 생략합니다.
 
 ```js # join()
 const string1 = nums.join();

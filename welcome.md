@@ -14,3 +14,7 @@
 :icon-bookmark:[마크다운스펙](https://spec.commonmark.org/0.30/)
 :icon-bookmark:[이징함수 치트시트](https://easings.net/ko#)
 :icon-bookmark:[베지어곡선 생성기](https://cubic-bezier.com/)
+
+---
+:icon-bookmark:[reset.css-cdn](https://qwerewqwerew.github.io/source/style/reset.css)
+`@import url(https://qwerewqwerew.github.io/source/style/reset.css);`

@@ -1,0 +1,167 @@
+---
+order: 100
+label: READMD작성하기
+author: 코알라코딩
+name: 코알라코딩
+avatar: koala
+icon: dot
+link: https://www.youtube.com/channel/UCMb94yucTNsjIJqD8C8lO2Q
+category: [project, git, github]
+tags: [git, github, 깃허브 꾸미기, READMD작성하기]
+---
+
+### 목차 <!-- omit in toc -->
+- [1. 사용법](#1-사용법)
+- [2. README badge 넣기](#2-readme-badge-넣기)
+- [3. 간단한 md 문법](#3-간단한-md-문법)
+- [4. 추천 vscode 익스텐션](#4-추천-vscode-익스텐션)
+
+
+## 깃허브의 리드미 작성하기 <!-- omit in toc -->
+
+[!ref target='blank' text=':icon-link:작성예시'](https://github.com/kimminjung96/OneTrip)
+
+## 1. 사용법
+
+1. 아래의 코드를 복사하여 깃프로젝트의 루트에 `README.md` 로 저장한다
+
+````markdown # READMD.md
+# 프로젝트명
+
+> 간략한 프로젝트 소개 문구를 작성합니다.
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
+
+한 두 문단으로 프로젝트 소개 글을 작성합니다.
+
+![](../header.png)
+
+## 설치 방법
+
+    OS X & 리눅스:
+
+    ```sh
+    npm install my-crazy-module --save
+    ```
+
+
+    윈도우:
+
+    ```sh
+    edit autoexec.bat
+    ```
+
+## 사용 예제
+
+스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
+
+_더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
+
+## 개발 환경 설정
+
+모든 개발 의존성 설치 방법과 자동 테스트 슈트 실행 방법을 운영체제 별로 작성합니다.
+
+    ```sh
+    make install
+    npm test
+    ```
+
+## 업데이트 내역
+
+- 0.2.1
+  - 수정: 문서 업데이트 (모듈 코드 동일)
+- 0.2.0
+  - 수정: `setDefaultXYZ()` 메서드 제거
+  - 추가: `init()` 메서드 추가
+- 0.1.1
+     \* 버그 수정: `baz()` 메서드 호출 시 부팅되지 않는 현상 (@컨트리뷰터 감사합니다!)
+- 0.1.0
+  - 첫 출시
+  - 수정: `foo()` 메서드 네이밍을 `bar()`로 수정
+- 0.0.1
+  - 작업 진행 중
+
+## 정보
+
+이름 – [@트위터 주소](https://twitter.com/dbader_org) – 이메일주소@example.com
+
+XYZ 라이센스를 준수하며 `LICENSE`에서 자세한 정보를 확인할 수 있습니다.
+
+[https://github.com/yourname/github-link](https://github.com/dbader/)
+````
+
+## 2. README badge 넣기
+
+1. [!ref target='blank' text=':icon-link:shields.io'](https://shields.io/)
+2. :link: https://shields.io/badges/static-badge
+3. 적용사례 `![](https://img.shields.io/badge/html5_-blue)`
+   ![이렇게 나옴](https://img.shields.io/badge/html5_-blue)
+
+## 3. 간단한 md 문법
+
+1. 이미지 넣기
+
+```markdown
+![alt](https://)
+```
+
+2. 링크 걸기
+
+```markdown
+[링크](https://)
+```
+
+3. 코드넣기 ("```")
+
+````
+'```
+  public class BootSpringBootApplication {
+    public static void main(String[] args) {
+      System.out.println("Hello, Honeymon");
+    }
+  }
+```'
+````
+
+4. 목록작성
+
+```markdown
+1. 첫번째
+2. 세번째
+3. 두번째
+
+- 빨강
+  - 녹색
+    - 파랑
+
+* 빨강
+  - 녹색
+    - 파랑
+
+- 빨강
+  - 녹색
+    - 파랑
+```
+
+5. 수평선
+
+```markdown
+---
+---
+```
+
+6. 강조
+
+```markdown
+_single asterisks_
+_single underscores_
+**double asterisks**
+**double underscores**
+~~cancelline~~
+```
+
+## 4. 추천 vscode 익스텐션
+
+1.markdown all in one

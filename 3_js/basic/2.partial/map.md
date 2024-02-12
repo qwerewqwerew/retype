@@ -4,7 +4,7 @@ author:
 name: 코알라코딩
 avatar: koala
 label: 11.map()
-icon: square
+icon: dot
 link: https://www.youtube.com/channel/UCMb94yucTNsjIJqD8C8lO2Q
 category: [javascript, partial]
 tags: [es6, javascript, map, array]

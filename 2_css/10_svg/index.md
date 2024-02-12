@@ -1,5 +1,5 @@
 ---
-icon: square
+icon: dot
 label: 10.svg
 order: 100
 author:
