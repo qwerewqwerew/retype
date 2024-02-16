@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-02-15T14:20:44Z",
+  "created": "2024-02-16T16:19:23Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3698,6 +3698,12 @@
       "path": "3_js\\deep\\6.interaction\\index.html"
     },
     {
+      "path": "3_js\\deep\\7.carousel\\index.html"
+    },
+    {
+      "path": "3_js\\deep\\8.adaption\\index.html"
+    },
+    {
       "path": "3_js\\deep\\calendar\\index.html",
       "old": true
     },
@@ -3711,7 +3717,8 @@
       "path": "3_js\\deep\\index.html"
     },
     {
-      "path": "3_js\\deep\\js_slide\\02.html"
+      "path": "3_js\\deep\\js_slide\\02.html",
+      "old": true
     },
     {
       "path": "4_jquery\\basic\\1.dom조작\\index.html"
@@ -5852,6 +5859,9 @@
     },
     {
       "path": "tags\\호이스팅\\index.html"
+    },
+    {
+      "path": "tags\\adaptive\\index.html"
     },
     {
       "path": "tags\\ajax\\index.html"
