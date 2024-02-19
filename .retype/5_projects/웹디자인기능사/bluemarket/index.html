@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761649224102">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761667800859">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -17,7 +17,7 @@
     <!-- Primary Meta Tags -->
     <title>블루마켓</title>
     <meta name="title" content="블루마켓">
-    <meta name="description" content="🔗">
+    <meta name="description" content="1. 구현화면보기">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/5_projects/웹디자인기능사/bluemarket/">
@@ -26,22 +26,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/5_projects/웹디자인기능사/bluemarket/">
     <meta property="og:title" content="블루마켓">
-    <meta property="og:description" content="🔗">
+    <meta property="og:description" content="1. 구현화면보기">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/5_projects/웹디자인기능사/bluemarket/">
     <meta property="twitter:title" content="블루마켓">
-    <meta property="twitter:description" content="🔗">
+    <meta property="twitter:description" content="1. 구현화면보기">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.761649224102" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.761667800859" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761649224102" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761667800859" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761649224102" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761667800859" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761667800859" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -420,17 +421,39 @@
         <span>목차 <!-- omit in toc --></span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="구현화면보기">
+<ul>
+<li><doc-anchor-trigger to="#1-%EA%B5%AC%ED%98%84%ED%99%94%EB%A9%B4%EB%B3%B4%EA%B8%B0">1. 구현화면보기</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#2-%EB%A6%AC%EC%86%8C%EC%8A%A4-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C">2. 리소스 다운로드</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#3-step1-%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84">3. STEP1-와이어프레임</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4-step2-a%EC%98%81%EC%97%AD-%EB%A9%94%EB%89%B4">4. STEP2-A영역-메뉴</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#step4-b%EC%98%81%EC%97%AD-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C">STEP4-B영역-슬라이드</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#step5-c%EC%98%81%EC%97%AD-%EB%B0%B0%EB%84%88">STEP5-C영역-배너</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#step6-c%EC%98%81%EC%97%AD-%EA%B2%8C%EC%8B%9C%ED%8C%90">STEP6-C영역-게시판</doc-anchor-trigger></li>
+</ul>
+<doc-anchor-target id="1-구현화면보기">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#구현화면보기">#</doc-anchor-trigger>
-        <span>구현화면보기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-구현화면보기">#</doc-anchor-trigger>
+        <span>1. 구현화면보기</span>
     </h2>
 </doc-anchor-target>
-<p><a href="https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/final/index.html"><span class="docs-emoji">&#x1F517;</span></a></p>
-<doc-anchor-target id="1-리소스-다운로드">
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/final/index.html</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/final/index.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="2-리소스-다운로드">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-리소스-다운로드">#</doc-anchor-trigger>
-        <span>1. 리소스 다운로드</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-리소스-다운로드">#</doc-anchor-trigger>
+        <span>2. 리소스 다운로드</span>
     </h2>
 </doc-anchor-target>
 <ol>
@@ -465,12 +488,880 @@
 </p>
 </li>
 </ol>
-<doc-anchor-target id="step">
+<doc-anchor-target id="3-step1-와이어프레임">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#step">#</doc-anchor-trigger>
-        <span>step</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-step1-와이어프레임">#</doc-anchor-trigger>
+        <span>3. STEP1-와이어프레임</span>
     </h2>
 </doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/projects/webDesign/bluemarket/site/step/02-wireframe</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/projects/webDesign/bluemarket/site/step/02-wireframe" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-panels>
+   <doc-panel id="html" collapsed>
+       <template #title>HTML</template>
+<blockquote>
+<p>와이어프레임제작</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;the BlueMarket&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/reset.css&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot; /&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div class=&quot;wrap&quot;&gt;
+			&lt;header&gt;&lt;/header&gt;
+			&lt;main&gt;
+				&lt;div class=&quot;main_slides&quot;&gt;
+					&lt;ul class=&quot;slide_wrap&quot;&gt;
+						&lt;li class=&quot;slide1&quot;&gt;&lt;/li&gt;
+						&lt;li class=&quot;slide2&quot;&gt;&lt;/li&gt;
+						&lt;li class=&quot;slide3&quot;&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;banner&quot;&gt;&lt;/div&gt;
+				&lt;div class=&quot;board&quot;&gt;&lt;/div&gt;
+			&lt;/main&gt;
+			&lt;footer&gt;&lt;/footer&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="css" collapsed>
+       <template #title>CSS</template>
+<blockquote>
+<p>초기화 코드 작성</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary: #72ae67;
+	--background: #eae8dd;
+	--accent: #fb748a;
+	--text1: #b4b4b4;
+	--text2: #6a6a6a;
+	--text3: #333;
+}
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-size: 62.5%; /* (10 / 16) * 100% = 62.5% */
+	line-height: 1.75;
+	font-weight: 400;
+}
+body {
+	font-size: 1.6rem;
+	color: #333;
+	font-family: 'Pretendard', sans-serif;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--text3);
+}
+h1,
+.h1 {
+	font-size: 4.9rem;
+	font-weight: 800;
+}
+h2,
+.h2 {
+	font-size: 3.9rem;
+	font-weight: 700;
+}
+h3,
+.h3 {
+	font-size: 3.1rem;
+	font-weight: 600;
+}
+h4,
+.h4 {
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+.comment1 {
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+.comment2 {
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+.comment3 {
+	font-size: 1rem;
+	font-weight: 400;
+}</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>레이아웃 작성</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">.wrap {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+header {
+	width: 100%;
+	max-width: 200px;
+	height: 850px;
+	background-color: var(--accent);
+}
+/***	main	***/
+main {
+	width: 100%;
+	max-width: calc(100% - 200px);
+	background-color: var(--text1);
+}
+main .main_slides {
+	width: 100%;
+	height: 400px;
+	background: var(--primary);
+}
+main .banner {
+	width: 100%;
+	height: 200px;
+	background: var(--text3);
+}
+main .board {
+	width: 100%;
+	height: 250px;
+	background: var(--text1);
+}
+
+footer {
+	width: 100%;
+	height: 120px;
+	background-color: var(--text3);
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="4-step2-a영역-메뉴">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-step2-a영역-메뉴">#</doc-anchor-trigger>
+        <span>4. STEP2-A영역-메뉴</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/projects/webDesign/bluemarket/site/step/03-menu</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/projects/webDesign/bluemarket/site/step/03-menu" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-panels>
+   <doc-panel id="html" collapsed>
+       <template #title>HTML</template>
+<blockquote>
+<p><code v-pre>header</code> 영역에 하위 요소 추가</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;header&gt;
+	&lt;!-- h1.logo+nav+ul.spotmenu --&gt;
+	&lt;h1 class=&quot;logo&quot;&gt;&lt;a class=&quot;h4&quot; href=&quot;#home&quot;&gt;The Bluemarket&lt;/a&gt;&lt;/h1&gt;
+	&lt;nav&gt;
+		&lt;ul class=&quot;depth1&quot;&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;#&quot;&gt;OnSale&lt;/a&gt;
+				&lt;ul class=&quot;depth2&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;할인행사&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;덤증정&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;#&quot;&gt;기획전&lt;/a&gt;
+				&lt;ul class=&quot;depth2&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;봄 먹거리&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;여름 먹거리&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;가을 먹거리&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;겨울 먹거리&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;#&quot;&gt;푸른마을 레시피&lt;/a&gt;
+				&lt;ul class=&quot;depth2&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;메인요리&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;밑반찬&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;간식&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;브런치&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;#&quot;&gt;매장안내&lt;/a&gt;
+				&lt;ul class=&quot;depth2&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;신규매장&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;추천매장&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;공지사항&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	&lt;ul class=&quot;spotmenu&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;로그인&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;회원가입&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/header&gt;</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>스크립트 추가를 위해 <code v-pre>&lt;/body&gt;</code> 태그 위에 아래의 코드를 추가한다.<br />
+시험에서는 jQuery 와 js 둘다 사용가능함</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://code.jquery.com/jquery-3.7.0.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./js/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;!--   &lt;script src=&quot;./js/vanila.js&quot;&gt;&lt;/script&gt; --&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="css" collapsed>
+       <template #title>CSS</template>
+<blockquote>
+<p>초기화 코드 작성</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary: #72ae67;
+	--background: #eae8dd;
+	--accent: #fb748a;
+	--text1: #b4b4b4;
+	--text2: #6a6a6a;
+	--text3: #333;
+}
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-size: 62.5%; /* (10 / 16) * 100% = 62.5% */
+	line-height: 1.75;
+	font-weight: 400;
+}
+body {
+	font-size: 1.6rem;
+	color: #333;
+	font-family: 'Pretendard', sans-serif;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--text3);
+}
+h1,
+.h1 {
+	font-size: 4.9rem;
+	font-weight: 800;
+}
+h2,
+.h2 {
+	font-size: 3.9rem;
+	font-weight: 700;
+}
+h3,
+.h3 {
+	font-size: 3.1rem;
+	font-weight: 600;
+}
+h4,
+.h4 {
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+.comment1 {
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+.comment2 {
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+.comment3 {
+	font-size: 1rem;
+	font-weight: 400;
+}</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>A영역 디자인</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">header:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0%;
+	height: 30rem;
+	background: #ffffff8a;
+	top: 71px;
+	left: 200px;
+	z-index: 2;
+	transition: all 0.3s;
+	backdrop-filter: blur(20px);
+}
+header.on:before {
+	width: 100%;
+}
+header h1.logo {
+	width: 20rem;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+}
+header h1.logo a {
+	color: var(--primary);
+}
+
+header nav {
+	margin-top: 4rem;
+	position: relative;
+	z-index: 5;
+}
+header nav ul.depth1 li {
+	position: relative;
+	width: 100%;
+}
+header nav ul.depth2 {
+	position: absolute;
+	right: -600px;
+	top: 0;
+	display: none;
+	width: 600px;
+}
+header nav ul.depth2 li {
+	display: inline;
+}
+header nav ul.depth2 li a {
+	width: 20%;
+	display: inline-block;
+}
+header nav ul li a {
+	display: block;
+	padding: 2rem;
+	padding-left: 2rem;
+	color: var(--text3);
+	transition: color 300ms;
+}
+header nav ul li:hover &gt; a {
+	background: var(--accent);
+	color: #fff;
+}
+header .spotmenu {
+	display: flex;
+	margin-top: 4rem;
+	gap: 1rem;
+}
+header .spotmenu li {
+	flex: 1 1 100px;
+	text-align: center;
+}
+header .spotmenu li a {
+	display: block;
+	padding: 1rem;
+	background: var(--background);
+	transition: all 0.3s;
+}
+header .spotmenu li:hover a {
+	background: var(--primary);
+	color: #fff;
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="js" collapsed>
+       <template #title>JS</template>
+<blockquote>
+<p>jQuery</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const depth1 = $('.depth1');
+depth1.on({
+	mouseenter: function () {
+		$('.depth2').css('display', 'block');
+		$('header').addClass('on');
+	},
+	mouseleave: function () {
+		$('.depth2').css('display', 'none');
+		$('header').removeClass('on');
+	},
+});</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>vanilla</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const depth1 = document.querySelector('.depth1');
+depth1.addEventListener('mouseover', function () {
+	depth1.querySelectorAll('.depth2').forEach((el) =&gt; {
+		el.style.display = 'block';
+	});
+	document.querySelector('header').classList.add('on');
+});
+depth1.addEventListener('mouseout', function () {
+	depth1.querySelectorAll('.depth2').forEach((el) =&gt; {
+		el.style.display = 'none';
+	});
+	document.querySelector('header').classList.remove('on');
+});</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="step4-b영역-슬라이드">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step4-b영역-슬라이드">#</doc-anchor-trigger>
+        <span>STEP4-B영역-슬라이드</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/step/04-slide</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/step/04-slide" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-panels>
+   <doc-panel id="html" collapsed>
+       <template #title>HTML</template>
+<blockquote>
+<p>main_slides 하위영역 작성</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;main&gt;
+	&lt;div class=&quot;main_slides&quot;&gt;
+		&lt;ul class=&quot;slide_wrap&quot;&gt;
+			&lt;li class=&quot;slide1&quot;&gt;
+				&lt;div class=&quot;textbox&quot;&gt;&lt;span class=&quot;h2&quot;&gt;푸른마을과 함께하는&lt;/span&gt;&lt;span class=&quot;h1&quot;&gt;20% 쿠폰 할인행사&lt;/span&gt;&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;slide2&quot;&gt;
+				&lt;div class=&quot;textbox&quot;&gt;&lt;span class=&quot;h2&quot;&gt;양봉조합과 함께하는&lt;/span&gt;&lt;span class=&quot;h1&quot;&gt;천연 프로폴리스 50%&lt;/span&gt;&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;slide3&quot;&gt;
+				&lt;div class=&quot;textbox&quot;&gt;&lt;span class=&quot;h2&quot;&gt;제주농민과 함께하는&lt;/span&gt;&lt;span class=&quot;h1&quot;&gt;한라봉 최대 50%&lt;/span&gt;&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/main&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="css" collapsed>
+       <template #title>CSS</template>
+<blockquote>
+<p>slide 디자인작성</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">/* main_slides */
+main .main_slides {
+	width: 100%;
+	height: 40rem;
+}
+main .slide_wrap {
+	width: 100%;
+	height: 40rem;
+	position: relative;
+	overflow: hidden;
+}
+main .slide_wrap .textbox {
+	max-width: 50%;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+main .slide_wrap .textbox span {
+	display: block;
+}
+main .slide_wrap li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+main .slide_wrap li.on {
+	opacity: 1;
+}
+main .slide_wrap li.slide1 {
+	background: url(../images/slide1.png) no-repeat center center/cover;
+}
+main .slide_wrap li.slide2 {
+	background: url(../images/slide2.png) no-repeat center center/cover;
+}
+main .slide_wrap li.slide3 {
+	background: url(../images/slide3.png) no-repeat center center/cover;
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="js" collapsed>
+       <template #title>JS</template>
+<blockquote>
+<p>jquery</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">// slide
+const slides = $('.slide_wrap li');
+let idx = 0;
+function slide() {
+	slides.each((i, o) =&gt; $(o).removeClass('on'));
+	slides.eq(idx).addClass('on');
+	idx++;
+	if (idx &gt;= slides.length) {
+		idx = 0;
+	}
+}
+setInterval(() =&gt; {
+	slide();
+}, 5000);
+slides.eq(idx).addClass('on');</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>vanilla</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">// slide
+const slides = document.querySelectorAll('.slide_wrap li');
+let idx = 0;
+
+function slide() {
+	// 현재 슬라이드에서 'on' 클래스 제거
+	slides.forEach((slide) =&gt; slide.classList.remove('on'));
+
+	// 새로운 슬라이드에 'on' 클래스 추가
+	slides[idx].classList.add('on');
+
+	// 인덱스를 증가시키고, 필요한 경우 다시 0으로 설정
+	idx++;
+	if (idx &gt;= slides.length) {
+		idx = 0;
+	}
+}
+
+setInterval(() =&gt; {
+	slide();
+}, 5000);
+
+// 초기 활성 슬라이드 설정
+slides[idx].classList.add('on');</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="step5-c영역-배너">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step5-c영역-배너">#</doc-anchor-trigger>
+        <span>STEP5-C영역-배너</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/step/05-banner</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/step/05-banner" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-panels>
+   <doc-panel id="html" collapsed>
+       <template #title>HTML</template>
+<p>Content 1</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;banner&quot;&gt;
+	&lt;ul class=&quot;quick_nav&quot;&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class=&quot;inner&quot;&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col_l&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;col_m&quot;&gt;
+				&lt;h3&gt;싱싱한 유기농 채소를 신선할 때 생생배송&lt;/h3&gt;
+				&lt;p&gt;검증된 친환경 자재만을 사용하여 정성껏 길러내는무농약 농산물, gap(우수농산물관리) 기준에 부합하는 건강하고 안전한 농산물을 신선하게 생생 배송 해드리고 있습니다.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col_r&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="css" collapsed>
+       <template #title>CSS</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">/* quick */
+main .quick_nav {
+	position: fixed;
+	right: 1rem;
+	top: 1rem;
+	width: 4rem;
+	height: 19.6rem;
+	padding: 2rem;
+	background-color: var(--accent);
+	z-index: 10;
+}
+/* banner */
+main .banner {
+	width: 100%;
+	min-height: 20rem;
+	padding: 3rem 4rem;
+	background-color: var(--background);
+}
+
+main .row .col_l {
+	flex: 1 1 14rem;
+	height: 14rem;
+	background: url(../images/banner.png) no-repeat;
+}
+main .row .col_m {
+	flex: 0 1 64rem;
+}
+main .row p {
+	margin-top: 2.4rem;
+}
+
+main .row .col_r {
+	flex: 1 1 5rem;
+	background: url(../images/arrow.png) no-repeat center center;
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="step6-c영역-게시판">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step6-c영역-게시판">#</doc-anchor-trigger>
+        <span>STEP6-C영역-게시판</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/projects/webDesign/bluemarket/site/step/06-tab</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/projects/webDesign/bluemarket/site/step/06-tab" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-panels>
+   <doc-panel id="html" collapsed>
+       <template #title>HTML</template>
+<blockquote>
+<p>board 하위 작성</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;board&quot;&gt;
+	&lt;div class=&quot;inner&quot;&gt;
+		&lt;ul class=&quot;row buttons&quot;&gt;
+			&lt;li class=&quot;on&quot;&gt;&lt;a href=&quot;#panel1&quot;&gt;공지사항&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#panel2&quot;&gt;갤러리&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div class=&quot;row panels&quot;&gt;
+			&lt;div id=&quot;panel1&quot;&gt;
+				&lt;ul class=&quot;row&quot;&gt;
+					&lt;li class=&quot;col_l&quot;&gt;- 푸른마을 제품 후기 작성 EVENT -&lt;/li&gt;
+					&lt;li class=&quot;col_r comment2&quot;&gt;2021-01-18&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;ul class=&quot;row&quot;&gt;
+					&lt;li class=&quot;col_l&quot;&gt;적립금 이용 안내&lt;/li&gt;
+					&lt;li class=&quot;col_r comment2&quot;&gt;2021-01-18&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;ul class=&quot;row&quot;&gt;
+					&lt;li class=&quot;col_l&quot;&gt;입금자를 찾습니다.&lt;/li&gt;
+					&lt;li class=&quot;col_r comment2&quot;&gt;2021-01-18&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;ul class=&quot;row&quot;&gt;
+					&lt;li class=&quot;col_l&quot;&gt;1월 11일 ~ 1월 15일 생산예정상품안내&lt;/li&gt;
+					&lt;li class=&quot;col_r comment2&quot;&gt;2021-01-18&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;panel2&quot;&gt;
+				&lt;ul class=&quot;row&quot;&gt;
+					&lt;li class=&quot;col_l&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;./images/gallery1.png&quot; alt=&quot;apple&quot; /&gt;&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;col_l&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;./images/gallery2.png&quot; alt=&quot;apple&quot; /&gt;&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;col_l&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;./images/gallery3.png&quot; alt=&quot;apple&quot; /&gt;&lt;/a&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- //inner --&gt;
+&lt;/div&gt;
+&lt;/main&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="css" collapsed>
+       <template #title>CSS</template>
+<blockquote>
+<p>tab 디자인</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">/* board */
+main .board {
+	width: 100%;
+	min-height: 25rem;
+	padding: 1rem;
+}
+main .board .buttons li {
+	width: 9rem;
+	padding: 1rem;
+	text-align: center;
+	border: 2px solid var(--background);
+	background-color: var(--background);
+}
+main .board .buttons li.on {
+	border: 2px solid var(--background);
+	background-color: #fff;
+}
+main .board .buttons li a {
+	display: block;
+}
+main .board .panels {
+	max-width: 69.4rem;
+	flex-direction: column;
+	padding: 1.6rem 5.7rem;
+	border: 2px solid var(--background);
+	border-top: none;
+	position: relative;
+}
+main .board .panels:after {
+	content: '';
+	position: absolute;
+	right: -2px;
+	top: -2px;
+	background-color: var(--background);
+	width: calc(100% - 17.6rem);
+	height: 2px;
+}
+main .board .panels .row {
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.2rem;
+}
+main .board .panels .row li {
+	cursor: pointer;
+}
+main .board .panels .row li:hover {
+	text-decoration: underline;
+}
+main .board .panels .row:last-child {
+	margin-bottom: 0;
+}
+main .board .panels #panel2 {
+	display: none;
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="js" collapsed>
+       <template #title>JS</template>
+<blockquote>
+<p>jQuery</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">// tab
+const tabBtn = $('.board .buttons li');
+const panels = $('.panels&gt;div');
+tabBtn.on('click', function (e) {
+	e.preventDefault();
+	let tg = $(this).index();
+	panels.hide();
+	tabBtn.removeClass('on');
+	tabBtn.eq(tg).addClass('on');
+	panels.eq(tg).show();
+});</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>vanilla</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const tabBtn = document.querySelectorAll('.board .buttons li');
+const panels = document.querySelectorAll('.panels&gt;div');
+
+tabBtn.forEach((el, idx) =&gt; {
+	el.addEventListener('click', function (e) {
+		e.preventDefault();
+		let tg = idx;
+		if (tg &gt; 0) {
+			tabBtn[0].classList.remove('on');
+		} else {
+			tabBtn[1].classList.remove('on');
+		}
+		tabBtn[tg].classList.add('on');
+		panels.forEach((el) =&gt; (el.style.display = 'none'));
+		panels[tg].style.display = 'block';
+	});
+});</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
@@ -550,6 +1441,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "블루마켓", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "블루마켓", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
