@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761649317595">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761667806428">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.761649317595" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.761667806428" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761649317595" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761667806428" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761649317595" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761649317595" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761667806428" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761667806428" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -481,10 +481,11 @@
 </li>
 <li><doc-anchor-trigger to="#57-%EC%8A%A4%ED%81%AC%EB%A1%A4%ED%8A%B8%EB%A6%AC%EA%B1%B0">5.7. 스크롤트리거</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#571-html">5.7.1. html</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#572-css">5.7.2. css</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#573-js">5.7.3. js</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#574-%EC%98%B5%EC%85%98%EC%84%A4%EB%AA%85">5.7.4. 옵션설명</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#571-%EA%B0%80%EB%A1%9C%EB%B0%A9%ED%96%A5-%EC%8A%A4%ED%81%AC%EB%A1%A4">5.7.1. 가로방향 스크롤</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#572-html">5.7.2. html</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#573-css">5.7.3. css</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#574-js">5.7.4. js</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#575-%EC%98%B5%EC%85%98%EC%84%A4%EB%AA%85">5.7.5. 옵션설명</doc-anchor-trigger></li>
 </ul>
 </li>
 <li><doc-anchor-trigger to="#58-gsap-%EA%B0%80%EC%86%8D%EB%8F%84">5.8. gsap 가속도</doc-anchor-trigger></li>
@@ -1209,158 +1210,186 @@ document.getElementById('cta').addEventListener('click', () =&gt; {
         <span>5.7. 스크롤트리거</span>
     </h3>
 </doc-anchor-target>
-<p><a href="https://codepen.io/GreenSock/pen/gOabMXv">예제</a></p>
-<p><a href="https://codepen.io/GreenSock/pen/pojzxwZ">예제</a></p>
-<p><strong><a href="https://codepen.io/GreenSock/pen/rNOBLBV">예제</a></strong></p>
-<p><a href="https://tympanus.net/codrops/category/tutorials/">Tutorials | Codrops</a></p>
-<doc-anchor-target id="571-html">
+<doc-anchor-target id="571-가로방향-스크롤">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#571-html">#</doc-anchor-trigger>
-        <span>5.7.1. html</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#571-가로방향-스크롤">#</doc-anchor-trigger>
+        <span>5.7.1. 가로방향 스크롤</span>
     </h4>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">&lt;div class=&quot;wrapper&quot;&gt;
-    &lt;div class=&quot;factsContainer&quot;&gt;
-      &lt;h2&gt;안녕하세요&lt;/h2&gt;
-      &lt;div class=&quot;factsContainer_sm&quot;&gt;
-        &lt;div class=&quot;fact&quot;&gt;
-          &lt;h3&gt;신입 프론트엔드 김망고입니다: &lt;/h3&gt;
-          &lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot;&gt;
-          &lt;h3&gt;일머리 좋은 신입 프론트엔드입니다&lt;/h3&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;fact&quot;&gt;
-          &lt;h3&gt;좋아하는 음식&lt;/h3&gt;
-          &lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot;&gt;
-          &lt;h3&gt;떡순이&lt;/h3&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;fact&quot;&gt;
-          &lt;h3&gt;자신있는 기술스택&lt;/h3&gt;
-          &lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot;&gt;
-          &lt;h3&gt;자바스크립트🤙&lt;/h3&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;fact&quot;&gt;
-          &lt;h3&gt;앞으로 공부하려고 하는 기술스택&lt;/h3&gt;
-          &lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot;&gt;
-          &lt;h3&gt;앵귤러, 노드JS, 타입스크립트&lt;/h3&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;fact&quot;&gt;
-          &lt;h3&gt;좋아하는 가수&lt;/h3&gt;
-          &lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot;&gt;
-          &lt;h3&gt;뉴진스 민지&lt;/h3&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;fact&quot;&gt;
-          &lt;h3&gt;좋아하는 것&lt;/h3&gt;
-          &lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot;&gt;
-          &lt;h3&gt;강아지&lt;/h3&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;socialContainer&quot;&gt;
-      &lt;h2&gt;저를 안뽑으시면 내일도 제생각이 나실꺼에요&lt;/h2&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/js/gsap/07-horizontal.html</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/js/gsap/07-horizontal.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="572-html">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#572-html">#</doc-anchor-trigger>
+        <span>5.7.2. html</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>아래의 cdn 추가</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://assets.codepen.io/16327/ScrollSmoother.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://assets.codepen.io/16327/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="572-css">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#572-css">#</doc-anchor-trigger>
-        <span>5.7.2. css</span>
-    </h4>
-</doc-anchor-target>
+<blockquote>
+<p>구조작성</p>
+</blockquote>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">* {
-      margin: 0;
-      padding: 0;
-    }
-
-    .wrapper {
-      min-height: 100vh;
-      background: ##1d373f;
-      overflow-x: hidden;
-    }
-
-    .factsContainer {
-      padding: 0em 2em;
-      text-align: center;
-      line-height: 10vh;
-    }
-
-    .factsContainer h2 {
-      font-size: 1.8em;
-      transform: scale(0);
-      padding: 2em 0em;
-      margin-bottom: 15vh;
-      color: ##F0C368;
-    }
-
-    .factsContainer_sm {
-      display: flex;
-      width: 300vw;
-    }
-
-    .fact {
-      display: flex;
-      flex-direction: column;
-      height: 40vh;
-      flex: 1;
-      justify-content: space-between;
-      padding: 1em;
-      align-items: center;
-      color: ##F0C368;
-    }
-
-    .fact img {
-      width: 25vw;
-      height: 25vh;
-      margin: 1em;
-    }
-
-    .socialContainer {
-      width: 100vw;
-      height: 100vh;
-      color:white;
-      font-size:5em;
-    }</code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;wrapper&quot;&gt;
+	&lt;div class=&quot;factsContainer&quot;&gt;
+		&lt;h2&gt;안녕하세요&lt;/h2&gt;
+		&lt;div class=&quot;factsContainer_sm&quot;&gt;
+			&lt;div class=&quot;fact&quot;&gt;
+				&lt;h3&gt;신입 프론트엔드 김망고입니다:&lt;/h3&gt;
+				&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;
+				&lt;h3&gt;일머리 좋은 신입 프론트엔드입니다&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;fact&quot;&gt;
+				&lt;h3&gt;좋아하는 음식&lt;/h3&gt;
+				&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;
+				&lt;h3&gt;떡순이&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;fact&quot;&gt;
+				&lt;h3&gt;자신있는 기술스택&lt;/h3&gt;
+				&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;
+				&lt;h3&gt;자바스크립트🤙&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;fact&quot;&gt;
+				&lt;h3&gt;앞으로 공부하려고 하는 기술스택&lt;/h3&gt;
+				&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;
+				&lt;h3&gt;앵귤러, 노드JS, 타입스크립트&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;fact&quot;&gt;
+				&lt;h3&gt;좋아하는 가수&lt;/h3&gt;
+				&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;
+				&lt;h3&gt;뉴진스 민지&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;fact&quot;&gt;
+				&lt;h3&gt;좋아하는 것&lt;/h3&gt;
+				&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;
+				&lt;h3&gt;강아지&lt;/h3&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;socialContainer&quot;&gt;
+		&lt;h2&gt;저를 안뽑으시면 내일도 제생각이 나실꺼에요&lt;/h2&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="573-js">
+<doc-anchor-target id="573-css">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#573-js">#</doc-anchor-trigger>
-        <span>5.7.3. js</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#573-css">#</doc-anchor-trigger>
+        <span>5.7.3. css</span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">let scroll_tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.factsContainer',
-    start: &quot;top center&quot;,
-    scrub: true,
-    end: &quot;+=300&quot;,
-    // markers: true,
-  }
-}),
- facts = [...document.querySelectorAll('.fact')]
-scroll_tl.to('.factsContainer h2', {
-  scale: 1.5,
-  duration: 1,
-  ease: &quot;slow&quot;
-})
-scroll_tl.to(facts, {
-  xPercent: -85 * (facts.length - 1),
-  scrollTrigger: {
-    trigger: &quot;.factsContainer_sm&quot;,
-    start: &quot;center center&quot;,
-    pin: true,
-    // horizontal: true,
-    // pinSpacing:false,
-    // markers: true,
-    scrub: 1,
-    snap: 1 / (facts.length - 1),
-    // base vertical scrolling on how wide the container is so it feels more natural.
-    // end: () =&gt; `+=${.factsContainer_sm.offsetWidth}`
-    end: () =&gt; `+=4320`
-  ~~~~}
+<pre class="language-css"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	background: #1d373f;
+	overflow-x: hidden;
+}
+
+.factsContainer {
+	min-height: 100vh;
+	padding: 0em 2em;
+	text-align: center;
+	line-height: 10vh;
+}
+
+.factsContainer h2 {
+	font-size: 1.8em;
+	transform: scale(0);
+	padding: 2em 0em;
+	margin-bottom: 15vh;
+	color: #f0c368;
+}
+
+.factsContainer_sm,
+.factsContainer_sm1 {
+	display: flex;
+	width: 300vw;
+}
+
+.fact {
+	display: flex;
+	flex-direction: column;
+	height: 40vh;
+	flex: 1;
+	justify-content: space-between;
+	padding: 1em;
+	align-items: center;
+	color: #f0c368;
+}
+
+.fact img {
+	width: 25vw;
+	height: 100vh;
+	margin: 1em;
+}
+
+.socialContainer {
+	width: 100vw;
+	height: 100vh;
+	color: white;
+	font-size: 5em;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="574-js">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#574-js">#</doc-anchor-trigger>
+        <span>5.7.4. js</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">//애니메이션 해야할 대상이 많으므로 전체 타임라인에 부모요소를 추가한다
+let scroll_tl = gsap.timeline({
+	scrollTrigger: {
+		trigger: '.factsContainer',
+		markers: true,
+		start: 'top top', //시작점 설정 윗방향기준 뷰포드 중앙에서 시작
+		end: '+=300', //300px 떨어진거리에서 끝
+		scrub: true,
+	},
 });
-gsap.config({trialWarn: false});</code></pre>
+let facts = document.querySelectorAll('.fact');
+let factW = document.querySelector('.factsContainer_sm').clientWidth;
+console.log(factW);
+scroll_tl.to('.factsContainer h2', {
+	scale: 1.5,
+	duration: 1,
+	ease: 'slow',
+});
+scroll_tl.to(facts, {
+	xPercent: -85 * (facts.length - 1), //x이동거리
+	scrollTrigger: {
+		trigger: '.factsContainer_sm',
+		start: 'center center',
+		pin: true,
+		scrub: 1,
+		snap: 1 / (facts.length - 1),
+		// base vertical scrolling on how wide the container is so it feels more natural.
+		// end: () =&gt; `+=${smallFactsContainer.offsetWidth}`
+		end: () =&gt; `+=${factW}`,
+	},
+});
+gsap.config({ trialWarn: false });</code></pre>
 </doc-codeblock></div>
 <aside>
 📢 **코드설명**
@@ -1373,44 +1402,20 @@ gsap.config({trialWarn: false});</code></pre>
 </li>
 </ul>
 </aside>
-<doc-anchor-target id="574-옵션설명">
+<doc-anchor-target id="575-옵션설명">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#574-옵션설명">#</doc-anchor-trigger>
-        <span>5.7.4. 옵션설명</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#575-옵션설명">#</doc-anchor-trigger>
+        <span>5.7.5. 옵션설명</span>
     </h4>
 </doc-anchor-target>
 <p>onLeave를 이용해서 섹션범위가 끝날때 콜백함수실행</p>
 <p>또 각각의 모션에서 onComplete를 이용해서 모션이 끝나는시점도 콜백이 가능</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-less"><code v-pre class="language-less">gsap.timeline({
-  scrollTrigger: {
-    trigger: &quot;.sec2&quot;, // 스크롤트리거를 적용할 요소명
-    pin: true, // 활성 상태에서 트리거 요소 고정
-    start: &quot;top top&quot;, // 트리거 상단이 뷰포트 상단에 닿을 때
-    end: &quot;bottom bottom&quot;, // 끝점
-		end: &quot;+=500&quot;, // 시작 부분에서 500px 까지 스크롤 한 후 종료
-    scrub: 1, // // 부드러운 스크러빙, 스크롤바를 &quot;잡는&quot;데 1초가 걸립니다.
-    markers: true, // 개발가이드선 표시여부
-    onLeave: function(){ // 끝나는지점 callback함수
-      console.log('end');
-    },
-		snap: {
-		      snapTo: &quot;labels&quot;, // 타임라인에서 가장 가까운 레이블에 스냅
-		      duration: {min: 0.2, max: 3}, // 스냅 애니메이션은 0.2초 이상 3초 이하이어야 합니다(속도에 따라 결정됨).
-		      delay: 0.2, // 스냅을 수행하기 전에 마지막 스크롤 이벤트에서 0.2 초를 기다립니다.
-		      ease: &quot;power1.inOut&quot; // 스냅 애니메이션의 ease (기본적으로 &quot;power3&quot;)
-		    }
-		  }
-  }
-})</code></pre>
-</doc-codeblock></div>
 <doc-anchor-target id="58-gsap-가속도">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#58-gsap-가속도">#</doc-anchor-trigger>
         <span>5.8. gsap 가속도</span>
     </h3>
 </doc-anchor-target>
-<p><a href="https://greensock.com/docs/v2/Easing">https://greensock.com/docs/v2/Easing</a></p>
 <p><a href="https://greensock.com/docs/v2/Easing">https://greensock.com/docs/v2/Easing</a></p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
