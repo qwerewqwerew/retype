@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-02-21T14:29:58Z",
+  "created": "2024-02-22T00:28:25Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3719,6 +3719,9 @@
     {
       "path": "3_js\\deep\\js_slide\\02.html",
       "old": true
+    },
+    {
+      "path": "3_js\\index.html"
     },
     {
       "path": "4_jquery\\basic\\1.dom조작\\index.html"
