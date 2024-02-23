@@ -16,9 +16,9 @@ tags: [css, responsive]
 - [2. 리소스 다운로드](#2-리소스-다운로드)
 - [3. STEP1-와이어프레임](#3-step1-와이어프레임)
 - [4. STEP2-A영역-메뉴](#4-step2-a영역-메뉴)
-- [STEP4-B영역-슬라이드](#step4-b영역-슬라이드)
-- [STEP5-C영역-배너](#step5-c영역-배너)
-- [STEP6-C영역-게시판](#step6-c영역-게시판)
+- [5. STEP4-B영역-슬라이드](#5-step4-b영역-슬라이드)
+- [6. STEP5-C영역-배너](#6-step5-c영역-배너)
+- [7. STEP6-C영역-게시판](#7-step6-c영역-게시판)
 
 ## 1. 구현화면보기
 
@@ -452,7 +452,7 @@ depth1.addEventListener('mouseout', function () {
 
 ===
 
-## STEP4-B영역-슬라이드
+## 5. STEP4-B영역-슬라이드
 
 [!ref target='blank' text=':icon-play:미리보기'](https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/step/04-slide)
 
@@ -582,7 +582,7 @@ slides[idx].classList.add('on');
 
 ===
 
-## STEP5-C영역-배너
+## 6. STEP5-C영역-배너
 
 [!ref target='blank' text=':icon-play:미리보기'](https://qwerewqwerew.github.io/source/webDesign/bluemarket/site/step/05-banner)
 
@@ -657,7 +657,7 @@ main .row .col_r {
 
 ===
 
-## STEP6-C영역-게시판
+## 7. STEP6-C영역-게시판
 
 [!ref target='blank' text=':icon-play:미리보기'](https://qwerewqwerew.github.io/source/projects/webDesign/bluemarket/site/step/06-tab)
 

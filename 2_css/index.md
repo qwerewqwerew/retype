@@ -12,19 +12,19 @@ tags: [css]
 
 ## 1. 목차
 
-1. [1.selector.md ](./1.selector.md)
-1. [2.hover.md ](./2.hover.md)
-1. [6_containerQuery](./6_containerQuery)
-1. [7.retina.md ](./7.retina.md)
-1. [8.nav.md ](./8.nav.md)
-1. [9.transform.md ](./9.transform.md)
-1. [10_svg ](./10_svg)
-1. [12_clamp ](./12_clamp)
-1. [11.form.md ](./11.form.md)
-1. [13.var.md ](./13.var.md)
-1. [14.calc.md ](./14.calc.md)
-1. [15.animation.md ](./15.animation.md)
-1. [16.transition.md](./16.transition.md)
++ [1.selector.md ](./1.selector.md)
++ [2.hover.md ](./2.hover.md)
++ [6_containerQuery](./6_containerQuery)
++ [7.retina.md ](./7.retina.md)
++ [8.nav.md ](./8.nav.md)
++ [9.transform.md ](./9.transform.md)
++ [10_svg ](./10_svg)
++ [12_clamp ](./12_clamp)
++ [11.form.md ](./11.form.md)
++ [13.var.md ](./13.var.md)
++ [14.calc.md ](./14.calc.md)
++ [15.animation.md ](./15.animation.md)
++ [16.transition.md](./16.transition.md)
 
 ## 2. CSS공부하기
 
