@@ -47,3 +47,5 @@ tags: [css]
 [!ref target='blank' text=':icon-link:grid'](https://angrytools.com/css-grid/)
 
 [!ref target='blank' text=':icon-link:css3generator'](https://css3generator.com/)
+
+[!ref target='blank' text=':icon-link:keyframe'](https://webcode.tools/css-generator/keyframe-animation)
