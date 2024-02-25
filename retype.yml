@@ -25,7 +25,7 @@ exclude:
   - 'draft/'
   - private.md
 markdown:
-  lineBreaks: hard
+  lineBreaks: soft
 footer:
   copyright: '&copy; Copyright {{ year }}. All rights reserved.'
 integrations:

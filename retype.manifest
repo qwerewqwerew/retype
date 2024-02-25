@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-02-23T00:43:20Z",
+  "created": "2024-02-25T06:34:48Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -1720,6 +1720,9 @@
       "path": "2_css\\9.transform\\index.html"
     },
     {
+      "path": "2_css\\글씨회전\\index.html"
+    },
+    {
       "path": "2_css\\book반응형프로젝트\\final\\01-첫째마당\\1장\\01_3_final.html",
       "old": true
     },
@@ -3027,13 +3030,184 @@
       "path": "2_css\\images\\02-10_607.jpg"
     },
     {
+      "path": "2_css\\images\\02-24_608.jpg"
+    },
+    {
+      "path": "2_css\\images\\02-24_609.jpg"
+    },
+    {
+      "path": "2_css\\images\\1_02.png"
+    },
+    {
       "path": "2_css\\images\\1.png"
+    },
+    {
+      "path": "2_css\\images\\10.png"
+    },
+    {
+      "path": "2_css\\images\\11.png"
+    },
+    {
+      "path": "2_css\\images\\12.png"
+    },
+    {
+      "path": "2_css\\images\\13.png"
+    },
+    {
+      "path": "2_css\\images\\14.png"
+    },
+    {
+      "path": "2_css\\images\\15.png"
+    },
+    {
+      "path": "2_css\\images\\16.png"
+    },
+    {
+      "path": "2_css\\images\\17.png"
+    },
+    {
+      "path": "2_css\\images\\18.png"
+    },
+    {
+      "path": "2_css\\images\\19.png"
+    },
+    {
+      "path": "2_css\\images\\2_02.png"
     },
     {
       "path": "2_css\\images\\2.png"
     },
     {
+      "path": "2_css\\images\\20.png"
+    },
+    {
+      "path": "2_css\\images\\21.png"
+    },
+    {
+      "path": "2_css\\images\\22.png"
+    },
+    {
+      "path": "2_css\\images\\23.png"
+    },
+    {
+      "path": "2_css\\images\\24.png"
+    },
+    {
+      "path": "2_css\\images\\25.png"
+    },
+    {
+      "path": "2_css\\images\\26.png"
+    },
+    {
+      "path": "2_css\\images\\27.png"
+    },
+    {
+      "path": "2_css\\images\\28.png"
+    },
+    {
+      "path": "2_css\\images\\29.png"
+    },
+    {
+      "path": "2_css\\images\\3.png"
+    },
+    {
+      "path": "2_css\\images\\30.png"
+    },
+    {
+      "path": "2_css\\images\\31_02.png"
+    },
+    {
+      "path": "2_css\\images\\31.png"
+    },
+    {
+      "path": "2_css\\images\\32.png"
+    },
+    {
+      "path": "2_css\\images\\4.png"
+    },
+    {
+      "path": "2_css\\images\\5.png"
+    },
+    {
+      "path": "2_css\\images\\6.png"
+    },
+    {
+      "path": "2_css\\images\\7.png"
+    },
+    {
+      "path": "2_css\\images\\8.png"
+    },
+    {
+      "path": "2_css\\images\\9.png"
+    },
+    {
+      "path": "2_css\\images\\bem.pdf"
+    },
+    {
+      "path": "2_css\\images\\css.pdf"
+    },
+    {
+      "path": "2_css\\images\\css선택자.pdf"
+    },
+    {
+      "path": "2_css\\images\\product.pdf"
+    },
+    {
+      "path": "2_css\\images\\rotate.png"
+    },
+    {
+      "path": "2_css\\images\\salad.jpg"
+    },
+    {
       "path": "2_css\\index.html"
+    },
+    {
+      "path": "2_css\\page\\1.selector\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\11.form\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\13.var\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\14.calc\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\15.animation\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\16.transition\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\2.hover\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\7.retina\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\8.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\8.nav\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\9.transform\\index.html",
+      "old": true
+    },
+    {
+      "path": "2_css\\page\\글씨회전\\index.html",
+      "old": true
     },
     {
       "path": "2_css\\retina\\images.zip"
@@ -5267,7 +5441,8 @@
       "path": "5_projects\\웹디자인기능사\\index.html"
     },
     {
-      "path": "5_projects\\write_readme\\index.html"
+      "path": "5_projects\\write_readme\\index.html",
+      "old": true
     },
     {
       "path": "6_scss\\1\\index.html"
@@ -5292,6 +5467,12 @@
     },
     {
       "path": "6_scss\\8\\index.html"
+    },
+    {
+      "path": "6_scss\\9\\index.html"
+    },
+    {
+      "path": "6_scss\\files\\02-24_610.jpg"
     },
     {
       "path": "6_scss\\files\\10-01_508.jpg"
@@ -5342,10 +5523,14 @@
       "path": "6_scss\\files\\10-01_525.jpg"
     },
     {
-      "path": "6_scss\\files\\chap\\00.html"
+      "path": "6_scss\\files\\chap\\00.html",
+      "old": true
     },
     {
       "path": "6_scss\\files\\sass01.png"
+    },
+    {
+      "path": "6_scss\\files\\sass노션.pdf"
     },
     {
       "path": "6_scss\\files\\scss2.jpg"
@@ -5354,73 +5539,112 @@
       "path": "6_scss\\files\\scss3.jpg"
     },
     {
-      "path": "6_scss\\final\\00_basic.html"
+      "path": "6_scss\\final\\00_basic.html",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\01_if.html"
+      "path": "6_scss\\final\\01_if.html",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram\\lorem\\css\\index.html"
+      "path": "6_scss\\final\\02_loram\\lorem\\css\\index.html",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram\\lorem\\images.zip"
+      "path": "6_scss\\final\\02_loram\\lorem\\images.zip",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram\\lorem\\images\\header-image.jpg"
+      "path": "6_scss\\final\\02_loram\\lorem\\images\\header-image.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram\\lorem\\images\\photo-1.jpg"
+      "path": "6_scss\\final\\02_loram\\lorem\\images\\photo-1.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram\\lorem\\images\\photo-2.jpg"
+      "path": "6_scss\\final\\02_loram\\lorem\\images\\photo-2.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram\\lorem\\index.html"
+      "path": "6_scss\\final\\02_loram\\lorem\\index.html",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\02_loram\\lorem\\text.html"
+      "path": "6_scss\\final\\02_loram\\lorem\\text.html",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\6223587547_f7418ef489_b.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\6223587547_f7418ef489_b.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\american-flag-cupcakes.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\american-flag-cupcakes.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\background.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\background.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\bakery-about-background.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\bakery-about-background.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\bakery-header.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\bakery-header.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\bakery-swirls.png"
+      "path": "6_scss\\final\\03_landing-page\\images\\bakery-swirls.png",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\cupcakes-1285951_1280.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\cupcakes-1285951_1280.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\doctor_cupcakes_(3398616823).jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\doctor_cupcakes_(3398616823).jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\hospital-cupcakes.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\hospital-cupcakes.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\lucky-star-bakery.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\lucky-star-bakery.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\images\\snowmen-cupcakes.jpg"
+      "path": "6_scss\\final\\03_landing-page\\images\\snowmen-cupcakes.jpg",
+      "old": true
     },
     {
-      "path": "6_scss\\final\\03_landing-page\\index.html"
+      "path": "6_scss\\final\\03_landing-page\\index.html",
+      "old": true
+    },
+    {
+      "path": "기타\\mermaid\\index.html"
+    },
+    {
+      "path": "기타\\prettier\\index.html"
+    },
+    {
+      "path": "기타\\retype\\index.html"
+    },
+    {
+      "path": "기타\\tip\\index.html"
+    },
+    {
+      "path": "기타\\write_readme\\index.html"
     },
     {
       "path": "categories\\기초\\index.html"
     },
     {
       "path": "categories\\자바스크립트\\index.html"
+    },
+    {
+      "path": "categories\\animate\\index.html"
     },
     {
       "path": "categories\\array\\index.html",
@@ -5443,10 +5667,12 @@
       "old": true
     },
     {
-      "path": "categories\\git\\index.html"
+      "path": "categories\\git\\index.html",
+      "old": true
     },
     {
-      "path": "categories\\github\\index.html"
+      "path": "categories\\github\\index.html",
+      "old": true
     },
     {
       "path": "categories\\index.html"
@@ -5470,13 +5696,18 @@
       "path": "categories\\partial\\index.html"
     },
     {
-      "path": "categories\\project\\index.html"
+      "path": "categories\\project\\index.html",
+      "old": true
     },
     {
       "path": "categories\\projects\\index.html"
     },
     {
       "path": "categories\\response\\index.html",
+      "old": true
+    },
+    {
+      "path": "categories\\responsive\\index.html",
       "old": true
     },
     {
@@ -5489,6 +5720,9 @@
     {
       "path": "categories\\this\\index.html",
       "old": true
+    },
+    {
+      "path": "categories\\tip\\index.html"
     },
     {
       "path": "favicon.png"
@@ -5543,10 +5777,12 @@
       "old": true
     },
     {
-      "path": "retype\\index.html"
+      "path": "retype\\index.html",
+      "old": true
     },
     {
-      "path": "retype\\mermaid\\index.html"
+      "path": "retype\\mermaid\\index.html",
+      "old": true
     },
     {
       "path": "robots.txt"
@@ -5806,6 +6042,9 @@
       "path": "tags\\브라우저객체모델\\index.html"
     },
     {
+      "path": "tags\\선택자\\index.html"
+    },
+    {
       "path": "tags\\스크롤-막대그래프\\index.html"
     },
     {
@@ -5900,6 +6139,9 @@
       "path": "tags\\carousel\\index.html"
     },
     {
+      "path": "tags\\chrome\\index.html"
+    },
+    {
       "path": "tags\\clamp\\index.html"
     },
     {
@@ -5933,6 +6175,9 @@
       "path": "tags\\event\\index.html"
     },
     {
+      "path": "tags\\for\\index.html"
+    },
+    {
       "path": "tags\\form\\index.html"
     },
     {
@@ -5945,6 +6190,9 @@
       "path": "tags\\github\\index.html"
     },
     {
+      "path": "tags\\global\\index.html"
+    },
+    {
       "path": "tags\\grid\\index.html"
     },
     {
@@ -5952,6 +6200,9 @@
     },
     {
       "path": "tags\\hover\\index.html"
+    },
+    {
+      "path": "tags\\if\\index.html"
     },
     {
       "path": "tags\\index.html"
@@ -5976,6 +6227,9 @@
     },
     {
       "path": "tags\\masonry\\index.html"
+    },
+    {
+      "path": "tags\\mermaid\\index.html"
     },
     {
       "path": "tags\\project\\index.html"
@@ -6003,6 +6257,9 @@
       "path": "tags\\responsive\\index.html"
     },
     {
+      "path": "tags\\retype\\index.html"
+    },
+    {
       "path": "tags\\scss\\index.html"
     },
     {
@@ -6016,6 +6273,9 @@
     },
     {
       "path": "tags\\swiper\\index.html"
+    },
+    {
+      "path": "tags\\tip\\index.html"
     },
     {
       "path": "tags\\transform\\index.html"

@@ -11,8 +11,8 @@
 	code span {
 		font-family: consolas, 'Inconsolata', monospace;
 		/*     font-size: .9rem;
-    line-height: 1.5;
- */
+	   line-height: 1.5;
+	*/
 	}
 
 	* {
@@ -104,15 +104,15 @@
 		max-width: 10%;
 	}
 
-	.docs-markdown div[id='목차'] + ul li,
-	.docs-markdown div[id='목차'] + ol li {
-		list-style-type: none;
-		line-height: 1.8;
-		font-weight: 400;
-		padding-top: 2px;
-		padding-bottom: 4px;
-		margin-top: 0;
-		font-size: 14px;
+	[id*='목차'] + ul li,
+	[id*='목차'] + ol li {
+		list-style-type: none !important;
+		line-height: 1.8 !important;;
+		font-weight: 400 !important;;
+		padding-top: 2px !important;;
+		padding-bottom: 4px !important;;
+		margin-top: 0 !important;;
+		font-size: 14px !important;;
 	}
 
 	.docs-markdown table.comfortable tr td,
@@ -140,7 +140,13 @@
 	.my-1 {
 		margin: 1rem auto;
 	}
-
+	.docs-markdown kbd,
+	kbd {
+		font-weight: 400;
+		background: #efe9e950;
+		padding-bottom: 5px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	}
 	.red,
 	.red * {
 		color: rgb(210, 26, 170) !important;
@@ -200,5 +206,17 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+	.collapse-content {
+		background-color: #fcfcfc !important;
+	}
+	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
+		display: none;
+	}
+	.docs-markdown hr {
+		border-color: rgba(202, 205, 212, 0);
+		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
+		margin-bottom: 4rem;
+		margin-top: 2rem;
 	}
 </style>

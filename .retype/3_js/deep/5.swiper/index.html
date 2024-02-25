@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761964167859">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762158076305">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.761964167859" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.762158076305" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761964167859" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.762158076305" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761964167859" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761964167859" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.762158076305" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.762158076305" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -59,8 +59,8 @@
     	code span {
     		font-family: consolas, 'Inconsolata', monospace;
     		/*     font-size: .9rem;
-        line-height: 1.5;
-     */
+    	   line-height: 1.5;
+    	*/
     	}
 
     	* {
@@ -152,15 +152,15 @@
     		max-width: 10%;
     	}
 
-    	.docs-markdown div[id='목차'] + ul li,
-    	.docs-markdown div[id='목차'] + ol li {
-    		list-style-type: none;
-    		line-height: 1.8;
-    		font-weight: 400;
-    		padding-top: 2px;
-    		padding-bottom: 4px;
-    		margin-top: 0;
-    		font-size: 14px;
+    	[id*='목차'] + ul li,
+    	[id*='목차'] + ol li {
+    		list-style-type: none !important;
+    		line-height: 1.8 !important;;
+    		font-weight: 400 !important;;
+    		padding-top: 2px !important;;
+    		padding-bottom: 4px !important;;
+    		margin-top: 0 !important;;
+    		font-size: 14px !important;;
     	}
 
     	.docs-markdown table.comfortable tr td,
@@ -188,7 +188,13 @@
     	.my-1 {
     		margin: 1rem auto;
     	}
-
+    	.docs-markdown kbd,
+    	kbd {
+    		font-weight: 400;
+    		background: #efe9e950;
+    		padding-bottom: 5px;
+    		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    	}
     	.red,
     	.red * {
     		color: rgb(210, 26, 170) !important;
@@ -248,6 +254,18 @@
     		overflow: hidden;
     		text-overflow: ellipsis;
     		white-space: nowrap;
+    	}
+    	.collapse-content {
+    		background-color: #fcfcfc !important;
+    	}
+    	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
+    		display: none;
+    	}
+    	.docs-markdown hr {
+    		border-color: rgba(202, 205, 212, 0);
+    		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
+    		margin-bottom: 4rem;
+    		margin-top: 2rem;
     	}
     </style>
 
@@ -479,7 +497,7 @@
     <a href="https://swiperjs.com/" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<div class="box"><p>GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 있는 라이브러리로 J-Query 보다 20배 이상 빠른 성능을 갖고 있다고 소개하고 있다.<br />
+<div class="box"><p>GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 있는 라이브러리로 J-Query 보다 20배 이상 빠른 성능을 갖고 있다고 소개하고 있다.
 gsap.to() 메소드를 이용해 자연스러운 움직임을 만들 수 있다</p>
 </div>
 <doc-anchor-target id="2-설치">
@@ -515,8 +533,8 @@ gsap.to() 메소드를 이용해 자연스러운 움직임을 만들 수 있다<
     </h2>
 </doc-anchor-target>
 <blockquote>
-<p>swiper 라이브러리를 적용하려면 html 구조를 아래와 같이 작성해야 한다.<br />
-슬라이드는 두단계로 래핑해야 한다.<br />
+<p>swiper 라이브러리를 적용하려면 html 구조를 아래와 같이 작성해야 한다.
+슬라이드는 두단계로 래핑해야 한다.
 컨트롤 요소는 슬라이드를 감싼 부모와 형제요소로 마크업 한다.</p>
 </blockquote>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -895,8 +913,8 @@ gsap.to() 메소드를 이용해 자연스러운 움직임을 만들 수 있다<
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js&quot; defer&gt;&lt;/script&gt;</code></pre>
 </doc-codeblock></div>
 <blockquote>
-<p><code v-pre>section</code> 태그 자식요소로 <code v-pre>div</code> 를 만들고 자식요소로 스와이퍼 요소를 추가한다.<br />
-스와이퍼에서 제공하는 클래스이름은 변경하지 않고 그대로 사용한다.<br />
+<p><code v-pre>section</code> 태그 자식요소로 <code v-pre>div</code> 를 만들고 자식요소로 스와이퍼 요소를 추가한다.
+스와이퍼에서 제공하는 클래스이름은 변경하지 않고 그대로 사용한다.
 스와이퍼의 부모요소인 <code v-pre>section</code>과 <code v-pre>div</code> 는 필요에 따라 변경해서 사용하면된다.</p>
 </blockquote>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
@@ -957,7 +975,7 @@ gsap.to() 메소드를 이용해 자연스러운 움직임을 만들 수 있다<
    <doc-panel id="css" collapsed>
        <template #title>CSS</template>
 <blockquote>
-<p>&quot;body&quot; 배경색을 파일 1개를 지정하고 글꼴을 지정한다.<br />
+<p>&quot;body&quot; 배경색을 파일 1개를 지정하고 글꼴을 지정한다.
 스와이퍼를 감싸는&quot;promotion&quot;에도 배경색과 높이를 설정한다.</p>
 </blockquote>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
@@ -1026,7 +1044,7 @@ new Swiper('.promotion .swiper-container', {
    <doc-panel id="css-2" collapsed>
        <template #title>CSS-2</template>
 <blockquote>
-<p>슬라이드를 3장씩 보여주고 선택된 이미지는 중앙에 선명하게 보여 주고 양쪽에 이미지는 투명도를 0.4정도를 줘서 반투명하게 보여주 도록 한다.<br />
+<p>슬라이드를 3장씩 보여주고 선택된 이미지는 중앙에 선명하게 보여 주고 양쪽에 이미지는 투명도를 0.4정도를 줘서 반투명하게 보여주 도록 한다.
 세장의 이미지를 보여주기 위해 &quot;swiper-container&quot;의 폭을 3배 로 지정하고 간격을 20픽셀 더한 2,480픽셀로 지정한다.</p>
 </blockquote>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
@@ -1054,8 +1072,8 @@ new Swiper('.promotion .swiper-container', {
    <doc-panel id="css-1" collapsed>
        <template #title>CSS-1</template>
 <blockquote>
-<p>슬라이드에서 가운데 보여지는 이미지의 투명도를 1로 하고 양쪽에 이미지는 투명도를 0.4로 지정한다.<br />
-페이지네이션 블릿은 이미지(&quot;./imgs/promotion_slide_pager.png&quot;)를 백그라운로 지정한다.<br />
+<p>슬라이드에서 가운데 보여지는 이미지의 투명도를 1로 하고 양쪽에 이미지는 투명도를 0.4로 지정한다.
+페이지네이션 블릿은 이미지(&quot;./imgs/promotion_slide_pager.png&quot;)를 백그라운로 지정한다.
 그후 액티브 상태의 이미지 (&quot;./imgs/promotion_slide_pager_on.png&quot;)를 교체하도록 설정한다.</p>
 </blockquote>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
