@@ -33,5 +33,5 @@ integrations:
     id: GTM-TKHJVFFG
   googleAnalytics:
     id: G-NKP1WSKRDB
-  templating:
-  liquid: true # Set to true to enable
+liquid: true # Set to true to enable
+expanded: true
