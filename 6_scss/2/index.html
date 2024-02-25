@@ -9,15 +9,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761964311181">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762158194649">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>2 SCSS </title>
-    <meta name="title" content="2 SCSS ">
-    <meta name="description" content="1. Basic">
+    <title>2 SCSS-var </title>
+    <meta name="title" content="2 SCSS-var ">
+    <meta name="description" content="1. 변수-[var]">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/6_scss/2/">
@@ -25,26 +25,26 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/6_scss/2/">
-    <meta property="og:title" content="2 SCSS ">
-    <meta property="og:description" content="1. Basic">
+    <meta property="og:title" content="2 SCSS-var ">
+    <meta property="og:description" content="1. 변수-[var]">
     <meta property="og:image" content="https://qwerewqwerew.github.io/retype/6_scss/files/10-01_515.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/6_scss/2/">
-    <meta property="twitter:title" content="2 SCSS ">
-    <meta property="twitter:description" content="1. Basic">
+    <meta property="twitter:title" content="2 SCSS-var ">
+    <meta property="twitter:description" content="1. 변수-[var]">
     <meta property="twitter:image" content="https://qwerewqwerew.github.io/retype/6_scss/files/10-01_515.jpg">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.761964311181" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.762158194649" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.761964311181" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.762158194649" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -59,8 +59,8 @@
     	code span {
     		font-family: consolas, 'Inconsolata', monospace;
     		/*     font-size: .9rem;
-        line-height: 1.5;
-     */
+    	   line-height: 1.5;
+    	*/
     	}
 
     	* {
@@ -152,15 +152,15 @@
     		max-width: 10%;
     	}
 
-    	.docs-markdown div[id='목차'] + ul li,
-    	.docs-markdown div[id='목차'] + ol li {
-    		list-style-type: none;
-    		line-height: 1.8;
-    		font-weight: 400;
-    		padding-top: 2px;
-    		padding-bottom: 4px;
-    		margin-top: 0;
-    		font-size: 14px;
+    	[id*='목차'] + ul li,
+    	[id*='목차'] + ol li {
+    		list-style-type: none !important;
+    		line-height: 1.8 !important;;
+    		font-weight: 400 !important;;
+    		padding-top: 2px !important;;
+    		padding-bottom: 4px !important;;
+    		margin-top: 0 !important;;
+    		font-size: 14px !important;;
     	}
 
     	.docs-markdown table.comfortable tr td,
@@ -188,7 +188,13 @@
     	.my-1 {
     		margin: 1rem auto;
     	}
-
+    	.docs-markdown kbd,
+    	kbd {
+    		font-weight: 400;
+    		background: #efe9e950;
+    		padding-bottom: 5px;
+    		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    	}
     	.red,
     	.red * {
     		color: rgb(210, 26, 170) !important;
@@ -248,6 +254,18 @@
     		overflow: hidden;
     		text-overflow: ellipsis;
     		white-space: nowrap;
+    	}
+    	.collapse-content {
+    		background-color: #fcfcfc !important;
+    	}
+    	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
+    		display: none;
+    	}
+    	.docs-markdown hr {
+    		border-color: rgba(202, 205, 212, 0);
+    		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
+    		margin-bottom: 4rem;
+    		margin-top: 2rem;
     	}
     </style>
 
@@ -411,10 +429,10 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="2-scss" class="break-words">
+<doc-anchor-target id="2-scss-var" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-scss">#</doc-anchor-trigger>
-        <span>2 SCSS <!-- omit in toc --></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-scss-var">#</doc-anchor-trigger>
+        <span>2 SCSS-var <!-- omit in toc --></span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
@@ -439,320 +457,18 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li><doc-anchor-trigger to="#1-basic">1. Basic</doc-anchor-trigger>
+<li><doc-anchor-trigger to="#1-%EB%B3%80%EC%88%98-var">1. 변수-[var]</doc-anchor-trigger>
 <ul>
-<li><doc-anchor-trigger to="#11-%EC%8B%9C%EC%9E%91%EC%BD%94%EB%93%9C">1.1. 시작코드</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#12-%EB%B3%80%EC%88%98-var">1.2. 변수-[var]</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#121-%EB%B3%80%EC%88%98%EC%9D%98-%EC%84%A0%EC%96%B8">1.2.1. 변수의 선언</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#122-%EB%B3%80%EC%88%98%EC%9D%98-%ED%99%9C%EC%9A%A9">1.2.2. 변수의 활용</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#11-%EC%84%A0%EC%96%B8">1.1. 선언</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#12-%EC%9D%91%EC%9A%A9">1.2. 응용</doc-anchor-trigger></li>
 </ul>
 </li>
+<li><doc-anchor-trigger to="#2-%EC%A3%BC%EC%84%9D">2. 주석</doc-anchor-trigger></li>
 </ul>
-</li>
-</ul>
-<doc-anchor-target id="1-basic">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-basic">#</doc-anchor-trigger>
-        <span>1. Basic</span>
-    </h1>
-</doc-anchor-target>
-<doc-anchor-target id="11-시작코드">
+<doc-anchor-target id="1-변수-var">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-시작코드">#</doc-anchor-trigger>
-        <span>1.1. 시작코드</span>
-    </h2>
-</doc-anchor-target>
-<doc-tabs>
-<doc-tab v-cloak id="지시문">
-<template #title>지시문</template>
-<p><a href="../files/chap/00.html" target="_blank" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-8 px-4 text-base rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
-    <span>scss시작파일</span>
-</a><br />
-탭의 시작코드를 복사하여 준비한다..</p>
-</doc-tab>
-<doc-tab v-cloak id="html">
-<template #title>HTML</template>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">00_basic.html</div>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-		&lt;title&gt;basic&lt;/title&gt;
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/00_basic.css&quot; /&gt;
-	&lt;/head&gt;
-
-	&lt;body&gt;
-		&lt;header&gt;
-			&lt;h1 id=&quot;logo&quot;&gt;&lt;a href=&quot;#&quot;&gt;logo&lt;/a&gt;&lt;/h1&gt;
-			&lt;nav&gt;
-				&lt;ul&gt;
-					&lt;li&gt;
-						&lt;a href=&quot;#&quot;&gt;menu1&lt;/a&gt;
-						&lt;ul&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-1&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-1&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-1&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/li&gt;
-					&lt;li&gt;
-						&lt;a href=&quot;#&quot;&gt;menu2&lt;/a&gt;
-						&lt;ul&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-2&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-2&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-2&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/li&gt;
-					&lt;li&gt;
-						&lt;a href=&quot;#&quot;&gt;menu3&lt;/a&gt;
-						&lt;ul&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-3&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-3&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;#&quot;&gt;menu2-3&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/nav&gt;
-			&lt;button&gt;&lt;a href=&quot;#&quot;&gt;login&lt;/a&gt;&lt;/button&gt;
-		&lt;/header&gt;
-		  &lt;main&gt;
-    &lt;section&gt;
-      &lt;h2&gt;section1&lt;/h2&gt;
-      &lt;div class=&quot;section1-box&quot;&gt;
-        &lt;div class=&quot;section1-item&quot;&gt;
-          &lt;span class=&quot;section1-title&quot;&gt;title&lt;/span&gt;
-          &lt;span class=&quot;section1-para&quot;&gt;paragraph&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;section1-item&quot;&gt; &lt;span class=&quot;section1-title&quot;&gt;title&lt;/span&gt;
-          &lt;span class=&quot;section1-para&quot;&gt;paragraph&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;section1-item&quot;&gt; &lt;span class=&quot;section1-title&quot;&gt;title&lt;/span&gt;
-          &lt;span class=&quot;section1-para&quot;&gt;paragraph&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/section&gt;
-  &lt;/main&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="css">
-<template #title>CSS</template>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">00_basic.css</div>
-<pre class="language-css"><code v-pre class="language-css">@charset &quot;utf-8&quot;;
-@import url(./reset.css);
-body {
-	background: ivory;
-}
-
-header {
-	display: flex;
-	padding: 2vw 4vw;
-	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-
-header h1 {
-	flex: 1 1 30%;
-}
-
-header nav {
-	flex: 1 1 50%;
-}
-
-header button {
-	flex: 1 1 10%;
-}
-
-header ul {
-	display: flex;
-	width: 80%;
-}
-
-header ul li {
-	flex: 1 1 30%;
-}
-
-header ul ul {
-	display: block;
-}
-
-main {
-	padding: 2vw 4vw;
-}
-
-.section1-box {
-	background: #c9c9c9;
-	max-width: 500px;
-	margin: auto;
-	display: flex;
-	border-radius: 8px;
-	border: 4px solid #d5d5d5;
-	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-
-.section1-box &gt; .section1-item {
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	padding: 1vw;
-	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-	border: 4px solid #6361e7;
-}
-
-.section1-box &gt; .section1-item &gt; .section1-title {
-	color: #333;
-	font-size: 32px;
-}
-.section1-box &gt; .section1-item &gt; .section1-para {
-	color: #333;
-	font-size: 24px;
-}</code></pre>
-</doc-codeblock></div>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">reset.css</div>
-<pre class="language-css"><code v-pre class="language-css">/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol,
-ul {
-	list-style: none;
-}
-blockquote,
-q {
-	quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-a {
-	text-decoration: none;
-	color: #333;
-}</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="12-변수-var">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-변수-var">#</doc-anchor-trigger>
-        <span>1.2. 변수-[var]</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-변수-var">#</doc-anchor-trigger>
+        <span>1. 변수-[var]</span>
     </h2>
 </doc-anchor-target>
 <p>
@@ -777,31 +493,74 @@ $bgColor : #FFF
 </code></pre>
 </doc-codeblock></div>
 </blockquote>
-<doc-anchor-target id="121-변수의-선언">
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>사용가능한 자료형
+numbers, strings, color, booleans, lists, null</p>
+<ul>
+<li>numbers : 1, .82, 20px, 2em 등</li>
+<li>strings : &quot;./images/a.png&quot;, bold, left, uppercase 등</li>
+<li>colors : green, #FFF, rgba(255,0,0,.5) 등</li>
+<li>booleans : true, false</li>
+<li>null</li>
+</ul>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="11-선언">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#121-변수의-선언">#</doc-anchor-trigger>
-        <span>1.2.1. 변수의 선언</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-선언">#</doc-anchor-trigger>
+        <span>1.1. 선언</span>
     </h3>
 </doc-anchor-target>
 <ol>
-<li>scss 폴더를 생생후 하위에 01_var.scss 파일을 생성한다</li>
-<li>아래의 코드를 작성한다.<br />
-<img src="../files/10-01_515.jpg" alt="alt" /></li>
-<li>컴파일 하기 - vscode 하단의 watch sass 를 클릭한다.<br />
+<li><p>scss 폴더를 생성후 하위에 var.scss 파일을 생성한다</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markdown" data-line="5-6"><code v-pre class="language-markdown"> root/
+ │
+ ├─basic.html
+ ├─basic.css
+ └─scss/
+ 	└─var.scss</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p>아래의 코드를 작성한다.</p>
+<p><img src="../files/10-01_515.jpg" alt="alt" /></p>
+</li>
+<li><p>컴파일 하기</p>
+<ul>
+<li>vscode 하단의 watch sass 를 클릭한다.
 <img src="../files/10-01_516.jpg" alt="alt" /></li>
-<li>output 확인 - 이미지 처럼 파일 생성 결과가 출력되면 성공<br />
+</ul>
+</li>
+<li><p>output 확인</p>
+<ul>
+<li>이미지 처럼 파일 생성 결과가 출력되면 성공
 <img src="../files/10-01_517.jpg" alt="alt" /></li>
-<li>html문서에 링크하기
-<ol>
-<li>00_basic.html 문서를 열고 <code v-pre>&lt;head&gt;</code> 태그 사이에 css 폴더에 생성된 01_var.css 파일을 연결한다.<br />
+</ul>
+</li>
+<li><p>html문서에 링크하기</p>
+<ul>
+<li>basic.html 문서를 열고 <code v-pre>&lt;head&gt;</code> 태그 사이에 css 폴더에 생성된 var.css 파일을 연결한다.
 <img src="../files/10-01_518.jpg" alt="alt" /></li>
-</ol>
+</ul>
 </li>
 </ol>
-<doc-anchor-target id="122-변수의-활용">
+<doc-anchor-target id="12-응용">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#122-변수의-활용">#</doc-anchor-trigger>
-        <span>1.2.2. 변수의 활용</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-응용">#</doc-anchor-trigger>
+        <span>1.2. 응용</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
@@ -812,11 +571,33 @@ $bgColor : #FFF
 <li>목적에 따라 calc 를 사용할 경우도 있다.</li>
 </ul>
 </blockquote>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-scss"><code v-pre class="language-scss">header ul li {
+<p>:<a href="https://qwerewqwerew.github.io/source/Scss/final/var.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> Code</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M16.75 8.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"/><path d="M15.75 0a8.25 8.25 0 1 1-2.541 16.101l-1.636 1.636a1.744 1.744 0 0 1-1.237.513H9.25a.25.25 0 0 0-.25.25v1.448a.876.876 0 0 1-.256.619l-.214.213a.75.75 0 0 1-.545.22H5.25a.25.25 0 0 0-.25.25v1A1.75 1.75 0 0 1 3.25 24h-1.5A1.75 1.75 0 0 1 0 22.25v-2.836c0-.464.185-.908.513-1.236l7.386-7.388A8.249 8.249 0 0 1 15.75 0ZM9 8.25a6.733 6.733 0 0 0 .463 2.462.75.75 0 0 1-.168.804l-7.722 7.721a.25.25 0 0 0-.073.177v2.836c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-1c0-.966.784-1.75 1.75-1.75H7.5v-1c0-.966.784-1.75 1.75-1.75h1.086a.25.25 0 0 0 .177-.073l1.971-1.972a.75.75 0 0 1 .804-.168A6.75 6.75 0 1 0 9 8.25Z"/></g></g></svg> 실행화면</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">scss/var.scss</div>
+<pre class="language-scss"><code v-pre class="language-scss">//전역변수
+$bg-color: #ff0;
+$color-red: #ff0000;
+$width100: 100px;
+$per20: 20%;
+
+header ul li {
+	//지역변수
+	$color-blue:#011f4b;
 	flex: 1 1 30%;
 	width: $width100 * 3;
 	font-size: calc($width100 - 50px);
+	a{color:$color-blue;}
 }
 body {
 	background: $bg-color;
@@ -827,12 +608,55 @@ body {
 	color: $color-red;
 }</code></pre>
 </doc-codeblock></div>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<blockquote>
+<p>css폴더가 자동으로 추가되었으며 아래와 같이 컴파일되었다.</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/var.css</div>
+<pre class="language-css"><code v-pre class="language-css">header ul li {
+	flex: 1 1 30%;
+	width: 300px;
+	font-size: 50px;
+}
+
+body {
+	background: #ff0;
+}
+
+.box &gt; .item &gt; .para {
+	color: #333;
+	font-size: 24px;
+	color: #ff0000;
+} /*# sourceMappingURL=01_var.css.map */
+</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<doc-anchor-target id="2-주석">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-주석">#</doc-anchor-trigger>
+        <span>2. 주석</span>
+    </h2>
+</doc-anchor-target>
+<blockquote>
+<p>사스에서 주석은 아래와 같이 작성한다.</p>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-scss"><code v-pre class="language-scss">// 사스주석은 안보임
+/*css주석은 컴파일에 보임*/
+//네스팅: 둥지, 포함한,중첩되는 의미 : 포함관계를 적용한 작성법</code></pre>
+</doc-codeblock></div>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
                                         <a href="../../tags/">
                                             <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
                                         </a>
+                                        <span class="mr-2"><a href="../../tags/var/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>var</span>
+                                </a></span>
                                         <span class="mr-2"><a href="../../tags/scss/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
                                     <span>scss</span>
                                 </a></span>

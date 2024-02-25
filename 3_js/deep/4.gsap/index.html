@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761964311181">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762158194649">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.761964311181" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.762158194649" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.761964311181" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.762158194649" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -57,8 +57,8 @@
     	code span {
     		font-family: consolas, 'Inconsolata', monospace;
     		/*     font-size: .9rem;
-        line-height: 1.5;
-     */
+    	   line-height: 1.5;
+    	*/
     	}
 
     	* {
@@ -150,15 +150,15 @@
     		max-width: 10%;
     	}
 
-    	.docs-markdown div[id='목차'] + ul li,
-    	.docs-markdown div[id='목차'] + ol li {
-    		list-style-type: none;
-    		line-height: 1.8;
-    		font-weight: 400;
-    		padding-top: 2px;
-    		padding-bottom: 4px;
-    		margin-top: 0;
-    		font-size: 14px;
+    	[id*='목차'] + ul li,
+    	[id*='목차'] + ol li {
+    		list-style-type: none !important;
+    		line-height: 1.8 !important;;
+    		font-weight: 400 !important;;
+    		padding-top: 2px !important;;
+    		padding-bottom: 4px !important;;
+    		margin-top: 0 !important;;
+    		font-size: 14px !important;;
     	}
 
     	.docs-markdown table.comfortable tr td,
@@ -186,7 +186,13 @@
     	.my-1 {
     		margin: 1rem auto;
     	}
-
+    	.docs-markdown kbd,
+    	kbd {
+    		font-weight: 400;
+    		background: #efe9e950;
+    		padding-bottom: 5px;
+    		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    	}
     	.red,
     	.red * {
     		color: rgb(210, 26, 170) !important;
@@ -246,6 +252,18 @@
     		overflow: hidden;
     		text-overflow: ellipsis;
     		white-space: nowrap;
+    	}
+    	.collapse-content {
+    		background-color: #fcfcfc !important;
+    	}
+    	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
+    		display: none;
+    	}
+    	.docs-markdown hr {
+    		border-color: rgba(202, 205, 212, 0);
+    		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
+    		margin-bottom: 4rem;
+    		margin-top: 2rem;
     	}
     </style>
 
@@ -511,7 +529,6 @@
     </div>
     <a href="https://gsap.com/" target="_blank" class="absolute block inset-0"></a>
 </div>
-<br />
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
@@ -525,8 +542,8 @@
     <a href="https://greensock.com/cheatsheet/" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<div class="box"><p>웹 브라우저에서 애니메이션을 구현하기 위한 자바스크립트 라이브러리<br />
-기존 CSS나 순수 자바스크립트보다 탁월한 퍼포먼스를 발휘할 수 있도록 최적화 된 애니메이션 전용 라이브러리이며, HTML5와 Flash 두 개의 플랫폼에서 사용할 수 있다.<br />
+<div class="box"><p>웹 브라우저에서 애니메이션을 구현하기 위한 자바스크립트 라이브러리
+기존 CSS나 순수 자바스크립트보다 탁월한 퍼포먼스를 발휘할 수 있도록 최적화 된 애니메이션 전용 라이브러리이며, HTML5와 Flash 두 개의 플랫폼에서 사용할 수 있다.
 GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 있는 라이브러리로 J-Query 보다 20배 이상 빠른 성능을 갖고 있다고 소개하고 있다.</p>
 <ul>
 <li><p>gsap.to() 메소드를 이용해 자연스러운 움직임을 만들 수 있다</p>
@@ -711,7 +728,7 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>아이디 logo 이름을 가진 요소(Element)를 x축으로 1초 동안 100px 이동<br />
+<p>아이디 logo 이름을 가진 요소(Element)를 x축으로 1초 동안 100px 이동
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
@@ -752,7 +769,7 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>&quot;h2&quot; 요소에 1초 동안 투명도를 30%로 애니메이션 적용하고 “.orange&quot; 요소는 2초 동안 x축으로 300pixel 이동하고 &quot;.grey&quot;는 Y축으로 300px 이동. “.green” 요 소는 3초 동안 360도 회전하고 크기를 50%로 축소하는 애니메이션 을 적용한다<br />
+<p>&quot;h2&quot; 요소에 1초 동안 투명도를 30%로 애니메이션 적용하고 “.orange&quot; 요소는 2초 동안 x축으로 300pixel 이동하고 &quot;.grey&quot;는 Y축으로 300px 이동. “.green” 요 소는 3초 동안 360도 회전하고 크기를 50%로 축소하는 애니메이션 을 적용한다
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
@@ -821,7 +838,6 @@ gsap.to('.green', { duration: 3, rotation: 360, scale: 0.5 });</code></pre>
     </div>
     <a href="https://qwerewqwerew.github.io/source/js/gsap/gsap01.html" target="_blank" class="absolute block inset-0"></a>
 </div>
-<br />
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">

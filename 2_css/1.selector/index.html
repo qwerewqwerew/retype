@@ -9,15 +9,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761964311181">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762158194649">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>1.선택자</title>
-    <meta name="title" content="1.선택자">
-    <meta name="description" content="특정선택자에 중첩해서 사용한다. scss 의 용례과 같다">
+    <title>Chap1. 기본문법과 선택자 </title>
+    <meta name="title" content="Chap1. 기본문법과 선택자 ">
+    <meta name="description" content="1. CSS 개요">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/2_css/1.selector/">
@@ -25,24 +25,26 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/2_css/1.selector/">
-    <meta property="og:title" content="1.선택자">
-    <meta property="og:description" content="특정선택자에 중첩해서 사용한다. scss 의 용례과 같다">
+    <meta property="og:title" content="Chap1. 기본문법과 선택자 ">
+    <meta property="og:description" content="1. CSS 개요">
+    <meta property="og:image" content="https://qwerewqwerew.github.io/retype/2_css/images/7.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/2_css/1.selector/">
-    <meta property="twitter:title" content="1.선택자">
-    <meta property="twitter:description" content="특정선택자에 중첩해서 사용한다. scss 의 용례과 같다">
+    <meta property="twitter:title" content="Chap1. 기본문법과 선택자 ">
+    <meta property="twitter:description" content="1. CSS 개요">
+    <meta property="twitter:image" content="https://qwerewqwerew.github.io/retype/2_css/images/7.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.761964311181" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.762158194649" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.761964311181" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.762158194649" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -57,8 +59,8 @@
     	code span {
     		font-family: consolas, 'Inconsolata', monospace;
     		/*     font-size: .9rem;
-        line-height: 1.5;
-     */
+    	   line-height: 1.5;
+    	*/
     	}
 
     	* {
@@ -150,15 +152,15 @@
     		max-width: 10%;
     	}
 
-    	.docs-markdown div[id='목차'] + ul li,
-    	.docs-markdown div[id='목차'] + ol li {
-    		list-style-type: none;
-    		line-height: 1.8;
-    		font-weight: 400;
-    		padding-top: 2px;
-    		padding-bottom: 4px;
-    		margin-top: 0;
-    		font-size: 14px;
+    	[id*='목차'] + ul li,
+    	[id*='목차'] + ol li {
+    		list-style-type: none !important;
+    		line-height: 1.8 !important;;
+    		font-weight: 400 !important;;
+    		padding-top: 2px !important;;
+    		padding-bottom: 4px !important;;
+    		margin-top: 0 !important;;
+    		font-size: 14px !important;;
     	}
 
     	.docs-markdown table.comfortable tr td,
@@ -186,7 +188,13 @@
     	.my-1 {
     		margin: 1rem auto;
     	}
-
+    	.docs-markdown kbd,
+    	kbd {
+    		font-weight: 400;
+    		background: #efe9e950;
+    		padding-bottom: 5px;
+    		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    	}
     	.red,
     	.red * {
     		color: rgb(210, 26, 170) !important;
@@ -246,6 +254,18 @@
     		overflow: hidden;
     		text-overflow: ellipsis;
     		white-space: nowrap;
+    	}
+    	.collapse-content {
+    		background-color: #fcfcfc !important;
+    	}
+    	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
+    		display: none;
+    	}
+    	.docs-markdown hr {
+    		border-color: rgba(202, 205, 212, 0);
+    		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
+    		margin-bottom: 4rem;
+    		margin-top: 2rem;
     	}
     </style>
 
@@ -409,33 +429,1549 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="1선택자" class="break-words">
+<doc-anchor-target id="목차">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#목차">#</doc-anchor-trigger>
+        <span>목차 <!-- omit in toc --></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><doc-anchor-trigger to="#1-css-%EA%B0%9C%EC%9A%94">1. CSS 개요</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#2-%EC%A3%BC%EC%9A%94-%EC%84%A0%ED%83%9D%EC%9E%90-%EC%9A%94%EC%95%BD">2. 주요 선택자 요약</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#3-css-%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0">3. CSS 기본문법과 적용하기</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#31-%EB%82%B4%EB%B6%80%EC%8A%A4%ED%83%80%EC%9D%BC%EC%8B%9C%ED%8A%B8-internal">3.1. 내부스타일시트 (Internal)</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#311-ex">3.1.1. ex</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#32-%EC%99%B8%EB%B6%80%EC%8A%A4%ED%83%80%EC%9D%BC%EC%8B%9C%ED%8A%B8-external">3.2. 외부스타일시트 (external)</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#321-ex">3.2.1. ex</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#33-%EC%9D%B8%EB%9D%BC%EC%9D%B8-inline">3.3. 인라인 (inline)</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#331-ex">3.3.1. ex</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#34-import">3.4. @import</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#341-ex">3.4.1. ex</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#4-%EC%84%A0%ED%83%9D%EC%9E%90">4. 선택자</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#41-%ED%83%9C%EA%B7%B8%EC%84%A0%ED%83%9D%EC%9E%90">4.1. 태그선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#42-%EC%95%84%EC%9D%B4%EB%94%94%EC%84%A0%ED%83%9D%EC%9E%90">4.2. 아이디선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#43-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%84%A0%ED%83%9D%EC%9E%90">4.3. 클래스선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#44-%EC%A0%84%EC%B2%B4%EC%84%A0%ED%83%9D%EC%9E%90">4.4. 전체선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#45-%ED%95%98%EC%9C%84%EC%84%A0%ED%83%9D%EC%9E%90">4.5. 하위선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#46-%EC%9E%90%EC%8B%9D%EC%84%A0%ED%83%9D%EC%9E%90">4.6. 자식선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#47-%EC%9D%B8%EC%A0%91%EC%84%A0%ED%83%9D%EC%9E%90">4.7. 인접선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#48-%ED%98%95%EC%A0%9C%EC%84%A0%ED%83%9D%EC%9E%90">4.8. 형제선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#49-%EA%B7%B8%EB%A3%B9%EC%84%A0%ED%83%9D%EC%9E%90">4.9. 그룹선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#410-%ED%98%95%EC%84%B1%ED%80%B4%EC%A6%88-1">4.10. 형성퀴즈 1</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4101-%EB%A7%9D%EA%B3%A0%EB%84%A4-%EA%B3%B5%EC%9C%A0%EA%B3%B5%EC%9A%A9%ED%8C%8C%EC%9D%BC-%EB%B3%B8%EC%9D%B8%EC%9D%B4%EB%A6%84%EC%9D%98-%ED%8F%B4%EB%8D%94%EC%97%90-%EC%99%84%EC%84%B1%ED%8C%8C%EC%9D%BC%EB%84%A3%EA%B8%B0">4.10.1. 망고네-공유\공용파일 본인이름의 폴더에 완성파일넣기</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#411-%ED%98%95%EC%84%B1%ED%80%B4%EC%A6%88-2">4.11. 형성퀴즈 2</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#412-%EC%86%8D%EC%84%B1%EC%84%A0%ED%83%9D%EC%9E%90">4.12. 속성선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#413-%EA%B0%80%EC%83%81%EC%84%A0%ED%83%9D%EC%9E%90">4.13. 가상선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#414-%EA%B0%80%EC%83%81%EC%9A%94%EC%86%8C%EC%84%A0%ED%83%9D%EC%9E%90">4.14. 가상요소선택자</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#415-16-1-nth-of-type">4.15. 16-1. :nth-of-type</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#416-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84">4.16. 우선순위</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#417-%EC%83%81%EC%86%8D%EA%B4%80%EA%B3%84">4.17. 상속관계</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#418-%ED%98%95%EC%84%B1-%ED%80%B4%EC%A6%883">4.18. 형성 퀴즈3</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#419-%ED%98%95%EC%84%B1-%ED%80%B4%EC%A6%884">4.19. 형성 퀴즈4</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#420-%ED%98%95%EC%84%B1-%ED%80%B4%EC%A6%885">4.20. 형성 퀴즈5</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#4201-">4.20.1. &amp;</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#4202-%EC%98%88%EC%A0%9C">4.20.2. 예제</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="chap1-기본문법과-선택자" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1선택자">#</doc-anchor-trigger>
-        <span>1.선택자</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#chap1-기본문법과-선택자">#</doc-anchor-trigger>
+        <span>Chap1. 기본문법과 선택자 <!-- omit in toc --></span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="1-목차">
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
+    <div>In&nbsp;</div>
+    <div><a href="../../categories/css/">css</a>,&nbsp;</div>
+    <div><a href="../../categories/basic/">basic</a></div>
+</div>
+
+<div class="box"><p>요소선택 단축키: ctrl+shift+c</p>
+</div>
+<doc-anchor-target id="1-css-개요">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-목차">#</doc-anchor-trigger>
-        <span>1. 목차</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-css-개요">#</doc-anchor-trigger>
+        <span>1. CSS 개요</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="11-">
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="../images/css.pdf" allowfullscreen></iframe>
+    </div>
+</figure>
+</p>
+<doc-anchor-target id="2-주요-선택자-요약">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-주요-선택자-요약">#</doc-anchor-trigger>
+        <span>2. 주요 선택자 요약</span>
+    </h2>
+</doc-anchor-target>
+<p>:<a href="https://developer.mozilla.org/ko/docs/Learn/Getting_started_with_the_web/CSS_basics#%EC%84%A0%ED%83%9D%EC%9E%90%EC%9D%98_%EC%97%AC%EB%9F%AC_%EC%A2%85%EB%A5%98" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-gray-700 hover:bg-gray-600 dark:bg-dark-550 dark:hover:bg-dark-450 text-white dark:text-dark-350 px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></svg></span>
+    <span>MDN레퍼런스</span>
+</a>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="../images/css%EC%84%A0%ED%83%9D%EC%9E%90.pdf" allowfullscreen></iframe>
+    </div>
+</figure>
+</p>
+<doc-anchor-target id="3-css-기본문법과-적용하기">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-css-기본문법과-적용하기">#</doc-anchor-trigger>
+        <span>3. CSS 기본문법과 적용하기</span>
+    </h2>
+</doc-anchor-target>
+<blockquote>
+<p><img src="../images/7.png" alt="alt" /></p>
+</blockquote>
+<doc-anchor-target id="31-내부스타일시트-internal">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-">#</doc-anchor-trigger>
-        <span>1.1. &amp;</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-내부스타일시트-internal">#</doc-anchor-trigger>
+        <span>3.1. 내부스타일시트 (Internal)</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>특정선택자에 중첩해서 사용한다.<br />
+<p><code v-pre>head</code> 태그 사이에 <code v-pre>style</code> 태그로 작성하는 방식
+<img src="../images/3.png" alt="alt" /></p>
+</blockquote>
+<doc-anchor-target id="311-ex">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#311-ex">#</doc-anchor-trigger>
+        <span>3.1.1. ex</span>
+    </h4>
+</doc-anchor-target>
+<p><a href="https://qwerewqwerew.github.io/source/css/1-selector/01.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<doc-panels>
+   <doc-panel id="step-1" collapsed>
+       <template #title>Step 1</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">우리를 기쁘게 하는 것들.</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="step-2" collapsed>
+       <template #title>Step 2</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/01.html</div>
+<pre class="language-markup" data-line="8-10"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot; /&gt;
+	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+	&lt;title&gt;내부스타일시트&lt;/title&gt;
+	&lt;style&gt;
+		p {
+			color: red;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="32-외부스타일시트-external">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#32-외부스타일시트-external">#</doc-anchor-trigger>
+        <span>3.2. 외부스타일시트 (external)</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p><code v-pre>head</code> 태그 사이에 <code v-pre>link</code> 태그에 <code v-pre>css</code> 문서의 주소를 링크하는 방식
+<img src="../images/2_02.png" alt="alt" /></p>
+</blockquote>
+<doc-anchor-target id="321-ex">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#321-ex">#</doc-anchor-trigger>
+        <span>3.2.1. ex</span>
+    </h4>
+</doc-anchor-target>
+<p><a href="https://qwerewqwerew.github.io/source/css/1-selector/02.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<doc-panels>
+   <doc-panel id="step-1" collapsed>
+       <template #title>Step 1</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">우리를 기쁘게 하는 것들.</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="step-2" collapsed>
+       <template #title>Step 2</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/02.html</div>
+<pre class="language-markup" data-line="8-10"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;외부스타일시트&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;external.css&quot;&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/external.css</div>
+<pre class="language-css"><code v-pre class="language-css">p {
+	color: red;
+}
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="33-인라인-inline">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#33-인라인-inline">#</doc-anchor-trigger>
+        <span>3.3. 인라인 (inline)</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p><code v-pre>html</code> 태그안에 작성
+<img src="../images/5.png" alt="Untitled" /></p>
+</blockquote>
+<p><a href="https://qwerewqwerew.github.io/source/css/1-selector/03.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<doc-anchor-target id="331-ex">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#331-ex">#</doc-anchor-trigger>
+        <span>3.3.1. ex</span>
+    </h4>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="step-1" collapsed>
+       <template #title>Step 1</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-none"><code v-pre class="language-none">우리를 기쁘게 하는 것들.
+
+menu1
+menu2
+menu3
+menu4</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="step-2" collapsed>
+       <template #title>Step 2</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/03.html</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;인라인&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style=&quot;color:red;&quot;&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+    &lt;ul style=&quot;background-color: yellow;&quot;&gt;
+      &lt;li&gt;menu1&lt;/li&gt;
+      &lt;li&gt;menu2&lt;/li&gt;
+      &lt;li&gt;menu3&lt;/li&gt;
+      &lt;li&gt;menu4&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="34-import">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#34-import">#</doc-anchor-trigger>
+        <span>3.4. @import</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>css 문서에 다른 css 문서를 넣는 방식</p>
+<p><img src="../images/3.png" alt="@charset 'UTF-8';  로 css 문서의 언어가 한글임을 표시한다" /></p>
+</blockquote>
+<p><a href="https://qwerewqwerew.github.io/source/css/1-selector/04.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<doc-anchor-target id="341-ex">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#341-ex">#</doc-anchor-trigger>
+        <span>3.4.1. ex</span>
+    </h4>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="step-1" collapsed>
+       <template #title>Step 1</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-none"><code v-pre class="language-none">우리를 기쁘게 하는 것들.
+box1</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="step-2" collapsed>
+       <template #title>Step 2</template>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/04.html</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;@import&lt;/title&gt;
+		&lt;style&gt;
+				@import url(&quot;import.css&quot;);
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;우리를 기쁘게 하는 것들. &lt;/p&gt;
+		&lt;div&gt;box1&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<hr>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/import.css</div>
+<pre class="language-css"><code v-pre class="language-css">/* css의 문자세트 지정 */
+@charset &quot;UTF-8&quot;;
+@import url('./reset.css');
+body {
+	background: red;
+}</code></pre>
+</doc-codeblock></div>
+<hr>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">css/reset.css</div>
+<pre class="language-css"><code v-pre class="language-css">/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {display: block; }
+body {line-height: 1; }
+ol,
+ul {list-style: none; }
+blockquote,
+q {quotes: none; }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: '';content: none; }
+table {border-collapse: collapse;border-spacing: 0; }
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="4-선택자">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-선택자">#</doc-anchor-trigger>
+        <span>4. 선택자</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="41-태그선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#41-태그선택자">#</doc-anchor-trigger>
+        <span>4.1. 태그선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 태그의 이름을 선택한다
+<p><strong>태그</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled208.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-5.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">머리가 좋아지는 음식</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-5.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;type,tag선택자&lt;/title&gt;
+    &lt;style&gt;
+        body{background: red;}
+        p{color:aliceblue;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;머리가 좋아지는 음식&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="42-아이디선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#42-아이디선택자">#</doc-anchor-trigger>
+        <span>4.2. 아이디선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 태그에 아이디를 부여하고 선택
+<p><strong>#아이디</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled209.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-6.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">우리를 기쁘게 하는 것들
+
+건강에 좋은 차
+
+머리가 좋아지는 음식</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-6.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;ID선택자&lt;/title&gt;
+    &lt;style&gt;
+        p{color:red;}
+        #health{color:blue;}
+        #brain{color:green;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;우리를 기쁘게 하는 것들&lt;/p&gt;
+    &lt;!--
+        반드시 영문으로 시작
+        특수문자는-,_만 허용
+        영문,-,_,숫자
+        아이디는 중복불가
+     --&gt;
+    &lt;p id=&quot;health&quot;&gt;건강에 좋은 차&lt;/p&gt;
+    &lt;p id=&quot;brain&quot;&gt;머리가 좋아지는 음식&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="43-클래스선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#43-클래스선택자">#</doc-anchor-trigger>
+        <span>4.3. 클래스선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 태그에 클래스를 부여하고 선택
+<p><strong>.클래스</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2010.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-7.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">우리를 기쁘게 하는 것들
+
+건강에 좋은 차
+
+머리가 좋아지는 음식</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-7.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;CLASS선택자&lt;/title&gt;
+    &lt;style&gt;
+        .happy{color:red; background: gray;}
+        .health{color:blue;}
+        .brain{color:green;}
+        .t_center{text-align: center;}
+        .t_color{color:yellow;}
+        .bg_black{background-color: black;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!--
+        반드시 영문으로 시작
+        특수문자는-,_만 허용
+        영문,-,_,숫자
+        아이디는 중복불가
+        클래스는 중복가능
+        대소문자
+     --&gt;
+    &lt;p class=&quot;happy&quot;&gt;우리를 기쁘게 하는 것들&lt;/p&gt;
+    &lt;p class=&quot;health t_center bg_black&quot;&gt;건강에 좋은 차&lt;/p&gt;
+    &lt;p class=&quot;brain bg_black t_center&quot;&gt;머리가 &lt;span class=&quot;t_color&quot;&gt;좋아지는&lt;/span&gt; 음식&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<p><a href="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/bem.pdf">BEM.pdf</a></p>
+<hr>
+<doc-anchor-target id="44-전체선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#44-전체선택자">#</doc-anchor-trigger>
+        <span>4.4. 전체선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 모든 요소를 선택
+<p>*****</p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2011.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-8.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">입고신고쓰고끼는 것들..
+옷
+신발
+안경
+장갑
+발이 편한 신발과 눈이 편한 안경은 필수이다.</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-8.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;전체선택자&lt;/title&gt;
+    &lt;style&gt;
+        /* 웹브라우저가 갖고있는 기본스타일 속성을 초기화 할때 주로 사용 */
+      * {
+        margin: 0px;
+        padding: 0px;
+        color: #0000ff;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;입고신고쓰고끼는 것들..&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;옷&lt;/li&gt;
+      &lt;li&gt;신발&lt;/li&gt;
+      &lt;li&gt;안경&lt;/li&gt;
+      &lt;li&gt;장갑&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;발이 편한 신발과 눈이 편한 안경은 필수이다.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="45-하위선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#45-하위선택자">#</doc-anchor-trigger>
+        <span>4.5. 하위선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 자손 태그를 선택
+<p><strong>요소 요소</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2012.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-9.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">7월의 여행지
+
+8월의 여행지
+
+1주차 여행지
+
+2주차 여행지
+
+내년의 여행지</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-9.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;하위선택자&lt;/title&gt;
+    &lt;style&gt;
+        /* 하위의 모든 요소선택 */
+        div p{color:blue;}
+        li p{background: gray;}
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;abox&quot;&gt;
+      &lt;p&gt;7월의 여행지&lt;/p&gt;
+      &lt;p&gt;8월의 여행지&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;p&gt;1주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;2주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p&gt;내년의 여행지&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="46-자식선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#46-자식선택자">#</doc-anchor-trigger>
+        <span>4.6. 자식선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 자식요소 선택
+<p><strong>요소&gt;요소</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2013.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-10.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">7월의 여행지
+
+8월의 여행지
+
+1주차 여행지
+
+2주차 여행지
+
+내년의 여행지</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-10.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;하위선택자&lt;/title&gt;
+    &lt;style&gt;
+      /* 하위의 자식 요소선택 */
+
+      div &gt; * {
+        color: blue;
+      }
+      li p {
+        background: gray;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;abox&quot;&gt;
+      &lt;p&gt;7월의 여행지&lt;/p&gt;
+      &lt;p&gt;8월의 여행지&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;p&gt;1주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;2주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p&gt;내년의 여행지&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="47-인접선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#47-인접선택자">#</doc-anchor-trigger>
+        <span>4.7. 인접선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 동위관계의 요소 하나만 선택
+<p><strong>요소+요소</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2014.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-11.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">엑스포 안내
+책자를 배부하고 있습니다.
+
+안내데스크를 활용하시기 바랍니다.</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-11.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;인접선택자&lt;/title&gt;
+    &lt;style&gt;
+      .title + p {
+        color: red;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;abox&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;7월의 여행지&lt;/p&gt;
+      &lt;p&gt;8월의 여행지&lt;/p&gt;
+      &lt;p&gt;9월의 여행지&lt;/p&gt;
+      &lt;p&gt;10월의 여행지&lt;/p&gt;
+      &lt;p&gt;11월의 여행지&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;p&gt;1주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;2주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p&gt;내년의 여행지&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="48-형제선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#48-형제선택자">#</doc-anchor-trigger>
+        <span>4.8. 형제선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 모든 동위요소 선택
+<p><strong>요소~요소</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2015.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-12.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">엑스포 안내
+책자를 배부하고 있습니다.
+
+안내데스크를 활용하시기 바랍니다.
+
+주중에는 정오 이벤트가 있습니다
+
+주말에는 자정 이벤트가 있습니다
+
+9월에는 가을 이벤트가 시작됩니다</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p><span class="docs-emoji">&#x1F48C;</span> ex2-12.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;형제선택자&lt;/title&gt;
+    &lt;style&gt;
+      .title ~ p {
+        color: red;
+      }
+      .abox ~ p {
+        color: aqua;
+      }
+      ul p {
+        color: purple;
+      }
+      li + li &gt; p {
+        color: white;
+        background: black;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;abox&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;7월의 여행지&lt;/p&gt;
+      &lt;p&gt;8월의 여행지&lt;/p&gt;
+      &lt;p&gt;9월의 여행지&lt;/p&gt;
+      &lt;p&gt;10월의 여행지&lt;/p&gt;
+      &lt;p&gt;11월의 여행지&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;p&gt;1주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;2주차 여행지&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p&gt;내년의 여행지&lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="49-그룹선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#49-그룹선택자">#</doc-anchor-trigger>
+        <span>4.9. 그룹선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 여러 요소에 같은 속성적용
+<p><strong>태그,선택자</strong></p>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2016.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-13.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">웹 표준 퍼블리싱
+웹디자인의 한 분야로 원래 용어는 웹 콘텐츠 UI 디자인이다.
+
+퍼블리싱에서 요구하는 것들</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="410-형성퀴즈-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#410-형성퀴즈-1">#</doc-anchor-trigger>
+        <span>4.10. 형성퀴즈 1</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="4101-망고네-공유공용파일-본인이름의-폴더에-완성파일넣기">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4101-망고네-공유공용파일-본인이름의-폴더에-완성파일넣기">#</doc-anchor-trigger>
+        <span>4.10.1. 망고네-공유\공용파일 본인이름의 폴더에 완성파일넣기</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>아래의 선택자를 모두 사용해서 만드세요
+<ul>
+<li>전체선택자</li>
+<li>그룹선택자</li>
+<li>태그선택자</li>
+<li>아이디선택자</li>
+<li>클래스선택자</li>
+<li>하위선택자</li>
+<li>자식선택자</li>
+<li>형제선택자</li>
+<li>인접선택자</li>
+</ul>
+</li>
+</ul>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2017.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;건강한 하루&lt;/h1&gt;
+    &lt;div id=&quot;container&quot;&gt;
+      &lt;h2&gt;건강해지는 차&lt;/h2&gt;
+      &lt;p&gt;
+        머리와 피부에 좋은 차는 어떤 것들일까. &lt;span&gt;차의 종류&lt;/span&gt;에 대해
+        알아보도록 합니다
+      &lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li class=&quot;tea1&quot;&gt;
+          &lt;h3&gt;대나무차&lt;span&gt;15,000원&lt;/span&gt;&lt;/h3&gt;
+          &lt;p&gt;얼굴에 물을 주는 효과가 있다.&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tea2&quot;&gt;
+          &lt;h3&gt;감잎차&lt;span&gt;14,000원&lt;/span&gt;&lt;/h3&gt;
+          &lt;p&gt;빈혈있는 사람에게 효과가 있다.&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tea3&quot;&gt;
+          &lt;h3&gt;결명자차&lt;span&gt;20,000원&lt;/span&gt;&lt;/h3&gt;
+          &lt;p&gt;
+            눈을 밝혀주는 효과가 있다. 보리차와 비슷하나 맛이 더 은은하고
+            구수하다.
+          &lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="411-형성퀴즈-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#411-형성퀴즈-2">#</doc-anchor-trigger>
+        <span>4.11. 형성퀴즈 2</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><p>css</p>
+<p><img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2018.png" alt="Untitled" /></p>
+</li>
+</ul>
+<aside>
+👁️‍🗨️ ex1-18-2.html 을 아래와 같이 수정하시오
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2019.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<hr>
+<doc-anchor-target id="412-속성선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#412-속성선택자">#</doc-anchor-trigger>
+        <span>4.12. 속성선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 속성을 선택해서 스타일 지정
+<p><strong>태그[속성]</strong></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>속성</th>
+<th>의미</th>
+<th>예문</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^ (캐럿)</td>
+<td>시작</td>
+<td>[속성^=”망고”]</td>
+<td>속성의 값이 “망고”로 시작</td>
+</tr>
+<tr>
+<td>$ (달러)</td>
+<td>끝</td>
+<td>[속성$=”망고”]</td>
+<td>속성의 값이 “망고”로 끝남</td>
+</tr>
+<tr>
+<td>* (애스터리스크)</td>
+<td>포함</td>
+<td>[속성*=”망고”]</td>
+<td>속성의 값에 “망고”가 포함</td>
+</tr>
+<tr>
+<td>= (이퀄)</td>
+<td>일치</td>
+<td>[속성=”망고”]</td>
+<td>속성의 값이 “망고”와 일치</td>
+</tr>
+</tbody>
+</table>
+</div>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2020.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-14-복습용.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;h3 class=&quot;logo&quot;&gt;서울특별시&lt;/h3&gt;
+&lt;h3&gt;경기도&lt;/h3&gt;
+&lt;p class=&quot;address&quot;&gt;주소록을 작성합니다.&lt;/p&gt;
+&lt;p class=&quot;phone&quot;&gt;전화번호부를 작성합니다.&lt;/p&gt;
+&lt;p class=&quot;health&quot;&gt;건강기록부를 작성합니다.&lt;/p&gt;
+&lt;p class=&quot;I am U&quot;&gt;금전출납부를 작성합니다.&lt;/p&gt;
+&lt;p class=&quot;profit-1&quot;&gt;손익계산서를 작성합니다.&lt;/p&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<p><span class="docs-emoji">&#x1F63A;</span> <strong>속성을 지정하기</strong></p>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2021.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-14-1.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">속성 선택자 사용하기
+
+조리학부 자격증
+복어조리기능사
+양식조리기능사
+일식조리기능사
+제과기능장
+제과기능사
+제빵기능사
+조리기능장
+조리산업기사(복어조리)
+조리산업기사(양식)
+조리산업기사(일식)
+조리산업기사(중식)
+조리산업기사(한식)
+조주기능사
+중식조리기능사
+한식조리기능사</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;속성선택자&lt;/title&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;속성 선택자 사용하기&lt;/h1&gt;
+    &lt;hr&gt;
+    &lt;h2&gt;조리학부 자격증&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot;&gt;복어조리기능사&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot;&gt;양식조리기능사&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot;&gt;일식조리기능사&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot;&gt;제과기능장&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot;&gt;제과기능사&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot;&gt;제빵기능사&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot;&gt;조리기능장&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot;&gt;조리산업기사(복어조리)&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot; title=&quot;조리산업기사(양식)&quot;&gt;조리산업기사(양식)&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot; title=&quot;조리산업기사(일식)&quot;&gt;조리산업기사(일식)&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot; title=&quot;조리산업기사(중식)&quot;&gt;조리산업기사(중식)&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; target=&quot;_blank&quot; title=&quot;조리산업기사(한식)&quot;&gt;조리산업기사(한식)&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot;&gt;조주기능사&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;중식조리기능사&quot;&gt;중식조리기능사&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;한식조리기능사&quot;&gt;한식조리기능사&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<p><span class="docs-emoji">&#x1F63A;</span> <strong>속성을 특정하기</strong></p>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2022.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-14-2.html</p>
+<p>html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;복어조리기능사&quot;&gt;복어조리기능사&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조리기능사&quot;&gt;조리기능사&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;일식조리기능사&quot;&gt;일식조리기능사&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;제과기능장&quot;&gt;제과기능장&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;제과기능사&quot;&gt;제과기능사&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;제빵기능사&quot;&gt;제빵기능사&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조리기능장&quot;&gt;조리기능장&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조리산업기사(복어조리)&quot;&gt;조리산업기사(복어조리)&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조리산업기사(양식)&quot;&gt;조리산업기사(양식)&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조리산업기사(일식)&quot;&gt;조리산업기사(일식)&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조리산업기사(중식)&quot;&gt;조리산업기사(중식)&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조리산업기사(한식)&quot;&gt;조리산업기사(한식)&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;조주기능사&quot;&gt;조주기능사&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;중식조리기능사&quot;&gt;중식조리기능사&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.q-net.or.kr&quot; title=&quot;한식조리기능사&quot;&gt;한식조리기능사&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;</code></pre>
+</doc-codeblock></div>
+<p>css</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">a[title=&quot;조주기능사&quot;]{
+            background: #ff9;
+            background: #ffff99;
+            font-weight: bold;
+        }
+        a[title^=&quot;제과&quot;]{
+            background: #48483b;
+            color:#ffff99
+        }
+        a[title$=&quot;기능장&quot;]{
+            background:#00b627;
+            color:#ffffff;
+            font-size:24px;
+        }
+        a[title$=&quot;기능사&quot;]{
+            background:#2400b6;
+            color:#dbfb0b;
+            font-size:24px;
+            font-weight: bold;
+        }
+        a[title*=&quot;조리&quot;]{
+            color:#ff0000;
+            text-decoration:none;
+            background-color: #dff112;
+        }
+        a[title^=&quot;복&quot;]{
+            color:#000000;
+            font-size: 36px;
+            background-color: #6aff65;
+        }</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="413-가상선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#413-가상선택자">#</doc-anchor-trigger>
+        <span>4.13. 가상선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 하이퍼링크에 스타일 부여
+<p>둘이상 사용시 순서중요</p>
+<ol>
+<li>:link</li>
+<li>:visted</li>
+<li>:hover</li>
+<li>:active</li>
+</ol>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2023.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-15.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">COMPANY
+PRODUCT
+SERVICE
+CUSTOMER
+COMMUNITY</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2024.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-15-1.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">동적 관련 가상 클래스 선택자
+로그인
+
+아이디
+
+비밀번호
+login</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<p><a href="https://www.notion.so/tabindex-88e74e0c2bfb4c039ae5b4cae56539bc?pvs=21">탭인덱스</a></p>
+<hr>
+<doc-anchor-target id="414-가상요소선택자">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#414-가상요소선택자">#</doc-anchor-trigger>
+        <span>4.14. 가상요소선택자</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 선택자 없이 선택할수 있음
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2025.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-16.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">COMPANY
+PRODUCT
+SERVICE
+COMMUNITY</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="415-16-1-nth-of-type">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#415-16-1-nth-of-type">#</doc-anchor-trigger>
+        <span>4.15. 16-1. :nth-of-type</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ **nth-child VS nth-of-type**
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>:nth-child(n)</th>
+<th>:nth-of-type(n)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>부모의 모든 자식요소 중 n번째</td>
+<td>부모의 자식 중 특정요소의 n번째</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2026.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-16-1.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">1. p태그1
+
+2. span태그1
+3. p태그2
+
+4. span태그2
+5. p태그3</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="416-우선순위">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#416-우선순위">#</doc-anchor-trigger>
+        <span>4.16. 우선순위</span>
+    </h3>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2027.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<p><a href="https://www.notion.so/01-fd4f32683abb470892b0c68da5a2977e?pvs=21"><span class="docs-emoji">&#x1F517;</span>PPT 참조</a></p>
+<ul>
+<li><p>ex2-17.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">한국인은 비타민 D가 부족한 사람이 많다.
+
+비타민D는 햇빛에 있다.</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p>ex2-17-2.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;body id=&quot;bgPage1&quot; class=&quot;bgPage2&quot;&gt;
+	&lt;h1&gt;선택자간의 우선 순위 알아보기&lt;/h1&gt;
+	&lt;hr /&gt;
+	&lt;div&gt;
+		&lt;h2&gt;굴 이야기&lt;/h2&gt;
+		&lt;p class=&quot;bgPage2&quot;&gt;
+			일명 &lt;span class=&quot;blueText&quot;&gt;석화&lt;/span&gt;라고도 하는데 멀리서 보면 따낸 굴조개 껍질이 바위면에 하얗게 붙어있어서 마치 &lt;span class=&quot;blueText&quot;&gt;꽃무더기&lt;/span&gt;를 연상하게 한다. 굴은 &lt;span class=&quot;blueText&quot;&gt;3대 영양소&lt;/span&gt;는 물론 비타민, 미네랄에 이르기까지 풍부한 영양분을 함유하고 있어서 완전식품인 우유와 별로 다를 바가 없다.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="417-상속관계">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#417-상속관계">#</doc-anchor-trigger>
+        <span>4.17. 상속관계</span>
+    </h3>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2028.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<ul>
+<li><p>ex2-17-1.html</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">속성 값의 상속 관계 알아보기
+굴 이야기
+일명 석화라고도 하는데 멀리서 보면 따낸 굴조개 껍질이 바위면에 하얗게 붙어있어서 마치 꽃무더기를 연상하게 한다. 굴은 3대 영양소는 물론 비타민, 미네랄에 이르기까지 풍부한 영양분을 함유하고 있어서 완전식품인 우유와 별로 다를 바가 없다.</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="418-형성-퀴즈3">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#418-형성-퀴즈3">#</doc-anchor-trigger>
+        <span>4.18. 형성 퀴즈3</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 컨테이너의 폭은 800px 이며 중앙정렬은 무시해도 됨
+<p>주어진 리소스 파일을 사용해서 아래의 pdf 문서와 같은 html 을 작성하시오</p>
+<p><a href="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/product.pdf">product.pdf</a></p>
+</aside>
+<ul>
+<li><p>리소스파일</p>
+<p><img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/salad.jpg" alt="salad.jpg" /></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">레드향
+껍질에 붉은 빛이 돌아 레드향이라 불린다.
+
+레드향은 한라봉과 귤을 교배한 것으로
+일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+
+비타민 C와 비타민 P가 풍부해
+혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.
+
+레드향 샐러드 레시피
+상품 구성</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<doc-anchor-target id="419-형성-퀴즈4">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#419-형성-퀴즈4">#</doc-anchor-trigger>
+        <span>4.19. 형성 퀴즈4</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 메뉴의 폭은 150px , 테두리 5px
+</aside>
+<ul>
+<li><p>리소스파일</p>
+<p><img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2029.png" alt="Untitled" /></p>
+<p><img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2030.png" alt="Untitled" /></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">밥/죽/면
+매일 반찬
+국/찌게/전골
+가족/초대요리
+소스/양념장
+간식/음료
+기타
+게시판
+자유 게시판
+회원 장터
+나만의 레시피
+불후의 레시피</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2031.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="420-형성-퀴즈5">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#420-형성-퀴즈5">#</doc-anchor-trigger>
+        <span>4.20. 형성 퀴즈5</span>
+    </h3>
+</doc-anchor-target>
+<aside>
+👁️‍🗨️ 형성퀴즈4의 완성파일을 다른이름으로 저장하여 구현
+</aside>
+<p><figure class="content-center">
+    <img src="01-e18480e185b5e18487e185a9e186abe18486e185aee186abe18487e185a5e186b8e18480e185aa20e18489e185a5e186abe18490e185a2e186a8e1848ce185a120fd4f32683abb470892b0c68da5a2977e/untitled2032.png" alt="Untitled">
+    <figcaption class="caption">Untitled</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="4201-">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4201-">#</doc-anchor-trigger>
+        <span>4.20.1. &amp;</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>특정선택자에 중첩해서 사용한다.
 scss 의 용례과 같다</p>
 </blockquote>
-<doc-anchor-target id="12-예제">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-예제">#</doc-anchor-trigger>
-        <span>1.2. 예제</span>
-    </h3>
+<doc-anchor-target id="4202-예제">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4202-예제">#</doc-anchor-trigger>
+        <span>4.20.2. 예제</span>
+    </h4>
 </doc-anchor-target>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
@@ -509,8 +2045,11 @@ div {
                                         <span class="mr-2"><a href="../../tags/css/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
                                     <span>css</span>
                                 </a></span>
-                                        <span class="mr-2"><a href="../../tags/responsive/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>responsive</span>
+                                        <span class="mr-2"><a href="../../tags/selector/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>selector</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../tags/%EC%84%A0%ED%83%9D%EC%9E%90/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>선택자</span>
                                 </a></span>
                                     </span>
                                 </div>

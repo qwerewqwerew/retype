@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761964311181">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762158194649">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.761964311181" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.762158194649" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.761964311181" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.761964311181" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.762158194649" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.762158194649" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -57,8 +57,8 @@
     	code span {
     		font-family: consolas, 'Inconsolata', monospace;
     		/*     font-size: .9rem;
-        line-height: 1.5;
-     */
+    	   line-height: 1.5;
+    	*/
     	}
 
     	* {
@@ -150,15 +150,15 @@
     		max-width: 10%;
     	}
 
-    	.docs-markdown div[id='목차'] + ul li,
-    	.docs-markdown div[id='목차'] + ol li {
-    		list-style-type: none;
-    		line-height: 1.8;
-    		font-weight: 400;
-    		padding-top: 2px;
-    		padding-bottom: 4px;
-    		margin-top: 0;
-    		font-size: 14px;
+    	[id*='목차'] + ul li,
+    	[id*='목차'] + ol li {
+    		list-style-type: none !important;
+    		line-height: 1.8 !important;;
+    		font-weight: 400 !important;;
+    		padding-top: 2px !important;;
+    		padding-bottom: 4px !important;;
+    		margin-top: 0 !important;;
+    		font-size: 14px !important;;
     	}
 
     	.docs-markdown table.comfortable tr td,
@@ -186,7 +186,13 @@
     	.my-1 {
     		margin: 1rem auto;
     	}
-
+    	.docs-markdown kbd,
+    	kbd {
+    		font-weight: 400;
+    		background: #efe9e950;
+    		padding-bottom: 5px;
+    		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    	}
     	.red,
     	.red * {
     		color: rgb(210, 26, 170) !important;
@@ -246,6 +252,18 @@
     		overflow: hidden;
     		text-overflow: ellipsis;
     		white-space: nowrap;
+    	}
+    	.collapse-content {
+    		background-color: #fcfcfc !important;
+    	}
+    	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
+    		display: none;
+    	}
+    	.docs-markdown hr {
+    		border-color: rgba(202, 205, 212, 0);
+    		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
+    		margin-bottom: 4rem;
+    		margin-top: 2rem;
     	}
     </style>
 
@@ -497,10 +515,56 @@
         <span>1.2. 작성</span>
     </h2>
 </doc-anchor-target>
+<p><a href="https://qwerewqwerew.github.io/source/Scss/final/extend.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>html의 css 링크는 mixin.css와 extend.css 만 적용한다.</p>
+        </div>
+    </div>
+</div>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">basic.html</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- 		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/basic.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/var.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/nesting.css&quot; /&gt; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/mixin.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/extend.css&quot; /&gt;</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>extend 선언시에는 <code v-pre>%</code> 키워드를 사용한다.</p>
+        </div>
+    </div>
+</div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">scss/extend.scss</div>
 <pre class="language-scss" data-line="6-16,23,24,84,91,96,99"><code v-pre class="language-scss">@charset &quot;utf-8&quot;;
 @import url(./reset.css);
-
 ...생략
 
 %colorSize {
@@ -514,82 +578,54 @@
 %padding {
 	padding: 2vw 4vw;
 }
-body {
-	background: ivory;
-}
 
+</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>extend 적용시에는 <code v-pre>@extend</code> 키워드를 사용한다.</p>
+        </div>
+    </div>
+</div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">scss/extend.scss</div>
+<pre class="language-scss" data-line="2-4,8,18,23-24,29-34"><code v-pre class="language-scss">...생략
 header {
-	@include flexDirectJustiAlign();
 	@extend %padding;
 	@extend %boxshadow;
-	a {
-		color: red;
-	}
-	&amp; a {
-		color: blue;
-	}
-
-	h1 {
-		flex: 1 1 30%;
-		&amp; &gt; a {
-			@include fontSizeBgColor(2rem, #6ffaff, #0c08ff);
-		}
-		a:hover {
-			@include hover(pink, underline);
-		}
-	}
-
-	nav {
-		flex: 1 1 50%;
-	}
-
-	button {
-		flex: 1 1 10%;
-		@at-root a {
-			color: orange;
-		}
-		a:hover {
-			color: red;
-		}
-		&amp;:hover a {
-			@include fontSizeBgColor(2rem, yellow);
-		}
-	}
-
-	ul {
-		display: flex;
-		width: 80%;
-
-		&amp; li {
-			flex: 1 1 30%;
-		}
-
-		&amp; ul {
-			display: block;
-		}
-	}
-}
-
+...생략
+}//header
 main {
 	@extend %padding;
 }
 .section1 {
 	&amp;-box {
 		background: #c9c9c9;
-		max-width: 500px;
+		max-width: 80%;
 		margin: auto;
 		@include flexDirectJustiAlign(column);
 		border-radius: 8px;
 		border: 4px solid #d5d5d5;
 		@extend %boxshadow;
-	}
 
-	&amp;-box &gt; &amp;-item {
-		width: 30%;
-		@include flexDirectJustiAlign(row, space-between, center);
-		padding: 1vw;
-		@extend %boxshadow;
-		border: 4px solid #6361e7;
+		&amp;-item {
+			width: 30%;
+			@include flexDirectJustiAlign(row, space-between, center);
+			@extend %padding;
+			@extend %boxshadow;
+			border: 4px solid #6361e7;
+		}
 	}
 
 	&amp;-box &gt; &amp;-item &gt; &amp;-title {
