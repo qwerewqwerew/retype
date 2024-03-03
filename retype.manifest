@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-03T06:29:00Z",
+  "created": "2024-03-03T07:51:57Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3808,6 +3808,9 @@
       "path": "3_js\\basic\\2.partial\\15.reduce\\index.html"
     },
     {
+      "path": "3_js\\basic\\2.partial\\16\\index.html"
+    },
+    {
       "path": "3_js\\basic\\2.partial\\2.스타일조작\\index.html"
     },
     {
@@ -3863,38 +3866,48 @@
       "old": true
     },
     {
-      "path": "3_js\\deep\\2\\index.html"
+      "path": "3_js\\deep\\2\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\3\\index.html"
+      "path": "3_js\\deep\\3\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\4.gsap\\index.html"
+      "path": "3_js\\deep\\4.gsap\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\5.swiper\\index.html"
+      "path": "3_js\\deep\\5.swiper\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\6.interaction\\index.html"
+      "path": "3_js\\deep\\6.interaction\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\7.carousel\\index.html"
+      "path": "3_js\\deep\\7.carousel\\index.html",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\8.adaption\\index.html"
+      "path": "3_js\\deep\\8.adaption\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\deep\\calendar\\index.html",
       "old": true
     },
     {
-      "path": "3_js\\deep\\files\\2024-02-05_161302.jpg"
+      "path": "3_js\\deep\\files\\2024-02-05_161302.jpg",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\files\\swiper.html"
+      "path": "3_js\\deep\\files\\swiper.html",
+      "old": true
     },
     {
-      "path": "3_js\\deep\\index.html"
+      "path": "3_js\\deep\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\deep\\js_slide\\02.html",
@@ -3976,118 +3989,156 @@
       "path": "4_jquery\\basic\\result\\easing2.html"
     },
     {
-      "path": "4_jquery\\deep\\1.탑버튼\\index.html"
+      "path": "4_jquery\\deep\\1.탑버튼\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\10.스킬바\\index.html"
+      "path": "4_jquery\\deep\\10.스킬바\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\10\\10-1q.html"
+      "path": "4_jquery\\deep\\10\\10-1q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\10\\10-2q.html"
+      "path": "4_jquery\\deep\\10\\10-2q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\10\\10-3q.html"
+      "path": "4_jquery\\deep\\10\\10-3q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\10\\circle.jpg"
+      "path": "4_jquery\\deep\\10\\circle.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\11.풀페이지\\index.html"
+      "path": "4_jquery\\deep\\11.풀페이지\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\11\\fullpage.js-2.9.7.zip"
+      "path": "4_jquery\\deep\\11\\fullpage.js-2.9.7.zip",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\11\\result.html"
+      "path": "4_jquery\\deep\\11\\result.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12.슬라이드\\index.html"
+      "path": "4_jquery\\deep\\12.슬라이드\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\12-jq.html"
+      "path": "4_jquery\\deep\\12\\final\\12-jq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\12a-jq.html"
+      "path": "4_jquery\\deep\\12\\final\\12a-jq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img.zip"
+      "path": "4_jquery\\deep\\12\\final\\img.zip",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\0.png"
+      "path": "4_jquery\\deep\\12\\final\\img\\0.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\1.png"
+      "path": "4_jquery\\deep\\12\\final\\img\\1.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\2.png"
+      "path": "4_jquery\\deep\\12\\final\\img\\2.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\aguaazul.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\aguaazul.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\burneyfalls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\burneyfalls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\cachoeira_do_pacheco.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\cachoeira_do_pacheco.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\deer_leap_falls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\deer_leap_falls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\fulmer_falls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\fulmer_falls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\hopetoun_falls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\hopetoun_falls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\jonathans_run.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\jonathans_run.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\kjosfossen.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\kjosfossen.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\krimmlfalls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\krimmlfalls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\madhabkunda_falls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\madhabkunda_falls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\manavgat.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\manavgat.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\niagara_falls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\niagara_falls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\600\\nymph_falls.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\600\\nymph_falls.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\btnvisual.png"
+      "path": "4_jquery\\deep\\12\\final\\img\\btnvisual.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\keyvisual_0.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\keyvisual_0.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\keyvisual_1.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\keyvisual_1.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\keyvisual_2.jpg"
+      "path": "4_jquery\\deep\\12\\final\\img\\keyvisual_2.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\left.png"
+      "path": "4_jquery\\deep\\12\\final\\img\\left.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\12\\final\\img\\right.png"
+      "path": "4_jquery\\deep\\12\\final\\img\\right.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\13.탭\\index.html"
+      "path": "4_jquery\\deep\\13.탭\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\13\\jq.html"
+      "path": "4_jquery\\deep\\13\\jq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\14.scrolleffect\\index.html"
+      "path": "4_jquery\\deep\\14.scrolleffect\\index.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\14\\step1\\jq.html",
@@ -4138,170 +4189,224 @@
       "old": true
     },
     {
-      "path": "4_jquery\\deep\\15.멀티플슬라이드\\index.html"
+      "path": "4_jquery\\deep\\15.멀티플슬라이드\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\16.ajax\\index.html"
+      "path": "4_jquery\\deep\\16.ajax\\index.html",
+      "old": true
     },
     {
       "path": "4_jquery\\deep\\16.json\\index.html",
       "old": true
     },
     {
-      "path": "4_jquery\\deep\\17\\index.html"
+      "path": "4_jquery\\deep\\17\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\2.롤링배너\\index.html"
+      "path": "4_jquery\\deep\\2.롤링배너\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\3.스크롤효과\\index.html"
+      "path": "4_jquery\\deep\\3.스크롤효과\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\4.스티키메뉴\\index.html"
+      "path": "4_jquery\\deep\\4.스티키메뉴\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\5.아코디언메뉴\\index.html"
+      "path": "4_jquery\\deep\\5.아코디언메뉴\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\6.애니메이션\\index.html"
+      "path": "4_jquery\\deep\\6.애니메이션\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\7.커스텀커서\\index.html"
+      "path": "4_jquery\\deep\\7.커스텀커서\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\8.풀사이즈미디어\\index.html"
+      "path": "4_jquery\\deep\\8.풀사이즈미디어\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\9.활성화메뉴\\index.html"
+      "path": "4_jquery\\deep\\9.활성화메뉴\\index.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\9\\9-2q.html"
+      "path": "4_jquery\\deep\\9\\9-2q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\9\\jq-01.html"
+      "path": "4_jquery\\deep\\9\\jq-01.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\9\\jq.html"
+      "path": "4_jquery\\deep\\9\\jq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\3\\jq.html"
+      "path": "4_jquery\\deep\\files\\3\\jq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\accordian.html"
+      "path": "4_jquery\\deep\\files\\accordian.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\accordianjs.html"
+      "path": "4_jquery\\deep\\files\\accordianjs.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\animate.zip"
+      "path": "4_jquery\\deep\\files\\animate.zip",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\cursors.html"
+      "path": "4_jquery\\deep\\files\\cursors.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dangdang2q.html"
+      "path": "4_jquery\\deep\\files\\dangdang2q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\finalq.html"
+      "path": "4_jquery\\deep\\files\\dogani\\finalq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_body1.png"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_body1.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_body2.png"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_body2.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_hand_right.png"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_hand_right.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_moon.png"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_moon.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_rope.png"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_rope.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky1.gif"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky1.gif",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky2.gif"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky2.gif",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky3.gif"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky3.gif",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky4.gif"
+      "path": "4_jquery\\deep\\files\\dogani\\images\\motion_sky4.gif",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\dogani\\step1q.html"
+      "path": "4_jquery\\deep\\files\\dogani\\step1q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\full_media-js.html"
+      "path": "4_jquery\\deep\\files\\full_media-js.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\full_media.html"
+      "path": "4_jquery\\deep\\files\\full_media.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\imgs.zip"
+      "path": "4_jquery\\deep\\files\\imgs.zip",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\imgs\\10-16_530.jpg"
+      "path": "4_jquery\\deep\\files\\imgs\\10-16_530.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\imgs\\full.jpg"
+      "path": "4_jquery\\deep\\files\\imgs\\full.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\imgs\\images.jpg"
+      "path": "4_jquery\\deep\\files\\imgs\\images.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\imgs\\result4.jpg"
+      "path": "4_jquery\\deep\\files\\imgs\\result4.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\imgs\\roll-jq.jpg"
+      "path": "4_jquery\\deep\\files\\imgs\\roll-jq.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\imgs\\roll-js.jpg"
+      "path": "4_jquery\\deep\\files\\imgs\\roll-js.jpg",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\1.png"
+      "path": "4_jquery\\deep\\files\\roll\\1.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\2.png"
+      "path": "4_jquery\\deep\\files\\roll\\2.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\3.png"
+      "path": "4_jquery\\deep\\files\\roll\\3.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\4.png"
+      "path": "4_jquery\\deep\\files\\roll\\4.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\5.png"
+      "path": "4_jquery\\deep\\files\\roll\\5.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\6.png"
+      "path": "4_jquery\\deep\\files\\roll\\6.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\7.png"
+      "path": "4_jquery\\deep\\files\\roll\\7.png",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\roll\\images.zip"
+      "path": "4_jquery\\deep\\files\\roll\\images.zip",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\rollq.html"
+      "path": "4_jquery\\deep\\files\\rollq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\scrollamountq.html"
+      "path": "4_jquery\\deep\\files\\scrollamountq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\sticky2q.html"
+      "path": "4_jquery\\deep\\files\\sticky2q.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\stickyq.html"
+      "path": "4_jquery\\deep\\files\\stickyq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\topq.html"
+      "path": "4_jquery\\deep\\files\\topq.html",
+      "old": true
     },
     {
-      "path": "4_jquery\\deep\\files\\tops.html"
+      "path": "4_jquery\\deep\\files\\tops.html",
+      "old": true
     },
     {
       "path": "404.html"
@@ -5623,6 +5728,189 @@
       "old": true
     },
     {
+      "path": "7_ui\\1.탑버튼\\index.html"
+    },
+    {
+      "path": "7_ui\\10.스킬바\\index.html"
+    },
+    {
+      "path": "7_ui\\10\\10-1q.html"
+    },
+    {
+      "path": "7_ui\\10\\10-2q.html"
+    },
+    {
+      "path": "7_ui\\10\\10-3q.html"
+    },
+    {
+      "path": "7_ui\\10\\circle.jpg"
+    },
+    {
+      "path": "7_ui\\11.풀페이지\\index.html"
+    },
+    {
+      "path": "7_ui\\11\\fullpage.js-2.9.7.zip"
+    },
+    {
+      "path": "7_ui\\11\\result.html"
+    },
+    {
+      "path": "7_ui\\12.슬라이드\\index.html"
+    },
+    {
+      "path": "7_ui\\12\\final\\12-jq.html"
+    },
+    {
+      "path": "7_ui\\12\\final\\12a-jq.html"
+    },
+    {
+      "path": "7_ui\\12\\final\\img.zip"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\0.png"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\1.png"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\2.png"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\aguaazul.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\burneyfalls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\cachoeira_do_pacheco.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\deer_leap_falls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\fulmer_falls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\hopetoun_falls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\jonathans_run.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\kjosfossen.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\krimmlfalls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\madhabkunda_falls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\manavgat.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\niagara_falls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\600\\nymph_falls.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\btnvisual.png"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\keyvisual_0.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\keyvisual_1.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\keyvisual_2.jpg"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\left.png"
+    },
+    {
+      "path": "7_ui\\12\\final\\img\\right.png"
+    },
+    {
+      "path": "7_ui\\13.탭\\index.html"
+    },
+    {
+      "path": "7_ui\\13\\jq.html"
+    },
+    {
+      "path": "7_ui\\14.scrolleffect\\index.html"
+    },
+    {
+      "path": "7_ui\\15.멀티플슬라이드\\index.html"
+    },
+    {
+      "path": "7_ui\\16.ajax\\index.html"
+    },
+    {
+      "path": "7_ui\\17.탭슬라이드\\index.html"
+    },
+    {
+      "path": "7_ui\\18.로컬스토리지\\index.html"
+    },
+    {
+      "path": "7_ui\\2.롤링배너\\index.html"
+    },
+    {
+      "path": "7_ui\\3.스크롤효과\\index.html"
+    },
+    {
+      "path": "7_ui\\4.스티키메뉴\\index.html"
+    },
+    {
+      "path": "7_ui\\4.gsap\\index.html"
+    },
+    {
+      "path": "7_ui\\5.아코디언메뉴\\index.html"
+    },
+    {
+      "path": "7_ui\\5.swiper\\index.html"
+    },
+    {
+      "path": "7_ui\\6.애니메이션\\index.html"
+    },
+    {
+      "path": "7_ui\\6.interaction\\index.html"
+    },
+    {
+      "path": "7_ui\\7.커스텀커서\\index.html"
+    },
+    {
+      "path": "7_ui\\7.carousel\\index.html"
+    },
+    {
+      "path": "7_ui\\8.풀사이즈미디어\\index.html"
+    },
+    {
+      "path": "7_ui\\8.adaption\\index.html"
+    },
+    {
+      "path": "7_ui\\9.활성화메뉴\\index.html"
+    },
+    {
+      "path": "7_ui\\9\\9-2q.html"
+    },
+    {
+      "path": "7_ui\\9\\jq-01.html"
+    },
+    {
+      "path": "7_ui\\9\\jq.html"
+    },
+    {
+      "path": "7_ui\\files\\2024-02-05_161302.jpg"
+    },
+    {
+      "path": "7_ui\\files\\swiper.html"
+    },
+    {
+      "path": "7_ui\\index.html"
+    },
+    {
       "path": "기타\\mermaid\\index.html"
     },
     {
@@ -5723,6 +6011,9 @@
     },
     {
       "path": "categories\\tip\\index.html"
+    },
+    {
+      "path": "categories\\ui\\index.html"
     },
     {
       "path": "favicon.png"
@@ -6023,6 +6314,9 @@
       "old": true
     },
     {
+      "path": "tags\\로그인구현\\index.html"
+    },
+    {
       "path": "tags\\메뉴\\index.html",
       "old": true
     },
@@ -6154,7 +6448,8 @@
       "path": "tags\\custom-cursor\\index.html"
     },
     {
-      "path": "tags\\deep\\index.html"
+      "path": "tags\\deep\\index.html",
+      "old": true
     },
     {
       "path": "tags\\deepdive\\index.html"
@@ -6241,7 +6536,8 @@
       "path": "tags\\readmd작성하기\\index.html"
     },
     {
-      "path": "tags\\reduce\\index.html"
+      "path": "tags\\reduce\\index.html",
+      "old": true
     },
     {
       "path": "tags\\regexp\\index.html"
