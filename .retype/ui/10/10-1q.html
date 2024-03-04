@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="robots" content="index, follow">
+  <title>Loading Bar animation</title>
+  <style>
+    /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .clearfix:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    .progress-bar {
+      position: relative;
+      width: 960px;
+      height: 30px;
+      margin: 3em auto;
+      border: 1px solid green;
+    }
+
+    .progress-bar .bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      background: green;
+    }
+
+    .progress-bar .rate {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      bottom: 0;
+      line-height: 30px;
+      font-size: 1.2em;
+      color: green;
+    }
+
+    .content {
+      height: 800px;
+      font-size: 3em;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function () {
+      var progressWrap = $('.progress-bar');
+      var animationOst = $('.animation').offset().top - 600;
+      var isAni = false;
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= animationOst && !isAni) {
+          progressAnimation();
+        }
+      });
+
+      function progressAnimation() {
+        progressWrap.each(function () {
+          var $this = $(this),
+            progressBar = $this.find('.bar'),
+            progressText = $this.find('.rate'),
+            progressRate = progressText.attr('data-rate');
+          progressBar.animate({ width: progressRate + '%' }, 2500);
+          // console.log(progressText);
+          var text = function () {
+            $({ rate: 0 }).animate({ rate: progressRate }, {
+              duration: 2000,
+              progress: function () {
+                var now = this.rate;
+                console.log(now);
+                progressText.text(Math.floor(now) + '%');
+              },
+              complete: function () { isAni = true }
+            });
+
+          }
+          text()
+
+        });
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div class="content"> contents </div>
+  <div class="animation">
+    <div class="progress-bar">
+      <div class="bar"></div>
+      <div class="rate" data-rate="30"></div>
+    </div>
+    <div class="progress-bar">
+      <div class="bar"></div>
+      <div class="rate" data-rate="90"></div>
+    </div>
+    <div class="progress-bar">
+      <div class="bar"></div>
+      <div class="rate" data-rate="60"></div>
+    </div>
+  </div>
+  <div class="content"> contents </div>
+</body>
+
+</html>
