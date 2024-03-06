@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-05T14:44:51Z",
+  "created": "2024-03-06T01:24:43Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -7790,8 +7790,7 @@
       "path": "tags\\로그인구현\\index.html"
     },
     {
-      "path": "tags\\메뉴\\index.html",
-      "old": true
+      "path": "tags\\메뉴\\index.html"
     },
     {
       "path": "tags\\문서객체모델\\index.html"
@@ -7862,7 +7861,8 @@
       "path": "tags\\치환\\index.html"
     },
     {
-      "path": "tags\\크기얻기\\index.html"
+      "path": "tags\\크기얻기\\index.html",
+      "old": true
     },
     {
       "path": "tags\\탈그리드\\index.html"
