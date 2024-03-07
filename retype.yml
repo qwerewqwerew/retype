@@ -35,3 +35,10 @@ integrations:
     id: G-NKP1WSKRDB
   templating:
   liquid: true # Set to true to enable
+generator:
+  directoryIndex:
+    altNames:
+      - index.html
+      - index.htm
+      - default.html
+      - default.htm
