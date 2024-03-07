@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763003534809">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763170272487">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -17,7 +17,7 @@
     <!-- Primary Meta Tags -->
     <title>19.gsap</title>
     <meta name="title" content="19.gsap">
-    <meta name="description" content="1. gsap">
+    <meta name="description" content="gsap공식사이트 gsap치트시트">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/ui/19.gsap/">
@@ -26,23 +26,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/ui/19.gsap/">
     <meta property="og:title" content="19.gsap">
-    <meta property="og:description" content="1. gsap">
+    <meta property="og:description" content="gsap공식사이트 gsap치트시트">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/ui/19.gsap/">
     <meta property="twitter:title" content="19.gsap">
-    <meta property="twitter:description" content="1. gsap">
+    <meta property="twitter:description" content="gsap공식사이트 gsap치트시트">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.763003534809" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.763170272487" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763003534809" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763170272487" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763003534809" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763003534809" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763170272487" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763170272487" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -76,20 +76,27 @@
 
     	.comment_box {
     		padding: 2rem;
-    		color: #094092;
+    		color: #444950;
     		margin-bottom: 20px;
-    		font-weight: 500;
-    		font-size: 1.1em;
-    		letter-spacing: -0.5px;
+    		font-weight: 400;
+    		font-size: 1em;
     		position: relative;
     		background-color: #f4f5f7;
-    		line-height: 2;
+    		line-height: 1.75;
     		filter: drop-shadow(-2px 4px 4px #0a216d25);
     	}
 
     	.comment_box p,
     	.comment_box ul {
     		margin-bottom: 0.4rem !important;
+    	}
+
+    	.comment_box li li {
+    		padding: 0;
+    		margin: 0 !important;
+    	}
+    	.comment_box li {
+    		margin-bottom: 0.8rem !important;
     	}
 
     	.docs-markdown table.comfortable tr td,
@@ -101,12 +108,12 @@
     		margin-bottom: 0.5rem;
     	}
 
-    	div[id] > h1,
-    	div[id] > h2,
-    	div[id] > h3,
-    	div[id] > h4,
-    	div[id] > h5,
-    	div[id] > h6 {
+    	div[id]>h1,
+    	div[id]>h2,
+    	div[id]>h3,
+    	div[id]>h4,
+    	div[id]>h5,
+    	div[id]>h6 {
     		margin-top: 3.4rem;
     		color: #3f51b5 !important;
     	}
@@ -150,15 +157,21 @@
     		max-width: 10%;
     	}
 
-    	[id*='목차'] + ul li,
-    	[id*='목차'] + ol li {
+    	[id*='목차']+ul li,
+    	[id*='목차']+ol li {
     		list-style-type: none !important;
-    		line-height: 1.8 !important;;
-    		font-weight: 400 !important;;
-    		padding-top: 2px !important;;
-    		padding-bottom: 4px !important;;
-    		margin-top: 0 !important;;
-    		font-size: 14px !important;;
+    		line-height: 1.8 !important;
+    		;
+    		font-weight: 400 !important;
+    		;
+    		padding-top: 2px !important;
+    		;
+    		padding-bottom: 4px !important;
+    		;
+    		margin-top: 0 !important;
+    		;
+    		font-size: 14px !important;
+    		;
     	}
 
     	.docs-markdown table.comfortable tr td,
@@ -186,6 +199,7 @@
     	.my-1 {
     		margin: 1rem auto;
     	}
+
     	.docs-markdown kbd,
     	kbd {
     		font-weight: 400;
@@ -193,6 +207,7 @@
     		padding-bottom: 5px;
     		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     	}
+
     	.red,
     	.red * {
     		color: rgb(210, 26, 170) !important;
@@ -226,11 +241,11 @@
     		border-radius: 4px;
     	}
 
-    	.docs-panels > div {
+    	.docs-panels>div {
     		background: #e1edff65;
     	}
 
-    	.docs-panels > div > div {
+    	.docs-panels>div>div {
     		border-bottom: 1px solid #d0d9e67e;
     	}
 
@@ -248,17 +263,21 @@
     	.tab-content ul {
     		margin-bottom: 0 !important;
     	}
+
     	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
     		overflow: hidden;
     		text-overflow: ellipsis;
     		white-space: nowrap;
     	}
+
     	.collapse-content {
     		background-color: #fcfcfc !important;
     	}
+
     	.flex.items-center.text-xs.text-gray-400.dark\:text-dark-400 {
     		display: none;
     	}
+
     	.docs-markdown hr {
     		border-color: rgba(202, 205, 212, 0);
     		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
@@ -266,7 +285,6 @@
     		margin-top: 2rem;
     	}
     </style>
-
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKHJVFFG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -445,72 +463,6 @@
         <span>목차 <!-- omit in toc --></span>
     </h3>
 </doc-anchor-target>
-<ul>
-<li><doc-anchor-trigger to="#1-gsap">1. gsap</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#2-%EC%84%A4%EC%B9%98">2. 설치</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#21-cdn">2.1. cdn</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#22-npm">2.2. npm</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#3-%EC%8B%A4%ED%96%89">3. 실행</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#4-gsap%EC%9D%98-%EC%A3%BC%EC%9A%94%EC%86%8D%EC%84%B1">4. gsap의 주요속성</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#41-transform">4.1. transform</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#42-%EA%B8%B0%ED%83%80%EC%86%8D%EC%84%B1">4.2. 기타속성</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#5-%EC%98%88%EC%A0%9C">5. 예제</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#51-%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0">5.1. 이동하기</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#52-%EC%9D%B4%EB%8F%99%ED%88%AC%EB%AA%85%EB%8F%84-%EC%A1%B0%EC%A0%88">5.2. 이동+투명도 조절</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#53-gsapto">5.3. gsap.to()</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#5301-html">5.3.0.1. html</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#5302-css">5.3.0.2. css</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#5303-js">5.3.0.3. js</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#5304-html">5.3.0.4. html</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#5305-css">5.3.0.5. css</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#5306-js">5.3.0.6. js</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#54-easing">5.4. easing</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#541-ease-%EA%B0%80%EC%86%8D%EB%8F%84-%EC%98%B5%EC%85%98">5.4.1. ease: 가속도 옵션</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#542-html">5.4.2. html</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#543-css">5.4.3. css</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#544-js">5.4.4. js</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#55-parallax">5.5. parallax</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#551-html">5.5.1. html</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#552-css">5.5.2. css</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#553-js">5.5.3. js</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#56-%EB%B2%84%ED%8A%BC%ED%81%B4%EB%A6%AD%EC%8B%9C-%EB%B0%98%EB%8C%80%EB%A1%9C%EC%A7%84%ED%96%89">5.6. 버튼클릭시 반대로진행</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#561-html">5.6.1. html</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#562-css">5.6.2. css</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#563-js">5.6.3. js</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#57-%EC%8A%A4%ED%81%AC%EB%A1%A4%ED%8A%B8%EB%A6%AC%EA%B1%B0">5.7. 스크롤트리거</doc-anchor-trigger>
-<ul>
-<li><doc-anchor-trigger to="#571-data-speed">5.7.1. data-speed</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#572-%EA%B0%80%EB%A1%9C%EB%B0%A9%ED%96%A5-%EC%8A%A4%ED%81%AC%EB%A1%A4">5.7.2. 가로방향 스크롤</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#573-html">5.7.3. html</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#574-css">5.7.4. css</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#575-js">5.7.5. js</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#576-%EC%98%B5%EC%85%98%EC%84%A4%EB%AA%85">5.7.6. 옵션설명</doc-anchor-trigger></li>
-</ul>
-</li>
-<li><doc-anchor-trigger to="#58-gsap-%EA%B0%80%EC%86%8D%EB%8F%84">5.8. gsap 가속도</doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#59-from">5.9. from</doc-anchor-trigger></li>
-</ul>
-</li>
-</ul>
 <doc-anchor-target id="1-gsap">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#1-gsap">#</doc-anchor-trigger>
@@ -584,26 +536,80 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">npm install gsap</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="3-실행">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#3-실행">#</doc-anchor-trigger>
-        <span>3. 실행</span>
-    </h2>
+<doc-anchor-target id="23-tween">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#23-tween">#</doc-anchor-trigger>
+        <span>2.3. Tween</span>
+    </h3>
 </doc-anchor-target>
 <blockquote>
-<p>gsap.to() 사용하기 위해 두 개의 값을 설정해야 한다</p>
-<p>애니메이션을 적용할 타겟(targets)과 객체로 구성된 속성(property)과 값(value)을 지정해 서 원하는 동작을 수행할 수 있다.</p>
+<p>애니메이션 작업을 수행한다. 타겟(애니메이션을 적용하려는 개체), 지속 시간 및 애니메이션을 적용하려는 속성을 입력하면 간단히 애니메이션을 완성해준다.
+트윈을 생성하는 매서드는 3종류가 있다.</p>
+<ul>
+<li>gsap.to()</li>
+<li>gsap.from()</li>
+<li>gsap.fromTo()</li>
+</ul>
 </blockquote>
-<doc-anchor-target id="4-gsap의-주요속성">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4-gsap의-주요속성">#</doc-anchor-trigger>
-        <span>4. gsap의 주요속성</span>
-    </h2>
+<doc-anchor-target id="231-gsapto">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#231-gsapto">#</doc-anchor-trigger>
+        <span>2.3.1. gsap.to()</span>
+    </h4>
 </doc-anchor-target>
-<doc-anchor-target id="41-transform">
+<blockquote>
+<p>가장 널리 사용되는 트윈 메서드 이다.
+gsap.to에는 2가지 필수값이 필요하다. 대상(<strong>targets</strong>)과 속성(**vars)**이다.</p>
+</blockquote>
+<ul>
+<li><strong>targets :</strong> 애니메이션을 적용할 개체입니다. 원시 객체, 객체의 배열, 또는 &quot;.myClass&quot; 와 같은 선택자 텍스트</li>
+<li><strong>vars :</strong> 애니메이션을 적용할 속성/값 쌍(예를 들어, opacity: 0.5, rotation: 45)과 duratiom, onComplete와 같은 기타 선택적 <a href="https://greensock.com/docs/v3/GSAP/Tween/vars">특수 속성</a>이 있는 개체</li>
+</ul>
+<doc-anchor-target id="2311-예제-이동하기">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2311-예제-이동하기">#</doc-anchor-trigger>
+        <span>2.3.1.1. [예제] 이동하기</span>
+    </h5>
+</doc-anchor-target>
+<blockquote>
+<p>아이디 logo 이름을 가진 요소(Element)를 x축으로 1초 동안 100px 이동
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/1.html</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/1.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</blockquote>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> html</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> js</span>
+    </div>
+    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div id=&quot;logo&quot;&gt;logo&lt;/div&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+</doc-codeblock></div>
+    </div>
+    <div class="docs-columns-code docs-columns-content">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">gsap.to('##logo', { duration: 1, x: 100 });</code></pre>
+</doc-codeblock></div>
+    </div>
+</div>
+<doc-anchor-target id="24-css-transform과-gsap-속성-비교">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#41-transform">#</doc-anchor-trigger>
-        <span>4.1. transform</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#24-css-transform과-gsap-속성-비교">#</doc-anchor-trigger>
+        <span>2.4. css transform과 gsap 속성 비교</span>
     </h3>
 </doc-anchor-target>
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -666,18 +672,18 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="42-기타속성">
+<doc-anchor-target id="25-기타속성">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#42-기타속성">#</doc-anchor-trigger>
-        <span>4.2. 기타속성</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#25-기타속성">#</doc-anchor-trigger>
+        <span>2.5. 기타속성</span>
     </h3>
 </doc-anchor-target>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
-<th>제목1</th>
-<th>제목2</th>
+<th>속성</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
@@ -716,20 +722,27 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="5-예제">
+<doc-anchor-target id="3-예제">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5-예제">#</doc-anchor-trigger>
-        <span>5. 예제</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-예제">#</doc-anchor-trigger>
+        <span>3. 예제</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="51-이동하기">
+<doc-anchor-target id="31-tween">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#51-이동하기">#</doc-anchor-trigger>
-        <span>5.1. 이동하기</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-tween">#</doc-anchor-trigger>
+        <span>3.1. Tween</span>
     </h3>
 </doc-anchor-target>
+<doc-panels>
+   <doc-panel id="badge-variant-info-size-s-text-01-이동" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>01</span>
+</span> 이동</template>
 <blockquote>
-<p>아이디 logo 이름을 가진 요소(Element)를 x축으로 1초 동안 100px 이동
+<p>css로 transform: translateX(200px) 과 같은 효과를 주며 duration은 미작성시 0.5초 이다</p>
+</blockquote>
+<p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
@@ -738,39 +751,103 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/1.html</span>
+        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/gsap01.html</span>
     </div>
-    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/1.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/gsap01.html" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-</blockquote>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> html</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> js</span>
-    </div>
-    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;div id=&quot;logo&quot;&gt;logo&lt;/div&gt;
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;head&gt;
+	&lt;style&gt;
+		.box {
+			margin: 15px;
+		}
+		.box1 {
+			width: 100px;
+			height: 100px;
+			background: orange;
+		}
+		.box2 {
+			width: 200px;
+			height: 100px;
+			background: greenyellow;
+		}
+		.box3 {
+			width: 100px;
+			height: 200px;
+			background: tomato;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;div class=&quot;box box1&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;box box2&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;box box3&quot;&gt;&lt;/div&gt;
+
+	&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script&gt;
+		gsap.to('.box', {
+			x: 200,
+		});
+	&lt;/script&gt;
+&lt;/body&gt;</code></pre>
 </doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-info-size-s-text-02-이동-회전" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>02</span>
+</span> 이동+회전</template>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
-    <div class="docs-columns-code docs-columns-content">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">gsap.to('##logo', { duration: 1, x: 100 });</code></pre>
-</doc-codeblock></div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/gsap02.html</span>
     </div>
+    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/gsap02.html" target="_blank" class="absolute block inset-0"></a>
 </div>
-<doc-anchor-target id="52-이동투명도-조절">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#52-이동투명도-조절">#</doc-anchor-trigger>
-        <span>5.2. 이동+투명도 조절</span>
-    </h3>
-</doc-anchor-target>
+</p>
+<p>기본구조는 01과 같다.스크립트만 수정한다.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">gsap.to('.box1', { duration: 3, x: 200, opacity: 0.2, ease: 'steps(10)', delay: 2 });
+gsap.to('.box2', { duration: 3, x: 200, rotate: 720, scale: 1.3 });
+gsap.to('.box3', { duration: 3, x: 200, ease: 'elastic', backgroundColor: 'red', width: 300, fontSize: 60 });</code></pre>
+</doc-codeblock></div>
+<hr>
+<p><mark>from 으로 변경하면 에니메이션이 반전되어 실행된다.</mark></p>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/gsap02a.html</span>
+    </div>
+    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/gsap02a.html" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">gsap.from('.box1', { duration: 3, x: 200, opacity: 0.2, ease: 'steps(10)', delay: 2 });
+gsap.from('.box2', { duration: 3, x: 200, rotate: 720, scale: 1.3 });
+gsap.from('.box3', { duration: 3, x: 200, ease: 'elastic', backgroundColor: 'red', width: 300, fontSize: 60 });</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-info-size-s-text-03-이동-투명도-조절" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>03</span>
+</span> 이동+투명도 조절</template>
 <blockquote>
-<p>&quot;h2&quot; 요소에 1초 동안 투명도를 30%로 애니메이션 적용하고 “.orange&quot; 요소는 2초 동안 x축으로 300pixel 이동하고 &quot;.grey&quot;는 Y축으로 300px 이동. “.green” 요 소는 3초 동안 360도 회전하고 크기를 50%로 축소하는 애니메이션 을 적용한다
+<p>&quot;h2&quot; 요소에 1초 동안 투명도를 30%로 애니메이션 적용하고 &quot;.orange&quot; 요소는 2초 동안 x축으로 300pixel 이동하고 &quot;.grey&quot;는 Y축으로 300px 이동. “.green” 요 소는 3초 동안 360도 회전하고 크기를 50%로 축소하는 애니메이션 을 적용한다</p>
+</blockquote>
+<p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
@@ -784,7 +861,6 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
     <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/2.html" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-</blockquote>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;h2 class=&quot;title&quot;&gt;gsap.to() Basic Usage&lt;/h2&gt;
 &lt;div class=&quot;box orange&quot;&gt;&lt;/div&gt;
@@ -815,214 +891,96 @@ gsap.to('.orange', { duration: 2, x: 300 });
 gsap.to('.grey', { duration: 2, y: 300 });
 gsap.to('.green', { duration: 3, rotation: 360, scale: 0.5 });</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="53-gsapto">
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="32-easing">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#53-gsapto">#</doc-anchor-trigger>
-        <span>5.3. gsap.to()</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#32-easing">#</doc-anchor-trigger>
+        <span>3.2. easing</span>
     </h3>
 </doc-anchor-target>
-<p>gsap.to에는 2가지 필수값이 필요하다. 대상(<strong>targets</strong>)과 속성(**vars)**이다.</p>
-<ul>
-<li><strong>targets :</strong> 애니메이션을 적용할 개체입니다. 원시 객체, 객체의 배열, 또는 &quot;.myClass&quot; 와 같은 선택자 텍스트</li>
-<li><strong>vars :</strong> 애니메이션을 적용할 속성/값 쌍(예를 들어, opacity: 0.5, rotation: 45)과 duratiom, onComplete와 같은 기타 선택적 <a href="https://greensock.com/docs/v3/GSAP/Tween/vars">특수 속성</a>이 있는 개체입니다</li>
-</ul>
-<p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>easing 은 가속도를 설정할수 있는 속성이다.
+사용할수 있는 값은 아래와 같다.
+none, power1, power2, power3, power4, back, elastic, bounce, rough, slow, steps, circ, expo, sine
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
         <span class="inline-block mb-px">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
         </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></g></svg>공식문서</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/gsap01.html</span>
+        <span>https://gsap.com/docs/v3/Eases</span>
     </div>
-    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/gsap01.html" target="_blank" class="absolute block inset-0"></a>
-</div>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/gsap02.html</span>
-    </div>
-    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/gsap02.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="https://gsap.com/docs/v3/Eases" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<doc-anchor-target id="5301-html">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5301-html">#</doc-anchor-trigger>
-        <span>5.3.0.1. html</span>
-    </h5>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">&lt;head&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-  &lt;div class=&quot;box box1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;box box2&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;box box3&quot;&gt;&lt;/div&gt;
-
-  &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="5302-css">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5302-css">#</doc-anchor-trigger>
-        <span>5.3.0.2. css</span>
-    </h5>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">.box{ margin: 15px; }
-.box1{ width: 100px; height: 100px; background: orange; }
-.box2{ width: 200px; height: 100px; background: greenyellow; }
-.box3{ width: 100px; height: 200px; background : tomato; }</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="5303-js">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5303-js">#</doc-anchor-trigger>
-        <span>5.3.0.3. js</span>
-    </h5>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">gsap.to('.box', {
-	x: 200,
-});</code></pre>
-</doc-codeblock></div>
-<p>css로 transform: translateX(200px) 과 같은 효과를 주며 duration은 미작성시 0.5초 이다</p>
-<doc-anchor-target id="5304-html">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5304-html">#</doc-anchor-trigger>
-        <span>5.3.0.4. html</span>
-    </h5>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">&lt;head&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-  &lt;div class=&quot;box box1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;box box2&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;box box3&quot;&gt;&lt;/div&gt;
-
-  &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="5305-css">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5305-css">#</doc-anchor-trigger>
-        <span>5.3.0.5. css</span>
-    </h5>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">.box{ margin: 15px; }
-.box1{ width: 100px; height: 100px; background: orange; }
-.box2{ width: 200px; height: 100px; background: greenyellow; }
-.box3{ width: 100px; height: 200px; background : tomato; }</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="5306-js">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5306-js">#</doc-anchor-trigger>
-        <span>5.3.0.6. js</span>
-    </h5>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">gsap.to('.box1', { duration: 3, x: 200, opacity: 0.2, ease: 'steps(10)', delay: 2 });
-gsap.to('.box2', { duration: 3, x: 200, rotate: 720, scale: 1.3 });
-gsap.to('.box3', { duration: 3, x: 200, ease: 'elastic', backgroundColor: 'red', width: 300, fontSize: 60 });</code></pre>
-</doc-codeblock></div>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">gsap.from('.box1', { duration: 3, x: 200, opacity: 0.2, ease: 'steps(10)', delay: 2 });
-
-gsap.from('.box2', { duration: 3, x: 200, rotate: 720, scale: 1.3 });
-
-gsap.from('.box3', { duration: 3, x: 200, ease: 'elastic', backgroundColor: 'red', width: 300, fontSize: 60 });</code></pre>
-</doc-codeblock></div>
-<p>from 으로 변경하면 에니메이션이 반전되어 실행된다.</p>
-<hr>
-<doc-anchor-target id="54-easing">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#54-easing">#</doc-anchor-trigger>
-        <span>5.4. easing</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="541-ease-가속도-옵션">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#541-ease-가속도-옵션">#</doc-anchor-trigger>
-        <span>5.4.1. ease: 가속도 옵션</span>
-    </h4>
-</doc-anchor-target>
-<p>none, power1, power2, power3, power4, back, elastic, bounce, rough, slow, steps, circ, expo, sine</p>
-<doc-anchor-target id="542-html">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#542-html">#</doc-anchor-trigger>
-        <span>5.4.2. html</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">&lt;section id='title'&gt;
-	&lt;div class='box box1'&gt;none&lt;/div&gt;
-	&lt;div class='box box2'&gt;power1&lt;/div&gt;
-	&lt;div class='box box3'&gt;power2&lt;/div&gt;
-	&lt;div class='box box4'&gt;power3&lt;/div&gt;
-	&lt;div class='box box5'&gt;power4&lt;/div&gt;
-	&lt;div class='box box6'&gt;back&lt;/div&gt;
-	&lt;div class='box box7'&gt;elastic&lt;/div&gt;
-	&lt;div class='box box8'&gt;bounce&lt;/div&gt;
-	&lt;div class='box box9'&gt;rough&lt;/div&gt;
-	&lt;div class='box box10'&gt;slow&lt;/div&gt;
-	&lt;div class='box box11'&gt;steps&lt;/div&gt;
-	&lt;div class='box box12'&gt;circ&lt;/div&gt;
-	&lt;div class='box box13'&gt;expo&lt;/div&gt;
-	&lt;div class='box box14'&gt;sine&lt;/div&gt;
+        </div>
+    </div>
+</div>
+<doc-panel id="badge-variant-info-size-s-text-04-가속도" collapsed>
+    <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>04</span>
+</span> 가속도</template>
+<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/04.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;section id=&quot;title&quot;&gt;
+	&lt;div class=&quot;box box1&quot;&gt;none&lt;/div&gt;
+	&lt;div class=&quot;box box2&quot;&gt;power1&lt;/div&gt;
+	&lt;div class=&quot;box box3&quot;&gt;power2&lt;/div&gt;
+	&lt;div class=&quot;box box4&quot;&gt;power3&lt;/div&gt;
+	&lt;div class=&quot;box box5&quot;&gt;power4&lt;/div&gt;
+	&lt;div class=&quot;box box6&quot;&gt;back&lt;/div&gt;
+	&lt;div class=&quot;box box7&quot;&gt;elastic&lt;/div&gt;
+	&lt;div class=&quot;box box8&quot;&gt;bounce&lt;/div&gt;
+	&lt;div class=&quot;box box9&quot;&gt;rough&lt;/div&gt;
+	&lt;div class=&quot;box box10&quot;&gt;slow&lt;/div&gt;
+	&lt;div class=&quot;box box11&quot;&gt;steps&lt;/div&gt;
+	&lt;div class=&quot;box box12&quot;&gt;circ&lt;/div&gt;
+	&lt;div class=&quot;box box13&quot;&gt;expo&lt;/div&gt;
+	&lt;div class=&quot;box box14&quot;&gt;sine&lt;/div&gt;
 &lt;/section&gt;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="543-css">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#543-css">#</doc-anchor-trigger>
-        <span>5.4.3. css</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 ##title {
-   width: 700px;
-   margin: 100px auto;
+	width: 700px;
+	margin: 100px auto;
 }
 
 .box {
-   background-color: purple;
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   text-align: center;
-   line-height: 50px;
-   font-size: 12px;
+	background-color: purple;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 12px;
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="544-js">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#544-js">#</doc-anchor-trigger>
-        <span>5.4.4. js</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">gsap.to('.box1', { x: 600, ease: 'none', duration: 5 });
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">gsap.to('.box1', { x: 600, ease: 'none', duration: 5 });
 gsap.to('.box2', { x: 600, ease: 'power1', duration: 5 });
 gsap.to('.box3', { x: 600, ease: 'power2', duration: 5 });
 gsap.to('.box4', { x: 600, ease: 'power3', duration: 5 });
@@ -1037,280 +995,368 @@ gsap.to('.box12', { x: 600, ease: 'circ', duration: 5 });
 gsap.to('.box13', { x: 600, ease: 'expo', duration: 5 });
 gsap.to('.box14', { x: 600, ease: 'sine', duration: 5 });</code></pre>
 </doc-codeblock></div>
-<hr>
-<doc-anchor-target id="55-parallax">
+</doc-panel>
+<doc-anchor-target id="33-gsaptimeline">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#55-parallax">#</doc-anchor-trigger>
-        <span>5.5. parallax</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#33-gsaptimeline">#</doc-anchor-trigger>
+        <span>3.3. gsap.timeline()</span>
     </h3>
 </doc-anchor-target>
-<p>timeline 을 활용하여 다른 클래스의 요소들에 시차애니메이션을 적용한다.</p>
-<p>변수 t1을 선언하고 기본값으로 1초를 delay로 할당한다.</p>
-<doc-anchor-target id="551-html">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#551-html">#</doc-anchor-trigger>
-        <span>5.5.1. html</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">&lt;section id=&quot;title&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;h1 class=&quot;animation1&quot;&gt;JavaScript GSAP Library Animation&lt;/h1&gt;
-      &lt;p class=&quot;animation1&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, dolore.&lt;/p&gt;
-      &lt;a class=&quot;animation1&quot; href=&quot;##&quot;&gt;Button&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-  &lt;section id=&quot;thumbnail&quot;&gt;
-    &lt;img src=&quot;http://placekitten.com/200/300&quot; &gt;
-  &lt;/section&gt;</code></pre>
+<blockquote>
+<p>타임라인 메서드는 애니메이션의 시간을 지정할수 있어 다양한 모션 구현시 편리하다.</p>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></g></svg>공식문서</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://gsap.com/docs/v3/GSAP/gsap.timeline()</span>
+    </div>
+    <a href="https://gsap.com/docs/v3/GSAP/gsap.timeline()" target="_blank" class="absolute block inset-0"></a>
+</div>
+</p>
+</blockquote>
+<doc-panels>
+   <doc-panel id="badge-variant-info-size-s-text-04-timeline" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>04</span>
+</span> timeline</template>
+<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/09.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;one&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;two&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;three&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;four&quot;&gt;&lt;/div&gt;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="552-css">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#552-css">#</doc-anchor-trigger>
-        <span>5.5.2. css</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-   overflow: hidden;
+	overflow: hidden;
 }
 
-##title {
-   width: 700px;
-   margin: 100px auto;
+div {
+	width: 100px;
+	height: 100px;
+}
+
+.one {
+	background: red;
+}
+
+.two {
+	background: green;
+}
+
+.three {
+	background: blue;
+}
+
+.four {
+	background: pink;
+}</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let tl = gsap.timeline();
+//total duration:
+tl.to('.one', { duration: 2, x: 500 })
+	//2초 동안 x축으로 500px
+
+	.to('.two', { duration: 3, x: 500 }, 1)
+	// 1초 후 3초동안 x축으로 500px(1은 absolute값)
+
+	.to('.three', { duration: 1, x: 500 }, '&lt;')
+	//1초 후 1초동안 x축으로 500px(&lt;은 이전 target의 timeline을 따라감)
+
+	.to('.four', { duration: 1, x: 500 }, '&lt;0.5');
+//1.5초후 1초동은 x축으로 500px(&lt;0.5를 추가하면 이전 target보다 0.5초 뒤 실행</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-info-size-s-text-05-parallax" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>05</span>
+</span> parallax</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>timeline 을 활용하여 다른 클래스의 요소들에 시차애니메이션을 적용한다.</p>
+<p>변수 t1을 선언하고 기본값으로 1초를 delay로 할당한다.</p>
+        </div>
+    </div>
+</div>
+<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/05.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;section id=&quot;title&quot;&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;h1 class=&quot;animation1&quot;&gt;JavaScript GSAP Library Animation&lt;/h1&gt;
+		&lt;p class=&quot;animation1&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, dolore.&lt;/p&gt;
+		&lt;a class=&quot;animation1&quot; href=&quot;#&quot;&gt;Button&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+&lt;section&gt;
+	&lt;div class=&quot;box box1&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;box box2&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id=&quot;thumbnail&quot;&gt;
+	&lt;img src=&quot;http://placekitten.com/200/300&quot; /&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+}
+
+#title {
+	width: 700px;
+	margin: 100px auto;
 }
 
 .container {
-   padding: 20px;
+	padding: 20px;
 }
 
 h1 {
-   margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 p {
-   margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 a {
-   display: block;
-   width: 100px;
-   padding: 10px;
-   background-color: blueviolet;
-   text-decoration: none;
-   color: white;
-   text-align: center;
-   border-radius: 10px;
+	display: block;
+	width: 100px;
+	padding: 10px;
+	background-color: blueviolet;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
 }
 
-##thumbnail{
-   width: 420px;
-   height: 300px;
-   position: absolute;
-   right: 0;
-   bottom: 0;
+#thumbnail {
+	width: 420px;
+	height: 300px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.box {
+	width: 100px;
+	height: 100px;
+}
+
+.box1 {
+	background-color: red;
+}
+
+.box2 {
+	background-color: blue;
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="553-js">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#553-js">#</doc-anchor-trigger>
-        <span>5.5.3. js</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">let t1 = gsap.timeline({ defaults: { duration: 1 } });
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let t1 = gsap.timeline({ defaults: { duration: 1 } });
+//defaults라는 특수 속성은 모든 하위 트윈과 타임라인에서 값을 상속할 수 있다.
+//애니메이션을 1초동안 진행하는 기본값 설정
 
-t1.from('h1', { y: -50, opacity: 0 }).from('p', { y: -50, opacity: 0 }, '-=0.5').from('a', { y: -50, opacity: 0 }, '+=1').from('img', { y: 200, opacity: 0 }, '-=0.5');</code></pre>
+t1.from('h1', { y: -50, opacity: 0 })
+	.from('p', { y: -50, opacity: 0 }, '-=0.5') // 타임라인 종료 0.5초 전 (오버랩)
+	.from('a', { y: -50, opacity: 0 }, '+=1') // 타임라인 종료 1초 후 (갭)
+	.from('img', { y: 200, opacity: 0 }, '3'); // 타임라인 시작으로부터 3초 후 (절대적)
+	.from('.box1', { x: 200, opacity: 0 }, &quot;&lt;&quot;) // 이전 트윈 타임라인 시작지점
+	.to('.box2', { rotate: 360, x:800, opacity: 1}, &quot;&gt;&quot;) // 이전 트윈 타임라인 종료지점</code></pre>
 </doc-codeblock></div>
-<hr>
-<doc-anchor-target id="56-버튼클릭시-반대로진행">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#56-버튼클릭시-반대로진행">#</doc-anchor-trigger>
-        <span>5.6. 버튼클릭시 반대로진행</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="561-html">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#561-html">#</doc-anchor-trigger>
-        <span>5.6.1. html</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">&lt;section id=&quot;title&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;h1 class=&quot;animation1&quot;&gt;JavaScript GSAP Library Animation&lt;/h1&gt;
-      &lt;p class=&quot;animation1&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, dolore.&lt;/p&gt;
-      &lt;a id=&quot;cta&quot; class=&quot;animation1&quot; href=&quot;##&quot;&gt;Button&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-  &lt;section id=&quot;thumbnail&quot;&gt;
-    &lt;img src=&quot;http://placekitten.com/200/300&quot;&gt;
-  &lt;/section&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="562-css">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#562-css">#</doc-anchor-trigger>
-        <span>5.6.2. css</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+   </doc-panel>
+   <doc-panel id="badge-variant-info-size-s-text-06-클릭시-반대로-진행" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>06</span>
+</span> 클릭시 반대로 진행</template>
+<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/06.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<p>문서의 구조와 스타일은 이전과 동일</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let t1 = gsap.timeline({ defaults: { duration: 1 } });
 
-    body {
-      overflow: hidden;
-    }
+t1.from('h1', { y: -50, opacity: 0 })
+	.from('p', { y: -50, opacity: 0 }, '-=0.5') // 타임라인 종료 0.5초 전 (오버랩)
+	.from('a', { y: -50, opacity: 0 }, '-=0.5') // 타임라인 종료 0.5초 전 (오버랩)
+	.from('img', { y: 200, opacity: 0 }, '-=0.5')
+	.from('.box1', { x: 200, opacity: 0 }, '&lt;') // 이전 트윈 타임라인 시작지점
+	.to('.box2', { rotate: 360, x: 800, opacity: 1 }, '&gt;'); // 이전 트윈 타임라인 종료지점
 
-    ##title {
-      width: 700px;
-      margin: 100px auto 0;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 15px;
-    }
-
-    a {
-      display: block;
-      width: 100px;
-      padding: 10px;
-      background-color: blueviolet;
-      text-decoration: none;
-      color: white;
-      text-align: center;
-      border-radius: 10px;
-    }
-
-    ##thumbnail {
-      width: 700px;
-      height: 300px;
-      margin: 0 auto;
-      padding: 20px;
-    }</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="563-js">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#563-js">#</doc-anchor-trigger>
-        <span>5.6.3. js</span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-jsx"><code v-pre class="language-jsx">let t1 = gsap.timeline({ defaults: { duration: 1 } });
-
-t1.from('h1', { y: -50, opacity: 0 }).from('p', { y: -50, opacity: 0 }, '-=0.5').from('a', { y: -50, opacity: 0 }, '-=0.5').from('img', { y: 200, opacity: 0 }, '-=0.5');
-
-document.getElementById('cta').addEventListener('click', () =&gt; {
+document.getElementById('cta').addEventListener('click', (e) =&gt; {
+	e.preventDefault();
 	t1.reversed() ? t1.play() : t1.reverse();
+	//타임라인의 진행상태가 반전 되었을경우 시작하고 아닐경우 반전
 });</code></pre>
 </doc-codeblock></div>
-<hr>
-<doc-anchor-target id="57-스크롤트리거">
+<p><mark>애니메이션의 핸들링이 궁금하다면?</mark></p>
+   </doc-panel>
+   <doc-panel id="핸들링예제" collapsed>
+       <template #title>핸들링예제</template>
+<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/handling.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;Document&lt;/title&gt;
+		&lt;style&gt;
+			.box {
+				width: 100px;
+				height: 100px;
+			}
+
+			.box1 {
+				background-color: red;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;div class=&quot;box box1&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;nav&quot;&gt;
+			&lt;button id=&quot;play&quot;&gt;시작&lt;/button&gt;
+			&lt;button id=&quot;pause&quot;&gt;정지&lt;/button&gt;
+			&lt;button id=&quot;resume&quot;&gt;재개&lt;/button&gt;
+			&lt;button id=&quot;reverse&quot;&gt;반전&lt;/button&gt;
+			&lt;button id=&quot;restart&quot;&gt;재시작&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js&quot;&gt;&lt;/script&gt;
+		&lt;script&gt;
+			const tween = gsap.to(&quot;.box1&quot;, { duration: 8, x: 400, width: 400, paused: true, });
+
+			document.querySelector(&quot;#play&quot;).onclick = function () { return tween.play(); };
+			document.querySelector(&quot;#pause&quot;).onclick = function () { return tween.pause(); };
+			document.querySelector(&quot;#resume&quot;).onclick = function () { return tween.resume(); };
+			document.querySelector(&quot;#reverse&quot;).onclick = function () { return tween.reverse(); };
+			document.querySelector(&quot;#restart&quot;).onclick = function () { return tween.restart(); }.
+
+			//resume 애니메이션 멈춘곳 부터 재생을 다시 시작
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="34-scrolltrigger">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#57-스크롤트리거">#</doc-anchor-trigger>
-        <span>5.7. 스크롤트리거</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#34-scrolltrigger">#</doc-anchor-trigger>
+        <span>3.4. scrollTrigger</span>
     </h3>
 </doc-anchor-target>
-<p>js/deep\gsap\08.html</p>
-<p><a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-gray-200 hover:bg-gray-300 text-gray-900 dark:bg-dark-550 dark:hover:bg-dark-450 dark:text-dark-350 px-4 h-10 text-sm rounded-md">
+<blockquote>
+<p>스크롤트리거는 gsap 의 플러그인 으로 추가설치 해야한다.
+<a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-gray-200 hover:bg-gray-300 text-gray-900 dark:bg-dark-550 dark:hover:bg-dark-450 dark:text-dark-350 px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></svg></span>
     <span>api문서</span>
-</a>
-<a href="https://codepen.io/collection/AEbkkJ" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-gray-200 hover:bg-gray-300 text-gray-900 dark:bg-dark-550 dark:hover:bg-dark-450 dark:text-dark-350 px-4 h-10 text-sm rounded-md">
+</a> &gt; <a href="https://codepen.io/collection/AEbkkJ" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-gray-200 hover:bg-gray-300 text-gray-900 dark:bg-dark-550 dark:hover:bg-dark-450 dark:text-dark-350 px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></svg></span>
     <span>코드펜</span>
 </a></p>
-<doc-anchor-target id="571-data-speed">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#571-data-speed">#</doc-anchor-trigger>
-        <span>5.7.1. data-speed</span>
-    </h4>
-</doc-anchor-target>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">CDN</div>
+<pre class="language-markdown"><code v-pre class="language-markdown">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js
+https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js</code></pre>
+</doc-codeblock></div>
+<doc-panel id="badge-variant-info-size-s-text-07-data-speed" collapsed>
+    <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>07</span>
+</span> data speed</template>
 <p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/08.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></svg></span>
     <span>미리보기</span>
 </a></p>
-<doc-panels>
-   <doc-panel id="step-1" collapsed>
-       <template #title>Step 1</template>
-<p><code v-pre>https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js</code></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;box-container&quot;&gt;
-  &lt;div class=&quot;box&quot; data-speed=&quot;0.25&quot;&gt;0.25&lt;/div&gt;
-  &lt;div class=&quot;box&quot; data-speed=&quot;0.4&quot;&gt;0.4&lt;/div&gt;
-  &lt;div class=&quot;box&quot; data-speed=&quot;0&quot;&gt;0&lt;/div&gt;
-  &lt;div class=&quot;box&quot; data-speed=&quot;1&quot;&gt;1&lt;/div&gt;
-  &lt;div class=&quot;box&quot; data-speed=&quot;0.75&quot;&gt;0.75&lt;/div&gt;
+	&lt;div class=&quot;box&quot; data-speed=&quot;0.25&quot;&gt;0.25&lt;/div&gt;
+	&lt;div class=&quot;box&quot; data-speed=&quot;0.4&quot;&gt;0.4&lt;/div&gt;
+	&lt;div class=&quot;box&quot; data-speed=&quot;0&quot;&gt;0&lt;/div&gt;
+	&lt;div class=&quot;box&quot; data-speed=&quot;1&quot;&gt;1&lt;/div&gt;
+	&lt;div class=&quot;box&quot; data-speed=&quot;0.75&quot;&gt;0.75&lt;/div&gt;
 &lt;/div&gt;
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://assets.codepen.io/16327/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
+&lt;script src=&quot;https://assets.codepen.io/16327/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="step-2" collapsed>
-       <template #title>Step 2</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-css"><code v-pre class="language-css">* {
-   box-sizing: border-box;
- }
+	box-sizing: border-box;
+}
 
- button {
-   cursor: pointer;
-   padding: 8px 16px;
-   margin: 10px 5px;
- }
+button {
+	cursor: pointer;
+	padding: 8px 16px;
+	margin: 10px 5px;
+}
 
- body {
-   display: flex;
-   position: relative;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   height: 300vh;
- }
+body {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 300vh;
+}
 
- .box-container {
-   top: 50vh;
-   position: relative;
-   display: flex;
-   justify-content: center;
-   flex: 1;
-   width: 100%;
-   overflow: visible;
- }
+.box-container {
+	top: 50vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	width: 100%;
+	overflow: visible;
+}
 
- .box {
-   font-size: 28px;
-   font-weight: 700;
-   background-color: blue;
-   color: white;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100px;
-   width: 15%;
-   margin: 10px;
- }</code></pre>
+.box {
+	font-size: 28px;
+	font-weight: 700;
+	background-color: blue;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 15%;
+	margin: 10px;
+}</code></pre>
 </doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="step3" collapsed>
-       <template #title>STEP3</template>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-javascript"><code v-pre class="language-javascript">gsap.registerPlugin(ScrollTrigger);
 
@@ -1319,22 +1365,57 @@ gsap.set('.box', { backgroundColor: 'rgb(random(0,190), random(0,190), random(0,
 
 // apply parallax effect to any element with a data-speed attribute
 gsap.to('[data-speed]', {
-  y: (i, el) =&gt; (1 - parseFloat(el.getAttribute('data-speed'))) * ScrollTrigger.maxScroll(window),
-  ease: 'none',
-  scrollTrigger: {
-    start: 0,
-    end: 'max',
-    invalidateOnRefresh: true,
-    scrub: 0,
-  },
+	y: (i, el) =&gt; (1 - parseFloat(el.getAttribute('data-speed'))) * ScrollTrigger.maxScroll(window),
+	ease: 'none',
+	scrollTrigger: {
+		//스크롤이 0일때 시작하고, 스크롤이 max에 도달했을 때 종료
+		start: 0,
+		end: 'max',
+		//스크롤 또는 창 크기 변경 시 애니메이션을 재계산하도록 설정한다
+		invalidateOnRefresh: true,
+		//스크롤 위치에 따라 애니메이션 진행률을 동기화한다. 0은 즉시 애니메이션을 업데이트한다
+		scrub: 0,
+	},
 });</code></pre>
 </doc-codeblock></div>
-   </doc-panel>
-</doc-panels>
-<doc-anchor-target id="572-가로방향-스크롤">
+<div class="comment_box">
+<ol>
+<li><p><code v-pre> y: (i, el) =&gt; (1 - parseFloat(el.getAttribute('data-speed'))) \* ScrollTrigger.maxScroll(window)</code></p>
+<ul>
+<li>y 속성에 함수 할당</li>
+<li>y 속성은 애니메이션을 대상 요소의 y축 위치를 지정하며 data-speed 속성에 따라 각각 적용한다.</li>
+</ul>
+</li>
+<li><p><code v-pre>(i, el) =&gt;</code></p>
+<ol>
+<li>i(인덱스)와 el(요소)를 매개변수로 받는다. el(요소)만을 사용하여 data-speed 속성 값을 가져온다.</li>
+</ol>
+</li>
+<li><p><code v-pre>parseFloat(el.getAttribute('data-speed'))</code>는</p>
+<ol>
+<li>el의 data-speed 속성 값은 문자열 형태로 저장되어 있기 때문에 숫자로 변환해야 연산에 사용할 수 있다. 이때 parseFloat 함수는 숫자형으로 변환하며 소수점 자리 까지 반환받는다</li>
+</ol>
+</li>
+<li><p><code v-pre>1 - parseFloat(el.getAttribute('data-speed'))</code></p>
+<ol>
+<li>1에서 data-speed 속성 값을 뺀 결과를 반환한다. data-speed 값이 1에 가까울수록 결과는 0에 가까워지며, data-speed 값이 0에 가까울수록 결과는 1에 가까워진다.</li>
+</ol>
+</li>
+<li><p><code v-pre>ScrollTrigger.maxScroll(window)</code></p>
+<ol>
+<li>스크롤이 가능한 최대 범위를 반환하며 전체 윈도우의 스크롤 가능 범위를 의미한다.</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p><code v-pre>(1 - parseFloat(el.getAttribute('data-speed'))) \* ScrollTrigger.maxScroll(window)</code></p>
+<p>data-speed 속성 값에 따라 애니메이션 요소의 y축 위치를 스크롤 가능한 최대 범위 내에서 결정하도록 한다.
+data-speed 값이 클수록 요소는 y축에서 적은 거리를 이동한다.</p>
+</div>
+<doc-anchor-target id="362-가로방향-스크롤">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#572-가로방향-스크롤">#</doc-anchor-trigger>
-        <span>5.7.2. 가로방향 스크롤</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#362-가로방향-스크롤">#</doc-anchor-trigger>
+        <span>3.6.2. 가로방향 스크롤</span>
     </h4>
 </doc-anchor-target>
 <p>
@@ -1346,15 +1427,15 @@ gsap.to('[data-speed]', {
         <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://qwerewqwerew.github.io/source/js/gsap/deep/07-horizontal.html</span>
+        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/07-horizontal.html</span>
     </div>
-    <a href="https://qwerewqwerew.github.io/source/js/gsap/deep/07-horizontal.html" target="_blank" class="absolute block inset-0"></a>
+    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/07-horizontal.html" target="_blank" class="absolute block inset-0"></a>
 </div>
 </p>
-<doc-anchor-target id="573-html">
+<doc-anchor-target id="363-html">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#573-html">#</doc-anchor-trigger>
-        <span>5.7.3. html</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#363-html">#</doc-anchor-trigger>
+        <span>3.6.3. html</span>
     </h4>
 </doc-anchor-target>
 <blockquote>
@@ -1410,10 +1491,10 @@ gsap.to('[data-speed]', {
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="574-css">
+<doc-anchor-target id="364-css">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#574-css">#</doc-anchor-trigger>
-        <span>5.7.4. css</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#364-css">#</doc-anchor-trigger>
+        <span>3.6.4. css</span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -1472,10 +1553,10 @@ gsap.to('[data-speed]', {
 	font-size: 5em;
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="575-js">
+<doc-anchor-target id="365-js">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#575-js">#</doc-anchor-trigger>
-        <span>5.7.5. js</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#365-js">#</doc-anchor-trigger>
+        <span>3.6.5. js</span>
     </h4>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -1523,198 +1604,15 @@ gsap.config({ trialWarn: false });</code></pre>
 </li>
 </ul>
 </aside>
-<doc-anchor-target id="576-옵션설명">
+<doc-anchor-target id="366-옵션설명">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#576-옵션설명">#</doc-anchor-trigger>
-        <span>5.7.6. 옵션설명</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#366-옵션설명">#</doc-anchor-trigger>
+        <span>3.6.6. 옵션설명</span>
     </h4>
 </doc-anchor-target>
 <p>onLeave를 이용해서 섹션범위가 끝날때 콜백함수실행</p>
 <p>또 각각의 모션에서 onComplete를 이용해서 모션이 끝나는시점도 콜백이 가능</p>
-<doc-anchor-target id="58-gsap-가속도">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#58-gsap-가속도">#</doc-anchor-trigger>
-        <span>5.8. gsap 가속도</span>
-    </h3>
-</doc-anchor-target>
-<p><a href="https://greensock.com/docs/v2/Easing">https://greensock.com/docs/v2/Easing</a></p>
-<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/04.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
-    <span>실행화면</span>
-</a></p>
-<doc-panel id="step-1" collapsed>
-    <template #title>Step 1</template>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;title&gt;Document&lt;/title&gt;
-  &lt;style&gt;
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    #title {
-      width: 700px;
-      margin: 100px auto;
-    }
-
-    .box {
-      background-color: purple;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 50px;
-      font-size: 12px;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-  &lt;section id=&quot;title&quot;&gt;
-    &lt;div class=&quot;box box1&quot;&gt;none&lt;/div&gt;
-    &lt;div class=&quot;box box2&quot;&gt;power1&lt;/div&gt;
-    &lt;div class=&quot;box box3&quot;&gt;power2&lt;/div&gt;
-    &lt;div class=&quot;box box4&quot;&gt;power3&lt;/div&gt;
-    &lt;div class=&quot;box box5&quot;&gt;power4&lt;/div&gt;
-    &lt;div class=&quot;box box6&quot;&gt;back&lt;/div&gt;
-    &lt;div class=&quot;box box7&quot;&gt;elastic&lt;/div&gt;
-    &lt;div class=&quot;box box8&quot;&gt;bounce&lt;/div&gt;
-    &lt;div class=&quot;box box9&quot;&gt;rough&lt;/div&gt;
-    &lt;div class=&quot;box box10&quot;&gt;slow&lt;/div&gt;
-    &lt;div class=&quot;box box11&quot;&gt;steps&lt;/div&gt;
-    &lt;div class=&quot;box box12&quot;&gt;circ&lt;/div&gt;
-    &lt;div class=&quot;box box13&quot;&gt;expo&lt;/div&gt;
-    &lt;div class=&quot;box box14&quot;&gt;sine&lt;/div&gt;
-  &lt;/section&gt;
-  &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js'&gt;&lt;/script&gt;
-  &lt;script&gt;
-    gsap.to('.box1', { x: 600, ease: 'none', duration: 5 });
-    gsap.to('.box2', { x: 600, ease: 'power1', duration: 5 });
-    gsap.to('.box3', { x: 600, ease: 'power2', duration: 5 });
-    gsap.to('.box4', { x: 600, ease: 'power3', duration: 5 });
-    gsap.to('.box5', { x: 600, ease: 'power4', duration: 5 });
-    gsap.to('.box6', { x: 600, ease: 'back', duration: 5 });
-    gsap.to('.box7', { x: 600, ease: 'elastic', duration: 5 });
-    gsap.to('.box8', { x: 600, ease: 'bounce', duration: 5 });
-    gsap.to('.box9', { x: 600, ease: 'rough', duration: 5 });
-    gsap.to('.box10', { x: 600, ease: 'slow', duration: 5 });
-    gsap.to('.box11', { x: 600, ease: 'steps(5)', duration: 5 });
-    gsap.to('.box12', { x: 600, ease: 'circ', duration: 5 });
-    gsap.to('.box13', { x: 600, ease: 'expo', duration: 5 });
-    gsap.to('.box14', { x: 600, ease: 'sine', duration: 5 });
-  &lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
-</doc-codeblock></div>
 </doc-panel>
-<doc-anchor-target id="59-from">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#59-from">#</doc-anchor-trigger>
-        <span>5.9. from</span>
-    </h3>
-</doc-anchor-target>
-<doc-panels>
-   <doc-panel id="step-1" collapsed>
-       <template #title>Step 1</template>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ko&quot;&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;title&gt;Document&lt;/title&gt;
-  &lt;style&gt;
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      overflow: hidden;
-    }
-
-    #title {
-      width: 700px;
-      margin: 100px auto;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 15px;
-    }
-
-    a {
-      display: block;
-      width: 100px;
-      padding: 10px;
-      background-color: blueviolet;
-      text-decoration: none;
-      color: white;
-      text-align: center;
-      border-radius: 10px;
-    }
-
-    #thumbnail {
-      width: 420px;
-      height: 300px;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-  &lt;section id=&quot;title&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;h1 class=&quot;animation1&quot;&gt;JavaScript GSAP Library Animation&lt;/h1&gt;
-      &lt;p class=&quot;animation1&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, dolore.&lt;/p&gt;
-      &lt;a class=&quot;animation1&quot; href=&quot;#&quot;&gt;Button&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-  &lt;section id=&quot;thumbnail&quot;&gt;
-    &lt;img src=&quot;http://placekitten.com/200/300&quot; &gt;
-  &lt;/section&gt;
-  &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js'&gt;&lt;/script&gt;
-  &lt;script&gt;
-    let t1 = gsap.timeline({ defaults: { duration: 1 } });
-
-    t1.from('h1', { y: -50, opacity: 0 })
-      .from('p', { y: -50, opacity: 0 }, '-=0.5')
-      .from('a', { y: -50, opacity: 0 }, '+=1')
-      .from('img', { y: 200, opacity: 0 }, &quot;-=0.5&quot;);
-  &lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="step-2" collapsed>
-       <template #title>Step 2</template>
-<ol>
-<li>Content 2</li>
-</ol>
-   </doc-panel>
-</doc-panels>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
