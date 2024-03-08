@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763184968027">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763229239515">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.763184968027" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.763229239515" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763184968027" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763229239515" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763184968027" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763184968027" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763229239515" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763229239515" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -549,6 +549,119 @@
 if (window.devicePixelRatio &gt; 1) {
 	location.href = './mobile/';
 }</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="3-각-페이지별-이동버튼-추가">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-각-페이지별-이동버튼-추가">#</doc-anchor-trigger>
+        <span>3. 각 페이지별 이동버튼 추가</span>
+    </h2>
+</doc-anchor-target>
+<blockquote>
+<p>pc와 모바일 페이지로 이동하는 버튼을 만들자</p>
+<doc-tabs>
+<doc-tab v-cloak id="지시문">
+<template #title>지시문</template>
+<p><a href="https://qwerewqwerew.github.io/source/js/re-detect-Adaptation" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+</doc-tab>
+<doc-tab v-cloak id="코드1">
+<template #title>코드1</template>
+</doc-tab>
+</blockquote>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">index.html</div>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;PC&lt;/title&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;h1&gt;PC전용페이지&lt;/h1&gt;
+		&lt;button class=&quot;mobile&quot;&gt;Mobile&lt;/button&gt;
+	&lt;/body&gt;
+	&lt;script&gt;
+		//모바일 이동버튼 요소 선택
+		const mobile = document.querySelector('.mobile');
+		//사용자의 밀도 확인변수
+		let ratio;
+		//현재 파일 경로에 mobile 이라는 문자열이 포함되어 있는지 검사 있으면 true 없으면 fasle
+		let path = location.pathname.split('/').includes('mobile');
+		//현재 파일 경로 저장
+		const page = location.href;
+
+		// 현재 파일경로에 mobile 문자열이 없고 현재 파일 경로와 보고있는 파일경로가 같다면 (pc페이지 확인)
+		if (!path &amp;&amp; location.href === page) {
+			//현재 화면 밀도확인
+			ratio = window.devicePixelRatio;
+			// 밀도가 2보다 크면 모바일로 이동하고 1보다 작거나 같은면 현재 페이지를 연다
+			if (ratio &gt; 2) {
+				location.href = './mobile/';
+			} else if (ratio &lt;= 1) {
+				location.href = page;
+			}
+		}
+		//모바일 버튼 클릭시 페이지 이동
+		mobile.onclick = function (e) {
+			e.preventDefault();
+			location.href = './mobile/';
+		};
+	&lt;/script&gt;
+&lt;/html&gt;</code></pre>
+</doc-codeblock></div>
+<doc-tabs>
+<doc-tab v-cloak id="코드2">
+<template #title>코드2</template>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>모바일페이지에서 PC로의 이동시 화면비는 확인하지 않는다.
+확인하게 될 경우 무한루프에 빠지게 된다.
+pc이동 버튼 클릭시에 href 값만 변경한다.</p>
+        </div>
+    </div>
+</div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+		&lt;title&gt;mobile&lt;/title&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;h1&gt;모바일전용페이지&lt;/h1&gt;
+		&lt;button class=&quot;pc&quot;&gt;PC&lt;/button&gt;
+	&lt;/body&gt;
+	&lt;script&gt;
+		const pc = document.querySelector('.pc');
+		let path = location.pathname.split('/').includes('mobile');
+		const page = location.href;
+		pc.onclick = function (e) {
+			e.preventDefault();
+			if (path &amp;&amp; location.href === page) {
+				location.href = '../';
+			}
+		};
+	&lt;/script&gt;
+&lt;/html&gt;</code></pre>
 </doc-codeblock></div>
 </doc-tab>
 </doc-tabs>
