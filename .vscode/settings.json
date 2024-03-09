@@ -1,7 +1,0 @@
-{
-  "liveServer.settings.port": 5501,
-  "prettier.printWidth": 800,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "diffEditor.ignoreTrimWhitespace": false
-}
