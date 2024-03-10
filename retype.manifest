@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-09T09:20:44Z",
+  "created": "2024-03-10T10:44:15Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -8211,7 +8211,11 @@
       "path": "ui\\25.가로스크롤\\index.html"
     },
     {
-      "path": "ui\\3.스크롤효과\\index.html"
+      "path": "ui\\3.스크롤바\\index.html"
+    },
+    {
+      "path": "ui\\3.스크롤효과\\index.html",
+      "old": true
     },
     {
       "path": "ui\\4.스티키메뉴\\index.html"
@@ -8248,6 +8252,12 @@
     },
     {
       "path": "ui\\메뉴\\index.html"
+    },
+    {
+      "path": "ui\\files\\03-10_614.jpg"
+    },
+    {
+      "path": "ui\\files\\03-10_615.jpg"
     },
     {
       "path": "ui\\files\\2024-02-05_161302.jpg"
