@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763291240028">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763457243280">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -27,22 +27,24 @@
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/ui/19.gsap/">
     <meta property="og:title" content="19.gsap">
     <meta property="og:description" content="gsap공식사이트 gsap치트시트 gsap의 모든 기능이 있는 cdn 링크">
+    <meta property="og:image" content="https://qwerewqwerew.github.io/retype/ui/files/03-10_614.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/ui/19.gsap/">
     <meta property="twitter:title" content="19.gsap">
     <meta property="twitter:description" content="gsap공식사이트 gsap치트시트 gsap의 모든 기능이 있는 cdn 링크">
+    <meta property="twitter:image" content="https://qwerewqwerew.github.io/retype/ui/files/03-10_614.jpg">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.763291240028" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.763457243280" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763291240028" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763457243280" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763291240028" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763291240028" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763457243280" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763457243280" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -95,6 +97,7 @@
     		padding: 0;
     		margin: 0 !important;
     	}
+
     	.comment_box li {
     		margin-bottom: 0.8rem !important;
     	}
@@ -241,7 +244,8 @@
     		border-radius: 4px;
     	}
 
-    	.docs-panels>div,.mb-6.border.rounded-md.dark\:border-dark-650 {
+    	.docs-panels>div,
+    	.mb-6.border.rounded-md.dark\:border-dark-650 {
     		background: #e1edff65;
     	}
 
@@ -283,6 +287,10 @@
     		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
     		margin-bottom: 4rem;
     		margin-top: 2rem;
+    	}
+
+    	.mt30 {
+    		margin-top: 30px !important;
     	}
     </style>
 </head>
@@ -548,80 +556,10 @@ GreenSock Engaging the Internet GASP은 애니메이션을 쉽게 적용할 수 
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">npm install gsap</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="23-tween">
+<doc-anchor-target id="23-css-transform과-gsap-속성-비교">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#23-tween">#</doc-anchor-trigger>
-        <span>2.3. Tween</span>
-    </h3>
-</doc-anchor-target>
-<blockquote>
-<p>애니메이션 작업을 수행한다. 타겟(애니메이션을 적용하려는 개체), 지속 시간 및 애니메이션을 적용하려는 속성을 입력하면 간단히 애니메이션을 완성해준다.
-트윈을 생성하는 매서드는 3종류가 있다.</p>
-<ul>
-<li>gsap.to()</li>
-<li>gsap.from()</li>
-<li>gsap.fromTo()</li>
-</ul>
-</blockquote>
-<doc-anchor-target id="231-gsapto">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#231-gsapto">#</doc-anchor-trigger>
-        <span>2.3.1. gsap.to()</span>
-    </h4>
-</doc-anchor-target>
-<blockquote>
-<p>가장 널리 사용되는 트윈 메서드 이다.
-gsap.to에는 2가지 필수값이 필요하다. 대상(<strong>targets</strong>)과 속성(**vars)**이다.</p>
-</blockquote>
-<ul>
-<li><strong>targets :</strong> 애니메이션을 적용할 개체입니다. 원시 객체, 객체의 배열, 또는 &quot;.myClass&quot; 와 같은 선택자 텍스트</li>
-<li><strong>vars :</strong> 애니메이션을 적용할 속성/값 쌍(예를 들어, opacity: 0.5, rotation: 45)과 duratiom, onComplete와 같은 기타 선택적 <a href="https://greensock.com/docs/v3/GSAP/Tween/vars">특수 속성</a>이 있는 개체</li>
-</ul>
-<doc-anchor-target id="2311-예제-이동하기">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2311-예제-이동하기">#</doc-anchor-trigger>
-        <span>2.3.1.1. [예제] 이동하기</span>
-    </h5>
-</doc-anchor-target>
-<blockquote>
-<p>아이디 logo 이름을 가진 요소(Element)를 x축으로 1초 동안 100px 이동
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></g></svg>미리보기</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://qwerewqwerew.github.io/source/js/deep/gsap/1.html</span>
-    </div>
-    <a href="https://qwerewqwerew.github.io/source/js/deep/gsap/1.html" target="_blank" class="absolute block inset-0"></a>
-</div>
-</p>
-</blockquote>
-<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title border-r">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> html</span>
-    </div>
-    <div class="flex items-center px-5 py-3 font-mono leading-snug text-white docs-columns-code-title">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></g></g></svg> js</span>
-    </div>
-    <div class="docs-columns-code docs-columns-content border-r border-gray-200 dark:border-dark-650">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;div id=&quot;logo&quot;&gt;logo&lt;/div&gt;
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-</doc-codeblock></div>
-    </div>
-    <div class="docs-columns-code docs-columns-content">
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">gsap.to('##logo', { duration: 1, x: 100 });</code></pre>
-</doc-codeblock></div>
-    </div>
-</div>
-<doc-anchor-target id="24-css-transform과-gsap-속성-비교">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#24-css-transform과-gsap-속성-비교">#</doc-anchor-trigger>
-        <span>2.4. css transform과 gsap 속성 비교</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#23-css-transform과-gsap-속성-비교">#</doc-anchor-trigger>
+        <span>2.3. css transform과 gsap 속성 비교</span>
     </h3>
 </doc-anchor-target>
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -684,10 +622,10 @@ gsap.to에는 2가지 필수값이 필요하다. 대상(<strong>targets</strong>
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="25-기타속성">
+<doc-anchor-target id="24-기타속성">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#25-기타속성">#</doc-anchor-trigger>
-        <span>2.5. 기타속성</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#24-기타속성">#</doc-anchor-trigger>
+        <span>2.4. 기타속성</span>
     </h3>
 </doc-anchor-target>
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -734,18 +672,27 @@ gsap.to에는 2가지 필수값이 필요하다. 대상(<strong>targets</strong>
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="3-예제">
+<doc-anchor-target id="3-tween">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#3-예제">#</doc-anchor-trigger>
-        <span>3. 예제</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-tween">#</doc-anchor-trigger>
+        <span>3. Tween</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="31-tween">
+<doc-anchor-target id="31-예제">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#31-tween">#</doc-anchor-trigger>
-        <span>3.1. Tween</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#31-예제">#</doc-anchor-trigger>
+        <span>3.1. 예제</span>
     </h3>
 </doc-anchor-target>
+<blockquote>
+<p>애니메이션 작업을 수행한다. 타겟(애니메이션을 적용하려는 개체), 지속 시간 및 애니메이션을 적용하려는 속성을 입력하면 간단히 애니메이션을 완성해준다.
+트윈을 생성하는 매서드는 3종류가 있다.</p>
+<ul>
+<li>gsap.to()</li>
+<li>gsap.from()</li>
+<li>gsap.fromTo()</li>
+</ul>
+</blockquote>
 <doc-panels>
    <doc-panel id="badge-variant-info-size-s-text-01-이동" collapsed>
        <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
@@ -905,11 +852,11 @@ gsap.to('.green', { duration: 3, rotation: 360, scale: 0.5 });</code></pre>
 </doc-codeblock></div>
    </doc-panel>
 </doc-panels>
-<doc-anchor-target id="32-easing">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#32-easing">#</doc-anchor-trigger>
-        <span>3.2. easing</span>
-    </h3>
+<doc-anchor-target id="4-easing">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-easing">#</doc-anchor-trigger>
+        <span>4. easing</span>
+    </h2>
 </doc-anchor-target>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -943,6 +890,12 @@ none, power1, power2, power3, power4, back, elastic, bounce, rough, slow, steps,
         </div>
     </div>
 </div>
+<doc-anchor-target id="41-예제">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#41-예제">#</doc-anchor-trigger>
+        <span>4.1. 예제</span>
+    </h3>
+</doc-anchor-target>
 <doc-panel id="badge-variant-info-size-s-text-04-가속도" collapsed>
     <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
     <span>04</span>
@@ -1008,11 +961,11 @@ gsap.to('.box13', { x: 600, ease: 'expo', duration: 5 });
 gsap.to('.box14', { x: 600, ease: 'sine', duration: 5 });</code></pre>
 </doc-codeblock></div>
 </doc-panel>
-<doc-anchor-target id="33-gsaptimeline">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#33-gsaptimeline">#</doc-anchor-trigger>
-        <span>3.3. gsap.timeline()</span>
-    </h3>
+<doc-anchor-target id="5-gsaptimeline">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-gsaptimeline">#</doc-anchor-trigger>
+        <span>5. gsap.timeline()</span>
+    </h2>
 </doc-anchor-target>
 <blockquote>
 <p>타임라인 메서드는 애니메이션의 시간을 지정할수 있어 다양한 모션 구현시 편리하다.</p>
@@ -1031,6 +984,12 @@ gsap.to('.box14', { x: 600, ease: 'sine', duration: 5 });</code></pre>
 </div>
 </p>
 </blockquote>
+<doc-anchor-target id="51-예제">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#51-예제">#</doc-anchor-trigger>
+        <span>5.1. 예제</span>
+    </h3>
+</doc-anchor-target>
 <doc-panels>
    <doc-panel id="badge-variant-info-size-s-text-04-timeline" collapsed>
        <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
@@ -1286,11 +1245,11 @@ document.getElementById('cta').addEventListener('click', (e) =&gt; {
 </doc-codeblock></div>
    </doc-panel>
 </doc-panels>
-<doc-anchor-target id="34-scrolltrigger">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#34-scrolltrigger">#</doc-anchor-trigger>
-        <span>3.4. scrollTrigger</span>
-    </h3>
+<doc-anchor-target id="6-scrolltrigger">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#6-scrolltrigger">#</doc-anchor-trigger>
+        <span>6. scrollTrigger</span>
+    </h2>
 </doc-anchor-target>
 <blockquote>
 <p>스크롤트리거는 gsap 의 플러그인 으로 추가설치 해야한다.</p>
@@ -1303,120 +1262,265 @@ document.getElementById('cta').addEventListener('click', (e) =&gt; {
     <span>코드펜예제</span>
 </a></p>
 </blockquote>
+<doc-anchor-target id="61-주요속성">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#61-주요속성">#</doc-anchor-trigger>
+        <span>6.1. 주요속성</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>속성</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>trigger</td>
+<td>애니메이션이 시작되거나 끝나는 지점을 감지하는 요소이다.</td>
+</tr>
+<tr>
+<td>start</td>
+<td>애니메이션 트리거가 시작되는 스크롤 위치이다. 형식은 &quot;시작점 끝점&quot;이다.</td>
+</tr>
+<tr>
+<td>end</td>
+<td>애니메이션 트리거가 끝나는 스크롤 위치이다. 형식은 &quot;시작점 끝점&quot;이다.</td>
+</tr>
+<tr>
+<td>scrub</td>
+<td>스크롤 위치에 따라 애니메이션이 연동되어 재생되는지 여부이다. <code v-pre>true</code>로 설정하면 스크롤에 따라 애니메이션이 재생된다.</td>
+</tr>
+<tr>
+<td>pin</td>
+<td>특정 요소를 스크롤 동안 고정시키는 기능이다. <code v-pre>true</code>로 설정하면, 지정된 요소가 고정된다.</td>
+</tr>
+<tr>
+<td>markers</td>
+<td>시작점, 끝점, 그리고 트리거 요소의 위치를 화면에 표시하는 개발 도구이다. <code v-pre>true</code>로 설정하면 마커가 표시된다.</td>
+</tr>
+<tr>
+<td>toggleActions</td>
+<td>트리거 지점마다 애니메이션의 실행제어 <br>• onEnter: scroll-start ~ scroll-end 사이 <br>• onLeave : scroll-end 부분을 넘어갈 때 <br>• onEnterBack : scroll-start ~ scroll-end 사이 재 진입시<br>• onLeaveBack : scroll-end부분 재 퇴장시 <br> • 액션값: <code v-pre>play</code>, <code v-pre>pause</code>, <code v-pre>resume</code>, <code v-pre>reset</code>, <code v-pre>restart</code>, <code v-pre>complete</code>, <code v-pre>reverse</code>(중지된 곳부터 재생), <code v-pre>none</code>; <br> • 기본값 : <code v-pre>toggleActions:play none none none</code></td>
+</tr>
+<tr>
+<td>id</td>
+<td>ScrollTrigger 인스턴스에 고유 식별자를 부여한다. 여러 ScrollTrigger를 관리할 때 유용하다.</td>
+</tr>
+<tr>
+<td>onEnter</td>
+<td>스크롤이 트리거 시작 지점을 지날 때 실행할 콜백 함수이다.</td>
+</tr>
+<tr>
+<td>onLeave</td>
+<td>스크롤이 트리거 끝 지점을 벗어날 때 실행할 콜백 함수이다.</td>
+</tr>
+<tr>
+<td>onEnterBack</td>
+<td>스크롤이 트리거 끝 지점에서 시작 지점으로 돌아올 때 실행할 콜백 함수이다.</td>
+</tr>
+<tr>
+<td>onLeaveBack</td>
+<td>스크롤이 트리거 시작 지점을 다시 벗어날 때 실행할 콜백 함수이다.</td>
+</tr>
+<tr>
+<td>pinSpacing</td>
+<td><code v-pre>pin</code>이 활성화된 요소의 공간을 어떻게 처리할지 정의한다. &quot;margin&quot; 또는 &quot;padding&quot; 값을 사용할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="62-주요메서드">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#62-주요메서드">#</doc-anchor-trigger>
+        <span>6.2. 주요메서드</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>메서드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create</td>
+<td>새로운 ScrollTrigger 인스턴스를 생성한다. 인스턴스는 개별 애니메이션의 스크롤 트리거 설정을 관리한다.</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>ScrollTrigger 인스턴스를 제거한다. 인스턴스에 의해 생성된 변경사항들도 함께 제거된다</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="63-예제">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#63-예제">#</doc-anchor-trigger>
+        <span>6.3. 예제</span>
+    </h3>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <div class="codeblock-title">CDN</div>
-<pre class="language-markdown"><code v-pre class="language-markdown">https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js
-https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js</code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </doc-codeblock></div>
-<doc-panel id="badge-variant-info-size-s-text-07-data-speed를-활용한-패럴렉스" collapsed>
-    <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+<doc-panels>
+   <doc-panel id="badge-variant-info-size-s-text-07-스크롤트리거-기본" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
     <span>07</span>
-</span> data speed를 활용한 패럴렉스</template>
-<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/08.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></svg></span>
-    <span>미리보기</span>
+</span> 스크롤트리거 기본</template>
+<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/scrollTrigger" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
 </a></p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;box-container&quot;&gt;
-	&lt;div class=&quot;box&quot; data-speed=&quot;0.25&quot;&gt;0.25&lt;/div&gt;
-	&lt;div class=&quot;box&quot; data-speed=&quot;0.4&quot;&gt;0.4&lt;/div&gt;
-	&lt;div class=&quot;box&quot; data-speed=&quot;0&quot;&gt;0&lt;/div&gt;
-	&lt;div class=&quot;box&quot; data-speed=&quot;1&quot;&gt;1&lt;/div&gt;
-	&lt;div class=&quot;box&quot; data-speed=&quot;0.75&quot;&gt;0.75&lt;/div&gt;
-&lt;/div&gt;
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://assets.codepen.io/16327/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;section&gt;&lt;/section&gt;
+&lt;section&gt;
+	&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section&gt;&lt;/section&gt;</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-css"><code v-pre class="language-css">* {
-	box-sizing: border-box;
+<pre class="language-css"><code v-pre class="language-css">.box {
+	width: 200px;
+	height: 200px;
+	background: pink;
 }
 
-button {
-	cursor: pointer;
-	padding: 8px 16px;
-	margin: 10px 5px;
-}
+section {
+	height: 100vh;
+}</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>섹션별 배경색 추가</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">const bg = document.querySelectorAll('section');
+const colors = {
+	r: 255,
+	g: 255,
+	b: 255,
+};
 
-body {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 300vh;
-}
-
-.box-container {
-	top: 50vh;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	flex: 1;
-	width: 100%;
-	overflow: visible;
+bg.forEach((o, i) =&gt; {
+	o.style.backgroundColor = `rgb(${colors.r - i * 100},${colors.g - i * 50},${colors.b - i * 50})`;
+});</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>스크롤트리거 작성</li>
+<li><code v-pre>gsap.registerPlugin(ScrollTrigger);</code> 를 추가해야 한다.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">gsap.registerPlugin(ScrollTrigger);
+gsap.to('.box', {
+	scrollTrigger: '.box',
+	x: '50vw',
+});</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-info-size-s-text-08-스크롤트리거-속성추가" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>08</span>
+</span> 스크롤트리거 속성추가</template>
+<p class="mt30"><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/scrollTrigger%5C02.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a> </p>
+<ul>
+<li>html</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;box box-1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box box-2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box box-3&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box box-4&quot;&gt;&lt;/div&gt;</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>css</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">body {
+	min-height: 500vh;
+	margin: 0;
+	background-color: #111;
 }
 
 .box {
-	font-size: 28px;
-	font-weight: 700;
-	background-color: blue;
-	color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	width: 100px;
 	height: 100px;
-	width: 15%;
-	margin: 10px;
+	box-sizing: border-box;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.box-1 {
+	background-color: green;
+}
+
+.box-2 {
+	background-color: gold;
+}
+
+.box-3 {
+	background-color: blue;
+}
+
+.box-4 {
+	background-color: red;
 }</code></pre>
 </doc-codeblock></div>
+<ul>
+<li>js</li>
+</ul>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-javascript"><code v-pre class="language-javascript">gsap.registerPlugin(ScrollTrigger);
-
-// .box의 색상을 무작위로 설정
-gsap.set('.box', { backgroundColor: 'rgb(random(0,190), random(0,190), random(0,190))' });
-
-// data-speed 속성을 취득하여 각 요소에 반영한다.
-gsap.to('[data-speed]', {
-	y: (i, el) =&gt; (1 - parseFloat(el.getAttribute('data-speed'))) * ScrollTrigger.maxScroll(window),
-	ease: 'none',
+gsap.to('.box-3', {
 	scrollTrigger: {
-		//스크롤이 0일때 시작하고, 스크롤이 max에 도달했을 때 종료
-		start: 0,
-		end: 'max',
-		//스크롤 또는 창 크기 변경 시 애니메이션을 재계산하도록 설정한다
-		invalidateOnRefresh: true,
-		//스크롤 위치에 따라 애니메이션 진행률을 동기화한다. 0은 즉시 애니메이션을 업데이트한다
-		scrub: 0,
+		trigger: '.box-3', //객체기준범위
+		start: '0% 20%', //시작 지점
+		end: '100% 80%', //끝 지점
+		// end: &quot;+=500&quot;//시작 부분부터 500px까지 스크롤 한 후종료
+		scrub: 1, //부드러운 스크러빙
+		markers: true, //개발가이드선
 	},
+	x: 300,
+	rotation: 360,
 });</code></pre>
 </doc-codeblock></div>
 <div class="comment_box">
 <ol>
-<li><p><code v-pre> y:</code></p>
+<li><code v-pre>start</code>
+<img src="../files/03-10_614.jpg" alt="" />
 <ul>
-<li>y 속성에 함수 할당</li>
-<li>y 속성은 애니메이션을 대상 요소의 y축 위치를 지정하며 data-speed 속성에 따라 각각 적용한다.</li>
+<li>첫번째 값은 요소의 시작점, 두번째 값은 윈도우의 시작점을 설정</li>
 </ul>
 </li>
-<li><p><code v-pre>(i, el) =&gt;</code></p>
+<li><code v-pre>end</code>
+<img src="../files/03-10_615.jpg" alt="" />
 <ul>
-<li>i(인덱스)와 el(요소)를 매개변수로 받는다. el(요소)만을 사용하여 data-speed 속성 값을 가져온다.</li>
+<li>첫번째 값은 요소의 끝점, 두번째 값은 윈도우의 끝점을 설정</li>
+<li><code v-pre>end: &quot;+=500&quot;</code> 시작 부분부터 500px까지 스크롤 한 후 종료</li>
 </ul>
 </li>
-<li><p><code v-pre>( 1- parseFloat(el.getAttribute('data-speed'))</code></p>
+<li><code v-pre>scrub</code>
 <ul>
-<li>el의 data-speed 속성 값은 문자열 형태로 저장되어 있기 때문에 숫자로 변환해야 연산에 사용할 수 있다. <code v-pre>parseFloat</code> 함수는 문자형을 숫자형으로 변환하며 소수점 자리 까지 반환받는다</li>
-<li>1에서 data-speed 속성 값을 뺀 결과를 반환한다. data-speed 값이 1에 가까울수록 결과는 0에 가까워지며, data-speed 값이 0에 가까울수록 결과는 1에 가까워진다.</li>
+<li>스크롤시 애니메이트 여부</li>
+<li>false : 기본값</li>
+<li>true : 애니메이션이 스크롤 속도에 맞춰 부드럽게 따라옴</li>
+<li>숫자 : 스크롤과 애니메이션 사이의 지연시간 지정 (0.5는 스크롤 정지후 애니메이션이 완전히 끝나기까지 0.5초의 지연을 의미)</li>
 </ul>
 </li>
-<li><p><code v-pre>ScrollTrigger.maxScroll(window)</code></p>
+<li><code v-pre>markers</code>
 <ul>
-<li>스크롤이 가능한 최대 범위를 반환하며 전체 윈도우의 스크롤 가능 범위를 의미한다.</li>
+<li>개발시 가이드선 표시여부</li>
 </ul>
 </li>
 </ol>
-<hr>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -1430,19 +1534,111 @@ gsap.to('[data-speed]', {
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>요약</h5>
-<p><code v-pre>(1 - parseFloat(el.getAttribute('data-speed'))) * ScrollTrigger.maxScroll(window)</code></p>
-<p>data-speed 속성 값에 따라 애니메이션 요소의 y축 위치를 스크롤 가능한 최대 범위 내에서 결정하도록 한다.
-data-speed 값이 클수록 요소는 y축에서 적은 거리를 이동한다.</p>
+<p>gsap.to 메서드에 scrollTrigger 를 추가함.
+.box-3은 요소가 보여질때 x축으로 300이동하고 360도 회전한다.</p>
         </div>
     </div>
 </div>
 </div>
-</doc-panel>
-<doc-anchor-target id="35-가로방향-스크롤">
+   </doc-panel>
+   <doc-panel id="badge-variant-info-size-s-text-09-섹션별-애니메이트" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>09</span>
+</span> 섹션별 애니메이트</template>
+<p class="mt30"><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/scrollTrigger/02.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a> </p>
+<ul>
+<li>html</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;section class=&quot;panel blue&quot;&gt;
+	&lt;h1&gt;Basic Tweening&lt;/h1&gt;
+&lt;/section&gt;
+&lt;section class=&quot;panel orange&quot;&gt;
+	&lt;p&gt;This element will spin.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class=&quot;panel red&quot;&gt;
+	&lt;p&gt;This background color will change&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class=&quot;panel blue yoyo&quot;&gt;
+	&lt;p&gt;Yoyo Text!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>css</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">section {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.panel p {
+	position: absolute;
+	font-size: 32px;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.red {
+	background-color: #cf3535;
+}</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>js</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">gsap.registerPlugin(ScrollTrigger);
+//기본값 설정
+ScrollTrigger.defaults({
+	//애니메이션의 반복 실행 제어 onEnter, onLeave, onEnterBack, onLeaveBack
+	toggleActions: 'restart pause resume pause', //재시작 일시정지 중지된 곳부터 재시작 일시정지
+	toggleClass: 'active',
+});
+
+gsap.to('.orange p', {
+	scrollTrigger: '.orange',
+	duration: 2,
+	rotation: 360,
+});
+
+gsap.to('.red', {
+	scrollTrigger: {
+		trigger: '.red',
+		toggleActions: 'restart pause reverse pause',
+	},
+	duration: 1,
+	//backgroundColor: '#FFA500',
+	backgroundImage: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1)',
+	ease: 'none',
+});
+
+gsap.to('.yoyo p', {
+	scrollTrigger: '.yoyo',
+	scale: 2,
+	repeat: -1,
+	yoyo: true,
+	ease: 'power2',
+});</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
+<doc-anchor-target id="64-가로방향-스크롤">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#35-가로방향-스크롤">#</doc-anchor-trigger>
-        <span>3.5. 가로방향 스크롤</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#64-가로방향-스크롤">#</doc-anchor-trigger>
+        <span>6.4. 가로방향 스크롤</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
@@ -1451,19 +1647,19 @@ data-speed 값이 클수록 요소는 y축에서 적은 거리를 이동한다.<
 <doc-panels>
    <doc-panel id="step-1" collapsed>
        <template #title>Step 1</template>
-<p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/07-horizontal.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+<p class="mt30"><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/07-horizontal.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
     <span>실행화면</span>
-</a></p>
+</a> </p>
 <ol>
-<li>cdn 추가
+<li>cdn 추가</li>
+</ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://assets.codepen.io/16327/ScrollSmoother.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://assets.codepen.io/16327/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;
-```</code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </doc-codeblock></div>
-</li>
+<ol start="2">
 <li>구조작성
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;wrapper&quot;&gt;
@@ -1471,7 +1667,7 @@ data-speed 값이 클수록 요소는 y축에서 적은 거리를 이동한다.<
  	&lt;h2&gt;안녕하세요&lt;/h2&gt;
  	&lt;div class=&quot;factsContainer_sm&quot;&gt;
  		&lt;div class=&quot;fact&quot;&gt;
- 			&lt;h3&gt;신입 프론트엔드 김망고입니다:&lt;/h3&gt;
+ 			&lt;h3&gt;신입 프론트엔드 김망고이다:&lt;/h3&gt;
  			&lt;img src=&quot;https://source.unsplash.com/random&quot; alt=&quot;&quot; /&gt;
  			&lt;h3&gt;일머리 좋은 신입 프론트엔드입니다&lt;/h3&gt;
  		&lt;/div&gt;

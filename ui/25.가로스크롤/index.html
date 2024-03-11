@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763291240028">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763457243280">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.763291240028" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.763457243280" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763291240028" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763457243280" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763291240028" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763291240028" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763457243280" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763457243280" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -95,6 +95,7 @@
     		padding: 0;
     		margin: 0 !important;
     	}
+
     	.comment_box li {
     		margin-bottom: 0.8rem !important;
     	}
@@ -241,7 +242,8 @@
     		border-radius: 4px;
     	}
 
-    	.docs-panels>div,.mb-6.border.rounded-md.dark\:border-dark-650 {
+    	.docs-panels>div,
+    	.mb-6.border.rounded-md.dark\:border-dark-650 {
     		background: #e1edff65;
     	}
 
@@ -283,6 +285,10 @@
     		box-shadow: rgba(46, 124, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 124, 240, 0.1) 0px 20px, rgba(46, 124, 240, 0.05) 0px 25px;
     		margin-bottom: 4rem;
     		margin-top: 2rem;
+    	}
+
+    	.mt30 {
+    		margin-top: 30px !important;
     	}
     </style>
 </head>
@@ -672,7 +678,52 @@ section:nth-child(even) {
 }</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript"></code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">(function () {
+	let g_canScroll;
+	init();
+	//초기화
+	function init() {
+		setSticky();
+		bindEvents();
+	}
+
+	function bindEvents() {
+		window.addEventListener('wheel', wheelHandler);
+	}
+
+	function setSticky() {
+		document.querySelectorAll('.sticky').forEach(function (container) {
+			// scrollWidth=전체 스크롤바를 사용하게 되어 숨겨진 영역까지 포함한 크기를 리턴
+			const stikyContainerHeight = container.querySelector('main').scrollWidth;
+			//.sticky의 높이를 각각 스크롤 너비와 같게 함
+			container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
+		});
+	}
+	//요소가 화면에 들어왔는지를 확인하는 함수
+	function isInView(el) {
+		const rect = el.getBoundingClientRect();
+		//요소가 화면에 있을경운
+		console.log('document.documentElement', document.documentElement);
+		return rect.top &lt;= 0 &amp;&amp; rect.bottom &gt; document.documentElement.clientHeight;
+	}
+
+	function wheelHandler(e) {
+		// https://ko.javascript.info/iterable
+
+		const elInView = Array.from(document.querySelectorAll('.sticky')).filter(function (el) {
+			return isInView(el);
+		})[0];
+		if (!elInView) {
+			return;
+		}
+		console.log('elInView', elInView);
+		let isPlaceHolderBelowTop = elInView.offsetTop &lt; document.documentElement.scrollTop; //.sticky-container의 상단좌표를 스크롤보다 작은지 비교
+		let isPlaceHolderBelowBottom = elInView.offsetTop + elInView.offsetHeight &gt; document.documentElement.scrollTop; //.sticky-container 탑과 높이를 합하고(길이) 스크롤양보다 큰지비교
+		g_canScroll = isPlaceHolderBelowTop &amp;&amp; isPlaceHolderBelowBottom; //true 는 보이는 상태
+		console.log(elInView, elInView.offsetTop, isPlaceHolderBelowBottom);
+		elInView.querySelector('main').scrollLeft += e.deltaY;
+	}
+})();</code></pre>
 </doc-codeblock></div>
 </doc-panel>
 
