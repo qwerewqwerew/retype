@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763689759379">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.763690415530">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -37,12 +37,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.763689759379" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.763690415530" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763689759379" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.763690415530" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763689759379" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763689759379" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.763690415530" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.763690415530" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -1679,10 +1679,10 @@ function myAni() {
        <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
     <span>09</span>
 </span> 스크롤트리거-핀</template>
-<p><a href="https://gsap.com/docs/v3/Eases/" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></g></svg></span>
-    <span>easeing</span>
-</a></p>
+<p class="mt30"><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/course/02.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a> </p>
 <ol>
 <li>html 08번 예제와 유사하나 일부 요소가 추가된다.</li>
 </ol>
@@ -1792,9 +1792,7 @@ ScrollTrigger.create({
 
 //02 : 순차 나타나기
 const ani2 = gsap.timeline();
-ani2.from('.sec2 .i1', { y: 200, autoAlpha: 0 })
-.from('.sec2 .i2', { y: 100, autoAlpha: 0 })
-.from('.sec2 .i3', { y: -100, autoAlpha: 0 });
+ani2.from('.sec2 .i1', { y: 200, autoAlpha: 0 }).from('.sec2 .i2', { y: 100, autoAlpha: 0 }).from('.sec2 .i3', { y: -100, autoAlpha: 0 });
 
 ScrollTrigger.create({
 	animation: ani2,
@@ -1890,14 +1888,7 @@ ScrollTrigger.create({
 
 //07 : 텍스트 제자리 애니메이션
 const ani7 = gsap.timeline();
-ani7.from('.sec7 .t1', { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
-.from('.sec7 .t2', { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
-.from('.sec7 .t3', { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
-.from('.sec7 .t4', { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
-.from('.sec7 .t5', { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
-.from('.sec7 .t6', { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
-.from('.sec7 .t7', { autoAlpha: 0, duration: 1, y: 50 }, '+=1');
-
+ani7.from('.sec7 .t1', { autoAlpha: 0, duration: 1, y: 50 }, '+=1').from('.sec7 .t2', { autoAlpha: 0, duration: 1, y: 50 }, '+=1').from('.sec7 .t3', { autoAlpha: 0, duration: 1, y: 50 }, '+=1').from('.sec7 .t4', { autoAlpha: 0, duration: 1, y: 50 }, '+=1').from('.sec7 .t5', { autoAlpha: 0, duration: 1, y: 50 }, '+=1').from('.sec7 .t6', { autoAlpha: 0, duration: 1, y: 50 }, '+=1').from('.sec7 .t7', { autoAlpha: 0, duration: 1, y: 50 }, '+=1');
 
 ScrollTrigger.create({
 	animation: ani7,
@@ -1955,22 +1946,135 @@ ScrollTrigger.create({
     <span>실행화면</span>
 </a></p>
 <ol>
-<li>html</li>
+<li>html 작성</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup"></code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;main class=&quot;cont&quot;&gt;
+	&lt;!-- section.item.sec$*5&gt;h2.num+.box --&gt;
+	&lt;section class=&quot;item sec1&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;1&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item sec2&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;2&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item sec3&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;3&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item sec4&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;4&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item sec5&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;5&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/main&gt;</code></pre>
 </doc-codeblock></div>
 <ol>
-<li>css</li>
+<li>css 추가</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-css"><code v-pre class="language-css"></code></pre>
+<pre class="language-css"><code v-pre class="language-css">.box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	background-size: cover;
+	background-position: center;
+}
+.box::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+.num {
+	position: absolute;
+	font-size: 10vw;
+	z-index: 10;
+	color: #fff;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.sec1 .box {
+	background-image: url(http://qwerew.cafe24.com/images/1.jpg);
+}
+.sec2 .box {
+	background-image: url(http://qwerew.cafe24.com/images/2.jpg);
+}
+.sec3 .box {
+	background-image: url(http://qwerew.cafe24.com/images/3.jpg);
+}
+.sec4 .box {
+	background-image: url(http://qwerew.cafe24.com/images/4.jpg);
+}
+.sec5 .box {
+	background-image: url(http://qwerew.cafe24.com/images/5.jpg);
+}</code></pre>
 </doc-codeblock></div>
 <ol>
 <li>js</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript"></code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">// 01. 한개 섹션 고정시키기
+
+function fn1() {
+	const panel = document.querySelector('.sec5');
+
+	ScrollTrigger.create({
+		trigger: panel,
+		start: 'top top',
+		pin: true,
+		pinSpacing: false,
+	});
+}
+// 02. 여러개 섹션 고정시키기
+function fn2() {
+	gsap.utils.toArray('.box').forEach((panel, i) =&gt; {
+		ScrollTrigger.create({
+			trigger: panel,
+			start: 'top top',
+			pin: true,
+			pinSpacing: false,
+		});
+	});
+}
+// 03. 스냅 고정
+function fn3() {
+	let panels = gsap.utils.toArray('.box');
+	let tops = panels.map((panel) =&gt; ScrollTrigger.create({ trigger: panel, start: 'top top' }));
+	console.log(tops);
+	panels.forEach((panel, i) =&gt; {
+		ScrollTrigger.create({
+			trigger: panel,
+			start: () =&gt; (panel.offsetHeight &lt; window.innerHeight ? 'top top' : 'bottom bottom'),
+			pin: true,
+			pinSpacing: false,
+		});
+	});
+
+	ScrollTrigger.create({
+		snap: {
+			snapTo: (progress, self) =&gt; {
+				let panelStarts = tops.map((st) =&gt; st.start),
+					snapScroll = gsap.utils.snap(panelStarts, self.scroll());
+				return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
+			},
+			duration: 0.5,
+		},
+	});
+}
+fn3();</code></pre>
 </doc-codeblock></div>
    </doc-panel>
    <doc-panel id="badge-variant-info-size-s-text-11-스크롤트리거-패럴렉스" collapsed>
@@ -1985,25 +2089,191 @@ ScrollTrigger.create({
 <li>html</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup"></code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;main class=&quot;cont&quot;&gt;
+	&lt;!-- section.item.sec$*9&gt;h2.num+.box --&gt;
+	&lt;section class=&quot;item sec1&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;1&lt;/h2&gt;
+		&lt;div class=&quot;img_wrap&quot;&gt;
+			&lt;div class=&quot;img&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;desc&quot;&gt;Lorem ipsum dolor sit, amet&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item sec2&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;2&lt;/h2&gt;
+		&lt;div class=&quot;img_wrap&quot;&gt;
+			&lt;div class=&quot;img&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;desc&quot;&gt;Lorem ipsum dolor sit, amet&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item sec3&quot;&gt;
+		&lt;h2 class=&quot;num reveal&quot;&gt;3&lt;/h2&gt;
+		&lt;div class=&quot;img_wrap&quot;&gt;
+			&lt;div class=&quot;img &quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;desc reveal ltr&quot; data-delay=&quot;0.8&quot;&gt;Lorem ipsum dolor sit, amet&lt;/div&gt;
+		&lt;div class=&quot;desc reveal ttb&quot; data-delay=&quot;0.3&quot;&gt;Lorem ipsum dolor sit, amet&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item sec4&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;4&lt;/h2&gt;
+		&lt;div class=&quot;img_wrap reveal&quot;&gt;
+			&lt;div class=&quot;img&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;desc reveal btt&quot; data-delay=&quot;0.5&quot;&gt;Lorem ipsum dolor sit, amet&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/main&gt;</code></pre>
 </doc-codeblock></div>
 <ol>
 <li>css</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-css"><code v-pre class="language-css"></code></pre>
+<pre class="language-css"><code v-pre class="language-css">section.item {
+	padding-top: 5vw;
+	margin: 10vw 0;
+	margin-right: 0;
+	text-align: left;
+}
+.img_wrap {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	/* 1080/1920*100 */
+	padding-bottom: 50%;
+}
+.img {
+	position: absolute;
+	filter: grayscale(100%);
+	transition: all 1s;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.img_wrap:hover .img {
+	filter: grayscale(0%);
+	transform: scale(1.3);
+}
+.num {
+	position: absolute;
+	font-size: 10vw;
+	z-index: 10;
+	color: #fff;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.desc {
+	font-size: 5vw;
+	font-weight: 900;
+	margin-left: -50%;
+	margin-top: 50%;
+	z-index: 100;
+	position: relative;
+	-webkit-text-fill-color: #0000802d;
+	-webkit-text-stroke: 1px #000080;
+	text-stroke: 1px 000080;
+}
+.desc:before {
+	content: 'Lorem ipsum dolor sit, amet';
+	position: absolute;
+	filter: drop-shadow(-15px -10px 10px rgba(28, 33, 106, 0.5)) drop-shadow(10px 10px 10px rgba(13, 16, 65, 0.8)) drop-shadow(20px 20px 40px rgba(9, 11, 41, 0.8));
+}
+.ttb {
+	margin-top: 0%;
+}
+.sec1 .img {
+	background-image: url(http://qwerew.cafe24.com/images/1.jpg);
+}
+.sec2 .img {
+	background-image: url(http://qwerew.cafe24.com/images/2.jpg);
+}
+.sec3 .img {
+	background-image: url(http://qwerew.cafe24.com/images/3.jpg);
+}
+.sec4 .img {
+	background-image: url(http://qwerew.cafe24.com/images/4.jpg);
+}</code></pre>
 </doc-codeblock></div>
 <ol>
 <li>js</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript"></code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">//01. 패럴렉스1개
+const fn1 = () =&gt; {
+	gsap.to('.desc', {
+		yPercent: -100,
+		ease: 'none',
+		duration: 0.5,
+		scrollTrigger: {
+			trigger: '.desc',
+			start: 'top bottom',
+			end: 'bottom top',
+			markers: true,
+			scrub: true,
+		},
+	});
+};
+
+//02. 패럴렉스여러개
+const fn = () =&gt; {
+	gsap.utils.toArray('.desc').forEach((item) =&gt; {
+		gsap.to(item, {
+			yPercent: -200,
+			ease: 'none',
+			duration: 0.5,
+			scrollTrigger: {
+				trigger: item,
+				start: 'top bottom',
+				end: 'bottom top',
+				markers: false,
+				scrub: 0.5,
+			},
+		});
+	});
+};
+fn();
+
+//03. 나타나기
+const hide = (item) =&gt; {
+	gsap.set(item, { autoAlpha: 0 });
+};
+
+const animate = (item) =&gt; {
+	let x = 0;
+	let y = 0;
+	let delay = item.dataset.delay;
+
+	if (item.classList.contains('ltr')) {
+		(x = -100), (y = 0);
+	} else if (item.classList.contains('btt')) {
+		(x = 0), (y = 100);
+	} else if (item.classList.contains('ttb')) {
+		(x = 0), (y = -100);
+	} else {
+		(x = 100), (y = 0);
+	}
+
+	gsap.fromTo(item, { autoAlpha: 0, x: x, y: y }, { autoAlpha: 1, x: 0, y: 0, delay: delay, duration: 1.25, overwrite: 'auto', ease: 'expo' });
+};
+
+gsap.utils.toArray('.reveal').forEach((item) =&gt; {
+	hide(item);
+	ScrollTrigger.create({
+		trigger: item,
+		start: 'top bottom',
+		end: 'bottom top',
+		markers: false,
+		onEnter: () =&gt; {
+			animate(item);
+		},
+	});
+});</code></pre>
 </doc-codeblock></div>
    </doc-panel>
-   <doc-panel id="badge-variant-info-size-s-text-12-스크롤트리거-scrollto" collapsed>
+   <doc-panel id="badge-variant-info-size-s-text-12-스크롤트리거-부드러운-섹션이동-scrollto" collapsed>
        <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
     <span>12</span>
-</span> 스크롤트리거-scrollTo</template>
+</span> 스크롤트리거-부드러운 섹션이동(scrollTo)</template>
 <p><a href="https://qwerewqwerew.github.io/source/js/deep/gsap/course/09.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
     <span>실행화면</span>
@@ -2012,19 +2282,146 @@ ScrollTrigger.create({
 <li>html</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markup"><code v-pre class="language-markup"></code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;!-- nav&gt;ul&gt;(li&gt;a)*9 --&gt;
+&lt;nav&gt;
+	&lt;h1&gt;스크롤효과&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec1&quot;&gt;sec1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec2&quot;&gt;sec2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec3&quot;&gt;sec3&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec4&quot;&gt;sec4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec5&quot;&gt;sec5&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec6&quot;&gt;sec6&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec7&quot;&gt;sec7&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec8&quot;&gt;sec8&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#sec9&quot;&gt;sec9&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main class=&quot;cont&quot;&gt;
+	&lt;!-- section.item#sec$*9&gt;h2.num+.box --&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec1&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;1&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec2&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;2&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec3&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;3&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec4&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;4&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec5&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;5&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec6&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;6&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec7&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;7&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec8&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;8&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;item&quot; id=&quot;sec9&quot;&gt;
+		&lt;h2 class=&quot;num&quot;&gt;9&lt;/h2&gt;
+		&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/main&gt;</code></pre>
 </doc-codeblock></div>
 <ol>
 <li>css</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-css"><code v-pre class="language-css"></code></pre>
+<pre class="language-css"><code v-pre class="language-css">nav {
+	position: absolute;
+	display: flex;
+	gap: 2rem;
+	max-width: 80%;
+	margin: auto;
+	z-index: 9999;
+	top: 0;
+	transition: all 1s;
+	left: 0;
+	background-color: gray;
+}
+nav.active {
+	position: fixed;
+	top: 0;
+	background-color: rgba(128, 128, 128, 0);
+}
+nav.active ul {
+	padding: 0rem 8rem;
+	border-radius: 50px;
+	background-color: rgba(19, 116, 226, 0.5);
+}
+nav ul {
+	display: flex;
+	gap: 2rem;
+	padding: 0rem 2rem;
+	border-radius: 0px;
+	transition: all 1s;
+}
+nav li {
+	width: calc(100% / 9);
+	height: 10rem;
+	line-height: 10rem;
+}
+nav li a {
+	font-size: 1.8rem;
+	color: white;
+}
+nav li a.active {
+	color: red;
+}</code></pre>
 </doc-codeblock></div>
 <ol>
 <li>js</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript"></code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">let links = gsap.utils.toArray('nav ul li a');
+
+links.forEach((link) =&gt; {
+	let element = document.querySelector(link.getAttribute('href'));
+	let linkST = ScrollTrigger.create({
+		trigger: element,
+		start: 'top top',
+	});
+
+	ScrollTrigger.create({
+		trigger: element,
+		start: 'top center',
+		end: 'bottom center',
+		onToggle: (self) =&gt; setActive(link),
+	});
+
+	link.addEventListener('click', (e) =&gt; {
+		e.preventDefault();
+		gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: 'auto' });
+	});
+});
+
+function setActive(link) {
+	links.forEach((el) =&gt; el.classList.remove('active'));
+	link.classList.add('active');
+}
+
+ScrollTrigger.create({
+	start: 'top -80',
+	end: 99999,
+	toggleClass: {
+		className: 'active',
+		targets: 'nav',
+	},
+});</code></pre>
 </doc-codeblock></div>
    </doc-panel>
 </doc-panels>
