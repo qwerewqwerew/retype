@@ -14,13 +14,17 @@ tags: [css, svg]
 
 - [1. 개요](#1-개요)
 - [2. 예제](#2-예제)
-	- [2.1. viewbox](#21-viewbox)
-	- [2.2. svg 삽입하기](#22-svg-삽입하기)
-	- [자바스크립트 이벤트 넣기](#자바스크립트-이벤트-넣기)
+  - [2.1. viewbox](#21-viewbox)
+  - [2.2. svg 삽입하기](#22-svg-삽입하기)
+  - [2.3. 자바스크립트 이벤트 넣기](#23-자바스크립트-이벤트-넣기)
+  - [2.4. 마스크](#24-마스크)
+  - [2.5. 글씨회전](#25-글씨회전)
+  - [2.6. 마퀴텍스트](#26-마퀴텍스트)
 
 ## 1. 개요
 
 [!ref target='blank' text=':icon-play:SVG 예제사이트'](https://svg-tutorial.com/)
+[!ref target='blank' text=':icon-play:SVG 한글 예제사이트'](https://svgontheweb.com/ko/)
 
 > SVG(Scalable Vector Graphics) 는 웹용 벡터방식 이미지 포멧입니다.
 >
@@ -39,7 +43,7 @@ tags: [css, svg]
 
 [!ref target='blank' text=':icon-play:미리보기'](https://qwerewqwerew.github.io/source/css/10-svg/1.html)
 
-```html
+```xml
 <svg width="50" height="50" viewBox="0 0 100 100">
 	<circle cx="50" cy="50" r="25" fill="red" />
 </svg>
@@ -83,7 +87,7 @@ tags: [css, svg]
 }
 ```
 
-### 자바스크립트 이벤트 넣기
+### 2.3. 자바스크립트 이벤트 넣기
 
 [!ref target='blank' text=':icon-play:미리보기'](https://qwerewqwerew.github.io/source/css/10-svg/3.html)
 
@@ -98,3 +102,211 @@ document.querySelector('rect').onclick=function(){
 </svg>
 
 ```
+
+### 2.4. 마스크
+
+==- [!badge variant='info' size='s' text='04'] Step 1
+
+[!button variant='primary' icon='play' text='실행화면' target='blank'](https://qwerewqwerew.github.io/source/css/10-svg/4.html){.mt30}
+
+1. 피그마에서 글씨를 작성한후 svg 로 저장한다.
+1. html 문서를 생성하고 embed 태그로 svg 이미지를 삽입한다.
+
+```html #
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mask</title>
+	</head>
+	<body>
+		<object src="./images/text.svg" type="image/svg+xml" />
+	</body>
+</html>
+```
+
+==- Step 2
+
+1. # Content 2
+
+### 2.5. 글씨회전
+
+> 회전하는 글씨를 만들어보자
+
+[!button variant='primary' icon='play' text='실행화면' target='blank'](https://qwerewqwerew.github.io/source/css/17-effect/rotate.html)
+
+==- STEP 1
+
+1. 피그마를 열고 아래와 같은 이미지를 제작한다.
+   ![](./images/rotate.png)
+2. 원을 더블클릭하여 선택후 2->3 순서대로 클릭한다.
+   - 도형 레이어를 패스로 깨는 과정이다.
+     ![](./images/02-24_608.jpg)
+3. 프레임에서 우클릭후 번호 순서대로 클릭한다
+   ![](./images/02-24_609.jpg)
+
+==- STEP 2
+
+1. vscode 를 열고 복사한 코드를 붙여넣는다.
+1. 파일명 `rotate.svg` 로 저장한다.
+
+```xml
+
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="150" height="150" fill="white"/>
+<path d="M109.5 75C109.5 94.0538 94.0538 109.5 75 109.5C55.9462 109.5 40.5 94.0538 40.5 75C40.5 55.9462 55.9462 40.5 75 40.5C94.0538 40.5 109.5 55.9462 109.5 75Z" stroke="black"/>
+</svg>
+
+```
+
+2. svg 태그에 아래의 코드를 추가한다.
+
+```xml
+	<svg ... xmlns:xlink="http://www.w3.org/1999/xlink">
+```
+
+- 해당 코드는 'xlink:href'를 사용할수 있게 설정한다.
+
+3. svg 파일을 수정한다.
+
+```xml #2-16
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+  .r_text {
+    animation: rotate 10s linear infinite;
+    transform-origin:50% 50% ;
+    font-size:1rem;
+  }
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+</style>
+<path id="line" d="M109.5 75C109.5 94.0538 94.0538 109.5 75 109.5C55.9462 109.5 40.5 94.0538 40.5 75C40.5 55.9462 55.9462 40.5 75 40.5C94.0538 40.5 109.5 55.9462 109.5 75Z" fill="rgba(0,0,0,0)" />
+<text class="r_text">
+  <textPath xlink:href="#line">Sentence Examples | Examples of Words Used in a Sentence</textPath>
+</text>
+</svg>
+```
+
+4. html 문서를 생성하고 svg 이미지를 삽입한다.
+
+```html rotate.html
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<img src="./rotate.svg" width="300" height="300" alt="" />
+	</body>
+</html>
+```
+
+===
+
+### 2.6. 마퀴텍스트
+
+> 특정영역안에서 흐르는 텍스트애니메이트를 만들어보자
+>
+> [!button variant='primary' icon='play' text='실행화면' target='blank'](https://qwerewqwerew.github.io/source/css/10-svg/5.html)
+
+==- [!badge variant='info' size='s' text='clip-path'] Step 1
+
+1. svg
+
+```xml #
+<svg width="300px" height="100px" version="1.0" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clip">
+      <rect width="300px" height="100px"/>
+    </clipPath>
+    <style type="text/css">
+        text {
+          font-size: 5rem;
+          fill: #000;
+        }
+        .text1 {
+          animation: left 10s linear infinite;
+        }
+        @keyframes left {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(-100%);
+          }
+        }
+    </style>
+  </defs>
+  <rect class="bg" width="300px" height="100px" fill="red"/>
+  <g class="text" clip-path="url(#clip)">
+    <text class="text1" x="0" y="70">Hello SVG! Hello SVG! Hello SVG! Hello SVG! Hello SVG!</text>
+  </g>
+
+</svg>
+```
+
+2. html
+
+```xml #
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>SVG</title>
+	</head>
+
+	<body>
+		<svg class="the-svg">
+			<style>
+				.the-svg {
+					width: 300px;
+					height: 100px;
+					background: #c348e9;
+					border-radius: 30px;
+				}
+
+				.the-svg text {
+					font-size: 5rem;
+				}
+
+				.text1 {
+					animation: left 5s infinite linear;
+				}
+
+				@keyframes left {
+					0% {
+						transform: translateX(0);
+					}
+
+					100% {
+						transform: translateX(-100%);
+					}
+				}
+
+				#mask-circle rect {
+					fill: #fff;
+				}
+			</style>
+			<mask id="mask-circle">
+				<rect width="300" height="80" />
+			</mask>
+			<g mask="url(#mask-circle)">
+				<text class="text1" x="10" y="100">Hello SVG! Hello SVG! Hello SVG! Hello SVG! Hello SVG!</text>
+			</g>
+		</svg>
+
+		<object data="./marquee.svg" type="image/svg+xml"></object>
+	</body>
+</html>
+```
+
+===

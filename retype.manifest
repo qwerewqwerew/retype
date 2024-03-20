@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-15T07:59:32Z",
+  "created": "2024-03-20T02:12:57Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -1720,7 +1720,8 @@
       "path": "2_css\\9.transform\\index.html"
     },
     {
-      "path": "2_css\\글씨회전\\index.html"
+      "path": "2_css\\글씨회전\\index.html",
+      "old": true
     },
     {
       "path": "2_css\\book반응형프로젝트\\final\\01-첫째마당\\1장\\01_3_final.html",
@@ -6352,7 +6353,8 @@
       "path": "categories\\자바스크립트\\index.html"
     },
     {
-      "path": "categories\\animate\\index.html"
+      "path": "categories\\animate\\index.html",
+      "old": true
     },
     {
       "path": "categories\\array\\index.html",
