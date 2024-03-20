@@ -9,7 +9,7 @@ category: [bookmark]
 tags: [핫플, bookmark, 즐겨찾기]
 ---
 
-# free-for.dev
+# 1. free-for.dev
 
 Developers and Open Source authors now have many services offering free tiers, but finding them all takes time to make informed decisions.
 
@@ -23,73 +23,74 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **NOTE**: This list is only for as-a-Service offerings, not for self-hosted software. To be eligible, a service must offer a free tier, not just a free trial. The free tier must be for at least a year if it is time-bucketed. We also consider the free tier from a security perspective, so SSO is fine, but I will not accept services that restrict TLS to paid-only tiers.
 
-# Table of Contents
+# 2. Table of Contents
 
-- [free-for.dev](#free-fordev)
-- [Table of Contents](#table-of-contents)
-  - [Major Cloud Providers](#major-cloud-providers)
-  - [Cloud management solutions](#cloud-management-solutions)
-  - [Source Code Repos](#source-code-repos)
-  - [APIs, Data, and ML](#apis-data-and-ml)
-  - [Artifact Repos](#artifact-repos)
-  - [Tools for Teams and Collaboration](#tools-for-teams-and-collaboration)
-  - [CMS](#cms)
-  - [Code Generation](#code-generation)
-  - [Code Quality](#code-quality)
-  - [Code Search and Browsing](#code-search-and-browsing)
-  - [CI and CD](#ci-and-cd)
-  - [Testing](#testing)
-  - [Security and PKI](#security-and-pki)
-  - [Authentication, Authorization, and User Management](#authentication-authorization-and-user-management)
-  - [Mobile App Distribution and Feedback](#mobile-app-distribution-and-feedback)
-  - [Management System](#management-system)
-  - [Messaging and Streaming](#messaging-and-streaming)
-  - [Log Management](#log-management)
-  - [Translation Management](#translation-management)
-  - [Monitoring](#monitoring)
-  - [Crash and Exception Handling](#crash-and-exception-handling)
-  - [Search](#search)
-  - [Education and Career Development](#education-and-career-development)
-  - [Email](#email)
-  - [Feature Toggles Management Platforms](#feature-toggles-management-platforms)
-  - [Font](#font)
-  - [Forms](#forms)
-  - [Generative AI](#generative-ai)
-  - [CDN and Protection](#cdn-and-protection)
-  - [PaaS](#paas)
-  - [BaaS](#baas)
-  - [Low-code Platform](#low-code-platform)
-  - [Web Hosting](#web-hosting)
-  - [DNS](#dns)
-  - [Domain](#domain)
-  - [IaaS](#iaas)
-  - [Managed Data Services](#managed-data-services)
-  - [Tunneling, WebRTC, Web Socket Servers and Other Routers](#tunneling-webrtc-web-socket-servers-and-other-routers)
-  - [Issue Tracking and Project Management](#issue-tracking-and-project-management)
-  - [Storage and Media Processing](#storage-and-media-processing)
-  - [Design and UI](#design-and-ui)
-  - [Design Inspiration](#design-inspiration)
-  - [Data Visualization on Maps](#data-visualization-on-maps)
-  - [Package Build System](#package-build-system)
-  - [IDE and Code Editing](#ide-and-code-editing)
-  - [Analytics, Events and Statistics](#analytics-events-and-statistics)
-  - [Visitor Session Recording](#visitor-session-recording)
-  - [International Mobile Number Verification API and SDK](#international-mobile-number-verification-api-and-sdk)
-  - [Payment and Billing Integration](#payment-and-billing-integration)
-  - [Docker Related](#docker-related)
-  - [Vagrant Related](#vagrant-related)
-  - [Dev Blogging Sites](#dev-blogging-sites)
-  - [Commenting Platforms](#commenting-platforms)
-  - [Screenshot APIs](#screenshot-apis)
-  - [Flutter Related and Building IOS Apps without Mac](#flutter-related-and-building-ios-apps-without-mac)
-  - [Browser-based hardware emulation written in Javascript](#browser-based-hardware-emulation-written-in-javascript)
-  - [Privacy Management](#privacy-management)
-  - [Miscellaneous](#miscellaneous)
-  - [Remote Desktop Tools](#remote-desktop-tools)
-  - [Game Development](#game-development)
-  - [Other Free Resources](#other-free-resources)
+- [1. free-for.dev](#1-free-fordev)
+- [2. Table of Contents](#2-table-of-contents)
+  - [2.1. Major Cloud Providers](#21-major-cloud-providers)
+  - [2.2. Cloud management solutions](#22-cloud-management-solutions)
+  - [2.3. Source Code Repos](#23-source-code-repos)
+  - [2.4. APIs, Data, and ML](#24-apis-data-and-ml)
+  - [2.5. Artifact Repos](#25-artifact-repos)
+  - [2.6. Tools for Teams and Collaboration](#26-tools-for-teams-and-collaboration)
+  - [2.7. CMS](#27-cms)
+  - [2.8. Code Generation](#28-code-generation)
+  - [2.9. Code Quality](#29-code-quality)
+  - [2.10. Code Search and Browsing](#210-code-search-and-browsing)
+  - [2.11. CI and CD](#211-ci-and-cd)
+  - [2.12. Testing](#212-testing)
+  - [2.13. Security and PKI](#213-security-and-pki)
+  - [2.14. Authentication, Authorization, and User Management](#214-authentication-authorization-and-user-management)
+  - [2.15. Mobile App Distribution and Feedback](#215-mobile-app-distribution-and-feedback)
+  - [2.16. Management System](#216-management-system)
+  - [2.17. Messaging and Streaming](#217-messaging-and-streaming)
+  - [2.18. Log Management](#218-log-management)
+  - [2.19. Translation Management](#219-translation-management)
+  - [2.20. Monitoring](#220-monitoring)
+  - [2.21. Crash and Exception Handling](#221-crash-and-exception-handling)
+  - [2.22. Search](#222-search)
+  - [2.23. Education and Career Development](#223-education-and-career-development)
+  - [2.24. Email](#224-email)
+  - [2.25. Feature Toggles Management Platforms](#225-feature-toggles-management-platforms)
+  - [2.26. Font](#226-font)
+  - [2.27. Forms](#227-forms)
+  - [2.28. Generative AI](#228-generative-ai)
+  - [2.29. CDN and Protection](#229-cdn-and-protection)
+  - [2.30. PaaS](#230-paas)
+  - [2.31. BaaS](#231-baas)
+  - [2.32. Low-code Platform](#232-low-code-platform)
+  - [2.33. Web Hosting](#233-web-hosting)
+  - [2.34. DNS](#234-dns)
+  - [2.35. Domain](#235-domain)
+  - [2.36. IaaS](#236-iaas)
+  - [2.37. Managed Data Services](#237-managed-data-services)
+  - [2.38. Tunneling, WebRTC, Web Socket Servers and Other Routers](#238-tunneling-webrtc-web-socket-servers-and-other-routers)
+  - [2.39. Issue Tracking and Project Management](#239-issue-tracking-and-project-management)
+  - [2.40. Storage and Media Processing](#240-storage-and-media-processing)
+  - [2.41. Design and UI](#241-design-and-ui)
+  - [2.42. Design Inspiration](#242-design-inspiration)
+  - [2.43. Data Visualization on Maps](#243-data-visualization-on-maps)
+  - [2.44. Package Build System](#244-package-build-system)
+  - [2.45. IDE and Code Editing](#245-ide-and-code-editing)
+  - [2.46. Analytics, Events and Statistics](#246-analytics-events-and-statistics)
+  - [2.47. Visitor Session Recording](#247-visitor-session-recording)
+  - [2.48. International Mobile Number Verification API and SDK](#248-international-mobile-number-verification-api-and-sdk)
+  - [2.49. Payment and Billing Integration](#249-payment-and-billing-integration)
+  - [2.50. Docker Related](#250-docker-related)
+  - [2.51. Vagrant Related](#251-vagrant-related)
+  - [2.52. Dev Blogging Sites](#252-dev-blogging-sites)
+  - [2.53. Commenting Platforms](#253-commenting-platforms)
+  - [2.54. Screenshot APIs](#254-screenshot-apis)
+  - [2.55. Flutter Related and Building IOS Apps without Mac](#255-flutter-related-and-building-ios-apps-without-mac)
+  - [2.56. Browser-based hardware emulation written in Javascript](#256-browser-based-hardware-emulation-written-in-javascript)
+  - [2.57. Privacy Management](#257-privacy-management)
+  - [2.58. Miscellaneous](#258-miscellaneous)
+  - [2.59. Remote Desktop Tools](#259-remote-desktop-tools)
+  - [2.60. Game Development](#260-game-development)
+  - [2.61. Other Free Resources](#261-other-free-resources)
+  - [2.62. 플러그인](#262-플러그인)
 
-## Major Cloud Providers
+## 2.1. Major Cloud Providers
 
   * [Google Cloud Platform](https://cloud.google.com)
     * App Engine - 28 frontend instance hours per day, nine backend instance hours per day
@@ -184,7 +185,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Cloud management solutions
+## 2.2. Cloud management solutions
   * [Brainboard](https://www.brainboard.co) - Collaborative solution to visually build and manage cloud infrastructures from end-to-end.
   * [Cloud 66](https://www.cloud66.com/) - Free for personal projects (includes one deployment server, one static site), Cloud 66 gives you everything you need to build, deploy, and grow your applications on any cloud without the headache of the “server stuff.”.
   * [Pulumi](https://www.pulumi.com/) — Modern infrastructure as a code platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
@@ -194,7 +195,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Source Code Repos
+## 2.3. Source Code Repos
 
   * [Bitbucket](https://bitbucket.org/) — Unlimited public and private Git repos for up to 5 users with Pipelines for CI/CD
   * [chiselapp.com](https://chiselapp.com/) — Unlimited public and private Fossil repositories
@@ -228,7 +229,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## APIs, Data, and ML
+## 2.4. APIs, Data, and ML
 
   * [IP.City](https://ip.city) — 100 Free IP geolocation requests per day
   * [Abstract API](https://www.abstractapi.com) — API suite for various use cases, including IP geolocation, gender detection, or email validation.
@@ -387,7 +388,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Artifact Repos
+## 2.5. Artifact Repos
 
  * [Artifactory](https://jfrog.com/start-free/) - An artifact repository that supports numerous package formats like Maven, Docker, Cargo, Helm, PyPI, CocoaPods, and GitLFS. Includes package scanning tool XRay and CI/CD tool Pipelines (formerly Shippable) with a free tier of 2,000 CI/CD minutes per month.
  * [central.sonatype.org](https://central.sonatype.org) — The default artifact repository for Apache Maven, SBT, and other build systems.
@@ -401,7 +402,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Tools for Teams and Collaboration
+## 2.6. Tools for Teams and Collaboration
 
   * [3Cols](https://3cols.com/) - A free cloud-based code snippet manager for personal and collaborative code.
   * [Bitwarden](https://bitwarden.com) — The easiest and safest way for individuals, teams, and business organizations to store, share, and sync sensitive data.
@@ -489,7 +490,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## CMS
+## 2.7. CMS
 
   * [acquia.com](https://www.acquia.com/) — Hosting for Drupal sites. Free tier for developers. Free development tools (such as Acquia Dev Desktop) are also available.
   * [Contentful](https://www.contentful.com/) — Headless CMS. Content management and delivery APIs in the cloud. Comes with one free Community space that includes five users, 25K records, 48 Content Types, 2 locales.
@@ -512,7 +513,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Code Generation
+## 2.8. Code Generation
 
   * [Appinvento](https://appinvento.io/) — AppInvento is a free No code app builder. In the automatically generated backend code, users have complete access to the source code and unlimited APIs and routes, allowing for extensive integration. The free plan includes three projects, five tables, and a Google add-on.
   * [DhiWise](https://www.dhiwise.com/) — Seamlessly turn Figma designs into dynamic Flutter & React applications with DhiWise's innovative code generation technology, optimizing your workflow and helping you craft exceptional mobile and web experiences faster than ever before.
@@ -524,7 +525,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Code Quality
+## 2.9. Code Quality
 
   * [beanstalkapp.com](https://beanstalkapp.com/) — A complete workflow to write, review, and deploy code), a free account for one user, and one repository with 100 MB of storage
   * [browserling.com](https://www.browserling.com/) — Live interactive cross-browser testing, free only 3 minutes sessions with MS IE 9 under Vista at 1024 x 768 resolution
@@ -563,7 +564,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Code Search and Browsing
+## 2.10. Code Search and Browsing
 
   * [libraries.io](https://libraries.io/) — Search and dependency update notifications for 32 different package managers, free for open source
   * [Namae](https://namae.dev/) - Search various websites like GitHub, Gitlab, Heroku, Netlify, and many more for the availability of your project name.
@@ -574,7 +575,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## CI and CD
+## 2.11. CI and CD
 
   * [AccessLint](https://github.com/marketplace/accesslint) — AccessLint brings automated web accessibility testing into your development workflow. It's free for open source and education purposes.
   * [appcircle.io](https://appcircle.io) — Automated mobile CI/CD/CT for iOS and Android with online emulators. 20-minute build timeout (60 minutes for Open Source) with single concurrency for free.
@@ -607,7 +608,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Testing
+## 2.12. Testing
 
   * [Applitools.com](https://applitools.com/) — Smart visual validation for web, native mobile and desktop apps. Integrates with almost all automation solutions (like Selenium and Karma) and remote runners (Sauce Labs, Browser Stack). free for open source. A free tier for a single user with limited checkpoints per week.
   * [Appetize](https://appetize.io) — Test your Android & iOS apps on this Cloud Based Android Phone / Tablets emulator and iPhone/iPad simulators directly in your browser. The free tier includes one concurrent session with 100 minutes of usage per month. No limit on app size.
@@ -647,7 +648,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Security and PKI
+## 2.13. Security and PKI
 
   * [alienvault.com](https://www.alienvault.com/open-threat-exchange/reputation-monitor) — Uncovers compromised systems in your network
   * [atomist.com](https://atomist.com/) — A quicker and more convenient way to automate various development tasks. Now in beta.
@@ -698,7 +699,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Authentication, Authorization, and User Management
+## 2.14. Authentication, Authorization, and User Management
 
   * [Aserto](https://www.aserto.com) - Fine-grained authorization as a service for applications and APIs. Free up to 1000 MAUs and 100 authorizer instances.
   * [asgardeo.io](https://wso2.com/asgardeo) - Seamless Integration of SSO, MFA, passwordless auth and more. Includes SDKs for frontend and backend apps. Free up to 1000 MAUs and five identity providers.
@@ -728,7 +729,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Mobile App Distribution and Feedback
+## 2.15. Mobile App Distribution and Feedback
 
 * [TestApp.io](https://testapp.io) - Your go-to platform for ensuring your mobile apps work as they should. Free plan: one app, analytics, unlimited versions & installs, and feedback collection.
 * [Diawi](https://www.diawi.com) - Deploy iOS & Android apps directly to devices. Free plan: app uploads, password-protected links, 1-day expiration, ten installations.
@@ -738,7 +739,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Management System
+## 2.16. Management System
 
   * [bitnami.com](https://bitnami.com/) — Deploy prepared apps on IaaS. Management of 1 AWS micro instance free
   * [Esper](https://esper.io) — MDM and MAM for Android Devices with DevOps. One hundred devices free with one user license and 25 MB Application Storage.
@@ -750,7 +751,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Messaging and Streaming
+## 2.17. Messaging and Streaming
 
   * [Ably](https://www.ably.com/) - Realtime messaging service with presence, persistence and guaranteed delivery. The free plan includes 3m messages per month, 100 peak connections, and 100 peak channels.
   * [cloudamqp.com](https://www.cloudamqp.com/) — RabbitMQ as a Service. Little Lemur plan: max 1 million messages/month, max 20 concurrent connections, max 100 queues, max 10,000 queued messages, multiple nodes in different AZ's
@@ -772,7 +773,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Log Management
+## 2.18. Log Management
 
   * [bugfender.com](https://bugfender.com/) — Free up to 100k log lines/day with 24 hours retention
   * [logentries.com](https://logentries.com/) — Free up to 5 GB/month with seven days retention
@@ -788,7 +789,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Translation Management
+## 2.19. Translation Management
 
   * [crowdin.com](https://crowdin.com/) — Unlimited projects, unlimited strings, and collaborators for Open Source
   * [gitlocalize.com](https://gitlocalize.com) - Free and unlimited for both private and public repositories
@@ -812,7 +813,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Monitoring
+## 2.20. Monitoring
 
   * [Pingmeter.com](https://pingmeter.com/) - 5 uptime monitors with 10-minute interval. Monitor SSH, HTTP, HTTPS, and any custom TCP ports.
   * [appdynamics.com](https://www.appdynamics.com/) — Free for 24-hour metrics, application performance management agents limited to one Java, one .NET, one PHP, and one Node.js
@@ -874,7 +875,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Crash and Exception Handling
+## 2.21. Crash and Exception Handling
 
   * [CatchJS.com](https://catchjs.com/) - JavaScript error tracking with screenshots and click trails. Free for open-source projects.
   * [bugsnag.com](https://www.bugsnag.com/) — Free for up to 2,000 errors/month after the initial trial
@@ -891,7 +892,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Search
+## 2.22. Search
 
   * [algolia.com](https://www.algolia.com/) — Hosted search solution with typo-tolerance, relevance, and UI libraries to easily create search experiences. The free "Build" plan includes 1M documents and 10K searches/month. Also offers [developer documentation search](https://docsearch.algolia.com/) for free.
   * [bonsai.io](https://bonsai.io/) — Free 1 GB memory and 1 GB storage
@@ -902,14 +903,14 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Education and Career Development
+## 2.23. Education and Career Development
 
   * [FreeCodeCamp](https://www.freecodecamp.org/) - Open-source platform offering free courses and certifications in Data Analysis, Information Security, Web Development, and more.
   * [The Odin Project](https://www.theodinproject.com/) - Free, open-source platform with a curriculum focused on JavaScript and Ruby for web development.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Email
+## 2.24. Email
 
   * [10minutemail](https://10minutemail.com) - Free, temporary email for testing.
   * [AnonAddy](https://anonaddy.com) - Open-source anonymous email forwarding, create unlimited email aliases for free
@@ -999,7 +1000,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Feature Toggles Management Platforms
+## 2.25. Feature Toggles Management Platforms
 
   * [ConfigCat](https://configcat.com) - ConfigCat is a developer-centric feature flag service with unlimited team size, excellent support, and a reasonable price tag. Free plan up to 10 flags, two environments, 1 product, and 5 Million requests per month.
   * [Flagsmith](https://flagsmith.com) - Release features with confidence; manage feature flags across web, mobile, and server-side applications. Use our hosted API, deploy to your own private cloud, or run on-premise.
@@ -1009,7 +1010,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Font
+## 2.26. Font
 
   * [dafont](https://www.dafont.com/) - The fonts presented on this website are their authors' property and are either freeware, shareware, demo versions, or public domain.
   * [Everything Fonts](https://everythingfonts.com/) - Offers multiple tools; @font-face, Units Converter, Font Hinter and Font Submitter.
@@ -1026,7 +1027,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Forms
+## 2.27. Forms
 
   * [Form2Channel](https://form2channel.com) - Send form submissions to Google Sheets, Email, Email, Slack, Telegram or Webhooks. Unlimited and free. Features include multiple recipients, custom thank-you pages, file uploads, and more.
   * [Feathery](https://feathery.io) - Powerful, developer-friendly form builder. Build signup & login, user onboarding, payment flows, complex financial applications, and more. The free plan allows up to 250 submissions/month and five active forms.
@@ -1069,7 +1070,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Generative AI
+## 2.28. Generative AI
 
 * [Portkey](https://portkey.ai/) - Control panel for Gen AI apps featuring an observability suite & an AI gateway. Send & log up to 10,000 requests for free every month.
 * [OpenPipe](https://openpipe.ai) - Fully managed fine-tuning for developers. Free plan lets you fine-tune one model with upto 2,000 rows per dataset.
@@ -1079,7 +1080,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## CDN and Protection
+## 2.29. CDN and Protection
 
   * [bootstrapcdn.com](https://www.bootstrapcdn.com/) — CDN for bootstrap, bootswatch and fontawesome.io
   * [cdnjs.com](https://cdnjs.com/) — Simple. Fast. Reliable. Content delivery at its finest. cdnjs is a free and open-source CDN service trusted by over 11% of all websites, powered by Cloudflare.
@@ -1104,7 +1105,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## PaaS
+## 2.30. PaaS
 
   * [anvil.works](https://anvil.works) - Web app development with nothing but Python. Free tier with unlimited apps and 30-second timeouts.
   * [appwrite](https://appwrite.io) - Unlimited projects with no project pausing (supports websockets) and authentication service. 1 Database, 3 Buckets, 5 Functions per project in free tier.
@@ -1139,7 +1140,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1100+ peo
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## BaaS
+## 2.31. BaaS
 
   * [Activepieces](https://www.activepieces.com) - Build automation flows to connect several apps together in your app's backend. For example, send a Slack message or add a Google Sheet row when an event fires in your app. Free up to 5,000 tasks per month.
   * [back4app.com](https://www.back4app.com) - Back4App is an easy-to-use, flexible and scalable backend based on Parse Platform.
@@ -1180,7 +1181,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Low-code Platform
+## 2.32. Low-code Platform
 
   * [Basedash](https://www.basedash.com) — Low-code platform for building internal admin panels and dashboards. Supports SQL databases and REST APIs.
   * [BudiBase](https://budibase.com/) — Budibase is an open-source low-code platform for creating internal apps in minutes. Supports PostgreSQL, MySQL, MSSQL, MongoDB, Rest API, Docker, K8s
@@ -1194,7 +1195,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Web Hosting
+## 2.33. Web Hosting
 
   * [Alwaysdata](https://www.alwaysdata.com/) — 100 MB free web hosting with support for MySQL, PostgreSQL, CouchDB, MongoDB, PHP, Python, Ruby, Node.js, Elixir, Java, Deno, custom web servers, access via FTP, WebDAV and SSH; mailbox, mailing list and app installer included.
   * [Awardspace.com](https://www.awardspace.com) — Free web hosting + a free short domain, PHP, MySQL, App Installer, Email Sending & No Ads.
@@ -1229,7 +1230,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## DNS
+## 2.34. DNS
 
   * [1.1.1.1](https://developers.cloudflare.com/1.1.1.1/) - Free public DNS Resolver, which is fast and secure (encrypt your DNS query), provided by Cloudflare. Useful to bypass your internet provider's DNS blocking, prevent DNS query spying, and [to block adult & malware content](https://developers.cloudflare.com/1.1.1.1/1.1.1.1-for-families). It can also be used [via API](https://developers.cloudflare.com/1.1.1.1/encrypted-dns/dns-over-https/make-api-requests). Note: Just a DNS resolver, not a DNS hoster.
   * [1984.is](https://www.1984.is/product/freedns/) — Free DNS service with API and lots of other free DNS features included.
@@ -1254,14 +1255,14 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Domain
+## 2.35. Domain
 
   * [eu.org](https://nic.eu.org) — Free eu.org domain. The request is usually approved in 14 days.
   * [pp.ua](https://nic.ua/) — Free pp.ua subdomains.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## IaaS
+## 2.36. IaaS
 
   * [4EVERLAND](https://www.4everland.org/) — Compatible with AWS S3 - APIs, interface operations, CLI, and other upload methods, upload and store files from the IPFS and Arweave networks in a safe, convenient, and efficient manner. Registered users can get 6 GB of IPFS storage and 300MB of Arweave storage for free. Any Arweave file uploads smaller than 150 KB are free.
   * [backblaze.com](https://www.backblaze.com/b2/) — Backblaze B2 cloud storage. Free 10 GB (Amazon S3-like) object storage for unlimited time
@@ -1274,7 +1275,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Managed Data Services
+## 2.37. Managed Data Services
 
    * [Aiven](https://aiven.io/) - Aiven offers free PostgreSQL, MySQL and Redis plans on its open-source data platform. Single node, 1 CPU, 1GB RAM, and for PostgreSQL and MySQL, 5GB storage. Easy migration to more extensive plans or across clouds.
    * [airtable.com](https://airtable.com/) — Looks like a spreadsheet, but it's a relational database unlimited bases, 1,200 rows/base, and 1,000 API requests/month
@@ -1311,7 +1312,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Tunneling, WebRTC, Web Socket Servers and Other Routers
+## 2.38. Tunneling, WebRTC, Web Socket Servers and Other Routers
 
    * [Pinggy](https://pinggy.io) — Public URLs for localhost with a single command, no downloads required. HTTPS / TCP / TLS tunnels. The free plan has 60 minutes tunnel lifetime.
    * [conveyor.cloud](https://conveyor.cloud/) — Visual Studio extension to expose IIS Express to the local network or over a tunnel to a public URL.
@@ -1338,7 +1339,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Issue Tracking and Project Management
+## 2.39. Issue Tracking and Project Management
 
    * [acunote.com](https://www.acunote.com/) — Free project management and SCRUM software for up to 5 team members
    * [asana.com](https://asana.com/) — Free for private project with collaborators
@@ -1413,7 +1414,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Storage and Media Processing
+## 2.40. Storage and Media Processing
 
    * [AndroidFileHost](https://androidfilehost.com/) - Free file-sharing platform with unlimited speed, bandwidth, file count, download count, etc. It is mainly aimed for Android dev-related files like APK build, custom ROM & modifications, etc. But seems to accept any other files as well.
    * [borgbase.com](https://www.borgbase.com/) — Simple and secure offsite backup hosting for Borg Backup. 10 GB free backup space and two repositories.
@@ -1460,7 +1461,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Design and UI
+## 2.41. Design and UI
 
   * [AllTheFreeStock](https://allthefreestock.com) - a curated list of free stock images, audio and videos.
   * [Float UI](https://floatui.com/) - free web development tool for quickly creating modern, responsive websites with sleek design, even for non-designers.
@@ -1555,7 +1556,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Design Inspiration
+## 2.42. Design Inspiration
 
   * [awwwards.](https://www.awwwards.com/) - [Top websites] A showcase of all the best-designed websites (voted on by designers).
   * [Behance](https://www.behance.net/) - [Design showcase] A place where designers showcase their work. Filterable with categories for UI/UX projects.
@@ -1573,7 +1574,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Data Visualization on Maps
+## 2.43. Data Visualization on Maps
 
    * [IP Geolocation](https://ipgeolocation.io/) — Free DEVELOPER plan available with 30K requests/month.
    * [carto.com](https://carto.com/) — Create maps and geospatial APIs from your and public data.
@@ -1602,7 +1603,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Package Build System
+## 2.44. Package Build System
 
    * [build.opensuse.org](https://build.opensuse.org/) — Package build service for multiple distros (SUSE, EL, Fedora, Debian, etc.).
    * [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org) — Mock-based RPM build service for Fedora and EL.
@@ -1610,7 +1611,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## IDE and Code Editing
+## 2.45. IDE and Code Editing
 
    * [3v4l](https://3v4l.org/) - Free online PHP shell and snippet-sharing site, that runs your code in 300+ PHP versions
    * [Android Studio](https://d.android.com/studio) — Android Studio provides the fastest tools for building apps on every type of Android device. Open Source IDE is free for everyone and the best Android app development. Available for Windows, Mac, Linux, and even ChromeOS!
@@ -1666,7 +1667,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Analytics, Events and Statistics
+## 2.46. Analytics, Events and Statistics
 
    * [Dwh.dev](https://dwh.dev) - Data Cloud Observability Solution (Snowflake). Free for personal use.
    * [Hightouch](https://hightouch.com/) - Hightouch is a Reverse ETL platform that helps you sync customer data from your data warehouse to your CRM, marketing, and support tools. The free tier offers you one destination to sync data to.
@@ -1713,7 +1714,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Visitor Session Recording
+## 2.47. Visitor Session Recording
 
    * [Reactflow.com](https://www.reactflow.com/) — Per site: 1,000 pages views/day, three heatmaps, three widgets, free bug tracking
    * [OpenReplay.com](https://www.openreplay.com) - Open-source session replay with dev tools for bug reproduction, live session for real-time support, and product analytics suite. One thousand sessions/month with access to all features and 7-day retention.
@@ -1731,14 +1732,14 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## International Mobile Number Verification API and SDK
+## 2.48. International Mobile Number Verification API and SDK
 
   * [numverify](https://numverify.com/) — Global phone number validation and lookup JSON API. 100 API requests/month
   * [veriphone](https://veriphone.io/) — Global phone number verification in a free, fast, reliable JSON API. 1000 requests/month
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Payment and Billing Integration
+## 2.49. Payment and Billing Integration
 
   * [Glassfy](https://glassfy.io/) – In-app subscriptions infrastructure, real-time subscription events and out-of-the-box monetization tools on iOS, Android, Stripe and Paddle. Free up to $10k monthly revenue.
   * [Adapty.io](https://adapty.io/) – One-stop solution with open-source SDK for mobile in-app subscription integration to iOS, Android, React Native, Flutter, Unity, or web app. Free up to $10k monthly revenue.
@@ -1759,7 +1760,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Docker Related
+## 2.50. Docker Related
 
   * [canister.io](https://canister.io/) — 20 free private repositories for developers, 30 free private repositories for teams to build and store Docker images
   * [Container Registry Service](https://container-registry.com/) - Harbor based Container Management Solution. The free tier offers 1 GB of storage for private repositories.
@@ -1770,14 +1771,14 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Vagrant Related
+## 2.51. Vagrant Related
 
   * [Vagrant Cloud](https://app.vagrantup.com) - HashiCorp Vagrant Cloud. Vagrant box hosting.
   * [Vagrantbox.es](https://www.vagrantbox.es/) — An alternative public box index
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Dev Blogging Sites
+## 2.52. Dev Blogging Sites
 
   * [BearBlog](https://bearblog.dev/) - Minimalist, Markdown-powered blog and website builder.
   * [Dev.to](https://dev.to/) - Where programmers share ideas and help each other grow.
@@ -1787,7 +1788,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Commenting Platforms
+## 2.53. Commenting Platforms
   * [GraphComment](https://graphcomment.com/) - GraphComment is a comments platform that helps you build an active community from the website’s audience.
   * [Utterances](https://utteranc.es/) - A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments, wiki pages, and more!
   * [Disqus](https://disqus.com/) - Disqus is a networked community platform used by hundreds of thousands of sites all over the web.
@@ -1796,7 +1797,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Screenshot APIs
+## 2.54. Screenshot APIs
 
   * [ApiFlash](https://apiflash.com) — A screenshot API based on Aws Lambda and Chrome. Handles full page, captures timing, and viewport dimensions.
   * [microlink.io](https://microlink.io/) – It turns any website into data such as metatags normalization, beauty link previews, scraping capabilities, or screenshots as a service. 250 requests/day every day free.
@@ -1810,7 +1811,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Flutter Related and Building IOS Apps without Mac
+## 2.55. Flutter Related and Building IOS Apps without Mac
 
   * [FlutLab](https://flutlab.io/) - FlutLab is a modern Flutter online IDE and the best place to create, debug, and build cross-platform projects. Build iOS (Without a Mac) and Android apps with Flutter.
   * [CodeMagic](https://codemagic.io/) - Codemagic is a fully hosted and managed CI/CD for mobile apps. You can build, test, and deploy with a GUI-based CI/CD tool. The free tier offers 500 free minutes/month and a Mac Mini instance with 2.3 GHz and 8 GB of RAM.
@@ -1818,7 +1819,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Browser-based hardware emulation written in Javascript
+## 2.56. Browser-based hardware emulation written in Javascript
 
   * [JsLinux](https://bellard.org/jslinux) — a really fast x86 virtual machine capable of running Linux and Windows 2k.
   * [Jor1k](https://s-macke.github.io/jor1k/demos/main.html) —  an OpenRISC virtual machine capable of running Linux with network support.
@@ -1826,7 +1827,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Privacy Management
+## 2.57. Privacy Management
   * [Bearer](https://www.bearer.sh/) - Helps implement privacy by design via audits and continuous workflows so that organizations comply with GDPR and other regulations. The free tier is limited to smaller teams and the SaaS version only.
   * [Osano](https://www.osano.com/) - Consent management and compliance platform with everything from GDPR representation to cookie banners. The free tier offers basic features.
   * [Iubenda](https://www.iubenda.com/) - Privacy and cookie policies and consent management. The free tier offers limited privacy and cookie policy as well as cookie banners.
@@ -1836,7 +1837,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Miscellaneous
+## 2.58. Miscellaneous
 
   * [BinShare.net](https://binshare.net) - Create & share code or binaries. Available to share as a beautiful image e.g. for Twitter / Facebook post or as a link e.g. for chats or forums.
   * [Blynk](https://blynk.io) — A SaaS with API to control, build & evaluate IoT devices. Free Developer Plan with 5 devices, Free Cloud & data storage. Mobile Apps are also available.
@@ -1881,7 +1882,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Remote Desktop Tools
+## 2.59. Remote Desktop Tools
 
   * [Getscreen.me](https://getscreen.me) —  Free for 2 devices, no limits on the number and duration of sessions
   * [Apache Guacamole™](https://guacamole.apache.org/) — Open source clientless remote desktop gateway
@@ -1890,7 +1891,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Game Development
+## 2.60. Game Development
 
   * [itch.io](https://itch.io/game-assets) — Free/Paid assets like sprites, tile sets, and character packs.
   * [Gamefresco.com](https://gamefresco.com/) — Discover, collect, and share free game assets from game artists everywhere.
@@ -1908,7 +1909,7 @@ Update Time, five active automations, webhooks.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
-## Other Free Resources
+## 2.61. Other Free Resources
 
   * [ElevateAI](https://www.elevateai.com) - Get up to 200 hours of audio transcription for free every month.
   * [get.localhost.direct](https://get.localhost.direct) — A better `*.localhost.direct` Wildcard public CA signed SSL cert for localhost development with sub-domain support
@@ -1941,3 +1942,10 @@ HTML Themes and UI Kits to create your applications faster!
   * [QRCodeBest](https://qrcode.best/) - Create custom QR codes with 13 templates, full privacy, and personal branding. Features tracking pixels, project categorization, and unlimited team seats on QRCode.Best.
 
 **[⬆️ Back to Top](#table-of-contents)**
+
+## 2.62. 플러그인
+
+  * [!ref target='blank' text=':icon-link:plugins.jquery.com'](https://plugins.jquery.com/)
+
+  * [!ref target='blank' text=':icon-link:htmldrive'](http://www.htmldrive.net/)
+  * [!ref target='blank' text=':icon-link:unheap'](https://www.unheap.com/)
