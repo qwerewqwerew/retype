@@ -14,12 +14,11 @@ tags: [css, svg]
 
 - [1. 개요](#1-개요)
 - [2. 예제](#2-예제)
-  - [2.1. viewbox](#21-viewbox)
-  - [2.2. svg 삽입하기](#22-svg-삽입하기)
-  - [2.3. 자바스크립트 이벤트 넣기](#23-자바스크립트-이벤트-넣기)
-  - [2.4. 마스크](#24-마스크)
-  - [2.5. 글씨회전](#25-글씨회전)
-  - [2.6. 마퀴텍스트](#26-마퀴텍스트)
+	- [2.1. viewbox](#21-viewbox)
+	- [2.2. svg 삽입하기](#22-svg-삽입하기)
+	- [2.3. 자바스크립트 이벤트 넣기](#23-자바스크립트-이벤트-넣기)
+	- [2.4. text path 애니메이션](#24-text-path-애니메이션)
+	- [2.5. 마퀴텍스트](#25-마퀴텍스트)
 
 ## 1. 개요
 
@@ -103,40 +102,12 @@ document.querySelector('rect').onclick=function(){
 
 ```
 
-### 2.4. 마스크
-
-==- [!badge variant='info' size='s' text='04'] Step 1
-
-[!button variant='primary' icon='play' text='실행화면' target='blank'](https://qwerewqwerew.github.io/source/css/10-svg/4.html){.mt30}
-
-1. 피그마에서 글씨를 작성한후 svg 로 저장한다.
-1. html 문서를 생성하고 embed 태그로 svg 이미지를 삽입한다.
-
-```html #
-<!DOCTYPE html>
-<html lang="ko">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Mask</title>
-	</head>
-	<body>
-		<object src="./images/text.svg" type="image/svg+xml" />
-	</body>
-</html>
-```
-
-==- Step 2
-
-1. # Content 2
-
-### 2.5. 글씨회전
+### 2.4. text path 애니메이션
 
 > 회전하는 글씨를 만들어보자
 
-[!button variant='primary' icon='play' text='실행화면' target='blank'](https://qwerewqwerew.github.io/source/css/17-effect/rotate.html)
-
-==- STEP 1
+==- [!badge variant='info' size='s' text='04'] Step 1
+[!button variant='primary' icon='play' text='실행화면' target='blank'](https://qwerewqwerew.github.io/source/css/17-effect/rotate.html) {.mt30}
 
 1. 피그마를 열고 아래와 같은 이미지를 제작한다.
    ![](./images/rotate.png)
@@ -209,7 +180,7 @@ document.querySelector('rect').onclick=function(){
 
 ===
 
-### 2.6. 마퀴텍스트
+### 2.5. 마퀴텍스트
 
 > 특정영역안에서 흐르는 텍스트애니메이트를 만들어보자
 >
@@ -217,7 +188,8 @@ document.querySelector('rect').onclick=function(){
 
 ==- [!badge variant='info' size='s' text='clip-path'] Step 1
 
-1. svg
+1. 피그마를 활용하여 마스크가 적용된 텍스트레이어를 제작한다.
+1. svg 형식으로 코드를 복사한다.
 
 ```xml #
 <svg width="300px" height="100px" version="1.0" xmlns="http://www.w3.org/2000/svg"

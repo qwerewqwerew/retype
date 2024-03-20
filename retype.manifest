@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-20T02:12:57Z",
+  "created": "2024-03-20T15:15:56Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -6332,6 +6332,9 @@
       "old": true
     },
     {
+      "path": "기타\\bookmark\\index.html"
+    },
+    {
       "path": "기타\\mermaid\\index.html"
     },
     {
@@ -6362,6 +6365,9 @@
     },
     {
       "path": "categories\\basic\\index.html"
+    },
+    {
+      "path": "categories\\bookmark\\index.html"
     },
     {
       "path": "categories\\class\\index.html"
@@ -7860,6 +7866,9 @@
       "path": "tags\\제어문\\index.html"
     },
     {
+      "path": "tags\\즐겨찾기\\index.html"
+    },
+    {
       "path": "tags\\치환\\index.html"
     },
     {
@@ -7877,6 +7886,9 @@
     },
     {
       "path": "tags\\함수\\index.html"
+    },
+    {
+      "path": "tags\\핫플\\index.html"
     },
     {
       "path": "tags\\호이스팅\\index.html"
@@ -7904,6 +7916,9 @@
     },
     {
       "path": "tags\\bom\\index.html"
+    },
+    {
+      "path": "tags\\bookmark\\index.html"
     },
     {
       "path": "tags\\calc\\index.html"
