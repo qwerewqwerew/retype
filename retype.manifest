@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-20T15:21:46Z",
+  "created": "2024-03-21T15:21:03Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3810,6 +3810,9 @@
     },
     {
       "path": "3_js\\basic\\2.partial\\16\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\17.ajax\\index.html"
     },
     {
       "path": "3_js\\basic\\2.partial\\2.스타일조작\\index.html"
@@ -7965,6 +7968,9 @@
       "path": "tags\\event\\index.html"
     },
     {
+      "path": "tags\\fetch\\index.html"
+    },
+    {
       "path": "tags\\for\\index.html"
     },
     {
@@ -8226,6 +8232,9 @@
     },
     {
       "path": "ui\\25.가로스크롤\\index.html"
+    },
+    {
+      "path": "ui\\26.무한스크롤\\index.html"
     },
     {
       "path": "ui\\3.스크롤바\\index.html"
