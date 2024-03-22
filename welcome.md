@@ -16,5 +16,9 @@
 :icon-bookmark:[베지어곡선 생성기](https://cubic-bezier.com/)
 
 ---
+
 :icon-bookmark:[reset.css-cdn](https://qwerewqwerew.github.io/source/style/reset.css)
-`@import url(https://qwerewqwerew.github.io/source/style/reset.css);`
+
+```css #reset.css
+@import url(https://qwerewqwerew.github.io/source/style/reset.css);
+```

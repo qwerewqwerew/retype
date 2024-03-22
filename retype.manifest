@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-22T00:35:45Z",
+  "created": "2024-03-22T14:27:12Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -3812,7 +3812,14 @@
       "path": "3_js\\basic\\2.partial\\16\\index.html"
     },
     {
-      "path": "3_js\\basic\\2.partial\\17.ajax\\index.html"
+      "path": "3_js\\basic\\2.partial\\17.ajax\\index.html",
+      "old": true
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\17.localstorage\\index.html"
+    },
+    {
+      "path": "3_js\\basic\\2.partial\\18.ajax\\index.html"
     },
     {
       "path": "3_js\\basic\\2.partial\\2.스타일조작\\index.html"
@@ -3855,7 +3862,8 @@
       "path": "3_js\\basic\\2.partial\\assets\\result.png"
     },
     {
-      "path": "3_js\\basic\\2.partial\\localstorage\\index.html"
+      "path": "3_js\\basic\\2.partial\\localstorage\\index.html",
+      "old": true
     },
     {
       "path": "3_js\\basic\\2.partial\\map\\index.html",
@@ -8235,6 +8243,12 @@
     },
     {
       "path": "ui\\26.무한스크롤\\index.html"
+    },
+    {
+      "path": "ui\\27.마우스트레일\\index.html"
+    },
+    {
+      "path": "ui\\28.텍스트효과\\index.html"
     },
     {
       "path": "ui\\3.스크롤바\\index.html"
