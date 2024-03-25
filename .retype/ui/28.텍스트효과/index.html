@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/retype">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.764642479501">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.764664028272">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -17,7 +17,7 @@
     <!-- Primary Meta Tags -->
     <title>28.텍스트효과</title>
     <meta name="title" content="28.텍스트효과">
-    <meta name="description" content="1. 무한스크롤블로그">
+    <meta name="description" content="html">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://qwerewqwerew.github.io/retype/ui/28.텍스트효과/">
@@ -26,23 +26,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwerewqwerew.github.io/retype/ui/28.텍스트효과/">
     <meta property="og:title" content="28.텍스트효과">
-    <meta property="og:description" content="1. 무한스크롤블로그">
+    <meta property="og:description" content="html">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://qwerewqwerew.github.io/retype/ui/28.텍스트효과/">
     <meta property="twitter:title" content="28.텍스트효과">
-    <meta property="twitter:description" content="1. 무한스크롤블로그">
+    <meta property="twitter:description" content="html">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.764642479501" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.764664028272" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.764642479501" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.764664028272" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.764642479501" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.764642479501" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.764664028272" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.764664028272" defer></script>
 
     <style>
     	@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/static/pretendard.css');
@@ -469,253 +469,220 @@
         <span>목차 <!-- omit in toc --></span>
     </h3>
 </doc-anchor-target>
-<ul>
-<li><doc-anchor-trigger to="#1-%EB%AC%B4%ED%95%9C%EC%8A%A4%ED%81%AC%EB%A1%A4%EB%B8%94%EB%A1%9C%EA%B7%B8">1. 무한스크롤블로그</doc-anchor-trigger></li>
-</ul>
-<doc-anchor-target id="1-무한스크롤블로그">
+<doc-anchor-target id="1-스모크글자">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-무한스크롤블로그">#</doc-anchor-trigger>
-        <span>1. 무한스크롤블로그</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-스모크글자">#</doc-anchor-trigger>
+        <span>1. 스모크글자</span>
     </h2>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>무한 스크롤기능의 블로그 페이지를 제작해보자
-사용할 데이터는 mock db 사이트에서 제공받는다</p>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="더미데이터-링크">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#더미데이터-링크">#</doc-anchor-trigger>
-        <span>더미데이터 링크 <!-- omit in toc --></span>
-    </h4>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-markdown"><code v-pre class="language-markdown">https://jsonplaceholder.typicode.com</code></pre>
-</doc-codeblock></div>
-<p><a href="https://qwerewqwerew.github.io/source/ui/infinite/index.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+<p><a href="https://qwerewqwerew.github.io/source/ui/text_effect/01/4-1.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
     <span>실행화면</span>
 </a></p>
+<doc-panel id="badge-variant-info-size-s-text-01-step-1" collapsed>
+    <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>01</span>
+</span> Step 1</template>
+<ol>
+<li>html</li>
+</ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-markup"><code v-pre class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ko&quot;&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;UTF-8&quot; /&gt;
 		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-		&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
-		&lt;title&gt;My Blog&lt;/title&gt;
+		&lt;title&gt;Document&lt;/title&gt;
 	&lt;/head&gt;
-
 	&lt;body&gt;
-		&lt;h1&gt;My Blog&lt;/h1&gt;
-		&lt;div class=&quot;filter-container&quot;&gt;
-			&lt;input type=&quot;text&quot; id=&quot;filter&quot; class=&quot;filter&quot; placeholder=&quot;Filter posts...&quot; /&gt;
+		&lt;div&gt;
+			&lt;p class=&quot;text&quot;&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio eius doloribus, ab obcaecati facere omnis reiciendis dolore quod quidem aperiam repellat tempora vitae at excepturi sunt doloremque et quonesciunt!&lt;/p&gt;
 		&lt;/div&gt;
-		&lt;div id=&quot;posts-container&quot;&gt;&lt;/div&gt;
-		&lt;div class=&quot;loader&quot;&gt;
-			&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
-			&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
-			&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
 	&lt;/body&gt;
 &lt;/html&gt;</code></pre>
 </doc-codeblock></div>
+<ol start="2">
+<li>css</li>
+</ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-css"><code v-pre class="language-css">@import url('https://fonts.googleapis.com/css?family=Roboto&amp;display=swap');
-* {
-	box-sizing: border-box;
+<div class="codeblock-title">reset</div>
+<pre class="language-css"><code v-pre class="language-css">@import url(https://qwerewqwerew.github.io/source/style/reset.css);</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">* {
+	font-family: 'Pretendard', sans-serif;
 }
-body {
-	background-color: #296ca8;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	margin: 0;
-	padding-bottom: 100px;
-}
-h1 {
-	margin-bottom: 0;
-	text-align: center;
-}
-.filter-container {
-	margin-top: 20px;
-	width: 80vw;
-	max-width: 800px;
-}
-.filter {
-	width: 100%;
-	padding: 12px;
-	font-size: 16px;
-}
-.post {
+div {
 	position: relative;
-	background-color: #4992d3;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-	border-radius: 3px;
-	padding: 20px;
-	margin: 40px 0;
 	display: flex;
-	width: 80vw;
-	max-width: 800px;
-}
-.post .post-title {
-	margin: 0;
-}
-.post .post-body {
-	margin: 15px 0 0;
-	line-height: 1.3;
-}
-.post .post-info {
-	margin-left: 20px;
-}
-.post .number {
-	position: absolute;
-	top: -15px;
-	left: -15px;
-	font-size: 15px;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: #fff;
-	color: #296ca8;
-	display: flex;
-	align-items: center;
 	justify-content: center;
-	padding: 7px 10px;
+	align-items: center;
+	min-height: 100vh;
+	background-color: skyblue;
+	overflow: hidden;
 }
-.loader {
-	opacity: 0;
-	display: flex;
-	position: fixed;
-	bottom: 50px;
-	transition: opacity 0.3s ease-in;
+div .text {
+	position: relative;
+	color: #fff;
+	margin: 40px;
+	max-width: 800px;
+	user-select: none;
+	line-height: 3.5em;
+	font-size: 3.5em;
 }
-.loader.show {
-	opacity: 1;
+div .text span {
+	position: relative;
+	display: inline-flex;
+	cursor: pointer;
 }
-.circle {
-	background-color: #fff;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	margin: 5px;
-	animation: bounce 0.5s ease-in infinite;
+div .text span.active {
+	animation: smoke 2s linear forwards;
+	transform-origin: bottom;
 }
-.circle:nth-of-type(2) {
-	animation-delay: 0.1s;
-}
-.circle:nth-of-type(3) {
-	animation-delay: 0.2s;
-}
-@keyframes bounce {
-	0%,
-	100% {
-		transform: translateY(0);
+@keyframes smoke {
+	0% {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0) translateY(0) rotate(0deg) scale(1);
 	}
 	50% {
-		transform: translateY(-10px);
+		opacity: 1;
+		pointer-events: none;
+	}
+	100% {
+		opacity: 0;
+		filter: blur(20px);
+		transform: translateX(300px) scale(4);
 	}
 }</code></pre>
 </doc-codeblock></div>
+<ol start="3">
+<li></li>
+</ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-javascript"><code v-pre class="language-javascript">const postsContainer = document.getElementById('posts-container');
-const loading = document.querySelector('.loader');
-const filter = document.getElementById('filter');
-
-let limit = 5;
-let page = 1;
-
-// Fetch posts from API
-async function getPosts() {
-	const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&amp;_page=${page}`);
-
-	const data = await res.json();
-
-	return data;
-}
-
-// Show posts in DOM
-async function showPosts() {
-	const posts = await getPosts();
-
-	posts.forEach((post) =&gt; {
-		const postEl = document.createElement('div');
-		postEl.classList.add('post');
-		postEl.innerHTML = `
-      &lt;div class=&quot;number&quot;&gt;${post.id}&lt;/div&gt;
-      &lt;div class=&quot;post-info&quot;&gt;
-        &lt;h2 class=&quot;post-title&quot;&gt;${post.title}&lt;/h2&gt;
-        &lt;p class=&quot;post-body&quot;&gt;${post.body}&lt;/p&gt;
-      &lt;/div&gt;
-    `;
-
-		postsContainer.appendChild(postEl);
+<pre class="language-javascript"><code v-pre class="language-javascript">const text = document.querySelector('.text').innerText;
+let textsplit = [...text];
+const sp = '&lt;span&gt;';
+const an = '&lt;/span&gt;';
+let textArr = textsplit
+	.map(function (char) {
+		return sp + char + an;
+	})
+	.join('');
+console.log(textArr);
+document.querySelector('.text').innerHTML = textArr;
+const letters = document.querySelectorAll('.text span');
+for (let i = 0; i &lt; letters.length; i++) {
+	letters[i].addEventListener('mouseover', function () {
+		this.classList.add('active');
 	});
+}</code></pre>
+</doc-codeblock></div>
+<div class="comment_box"><p><code v-pre>join('') </code>함수는 배열의 모든 요소를 문자열로 결합.
+<code v-pre> join('')</code>의 인자로 빈 문자열 &#x27;&#x27;을 할당하면, 배열의 모든 요소 사이에 아무 문자도 추가하지 않고 그대로 연결하여 하나의 문자열을 만든다.
+<code v-pre>,</code>를 제거하는 역할을 함</p>
+<doc-anchor-target id="section">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#section">#</doc-anchor-trigger>
+        <span>:::</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="gsap회전하는-글자">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gsap회전하는-글자">#</doc-anchor-trigger>
+        <span>gsap회전하는 글자</span>
+    </h2>
+</doc-anchor-target>
+<p><a href="https://qwerewqwerew.github.io/source/ui/text_effect/02/index.html" target="_blank" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z"/><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5Z"/></g></svg></span>
+    <span>실행화면</span>
+</a></p>
+<doc-panels>
+   <doc-panel id="badge-variant-info-size-s-text-02-step-1" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-5 px-1.5 text-2xs rounded">
+    <span>02</span>
+</span> Step 1</template>
+<ol>
+<li>구조작성</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;main class=&quot;cont&quot;&gt;
+	&lt;section class=&quot;item sec1&quot;&gt;
+		&lt;div class=&quot;desc txt1&quot;&gt;Lorem ipsum dolor sit, amet&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/main&gt;</code></pre>
+</doc-codeblock></div>
+<ol start="2">
+<li>gsap 추가</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-css"><code v-pre class="language-css">@import url(https://qwerewqwerew.github.io/source/style/reset.css);
+@import url(https://qwerewqwerew.github.io/source/style/reset.css);
+.item {
+	width: 100%;
+	height: 100vh;
+	position: relative;
 }
 
-// Show loader &amp; fetch more posts
-function showLoading() {
-	loading.classList.add('show');
-
-	setTimeout(() =&gt; {
-		loading.classList.remove('show');
-
-		setTimeout(() =&gt; {
-			page++;
-			showPosts();
-		}, 300);
-	}, 1000);
+.desc {
+	display: flex;
+	font-size: 5vw;
+	font-weight: 900;
+	margin-top: 50%;
+	z-index: 100;
+	position: relative;
+	-webkit-text-fill-color: #0000802d;
+	-webkit-text-stroke: 1px #000080;
+	text-stroke: 1px 000080;
+	flex-direction: row;
 }
+span {
+	display: block;
+}</code></pre>
+</doc-codeblock></div>
+<ol start="3">
+<li></li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-javascript"><code v-pre class="language-javascript">let text = document.querySelector('.txt1').innerText;
+let textsplit = [...text];
 
-// Filter posts by input
-function filterPosts(e) {
-	const term = e.target.value.toUpperCase();
-	const posts = document.querySelectorAll('.post');
+const sp = '&lt;span&gt;';
+const an = '&lt;/span&gt;';
+let textArr = textsplit.map((char) =&gt; sp + char + an).join('');
+TweenMax.set('.sec1', { perspective: 400 });
 
-	posts.forEach((post) =&gt; {
-		const title = post.querySelector('.post-title').innerText.toUpperCase();
-		const body = post.querySelector('.post-body').innerText.toUpperCase();
-
-		if (title.indexOf(term) &gt; -1 || body.indexOf(term) &gt; -1) {
-			post.style.display = 'flex';
-		} else {
-			post.style.display = 'none';
-		}
-	});
-}
-
-// Show initial posts
-showPosts();
-
-window.addEventListener('scroll', () =&gt; {
-	const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-
-	if (scrollTop + clientHeight &gt;= scrollHeight - 5) {
-		showLoading();
-	}
+document.querySelector('.txt1').innerHTML = textArr;
+let tl = gsap.timeline({
+	repeat: -1, // 무한 반복
+	repeatDelay: 1, // 반복 딜레이
+	yoyo: true,
+	scrollTrigger: {
+		trigger: 'section.sec1',
+		markers: true,
+		start: 'top 50%',
+		end: '+=500',
+	},
 });
 
-filter.addEventListener('input', filterPosts);</code></pre>
+tl.to('.txt1 span', {
+	opacity: 0,
+	y: 50,
+	rotateX: 0,
+	rotateZ: 0,
+	rotateY: 180,
+	duration: 0.5,
+	stagger: 0.1,
+});
+//stagger: 요소의 간격 (각 '.txt1 span' 요소가 애니메이션을 시작할 때 사이의 0.3초)</code></pre>
 </doc-codeblock></div>
+   </doc-panel>
+</div>
+</doc-panel>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
