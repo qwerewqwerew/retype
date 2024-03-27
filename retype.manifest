@@ -1,6 +1,6 @@
 {
   "version": "3.5.0",
-  "created": "2024-03-26T00:44:17Z",
+  "created": "2024-03-27T03:54:00Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -7809,6 +7809,9 @@
       "path": "tags\\로그인구현\\index.html"
     },
     {
+      "path": "tags\\마우스-효과\\index.html"
+    },
+    {
       "path": "tags\\메뉴\\index.html"
     },
     {
@@ -8253,6 +8256,9 @@
     },
     {
       "path": "ui\\28.텍스트효과\\index.html"
+    },
+    {
+      "path": "ui\\29.호버효과\\index.html"
     },
     {
       "path": "ui\\3.스크롤바\\index.html"
